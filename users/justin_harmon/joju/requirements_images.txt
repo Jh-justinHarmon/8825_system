@@ -1,0 +1,14 @@
+# Joju Image Capture System Requirements
+
+# Screenshot automation
+playwright==1.40.0
+pillow==10.1.0
+
+# API requests
+requests==2.31.0
+
+# PDF image extraction
+PyMuPDF==1.23.8
+
+# Video frame extraction
+opencv-python==4.8.1.78

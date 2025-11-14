@@ -1,0 +1,514 @@
+{
+  "general": {
+    "profilePhoto": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/profile-images/c91325a0-8996-439b-b17e-505c06bd91f5/avatar.jpg",
+    "username": "justinharmon",
+    "displayName": "Justin Harmon",
+    "profession": "Industrial Designer / UX Strategist / Design Leader",
+    "location": "Dallas, Texas",
+    "pronouns": "",
+    "byline": "Industrial Designer / UX Strategist / Design Leader in Dallas, Texas",
+    "website": "prtclinc.com",
+    "websiteURL": "https://prtclinc.com",
+    "about": "I thrive in the messy middle—where ambiguity meets opportunity and great products take shape. With a hybrid background bridging industrial design and digital UX, I've spent 20+ years turning user insights into commercially viable products that deliver real business impact: $10M+ in revenue growth, 10-26% sales increases, and innovations like the 3D department Gamal Prather and I built that later became the VSP Innovation Lab. I lead with curiosity, ground decisions in craft, and focus relentlessly on outcomes. From co-founding design departments and launching product lines for Nike and COSTA, to contributing to strategic initiatives in AI-driven product development and exploring the line between agentic flows and design thinking—I help cross-functional teams navigate complexity and ship solutions that matter.",
+    "status": {
+      "text": "Building AI-powered solutions for team building and professional development",
+      "emoji": "🚀",
+      "timestamp": "2025-11-07"
+    },
+    "sectionOrder": [
+      "Work Experience",
+      "Projects",
+      "Education",
+      "Certifications",
+      "Contact"
+    ],
+    "metadata": {
+      "sourceType": "json-imported",
+      "createdAt": "2025-11-07T19:48:57.437Z"
+    },
+    "profilePhotoBg": "#cccccc"
+  },
+  "projects": [
+    {
+      "id": "8825_pcms",
+      "heading": "8825 PCMS at Production Ready v2.0.0",
+      "url": null,
+      "collaborators": [],
+      "description": "LLM-agnostic portable knowledge system for maintaining consistent AI behavior across platforms. Single JSON file contains all context for any LLM (ChatGPT, Claude, Gemini, Windsurf). Features confidence-based decision making, two-stage knowledge mining, and adaptive learning.",
+      "attachments": [],
+      "type": "project",
+      "title": "8825 PCMS",
+      "company": "Production Ready v2.0.0",
+      "startDate": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "amare_stoudemire",
+      "heading": "Amar'e Stoudemire - Custom Protective Goggle at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "Redesigned NBA star Amar'e Stoudemire's protective eyewear by solving complex fit and performance challenges. Delivered a custom solution that balanced protection, comfort, and on-court performance at the highest level of professional basketball.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 3500,
+          "height": 2188,
+          "url": "/content/media/amare_stoudemire-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 3500,
+          "height": 2188,
+          "url": "/content/media/amare_stoudemire-page2.png"
+        },
+        {
+          "type": "image",
+          "width": 3500,
+          "height": 2188,
+          "url": "/content/media/amare_stoudemire-page3.png"
+        }
+      ],
+      "type": "project",
+      "title": "Amar'e Stoudemire - Custom Protective Goggle",
+      "company": "Marchon",
+      "startDate": "2009-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "shinola_watches",
+      "heading": "Shinola - Collaborative Watch Collection at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "Led design and development of collaborative watch collection for Shinola, blending industrial design craft with brand storytelling. Managed cross-functional collaboration from concept through production, delivering premium timepieces that strengthened brand positioning.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/shinola-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/shinola-page3.png"
+        },
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/shinola-page5.png"
+        }
+      ],
+      "type": "project",
+      "title": "Shinola - Collaborative Watch Collection",
+      "company": "prtcl inc",
+      "startDate": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "nike_vision_launch",
+      "heading": "Nike Vision Product Line at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "Led launch of new Nike Vision product line targeting younger consumers. Leveraged research insights to secure stakeholder buy-in and drive market success. Generated $10 million in revenue growth, accounting for 10% of the company's annual growth in the first year.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2546,
+          "height": 1646,
+          "url": "/content/media/nike_vision-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 2546,
+          "height": 1646,
+          "url": "/content/media/nike_vision-page2.png"
+        },
+        {
+          "type": "image",
+          "width": 2546,
+          "height": 1646,
+          "url": "/content/media/nike_vision-page3.png"
+        }
+      ],
+      "type": "project",
+      "title": "Nike Vision Product Line",
+      "company": "Marchon",
+      "startDate": "2005-01-01T00:00:00.000Z",
+      "endDate": "2012-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "costa_design",
+      "heading": "Quality Improvements & Fit Standardization at COSTA",
+      "url": null,
+      "collaborators": [],
+      "description": "Led product design and strategy for COSTA sunglasses, resolving quality issues and establishing new design standards. Implemented user fit profiles that increased website conversion rates and reduced product returns. Collaborated with engineering and QA to deliver measurable improvements to user experience.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 1369,
+          "height": 1688,
+          "url": "/content/media/costa-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 3750,
+          "height": 1650,
+          "url": "/content/media/costa-page10.png"
+        },
+        {
+          "type": "image",
+          "width": 2625,
+          "height": 1650,
+          "url": "/content/media/costa-page15.png"
+        }
+      ],
+      "type": "project",
+      "title": "Quality Improvements & Fit Standardization",
+      "company": "COSTA",
+      "startDate": "2016-01-01T00:00:00.000Z",
+      "endDate": "2018-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "vsp_innovation_lab",
+      "heading": "VSP Innovation Lab at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "Co-founded the 3D design department at Marchon with Gamal Prather (later branded as VSP Innovation Lab). Revolutionized prototyping efficiency by reducing timelines and enhancing iteration speed through rapid 3D modeling and printing.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 3482,
+          "height": 2250,
+          "url": "/content/media/marchon-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 2475,
+          "height": 1913,
+          "url": "/content/media/marchon-page2.png"
+        }
+      ],
+      "type": "project",
+      "title": "VSP Innovation Lab",
+      "company": "Marchon",
+      "startDate": "2004-01-01T00:00:00.000Z",
+      "endDate": "2012-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "dragon_alliance",
+      "heading": "Dragon Alliance - Eyewear Collection at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "Led design development for Dragon Alliance eyewear collection, creating moodboards and design direction that balanced brand identity with market trends. Collaborated with stakeholders to deliver innovative designs that strengthened product portfolio.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/dragon-page1.png"
+        },
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/dragon-page2.png"
+        },
+        {
+          "type": "image",
+          "width": 2550,
+          "height": 1650,
+          "url": "/content/media/dragon-page3.png"
+        }
+      ],
+      "type": "project",
+      "title": "Dragon Alliance - Eyewear Collection",
+      "company": "prtcl inc",
+      "startDate": "2018-01-01T00:00:00.000Z",
+      "endDate": "2019-12-31T00:00:00.000Z"
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "trustybits",
+      "heading": "UX Strategist at Trustybits",
+      "url": null,
+      "collaborators": [],
+      "description": "Contributing to UX strategy and business initiatives at Trustybits, supporting strategic planning for Forge, developing marketing initiatives, and facilitating workshops. Work includes exploring AI-driven approaches to team building and talent development, helping shape product direction and user experience across multiple touchpoints.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "UX Strategist",
+      "company": "Trustybits",
+      "location": "Remote"
+    },
+    {
+      "id": "prtcl_inc",
+      "heading": "Managing Partner & Design Lead at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "Delivered 10–26% sales growth across multiple brands by designing new eyewear and timepiece styles informed by deep market research and user insights. Led design efforts spanning runway to sport, boutique to mainstream fashion—working across diverse markets, price points, and materials. Built alignment across cross-functional teams to ship solutions that balanced user needs with commercial viability while maintaining brand narrative and quality standards.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY",
+      "startDate": "2018-01-01T00:00:00.000Z",
+      "images": [
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543560673-c14zke.webp",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543560947-aswbis.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543561240-ppzner.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543698629-jk32ht.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543560856-4xfl81.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543560764-52tmkq.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543561066-anph3r.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543561155-o9f4u5.png",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "hammer_consulting",
+      "heading": "UX Consultant & Project Manager at Hammer Consulting & Support Services",
+      "url": null,
+      "collaborators": [],
+      "description": "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%. Aligned user needs with business goals by leading cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "UX Consultant & Project Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX",
+      "startDate": "2014-01-01T00:00:00.000Z",
+      "images": [
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543955453-0zczc0.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543956047-846ols.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543955951-8t2jbg.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543955735-k3qf34.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762543955567-rmvg3b.png",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "costa",
+      "heading": "Design Director at COSTA",
+      "url": null,
+      "collaborators": [],
+      "description": "Resolved product defects and reduced customer complaints by leading cross-functional collaboration with engineering, QA, and stakeholders, delivering measurable improvements to the user experience. Played essential role in increase in website conversion rates and reduced product returns by implementing user fit profiles, optimizing clarity and usability across the online customer journey.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Design Director",
+      "company": "COSTA",
+      "location": "Remote",
+      "startDate": "2016-01-01T00:00:00.000Z",
+      "endDate": "2018-12-31T00:00:00.000Z",
+      "images": [
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344291-mcp89n.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344661-inpj5b.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344509-yal8pz.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344203-lg1tgy.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344780-wwynm7.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344117-3cowmq.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344401-0ju907.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544344915-krrp17.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544345037-pef7li.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544345150-m5yice.png",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "fossil",
+      "heading": "Senior Watch Designer at Fossil Group",
+      "url": null,
+      "collaborators": [],
+      "description": "Delivered a 23.7% sales increase by directing strategic design contributions for the Skechers watch line launch, aligning features with market demand to maximize business impact. Spearheaded innovation and boosted team performance by mentoring designers in vendor collaboration and iterative design practices, streamlining processes and driving enhanced project execution.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX",
+      "startDate": "2012-01-01T00:00:00.000Z",
+      "endDate": "2015-12-31T00:00:00.000Z",
+      "images": [
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544581943-sic83j.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544581726-8pvc4c.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544581620-0gi8d0.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544581826-mlnuh6.png",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "marchon",
+      "heading": "Senior Eyewear Designer at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "Drove $10 million in revenue growth by launching a new Nike Vision product line for younger consumers, achieving 10% of annual company growth through research-backed insights. Revolutionized design efficiency by co-founding the 3D design department with Gamal Prather (later branded as the VSP Innovation Lab), reducing prototyping timelines and enhancing iteration speed.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC",
+      "startDate": "2004-01-01T00:00:00.000Z",
+      "endDate": "2012-12-31T00:00:00.000Z",
+      "images": [
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544764575-rxlc8k.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544764821-gqadw3.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544765277-pcj6eo.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544764713-8e50ae.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544764923-lajqut.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544765026-na57iv.png",
+          "caption": ""
+        },
+        {
+          "url": "https://kefjgkgawqatjcdmbrxq.supabase.co/storage/v1/object/public/achievement-media/c91325a0-8996-439b-b17e-505c06bd91f5/1762544765148-qet6ga.png",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "cca_bfa",
+      "heading": "BFA Industrial Design at California College of the Arts",
+      "url": null,
+      "collaborators": [],
+      "description": "Comprehensive industrial design education covering product development, materials, manufacturing processes, and design thinking.",
+      "attachments": [],
+      "type": "education",
+      "degree": "Bachelor of Fine Arts",
+      "school": "California College of the Arts",
+      "location": "Industrial Design",
+      "startDate": "2003-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "asu",
+      "heading": "Arizona State University",
+      "url": null,
+      "collaborators": [],
+      "description": "Undergraduate studies at Arizona State University.",
+      "attachments": [],
+      "type": "education",
+      "degree": null,
+      "school": "Arizona State University",
+      "location": "",
+      "startDate": "1999-01-01T00:00:00.000Z",
+      "endDate": "2001-12-31T00:00:00.000Z"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "nngroup_ux",
+      "heading": "UX Certification with specialty in UX Management from Nielsen Norman Group",
+      "url": null,
+      "collaborators": [],
+      "description": "Comprehensive UX training covering user research, interaction design, usability testing methodologies, and UX management practices.",
+      "attachments": [],
+      "type": "certification",
+      "name": "UX Certification with specialty in UX Management",
+      "organization": "Nielsen Norman Group",
+      "startDate": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "contact": [
+    {
+      "id": "linkedin",
+      "platform": "LinkedIn",
+      "handle": "justin-harmon-a21337a9",
+      "url": "https://www.linkedin.com/in/justin-harmon-a21337a9/"
+    },
+    {
+      "id": "email",
+      "platform": "Email",
+      "handle": "harmon.justin@gmail.com",
+      "url": "mailto:harmon.justin@gmail.com"
+    }
+  ]
+}

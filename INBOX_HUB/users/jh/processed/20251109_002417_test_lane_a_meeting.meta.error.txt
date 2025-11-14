@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: test_lane_a_meeting.meta.json
+Timestamp: 20251109_002417

@@ -1,0 +1,379 @@
+{
+  "project": "general",
+  "version": "1.0.0",
+  "last_updated": "2025-10-30",
+  "description": "Cross-project patterns and general-purpose tools",
+  
+  "patterns": {
+    "do": [
+      "Build RSS/automation workflows with targeted filtering upfront",
+      "Condense without losing essential technical specificity",
+      "Document iterative ideation showing how concepts evolved",
+      "Prefer JSON-driven workflows over manual scripts (LLM can update JSON directly in Cascade)",
+      "Use scripts only for external APIs (Gmail, Dropbox) or performance-critical operations",
+      "Consult user when tradeoff between friction and functionality is unclear",
+      "Log active engagement duration (start to JSON integration) in summary_log entries",
+      "Track time patterns to improve task estimation accuracy",
+      "Provide time-boxed task recommendations with 10-20% buffer"
+    ],
+    "dont": [
+      "Pull everything from RSS feeds before filtering (causes workflow overwhelm)",
+      "Create scripts for tasks that can be done via JSON updates (adds friction)",
+      "Build status checkers or re-extraction scripts (LLM can read/process directly)"
+    ],
+    "qa_loops": [
+      "Reality check grand visions against pragmatic execution constraints",
+      "Test workflow logic with concrete URL/query examples"
+    ]
+  },
+  
+  "lexicon": [
+    {
+      "term": "discovery journey",
+      "definition": "Documentation format showing iterative exploration with phases, evolution arrows, and concept progression",
+      "examples": [
+        "JSON summary tracing from curiosity through frameworks to market-ready solutions",
+        "Phase-by-phase capture of how ideas built on each other"
+      ]
+    },
+    {
+      "term": "information asymmetry risk",
+      "definition": "Strategic concern when potential beta tester is building competitive product",
+      "examples": [
+        "Competitor beta tester may gain product insights while sharing minimal feedback",
+        "Need to assess trust level before granting early access"
+      ]
+    },
+    {
+      "term": "human-centered guardrails",
+      "definition": "User-controlled validation and accuracy mechanisms for AI-generated content",
+      "examples": [
+        "Keep context accurate and current through user validation",
+        "User ownership and control over memory persistence",
+        "Clarity and portability over automated novelty features"
+      ]
+    },
+    {
+      "term": "Rule of Three",
+      "definition": "Pedagogical principle that ideas grouped in threes are more memorable and impactful for learning",
+      "examples": [
+        "Decide · Document · Deliver framework for design systems",
+        "Three-beat storytelling aligns with cognitive chunking principles",
+        "Makes abstract system principles accessible and memorable"
+      ]
+    },
+    {
+      "term": "composition alternatives",
+      "definition": "Vocabulary variations for technical concepts to improve accessibility and understanding",
+      "examples": [
+        "Composition → Assembly, Construction, Configuration, Orchestration, Integration",
+        "Provides multiple entry points for different learning styles",
+        "Reduces jargon barriers in technical education"
+      ]
+    },
+    {
+      "term": "document generation pipeline",
+      "definition": "Systematic approach to creating formatted documents from structured content using HTML+CSS or Pandoc",
+      "examples": [
+        "HTML + CSS → PDF via Puppeteer (visual fidelity, leverages joju patterns)",
+        "Markdown + Pandoc → multiple formats (DOCX, PDF, PPTX with document features)",
+        "Template-based styling for consistent brand/format output"
+      ]
+    },
+    {
+      "term": "export workflow architecture",
+      "definition": "Framework for converting workspace content to distributable document formats",
+      "examples": [
+        "Windsurf generates files → Dropbox sync → external conversion tools",
+        "HTML + CSS for PDFs, Pandoc for multi-format academic documents",
+        "Template library for reusable document styles and structures"
+      ]
+    },
+    {
+      "term": "physical-digital twin",
+      "definition": "Tangible object with unique identity linked to persistent digital memory entry",
+      "examples": [
+        "NFC/QR/serial-enabled artifacts connecting to 8825 memory capsules",
+        "Serialized objects with corresponding digital story pages",
+        "Physical tokens that unlock digital content and continuity"
+      ]
+    },
+    {
+      "term": "microbatch storytelling",
+      "definition": "Limited-run products with numbered narrative arcs for collection value",
+      "examples": [
+        "Kickstarter campaigns with serialized editions",
+        "Numbered artifacts with evolving story context",
+        "Small-batch manufacturing with unique identity per unit"
+      ]
+    },
+    {
+      "term": "Magic Lenses",
+      "definition": "Multi-perspective framing model for evaluating decisions to avoid single-bias thinking",
+      "examples": [
+        "Customer Lens: Does this solve something they truly care about?",
+        "Pragmatic Lens: Can we deliver this with current resources?",
+        "Growth Lens: Does this create compounding advantage?",
+        "Money Lens: Does this connect meaningfully to revenue?"
+      ]
+    },
+    {
+      "term": "tiny loops",
+      "definition": "Small, fast validation cycles that run until the approach clicks naturally",
+      "examples": [
+        "Prototype → Show → Watch reaction → Adjust → Repeat",
+        "12-month MVP horizon through tightening loops",
+        "Optimize for reactions over feedback"
+      ]
+    },
+    {
+      "term": "Founding Hypothesis",
+      "definition": "Explicit value proposition template for validation testing",
+      "examples": [
+        "If we help [CUSTOMER] solve [PROBLEM] with [SOLUTION]",
+        "They will pick us over [COMPETITION] because [DIFFERENTIATION]",
+        "Always explicit before building, immediately testable"
+      ]
+    },
+    {
+      "term": "reaction over feedback",
+      "definition": "Prioritize emotional response signals over polite opinions for validation",
+      "examples": [
+        "Observable behavior vs compliments",
+        "Live scoring over vibes",
+        "Natural adoption signals vs survey responses"
+      ]
+    },
+    {
+      "term": "voice detection framework",
+      "definition": "System for identifying appropriate voice/style based on context signals (author, domain, audience, purpose)",
+      "examples": [
+        "Context signals: content type, intended author, target audience, domain expertise",
+        "Detection triggers: explicit voice request, domain keywords, author attribution",
+        "Edge case handling: Justin writing about real estate vs Laura's MLS listings"
+      ]
+    },
+    {
+      "term": "voice switching logic",
+      "definition": "Rules and triggers for transitioning between different voice modes during content generation",
+      "examples": [
+        "Explicit switching: User requests specific voice or author change",
+        "Automatic switching: Domain change triggers voice recalibration",
+        "Priority hierarchy: Author voice > domain voice > default voice"
+      ]
+    },
+    {
+      "term": "voice registry",
+      "definition": "Catalog of available voices with characteristics, use cases, and activation triggers",
+      "examples": [
+        "LSH voice: romantic MLS style for Laura's real estate listings",
+        "WCB Professional: polished business communication",
+        "WCB Warm & Witty: approachable updates and conversational content",
+        "8825 Governance: concise technical structured format"
+      ]
+    },
+    {
+      "term": "research intelligence layer",
+      "definition": "Modular framework with 15 research techniques auto-selected based on research type, goal, and stakes",
+      "examples": [
+        "Modules: charter.make, discover.topics, evidence.scan, questions.expand",
+        "history.map, dataset.analyze, gap.find, method.design, sources.audit",
+        "signals.predict, ethics.check, abstract.compress, hypothesis.generate",
+        "hybrid.invent, quiz.check - tiered automatic selection"
+      ]
+    },
+    {
+      "term": "learning adaptive modes",
+      "definition": "Three learning depth levels with invisible assessment of complexity, foundation, and importance",
+      "examples": [
+        "Fast: simplify, translate, check, refine (quick foundational learning)",
+        "Standard: + map, roleplay, plan, memory (comprehensive understanding)",
+        "Mastery: + multi-voice (deep expertise with multiple perspectives)",
+        "Auto-triggered based on inferred variables without user prompt"
+      ]
+    },
+    {
+      "term": "Sequoia positioning",
+      "definition": "Founder-as-Systems-Architect voice positioning 8825 as persistent organizational AI partner",
+      "examples": [
+        "Core claim: enables AI to remember, reason, and operate across time",
+        "Alignment: persistent memory thesis + multi-agent orchestration",
+        "Infrastructure play: sits above models for durable value",
+        "Strategic but warm tone for general investor narrative"
+      ]
+    },
+    {
+      "term": "window-hovering widget",
+      "definition": "UI interface pattern where widget floats in bottom-right corner of active window across all applications",
+      "examples": [
+        "Always-on-top overlay that follows active window using macOS Accessibility API",
+        "Similar to time trackers (RescueTime), screen recorders (Loom), transcription tools (Scribe)",
+        "Requires user permission, polls window position every ~100ms for positioning",
+        "Use cases: persistent time tracking, quick actions, context-aware tools"
+      ],
+      "technical_notes": {
+        "feasibility": "Medium complexity, 4-6 weeks MVP",
+        "implementation": "Swift + AppKit (native) or Electron (cross-platform)",
+        "apis": "CGWindowListCopyWindowInfo, Accessibility API, NSWindow.floating",
+        "constraints": "Permission friction, CPU/battery impact, content obscuring",
+        "alternative": "Browser extension (easier, web-only)"
+      },
+      "status": "Exploration phase - potential UI interface option for 8825"
+    },
+    {
+      "term": "time-boxed task estimation",
+      "definition": "System for logging actual task duration and using patterns to predict future work timeframes",
+      "examples": [
+        "Track active engagement time from initiation to final JSON integration",
+        "Build estimation model from historical patterns (simple analysis ~10-15min, complex ~30-45min)",
+        "Suggest highest-priority tasks that fit available time window with 10-20% buffer",
+        "Enable 'What can I do in 15 minutes?' workflow optimization"
+      ],
+      "duration_categories": {
+        "quick_wins": "5-15 minutes (simple edits, single-file updates, quick analysis)",
+        "standard_tasks": "15-30 minutes (multi-file changes, moderate research, pattern extraction)",
+        "complex_initiatives": "30-60+ minutes (new system design, cross-project integration, deep analysis)"
+      },
+      "implementation": "Add 'duration_estimate' and 'actual_duration' fields to summary_log entries"
+    }
+  ],
+  
+  "agent_references": {
+    "note": "Agent capabilities moved to projects/agent_registry.json to prevent duplication",
+    "agents_from_this_project": [
+      "AGENT-GENERAL-BETA-TESTER-PROFILER-0001",
+      "AGENT-GENERAL-RSS-AUTOMATION-ARCHITECT-0001",
+      "AGENT-GENERAL-DISCOVERY-JOURNEY-DOCUMENTOR-0001"
+    ],
+    "reconstruction": "Use 'recreate WCB for <agent_id>' to regenerate from registry"
+  },
+  
+  "checklists": [
+    {
+      "name": "Beta Tester Candidate Profile",
+      "items": [
+        "Review complete post/comment history via RSS",
+        "Assess technical skills and shipped products",
+        "Identify pain points and community engagement style",
+        "Check for competitive conflicts or information asymmetry risks",
+        "Emphasize clarity, portability, and persistent context over novelty demos",
+        "Use Rule of Three to make abstract system principles memorable",
+        "Connect design and dev concepts through shared language (tokens as contracts)",
+        "Ground governance in documentation practices (Who, Where, How)",
+        "Use three-beat storytelling pattern for cognitive chunking and retention",
+        "Leverage HTML + CSS for document generation with visual fidelity",
+        "Build on proven joju resume rendering patterns for general documents",
+        "Use Pandoc for multi-format conversion when document features needed",
+        "Start with PDF export, expand to other formats based on actual needs",
+        "HTML + CSS document generation workflow",
+        "Pandoc multi-format conversion integration",
+        "Template-based export system design",
+        "Physical-digital integration for tangible memory objects",
+        "Cross-brand collaboration with material craft partnerships",
+        "Kickstarter positioning for limited-run narrative products",
+        "Serialized identity linking physical objects to digital memory",
+        "Use Magic Lenses multi-perspective evaluation to avoid single-bias thinking",
+        "Prioritize reaction signals over polite feedback for validation",
+        "Run tiny validation loops until approach clicks naturally",
+        "Start with explicit Founding Hypothesis before building",
+        "Interview users to observe real workflow pain points",
+        "Make complex systems simple for user adoption",
+        "Focus on smallest unit of value that proves usefulness",
+        "Ship and learn rather than wait for perfect solution",
+        "Detect voice requirements from context before content generation",
+        "Switch voices explicitly when context changes (author, domain, audience)",
+        "Maintain voice registry with clear use cases and switching triggers",
+        "Handle edge cases where multiple voices might apply (prefer most specific)",
+        "Use tiered research selection (Tier1/2/3) based on type, goal, and stakes",
+        "Apply adaptive learning modes (fast/standard/mastery) with invisible assessment",
+        "Auto-select research and learning techniques without prompting user",
+        "Position 8825 as continuity + collaboration layer for AI across time and tools"
+      ]
+    },
+    {
+      "name": "RSS Automation Workflow Design",
+      "items": [
+        "Use targeted search RSS URLs with embedded keywords (not generic feeds)",
+        "Filter at source, not after full feed pull",
+        "Implement multiple focused feeds over single broad feed",
+        "Parse XML with specific field extraction logic",
+        "Integrate LLM for profile generation and scoring",
+        "Connect to Notion/database for candidate storage"
+      ]
+    }
+  ],
+  
+  "summary_log": [
+    {
+      "when": "2025-10-02",
+      "topic": "Beta tester recruitment via Reddit RSS analysis",
+      "notes": "Systematic beta tester identification workflow. Analyzed Reddit RSS feeds for keywords related to portfolio/profile tools. Developed comprehensive user profiling methodology with information asymmetry risk assessment."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Design systems educational methodology extraction",
+      "notes": "Extracted Rule of Three pedagogical framework from design systems class creation session. Added patterns for educational content structuring (three-beat storytelling, cognitive chunking), vocabulary alternatives for technical accessibility, and governance documentation practices. Framework applicable beyond design systems to general technical education and content creation."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Document generation and export workflow analysis",
+      "notes": "Comprehensive analysis of document generation options: HTML+CSS pipeline (excellent for PDFs, leverages joju patterns, visual fidelity) vs Pandoc (universal converter, 30+ formats, document features like TOC/citations). Recommended hybrid approach: start with HTML+CSS for PDF export building on proven joju resume rendering, add Pandoc later for multi-format needs. Identified Windsurf workspace limitations and export destinations."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "MTRL × TrustyBits collaboration patterns extraction",
+      "notes": "Extracted cross-project collaboration patterns from MTRL TrustyBits brainstorm: physical-digital integration concepts, serialized identity linking tangible objects to 8825 memory entries, Kickstarter positioning for narrative products, and microbatch storytelling approaches. Added lexicon for physical-digital twins and limited-run product strategies."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Chat Mining Agent strategic frameworks extraction",
+      "notes": "Extracted strategic validation frameworks from Chat Mining Agent WCB: Magic Lenses multi-perspective evaluation system, tiny loops validation methodology, Founding Hypothesis template, reaction-over-feedback prioritization, and integration discovery patterns. Added customer-first principles and decision-making frameworks for cross-project application."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Voice detection and switching framework formalization",
+      "notes": "Created formal voice management framework addressing detection, switching logic, and edge case handling. Established voice registry concept for cataloging available voices (LSH romantic MLS, WCB Professional/Warm, 8825 Governance). Defined context signals for voice detection (author, domain, audience, purpose) and switching triggers (explicit requests, domain changes, author attribution). Formalized edge case handling with priority hierarchy: author voice > domain voice > default voice."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Research intelligence layer and learning adaptive modes implementation",
+      "notes": "Added 15-module research intelligence framework with tiered auto-selection (Tier1/2/3) based on research type, goal, and stakes. Implemented 3-level learning adaptive modes (fast/standard/mastery) with invisible assessment engine for complexity, foundation, and strategic importance. Added Sequoia-specific positioning narrative with Founder-as-Systems-Architect voice positioning 8825 as persistent memory and multi-agent orchestration infrastructure play."
+    },
+    {
+      "when": "2025-11-04",
+      "topic": "Window-hovering widget UI pattern feasibility analysis",
+      "notes": "Explored feasibility of always-on-top widget that nests in bottom-right corner of active window across all applications. Analyzed technical approach using macOS Accessibility API (CGWindowListCopyWindowInfo) for window tracking and floating overlay windows. Identified time tracking apps (RescueTime, Timing) and screen recorders (Loom, Scribe) as reference implementations. Verdict: Feasible with medium complexity (4-6 weeks MVP). Primary constraints are permission friction (Accessibility approval) and performance optimization. Alternative browser extension approach for web-only use cases. Added as potential UI interface option for 8825 context-aware tooling.",
+      "duration_estimate": "15 minutes",
+      "actual_duration": "~12 minutes",
+      "time_breakdown": "Research/context loading (2min) + Analysis/writing (8min) + JSON integration (2min)"
+    },
+    {
+      "when": "2025-11-04",
+      "topic": "Time-boxed task estimation framework",
+      "notes": "Added duration tracking system to enable pattern recognition and time-boxed task recommendations. Implemented 'duration_estimate' and 'actual_duration' fields in summary_log. Defined three task categories: quick wins (5-15min), standard tasks (15-30min), complex initiatives (30-60+min). Goal: Enable 'what's next in 15 minutes?' workflow optimization with 10-20% buffer built into estimates. System will learn from historical patterns to improve estimation accuracy over time.",
+      "duration_estimate": "10 minutes",
+      "actual_duration": "~8 minutes",
+      "time_breakdown": "Framework design (3min) + JSON implementation (3min) + Documentation (2min)"
+    }
+  ],
+  
+  "stats": {
+    "lexicon": 21,
+    "patterns": 43,
+    "agent_recipes": 0,
+    "agent_references": 3,
+    "checklists": 2
+  },
+  
+  "source_reports": [
+    "general_patterns_compilation.md",
+    "master_context_library.json",
+    "mining_report_design_systems_rule_of_three.json",
+    "document_generation_export_workflow_analysis.md",
+    "mtrl_trustybits_brainstorm_report.json",
+    "chat_mining_agent_wcb.md",
+    "8825_update_pkg.json"
+  ],
+  
+  "last_mined_at": "2025-11-04T13:21:00Z"
+}

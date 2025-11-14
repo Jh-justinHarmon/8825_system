@@ -1,0 +1,468 @@
+{
+  "protocol_name": "Joju Curation Agent",
+  "version": "1.0.0",
+  "protocol_type": "Content Selection & Optimization Agent",
+  "parent_system": "8825 PCMS",
+  "created": "2025-11-05",
+  "purpose": "Analyze master library, score achievements, and generate curated Joju outputs optimized for specific targets (tonal, job-specific, role-specific, category-specific)",
+  
+  "overview": {
+    "description": "The Joju Curation Agent analyzes the complete master library, evaluates each achievement using confidence scores and Achievement of Fact ratings, then generates curated versions of the Joju input document optimized for specific audiences, roles, or contexts",
+    "trigger": "User provides targeting inputs (tone, desired role, job description, category, or Waymark AUX input)",
+    "output": "Curated justin_harmon_joju_input.json optimized for the specified target",
+    "integration": "Works with Joju Achievement Analysis Tool (Metrics + Statement + Evidence framework)"
+  },
+  
+  "achievement_scoring_system": {
+    "description": "Based on Joju Achievement Analysis Tool - evaluates achievements on three pillars",
+    "three_pillars": {
+      "metrics": {
+        "description": "Quantitative or statistical validation of outcomes",
+        "confidence_scale": "0-100",
+        "examples": ["30% reduction", "$10M revenue", "23.7% increase", "8 team members"]
+      },
+      "statement": {
+        "description": "Declarative summary of action, challenge, or result",
+        "confidence_scale": "0-100",
+        "examples": ["Led cross-functional team", "Designed product line", "Automated workflow"]
+      },
+      "evidence": {
+        "description": "Supporting documentation, artifacts, or verifiable proof",
+        "confidence_scale": "0-100",
+        "examples": ["Zapier logs", "Shinola collections", "GitHub repo", "Published portfolio"]
+      }
+    },
+    "achievement_types": {
+      "stated_achievement": {
+        "definition": "Achievement with statement only, lacks metrics or evidence",
+        "confidence_threshold": "statement ≥60, metric <40, evidence <40",
+        "example": "Led design team on multiple projects"
+      },
+      "achievement_of_fact": {
+        "definition": "Verified achievement with all three pillars present",
+        "confidence_threshold": "statement ≥70, metric ≥70, evidence ≥60",
+        "example": "Reduced processing time by 30% by automating workflow using Zapier"
+      },
+      "bona_fide_achievement": {
+        "definition": "Achievement of Fact with external proof or validation",
+        "confidence_threshold": "statement ≥80, metric ≥80, evidence ≥80",
+        "example": "Drove $10M revenue growth (Nike Vision) with published case study"
+      }
+    },
+    "overall_confidence_formula": "(statement × 0.4) + (metric × 0.3) + (evidence × 0.3)",
+    "minimum_threshold_for_inclusion": 60
+  },
+  
+  "input_parameters": {
+    "description": "Targeting criteria provided by user to guide curation",
+    "required": ["target_type"],
+    "optional": ["confidence_threshold", "max_bullets_per_role", "prioritization_mode"],
+    "target_types": {
+      "tonal": {
+        "description": "Optimize for specific tone or voice",
+        "options": ["conservative", "innovative", "technical", "creative", "executive", "startup"],
+        "affects": "Language style, achievement framing, emphasis areas"
+      },
+      "job_specific": {
+        "description": "Optimize for specific job posting or description",
+        "input": "Job description text or URL",
+        "affects": "Keyword matching, skill alignment, relevant experience prioritization"
+      },
+      "desired_role": {
+        "description": "Optimize for target role or title",
+        "examples": ["Product Designer", "UX Lead", "Design Director", "VP of Design"],
+        "affects": "Leadership vs execution balance, seniority indicators, scope emphasis"
+      },
+      "category_specific": {
+        "description": "Optimize for specific industry or domain",
+        "examples": ["eyewear", "timepieces", "tech", "consulting", "agency"],
+        "affects": "Domain-relevant achievements, industry terminology, market context"
+      },
+      "waymark_aux": {
+        "description": "Future: External input from Waymark system (not yet implemented)",
+        "status": "placeholder",
+        "integration": "TBD - will provide additional targeting signals"
+      }
+    }
+  },
+  
+  "curation_workflow": {
+    "phase_1_analyze": {
+      "title": "Library Analysis & Scoring",
+      "description": "Analyze all achievements in master library and calculate confidence scores",
+      "steps": [
+        "Load JH_master_library.json and justin_harmon_joju_input.json",
+        "For each achievement, evaluate three pillars (Metrics, Statement, Evidence)",
+        "Calculate confidence scores (0-100) for each pillar",
+        "Calculate overall confidence using formula",
+        "Classify achievement type (Stated, Fact, Bona Fide)",
+        "Tag with framework alignment (STAR, CAR, XYZ, etc.)",
+        "Identify impact level (individual, team, org, market)",
+        "Extract Joju tags (execution, leadership, innovation, etc.)"
+      ],
+      "output": {
+        "location": "/joju_sandbox/analysis/library_analysis.json",
+        "structure": {
+          "achievement_id": "unique identifier",
+          "original_text": "achievement bullet text",
+          "statement_confidence": "0-100",
+          "metric_confidence": "0-100",
+          "evidence_confidence": "0-100",
+          "overall_confidence": "0-100",
+          "achievement_type": "stated | fact | bona_fide",
+          "framework_alignment": ["STAR", "CAR", "XYZ"],
+          "impact_level": "individual | team | org | market",
+          "joju_tags": ["tag1", "tag2"],
+          "company": "company name",
+          "role": "job title",
+          "date_range": "YYYY-YYYY"
+        }
+      }
+    },
+    
+    "phase_2_target": {
+      "title": "Target Analysis",
+      "description": "Analyze targeting inputs and determine selection criteria",
+      "steps": [
+        "Parse target_type and associated inputs",
+        "If job_specific: Extract keywords, required skills, seniority level",
+        "If desired_role: Identify role requirements, typical achievements, seniority",
+        "If tonal: Define tone parameters and language preferences",
+        "If category_specific: Identify domain keywords and relevant experience",
+        "Set confidence threshold (default: 70 for Achievements of Fact)",
+        "Define prioritization weights for different factors"
+      ],
+      "output": {
+        "location": "/joju_sandbox/analysis/target_analysis.json",
+        "structure": {
+          "target_type": "job_specific | desired_role | tonal | category_specific",
+          "target_details": {},
+          "confidence_threshold": 70,
+          "prioritization_weights": {
+            "confidence_score": 0.3,
+            "relevance_score": 0.4,
+            "recency": 0.2,
+            "impact_level": 0.1
+          },
+          "required_tags": [],
+          "preferred_frameworks": [],
+          "tone_parameters": {}
+        }
+      }
+    },
+    
+    "phase_3_score": {
+      "title": "Relevance Scoring",
+      "description": "Score each achievement for relevance to target",
+      "scoring_factors": {
+        "confidence_score": {
+          "weight": 0.3,
+          "calculation": "Overall confidence from Phase 1"
+        },
+        "relevance_score": {
+          "weight": 0.4,
+          "calculation": "Keyword match + skill alignment + domain fit",
+          "components": {
+            "keyword_match": "Percentage of target keywords present",
+            "skill_alignment": "Match between achievement skills and target requirements",
+            "domain_fit": "Relevance to target industry/category"
+          }
+        },
+        "recency": {
+          "weight": 0.2,
+          "calculation": "Years since achievement (more recent = higher score)",
+          "formula": "max(0, 100 - (years_ago × 10))"
+        },
+        "impact_level": {
+          "weight": 0.1,
+          "calculation": "individual=25, team=50, org=75, market=100"
+        }
+      },
+      "final_score_formula": "(confidence × 0.3) + (relevance × 0.4) + (recency × 0.2) + (impact × 0.1)",
+      "output": {
+        "location": "/joju_sandbox/analysis/scored_achievements.json",
+        "structure": {
+          "achievement_id": "",
+          "confidence_score": 0,
+          "relevance_score": 0,
+          "recency_score": 0,
+          "impact_score": 0,
+          "final_score": 0,
+          "rank": 0,
+          "include_in_output": true
+        }
+      }
+    },
+    
+    "phase_4_select": {
+      "title": "Achievement Selection",
+      "description": "Select top achievements for curated output",
+      "selection_rules": {
+        "minimum_confidence": "≥60 (configurable)",
+        "minimum_final_score": "≥70 (configurable)",
+        "achievement_type_priority": ["bona_fide", "fact", "stated"],
+        "max_bullets_per_role": "6-8 (configurable)",
+        "diversity_requirements": {
+          "description": "Ensure variety across achievement types",
+          "rules": [
+            "Include at least 1 quantified metric achievement per role",
+            "Include mix of execution and leadership achievements",
+            "Span multiple impact levels if available",
+            "Avoid redundant similar achievements"
+          ]
+        }
+      },
+      "selection_strategy": {
+        "for_each_work_experience": [
+          "Sort achievements by final_score descending",
+          "Filter by minimum thresholds",
+          "Apply diversity rules",
+          "Select top N (default: 6-8)",
+          "Ensure at least 1 Bona Fide or Achievement of Fact if available"
+        ]
+      },
+      "output": {
+        "location": "/joju_sandbox/analysis/selected_achievements.json",
+        "structure": {
+          "work_experience_id": "",
+          "selected_achievements": [],
+          "selection_rationale": "",
+          "diversity_check": {},
+          "confidence_distribution": {}
+        }
+      }
+    },
+    
+    "phase_5_optimize": {
+      "title": "Content Optimization",
+      "description": "Optimize selected achievements for target tone and context",
+      "optimization_strategies": {
+        "tonal_adjustment": {
+          "conservative": {
+            "emphasis": "Proven results, established processes, risk mitigation",
+            "language": "Professional, measured, traditional",
+            "metrics": "Highlight stability and consistency"
+          },
+          "innovative": {
+            "emphasis": "Novel approaches, creative solutions, breakthrough results",
+            "language": "Dynamic, forward-thinking, experimental",
+            "metrics": "Highlight innovation and disruption"
+          },
+          "technical": {
+            "emphasis": "Technical depth, tools, methodologies, specifications",
+            "language": "Precise, detailed, technical terminology",
+            "metrics": "Highlight technical complexity and expertise"
+          },
+          "creative": {
+            "emphasis": "Design thinking, aesthetic excellence, user experience",
+            "language": "Expressive, human-centered, design-focused",
+            "metrics": "Highlight user impact and design quality"
+          },
+          "executive": {
+            "emphasis": "Strategic impact, organizational outcomes, leadership",
+            "language": "High-level, strategic, business-focused",
+            "metrics": "Highlight revenue, growth, market position"
+          },
+          "startup": {
+            "emphasis": "Agility, rapid iteration, scrappy execution, growth",
+            "language": "Fast-paced, adaptable, entrepreneurial",
+            "metrics": "Highlight speed, efficiency, resourcefulness"
+          }
+        },
+        "keyword_integration": {
+          "description": "Naturally integrate target keywords without forcing",
+          "rules": [
+            "Add relevant keywords from job description",
+            "Maintain natural language flow",
+            "Don't sacrifice clarity for keyword stuffing",
+            "Prioritize readability over SEO"
+          ]
+        },
+        "framework_alignment": {
+          "description": "Ensure achievements follow preferred narrative framework",
+          "options": ["STAR", "CAR", "PAR", "XYZ"],
+          "default": "CAR (Challenge-Action-Result)"
+        }
+      },
+      "output": {
+        "location": "/joju_sandbox/analysis/optimized_achievements.json",
+        "structure": {
+          "achievement_id": "",
+          "original_text": "",
+          "optimized_text": "",
+          "optimization_notes": "",
+          "keywords_added": [],
+          "tone_adjustments": []
+        }
+      }
+    },
+    
+    "phase_6_generate": {
+      "title": "Curated Output Generation",
+      "description": "Generate final curated Joju input document",
+      "steps": [
+        "Load justin_harmon_joju_input.json as template",
+        "Replace work experience achievements with optimized selections",
+        "Update metadata with curation details",
+        "Add target_context field with curation parameters",
+        "Validate JSON structure",
+        "Generate curation report"
+      ],
+      "output_files": {
+        "primary": "justin_harmon_joju_curated_{target_type}_{timestamp}.json",
+        "location": "/joju_sandbox/curated/",
+        "naming_examples": [
+          "justin_harmon_joju_curated_product-designer_20251105.json",
+          "justin_harmon_joju_curated_eyewear-industry_20251105.json",
+          "justin_harmon_joju_curated_conservative-tone_20251105.json"
+        ]
+      },
+      "curation_report": {
+        "location": "/joju_sandbox/curated/curation_report_{timestamp}.md",
+        "contents": [
+          "Target parameters used",
+          "Total achievements analyzed",
+          "Achievements selected per role",
+          "Confidence score distribution",
+          "Achievement type breakdown (Stated/Fact/Bona Fide)",
+          "Optimization summary",
+          "Keyword integration report",
+          "Recommendations for improvement"
+        ]
+      }
+    }
+  },
+  
+  "agent_activation": {
+    "trigger_commands": [
+      "curate for [target]",
+      "generate joju for [role]",
+      "optimize joju for [job description]",
+      "create targeted joju"
+    ],
+    "required_inputs": {
+      "target_type": "One of: tonal, job_specific, desired_role, category_specific",
+      "target_details": "Specific parameters for the target type"
+    },
+    "optional_inputs": {
+      "confidence_threshold": "Minimum confidence score (default: 70)",
+      "max_bullets_per_role": "Maximum achievements per work experience (default: 6-8)",
+      "prioritization_mode": "confidence_first | relevance_first | balanced (default: balanced)",
+      "include_projects": "Include projects section (default: true)",
+      "tone": "Desired tone if not using tonal target_type"
+    },
+    "activation_response": {
+      "message": "🎯 JOJU CURATION AGENT ACTIVATED\n\nTarget: {target_type}\nAnalyzing library...\n\nPhase 1: Scoring achievements\nPhase 2: Analyzing target requirements\nPhase 3: Calculating relevance scores\nPhase 4: Selecting top achievements\nPhase 5: Optimizing content\nPhase 6: Generating curated output\n\nThis will take a moment..."
+    }
+  },
+  
+  "example_usage": {
+    "example_1_job_specific": {
+      "user_command": "curate for this job: [paste job description]",
+      "agent_actions": [
+        "Parse job description for keywords, skills, requirements",
+        "Analyze library achievements (confidence + relevance scoring)",
+        "Select achievements matching job requirements",
+        "Optimize language to match job description tone",
+        "Generate curated output with high relevance scores",
+        "Report: 'Selected 42 achievements across 6 roles, avg confidence: 82, avg relevance: 87'"
+      ]
+    },
+    "example_2_desired_role": {
+      "user_command": "curate for VP of Design role",
+      "agent_actions": [
+        "Identify VP of Design typical requirements (leadership, strategy, org impact)",
+        "Prioritize achievements with 'org' and 'market' impact levels",
+        "Emphasize leadership, team building, strategic outcomes",
+        "De-emphasize individual execution tasks",
+        "Generate curated output with executive tone",
+        "Report: 'Selected 38 achievements, 65% leadership-focused, 80% org/market impact'"
+      ]
+    },
+    "example_3_category_specific": {
+      "user_command": "curate for eyewear industry",
+      "agent_actions": [
+        "Filter achievements from eyewear-related roles (Marchon, PRTCL, COSTA)",
+        "Prioritize eyewear-specific projects and outcomes",
+        "Include relevant technical knowledge (materials, manufacturing, design)",
+        "De-emphasize unrelated industries (watches, bicycles)",
+        "Generate curated output focused on eyewear expertise",
+        "Report: 'Selected 28 achievements from eyewear roles, 90% industry-relevant'"
+      ]
+    },
+    "example_4_tonal": {
+      "user_command": "curate for conservative corporate tone",
+      "agent_actions": [
+        "Analyze all achievements for tone adjustment opportunities",
+        "Emphasize proven results, established processes, risk mitigation",
+        "Use professional, measured language",
+        "Highlight stability metrics and consistency",
+        "Generate curated output with conservative framing",
+        "Report: 'Adjusted 45 achievements for conservative tone, emphasized stability and proven results'"
+      ]
+    }
+  },
+  
+  "integration_with_8825": {
+    "decision_making": "Use 8825_decision-making for threshold and selection decisions",
+    "learning": "Learn user preferences for curation over time",
+    "mining": "Leverage 8825_mining analysis for achievement extraction",
+    "promptgen": "Use 8825_promptGen for final output generation"
+  },
+  
+  "quality_assurance": {
+    "validation_checks": [
+      "All selected achievements meet minimum confidence threshold",
+      "Diversity requirements satisfied (mix of types and impact levels)",
+      "No duplicate or redundant achievements",
+      "Tone consistency across all achievements",
+      "Keyword integration natural and readable",
+      "JSON structure valid and complete",
+      "Metadata accurate and comprehensive"
+    ],
+    "confidence_distribution_targets": {
+      "bona_fide": "≥20% of selected achievements",
+      "achievement_of_fact": "≥50% of selected achievements",
+      "stated": "≤30% of selected achievements"
+    }
+  },
+  
+  "future_enhancements": {
+    "waymark_integration": {
+      "description": "Integration with Waymark system for additional targeting signals",
+      "status": "Placeholder - not yet implemented",
+      "planned_inputs": [
+        "Market positioning data",
+        "Competitive analysis",
+        "Industry trends",
+        "Role-specific benchmarks"
+      ]
+    },
+    "ml_optimization": {
+      "description": "Machine learning to improve relevance scoring",
+      "features": [
+        "Learn from user selections and feedback",
+        "Improve keyword matching accuracy",
+        "Optimize tone adjustment algorithms",
+        "Predict achievement effectiveness"
+      ]
+    },
+    "ab_testing": {
+      "description": "Generate multiple variants for testing",
+      "features": [
+        "Create 2-3 curated versions with different strategies",
+        "Compare confidence and relevance distributions",
+        "Allow user to select preferred version",
+        "Learn from selection patterns"
+      ]
+    }
+  },
+  
+  "success_metrics": {
+    "curation_quality": "Average confidence score of selected achievements",
+    "relevance_accuracy": "User satisfaction with relevance to target",
+    "diversity_score": "Distribution across achievement types and impact levels",
+    "optimization_effectiveness": "Improvement in tone/keyword alignment",
+    "user_satisfaction": "User approval rate of curated outputs"
+  }
+}

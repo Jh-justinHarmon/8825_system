@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.8825.reddit-watcher</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/integrations/reddit/reddit_watcher.py</string>
+        <string>--once</string>
+    </array>
+    
+    <key>StartInterval</key>
+    <integer>300</integer>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>StandardOutPath</key>
+    <string>/tmp/8825-reddit-watcher.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/tmp/8825-reddit-watcher-error.log</string>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/integrations/reddit</string>
+</dict>
+</plist>

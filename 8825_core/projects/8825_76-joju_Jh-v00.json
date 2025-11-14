@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "name": "8825_76-joju_Jh-v00",
+    "context": "project_archive_primary",
+    "owner": "Justin Harmon",
+    "created_at": "2025-11-03T04:47:07",
+    "version": "1.0.0",
+    "description": "Full archival history of Joju profile. Append-only. Condensed from external LLM export."
+  },
+  "governance": {
+    "mode": "append_only",
+    "ingestion_rules": [
+      "Accept sources from resumes, chats, portfolios",
+      "Normalize into joju_achievements where possible",
+      "Preserve raw sources under sources.raw with origin metadata",
+      "Straight quotes only"
+    ]
+  },
+  "voice_profile": {
+    "id": "voice-jh",
+    "name": "${USER_NAME}",
+    "tone": "Strategic, concise, purpose-driven; warm & witty optional per context",
+    "rules": [
+      "Prefer concise answers unless asked for detail",
+      "Avoid jargon; explain 'why' before 'how'",
+      "Use straight quotes only"
+    ],
+    "summary": "Strategic UX leader and product-minded designer with deep roots in industrial design, research-driven problem solving, and systems/process improvement. Strengths: turning messy, cross-functional constraints into clear roadmaps; mining qualitative/quantitative signals; and building reusable prompt/agent frameworks like PromptGen 1.0 to compound outcomes over time. Bridges design, engineering, and business to deliver measurable results."
+  },
+  "profile": {
+    "displayName": "Justin Harmon",
+    "username": "justin-harmon",
+    "byline": "UX Designer in Dallas, TX",
+    "profession": "UX Designer",
+    "location": "Dallas, TX",
+    "about": "UX Designer with a strong foundation in design thinking, user research, and collaboration, supported by a UX management certification."
+  },
+  "skills": {
+    "technical": "Wireframing and Prototyping; Visual Design; Interaction Design; User Interface (UI) Design; Information Architecture (IA); User Research; Design Tools (Figma, Adobe XD, Sketch, Framer, Photoshop, Illustrator); Analytics and Metrics; Agile and Scrum Methodologies; UX Strategy; Persona Development; Motion Design; Service Design.",
+    "management": "Project Management; Strategic Thinking; Stakeholder Management; Conflict Resolution; Decision-Making; Cross-Functional Collaboration; Research Oversight; Process Improvement; Facilitation; Cultural Sensitivity; Mentorship and Coaching; Resource Allocation; Budget Management.",
+    "soft": "Communication; Time Management; Problem-Solving; Critical Thinking; Adaptability; Collaboration; Storytelling; Resilience; Attention to Detail."
+  },
+  "education": [
+    {
+      "degree": "BFA, Industrial Design",
+      "school": "California College of the Arts",
+      "location": "",
+      "startDate": "2003-01-01"
+    }
+  ],
+  "work_experience": [
+    {
+      "title": "UX Consultant & Product Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX",
+      "achievements": [
+        "Streamlined user workflows and reduced inefficiencies on a B2B SaaS platform by designing automated workflows that eliminated 55% of manual tasks and reduced reliance on seasonal employees by 65%.",
+        "Drove successful project outcomes by leading cross-functional collaboration with development teams and clients, ensuring user needs and business goals were met through organized updates and brainstorming sessions.",
+        "Unearthed critical user insights through in-depth research, translating findings into actionable design proposals that resolved pain points and improved overall user satisfaction.",
+        "Designed intuitive UI mockups and interactive prototypes using Figma and Adobe XD, effectively communicating design concepts and enhancing client engagement with new product features.",
+        "Enhanced product usability and accessibility by contributing to the design and implementation of new features for online statement processing tools, driving operational efficiency for end-users.",
+        "Spearheaded a website redesign project for a non-profit division by conducting user research and creating wireframes and prototypes, ensuring scalability and alignment with organizational objectives."
+      ]
+    },
+    {
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY",
+      "achievements": [
+        "Drove new product designs by leveraging market research and user insights, achieving a 10-26% sales increase across multiple brands through improved design strategies.",
+        "Facilitated seamless collaboration between stakeholders and design teams, ensuring alignment with user needs and brand objectives to deliver cohesive, user-centered designs.",
+        "Unearthed key opportunities through in-depth user research and pain point analysis, crafting actionable design proposals that effectively addressed client and user challenges.",
+        "Delivered impactful product outcomes by leading cross-functional teams to develop and launch innovative design solutions that balanced user objectives with business priorities.",
+        "Strategically positioned new styles for growth by analyzing market trends and user behavior, driving sustained engagement and revenue growth.",
+        "Transformed user feedback and market data into actionable insights, refining eyewear designs to better meet user expectations and increase satisfaction."
+      ]
+    },
+    {
+      "title": "Eyewear Design Director",
+      "company": "Costa Del Mar",
+      "location": "Dallas, TX & Daytona Beach, FL",
+      "achievements": [
+        "Resolved design challenges and reduced usability issues by collaborating with engineering, QA, and stakeholders, leading to a measurable decrease in customer complaints and an improved user experience.",
+        "Boosted website conversion rates and reduced product returns by partnering with the e-commerce team to introduce user fit profiles, improving clarity and usability across the online journey.",
+        "Translated user research insights into prioritized design requirements, driving the development of new standards that enhanced consistency and user satisfaction.",
+        "Delivered impactful project outcomes by coordinating with design agencies, ensuring deliverables aligned with both user needs and strategic project goals.",
+        "Empowered team growth and innovation by mentoring team members in vendor collaboration and iterative design practices, resulting in stronger project execution.",
+        "Developed new product features based on user feedback from target communities, ensuring designs aligned with user expectations and fostered sustained engagement."
+      ]
+    },
+    {
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX",
+      "achievements": [
+        "Empowered team growth and innovation by mentoring team members in vendor collaboration and iterative design practices, resulting in stronger project execution.",
+        "Streamlined design processes and ensured on-time delivery by facilitating collaboration with stakeholders, aligning development timelines with design goals and business needs.",
+        "Drove user-focused improvements by collaborating with cross-functional teams to prioritize features and updates in the product roadmap, addressing critical user feedback effectively.",
+        "Fostered team growth and performance by mentoring and training junior designers in design workflows, resulting in stronger skillsets and improved project outcomes.",
+        "Propelled a 23.7% sales growth by contributing to the successful launch of the Skechers watch line, delivering impactful results for the business.",
+        "Enhanced brand consistency and storytelling by aligning timelines and strategies across product categories, creating a seamless and cohesive user journey between watches and handbags."
+      ]
+    },
+    {
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC",
+      "achievements": [
+        "Optimized product offerings by analyzing user feedback, identifying gaps, and recommending replacements that aligned with evolving business needs and user preferences, enhancing product-market fit.",
+        "Led cross-functional collaboration with designers and engineers to deliver user-focused designs for Nike Vision's eyewear line, ensuring alignment with user expectations and business objectives.",
+        "Empowered team performance and growth by onboarding and mentoring team members transitioning into new roles, fostering a collaborative environment that drove stronger project outcomes.",
+        "Revolutionized prototyping and user testing capabilities by establishing the 3D design department, later branded as the VSP Innovation Lab, enabling faster iterations through enhanced rapid prototyping capabilities.",
+        "Drove adoption of user-centered design practices by advocating for design thinking in strategic meetings, ensuring team efforts aligned with both user needs and business goals.",
+        "Achieved a $10 million revenue increase by proposing and launching an entry-level Nike Vision product line for younger consumers, leveraging research-backed insights to secure stakeholder approval which accounted for 10% of the company's annual growth in the first year."
+      ]
+    }
+  ],
+  "source_metadata": {
+    "origin": "joju resume JSON upload",
+    "source_file": "justin-harmon-cv(2).json",
+    "captured_at": "2025-11-03T04:47:07",
+    "ai_generated": true,
+    "condensed_from": "8825_76-joju_Jh-v00.json (REF)"
+  }
+}

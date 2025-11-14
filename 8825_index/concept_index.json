@@ -1,0 +1,24 @@
+{
+  "version": "3.0.0",
+  "built_at": "2025-11-07T19:14:55.932791",
+  "concepts": {
+    "Achievement of Fact": {
+      "definition": "Proof-based achievement validation",
+      "files": [
+        "users/justin_harmon/joju/master_library.json"
+      ],
+      "focuses": [
+        "joju"
+      ]
+    },
+    "Scope Discipline": {
+      "definition": "Minimal viable solution approach",
+      "files": [
+        "8825_core/system/8825_core.json"
+      ],
+      "focuses": [
+        "all"
+      ]
+    }
+  }
+}

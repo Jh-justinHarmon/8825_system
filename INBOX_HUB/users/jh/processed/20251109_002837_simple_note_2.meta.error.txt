@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: simple_note_2.meta.json
+Timestamp: 20251109_002837

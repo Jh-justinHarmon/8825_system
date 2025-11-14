@@ -1,0 +1,30 @@
+{
+  "joju": {
+    "type": "json_library",
+    "path": "joju_sandbox/libraries/justin_harmon_master_library.json",
+    "merge_strategy": "append_if_new",
+    "index": true,
+    "description": "Joju achievements and patterns"
+  },
+  "hcss": {
+    "type": "folder",
+    "path": "focuses/hcss/knowledge",
+    "file_naming": "{date}_{content_type}.md",
+    "index": true,
+    "description": "HCSS meeting notes and context"
+  },
+  "team76": {
+    "type": "folder",
+    "path": "focuses/joju/projects",
+    "file_naming": "{date}_{content_type}.md",
+    "index": true,
+    "description": "Team76 project materials"
+  },
+  "jh": {
+    "type": "folder",
+    "path": "users/justinharmon/personal",
+    "file_naming": "{date}_{content_type}.md",
+    "index": true,
+    "description": "Personal notes and reminders"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "project": "true_agents_registry",
+  "version": "2.0.0",
+  "last_updated": "2025-11-13",
+  "description": "Registry of TRUE AGENTS ONLY - capabilities that make autonomous decisions, handle unexpected situations, and adapt based on conditions",
+  
+  "agents": {
+    "AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001": {
+      "system_role": "Uses GPT-4o-mini for lightweight classification before main processing. Analyzes structure, routing clarity, cross-project scope, and pattern novelty.",
+      "inputs_required": ["Raw mining report JSON"],
+      "outputs": ["Tier recommendation", "Confidence score", "Routing reasoning"],
+      "decision_logic": {
+        "classification": "TIER 1 (clear routing, structured content, single project) vs TIER 2 (multi-project synthesis, new concepts, ambiguous routing)",
+        "conditions": ["structure quality", "routing clarity", "cross-project scope", "pattern novelty"],
+        "adapts": "Routes to appropriate processing tier based on complexity assessment"
+      },
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Return JSON with tier, confidence, reasoning, indicators"
+      ],
+      "routing": "library_miner",
+      "priority_score": 91.6,
+      "implementation_status": "not_started",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration",
+      "team_tracking": {
+        "assigned_to": null,
+        "status": "not_started",
+        "started_date": null,
+        "target_completion": null,
+        "completed_date": null,
+        "spec_location": null,
+        "implementation_location": null,
+        "pr_link": null,
+        "review_status": null,
+        "blockers": [],
+        "notes": []
+      }
+    },
+    
+    "AGENT-REDDIT-BETA-0001": {
+      "system_role": "Evaluates Reddit users as potential beta testers from RSS/XML feed data.",
+      "inputs_required": ["RSS/XML feed files"],
+      "scoring_weights": {
+        "platform_alignment": 25,
+        "creator_mindset": 20,
+        "tech_savviness": 15,
+        "feedback_depth_and_tone": 15,
+        "engagement_behavior": 10,
+        "motivation_fit": 10,
+        "perspective_diversity": 5
+      },
+      "decision_logic": {
+        "classification": "Beta tester fit scoring (0-100)",
+        "conditions": "7 weighted factors with thresholds",
+        "adapts": "Generates profiles based on scoring thresholds, adjusts recommendations"
+      },
+      "outputs": [
+        "Beta Tester CV (per user)",
+        "Batch table summary",
+        "Optional CSV export"
+      ],
+      "workflow": ["Intake", "Parse", "Score", "Deliver Profiles", "Refine"],
+      "constraints": ["Max 10 profiles per batch", "Skip empty feeds"],
+      "routing": "general",
+      "priority_score": 75.0,
+      "implementation_status": "not_started",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json",
+      "team_tracking": {
+        "assigned_to": null,
+        "status": "not_started",
+        "started_date": null,
+        "target_completion": null,
+        "completed_date": null,
+        "spec_location": null,
+        "implementation_location": null,
+        "pr_link": null,
+        "review_status": null,
+        "blockers": [],
+        "notes": []
+      }
+    },
+    
+    "AGENT-REDDIT-PREQUAL-0001": {
+      "system_role": "Pre-screens Reddit usernames to determine whether deeper beta evaluation is worthwhile.",
+      "inputs_required": ["List of Reddit usernames"],
+      "output_format": "compact evaluation card (activity level, assessment, identity cue, fit summary, confidence score)",
+      "decision_logic": {
+        "classification": "Pre-screening decision (proceed vs skip)",
+        "conditions": ["activity level", "spam/NSFW/bot detection", "competitor accounts", "signal strength"],
+        "adapts": "Confidence scoring for ambiguous cases, handles edge cases"
+      },
+      "workflow": ["Deconstruct filters", "Diagnose signal strength", "Develop card", "Deliver list", "Refine ambiguous cases"],
+      "constraints": [
+        "Exclude spam/NSFW/political/bot/competitor accounts",
+        "Do not over-interpret low-signal profiles"
+      ],
+      "routing": "general",
+      "priority_score": 70.0,
+      "implementation_status": "not_started",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json",
+      "team_tracking": {
+        "assigned_to": null,
+        "status": "not_started",
+        "started_date": null,
+        "target_completion": null,
+        "completed_date": null,
+        "spec_location": null,
+        "implementation_location": null,
+        "pr_link": null,
+        "review_status": null,
+        "blockers": [],
+        "notes": []
+      }
+    },
+    
+    "AGENT-JOJU-CURATION-0001": {
+      "system_role": "Analyzes complete master library, evaluates each achievement using confidence scores and Achievement of Fact ratings, then generates curated versions of the Joju input document optimized for specific audiences, roles, or contexts",
+      "inputs_required": [
+        "Master library JSON (JH_master_library.json)",
+        "Target type (role, industry, context, platform)",
+        "Curation parameters (max achievements, focus areas, tone)"
+      ],
+      "decision_logic": {
+        "classification": "Content selection based on target analysis",
+        "conditions": ["confidence scores", "Achievement of Fact ratings", "target requirements", "relevance thresholds"],
+        "adapts": "Calculates relevance scores, optimizes for different audiences, adjusts content mix"
+      },
+      "outputs": [
+        "Curated Joju document",
+        "Achievement relevance scores",
+        "Target alignment analysis",
+        "Optimization recommendations"
+      ],
+      "workflow": [
+        "Score achievements (confidence + AoF)",
+        "Analyze target requirements",
+        "Calculate relevance scores",
+        "Select top achievements",
+        "Optimize content for target",
+        "Generate curated output"
+      ],
+      "constraints": [
+        "Maintain Achievement of Fact accuracy",
+        "Preserve proof points and evidence",
+        "Optimize for target audience without distortion",
+        "Follow Joju profile standards"
+      ],
+      "routing": "joju",
+      "priority_score": 88.0,
+      "implementation_status": "not_implemented",
+      "created_at": "2025-11-07T18:28:00Z",
+      "source_report": "8825_joju_curation_agent_protocol"
+    },
+    
+    "AGENT-DECISION-0001": {
+      "system_role": "Makes proceed/default/ask decisions based on intent clarity, stakes, efficiency, and reversibility.",
+      "inputs_required": [
+        "User intent",
+        "Context and constraints",
+        "Available options"
+      ],
+      "decision_logic": {
+        "classification": "Proceed vs Default vs Ask",
+        "conditions": ["intent clarity", "stakes level", "efficiency impact", "reversibility"],
+        "adapts": "Safety overrides, confidence thresholds, context-specific rules"
+      },
+      "outputs": [
+        "Decision (proceed/default/ask)",
+        "Reasoning",
+        "Confidence score"
+      ],
+      "workflow": ["Assess intent", "Evaluate conditions", "Apply decision matrix", "Return decision with reasoning"],
+      "constraints": [
+        "Safety first - ask when stakes are high",
+        "Efficiency - default when safe and clear",
+        "Transparency - always explain reasoning"
+      ],
+      "routing": "general",
+      "priority_score": 100.0,
+      "implementation_status": "implemented",
+      "implementation_file": "8825_core/agents/decision_agent.py",
+      "created_at": "2025-11-01T00:00:00Z",
+      "source_report": "existing_implementation"
+    },
+    
+    "AGENT-ACCOUNTABILITY-LOOP-0001": {
+      "system_role": "Universal accountability agent that monitors any trackable goal, makes decisions about progress, suggests actions, and alerts when targets are at risk.",
+      "inputs_required": [
+        "Loop configuration (name, description, metrics)",
+        "Metric updates (current values, trends)",
+        "Check frequency (daily, weekly, monthly)"
+      ],
+      "decision_logic": {
+        "classification": "Status determination (on track/at risk/off track)",
+        "conditions": ["percentage of target achieved", "trend direction", "time remaining"],
+        "adapts": "Alert generation based on severity, suggestion creation based on gaps, early warnings from trends"
+      },
+      "outputs": [
+        "Status report (on track, at risk, off track)",
+        "Alerts with severity levels (info, warning, critical)",
+        "Actionable suggestions based on gaps",
+        "Trend analysis and predictions"
+      ],
+      "workflow": [
+        "Load accountability loops from config",
+        "Check each metric against target",
+        "Calculate percentage of target achieved",
+        "Determine status (on track/at risk/off track)",
+        "Generate alerts with suggestions",
+        "Analyze trends for early warnings",
+        "Save updated state"
+      ],
+      "constraints": [
+        "Requires manual metric updates (until data sources connected)",
+        "Thresholds: >=90% on track, 70-90% at risk, <70% off track",
+        "Generates actionable suggestions, not just alerts",
+        "Tracks trends to predict future issues"
+      ],
+      "routing": "general",
+      "priority_score": 85.0,
+      "implementation_status": "implemented",
+      "implementation_file": "8825_core/agents/accountability_loop_agent.py",
+      "created_at": "2025-11-13T19:00:00Z",
+      "source_report": "user_request_2025-11-13"
+    }
+  },
+  
+  "routing_index": {
+    "joju": ["AGENT-JOJU-CURATION-0001"],
+    "general": [
+      "AGENT-REDDIT-BETA-0001",
+      "AGENT-REDDIT-PREQUAL-0001",
+      "AGENT-DECISION-0001",
+      "AGENT-ACCOUNTABILITY-LOOP-0001"
+    ],
+    "library_miner": ["AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001"]
+  },
+  
+  "stats": {
+    "total_agents": 6,
+    "implemented": 2,
+    "not_implemented": 4,
+    "by_routing": {
+      "joju": 1,
+      "general": 4,
+      "library_miner": 1
+    },
+    "by_priority": {
+      "high": 3,
+      "medium": 2,
+      "implemented": 2
+    }
+  },
+  
+  "implementation_priority": [
+    {
+      "agent_id": "AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001",
+      "priority": "high",
+      "score": 91.6,
+      "reason": "Makes routing decisions, critical for mining system, clear decision logic"
+    },
+    {
+      "agent_id": "AGENT-JOJU-CURATION-0001",
+      "priority": "high",
+      "score": 88.0,
+      "reason": "Core to Joju product, scoring + relevance calculation, high business value"
+    },
+    {
+      "agent_id": "AGENT-REDDIT-BETA-0001",
+      "priority": "medium",
+      "score": 75.0,
+      "reason": "7-factor weighted scoring, useful for beta recruitment"
+    },
+    {
+      "agent_id": "AGENT-REDDIT-PREQUAL-0001",
+      "priority": "medium",
+      "score": 70.0,
+      "reason": "Pre-screening decisions, reduces manual work"
+    }
+  ],
+  
+  "audit_notes": {
+    "date": "2025-11-13",
+    "auditor": "Cascade",
+    "criteria": "True agents make autonomous decisions, handle unexpected situations, adapt based on conditions, have if/then logic",
+    "original_count": 18,
+    "true_agent_count": 6,
+    "percentage": "33%",
+    "reclassified": {
+      "pipelines": 4,
+      "workflows": 7,
+      "protocols": 1
+    }
+  },
+  
+  "summary_log": [
+    {
+      "when": "2025-11-13",
+      "topic": "Agent registry audit and reclassification",
+      "notes": "Audited all 18 items in agent_registry.json using TASK_TYPES_REFERENCE.md definitions. Found only 6 true agents (33%). Reclassified 4 as pipelines, 7 as workflows, 1 as protocol. Created separate registries for each type. True agents: Decision Agent (implemented), Accountability Loop (implemented), Library Mining Router, Reddit Beta Evaluator, Reddit Pre-Qualifier, Joju Curation Agent."
+    }
+  ]
+}

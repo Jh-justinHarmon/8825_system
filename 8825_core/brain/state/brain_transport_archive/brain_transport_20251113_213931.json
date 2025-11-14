@@ -1,0 +1,213 @@
+{
+  "brain_version": "3.0",
+  "export_date": "2025-11-12T07:20:44.138594",
+  "purpose": "Complete 8825 system context for LLM transport",
+  "auto_generated": true,
+  "generation_trigger": "System health monitor threshold reached",
+  "system_architecture": {
+    "version": "3.0",
+    "structure": {
+      "core": "8825_core/ - Shareable system (protocols, agents, workflows)",
+      "users": "users/justinharmon/ - Private user data",
+      "focuses": "focuses/{hcss,joju,jh_assistant}/ - Team-specific workspaces",
+      "index": "8825_index/ - Fast discovery layer"
+    }
+  },
+  "key_locations": {
+    "system_root": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system",
+    "inbox": "~/Downloads/8825_inbox/",
+    "brain_transport": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/INBOX_HUB/users/jh/intake/documents/8825_BRAIN_TRANSPORT.json",
+    "philosophy": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/PHILOSOPHY.md"
+  },
+  "active_launchagents": {
+    "com.8825.inbox-pipeline": {
+      "status": "loaded",
+      "pid": null
+    }
+  },
+  "available_integrations": {
+    "google": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "list_folder_contents.py",
+          "purpose": "List contents of a specific Google Drive folder"
+        },
+        {
+          "script": "calendar_sync.py",
+          "purpose": "HCSS Calendar Sync"
+        },
+        {
+          "script": "search_shared_with_me.py",
+          "purpose": "Search in \"Shared with me\" for folders"
+        },
+        {
+          "script": "bill_processor.py",
+          "purpose": "8825 Bill Processor"
+        },
+        {
+          "script": "calendar_screenshot_sync.py",
+          "purpose": "HCSS Calendar Screenshot Sync"
+        },
+        {
+          "script": "force_access_folder.py",
+          "purpose": "Try to force access a folder by ID with different API methods"
+        },
+        {
+          "script": "find_drive_folder.py",
+          "purpose": "Find and access Google Drive folders"
+        },
+        {
+          "script": "search_gmail.py",
+          "purpose": "Search Gmail for specific emails"
+        },
+        {
+          "script": "get_email_details.py",
+          "purpose": "Get full details of a specific email"
+        },
+        {
+          "script": "list_all_shared_folders.py",
+          "purpose": "List all folders shared with you in Google Drive"
+        }
+      ]
+    },
+    "reddit": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "reddit_watcher.py",
+          "purpose": "Reddit Watcher for r/joju"
+        }
+      ]
+    },
+    "dropbox": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "local_miner.py",
+          "purpose": "Joju Local Contribution Miner - MVP"
+        },
+        {
+          "script": "dropbox_miner.py",
+          "purpose": "Joju Dropbox Contribution Miner - MVP"
+        }
+      ]
+    },
+    "mcp-servers": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "server.py",
+          "purpose": "Meeting Automation MCP Server"
+        },
+        {
+          "script": "server.py",
+          "purpose": "File Dispatch System (FDS) - MCP Server"
+        }
+      ]
+    },
+    "figjam": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "sticky_processor.py",
+          "purpose": "Sticky Note Processor"
+        },
+        {
+          "script": "vision_sticky_processor.py",
+          "purpose": "Google Vision Sticky Note Processor"
+        },
+        {
+          "script": "simple_sticky_ocr.py",
+          "purpose": "Simple Sticky OCR"
+        },
+        {
+          "script": "figjam_api.py",
+          "purpose": "FigJam API Client"
+        }
+      ]
+    },
+    "goose": {
+      "status": "available",
+      "scripts": [
+        {
+          "script": "goose_engine.py",
+          "purpose": "Goose Focus - Workflow & Agent Execution Engine"
+        },
+        {
+          "script": "server.py",
+          "purpose": "8825 MCP Bridge for Goose - Production Ready"
+        }
+      ]
+    }
+  },
+  "workflows": {
+    "ingestion": {
+      "status": "production",
+      "purpose": "** Central ingestion and processing system for all 8825 workflows"
+    }
+  },
+  "mcp_servers": {
+    "meeting-automation-mcp": {
+      "status": "available",
+      "purpose": "Meeting Automation MCP Server"
+    },
+    "fds-mcp": {
+      "status": "available",
+      "purpose": "File Dispatch System (FDS) - MCP Server"
+    }
+  },
+  "interaction_modes": {
+    "dev_mode": {
+      "purpose": "GO MODE - Execute when plan is clear",
+      "approach": "Do first, minimal discussion",
+      "output": "Terse progress updates",
+      "code": "Only during execution",
+      "use_when": "You have plan and understand it"
+    },
+    "brainstorm_mode": {
+      "purpose": "ROADMAP CREATION - Design solution",
+      "approach": "Analyze, propose architecture with code blocks",
+      "output": "Complete roadmap with implementation",
+      "code": "YES - show patterns, workflows, examples",
+      "use_when": "Exploring ideas, need executable plan"
+    },
+    "teaching_mode": {
+      "purpose": "UNDERSTANDING THE PLAN - Help you comprehend",
+      "approach": "Plain language, analogies, no code",
+      "output": "Conceptual explanations",
+      "code": "NEVER - concepts only",
+      "use_when": "Need to understand before approving"
+    }
+  },
+  "communication_style": {
+    "dev_mode": "Terse, action-focused, no fluff",
+    "brainstorm_mode": "Comprehensive, analytical, code blocks",
+    "teaching_mode": "Conversational, analogies, no code",
+    "general": "Markdown-heavy, bullet lists, scannable"
+  },
+  "critical_rules": {
+    "professional_title": "NEVER change - exact format with slashes",
+    "dev_mode": "Execute immediately when plan is clear",
+    "brainstorm_mode": "Always include code blocks and roadmap",
+    "teaching_mode": "Never show code, only concepts"
+  },
+  "workflow": {
+    "natural_flow": "Teaching (understand) \u2192 Brainstorm (plan) \u2192 Dev (execute)",
+    "mode_switching": {
+      "explicit": "switch to [mode] mode",
+      "auto_detect": "Based on request type"
+    }
+  },
+  "quick_commands": {
+    "fetch_inbox": "Process files from ~/Downloads/8825_inbox/pending/",
+    "focus_on_jh": "Activate JH personal focus",
+    "focus_on_joju": "Activate Joju/Team 76 focus",
+    "focus_on_hcss": "Activate HCSS client focus",
+    "sync_brain": "Create comprehensive brain sync document",
+    "switch_to_dev_mode": "Enter execution mode",
+    "switch_to_brainstorm_mode": "Enter planning mode",
+    "switch_to_teaching_mode": "Enter learning mode"
+  },
+  "status": "Auto-generated v3.0 system snapshot - 2025-11-12 07:20"
+}

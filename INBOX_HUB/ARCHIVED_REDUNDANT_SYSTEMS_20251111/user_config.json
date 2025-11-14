@@ -1,0 +1,14 @@
+{
+  "user": "jh",
+  "inputs": {
+    "desktop_downloads": "/Users/justinharmon/Downloads",
+    "icloud_downloads": "/Users/justinharmon/Library/Mobile Documents/com~apple~CloudDocs/Downloads",
+    "screenshots": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Screenshots"
+  },
+  "outputs": {
+    "base": "/Users/justinharmon/Library/Mobile Documents/com~apple~CloudDocs/8825",
+    "brain": "/Users/justinharmon/Library/Mobile Documents/com~apple~CloudDocs/8825/BRAIN",
+    "docs": "/Users/justinharmon/Library/Mobile Documents/com~apple~CloudDocs/8825/DOCS"
+  },
+  "created": "2025-11-11T16:29:55Z"
+}

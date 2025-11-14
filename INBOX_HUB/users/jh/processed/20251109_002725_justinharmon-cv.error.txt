@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: justinharmon-cv.json
+Timestamp: 20251109_002725

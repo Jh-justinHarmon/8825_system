@@ -1,0 +1,20 @@
+{
+  "_comment": "Reddit Watcher Configuration",
+  "subreddit": "joju",
+  "output_dir": "~/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/focuses/joju/reddit_monitoring",
+  "reddit": {
+    "client_id": "YOUR_CLIENT_ID_HERE",
+    "client_secret": "YOUR_CLIENT_SECRET_HERE",
+    "user_agent": "8825:joju-watcher:v1.0 (by /u/YOUR_USERNAME)"
+  },
+  "monitoring": {
+    "check_interval_seconds": 300,
+    "posts_limit": 10,
+    "comments_limit": 20
+  },
+  "routing": {
+    "enabled": false,
+    "route_to_ingestion": false,
+    "ingestion_path": "~/Hammer Consulting Dropbox/Justin Harmon/Public/8825/Documents/ingestion"
+  }
+}

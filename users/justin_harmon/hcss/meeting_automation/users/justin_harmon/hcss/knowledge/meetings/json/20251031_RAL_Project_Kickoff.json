@@ -1,0 +1,16 @@
+{
+  "title": "RAL Project Kickoff",
+  "date": "2025-10-31",
+  "source": "sample_data",
+  "transcript": "Sample transcript for RAL Project Kickoff",
+  "summary": "# RAL Project Kickoff\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "2 hours",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "RAL"
+  },
+  "processed_at": "2025-11-11T12:28:43.904929"
+}

@@ -1,0 +1,14 @@
+{
+  "content_type": "pattern",
+  "target_focus": "hcss",
+  "content": {
+    "title": "New Auto-Route Workflow",
+    "description": "Automatically route all Friday meeting notes to HCSS focus",
+    "keywords": ["workflow", "auto-route", "system-wide"],
+    "proposed_change": "Add global routing rule for Friday meetings"
+  },
+  "metadata": {
+    "source": "chatgpt",
+    "timestamp": "2025-11-08T15:30:00"
+  }
+}

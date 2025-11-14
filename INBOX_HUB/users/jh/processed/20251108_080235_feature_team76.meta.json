@@ -1,0 +1,10 @@
+{
+  "lane": "B",
+  "priority": 1.0,
+  "scope": "system-wide",
+  "change_pressure": "medium",
+  "target_focus": "team76",
+  "source": "chatgpt",
+  "freshness": 1.0,
+  "processed_at": "2025-11-08T16:02:14.346784"
+}

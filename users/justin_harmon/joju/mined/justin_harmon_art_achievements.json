@@ -1,0 +1,44 @@
+{
+  "mining_session": {
+    "timestamp": "2025-11-05T23:33:00-06:00",
+    "source": "https://www.justin-harmon.art/",
+    "source_type": "portfolio_website",
+    "total_achievements_extracted": 1,
+    "focus": "Fine art practice, creative work"
+  },
+  
+  "achievements": [
+    {
+      "id": "fine_art_practice_001",
+      "category": "creative_work",
+      "text": "Established fine art practice exploring object permanence through contemporary painting, creating four distinct series (Bourbon Series, Status Symbols Series, Common Ground Series, Kid Collab Series) that examine how everyday icons hold memory, carry meaning, and define cultural identity",
+      "metrics": {
+        "series_count": 4,
+        "years_active": "2020-Present",
+        "platform": "justin-harmon.art"
+      },
+      "evidence": {
+        "portfolio_url": "https://www.justin-harmon.art/",
+        "series": [
+          "Bourbon Series - luxury spirits as cultural artifacts",
+          "Status Symbols Series - objects that define aspiration and identity", 
+          "Common Ground Series - shared spaces and community",
+          "Kid Collab Series - collaborative creativity"
+        ],
+        "artist_statement": "These paintings are a kind of gamble. An attempt to mark what matters, or maybe what will. They're about connection, recognition, and the quiet joy of belonging to the same story— one object at a time.",
+        "philosophy": "object permanence—reimagined. everyday icons. familiar forms. nostalgia in the making."
+      },
+      "outcomes": [
+        "Active online gallery with multiple series",
+        "Open edition prints available for purchase",
+        "Established artistic identity separate from design work",
+        "Cross-discipline creative expression"
+      ],
+      "confidence_score": 100,
+      "achievement_type": "bona_fide",
+      "tags": ["fine_art", "painting", "creative_work", "artistic_expression", "visual_storytelling"],
+      "joju_tags": ["creativity", "art", "side_project", "portfolio"],
+      "target_sections": ["projects", "side_projects", "creative_work"]
+    }
+  ]
+}

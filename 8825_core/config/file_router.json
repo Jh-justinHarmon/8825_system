@@ -1,0 +1,33 @@
+{
+  "_comment": "Central File Router - Single source of truth for all document destinations",
+  "name": "File Router",
+  "version": "1.0.0",
+  "created": "2025-11-13",
+  
+  "root": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files",
+  
+  "folders": {
+    "intake": "_intake",
+    "unknown": "MISC_INBOX"
+  },
+  
+  "destinations": {
+    "8825": "8825",
+    "HCSS": "HCSS",
+    "76": "76",
+    "RAL": "RAL",
+    "Jh": "Jh",
+    "Joju": "Joju"
+  },
+  
+  "file_conventions": {
+    "ingestion": "UPPER",
+    "ai_export": "lower",
+    "human": "Title"
+  },
+  
+  "shareable": {
+    "enabled": true,
+    "mirror_root": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-docs"
+  }
+}

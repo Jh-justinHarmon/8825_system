@@ -1,0 +1,2402 @@
+{
+  "timestamp": "2025-11-10T22:14:12.251772",
+  "total_analyzed": 238,
+  "total_with_evidence": 104,
+  "high_confidence": 4,
+  "medium_confidence": 89,
+  "high_confidence_tasks": [
+    {
+      "title": "First time on input to add initial data doesn\u2019t remove the placeholder text",
+      "current_status": "Ready",
+      "confidence_score": 75,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "feat: add collapsible notification banner for unau",
+        "added metadata tag for profiles started from a jso"
+      ],
+      "import_usage": 11,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "URL isn\u2019t providing a external link button on hover of the list item",
+      "current_status": "Ready",
+      "confidence_score": 75,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "added one time code for login and made email templ",
+        "fixed header chips showing on public page, changed",
+        "fixed profile header to not be editable or appear "
+      ],
+      "import_usage": 29,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Tooltip (on context bar buttons) is slow to load initially",
+      "current_status": "Ready",
+      "confidence_score": 75,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "first security fix - jsob injection, xss, prototyp",
+        "fixed header chips showing on public page, changed",
+        "fixed profile header to not be editable or appear "
+      ],
+      "import_usage": 4,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "API Key input for open source",
+      "current_status": "Backlog",
+      "confidence_score": 75,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "git_commits": [
+        "phase 1 complete, implemented a new service type t",
+        "this should prevent the dom from scrolling the bac",
+        "trying smaller model for quicker response from api"
+      ],
+      "import_usage": 11,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Mark as Released"
+    }
+  ],
+  "medium_confidence_tasks": [
+    {
+      "title": "Create a recurring posting plan",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx"
+      ],
+      "git_commits": [
+        "beautiful! was able to just leverage the profiles ",
+        "added plan for authentication-only implementation ",
+        "added concept of control over slugs, created a sql"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Company validation across public sources",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "security fix 2 - remove svg support, magic byte va",
+        "fixed header chips showing on public page, changed"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Changelog Agent - Follows Tasks and Code Changes \u2192 records interactive session & creates clips",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/CVView.tsx",
+        "src/components/ProfileHeader.tsx",
+        "src/components/ProfilePhotoModal.tsx"
+      ],
+      "git_commits": [
+        "added one time code for login and made email templ",
+        "fixed profile header to not be editable or appear ",
+        "removed unused or superseded files, as well as unu"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Design System - Foundations",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/UserMenu.tsx",
+        "src/components/ThemeToggle.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/ui/date-picker.tsx",
+        "src/components/ui/sonner.tsx"
+      ],
+      "git_commits": [
+        "fully responsive design with the image-grid.",
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Cam\u2019s Local Development Environment",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/ThemeProvider.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "implementing persistent local storage",
+        "fixed routing w export page to now take you back t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "\u201cStart from Scratch\u201d wipes user data on homepage",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx"
+      ],
+      "git_commits": [
+        "feat: add collapsible notification banner for unau",
+        "added metadata tag for profiles started from a jso",
+        "implemented the parsed by ai flag to stay in the p"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Find examples of software that are using a Graph-based backend and can\u2019t/isn\u2019t being done in any way other than Graph?",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Add Company Logos",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx",
+        "src/components/SkillsSection.tsx"
+      ],
+      "git_commits": [
+        "feat: add collapsible notification banner for unau",
+        "added metadata tag for profiles started from a jso",
+        "loosened schema validation around language uuids a"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Figure out more of the tech stack",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/ProtectedRoute.tsx"
+      ],
+      "git_commits": [
+        "fixed flicker of animation during typing, and adju",
+        "fixed routing w export page to now take you back t",
+        "basically able to edit at your own profile url and"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Protocol and User Test Template",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/ProtectedRoute.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "feat: add collapsible notification banner for unau",
+        "added one time code for login and made email templ"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Creating the ACHIEVEMENT data structure Standard",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx",
+        "src/components/SortableItem.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "implemented the parsed by ai flag to stay in the p",
+        "got the actual profile from the database (not loca"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Integrate with Platforms for MCPs about Contributions (maybe a CONTRIBUTION standard as well?)",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/CVView.tsx",
+        "src/components/ProfileHeader.tsx",
+        "src/components/SectionTemplates.tsx",
+        "src/components/SummarySection.tsx",
+        "src/pages/PrivacyPolicyPage.tsx"
+      ],
+      "git_commits": [
+        "phase 1 complete, implemented a new service type t",
+        "removed unused or superseded files, as well as unu",
+        "the anonymous user experience now works as well as"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Figma Integration",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "phase 1 complete, implemented a new service type t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "ROBS - Company Started & Ready",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/Auth.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/Footer.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "loosened schema validation around language uuids a",
+        "added concept of control over slugs, created a sql"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Change Logs",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "fixed header chips showing on public page, changed",
+        "added scripts and planning for views and the data ",
+        "extra commit to change user email -- cleared lovab"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Google Workspace \nSecurity Gaps",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/ui/matricks-background.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "api/parse-resume-gemini.ts",
+        "src/services/storageService.ts"
+      ],
+      "git_commits": [
+        "security fix 3 - rpc call was cleaned up",
+        "security fix 2 - remove svg support, magic byte va",
+        "fixed to allow for null values and adjusted to a l"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Refactor and Remove unused code",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx",
+        "src/components/SkillsSection.tsx",
+        "src/components/ProfileHeader.tsx",
+        "src/components/ProfilePhotoModal.tsx"
+      ],
+      "git_commits": [
+        "added one time code for login and made email templ",
+        "security fix 2 - remove svg support, magic byte va",
+        "remove/cleanup the waitlist page and interaction t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "How might we simplify CRUD operations for one or many achievements at once",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "added one time code for login and made email templ",
+        "fixed header chips showing on public page, changed",
+        "moved scripts/migrations in to a folder, ran a new"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Mini Protocol Mission for AB Test of Achievement Adding Methods",
+      "current_status": "Ready Review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/StickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "fixed flicker of animation during typing, and adju",
+        "fixed the undesired user creation and automatic si"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Kudos System",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/UserMenu.tsx",
+        "src/components/ThemeToggle.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/ui/sonner.tsx",
+        "src/pages/Index.tsx"
+      ],
+      "git_commits": [
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Map out codebase as a flowchart form",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/ProtectedRoute.tsx"
+      ],
+      "git_commits": [
+        "fixed routing w export page to now take you back t",
+        "basically able to edit at your own profile url and",
+        "removed unused or superseded files, as well as unu"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Research Database Approaches",
+      "current_status": "In review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/pages/PrivacyPolicyPage.tsx",
+        "src/schemas/cvDataSchema.ts",
+        "src/services/profileService.ts"
+      ],
+      "git_commits": [
+        "got the actual profile from the database (not loca"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Review alternative options to ShdCn",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/UserMenu.tsx"
+      ],
+      "git_commits": [
+        "fixed header chips showing on public page, changed",
+        "only shows sections w content on cv, also only sho",
+        "removing next from parse resume.. and committing t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Start Time Tracking and Focus w Toggl",
+      "current_status": "In review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/InlineFileEdit.tsx",
+        "src/components/CVView.tsx",
+        "src/components/UserMenu.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "added one time code for login and made email templ",
+        "restored calendar to what is on main, not sure why"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Improve Notion Template Layout",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/ProfileHeader.tsx",
+        "src/components/SectionTemplates.tsx",
+        "src/components/ui/section-manager.tsx",
+        "src/components/ui/date-picker.tsx",
+        "src/components/ui/image-grid.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "added one time code for login and made email templ",
+        "added file for email templates."
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Post 5 questions in 5 different groups",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/ui/matricks-background.tsx",
+        "src/components/ui/section-manager.tsx",
+        "src/components/ui/list-item.tsx",
+        "src/pages/Index.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "three different levels of initial mermaid diagrram"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Enable and Config Github Integration with Tasks",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx",
+        "src/components/SideProjectsSection.tsx",
+        "src/components/WorkExperienceSection.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "added a dashboard as a workaround to the current r",
+        "phase 1 complete, implemented a new service type t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Consuming Unstructured Data",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx",
+        "src/components/SortableItem.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "implemented the parsed by ai flag to stay in the p",
+        "got the actual profile from the database (not loca"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Saved Views",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/CVView.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/CVDocument.tsx",
+        "src/pages/Index.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "fixed profile header to not be editable or appear ",
+        "added method for profile photos to be saved in sup"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Create a way to automate sending sign-up requests.",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "added one time code for login and made email templ"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Finish Foundation Sprint Template File",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "implemented the parsed by ai flag to stay in the p",
+        "added one time code for login and made email templ"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Attach Documents to Media Grid",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/AIProviderSelector.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx",
+        "src/components/UserMenu.tsx"
+      ],
+      "git_commits": [
+        "now added the bucket storage for achievement attac",
+        "fixed aspect ratios and responsiveness it should m",
+        "fully responsive design with the image-grid."
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Research Candidates of Various Systems of Record for Integration",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/CVView.tsx",
+        "src/components/ui/chart.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "api/parse-resume-gemini.ts"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "phase 1 complete, implemented a new service type t",
+        "added scripts and planning for views and the data "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Follow Up w Austin Hepworth about Licensing/Royalties contracts.. ",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/CVView.tsx",
+        "src/components/ProfileHeader.tsx",
+        "src/components/SectionTemplates.tsx",
+        "src/components/SummarySection.tsx",
+        "src/components/ui/list-item.tsx"
+      ],
+      "git_commits": [
+        "fixed the about section text area to be adapative ",
+        "removed extra \"about\" section chip and fixed jumpi",
+        "continued adding coding documentation to our files"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "package-lock.json added to ignore?",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "added metadata tag for profiles started from a jso"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "First Target of Codebase to Map/Diagram \u2014 ",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "first security fix - jsob injection, xss, prototyp",
+        "first shot at slugs.. not quite working.",
+        "first increment of potential improvement with 3 di"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Design and Prototype",
+      "current_status": "Ready Review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/ui/date-picker.tsx",
+        "src/components/ui/list-item.tsx",
+        "_api/archive_parse-resume.ts",
+        "api/parse-resume-gemini.ts",
+        "api/parse-resume-hf.ts"
+      ],
+      "git_commits": [
+        "first security fix - jsob injection, xss, prototyp",
+        "fully responsive design with the image-grid."
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Share link doesn\u2019t make it explicitly clear that you are sharing a public link.",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "added one time code for login and made email templ"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Contextual toolbar updated",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "all sections are now using the refactored basic ve",
+        "updated dropdowns to have bg-background which fixe",
+        "docs: updated documenation using jsdoc syntax and "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "An initial map or idea of free features vs. paid and their pricing tiers",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "loosened schema validation around language uuids a",
+        "the anonymous user experience now works as well as"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Consistent approach on fields and titles for use of optional and required. ",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "feat: add collapsible notification banner for unau",
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Custom Avatars",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/SlugSettings.tsx",
+        "src/components/ProfilePhotoModal.tsx",
+        "src/components/ui/matricks-background.tsx",
+        "src/components/ui/section-manager.tsx",
+        "src/components/ui/date-picker.tsx"
+      ],
+      "git_commits": [
+        "roughly working with custom joju font",
+        "created tailwind custom config file and changed ex"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Automate MR Change logs to post on Reddit",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "fixed header chips showing on public page, changed",
+        "added scripts and planning for views and the data ",
+        "extra commit to change user email -- cleared lovab"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "TODO \u2013 Measure load times & add loading states (Matricks)",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/ProtectedRoute.tsx"
+      ],
+      "git_commits": [
+        "feat: add collapsible notification banner for unau",
+        "added metadata tag for profiles started from a jso",
+        "fixed flicker of animation during typing, and adju"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Test task from Cascade",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "added metadata tag for profiles started from a jso",
+        "got the actual profile from the database (not loca"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Start date should not be allowed to be cleared",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "feat: add collapsible notification banner for unau",
+        "added metadata tag for profiles started from a jso"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Community resources plan",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "_api/archive_parse-resume.ts"
+      ],
+      "git_commits": [
+        "added plan for authentication-only implementation ",
+        "added concept of control over slugs, created a sql",
+        "added scripts and planning for views and the data "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "ROADMAP - Sync your data to the cloud",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "implemented the parsed by ai flag to stay in the p",
+        "fixed routing w export page to now take you back t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Video Support on Media Grid",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/AIProviderSelector.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/Footer.tsx",
+        "src/components/ProfilePhotoModal.tsx",
+        "src/components/ThemeProvider.tsx"
+      ],
+      "git_commits": [
+        "security fix 2 - remove svg support, magic byte va",
+        "phase 1 complete, implemented a new service type t",
+        "now added the bucket storage for achievement attac"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "No file chosen needs improved information hierarchy and design quality",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Enhance Logic around dates imported",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/ProjectsSection.tsx",
+        "src/components/ThemeProvider.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "added a dashboard as a workaround to the current r",
+        "got dates reading in finally! json import will now"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Experiment with Windsurf commands to notion MCP",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/ui/command.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Image Gallery Carousel From Media Grid",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "got the actual profile from the database (not loca",
+        "fixed the undesired user creation and automatic si"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Call Tenet and Ask About their Client\u2019s Payroll & Bookkeeping",
+      "current_status": "In progress",
+      "confidence_score": 60,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "security fix 3 - rpc call was cleaned up",
+        "fixed profile header to not be editable or appear ",
+        "basically able to edit at your own profile url and"
+      ],
+      "import_usage": 1,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Implement Teams",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/StickyToolbar.tsx",
+        "src/components/SectionTemplates.tsx",
+        "src/pages/PrivacyPolicyPage.tsx"
+      ],
+      "git_commits": [
+        "implementing persistent local storage",
+        "implemented the parsed by ai flag to stay in the p",
+        "phase 1 complete, implemented a new service type t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Template structures/methods for writing work experience",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/WorkExperienceSection.tsx",
+        "src/components/StickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "added one time code for login and made email templ",
+        "added file for email templates."
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Activity Log",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/ProtectedRoute.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "added one time code for login and made email templ",
+        "revert \"added some new logging, cleaned up some pa",
+        "added some new logging, cleaned up some past loggi"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Loot/Bounty System | External DB Integration",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/CVView.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/ProfileHeader.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "phase 1 complete, implemented a new service type t",
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Gamification System",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/UserMenu.tsx",
+        "src/components/ThemeToggle.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/ui/sonner.tsx",
+        "src/pages/Index.tsx"
+      ],
+      "git_commits": [
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Integrate with LinkedIn",
+      "current_status": "Icebox",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/pages/Index.tsx"
+      ],
+      "git_commits": [
+        "phase 1 complete, implemented a new service type t",
+        "integrated image-grid and image-carousel into list",
+        "refactor: integrate expandable search toolbar comp"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Update about me from span to div",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx"
+      ],
+      "git_commits": [
+        "added metadata tag for profiles started from a jso",
+        "got the actual profile from the database (not loca",
+        "fixed the undesired user creation and automatic si"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Respond to Tina that Stocks Are Wrong",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/ProfileHeader.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "fixed header chips showing on public page, changed"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Markdown or Parsing/Formatting of Text Bodies.. Character Escaping",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "fixed flicker of animation during typing, and adju",
+        "added joju character animation to the background o",
+        "added in autosaving and broke apart the save butto"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Implement AI",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/StickyToolbar.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "src/pages/ProfilePage.tsx"
+      ],
+      "git_commits": [
+        "implementing persistent local storage",
+        "implemented the parsed by ai flag to stay in the p",
+        "phase 1 complete, implemented a new service type t"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Consolidate LLM APIs & Keys",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/CVView.tsx",
+        "src/components/utils/linkParser.tsx",
+        "src/pages/ResumeReviewPage.tsx",
+        "api/parse-resume-gemini.ts"
+      ],
+      "git_commits": [
+        "this is me realizing i did way to much on this com",
+        "refactor: consolidate cv section functionality"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Collaborators avatar missing",
+      "current_status": "Backlog",
+      "confidence_score": 65,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/SkillsSection.tsx"
+      ],
+      "git_commits": [
+        "added avatar dude, adjusted the user menu to a sim",
+        "reverted to edit edt-5c93ecdb-c90c-4f87-b7af-4487a",
+        "feat: add 92x92 avatar to profile header"
+      ],
+      "import_usage": 2,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "10 New Survey Participants",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx"
+      ],
+      "git_commits": [
+        "revert \"added some new logging, cleaned up some pa",
+        "added some new logging, cleaned up some past loggi",
+        "fixed slug auto generation on new users to be rand"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Minimal Quest/Bounty System \u2014 Starting w Cards",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/InlineFileEdit.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/ProfileHeader.tsx",
+        "src/components/InlineEdit.tsx"
+      ],
+      "git_commits": [
+        "minimal adder now centered",
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Controls",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/ui/matricks-background.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "src/pages/ResumeReviewPage.tsx"
+      ],
+      "git_commits": [
+        "fixed flicker of animation during typing, and adju",
+        "cleaned up ui to remove duplicate controls of pdf"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Grabber and the delete icon are not aligned",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "feat: add collapsible notification banner for unau",
+        "fixed header chips showing on public page, changed"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Job Board",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/SlugSettings.tsx",
+        "src/components/CVView.tsx",
+        "src/components/InlineEdit.tsx",
+        "src/components/InlineDropdownEdit.tsx",
+        "src/components/InlineDateEdit.tsx"
+      ],
+      "git_commits": [
+        "fixed header chips showing on public page, changed",
+        "added a dashboard as a workaround to the current r"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Processing & Loading",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/ProtectedRoute.tsx"
+      ],
+      "git_commits": [
+        "fixed profile header to not be editable or appear ",
+        "the anonymous user experience now works as well as",
+        "learned about vercel.json, spa loading and routing"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Tidy up Joju LinkedIn",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/Footer.tsx",
+        "src/components/ui/matricks-background.tsx"
+      ],
+      "git_commits": [
+        "added joju character animation to the background o",
+        "reverted index.tsx to how it was before applying t",
+        "roughly working with custom joju font"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Determine Open Source License Type",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx",
+        "src/components/AIProviderSelector.tsx"
+      ],
+      "git_commits": [
+        "first security fix - jsob injection, xss, prototyp",
+        "phase 1 complete, implemented a new service type t",
+        "this should prevent the dom from scrolling the bac"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Documentation Strategy and Standard",
+      "current_status": "Ready Review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/CVView.tsx",
+        "src/components/DroppableColumn.tsx",
+        "src/components/ui/image-grid.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "src/pages/ResumeReviewPage.tsx"
+      ],
+      "git_commits": [
+        "continued adding coding documentation to our files",
+        "updated featuressection documentations"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "counter for time since last saved is off.",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "added one time code for login and made email templ",
+        "fixed profile header to not be editable or appear "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Media Grid",
+      "current_status": "Ready Review",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/AIProviderSelector.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/ProfilePhotoModal.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/ContactSection.tsx"
+      ],
+      "git_commits": [
+        "fixed aspect ratios and responsiveness it should m",
+        "fully responsive design with the image-grid.",
+        "integrated image-grid and image-carousel into list"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Storage",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/ProfilePhotoModal.tsx",
+        "src/components/ThemeProvider.tsx",
+        "src/components/ui/section-manager.tsx"
+      ],
+      "git_commits": [
+        "implementing persistent local storage",
+        "got the actual profile from the database (not loca",
+        "added a dashboard as a workaround to the current r"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Audio Support on Media Grid",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/AIProviderSelector.tsx",
+        "src/components/UserMenu.tsx",
+        "src/components/Footer.tsx",
+        "src/components/ProfilePhotoModal.tsx",
+        "src/components/ThemeProvider.tsx"
+      ],
+      "git_commits": [
+        "security fix 2 - remove svg support, magic byte va",
+        "phase 1 complete, implemented a new service type t",
+        "now added the bucket storage for achievement attac"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Achievement Types Identified and CRUD\u2019d",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx",
+        "src/components/LanguagesSection.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "now added the bucket storage for achievement attac",
+        "added scripts and planning for views and the data ",
+        "restored the cvview page mostly, then re-added the"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Create content plan around design workshops",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/main.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/Auth.tsx"
+      ],
+      "git_commits": [
+        "loosened schema validation around language uuids a",
+        "security fix 2 - remove svg support, magic byte va",
+        "added a dashboard as a workaround to the current r"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Define Joju\u2019s core values and develop brand voice/ strategy around artchitype \u201cMagician\u201d",
+      "current_status": "In progress",
+      "confidence_score": 65,
+      "evidence_sources": [
+        "code_files",
+        "git_commits",
+        "import_usage"
+      ],
+      "files_found": [
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "loosened schema validation around language uuids a"
+      ],
+      "import_usage": 2,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Draft Point System",
+      "current_status": "In progress",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/InlineFileEdit.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "fixed profile header to not be editable or appear ",
+        "first increment of potential improvement with 3 di",
+        "system selection shows sun or moon based on the ef"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Comments feature",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx",
+        "src/components/StickyToolbar.tsx",
+        "src/components/SectionTemplates.tsx"
+      ],
+      "git_commits": [
+        "initial feature commit",
+        "first commit on new branch and feature testing",
+        "updated featuressection documentations"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Discord Server Cleanup",
+      "current_status": "Ready",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/pages/Index.tsx",
+        "src/pages/ExportPreviewPage.tsx",
+        "src/pages/PrivacyPolicyPage.tsx",
+        "src/pages/ResumeReviewPage.tsx"
+      ],
+      "git_commits": [
+        "remove/cleanup the waitlist page and interaction t",
+        "phase 1 complete, implemented a new service type t",
+        "trying gpt-5, serverless function, and now longer "
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Feedback / Help Form",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/Auth.tsx",
+        "src/components/SortableItem.tsx",
+        "src/components/CVView.tsx",
+        "src/components/StickyToolbar.tsx",
+        "src/components/ProjectsSection.tsx"
+      ],
+      "git_commits": [
+        "implemented refactor for project section cutting c",
+        "this is me realizing i did way to much on this com",
+        "feat: add save button to inline edit forms"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Diagram (Venn or Other) what goes in the open source vs. proprietary",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/SlugSettings.tsx",
+        "src/components/EnhancedStickyToolbar.tsx",
+        "src/components/CVView.tsx"
+      ],
+      "git_commits": [
+        "locked the privacy policy page in to dark mode so ",
+        "locked the privacy policy page in to dark mode so ",
+        "fixed up a couple other sections and pieces to fee"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Welcome to Team 76 workspacecd",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/components/CVView.tsx",
+        "src/components/SectionTemplates.tsx",
+        "src/components/ui/matricks-background.tsx",
+        "src/pages/LoginPage.tsx"
+      ],
+      "git_commits": [
+        "got teams showing that it's not yet implemented an"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    },
+    {
+      "title": "Test bug with priority",
+      "current_status": "Backlog",
+      "confidence_score": 55,
+      "evidence_sources": [
+        "code_files",
+        "git_commits"
+      ],
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/AIProviderSelector.tsx",
+        "src/components/CVView.tsx",
+        "src/components/SkillsSection.tsx",
+        "src/components/InlineDateEdit.tsx"
+      ],
+      "git_commits": [
+        "initial setup of notion integration -- needs to be",
+        "fixed bug with profile data not clearing on logout",
+        "basic demo of authentication works. sample compone"
+      ],
+      "import_usage": 0,
+      "has_tests": false,
+      "dependencies_met": true,
+      "stale_refs": [],
+      "recommendation": "Needs Review"
+    }
+  ],
+  "validation_techniques": [
+    "git_commit_mining",
+    "import_analysis",
+    "component_graph",
+    "test_correlation",
+    "stale_detection",
+    "semantic_keywords"
+  ]
+}

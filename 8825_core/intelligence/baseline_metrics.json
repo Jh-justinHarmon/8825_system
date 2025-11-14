@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-11-12T09:34:34.700175",
+  "systems_analyzed": [
+    "content_index",
+    "brain",
+    "workflows",
+    "integrations"
+  ],
+  "llm_calls_found": [
+    {
+      "file": "8825_core/content_index/merge_engine.py",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "max_tokens": 200,
+      "line": 129
+    },
+    {
+      "file": "8825_core/content_index/merge_engine.py",
+      "provider": "openai",
+      "model": "unknown",
+      "max_tokens": 16000,
+      "line": 194
+    },
+    {
+      "file": "8825_core/content_index/intelligent_naming.py",
+      "provider": "openai",
+      "model": "unknown",
+      "max_tokens": 300,
+      "line": 130
+    }
+  ],
+  "estimated_usage": {
+    "content_index": {
+      "calls_per_month": 20000,
+      "tokens_per_month": 10000000,
+      "model": "gpt-4o-mini",
+      "monthly_cost": 1.5
+    },
+    "brain": {
+      "calls_per_month": 50,
+      "tokens_per_month": 100000,
+      "model": "gpt-4o",
+      "monthly_cost": 0.25
+    },
+    "workflows": {
+      "calls_per_month": 500,
+      "tokens_per_month": 500000,
+      "model": "gpt-4o-mini",
+      "monthly_cost": 0.07
+    }
+  },
+  "cost_projections": {
+    "current_monthly": 1.82,
+    "with_llom_router": 0.24,
+    "monthly_savings": 1.59,
+    "annual_savings": 19.05,
+    "savings_percent": 87
+  },
+  "baseline_summary": {
+    "total_monthly_cost": 1.82,
+    "total_annual_cost": 21.9,
+    "llm_calls_found": 3,
+    "systems_with_llm": 1,
+    "primary_model": "gpt-4o-mini",
+    "expensive_model_usage": 0
+  }
+}

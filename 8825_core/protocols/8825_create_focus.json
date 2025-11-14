@@ -1,0 +1,346 @@
+{
+  "protocol_name": "Create Focus",
+  "version": "2.1.0",
+  "protocol_type": "Focus Setup Protocol",
+  "parent_system": "8825 PCMS",
+  "created": "2025-11-06",
+  "purpose": "Set up new project focus area with customized sandbox, protocols, agents, and workflows",
+  
+  "overview": {
+    "description": "Creates a new focus area (project sandbox) with structure tailored to project requirements",
+    "trigger": "User says 'create focus [name]' while in 8825 mode",
+    "process": "Discovery → Design → Setup → Validation → Activation",
+    "output": "Fully configured focus area ready for use"
+  },
+  
+  "workflow_phases": {
+    "phase_1_discovery": {
+      "title": "Project Discovery",
+      "description": "Understand project requirements and determine sandbox needs",
+      "questions_to_ask": [
+        "What is the primary goal of this focus area?",
+        "What type of content will be processed? (files, web, APIs, etc.)",
+        "What workflows are needed? (ingestion, mining, generation, etc.)",
+        "What agents are required? (mining, dedup, decision, custom)",
+        "What protocols should be active? (existing or new)",
+        "What master files are needed? (libraries, configs, databases)",
+        "What output formats are expected?"
+      ],
+      "output": "Project requirements document"
+    },
+    
+    "phase_2_design": {
+      "title": "Sandbox Design",
+      "description": "Design sandbox structure based on project requirements",
+      "design_decisions": {
+        "sandbox_name": "Unique identifier (lowercase, underscores)",
+        "directory_structure": "Folders needed for workflows",
+        "master_files": "Core data files to create/manage",
+        "protocols": "Which protocols to use/create",
+        "agents": "Which agents to configure",
+        "workflows": "Step-by-step processes to define",
+        "activation_command": "How to enter this focus",
+        "exit_protocol": "How to safely exit and validate"
+      },
+      "templates": {
+        "minimal": "Basic sandbox with raw/output folders",
+        "joju_like": "Full pipeline: ingest → mine → dedup → publish",
+        "generation": "Input → process → generate → validate",
+        "research": "Collect → analyze → synthesize → report",
+        "custom": "User-defined structure"
+      },
+      "output": "Sandbox design specification"
+    },
+    
+    "phase_3_setup": {
+      "title": "Sandbox Setup",
+      "description": "Create directory structure, files, and configurations",
+      "setup_steps": [
+        "Create /{focus_name}_sandbox/ root directory",
+        "Create subdirectories based on design",
+        "Create master files with initial structure",
+        "Create focus-specific protocol file",
+        "Create README.md for focus documentation",
+        "Register focus in 8825_mode_activation.json",
+        "Create activation response template",
+        "Create exit checklist template"
+      ],
+      "directory_creation": {
+        "standard_folders": [
+          "/{focus}_sandbox/",
+          "/{focus}_sandbox/raw/",
+          "/{focus}_sandbox/processed/",
+          "/{focus}_sandbox/output/",
+          "/{focus}_sandbox/backups/",
+          "/{focus}_sandbox/archives/",
+          "/{focus}_sandbox/logs/"
+        ],
+        "optional_folders": [
+          "/{focus}_sandbox/mined/",
+          "/{focus}_sandbox/deduped/",
+          "/{focus}_sandbox/web/",
+          "/{focus}_sandbox/api/",
+          "/{focus}_sandbox/generated/",
+          "/{focus}_sandbox/analysis/",
+          "/{focus}_sandbox/reports/"
+        ]
+      },
+      "file_creation": {
+        "protocol_file": {
+          "location": "/protocols/8825_{focus_name}_mode.json",
+          "structure": {
+            "protocol_name": "{Focus Name} Mode",
+            "version": "1.0.0",
+            "parent_system": "8825 PCMS",
+            "purpose": "Description of focus area",
+            "activation": "Commands and setup",
+            "workflows": "Phase-by-phase processes",
+            "agents": "Agent configurations",
+            "exit_protocol": "Validation and cleanup"
+          }
+        },
+        "master_file": {
+          "location": "/{focus_name}_master.json",
+          "structure": {
+            "meta": "Version, description, timestamps",
+            "data": "Project-specific data structure",
+            "sessions": "Session logs",
+            "config": "Configuration settings"
+          }
+        },
+        "readme": {
+          "location": "/{focus}_sandbox/README.md",
+          "contents": [
+            "Focus area overview",
+            "Activation command",
+            "Available workflows",
+            "Directory structure",
+            "Usage examples",
+            "Exit protocol"
+          ]
+        }
+      }
+    },
+    
+    "phase_4_validation": {
+      "title": "Setup Validation",
+      "description": "Verify sandbox is properly configured",
+      "validation_checks": [
+        "All directories created successfully",
+        "Master files have valid JSON structure",
+        "Protocol file is properly formatted",
+        "Focus is registered in activation protocol",
+        "README documentation is complete",
+        "Activation command is unique",
+        "Exit protocol is defined"
+      ],
+      "validation_output": "Pass/fail report with any issues"
+    },
+    
+    "phase_5_activation": {
+      "title": "Focus Activation",
+      "description": "Activate the new focus area for first use",
+      "activation_steps": [
+        "Load focus protocol into memory",
+        "Initialize sandbox directories",
+        "Load master file",
+        "Set focus flag to '{focus_name}_active'",
+        "Display welcome message with commands"
+      ],
+      "activation_response": {
+        "message": "✅ FOCUS CREATED: {Focus Name}\n\nSandbox: /{focus_name}_sandbox/\nProtocol: /protocols/8825_{focus_name}_mode.json\nMaster File: {master_file_name}\n\nStatus: Ready for use\n\nAvailable commands:\n[List of focus-specific commands]\n\nYou are now in {Focus Name} mode. What would you like to do?"
+      }
+    }
+  },
+  
+  "focus_templates": {
+    "minimal_template": {
+      "name": "Minimal Focus",
+      "description": "Basic sandbox for simple workflows",
+      "directories": ["raw", "output", "logs"],
+      "master_file": "{focus}_data.json",
+      "workflows": ["ingest", "process", "export"],
+      "agents": ["decision_agent"],
+      "use_case": "Simple data processing or file management"
+    },
+    
+    "pipeline_template": {
+      "name": "Pipeline Focus (Joju-like)",
+      "description": "Full pipeline with ingestion, mining, deduplication, and publishing",
+      "directories": ["raw", "mined", "deduped", "output", "backups", "archives", "logs"],
+      "master_file": "{focus}_master_library.json",
+      "workflows": ["ingest", "mine", "deduplicate", "merge", "publish"],
+      "agents": ["mining_agent", "dedup_agent", "decision_agent", "promptgen_agent"],
+      "use_case": "Complex data processing with quality control"
+    },
+    
+    "generation_template": {
+      "name": "Generation Focus",
+      "description": "Content generation from structured data",
+      "directories": ["input", "generated", "validated", "output", "logs"],
+      "master_file": "{focus}_config.json",
+      "workflows": ["parse", "select", "render", "validate", "export"],
+      "agents": ["promptgen_agent", "decision_agent"],
+      "use_case": "Creating content from data (reports, portfolios, documents)"
+    },
+    
+    "research_template": {
+      "name": "Research Focus",
+      "description": "Research and analysis workflow",
+      "directories": ["sources", "collected", "analyzed", "synthesized", "reports", "logs"],
+      "master_file": "{focus}_research.json",
+      "workflows": ["collect", "analyze", "synthesize", "report"],
+      "agents": ["mining_agent", "decision_agent", "learning_agent"],
+      "use_case": "Research projects, competitive analysis, market research"
+    },
+    
+    "custom_template": {
+      "name": "Custom Focus",
+      "description": "User-defined structure",
+      "directories": "User specifies",
+      "master_file": "User specifies",
+      "workflows": "User defines",
+      "agents": "User selects",
+      "use_case": "Unique project requirements"
+    }
+  },
+  
+  "protocol_customization": {
+    "description": "Each focus can have custom protocols based on project needs",
+    "customization_options": {
+      "workflows": {
+        "inherit_from": "Use existing 8825 workflows (mining, dedup, etc.)",
+        "customize": "Modify existing workflows for focus-specific needs",
+        "create_new": "Define entirely new workflows"
+      },
+      "agents": {
+        "use_existing": "mining_agent, dedup_agent, decision_agent, promptgen_agent, learning_agent",
+        "configure": "Adjust agent parameters for focus requirements",
+        "create_custom": "Define new agent recipes for specialized tasks"
+      },
+      "validation_rules": {
+        "inherit": "Use 8825 quality assurance rules",
+        "add_custom": "Define focus-specific validation checks"
+      },
+      "exit_protocol": {
+        "inherit": "Use standard 6-step exit checklist",
+        "customize": "Add focus-specific validation steps"
+      }
+    }
+  },
+  
+  "registration_process": {
+    "description": "Register new focus in system activation protocol",
+    "registration_steps": [
+      "Open /protocols/8825_mode_activation.json",
+      "Add entry to 'registered_focuses' section",
+      "Include: name, description, sandbox_location, master_file, activation_command, protocols, version",
+      "Save and validate JSON structure"
+    ],
+    "registration_format": {
+      "{focus_name}": {
+        "name": "Display Name",
+        "description": "Brief description of focus area",
+        "sandbox_location": "/{focus_name}_sandbox/",
+        "master_file": "{focus}_master.json",
+        "activation_command": "focus on {focus_name}",
+        "protocols": ["list", "of", "protocols"],
+        "version": "1.0.0"
+      }
+    }
+  },
+  
+  "usage_examples": {
+    "example_1_create_forge": {
+      "user_command": "create focus forge",
+      "system_questions": [
+        "What is Forge's primary goal? → Project management and collaboration",
+        "What content types? → Tasks, projects, team data, timelines",
+        "What workflows? → Task ingestion, project tracking, team analytics, reporting",
+        "What agents? → Mining agent (extract tasks), decision agent (prioritization), promptgen agent (reports)",
+        "Master file? → forge_projects.json"
+      ],
+      "system_actions": [
+        "Create /forge_sandbox/ with subdirectories",
+        "Create forge_projects.json master file",
+        "Create /protocols/8825_forge_mode.json",
+        "Register in activation protocol",
+        "Activate forge focus"
+      ],
+      "result": "Forge focus ready with task management workflows"
+    },
+    
+    "example_2_create_research": {
+      "user_command": "create focus market_research",
+      "template_selected": "research_template",
+      "customizations": [
+        "Add /market_research_sandbox/competitors/ folder",
+        "Add /market_research_sandbox/trends/ folder",
+        "Create market_research_findings.json master file",
+        "Define workflow: collect → analyze → compare → synthesize → report"
+      ],
+      "result": "Market research focus ready with competitive analysis workflows"
+    }
+  },
+  
+  "best_practices": {
+    "naming": [
+      "Use lowercase with underscores (e.g., 'market_research', not 'Market Research')",
+      "Keep names concise but descriptive",
+      "Avoid special characters except underscores"
+    ],
+    "structure": [
+      "Start with template that matches use case",
+      "Add only necessary directories (avoid over-engineering)",
+      "Keep master file structure simple initially",
+      "Document workflows clearly in protocol file"
+    ],
+    "workflows": [
+      "Define clear phases with inputs/outputs",
+      "Include validation checkpoints",
+      "Specify user approval points",
+      "Document exit protocol thoroughly"
+    ],
+    "agents": [
+      "Reuse existing 8825 agents when possible",
+      "Configure agents for focus-specific needs",
+      "Only create custom agents when necessary"
+    ]
+  },
+  
+  "quality_assurance": {
+    "validation_checks": [
+      "Sandbox directory structure is complete",
+      "Master file has valid JSON structure",
+      "Protocol file is properly formatted",
+      "Focus is registered in activation protocol",
+      "Activation command is unique (no conflicts)",
+      "README documentation exists",
+      "Exit protocol is defined with validation steps"
+    ],
+    "error_handling": [
+      "If directory creation fails: Report error, rollback changes",
+      "If JSON validation fails: Show errors, allow correction",
+      "If registration fails: Provide specific issue, guide user to fix"
+    ]
+  },
+  
+  "integration_with_8825": {
+    "inherits_from": [
+      "8825_decision-making protocol",
+      "8825_learning_protocol",
+      "8825_mining protocol",
+      "User preferences from users/${USER_ID}.json"
+    ],
+    "extends": [
+      "Focus-specific workflows",
+      "Custom agents if needed",
+      "Project-specific validation rules"
+    ],
+    "maintains": [
+      "Consistent 8825 communication style",
+      "Standard exit protocol pattern",
+      "Quality assurance standards"
+    ]
+  }
+}

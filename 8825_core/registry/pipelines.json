@@ -1,0 +1,163 @@
+{
+  "project": "pipelines_registry",
+  "version": "1.0.0",
+  "last_updated": "2025-11-13",
+  "description": "Registry of PIPELINES - automated sequences with no decisions, just transformations and fixed workflows",
+  
+  "pipelines": {
+    "joju_pdf_generator_pipeline": {
+      "original_id": "AGENT-JOJU-PORTFOLIO-PDF-GENERATOR-0001",
+      "system_role": "Transform joju profile JSON to polished PDF with automatic layout adaptation.",
+      "inputs_required": ["Joju profile JSON (name, contact, summary, experiences/proofs array)"],
+      "outputs": ["Browser-ready HTML for PDF export", "Adaptive layout mode"],
+      "workflow": [
+        "Load JSON",
+        "Auto-detect layout mode (MINIMAL vs STANDARD based on description density)",
+        "Apply typography (Source Sans Pro/Crimson Text)",
+        "Render HTML",
+        "Export to PDF"
+      ],
+      "constraints": [
+        "Auto-detect mode (no user configuration)",
+        "Complete in <30 seconds",
+        "Professional typography",
+        "Graceful handling of missing fields"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_pipeline": "Fixed workflow: JSON → HTML → PDF. Auto-detection is deterministic, not decision-making. No conditional logic beyond format detection.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "windsurf_notion_sync_pipeline": {
+      "original_id": "AGENT-WS-NOTION-0001",
+      "system_role": "Sync Windsurf webhook events into Notion database entries.",
+      "inputs_required": [
+        "Webhook payload structure",
+        "Notion database schema",
+        "API authentication credentials"
+      ],
+      "outputs": [
+        "Node.js script OR n8n/Make automation steps",
+        "Field mapping table",
+        "Retry / dedupe handling notes"
+      ],
+      "workflow": [
+        "Receive webhook",
+        "Parse payload",
+        "Map fields to Notion schema",
+        "Upsert to Notion (update if exists)",
+        "Handle rate limits/retries"
+      ],
+      "constraints": [
+        "Use upsert semantics",
+        "Include rate-limit / retry considerations"
+      ],
+      "routing": "pmce",
+      "implementation_status": "not_implemented",
+      "why_pipeline": "Automated sync with fixed mapping. Webhook → Parse → Map → Upsert. No decisions, just transformation.",
+      "created_at": "2025-11-01T23:19:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "joju_profile_builder_pipeline": {
+      "original_id": "AGENT-JOJU-PROFILE-BUILDER-0001",
+      "system_role": "Builds professional profiles from master library with multiple variations, renders to various formats (PDF, JSON, HTML), and captures images for portfolio presentation",
+      "inputs_required": [
+        "Master library JSON (JH_master_library.json)",
+        "Profile configuration (jh_profile_config.json)",
+        "Target format (PDF, JSON, HTML, read.cv)",
+        "Variation parameters (audience, tone, length)"
+      ],
+      "outputs": [
+        "Profile variations (multiple versions)",
+        "Rendered PDFs with styling",
+        "Captured images (portfolio, work samples)",
+        "Metadata and configuration",
+        "Upload-ready packages"
+      ],
+      "workflow": [
+        "Load master library",
+        "Apply profile configuration",
+        "Generate variations per target",
+        "Render to target format",
+        "Capture images from sources",
+        "Package for upload/distribution"
+      ],
+      "constraints": [
+        "Follow profile config schema strictly",
+        "Maintain brand consistency across variations",
+        "Optimize for target platform requirements",
+        "Preserve image quality and attribution",
+        "Generate accessible formats"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_pipeline": "Automated rendering with fixed workflow. Load library → Apply config → Render → Package. No decisions, just transformation.",
+      "created_at": "2025-11-07T18:28:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "profile_builder_py_implementation"
+    },
+    
+    "rss_polling_pipeline": {
+      "original_id": "AGENT-GENERAL-RSS-AUTOMATION-ARCHITECT-0001",
+      "system_role": "Design targeted RSS polling workflows with keyword filtering and LLM profile generation.",
+      "inputs_required": ["Target keywords", "Subreddits", "Filtering criteria"],
+      "outputs": ["N8N/Make.com workflow", "HTTP requests to filtered feeds", "Parsing logic", "Scoring system", "Notion integration"],
+      "workflow": [
+        "Poll RSS feeds",
+        "Filter by keywords (at source)",
+        "Parse entries",
+        "Score relevance (rule-based)",
+        "Integrate with Notion"
+      ],
+      "constraints": [
+        "Filter at source (search RSS URLs), not after full feed pull",
+        "Use multiple targeted feeds over single broad feed"
+      ],
+      "routing": "general",
+      "implementation_status": "not_implemented",
+      "why_pipeline": "Automated RSS polling with filtering. Poll → Filter → Parse → Score → Integrate. Filtering is rule-based, not decision-based.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    }
+  },
+  
+  "routing_index": {
+    "joju": [
+      "joju_pdf_generator_pipeline",
+      "joju_profile_builder_pipeline"
+    ],
+    "pmce": ["windsurf_notion_sync_pipeline"],
+    "general": ["rss_polling_pipeline"]
+  },
+  
+  "stats": {
+    "total_pipelines": 4,
+    "implemented": 0,
+    "not_implemented": 4,
+    "by_routing": {
+      "joju": 2,
+      "pmce": 1,
+      "general": 1
+    }
+  },
+  
+  "implementation_notes": {
+    "pipelines_vs_agents": "Pipelines are automated sequences with no decisions. They transform data through fixed steps. Unlike agents, they don't adapt based on conditions or handle unexpected situations.",
+    "error_handling": "Pipelines need robust error handling and retry logic, but this is different from decision-making.",
+    "monitoring": "Pipelines should be monitored for failures, but don't require the same level of oversight as agents."
+  },
+  
+  "audit_notes": {
+    "date": "2025-11-13",
+    "auditor": "Cascade",
+    "criteria": "Pipelines are automated sequences with no decisions, just transformations",
+    "reclassified_from": "agent_registry.json",
+    "count": 4
+  }
+}

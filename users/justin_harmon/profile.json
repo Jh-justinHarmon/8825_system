@@ -1,0 +1,67 @@
+{
+  "user_id": "justin_harmon",
+  "version": "3.0.0",
+  "created_at": "2025-11-07",
+  
+  "identity": {
+    "full_name": "Justin Harmon",
+    "title": "Industrial Designer / UX Strategist / Design Leader",
+    "email": "${USER_EMAIL}",
+    "initials": "Jh"
+  },
+  
+  "focuses": {
+    "active": ["joju", "hcss", "jh_assistant"],
+    "joju": {
+      "purpose": "Professional profile and portfolio management",
+      "master_library": "joju/master_library.json",
+      "profile_builder": "joju/profile_builder.py"
+    },
+    "hcss": {
+      "purpose": "HCSS consulting work (RAL, TGIF, general)",
+      "email_routing": true,
+      "meeting_summaries": true
+    },
+    "jh_assistant": {
+      "purpose": "Personal productivity and communication",
+      "projects": ["jh-comms", "download-wedge", "competitive-analysis"]
+    }
+  },
+  
+  "connections": {
+    "matthew_galley": {
+      "relationship": "colleague",
+      "context": "Joju collaboration"
+    },
+    "cam_watkins": {
+      "relationship": "team_member",
+      "context": "HCSS team"
+    }
+  },
+  
+  "preferences": {
+    "response_format": "Findings → Decisions → Next → Refs → Summary",
+    "scope_discipline": "minimal_viable_solution",
+    "voice_patterns": {
+      "tone": "concise, direct, professional",
+      "format": "bullet points preferred"
+    }
+  },
+  
+  "credentials": {
+    "source": ".env",
+    "required": [
+      "GMAIL_USER",
+      "NOTION_TOKEN",
+      "DROPBOX_TOKEN"
+    ],
+    "optional": [
+      "OTTER_API_KEY"
+    ]
+  },
+  
+  "learning": {
+    "interests": ["Rive", "interactive_animation", "UX_design"],
+    "projects": ["8825_TeamsUX", "Chase_Travel_Rewards", "Shot_Tracker"]
+  }
+}

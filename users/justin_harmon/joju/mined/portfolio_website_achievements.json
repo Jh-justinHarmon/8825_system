@@ -1,0 +1,411 @@
+{
+  "mining_session": {
+    "timestamp": "2025-11-05T21:44:00-06:00",
+    "source_materials": [
+      "https://www.justin-harmon.com/ (main portfolio)",
+      "https://www.justin-harmon.com/case-study-00 (Shot Tracker)",
+      "https://www.justin-harmon.com/case-study-02 (Amare Stoudemire)",
+      "https://www.justin-harmon.com/case-study-03 (Reinsurance Associates)"
+    ],
+    "focus": "Portfolio projects, UX design, industrial design, product management",
+    "total_achievements_extracted": 12,
+    "portfolio_overview": "20+ years experience leading design and innovation"
+  },
+  
+  "portfolio_statement": {
+    "tagline": "Human-centric design is paramount to my product strategies",
+    "experience": "Over 20 years of experience leading design, innovation efforts, managing young and seasoned designers alike",
+    "approach": "Big-picture thinking and thorough research to create user-centered, straightforward solutions that drive impactful results"
+  },
+  
+  "projects_overview": {
+    "shot_tracker": {
+      "year": "2015",
+      "type": "iPhone & Apple Watch App Design",
+      "role": "UI/UX Designer, Branding",
+      "company": "Startup partnership",
+      "skills": ["Branding", "Prototyping", "Usability Testing", "Figma"]
+    },
+    "amare_stoudemire": {
+      "year": "2011",
+      "type": "Custom Protective Goggle - Industrial Design",
+      "role": "Industrial Designer, User Researcher",
+      "company": "Nike",
+      "skills": ["User Interviews", "Usability Testing", "Prototyping"]
+    },
+    "reinsurance_associates": {
+      "year": "Recent",
+      "type": "SaaS Portal Features - UX Design/Project Management",
+      "role": "UX Designer, Project Manager",
+      "company": "Hammer Consulting (client: Reinsurance Associates)",
+      "skills": ["User Interviews", "Prototyping", "Deployment", "User Training"]
+    }
+  },
+  
+  "achievements": [
+    {
+      "id": "portfolio_001",
+      "category": "Industrial Design & User Research",
+      "project": "Amare Stoudemire Custom Protective Goggles",
+      "achievement": "Designed and delivered custom protective goggles for Nike-signed NBA star Amare Stoudemire through user-centered industrial design process, conducting direct user interviews to identify stability and comfort issues, prototyping two design solutions, and implementing user-tested modifications that resolved bruising and irritation problems",
+      "metrics": {
+        "user_interviews": "Direct collaboration with professional athlete",
+        "prototypes_developed": "2 design options with different strap systems",
+        "usability_testing_sessions": "Multiple sessions including Nike photo shoot warm-up",
+        "career_duration": "Worn for remainder of professional career"
+      },
+      "evidence": "Portfolio case study documenting full design process from problem identification through final implementation",
+      "outcome": "Successfully resolved stability and comfort issues; athlete wore protective goggles for remainder of career, preventing potential blindness from eye injuries",
+      "framework": "STAR",
+      "impact_level": "individual",
+      "confidence_scores": {
+        "statement": 95,
+        "metric": 85,
+        "evidence": 90
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["industrial_design", "user_research", "prototyping", "usability_testing", "nike", "sports"]
+    },
+    {
+      "id": "portfolio_002",
+      "category": "UX Design & Process Automation",
+      "project": "Reinsurance Associates SaaS Portal",
+      "achievement": "Led UX design and project management for SaaS portal automation features resulting in fewest seasonal temp employees in 5 years, with 55% of online statements automatically collected and filed, and 68% of PDF uploads filing automatically, enabling team to work ahead of tax deadlines for first time",
+      "metrics": {
+        "temp_employee_reduction": "Fewest seasonal hires in 5 years",
+        "automation_rate_online": "55% of online statements auto-collected and filed",
+        "automation_rate_upload": "68% of PDF files auto-file via drag-and-drop",
+        "statements_automated": "2,400+ statements per month via 3 web crawlers",
+        "efficiency_improvement": "Team ahead of tax deadlines (previously rushed)"
+      },
+      "evidence": "Portfolio case study with quantified outcomes and feature documentation",
+      "outcome": "Dramatic efficiency improvement enabling team to meet deadlines ahead of schedule while reducing seasonal staffing costs",
+      "framework": "STAR",
+      "impact_level": "org",
+      "confidence_scores": {
+        "statement": 95,
+        "metric": 95,
+        "evidence": 90
+      },
+      "achievement_type": "Bona Fide Achievement",
+      "joju_tags": ["ux_design", "automation", "project_management", "saas", "efficiency", "cost_reduction"]
+    },
+    {
+      "id": "portfolio_003",
+      "category": "Feature Design & Development Oversight",
+      "project": "Reinsurance Associates - Credential Management",
+      "achievement": "Designed and oversaw development of Secret Vault credential management system streamlining access to multiple online portals, eliminating Excel-based credential tracking headache and implementing shared 2FA system to handle automated programs while enhancing client efficiency",
+      "metrics": {
+        "feature_type": "Credential management system (Secret Vault)",
+        "automation_support": "Shared 2FA system for automated crawlers",
+        "problem_solved": "Eliminated Excel file credential management",
+        "web_crawlers_supported": "3 automated crawlers"
+      },
+      "evidence": "Portfolio case study documenting user interviews, user flows, and feature implementation",
+      "outcome": "Streamlined credential management across team, enabled automation infrastructure, eliminated manual Excel tracking",
+      "framework": "CAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 80,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["feature_design", "security", "automation", "workflow_optimization"]
+    },
+    {
+      "id": "portfolio_004",
+      "category": "UX Research & Report Optimization",
+      "project": "Reinsurance Associates - Report Redesign",
+      "achievement": "Conducted user interviews identifying report usability issues (annoying filters, losing place on clicks, not worth the trouble), then redesigned reports with simplified filters, resorted columns, and improved navigation behavior, transforming unused feature into valuable efficiency tool",
+      "metrics": {
+        "user_interviews": "Multiple clerks and accountants",
+        "problems_identified": "3 major usability issues",
+        "modifications": "Simplified filters, resorted columns, behavioral changes",
+        "adoption_change": "From 'not worth using' to actively used tool"
+      },
+      "evidence": "Portfolio case study with direct user quotes and before/after modifications",
+      "outcome": "Transformed unused report feature into valuable tool helping team quickly identify missing statements",
+      "framework": "CAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 75,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["ux_research", "user_interviews", "report_design", "usability_improvement"]
+    },
+    {
+      "id": "portfolio_005",
+      "category": "Automation Strategy & Quantitative Analysis",
+      "project": "Reinsurance Associates - Web Crawler Development",
+      "achievement": "Performed quantitative analysis to identify richest automation targets, then oversaw development team's implementation of 3 web crawlers collecting over 2,400 statements monthly, achieving 55% automation rate for online statement collection and filing",
+      "metrics": {
+        "analysis_type": "Quantitative analysis of automation opportunities",
+        "crawlers_developed": "3 web crawlers",
+        "statements_per_month": "2,400+ automated",
+        "automation_rate": "55% of online statements",
+        "team_oversight": "Development team implementation"
+      },
+      "evidence": "Portfolio case study documenting analysis process and implementation results",
+      "outcome": "Significant automation of repetitive collection tasks, freeing team for higher-value work",
+      "framework": "STAR",
+      "impact_level": "org",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 90,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["automation", "quantitative_analysis", "development_oversight", "efficiency"]
+    },
+    {
+      "id": "portfolio_006",
+      "category": "Feature Innovation - Drag & Drop Upload",
+      "project": "Reinsurance Associates - File Upload System",
+      "achievement": "Designed and developed drag-and-drop file upload feature with automated PDF parsing and intelligent field mapping, achieving 68% automatic filing rate for uploaded PDFs through learning mapper interface that guides system to locate and associate appropriate fields",
+      "metrics": {
+        "feature_type": "Drag-and-drop upload with auto-filing",
+        "automation_rate": "68% of PDFs auto-file",
+        "parsing_system": "PDF text field parser with intelligent mapping",
+        "learning_system": "Mapper interface for field associations"
+      },
+      "evidence": "Portfolio case study with user flow documentation and automation metrics",
+      "outcome": "Dramatically simplified upload process while achieving high automation rate, reducing manual filing work",
+      "framework": "CAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 90,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["feature_design", "automation", "machine_learning", "file_management"]
+    },
+    {
+      "id": "portfolio_007",
+      "category": "User Research & Problem Discovery",
+      "project": "Reinsurance Associates - Discovery Phase",
+      "achievement": "Conducted comprehensive user interviews with accounting clerks identifying critical efficiency bottlenecks across three areas (identification, collection, uploading), uncovering specific pain points like 'spending ton of time digging to figure out what's missing' and 'Excel file for logins is constant headache'",
+      "metrics": {
+        "user_interviews": "Multiple clerks and accountants",
+        "problem_areas": "3 major workflow categories",
+        "pain_points_identified": "Multiple specific issues with direct quotes",
+        "improvement_opportunities": "Identification, collection, uploading processes"
+      },
+      "evidence": "Portfolio case study with direct user quotes and problem categorization",
+      "outcome": "Clear problem definition enabling targeted feature development addressing real user needs",
+      "framework": "STAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 75,
+        "evidence": 90
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["user_research", "discovery", "problem_definition", "user_interviews"]
+    },
+    {
+      "id": "portfolio_008",
+      "category": "Product Strategy & Branding",
+      "project": "Shot Tracker App",
+      "achievement": "Led branding, digital marketing campaigns, and UI/UX design for golf shot tracking startup app, creating hi-fidelity Figma prototype and conducting early usability testing that revealed critical insight: golfers unwilling to pull out phone after every shot, leading to strategic pivot toward Apple Watch app requirement",
+      "metrics": {
+        "deliverables": "Branding, marketing campaigns, UI/UX design, icon design",
+        "prototype_tool": "Figma hi-fidelity prototype",
+        "usability_testing": "Early testing with target users",
+        "strategic_insight": "Identified need for watch app before development completion"
+      },
+      "evidence": "Portfolio case study documenting design process and usability testing insights",
+      "outcome": "Early usability testing prevented costly development of unusable phone-only solution, identified watch app requirement",
+      "framework": "SOAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 85,
+        "metric": 75,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["branding", "ux_design", "usability_testing", "product_strategy", "figma", "mobile_app"]
+    },
+    {
+      "id": "portfolio_009",
+      "category": "Competitive Research & Market Analysis",
+      "project": "Shot Tracker App",
+      "achievement": "Conducted competitive research analyzing multiple golf tracking apps identifying market gap: existing apps only track shots during rounds, not driving range practice, establishing unique market positioning for startup's driving range-focused solution",
+      "metrics": {
+        "competitive_analysis": "Multiple golf tracking apps analyzed",
+        "market_gap": "No driving range-specific tracking apps",
+        "differentiation": "Unique focus on practice vs rounds",
+        "market_research": "Widely adopted competitor apps studied"
+      },
+      "evidence": "Portfolio case study documenting competitive research and market positioning",
+      "outcome": "Validated unique market opportunity and informed design aesthetic based on widely-adopted competitor patterns",
+      "framework": "CAR",
+      "impact_level": "team",
+      "confidence_scores": {
+        "statement": 85,
+        "metric": 70,
+        "evidence": 80
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["competitive_research", "market_analysis", "product_strategy", "differentiation"]
+    },
+    {
+      "id": "portfolio_010",
+      "category": "Usability Testing & Iterative Design",
+      "project": "Amare Stoudemire Goggles",
+      "achievement": "Implemented comprehensive usability testing methodology presenting two prototype options to professional athlete during Nike photo shoot warm-up, observing distinct preference for silicone strap solution, then integrating user feedback and implementing final modifications into innovative construction requiring specialized NYC fabrication",
+      "metrics": {
+        "prototypes_tested": "2 design options (temple extensions vs silicone strap)",
+        "testing_environment": "Real-world warm-up session",
+        "iterations": "Multiple rounds from initial designs to final modifications",
+        "fabrication": "Specialized NYC manufacturing required"
+      },
+      "evidence": "Portfolio case study documenting prototype development and testing process",
+      "outcome": "User-validated design solution with clear preference data guiding final implementation",
+      "framework": "CAR",
+      "impact_level": "individual",
+      "confidence_scores": {
+        "statement": 90,
+        "metric": 80,
+        "evidence": 85
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["usability_testing", "iterative_design", "prototyping", "user_feedback"]
+    },
+    {
+      "id": "portfolio_011",
+      "category": "Design Philosophy & Process Integration",
+      "project": "Amare Stoudemire Goggles",
+      "achievement": "Achieved 'light bulb moment' realizing user-focused Industrial Design philosophy and process aligns with UX fundamentals, showcasing full integration of user and usability testing into design process as crowning achievement demonstrating cross-discipline design thinking",
+      "metrics": {
+        "disciplines_integrated": "Industrial Design + UX fundamentals",
+        "process_innovation": "Full user/usability testing integration",
+        "philosophy": "User-focused design approach",
+        "achievement_significance": "Described as 'crowning achievement'"
+      },
+      "evidence": "Portfolio case study with explicit statement about design philosophy realization",
+      "outcome": "Established integrated design approach combining ID and UX methodologies, informing future work",
+      "framework": "SOAR",
+      "impact_level": "individual",
+      "confidence_scores": {
+        "statement": 85,
+        "metric": 70,
+        "evidence": 80
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["design_philosophy", "cross_discipline", "process_innovation", "design_thinking"]
+    },
+    {
+      "id": "portfolio_012",
+      "category": "Early Career Learning & Tool Adoption",
+      "project": "Shot Tracker App",
+      "achievement": "Demonstrated early career growth in digital design through Shot Tracker project, learning Figma and gaining valuable lesson about efficiency and need for early usability/user testing using lo-fi prototypes before high-fidelity development",
+      "metrics": {
+        "tool_learned": "Figma",
+        "career_stage": "Early work in digital design (2015)",
+        "key_lesson": "Early usability testing with lo-fi prototypes",
+        "process_improvement": "Test before hi-fi development"
+      },
+      "evidence": "Portfolio case study explicitly noting learning and growth",
+      "outcome": "Established best practice of early testing with lo-fi prototypes, preventing costly late-stage changes",
+      "framework": "SOAL",
+      "impact_level": "individual",
+      "confidence_scores": {
+        "statement": 85,
+        "metric": 70,
+        "evidence": 80
+      },
+      "achievement_type": "Achievement of Fact",
+      "joju_tags": ["learning", "tool_adoption", "process_improvement", "figma", "early_career"]
+    }
+  ],
+  
+  "achievement_summary": {
+    "by_project": {
+      "Amare Stoudemire Goggles": 3,
+      "Reinsurance Associates": 6,
+      "Shot Tracker": 3
+    },
+    "by_category": {
+      "Industrial Design": 1,
+      "UX Design & Automation": 1,
+      "Feature Design": 2,
+      "UX Research": 2,
+      "Automation Strategy": 1,
+      "Product Strategy": 1,
+      "Competitive Research": 1,
+      "Usability Testing": 1,
+      "Design Philosophy": 1,
+      "Learning & Growth": 1
+    },
+    "by_impact_level": {
+      "org": 2,
+      "team": 7,
+      "individual": 3
+    },
+    "by_achievement_type": {
+      "Bona Fide": 1,
+      "Achievement of Fact": 11,
+      "Stated": 0
+    },
+    "average_confidence": 84,
+    "key_themes": [
+      "User-centered design process",
+      "Usability testing and iteration",
+      "Automation and efficiency",
+      "User research and interviews",
+      "Cross-discipline design thinking",
+      "Quantified business outcomes"
+    ]
+  },
+  
+  "skills_demonstrated": [
+    "UX Design",
+    "Industrial Design",
+    "User Research",
+    "User Interviews",
+    "Usability Testing",
+    "Prototyping",
+    "Branding",
+    "Project Management",
+    "Automation Strategy",
+    "Quantitative Analysis",
+    "Feature Design",
+    "Development Oversight",
+    "Competitive Research",
+    "Market Analysis",
+    "Figma",
+    "Process Optimization"
+  ],
+  
+  "integration_recommendations": {
+    "add_to_existing_roles": {
+      "hammer_consulting": {
+        "current_bullets": 6,
+        "suggested_additions": [
+          "Reinsurance Associates automation achievements (55% auto-collection, 68% auto-filing)",
+          "Credential management system (Secret Vault)",
+          "Report redesign based on user interviews"
+        ],
+        "rationale": "These are Hammer Consulting client projects with strong metrics"
+      },
+      "new_standalone_projects": {
+        "amare_stoudemire": {
+          "suggested": true,
+          "rationale": "Unique Nike collaboration, industrial design showcase, strong narrative",
+          "bullets": "2-3"
+        },
+        "shot_tracker": {
+          "suggested": false,
+          "rationale": "Early career project, shelved before completion, learning experience but less impactful",
+          "alternative": "Could mention as early Figma adoption or usability testing lesson"
+        }
+      }
+    },
+    "deduplication_needed": true,
+    "note": "Reinsurance Associates achievements overlap with existing Hammer Consulting entry - need to check for duplicates and enrich existing bullets"
+  }
+}

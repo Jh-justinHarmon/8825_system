@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+"""
+8825 brain heal
+Check for issues and heal autonomously
+"""
+
+import sys
+import json
+from pathlib import Path
+
+# Add brain module to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "brain"))
+
+from brain_api import BrainAPI
+
+def format_healing_report(report):
+    """Format healing report for display"""
+    if "error" in report:
+        print(f"❌ Error: {report['error']}")
+        if "hint" in report:
+            print(f"💡 {report['hint']}")
+        return
+    
+    print("=== Self-Healing Report ===\n")
+    
+    issues_found = report.get('issues_found', 0)
+    issues_healed = report.get('issues_healed', 0)
+    issues_failed = report.get('issues_failed', 0)
+    
+    print(f"Issues found: {issues_found}")
+    print(f"Issues healed: {issues_healed}")
+    if issues_failed > 0:
+        print(f"Issues failed: {issues_failed}")
+    print()
+    
+    # Show healed issues
+    healed = report.get('healed', [])
+    if healed:
+        print(f"✅ Healed ({len(healed)}):")
+        for issue in healed:
+            print(f"  - {issue.get('type')}: {issue.get('description', 'Unknown')}")
+        print()
+    
+    # Show failed issues
+    failed = report.get('failed', [])
+    if failed:
+        print(f"❌ Failed to heal ({len(failed)}):")
+        for issue in failed:
+            print(f"  - {issue.get('type')}: {issue.get('description', 'Unknown')}")
+        print()
+    
+    # Status
+    status = report.get('status', 'unknown')
+    if status == 'healthy':
+        print("✅ System healthy - no issues detected")
+    elif status == 'healed':
+        print("✅ All issues healed successfully")
+    elif status == 'partial':
+        print("⚠️  Some issues could not be healed automatically")
+        print("   Manual intervention may be required")
+    
+    # Message
+    message = report.get('message')
+    if message:
+        print(f"\n{message}")
+
+def main():
+    """Main entry point"""
+    print("🔍 Running self-healing check...\n")
+    
+    api = BrainAPI()
+    report = api.check_and_heal()
+    
+    print()
+    format_healing_report(report)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil's Ledger</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(220, 20, 60, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            background: #8b0000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #a00000;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #444;
+        }
+
+        .btn-secondary:hover {
+            background: #555;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            background: #444;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .file-label:hover {
+            background: #555;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b0000;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #dc143c;
+        }
+
+        .table-container {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #333;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #dc143c;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #333;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #333;
+        }
+
+        td {
+            padding: 15px;
+            font-size: 0.95em;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-unpaid {
+            background: rgba(220, 20, 60, 0.2);
+            color: #ff6b6b;
+        }
+
+        .badge-paid {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ed573;
+        }
+
+        .badge-new {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            margin-left: 8px;
+        }
+
+        .amount {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .link-icon {
+            color: #dc143c;
+            text-decoration: none;
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        .link-icon:hover {
+            color: #ff6b6b;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            background: none;
+            border: 1px solid #444;
+            color: #e0e0e0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover {
+            border-color: #dc143c;
+            color: #dc143c;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2ed573;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .filter-chips {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #333;
+            border: 1px solid #444;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            border-color: #dc143c;
+        }
+
+        .chip.active {
+            background: #8b0000;
+            border-color: #8b0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📒 Phil's Ledger</h1>
+            <div class="subtitle">Personal Bill Tracking & Management</div>
+        </header>
+
+        <div class="controls">
+            <input type="file" id="csvInput" accept=".csv" multiple>
+            <label for="csvInput" class="file-label">📁 Import CSV</label>
+            <button class="btn" onclick="refreshData()">🔄 Refresh</button>
+            <button class="btn btn-secondary" onclick="exportData()">💾 Export</button>
+            <button class="btn btn-secondary" onclick="clearData()">🗑️ Clear All</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search bills..." onkeyup="filterBills()">
+            </div>
+        </div>
+
+        <div class="filter-chips">
+            <div class="chip active" data-filter="all" onclick="setFilter('all')">All Bills</div>
+            <div class="chip" data-filter="unpaid" onclick="setFilter('unpaid')">Unpaid</div>
+            <div class="chip" data-filter="paid" onclick="setFilter('paid')">Paid</div>
+            <div class="chip" data-filter="new" onclick="setFilter('new')">New</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Total Bills</div>
+                <div class="stat-value" id="statTotal">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Unpaid</div>
+                <div class="stat-value" id="statUnpaid">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Due</div>
+                <div class="stat-value" id="statAmount">$0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">This Month</div>
+                <div class="stat-value" id="statMonth">0</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Vendor</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Links</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="billsTable">
+                    <tr>
+                        <td colspan="7" class="empty-state">
+                            <div class="empty-state-icon">📄</div>
+                            <div>No bills yet. Import a CSV to get started.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let bills = [];
+        let currentFilter = 'all';
+        const STORAGE_KEY = 'phils_ledger_bills';
+
+        // Load bills from localStorage on startup
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFromStorage();
+            checkForAutoImport();
+        });
+
+        // Handle CSV file import
+        document.getElementById('csvInput').addEventListener('change', (e) => {
+            const files = e.target.files;
+            for (let file of files) {
+                readCSV(file);
+            }
+        });
+
+        function readCSV(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const text = e.target.result;
+                parseCSV(text, file.name);
+            };
+            reader.readAsText(file);
+        }
+
+        function parseCSV(text, filename) {
+            const lines = text.split('\n');
+            const headers = lines[0].split(',').map(h => h.trim());
+            
+            let imported = 0;
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                
+                const values = lines[i].split(',').map(v => v.trim());
+                const bill = {};
+                
+                headers.forEach((header, index) => {
+                    bill[header] = values[index] || '';
+                });
+                
+                // Add metadata
+                bill.id = Date.now() + i;
+                bill.importedAt = new Date().toISOString();
+                bill.importedFrom = filename;
+                bill.isNew = true;
+                
+                // Check for duplicates
+                if (!isDuplicate(bill)) {
+                    bills.push(bill);
+                    imported++;
+                }
+            }
+            
+            saveToStorage();
+            renderBills();
+            updateStats();
+            showNotification(`Imported ${imported} bills from ${filename}`);
+        }
+
+        function isDuplicate(newBill) {
+            return bills.some(bill => 
+                bill.Vendor === newBill.Vendor &&
+                bill.Amount === newBill.Amount &&
+                bill.Date === newBill.Date
+            );
+        }
+
+        function renderBills() {
+            const tbody = document.getElementById('billsTable');
+            
+            if (bills.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="empty-state">
+                            <div class="empty-state-icon">📄</div>
+                            <div>No bills yet. Import a CSV to get started.</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            let filteredBills = filterBillsByType(bills);
+            
+            // Apply search filter
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            if (search) {
+                filteredBills = filteredBills.filter(bill => 
+                    bill.Vendor.toLowerCase().includes(search) ||
+                    bill.Amount.toLowerCase().includes(search) ||
+                    bill.Category.toLowerCase().includes(search)
+                );
+            }
+            
+            // Sort by date (newest first)
+            filteredBills.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+            
+            tbody.innerHTML = filteredBills.map(bill => `
+                <tr>
+                    <td>${formatDate(bill.Date)}</td>
+                    <td>
+                        ${bill.Vendor}
+                        ${bill.isNew ? '<span class="badge badge-new">NEW</span>' : ''}
+                    </td>
+                    <td class="amount">${bill.Amount}</td>
+                    <td>${bill.Category || '-'}</td>
+                    <td>
+                        <span class="badge ${bill.Paid === 'true' ? 'badge-paid' : 'badge-unpaid'}">
+                            ${bill.Paid === 'true' ? '✓ Paid' : '⏳ Unpaid'}
+                        </span>
+                    </td>
+                    <td>
+                        ${bill.DriveURL ? `<a href="${bill.DriveURL}" target="_blank" class="link-icon" title="View in Drive">📁</a>` : ''}
+                        ${bill.CalendarURL ? `<a href="${bill.CalendarURL}" target="_blank" class="link-icon" title="View in Calendar">📅</a>` : ''}
+                    </td>
+                    <td class="actions">
+                        ${bill.Paid !== 'true' ? `<button class="action-btn" onclick="markPaid(${bill.id})">Mark Paid</button>` : ''}
+                        <button class="action-btn" onclick="deleteBill(${bill.id})">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function filterBillsByType(billsList) {
+            switch(currentFilter) {
+                case 'unpaid':
+                    return billsList.filter(b => b.Paid !== 'true');
+                case 'paid':
+                    return billsList.filter(b => b.Paid === 'true');
+                case 'new':
+                    return billsList.filter(b => b.isNew);
+                default:
+                    return billsList;
+            }
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.chip').forEach(chip => {
+                chip.classList.remove('active');
+                if (chip.dataset.filter === filter) {
+                    chip.classList.add('active');
+                }
+            });
+            renderBills();
+        }
+
+        function filterBills() {
+            renderBills();
+        }
+
+        function updateStats() {
+            const total = bills.length;
+            const unpaid = bills.filter(b => b.Paid !== 'true').length;
+            const totalAmount = bills
+                .filter(b => b.Paid !== 'true')
+                .reduce((sum, b) => {
+                    const amount = parseFloat(b.Amount.replace(/[$,]/g, '')) || 0;
+                    return sum + amount;
+                }, 0);
+            
+            const thisMonth = bills.filter(b => {
+                const billDate = new Date(b.Date);
+                const now = new Date();
+                return billDate.getMonth() === now.getMonth() && 
+                       billDate.getFullYear() === now.getFullYear();
+            }).length;
+            
+            document.getElementById('statTotal').textContent = total;
+            document.getElementById('statUnpaid').textContent = unpaid;
+            document.getElementById('statAmount').textContent = '$' + totalAmount.toFixed(2);
+            document.getElementById('statMonth').textContent = thisMonth;
+        }
+
+        function markPaid(id) {
+            const bill = bills.find(b => b.id === id);
+            if (bill) {
+                bill.Paid = 'true';
+                bill.PaidDate = new Date().toISOString().split('T')[0];
+                bill.isNew = false;
+                saveToStorage();
+                renderBills();
+                updateStats();
+                showNotification(`Marked ${bill.Vendor} as paid`);
+            }
+        }
+
+        function deleteBill(id) {
+            if (confirm('Delete this bill?')) {
+                bills = bills.filter(b => b.id !== id);
+                saveToStorage();
+                renderBills();
+                updateStats();
+                showNotification('Bill deleted');
+            }
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+
+        function saveToStorage() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(bills));
+        }
+
+        function loadFromStorage() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                bills = JSON.parse(stored);
+                renderBills();
+                updateStats();
+            }
+        }
+
+        function refreshData() {
+            loadFromStorage();
+            checkForAutoImport();
+            showNotification('Data refreshed');
+        }
+
+        function exportData() {
+            const csv = convertToCSV(bills);
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `phils_ledger_export_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            showNotification('Exported to CSV');
+        }
+
+        function convertToCSV(data) {
+            if (data.length === 0) return '';
+            
+            const headers = ['Date', 'Vendor', 'Amount', 'Category', 'Note', 'DriveURL', 'CalendarURL', 'Paid', 'DueDate', 'PaidDate', 'Account', 'Tags', 'Source', 'BankTxnId'];
+            const rows = data.map(bill => 
+                headers.map(h => bill[h] || '').join(',')
+            );
+            
+            return [headers.join(','), ...rows].join('\n');
+        }
+
+        function clearData() {
+            if (confirm('Clear all bills? This cannot be undone.')) {
+                bills = [];
+                saveToStorage();
+                renderBills();
+                updateStats();
+                showNotification('All bills cleared');
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        function checkForAutoImport() {
+            // This would check the import directory for new CSV files
+            // For now, it's a placeholder for future file system access
+            console.log('Checking for auto-import...');
+        }
+    </script>
+</body>
+</html>

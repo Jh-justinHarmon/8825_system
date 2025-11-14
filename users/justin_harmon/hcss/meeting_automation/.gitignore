@@ -1,0 +1,23 @@
+# Credentials (NEVER commit)
+config.json
+gmail_credentials.json
+gmail_token.json
+otter_credentials.json
+
+# Logs
+logs/
+*.log
+
+# PID files
+.poller.pid
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# OS
+.DS_Store

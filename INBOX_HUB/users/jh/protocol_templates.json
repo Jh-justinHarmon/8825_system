@@ -1,0 +1,70 @@
+{
+  "karsen_schedule": {
+    "name": "KARSEN Schedule",
+    "description": "Creates calendar events from KARSEN departure schedule",
+    "detects": [
+      "KARSEN"
+    ],
+    "routes_to": [
+      "calendar"
+    ],
+    "confidence_threshold": 0.85,
+    "enabled": false
+  },
+  "bills_invoices": {
+    "name": "Bills & Invoices",
+    "description": "Files bills to Drive and creates due date calendar events",
+    "detects": [
+      "invoice",
+      "bill",
+      "payment due",
+      "amount due"
+    ],
+    "routes_to": [
+      "drive",
+      "calendar"
+    ],
+    "confidence_threshold": 0.75,
+    "enabled": false
+  },
+  "meeting_screenshots": {
+    "name": "Meeting Screenshots",
+    "description": "OCR meeting screenshots and save to notes",
+    "detects": [
+      "meeting",
+      "zoom",
+      "teams",
+      "agenda"
+    ],
+    "routes_to": [
+      "notes"
+    ],
+    "confidence_threshold": 0.7,
+    "enabled": false
+  },
+  "receipts": {
+    "name": "Receipts",
+    "description": "Track expenses from receipt images",
+    "detects": [
+      "receipt",
+      "total",
+      "paid",
+      "transaction"
+    ],
+    "routes_to": [
+      "expense_tracker"
+    ],
+    "confidence_threshold": 0.75,
+    "enabled": false
+  },
+  "screenshot_archive": {
+    "name": "Screenshot Archive",
+    "description": "Archive general screenshots",
+    "detects": [],
+    "routes_to": [
+      "archive"
+    ],
+    "confidence_threshold": 0.5,
+    "enabled": true
+  }
+}

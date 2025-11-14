@@ -1,0 +1,175 @@
+{
+  "deduplication_session": {
+    "timestamp": "2025-11-05T20:05:00-06:00",
+    "source_mined": "joju_sandbox/mined/resume_bullets_mined.json",
+    "source_library": "JH_master_library.json",
+    "total_mined_achievements": 31,
+    "existing_library_achievements": "Limited (high-level only)",
+    "strategy": "Enrich library with detailed structured achievements"
+  },
+  
+  "analysis_results": {
+    "exact_duplicates": {
+      "count": 0,
+      "items": [],
+      "action": "None found - existing library has high-level descriptions only"
+    },
+    
+    "semantic_matches": {
+      "count": 3,
+      "items": [
+        {
+          "mined_id": "pm_pr_001",
+          "mined_text": "Drove sales growth by 10–26% across multiple brands",
+          "library_match": "process_improvements: Developed zero-configuration portfolio generation system",
+          "similarity": "Different achievements",
+          "action": "Add as new - not a duplicate"
+        },
+        {
+          "mined_id": "pm_ma_001",
+          "mined_text": "$10 million revenue growth from Nike Vision product line",
+          "library_match": "leadership: Led design strategy for major eyewear brands",
+          "similarity": "Related but mined version has specific metric",
+          "action": "Add detailed version to library"
+        },
+        {
+          "mined_id": "pm_ma_002",
+          "mined_text": "Founded 3D design department (VSP Innovation Lab)",
+          "library_match": "innovation: Pioneered team-chemistry-aware hiring tool concept",
+          "similarity": "Different innovations",
+          "action": "Add as new achievement"
+        }
+      ],
+      "action": "All mined achievements are NEW with quantified metrics"
+    },
+    
+    "enrichment_opportunities": {
+      "count": 31,
+      "description": "All 31 mined achievements can enrich the library",
+      "items": [
+        {
+          "category": "quantified_metrics",
+          "count": 7,
+          "examples": [
+            "55% reduction in manual tasks",
+            "65% reduction in seasonal staff",
+            "10-26% sales growth",
+            "23.7% sales increase",
+            "$10 million revenue growth"
+          ],
+          "value": "HIGH - Adds concrete proof points"
+        },
+        {
+          "category": "detailed_work_history",
+          "count": 31,
+          "description": "Structured achievements by company and role",
+          "value": "HIGH - Provides complete professional narrative"
+        },
+        {
+          "category": "action_outcome_pairs",
+          "count": 31,
+          "description": "Each achievement has clear action + outcome structure",
+          "value": "HIGH - Ready for resume/portfolio generation"
+        }
+      ],
+      "action": "Add all to library in new 'detailed_achievements' section"
+    },
+    
+    "conflicts": {
+      "count": 0,
+      "items": [],
+      "description": "No contradictory information found",
+      "action": "None needed"
+    },
+    
+    "version_reconciliation": {
+      "product_manager_variant": {
+        "file": "resume-3_bullets.docx",
+        "date": "2025-01-21",
+        "achievements": 31,
+        "status": "Most recent PM version"
+      },
+      "id_tech_variant": {
+        "file": "resume-4_bullets.docx",
+        "date": "2025-07-25",
+        "achievements": 31,
+        "status": "Most recent ID-tech version",
+        "note": "Same achievements, different framing"
+      },
+      "project_manager_variant": {
+        "file": "resume-4_bullets.docx",
+        "date": "2025-05-12",
+        "achievements": 31,
+        "status": "Most recent PM version",
+        "note": "Same achievements, process-focused framing"
+      },
+      "action": "Keep all variants - they serve different job applications"
+    }
+  },
+  
+  "recommendations": {
+    "add_to_library": {
+      "new_section": "detailed_achievements_by_company",
+      "structure": {
+        "hammer_consulting": "7 achievements",
+        "prtcl_inc": "6 achievements",
+        "costa": "6 achievements",
+        "fossil": "6 achievements",
+        "marchon": "6 achievements"
+      },
+      "total_new_entries": 31
+    },
+    
+    "update_existing": {
+      "achievements_and_proof_points": {
+        "add_metrics": [
+          "10-26% sales growth across multiple brands (prtcl inc)",
+          "23.7% sales increase (Fossil - Skechers launch)",
+          "$10M revenue growth (Marchon - Nike Vision)",
+          "55% reduction in manual tasks (Hammer Consulting)",
+          "65% reduction in seasonal staff (Hammer Consulting)"
+        ]
+      },
+      "innovation": {
+        "add_detail": [
+          "Founded VSP Innovation Lab (3D design department at Marchon)",
+          "Automated B2B SaaS workflows reducing manual tasks 55%",
+          "User fit profiles increasing e-commerce conversion rates"
+        ]
+      }
+    },
+    
+    "preserve_provenance": {
+      "source_files": [
+        "Product Manager/resume-3_bullets.docx (2025-01-21)",
+        "ID-tech/resume-4_bullets.docx (2025-07-25)",
+        "Project Manager/resume-4_bullets.docx (2025-05-12)"
+      ],
+      "extraction_date": "2025-11-05",
+      "joju_mode_session": "session_001"
+    }
+  },
+  
+  "dedup_summary": {
+    "total_mined": 31,
+    "exact_duplicates": 0,
+    "semantic_duplicates": 0,
+    "new_achievements": 31,
+    "enrichments": 31,
+    "conflicts": 0,
+    "action_required": "Add all 31 achievements to library",
+    "confidence": "HIGH - No conflicts, all new structured data"
+  },
+  
+  "next_phase": {
+    "phase": "Library Update",
+    "actions": [
+      "Create backup of JH_master_library.json",
+      "Add 'detailed_achievements_by_company' section",
+      "Update 'achievements_and_proof_points' with metrics",
+      "Add provenance tracking",
+      "Update version number",
+      "Generate update report"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "HCSS Integration Meeting",
+  "date": "2025-11-07",
+  "source": "sample_data",
+  "transcript": "Sample transcript for HCSS Integration Meeting",
+  "summary": "# HCSS Integration Meeting\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "45 min",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "HCSS"
+  },
+  "processed_at": "2025-11-11T12:28:43.906004"
+}

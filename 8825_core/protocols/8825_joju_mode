@@ -1,0 +1,917 @@
+{
+  "protocol_name": "Joju Mode",
+  "version": "2.0.0",
+  "protocol_type": "Workflow Protocol",
+  "parent_system": "8825 PCMS",
+  "created": "2025-11-05",
+  "updated": "2025-11-05T23:10:00-06:00",
+  "purpose": "Library-first ingestion, mining, deduplication, and publishing workflow for Joju professional library management",
+  "key_change": "Master library is now updated FIRST (single source of truth), dedup happens at library level, Joju input becomes curated view",
+  
+  "overview": {
+    "description": "Joju Mode is a focused workflow state for ingesting professional content from multiple sources, mining achievements, deduplicating information, and publishing to Joju-ready JSON format",
+    "trigger": "User says 'enter joju mode' or 'joju mode' or 'focus on joju'",
+    "exit": "User says 'publish joju' or 'exit joju mode'",
+    "sandbox_location": "/joju_sandbox/",
+    "master_library": "JH_master_library.json",
+    "output_format": "joju_upload_ready.json"
+  },
+  
+  "mode_activation": {
+    "entry_commands": [
+      "enter joju mode",
+      "joju mode",
+      "focus on joju",
+      "start joju ingestion"
+    ],
+    "activation_response": {
+      "message": "🎯 JOJU MODE ACTIVATED\n\nSandbox: /joju_sandbox/\nMaster Library: JH_master_library.json\nStatus: Ready for ingestion\n\nYou can now:\n- Upload files for ingestion\n- Point me to websites/APIs\n- Paste content directly\n- Connect to folders for scanning\n\nSay 'publish joju' when ready to generate upload-ready JSON.",
+      "setup_actions": [
+        "Create /joju_sandbox/ directory if not exists",
+        "Load current JH_master_library.json into memory",
+        "Initialize ingestion log",
+        "Set mode flag to 'joju_active'"
+      ]
+    }
+  },
+  
+  "ingestion_phase": {
+    "title": "Phase 1: Broad Ingestion",
+    "description": "Accept content from any source and prepare for mining",
+    "capabilities": {
+      "file_ingestion": {
+        "supported_formats": [
+          "PDF (resumes, cover letters, portfolios)",
+          "DOCX (resumes, project descriptions)",
+          "JSON (structured data, exports)",
+          "MD (markdown documentation)",
+          "TXT (plain text content)",
+          "HTML (web pages, profiles)",
+          "CSV/XLSX (project lists, metrics)",
+          "Images (screenshots, certificates - OCR enabled)"
+        ],
+        "actions": [
+          "Read file content",
+          "Extract text from PDFs",
+          "Parse structured data from JSON/CSV",
+          "OCR images if needed",
+          "Store in /joju_sandbox/raw/"
+        ]
+      },
+      "web_ingestion": {
+        "sources": [
+          "LinkedIn profiles",
+          "Portfolio websites",
+          "GitHub repositories",
+          "Behance/Dribbble projects",
+          "Company websites",
+          "Blog posts",
+          "API endpoints"
+        ],
+        "actions": [
+          "Fetch URL content",
+          "Parse HTML/JSON responses",
+          "Extract relevant sections",
+          "Download linked resources if needed",
+          "Store in /joju_sandbox/web/"
+        ]
+      },
+      "folder_scanning": {
+        "description": "Recursively scan folders for relevant content",
+        "file_discovery": "Use find_by_name to locate resumes, portfolios, project files",
+        "filtering": "Exclude old versions, duplicates, irrelevant files",
+        "batch_processing": "Process multiple files in sequence",
+        "storage": "/joju_sandbox/scanned/"
+      },
+      "direct_paste": {
+        "description": "Accept copy-pasted content directly from user",
+        "formats": [
+          "Resume text",
+          "Job descriptions",
+          "Project descriptions",
+          "Achievement bullets",
+          "Skills lists",
+          "Testimonials"
+        ],
+        "storage": "/joju_sandbox/pasted/"
+      },
+      "api_connections": {
+        "description": "Connect to APIs for automated data retrieval",
+        "potential_sources": [
+          "LinkedIn API (if available)",
+          "GitHub API (repos, contributions)",
+          "Jira/Asana (project data)",
+          "Google Analytics (website metrics)",
+          "Custom APIs"
+        ],
+        "storage": "/joju_sandbox/api/"
+      }
+    },
+    "ingestion_log": {
+      "location": "/joju_sandbox/ingestion_log.json",
+      "structure": {
+        "timestamp": "ISO 8601 format",
+        "source_type": "file|web|folder|paste|api",
+        "source_location": "path or URL",
+        "content_type": "resume|project|achievement|skill|testimonial",
+        "status": "ingested|parsed|error",
+        "extracted_items_count": "number"
+      }
+    }
+  },
+  
+  "library_first_workflow": {
+    "title": "LIBRARY-FIRST WORKFLOW (v2.0)",
+    "description": "Master library is single source of truth, updated FIRST before Joju input",
+    "philosophy": "Library stores ALL achievements, Joju input is curated view of library",
+    
+    "workflow_steps": {
+      "step_1_extract": {
+        "title": "Extract from Source",
+        "actions": [
+          "Mine source content using 8825_mining protocol",
+          "Create achievements JSON in /joju_sandbox/mined/",
+          "Include: achievement text, metrics, evidence, confidence scores, source reference"
+        ],
+        "output": "/joju_sandbox/mined/{source}_achievements.json"
+      },
+      
+      "step_2_merge_to_library": {
+        "title": "Merge to Master Library (AUTOMATIC)",
+        "description": "Add achievements to master library FIRST, with auto-dedup",
+        "actions": [
+          "Load JH_master_library.json",
+          "For each mined achievement:",
+          "  - Check for semantic duplicates in library (>80% similarity)",
+          "  - If duplicate: mark as enrichment opportunity, merge details",
+          "  - If new: add to library with 'pending_joju' status",
+          "  - Tag with: source, timestamp, confidence_score, joju_status",
+          "Save updated library",
+          "Generate merge report"
+        ],
+        "dedup_logic": {
+          "semantic_matching": "Use embedding similarity or keyword overlap",
+          "threshold": "80% similarity = duplicate",
+          "merge_strategy": "Enrich existing with new metrics/evidence, keep highest confidence",
+          "conflict_resolution": "Flag for user review if contradictory"
+        },
+        "output": {
+          "updated_library": "JH_master_library.json",
+          "merge_report": "/joju_sandbox/merged/{source}_merge_report.json"
+        }
+      },
+      
+      "step_3_present_changes": {
+        "title": "Present Changes to User",
+        "description": "Show streamlined summary of what's new/enriched",
+        "format": {
+          "summary": "X new achievements, Y enrichments, Z duplicates skipped",
+          "new_achievements": "List with confidence scores",
+          "enrichments": "Show before/after for existing achievements",
+          "duplicates_skipped": "List what was merged"
+        },
+        "user_prompt": "Add these to Joju input? [Yes/No/Select specific]"
+      },
+      
+      "step_4_update_joju_input": {
+        "title": "Update Joju Input (FROM LIBRARY)",
+        "description": "Pull approved achievements from library into Joju input",
+        "actions": [
+          "For each approved achievement:",
+          "  - Pull from library (with all enrichments)",
+          "  - Format for Joju readCV structure",
+          "  - Add to appropriate section (workExperience, projects, etc.)",
+          "  - Update library: mark as 'active_in_joju'",
+          "Validate JSON structure",
+          "Save justin_harmon_joju_input.json"
+        ],
+        "library_tracking": "Each achievement in library tracks: in_joju (true/false), joju_section, date_added_to_joju"
+      },
+      
+      "step_5_version": {
+        "title": "Create Versioned Copies",
+        "actions": [
+          "Increment revision number",
+          "Copy both library and Joju input to 8825X76 sandbox/",
+          "Naming: {filename}_{rev#}-{source-type}.json",
+          "Update library session log"
+        ],
+        "output": {
+          "library_copy": "JH_master_library_{rev#}-{source}.json",
+          "joju_copy": "justin_harmon_joju_input_{rev#}-{source}.json"
+        }
+      }
+    },
+    
+    "efficiency_optimizations": {
+      "auto_dedup": "Semantic matching happens automatically, no manual comparison needed",
+      "single_update": "Library updated once, Joju input pulls from it (not separate updates)",
+      "smart_merge": "Enriches existing vs creating duplicates",
+      "minimal_user_friction": "User only approves final Joju changes, library updates are automatic",
+      "rollback_safety": "Versioned copies enable easy rollback if needed"
+    },
+    
+    "library_structure_additions": {
+      "achievement_schema": {
+        "id": "unique_id",
+        "text": "achievement description",
+        "metrics": {},
+        "evidence": {},
+        "confidence_score": "0-100",
+        "source": "where it came from",
+        "source_timestamp": "when mined",
+        "joju_status": "pending_joju | active_in_joju | archived",
+        "joju_section": "workExperience | projects | skills | null",
+        "date_added_to_joju": "timestamp or null",
+        "enrichment_history": ["list of merges/updates"]
+      }
+    }
+  },
+  
+  "mining_phase": {
+    "title": "Phase 2: Intelligent Mining",
+    "description": "Apply 8825 mining protocol to extract structured achievements",
+    "mining_agent_role": "Extract achievements, skills, projects, metrics from ingested content",
+    "mining_protocol_reference": "8825_mining",
+    "extraction_targets": {
+      "achievements": {
+        "pattern": "Action verb + metric + outcome",
+        "examples": [
+          "Increased sales by 26% through user-centered product strategy",
+          "Reduced manual tasks by 55% via automated workflow design",
+          "Led team of 8 designers across 3 product lines"
+        ],
+        "required_fields": ["action", "metric", "outcome", "context"]
+      },
+      "projects": {
+        "required_fields": [
+          "project_name",
+          "role",
+          "description",
+          "technologies",
+          "outcomes",
+          "date_range"
+        ],
+        "optional_fields": ["team_size", "budget", "client", "industry"]
+      },
+      "skills": {
+        "categories": [
+          "technical_skills",
+          "design_tools",
+          "methodologies",
+          "soft_skills",
+          "domain_expertise"
+        ],
+        "proficiency_levels": ["expert", "advanced", "intermediate", "familiar"]
+      },
+      "work_experience": {
+        "required_fields": [
+          "company",
+          "title",
+          "date_range",
+          "location",
+          "key_responsibilities",
+          "achievements"
+        ]
+      },
+      "education_certifications": {
+        "types": ["degree", "certification", "course", "award"],
+        "required_fields": ["name", "institution", "date", "credential_type"]
+      }
+    },
+    "mining_output": {
+      "location": "/joju_sandbox/mined/",
+      "format": "Structured JSON per ingested source",
+      "naming": "mined_[source_name]_[timestamp].json"
+    }
+  },
+  
+  "deduplication_phase": {
+    "title": "Phase 3: Smart Deduplication & Enrichment",
+    "description": "Compare mined content with master library, dedupe, merge, and enrich",
+    "dedup_agent_role": "Identify duplicates, merge information, enrich existing entries",
+    "enforcement": "MANDATORY - Must complete before updating library or publishing",
+    "user_review_required": true,
+    "strategies": {
+      "exact_match": {
+        "description": "Identical text or very high similarity (>95%)",
+        "action": "Skip or flag for review"
+      },
+      "semantic_match": {
+        "description": "Same achievement described differently",
+        "detection": "Compare action, metric, outcome semantically",
+        "action": "Merge and keep best version or combine details"
+      },
+      "enrichment_opportunity": {
+        "description": "New information adds to existing entry",
+        "examples": [
+          "New metric for existing project",
+          "Additional context for achievement",
+          "Updated date range for role",
+          "New skill proficiency level"
+        ],
+        "action": "Merge new information into existing entry"
+      },
+      "version_reconciliation": {
+        "description": "Multiple resume versions with overlapping content",
+        "action": "Extract unique information from each, consolidate into single source of truth"
+      },
+      "conflict_resolution": {
+        "description": "Contradictory information between sources",
+        "action": "Flag for user review, prefer most recent or most detailed source"
+      }
+    },
+    "dedup_rules": {
+      "achievements": {
+        "match_criteria": ["same_company", "same_timeframe", "similar_metric"],
+        "merge_strategy": "Combine details, keep highest metric, preserve all context"
+      },
+      "projects": {
+        "match_criteria": ["same_project_name", "same_date_range"],
+        "merge_strategy": "Combine descriptions, merge technology lists, preserve all outcomes"
+      },
+      "skills": {
+        "match_criteria": ["same_skill_name"],
+        "merge_strategy": "Keep highest proficiency level, combine contexts"
+      },
+      "work_experience": {
+        "match_criteria": ["same_company", "same_title", "overlapping_dates"],
+        "merge_strategy": "Extend date range if needed, merge achievements, combine responsibilities"
+      }
+    },
+    "dedup_output": {
+      "location": "/joju_sandbox/deduped/",
+      "reports": [
+        "dedup_analysis.json (complete analysis with recommendations)",
+        "dedup_summary.json (stats: duplicates found, merged, enriched)",
+        "conflicts.json (items needing user review)",
+        "enrichment_log.json (what was added to existing entries)"
+      ]
+    },
+    "workflow_checkpoint": {
+      "description": "STOP HERE - Present dedup analysis to user for review",
+      "required_actions": [
+        "Generate dedup_analysis.json with all findings",
+        "Present summary to user with key decisions",
+        "List conflicts and recommendations",
+        "Show proposed changes to existing entries",
+        "Wait for user approval before proceeding"
+      ],
+      "user_options": [
+        "Approve all changes",
+        "Approve with modifications",
+        "Reject specific changes",
+        "Request more information",
+        "Rollback to previous version"
+      ],
+      "do_not_proceed_without": "User explicit approval or modification instructions"
+    }
+  },
+  
+  "library_building_phase": {
+    "title": "Phase 4: Master Library Update",
+    "description": "Integrate deduplicated content into JH_master_library.json",
+    "prerequisite": "Phase 3 deduplication must be complete and user-approved",
+    "integration_strategy": {
+      "preserve_structure": "Maintain existing library structure and organization",
+      "add_new_sections": "Create new categories if needed for new content types",
+      "update_metadata": "Update version, last_modified, content_count",
+      "maintain_provenance": "Track source of each entry for future reference"
+    },
+    "library_sections_updated": [
+      "professional_roles (add new role variants)",
+      "achievements_and_proof_points (add new achievements)",
+      "professional_experience (update work history)",
+      "innovation_projects (add new projects)",
+      "skills_and_competencies (add/update skills)",
+      "education_and_certifications (add credentials)",
+      "work_samples_by_category (link to new samples)",
+      "testimonials (if extracted)"
+    ],
+    "backup_strategy": {
+      "action": "Create timestamped backup before updating",
+      "location": "/joju_sandbox/backups/JH_master_library_[timestamp].json",
+      "retention": "Keep last 10 backups"
+    }
+  },
+  
+  "publishing_phase": {
+    "title": "Phase 5: Joju Upload Generation",
+    "description": "Transform master library into Joju-ready JSON format",
+    "prerequisite": "Phase 4 library update must be complete",
+    "trigger": "User says 'publish joju' or 'generate joju upload'",
+    "joju_format_requirements": {
+      "reference": "justin_harmon_joju_input.json",
+      "structure": {
+        "personal_info": "Basic contact and identity",
+        "professional_summary": "Elevator pitch and value proposition",
+        "work_experience": "Chronological work history with achievements",
+        "projects": "Portfolio projects with outcomes",
+        "skills": "Categorized skill lists",
+        "education": "Degrees and certifications",
+        "awards": "Recognition and achievements",
+        "metadata": "File version, creation date, target audiences"
+      }
+    },
+    "transformation_rules": {
+      "audience_optimization": {
+        "description": "Generate variants for different audiences",
+        "audiences": ["subtle_converts", "evangelists", "hiring_managers"],
+        "customization": "Adjust tone, emphasis, detail level per audience"
+      },
+      "content_selection": {
+        "description": "Select most relevant content for Joju platform",
+        "prioritize": [
+          "Quantified achievements",
+          "Recent projects (last 5 years)",
+          "High-impact work",
+          "Unique innovations"
+        ],
+        "exclude": [
+          "Outdated technologies",
+          "Irrelevant roles",
+          "Redundant information"
+        ]
+      },
+      "formatting": {
+        "dates": "ISO 8601 or YYYY-MM format",
+        "metrics": "Include numbers and percentages",
+        "descriptions": "Concise, action-oriented, proof-focused",
+        "links": "Validate URLs, ensure accessibility"
+      }
+    },
+    "output_files": {
+      "primary": "joju_upload_ready.json",
+      "location": "/joju_sandbox/output/",
+      "variants": [
+        "joju_upload_subtle_converts.json",
+        "joju_upload_evangelists.json",
+        "joju_upload_hiring_managers.json"
+      ],
+      "validation": "Run JSON schema validation before output",
+      "preview": "Generate markdown preview for user review"
+    },
+    "publish_report": {
+      "location": "/joju_sandbox/output/publish_report.md",
+      "contents": [
+        "Summary of changes since last publish",
+        "New achievements added (count)",
+        "Projects updated (count)",
+        "Skills added/updated (count)",
+        "Deduplication stats",
+        "Conflicts resolved",
+        "Items needing review",
+        "File size and validation status"
+      ]
+    }
+  },
+  
+  "mode_exit": {
+    "exit_commands": [
+      "publish joju",
+      "exit joju mode",
+      "joju complete"
+    ],
+    "exit_actions": [
+      "Generate joju_upload_ready.json",
+      "Create publish_report.md",
+      "Archive sandbox contents to /joju_sandbox/archives/[timestamp]/",
+      "Update JH_master_library.json with new version number",
+      "Clear mode flag",
+      "Display summary to user"
+    ],
+    "exit_response": {
+      "message": "✅ JOJU MODE COMPLETE\n\nOutput:\n- joju_upload_ready.json (ready for upload)\n- publish_report.md (review changes)\n- JH_master_library.json (updated)\n\nSandbox archived to: /joju_sandbox/archives/[timestamp]/\n\nYou can now upload joju_upload_ready.json to Joju platform."
+    }
+  },
+  
+  "sandbox_structure": {
+    "description": "Organized folder structure for Joju Mode operations",
+    "directories": {
+      "/joju_sandbox/": "Root sandbox directory",
+      "/joju_sandbox/raw/": "Raw ingested files",
+      "/joju_sandbox/web/": "Web-scraped content",
+      "/joju_sandbox/scanned/": "Folder scan results",
+      "/joju_sandbox/pasted/": "Direct paste content",
+      "/joju_sandbox/api/": "API-retrieved data",
+      "/joju_sandbox/mined/": "Mined structured data",
+      "/joju_sandbox/deduped/": "Deduplicated content",
+      "/joju_sandbox/output/": "Final Joju-ready files",
+      "/joju_sandbox/backups/": "Library backups",
+      "/joju_sandbox/archives/": "Completed session archives",
+      "/joju_sandbox/logs/": "Process logs"
+    }
+  },
+  
+  "agents_and_protocols": {
+    "description": "8825 agents and protocols used in Joju Mode",
+    "mining_agent": {
+      "protocol": "8825_mining",
+      "role": "Extract structured achievements from raw content",
+      "input": "Raw ingested files",
+      "output": "Structured JSON with achievements, projects, skills"
+    },
+    "dedup_agent": {
+      "protocol": "Custom deduplication logic based on 8825 principles",
+      "role": "Identify duplicates, merge information, enrich entries",
+      "input": "Mined structured data + master library",
+      "output": "Deduplicated and enriched data"
+    },
+    "decision_agent": {
+      "protocol": "8825_decision-making",
+      "role": "Resolve conflicts, make merge decisions, prioritize content",
+      "input": "Conflicting information",
+      "output": "Resolution decisions with rationale"
+    },
+    "promptgen_agent": {
+      "protocol": "8825_promptGen 01",
+      "role": "Generate Joju-ready JSON from master library",
+      "input": "Updated master library",
+      "output": "joju_upload_ready.json"
+    }
+  },
+  
+  "future_enhancements": {
+    "browser_widget": {
+      "description": "Browser extension for quick content capture to Joju",
+      "features": [
+        "One-click capture of current page",
+        "Highlight and send selected text",
+        "Screenshot and OCR capability",
+        "Direct API connection to Joju Mode",
+        "Queue items for batch processing"
+      ],
+      "platforms": ["Chrome", "Firefox", "Safari", "Edge"],
+      "implementation": "Future development - Phase 2"
+    },
+    "automated_monitoring": {
+      "description": "Continuously monitor sources for updates",
+      "sources": [
+        "LinkedIn profile changes",
+        "GitHub new repositories",
+        "Portfolio website updates",
+        "New certifications"
+      ],
+      "frequency": "Weekly or on-demand",
+      "notification": "Alert user when new content detected"
+    },
+    "ai_enrichment": {
+      "description": "AI-powered content enhancement",
+      "features": [
+        "Suggest better phrasing for achievements",
+        "Extract metrics from prose",
+        "Generate missing descriptions",
+        "Recommend skills based on projects"
+      ]
+    }
+  },
+  
+  "quality_assurance": {
+    "validation_checks": [
+      "JSON schema validation for all outputs",
+      "Required fields present in all entries",
+      "Date formats consistent",
+      "URLs accessible and valid",
+      "No duplicate entries in final output",
+      "Metrics properly formatted",
+      "Text free of typos and formatting errors"
+    ],
+    "user_review_points": [
+      "Conflicts requiring manual resolution",
+      "Ambiguous merge decisions",
+      "New content categories",
+      "Significant changes to existing entries"
+    ]
+  },
+  
+  "usage_examples": {
+    "example_1_resume_ingestion": {
+      "user_action": "User says 'enter joju mode' and uploads 3 resume PDFs",
+      "system_response": [
+        "Activate Joju Mode",
+        "Ingest 3 PDFs to /joju_sandbox/raw/",
+        "Mine achievements, skills, experience from each",
+        "Deduplicate across all 3 versions",
+        "Merge into master library",
+        "Report: '15 new achievements, 8 skills updated, 2 projects added'"
+      ]
+    },
+    "example_2_linkedin_scrape": {
+      "user_action": "User says 'scan my LinkedIn profile at [URL]'",
+      "system_response": [
+        "Fetch LinkedIn profile HTML",
+        "Extract work experience, skills, endorsements",
+        "Mine achievements from descriptions",
+        "Compare with master library",
+        "Enrich existing entries with LinkedIn data",
+        "Report: '3 achievements enriched, 12 skills confirmed, 5 endorsements added'"
+      ]
+    },
+    "example_3_folder_scan": {
+      "user_action": "User says 'scan /Jh-ARCHV/ for project files'",
+      "system_response": [
+        "Recursively scan folder",
+        "Identify relevant files (PDFs, DOCX, JSON)",
+        "Batch ingest all files",
+        "Mine projects, achievements, work samples",
+        "Deduplicate and merge",
+        "Report: '1 new project (Trustybits), 25 achievements, 8 work samples added'"
+      ]
+    },
+    "example_4_direct_paste": {
+      "user_action": "User pastes job description and says 'add this project'",
+      "system_response": [
+        "Parse pasted text",
+        "Extract project details",
+        "Structure as project entry",
+        "Check for duplicates",
+        "Add to master library",
+        "Report: '1 project added: [Project Name]'"
+      ]
+    }
+  },
+  
+  "auto_approval_mode": {
+    "description": "Optional low-friction mode for experienced users who trust the dedup analysis",
+    "toggle_commands": {
+      "enable": ["auto approve", "skip review", "trust your judgment", "fast mode"],
+      "disable": ["manual review", "show me changes", "careful mode", "review mode"]
+    },
+    "default_state": "disabled",
+    "when_enabled": {
+      "behavior": "AI uses decision matrix to auto-approve low-risk changes",
+      "still_required": [
+        "Generate dedup analysis (always)",
+        "Present summary to user (always)",
+        "Flag high-risk changes for manual review"
+      ],
+      "auto_approve_criteria": {
+        "confidence_threshold": "≥0.8",
+        "risk_level": "LOW",
+        "conflict_count": "0",
+        "decision_matrix": {
+          "formula": "(confidence × 0.4) + (clarity × 0.3) + (reversibility × 0.2) + (impact × 0.1)",
+          "factors": {
+            "confidence": "How certain are we this is correct? (0-1)",
+            "clarity": "How clear is the improvement? (0-1)",
+            "reversibility": "How easy to undo? (0-1)",
+            "impact": "How significant is the change? (0-1, inverted for auto-approve)"
+          },
+          "thresholds": {
+            "auto_approve": "≥0.8",
+            "flag_for_review": "<0.8"
+          }
+        }
+      },
+      "always_flag_for_review": [
+        "Conflicts between sources",
+        "Contradictory information",
+        "Major rewrites (>50% content change)",
+        "Deletion of existing achievements",
+        "Changes to quantified metrics",
+        "New work experience entries",
+        "Date range modifications"
+      ]
+    },
+    "when_disabled": {
+      "behavior": "All changes require explicit user approval (default)",
+      "checkpoint": "Stop and wait for user decision on every dedup analysis"
+    },
+    "user_notification": {
+      "on_enable": "⚡ AUTO-APPROVE MODE ENABLED\n\nI'll use decision matrix to approve low-risk changes automatically.\nHigh-risk changes will still be flagged for your review.\n\nSay 'manual review' to disable.",
+      "on_disable": "🛑 MANUAL REVIEW MODE\n\nAll changes will be presented for your approval.\n\nSay 'auto approve' to enable fast mode.",
+      "during_auto_approve": "✅ Auto-approved (confidence: {score}): {summary}\n❓ Flagged for review: {items_needing_review}"
+    }
+  },
+  
+  "workflow_enforcement": {
+    "description": "Strict phase ordering to ensure quality and user control",
+    "phase_sequence": [
+      "Phase 1: Ingestion (flexible, can repeat)",
+      "Phase 2: Mining (after ingestion complete)",
+      "Phase 3: Deduplication (MANDATORY - must complete before Phase 4)",
+      "Phase 3.5: User Review & Approval (CHECKPOINT - must get user OK)",
+      "Phase 4: Library Update (only after user approval)",
+      "Phase 5: Publishing (only after library updated)"
+    ],
+    "checkpoints": {
+      "after_mining": {
+        "action": "Generate dedup analysis",
+        "output": "/joju_sandbox/deduped/dedup_analysis.json",
+        "next_step": "Present to user for review"
+      },
+      "after_dedup_review": {
+        "action": "Wait for user decision (unless auto-approve mode enabled)",
+        "options": ["approve", "modify", "reject", "rollback"],
+        "auto_approve_mode": "If enabled, use decision matrix to auto-approve low-risk changes",
+        "next_step": "Only proceed to Phase 4 if approved (manual or auto)"
+      },
+      "after_library_update": {
+        "action": "Create versioned copies",
+        "naming": "{filename}_{rev#}-{source-type}.json",
+        "location": "8825X76 sandbox/",
+        "next_step": "Proceed to publishing"
+      }
+    },
+    "error_prevention": {
+      "do_not_skip_dedup": "Always run deduplication analysis, even if mined content looks new",
+      "do_not_auto_approve_high_risk": "Never auto-approve high-risk changes, even in auto-approve mode",
+      "do_not_skip_analysis_presentation": "Always present dedup analysis summary, even in auto-approve mode",
+      "do_not_skip_versioning": "Always create versioned copies after each ingestion",
+      "do_not_overwrite_without_backup": "Always backup before modifying library or joju_input"
+    }
+  },
+  
+  "best_practices": {
+    "for_users": [
+      "Enter Joju Mode when you have multiple sources to process",
+      "Batch similar content types together (all resumes, then all projects)",
+      "Use 'auto approve' for faster processing when you trust the analysis",
+      "Use 'manual review' for careful review of all changes (default)",
+      "Review conflict reports before publishing",
+      "Keep master library backed up",
+      "Publish regularly to keep Joju profile updated"
+    ],
+    "for_ai": [
+      "Always create sandbox before starting",
+      "Log all ingestion and mining actions",
+      "ALWAYS run deduplication analysis after mining - no exceptions",
+      "ALWAYS present dedup analysis summary to user (even in auto-approve mode)",
+      "In manual review mode: Wait for explicit approval before updating",
+      "In auto-approve mode: Use decision matrix, but flag high-risk changes",
+      "Be conservative with deduplication - when in doubt, flag for review",
+      "Preserve original content in archives",
+      "Provide clear reports at each phase",
+      "Ask for clarification on ambiguous merges",
+      "Create versioned copies after each ingestion with rev number and source type"
+    ]
+  },
+  
+  "integration_with_8825": {
+    "decision_making": "Use 8825_decision-making for conflict resolution and merge decisions",
+    "learning": "Learn user preferences for deduplication and content selection over time",
+    "mining": "Apply 8825_mining protocol for achievement extraction",
+    "promptgen": "Use 8825_promptGen for final Joju JSON generation",
+    "memory": "Store Joju Mode preferences and patterns in user profile"
+  },
+  
+  "success_metrics": {
+    "ingestion_efficiency": "Time from upload to mined structured data",
+    "deduplication_accuracy": "Percentage of correct duplicate identifications",
+    "enrichment_value": "New information added to existing entries",
+    "user_satisfaction": "Conflicts requiring manual review (lower is better)",
+    "output_quality": "Joju upload validation pass rate"
+  },
+  
+  "exit_protocol": {
+    "title": "Exit Joju Mode - Comprehensive Checklist",
+    "description": "Ensures all updates are saved, versioned, and validated before exiting",
+    "trigger": "User says 'exit joju mode' or 'publish joju' or 'done with joju'",
+    
+    "pre_exit_checklist": {
+      "step_1_verify_library": {
+        "check": "Is master library up to date?",
+        "actions": [
+          "Check if any mined achievements are not yet in library",
+          "If found: Run library merge for pending achievements",
+          "Validate library JSON structure",
+          "Confirm library version is incremented"
+        ],
+        "validation": "Library contains all ingested content with proper tracking"
+      },
+      
+      "step_2_verify_joju_input": {
+        "check": "Is Joju input synced with approved library content?",
+        "actions": [
+          "Check if any approved achievements are not in Joju input",
+          "If found: Pull from library and update Joju input",
+          "Validate Joju input JSON structure",
+          "Confirm readCV format compliance"
+        ],
+        "validation": "Joju input reflects all user-approved library content"
+      },
+      
+      "step_3_verify_versioning": {
+        "check": "Are versioned copies created for latest changes?",
+        "actions": [
+          "Check latest revision number in library",
+          "Verify versioned copies exist in 8825X76 sandbox/",
+          "If missing: Create versioned copies now",
+          "Naming: {filename}_{rev#}-{source}.json"
+        ],
+        "validation": "Both library and Joju input have versioned copies with current rev number"
+      },
+      
+      "step_4_verify_session_log": {
+        "check": "Is session log updated in library?",
+        "actions": [
+          "Check library.meta.joju_mode_sessions array",
+          "Verify all ingestion sessions are logged",
+          "Confirm timestamps, sources, achievement counts",
+          "Update ingestion_summary with totals"
+        ],
+        "validation": "Library tracks all sessions with complete metadata"
+      },
+      
+      "step_5_verify_files": {
+        "check": "Are all working files saved?",
+        "actions": [
+          "Save JH_master_library.json",
+          "Save justin_harmon_joju_input.json",
+          "Verify all mined files in /joju_sandbox/mined/",
+          "Verify all dedup analyses in /joju_sandbox/deduped/",
+          "Verify all merge reports in /joju_sandbox/merged/"
+        ],
+        "validation": "All files saved, no unsaved changes"
+      },
+      
+      "step_6_validate_json": {
+        "check": "Are all JSON files valid?",
+        "actions": [
+          "Validate JH_master_library.json structure",
+          "Validate justin_harmon_joju_input.json structure",
+          "Check for syntax errors",
+          "Verify required fields present"
+        ],
+        "validation": "All JSON files parse successfully"
+      }
+    },
+    
+    "auto_fix_actions": {
+      "missing_library_updates": {
+        "detect": "Mined achievements not in library",
+        "action": "Run library merge automatically",
+        "notify": "⚠️ Found unmined achievements, merging to library now..."
+      },
+      "missing_joju_updates": {
+        "detect": "Approved library content not in Joju input",
+        "action": "Pull from library and update Joju input",
+        "notify": "⚠️ Found approved content not in Joju input, updating now..."
+      },
+      "missing_versions": {
+        "detect": "No versioned copy for current revision",
+        "action": "Create versioned copies",
+        "notify": "⚠️ Creating missing versioned copies..."
+      },
+      "incomplete_session_log": {
+        "detect": "Session log missing entries",
+        "action": "Reconstruct from mined files and update library",
+        "notify": "⚠️ Updating session log with missing entries..."
+      }
+    },
+    
+    "exit_summary_report": {
+      "format": {
+        "header": "📊 Joju Mode Session Complete",
+        "sections": {
+          "session_stats": {
+            "total_sessions": "Number of ingestion sessions",
+            "total_achievements": "Total in library",
+            "new_this_session": "Added this session",
+            "enrichments": "Existing achievements enriched",
+            "current_revision": "Rev number"
+          },
+          "files_updated": {
+            "library": "JH_master_library.json (v{version})",
+            "joju_input": "justin_harmon_joju_input.json ({size}K)",
+            "versioned_copies": "Rev {rev#} in 8825X76 sandbox/"
+          },
+          "validation_status": {
+            "library_valid": "✅ or ❌",
+            "joju_valid": "✅ or ❌",
+            "versions_created": "✅ or ❌",
+            "session_log_updated": "✅ or ❌"
+          },
+          "next_steps": {
+            "ready_for_publish": "Profile ready for Joju platform",
+            "pending_reviews": "X items flagged for review",
+            "recommendations": "Suggested next actions"
+          }
+        }
+      },
+      "example_output": "See exit_summary_report format for structure"
+    },
+    
+    "error_handling": {
+      "validation_failure": {
+        "action": "Do NOT exit, show error details",
+        "prompt": "Fix errors before exiting? [Yes/Show details/Force exit]"
+      },
+      "unsaved_changes": {
+        "action": "Do NOT exit, save all files",
+        "prompt": "Save changes before exiting? [Yes/Discard/Cancel]"
+      },
+      "incomplete_ingestion": {
+        "action": "Warn user, offer to complete",
+        "prompt": "Incomplete ingestion detected. Complete before exiting? [Yes/Skip/Cancel]"
+      }
+    },
+    
+    "force_exit": {
+      "command": "exit joju mode --force",
+      "description": "Exit without running checklist (not recommended)",
+      "warning": "⚠️ Force exit will skip validation and may leave files in inconsistent state",
+      "use_case": "Only use if checklist is failing and you need to exit"
+    }
+  }
+}

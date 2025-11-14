@@ -1,0 +1,16 @@
+{
+  "title": "TGIF Operations Review",
+  "date": "2025-11-06",
+  "source": "sample_data",
+  "transcript": "Sample transcript for TGIF Operations Review",
+  "summary": "# TGIF Operations Review\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "1 hour 30 min",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "TGIF"
+  },
+  "processed_at": "2025-11-11T12:28:43.905681"
+}

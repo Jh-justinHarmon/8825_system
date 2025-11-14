@@ -1,0 +1,51 @@
+{
+  "generated_at": "2025-11-13T11:25:18.680021",
+  "total_pocs": 2,
+  "summary": {
+    "ready": 0,
+    "almost": 1,
+    "not_ready": 1
+  },
+  "pocs": [
+    {
+      "name": "weekend_soccer_advisor",
+      "category": "experimental",
+      "path": "sandbox/experimental/weekend_soccer_advisor",
+      "days_since_modified": null,
+      "python_files": 1,
+      "has_readme": true,
+      "has_requirements": false,
+      "has_tests": false,
+      "in_production": true,
+      "reference_count": 5,
+      "origin": "users/justin_harmon/jh_assistant/poc",
+      "score": 55,
+      "status": "\ud83d\udfe1 ALMOST",
+      "recommendation": "GRADUATE to sandbox/graduated/",
+      "reasons": [
+        "\u2705 Documented (has README)",
+        "\u2705 In production (5 references)"
+      ]
+    },
+    {
+      "name": "infrastructure_pocs",
+      "category": "experimental",
+      "path": "sandbox/experimental/infrastructure_pocs",
+      "days_since_modified": null,
+      "python_files": 1,
+      "has_readme": false,
+      "has_requirements": false,
+      "has_tests": false,
+      "in_production": false,
+      "reference_count": 0,
+      "origin": "8825_core/poc",
+      "score": 0,
+      "status": "\ud83d\udd34 NOT READY",
+      "recommendation": "KEEP in experimental/ or DELETE if abandoned",
+      "reasons": [
+        "\u274c Missing README",
+        "\u274c Not used in production"
+      ]
+    }
+  ]
+}

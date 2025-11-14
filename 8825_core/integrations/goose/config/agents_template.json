@@ -1,0 +1,196 @@
+{
+  "_comment": "Goose Focus - Agent Configuration Template",
+  "_version": "1.0.0",
+  "_created": "2025-11-06",
+  "_status": "Template - Copy and customize for your agents",
+  
+  "agents": {
+    "ExampleAgent": {
+      "enabled": false,
+      "description": "Example agent template",
+      "purpose": "Specific task this agent performs",
+      "priority": 1,
+      "inputs": {
+        "type": "json|text|csv|any",
+        "source": "raw/|processed/",
+        "required_fields": []
+      },
+      "outputs": {
+        "type": "json|text|csv",
+        "destination": "processed/|output/",
+        "naming": "agent_output_{timestamp}.json"
+      },
+      "processing": {
+        "method": "transform|validate|analyze|generate",
+        "rules": {},
+        "thresholds": {}
+      },
+      "settings": {
+        "timeout": 60,
+        "retry_count": 3,
+        "parallel": false,
+        "cache_results": false
+      },
+      "error_handling": {
+        "on_error": "stop|retry|skip",
+        "log_errors": true,
+        "notify": false
+      }
+    },
+    
+    "ValidatorAgent": {
+      "enabled": false,
+      "description": "Validates input data against schema",
+      "purpose": "Ensure data quality and completeness",
+      "priority": 1,
+      "inputs": {
+        "type": "json",
+        "source": "raw/",
+        "required_fields": ["field1", "field2"]
+      },
+      "outputs": {
+        "type": "json",
+        "destination": "processed/",
+        "naming": "validated_{filename}"
+      },
+      "processing": {
+        "method": "validate",
+        "rules": {
+          "schema": "config/schema.json",
+          "strict": true
+        },
+        "thresholds": {
+          "min_completeness": 0.9,
+          "max_errors": 5
+        }
+      },
+      "settings": {
+        "timeout": 30,
+        "retry_count": 1,
+        "parallel": true
+      },
+      "error_handling": {
+        "on_error": "stop",
+        "log_errors": true,
+        "notify": true
+      }
+    },
+    
+    "TransformAgent": {
+      "enabled": false,
+      "description": "Transforms data from one format to another",
+      "purpose": "Data transformation and enrichment",
+      "priority": 2,
+      "inputs": {
+        "type": "any",
+        "source": "processed/",
+        "required_fields": []
+      },
+      "outputs": {
+        "type": "json",
+        "destination": "processed/",
+        "naming": "transformed_{filename}"
+      },
+      "processing": {
+        "method": "transform",
+        "rules": {
+          "transformations": [],
+          "enrichments": []
+        }
+      },
+      "settings": {
+        "timeout": 120,
+        "retry_count": 2,
+        "parallel": true,
+        "cache_results": true
+      },
+      "error_handling": {
+        "on_error": "retry",
+        "log_errors": true,
+        "notify": false
+      }
+    },
+    
+    "ReportAgent": {
+      "enabled": false,
+      "description": "Generates reports from processed data",
+      "purpose": "Create final deliverables and summaries",
+      "priority": 3,
+      "inputs": {
+        "type": "json",
+        "source": "processed/",
+        "required_fields": []
+      },
+      "outputs": {
+        "type": "json",
+        "destination": "output/",
+        "naming": "report_{timestamp}.json"
+      },
+      "processing": {
+        "method": "generate",
+        "rules": {
+          "template": "config/report_template.json",
+          "format": "detailed|summary"
+        }
+      },
+      "settings": {
+        "timeout": 60,
+        "retry_count": 2,
+        "parallel": false
+      },
+      "error_handling": {
+        "on_error": "retry",
+        "log_errors": true,
+        "notify": true
+      }
+    }
+  },
+  
+  "agent_defaults": {
+    "timeout": 60,
+    "retry_count": 3,
+    "parallel": false,
+    "cache_results": false,
+    "log_activity": true
+  },
+  
+  "execution_order": {
+    "description": "Agents execute in priority order (1 = highest)",
+    "order": [
+      "ValidatorAgent (priority 1)",
+      "TransformAgent (priority 2)",
+      "ReportAgent (priority 3)"
+    ]
+  },
+  
+  "instructions": {
+    "how_to_use": [
+      "1. Copy this template to agents.json",
+      "2. Define your agents",
+      "3. Set priorities (1 = highest)",
+      "4. Configure inputs/outputs",
+      "5. Define processing rules",
+      "6. Set enabled: true",
+      "7. Test individually before workflow integration"
+    ],
+    "agent_structure": {
+      "enabled": "true|false - Whether agent is active",
+      "description": "Human-readable description",
+      "purpose": "What problem this agent solves",
+      "priority": "1-10 (1 = highest, executes first)",
+      "inputs": "Where and what format agent reads",
+      "outputs": "Where and what format agent writes",
+      "processing": "How agent processes data",
+      "settings": "Execution parameters",
+      "error_handling": "How to handle failures"
+    },
+    "processing_methods": {
+      "transform": "Change data format or structure",
+      "validate": "Check data against rules/schema",
+      "analyze": "Extract insights or patterns",
+      "generate": "Create new content from data",
+      "filter": "Select subset of data",
+      "enrich": "Add additional information"
+    }
+  }
+}

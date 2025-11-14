@@ -1,0 +1,10 @@
+{
+  "lane": "B",
+  "priority": 1.0,
+  "scope": "focus-wide",
+  "change_pressure": "high",
+  "target_focus": "jh",
+  "source": "chatgpt",
+  "freshness": 1.0,
+  "processed_at": "2025-11-08T16:02:14.347294"
+}

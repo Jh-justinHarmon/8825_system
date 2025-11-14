@@ -1,0 +1,361 @@
+{
+  "profile_owner": "Justin Harmon",
+  "config_version": "1.0",
+  "created": "2025-11-07",
+  "purpose": "Primary Jh profile configuration for data extraction and presentation",
+  "master_library": "libraries/justin_harmon_master_library.json",
+  "master_library_full_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/users/justin_harmon/joju/libraries/justin_harmon_master_library.json",
+  
+  "data_extraction": {
+    "library_sections": {
+      "core_data": [
+        "professional_experience",
+        "innovation_projects",
+        "achievements_and_proof_points",
+        "work_samples_by_category"
+      ],
+      "contextual_data": [
+        "8825_pcms_project",
+        "trustybits_project",
+        "archive_metadata"
+      ],
+      "supplementary": [
+        "property_projects",
+        "detailed_resume_content"
+      ]
+    },
+    "excluded_sources": [
+      "Personal social media",
+      "Family-related content",
+      "Property projects (unless specifically requested)"
+    ]
+  },
+  
+  "interpretation_rules": {
+    "focus_areas": {
+      "primary": [
+        "Product strategy",
+        "Design leadership",
+        "System architecture",
+        "Team collaboration",
+        "Process optimization"
+      ],
+      "secondary": [
+        "Technical implementation",
+        "Client relationships",
+        "Project management"
+      ]
+    },
+    
+    "emphasis": {
+      "highlight": [
+        "Strategic thinking",
+        "Problem-solving approach",
+        "Cross-functional collaboration",
+        "Innovation and experimentation",
+        "Building systems and tools"
+      ],
+      "downplay": [
+        "Routine tasks",
+        "Administrative work"
+      ]
+    },
+    
+    "context_interpretation": {
+      "8825_projects": {
+        "weight": "high",
+        "description": "Personal innovation lab and system development",
+        "showcase": ["Joju", "Jh COMMs", "Download Wedge", "Competitive Analysis"]
+      },
+      "HCSS_work": {
+        "weight": "high",
+        "description": "Consulting and implementation work",
+        "showcase": ["TGIF project", "Process automation", "Meeting workflows"]
+      },
+      "76_projects": {
+        "weight": "high",
+        "description": "Product and design collaboration",
+        "showcase": ["Forge", "TrustyBit", "Joju integration"]
+      }
+    }
+  },
+  
+  "profile_title": {
+    "primary": "Industrial Designer / UX Strategist / Design Leader",
+    "confidence": "93%",
+    "narrative_arc": "Craft → Strategy → Leadership",
+    "story": "From mastering physical product design to leading strategic innovation across digital and physical domains"
+  },
+
+  "tone_and_voice": {
+    "overall_tone": "confident_craftsman",
+    "characteristics": [
+      "Grounded in craft, elevated by strategy",
+      "Action-oriented - builder and maker",
+      "Leadership through doing, not just directing",
+      "Innovation through deep expertise",
+      "Bridges physical and digital worlds"
+    ],
+    
+    "writing_style": {
+      "sentence_structure": "Clear and purposeful - every word earns its place",
+      "technical_depth": "Deep craft knowledge translated to strategic insight",
+      "personality": "Confident without arrogance - work speaks for itself",
+      "humor": "Rare - let the work be impressive",
+      "formality": "Professional with substance - no fluff"
+    },
+    
+    "narrative_voice": {
+      "opening": "Lead with craft mastery and tangible outcomes",
+      "body": "Show progression from making to leading through concrete examples",
+      "emphasis": "What was built, what changed, who it helped",
+      "proof": "Revenue, market position, industry firsts, teams led"
+    },
+    
+    "avoid": [
+      "Corporate jargon without substance",
+      "Buzzwords that don't reflect actual work",
+      "Claims without evidence",
+      "Generic 'innovation' without specifics",
+      "Separating thinking from doing"
+    ],
+    
+    "preferred_phrases": [
+      "Founded and led...",
+      "Pioneered [specific technology/approach] in [industry]...",
+      "Built [tangible outcome] that generated [measurable result]...",
+      "Led teams to deliver...",
+      "Designed systems that enabled...",
+      "Transformed [process/product] through..."
+    ]
+  },
+  
+  "profile_structure": {
+    "summary": {
+      "length": "2-3 paragraphs",
+      "focus": "Industrial designer who evolved into strategic design leader - craft mastery enables innovation leadership",
+      "opening_line": "Lead with craft foundation and measurable impact",
+      "key_themes": [
+        "20+ years mastering physical product design (eyewear, watches, sports equipment)",
+        "Pioneered industry-first innovations (VSP Innovation Lab, 3D prototyping)",
+        "Strategic evolution into UX and digital systems",
+        "Leadership through building - founded departments, led teams, shipped products",
+        "Recent: Applying craft + strategy to AI-powered tools"
+      ],
+      "narrative_structure": "Craft mastery → Strategic thinking → Leadership impact"
+    },
+    
+    "work_experience": {
+      "section_priority": "PRIMARY - Lead with this",
+      "format": "Achievement-driven with measurable outcomes",
+      "emphasis": "What you built, what changed, measurable impact",
+      "structure": "Lead with outcome → Show craft/strategy → Prove with metrics",
+      "framing": {
+        "early_career": "Craft mastery - building products, pioneering processes",
+        "mid_career": "Strategic application - leading teams, driving revenue",
+        "recent": "Leadership + innovation - founding systems, enabling others"
+      },
+      "highlight_progression": [
+        "Marchon (2004-2012): Founded VSP Innovation Lab, pioneered 3D prototyping, $10M Nike Vision",
+        "Fossil (2012-2015): Senior designer to strategic contributor, 23.7% sales increase",
+        "COSTA (2016-2018): Design Lead, user research to product strategy",
+        "PRTCL (2018-2024): Managing Partner, led agency, luxury collaborations",
+        "Hammer (2015-Now): Product Manager, UX strategy, automation systems",
+        "8825/Trustybits (2024-Now): Innovation leader, AI-powered tools"
+      ]
+    },
+    
+    "projects": {
+      "section_priority": "SECONDARY - Support work experience narrative",
+      "selection_criteria": "Projects that show craft → strategy → leadership evolution",
+      "presentation": "Concrete outcomes with industry impact",
+      "featured_projects": {
+        "craft_foundation": [
+          "VSP Innovation Lab - Pioneered 3D prototyping in eyewear",
+          "Nike Vision Live Free - $10M revenue, #1 global product",
+          "Amare Stoudemire Goggles - User-centered industrial design"
+        ],
+        "strategic_evolution": [
+          "COSTA Performance Eyewear - User research to product strategy",
+          "Shinola Collaborations - Luxury brand strategy across categories"
+        ],
+        "leadership_innovation": [
+          "8825 PCMS - LLM-agnostic system architecture",
+          "Trustybits - AI-powered hiring intelligence",
+          "Joju - Professional profile platform"
+        ]
+      },
+      "framing": "Each project reinforces: maker → strategist → leader"
+    },
+    
+    "skills": {
+      "section_priority": "TERTIARY - Proof of breadth",
+      "categorization": [
+        "Industrial Design Craft (20+ years foundation)",
+        "UX Strategy & Research (evolution to user-centered)",
+        "Design Leadership (teams, departments, agencies)",
+        "Technical & Systems (enabling innovation)",
+        "Materials & Manufacturing (deep expertise)"
+      ],
+      "presentation": "Demonstrated through work experience and projects, not abstract claims"
+    }
+  },
+  
+  "presentation_preferences": {
+    "format_priority": [
+      "Markdown (primary)",
+      "JSON (data)",
+      "HTML (web)",
+      "DOCX (export)"
+    ],
+    
+    "sections_order": [
+      "Summary",
+      "Work Experience",
+      "Key Projects",
+      "Skills & Expertise",
+      "Education & Continuous Learning",
+      "Awards & Recognition"
+    ],
+    
+    "section_narratives": {
+      "summary": "Industrial designer evolved into strategic design leader through 20+ years of craft mastery, innovation, and team leadership",
+      "work_experience": "Progression from craft mastery (Marchon/VSP Lab) → strategic impact (Fossil/COSTA) → leadership (PRTCL/Hammer) → innovation (8825/Trustybits)",
+      "key_projects": "Showcase evolution: Physical products → User-centered design → Digital systems → AI-powered tools",
+      "skills": "Deep craft foundation enables strategic thinking and leadership effectiveness",
+      "education": "Continuous learning from industrial design roots to AI applications",
+      "awards": "Industry recognition of innovation and impact"
+    },
+    
+    "visual_style": {
+      "headers": "Clear hierarchy",
+      "bullets": "Concise, action-oriented",
+      "emphasis": "Bold for key achievements, italics for context",
+      "links": "Inline, descriptive text"
+    }
+  },
+  
+  "privacy_and_boundaries": {
+    "public_profile": {
+      "include": [
+        "Professional experience",
+        "Public projects (8825, GitHub)",
+        "Professional skills",
+        "Public collaborations"
+      ],
+      "exclude": [
+        "Personal family details",
+        "Home address",
+        "Personal phone",
+        "Private client details"
+      ]
+    },
+    
+    "professional_network": {
+      "include": [
+        "Work relationships",
+        "Project collaborations",
+        "Professional contacts"
+      ],
+      "context": "Always professional, relationship-aware"
+    }
+  },
+  
+  "continuous_learning": {
+    "update_frequency": "As projects evolve",
+    "learning_sources": [
+      "Project outcomes",
+      "Communication patterns (Jh COMMs)",
+      "Collaboration feedback",
+      "New skills acquired"
+    ],
+    "adaptation": "Profile evolves with experience and focus shifts"
+  },
+  
+  "integration_with_8825": {
+    "jh_comms": {
+      "use": "Extract communication style and relationship patterns",
+      "apply": "Inform tone and voice in profile"
+    },
+    "project_history": {
+      "use": "Document innovations and system building",
+      "apply": "Showcase problem-solving approach"
+    },
+    "meeting_records": {
+      "use": "Identify collaboration patterns and leadership",
+      "apply": "Demonstrate team effectiveness"
+    }
+  },
+  
+  "narrative_framework": {
+    "core_story": "Industrial Designer / UX Strategist / Design Leader",
+    "story_arc": {
+      "act_1": {
+        "title": "Craft Mastery (2004-2015)",
+        "narrative": "Built foundation through deep industrial design expertise",
+        "key_moments": [
+          "Founded VSP Innovation Lab - pioneered 3D prototyping in eyewear industry",
+          "Nike Vision Live Free - $10M revenue, #1 global product",
+          "Mastered materials, manufacturing, and product development across eyewear, watches, sports equipment"
+        ],
+        "theme": "Excellence through craft - making things that matter"
+      },
+      "act_2": {
+        "title": "Strategic Evolution (2015-2020)",
+        "narrative": "Applied craft mastery to strategic thinking and user-centered design",
+        "key_moments": [
+          "COSTA Design Lead - translated user research into product strategy",
+          "PRTCL Managing Partner - led design agency, luxury collaborations",
+          "Hammer Product Manager - UX strategy, automation, measurable outcomes"
+        ],
+        "theme": "From making to leading - craft enables strategy"
+      },
+      "act_3": {
+        "title": "Innovation Leadership (2020-Present)",
+        "narrative": "Leading innovation across physical and digital domains",
+        "key_moments": [
+          "8825 PCMS - LLM-agnostic system architecture",
+          "Trustybits - AI-powered hiring intelligence",
+          "Joju - Professional profile platform",
+          "Applying 20+ years of craft + strategy to AI-powered tools"
+        ],
+        "theme": "Leadership through building - enabling others to innovate"
+      }
+    },
+    "reinforcing_themes": {
+      "maker_identity": "Always building, never just theorizing",
+      "craft_to_strategy": "Deep expertise enables strategic insight",
+      "leadership_through_doing": "Led by example, founded departments, shipped products",
+      "physical_to_digital": "Bridging tangible craft with digital systems",
+      "measurable_impact": "Revenue, market position, industry firsts"
+    }
+  },
+
+  "output_variations": {
+    "executive_summary": {
+      "length": "1 paragraph",
+      "focus": "Strategic impact and leadership",
+      "narrative": "Industrial designer who evolved into strategic design leader - 20+ years of measurable impact"
+    },
+    "technical_profile": {
+      "length": "Full detail",
+      "focus": "Systems, tools, technical approach",
+      "narrative": "Deep craft mastery enables technical innovation - from 3D prototyping to AI systems"
+    },
+    "collaboration_profile": {
+      "length": "Medium",
+      "focus": "Team work, cross-functional projects",
+      "narrative": "Leadership through building - founded departments, led teams, enabled others"
+    },
+    "innovation_profile": {
+      "length": "Medium",
+      "focus": "Experimental projects, new approaches",
+      "narrative": "Pioneer in physical products, now applying craft + strategy to AI-powered tools"
+    },
+    "thought_leadership": {
+      "length": "Medium-Full",
+      "focus": "Unique perspective from craft → strategy → leadership journey",
+      "narrative": "How deep craft mastery enables innovation leadership across physical and digital domains"
+    }
+  }
+}

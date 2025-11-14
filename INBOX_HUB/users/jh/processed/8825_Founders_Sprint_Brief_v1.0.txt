@@ -1,0 +1,68 @@
+
+🧭 8825 FOUNDERS SPRINT BRIEF v1.0
+Date Generated: 2025-11-09 04:29:48
+Goal: Align Founding Team for 3-Month Launch Plan (MVP Lock by mid-Dec 2025, Launch early 2026)
+
+--------------------------------------------------
+🎯 PURPOSE
+Re-ignite alignment across key lenses—Customer, Business, Technology, Story, and Operations—to finalize the MVP roadmap and ensure all critical functions are synchronized ahead of launch.
+
+--------------------------------------------------
+📅 FORMAT
+Condensed “Click” sprint (1 day or two half-days)
+Flow: Align → Diverge → Converge
+
+1. ALIGN
+   - Clarify 3-month MVP objectives
+   - Confirm success metrics and must-ship features
+   - Map blockers (people, tech, story)
+
+2. DIVERGE
+   - Explore solutions by lens
+   - Rapid sketch/whiteboard of high-impact ideas
+   - Rank by impact × feasibility × confidence
+
+3. CONVERGE
+   - Decide MVP cutline (what’s in/out)
+   - Assign owners per lens (90-day plan)
+   - Export commitments to 8825 inbox → Windsurf for tracking
+
+--------------------------------------------------
+👥 PARTICIPANTS & LENSES
+
+| Role | Name | Primary Lens | Secondary Lens |
+|------|------|---------------|----------------|
+| Mentor / Facilitator | Matthew Galley (MG) | Customer | Story |
+| Investor / Strategic Advisor | Steve Ball (SB) | Business | Story |
+| Program & Tech Ops | Mike Caluori | Technology | Operations |
+| Communications & People | Chrissy Sheehan Caluori | Story | Operations |
+| Founder / Decider | Justin Harmon (JH) | Product / Customer | Strategic Design |
+| Process & Risk | Becky Hammer (BH) | Business | Operations |
+
+Lens Coverage: ✅ Full (Customer, Business, Tech, Story, Ops)
+
+--------------------------------------------------
+🗓 TIMELINE (To Hit Launch Goal)
+
+| Month | Focus | Deliverables |
+|--------|--------|--------------|
+| Nov 2025 | Founders Sprint + PoC wrap | MVP cutline + owner map |
+| Dec 2025 | MVP Sprints 3–5 + QA | MVP locked (~Dec 12–20) |
+| Jan 2026 | Pre-launch | Onboarding + GTM prep |
+
+--------------------------------------------------
+⚙️ INTEGRATION & EXECUTION
+
+- Export Command: “send to 8825 inbox”
+- Processing Folder: ~/Downloads/8825_inbox/pending
+- Integration Target: focuses/joju/projects/
+- Execution: “fetch inbox” in Windsurf → populates tasks automatically
+
+--------------------------------------------------
+✅ NEXT STEPS
+1. Schedule sprint (mid-Nov recommended)
+2. Prepare 1-page MVP summary & key sprint questions
+3. Load Windsurf capture template (auto-logging enabled)
+4. Confirm facilitator (MG) and circulate this brief
+
+--------------------------------------------------

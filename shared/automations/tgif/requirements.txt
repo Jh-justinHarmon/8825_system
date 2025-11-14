@@ -1,0 +1,29 @@
+# TGIF Meeting Automation Pipeline - Dependencies
+
+# Gmail API
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+google-api-python-client==2.108.0
+
+# Otter.ai Unofficial API
+# Install from GitHub: pip install git+https://github.com/gmchad/otterai-api.git
+
+# Scheduling
+schedule==1.2.0
+
+# Web Framework (for MCP server)
+flask==3.0.0
+flask-cors==4.0.0
+
+# Data Processing
+python-dateutil==2.8.2
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Logging
+colorlog==6.8.0
+
+# JSON Schema Validation
+jsonschema==4.20.0

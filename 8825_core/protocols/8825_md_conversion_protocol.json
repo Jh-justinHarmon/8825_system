@@ -1,0 +1,289 @@
+{
+  "protocol_name": "MD Conversion Protocol",
+  "version": "1.0.0",
+  "protocol_type": "Document Processing Protocol",
+  "parent_system": "8825 PCMS",
+  "created": "2025-11-07",
+  "purpose": "Convert Markdown files to various formats using agentic workflow with Pandoc",
+  
+  "overview": {
+    "description": "Event-driven agentic workflow for converting MD files to PDF, DOCX, HTML, and other formats with intelligent template selection and quality validation",
+    "trigger": "User requests document conversion",
+    "core_engine": "Pandoc",
+    "orchestration": "Python agent with state management"
+  },
+  
+  "activation": {
+    "trigger_phrases": [
+      "convert [file] to [format]",
+      "export [file] as [format]",
+      "generate [format] from [file]",
+      "prepare [file] for [purpose]"
+    ],
+    "examples": [
+      "convert meeting notes to PDF",
+      "export report as DOCX",
+      "generate HTML from guide",
+      "prepare meeting for executive review"
+    ]
+  },
+  
+  "workflow_stages": {
+    "stage_1_input": {
+      "name": "Input & Validation",
+      "actions": [
+        "Locate MD file(s)",
+        "Validate MD syntax",
+        "Check file accessibility",
+        "Verify Pandoc installation"
+      ],
+      "outputs": ["validated_input_file", "file_metadata"]
+    },
+    
+    "stage_2_analyze": {
+      "name": "Document Analysis",
+      "actions": [
+        "Detect document type (meeting, report, guide, etc.)",
+        "Identify content patterns",
+        "Determine audience/purpose",
+        "Suggest optimal format"
+      ],
+      "outputs": ["document_type", "suggested_format", "suggested_template"]
+    },
+    
+    "stage_3_prepare": {
+      "name": "Preparation",
+      "actions": [
+        "Select output format",
+        "Choose appropriate template",
+        "Apply style guide rules",
+        "Set conversion parameters"
+      ],
+      "outputs": ["conversion_config", "template_path", "pandoc_options"]
+    },
+    
+    "stage_4_convert": {
+      "name": "Conversion",
+      "actions": [
+        "Build Pandoc command",
+        "Execute conversion",
+        "Handle errors",
+        "Capture output"
+      ],
+      "outputs": ["converted_file", "conversion_log"]
+    },
+    
+    "stage_5_validate": {
+      "name": "Quality Validation",
+      "actions": [
+        "Check output exists",
+        "Verify formatting",
+        "Validate completeness",
+        "Compare with source"
+      ],
+      "outputs": ["validation_result", "quality_score"]
+    },
+    
+    "stage_6_output": {
+      "name": "Delivery",
+      "actions": [
+        "Move to output directory",
+        "Generate metadata",
+        "Log conversion",
+        "Notify user"
+      ],
+      "outputs": ["final_file_path", "conversion_report"]
+    }
+  },
+  
+  "conversion_patterns": {
+    "pattern_simple": {
+      "name": "Simple Conversion",
+      "use_case": "Single MD → Single format",
+      "command": "python3 md_converter.py input.md pdf",
+      "example": "Meeting notes → PDF"
+    },
+    
+    "pattern_multi_format": {
+      "name": "Multi-Format Export",
+      "use_case": "One MD → Multiple formats",
+      "command": "python3 md_converter.py input.md pdf && python3 md_converter.py input.md docx",
+      "example": "Report → PDF + DOCX + HTML"
+    },
+    
+    "pattern_batch": {
+      "name": "Batch Conversion",
+      "use_case": "Multiple MD → Same format",
+      "command": "python3 md_converter.py --batch '*.md' pdf",
+      "example": "All meeting notes → PDF archive"
+    },
+    
+    "pattern_template": {
+      "name": "Template-Based",
+      "use_case": "MD + Template → Styled output",
+      "command": "python3 md_converter.py input.md pdf --template meeting_notes",
+      "example": "Meeting → Company-branded PDF"
+    },
+    
+    "pattern_intelligent": {
+      "name": "Intelligent Conversion",
+      "use_case": "Agent decides format/template",
+      "command": "python3 md_converter.py --analyze input.md",
+      "example": "Auto-select best format and template"
+    }
+  },
+  
+  "supported_formats": {
+    "primary": [
+      {
+        "format": "pdf",
+        "description": "Portable Document Format",
+        "use_cases": ["Formal documents", "Printing", "Archival"],
+        "engine": "xelatex"
+      },
+      {
+        "format": "docx",
+        "description": "Microsoft Word",
+        "use_cases": ["Editing", "Collaboration", "Templates"],
+        "engine": "pandoc"
+      },
+      {
+        "format": "html",
+        "description": "Web page",
+        "use_cases": ["Web publishing", "Documentation sites", "Interactive content"],
+        "engine": "pandoc"
+      }
+    ],
+    "additional": [
+      "epub", "latex", "markdown", "rst", "mediawiki", "docbook", 
+      "opendocument", "org", "textile", "asciidoc", "rtf"
+    ]
+  },
+  
+  "template_system": {
+    "current_state": "Basic templates (future enhancement)",
+    "template_types": {
+      "meeting_notes": {
+        "description": "Standard meeting notes format",
+        "includes": ["Header with date/attendees", "Agenda", "Action items"],
+        "formats": ["pdf", "docx"]
+      },
+      "executive_report": {
+        "description": "Executive summary format",
+        "includes": ["Cover page", "Executive summary", "Key findings"],
+        "formats": ["pdf", "docx"]
+      },
+      "technical_doc": {
+        "description": "Technical documentation",
+        "includes": ["Code highlighting", "Table of contents", "Cross-references"],
+        "formats": ["html", "pdf"]
+      }
+    },
+    "style_guide": {
+      "future_feature": true,
+      "includes": ["Brand colors", "Fonts", "Logos", "Layout rules"]
+    }
+  },
+  
+  "agentic_features": {
+    "current": {
+      "document_analysis": "Basic pattern detection",
+      "format_suggestion": "Heuristic-based",
+      "error_handling": "Graceful failure with logging",
+      "batch_processing": "Parallel conversion support"
+    },
+    "future": {
+      "intelligent_template_selection": "AI-powered template matching",
+      "quality_agent": "Automated output review",
+      "learning_system": "Learn from user preferences",
+      "workflow_orchestration": "Multi-document dependencies"
+    }
+  },
+  
+  "error_handling": {
+    "pandoc_not_found": {
+      "error": "Pandoc not installed",
+      "solution": "Install with: brew install pandoc",
+      "auto_fix": false
+    },
+    "file_not_found": {
+      "error": "Input MD file doesn't exist",
+      "solution": "Check file path",
+      "auto_fix": false
+    },
+    "conversion_failed": {
+      "error": "Pandoc conversion error",
+      "solution": "Check MD syntax, try different format",
+      "auto_fix": "Suggest alternative format"
+    },
+    "template_missing": {
+      "error": "Template not found",
+      "solution": "Use default or create template",
+      "auto_fix": "Fall back to no template"
+    }
+  },
+  
+  "logging": {
+    "log_file": "conversion_log.json",
+    "log_entries": {
+      "timestamp": "ISO 8601 format",
+      "input_file": "Source MD file",
+      "output_file": "Generated file",
+      "format": "Target format",
+      "success": "Boolean",
+      "error": "Error message if failed"
+    }
+  },
+  
+  "integration_points": {
+    "hcss_workflow": {
+      "use_case": "Convert meeting notes to PDF for archival",
+      "trigger": "After meeting ingestion",
+      "input": "REF folder MD files",
+      "output": "PDF archive"
+    },
+    "joju_workflow": {
+      "use_case": "Generate profile PDFs for sharing",
+      "trigger": "Profile export request",
+      "input": "Profile JSON → MD → PDF",
+      "output": "Formatted profile document"
+    }
+  },
+  
+  "commands": {
+    "check_installation": "python3 md_converter.py --check",
+    "single_conversion": "python3 md_converter.py <input.md> <format>",
+    "with_template": "python3 md_converter.py <input.md> <format> --template <name>",
+    "batch_conversion": "python3 md_converter.py --batch '<pattern>' <format>",
+    "analyze_document": "python3 md_converter.py --analyze <input.md>"
+  },
+  
+  "best_practices": {
+    "naming": "Use descriptive filenames (meeting_2025-11-06.md)",
+    "structure": "Follow consistent MD structure for better conversion",
+    "templates": "Create templates for frequently used formats",
+    "validation": "Always check output quality before distribution",
+    "logging": "Review conversion logs for patterns and issues"
+  },
+  
+  "next_steps": {
+    "phase_1_current": [
+      "Install Pandoc",
+      "Test basic conversions",
+      "Create common templates",
+      "Define conversion patterns"
+    ],
+    "phase_2_templates": [
+      "Build template library",
+      "Integrate style guide",
+      "Add brand elements",
+      "Create reference docs"
+    ],
+    "phase_3_agentic": [
+      "Implement intelligent selection",
+      "Add quality validation",
+      "Build workflow orchestration",
+      "Enable learning system"
+    ]
+  }
+}

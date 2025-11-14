@@ -1,0 +1,5 @@
+#!/bin/bash
+# 8825 Content Index CLI Wrapper
+
+cd "$(dirname "$0")/8825_core/content_index"
+python3 cli.py "$@"

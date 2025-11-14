@@ -1,0 +1,248 @@
+{
+  "protocol_name": "HCSS Focus",
+  "version": "1.0.0",
+  "protocol_type": "Focus Protocol",
+  "parent_system": "8825 PCMS v2.1",
+  "created": "2025-11-06",
+  "phase": "1 (MVP - Core Ingestion & Routing)",
+  "purpose": "HCSS project management with automated Gmail/Otter ingestion and intelligent routing",
+  
+  "overview": {
+    "description": "HCSS Focus manages HCSS-related projects (HCSS, RAL, TGIF) through automated email/transcript ingestion, mining, and routing",
+    "activation": "User says 'focus on hcss' while in 8825 mode",
+    "exit": "User says 'exit focus' (returns to 8825 mode)",
+    "sandbox": "/hcss_sandbox/",
+    "projects": ["HCSS (umbrella)", "RAL (governance)", "TGIF (rollout)"],
+    "phase_1_scope": "Basic ingestion and routing. Advanced features in future phases."
+  },
+  
+  "focus_activation": {
+    "entry_command": "focus on hcss",
+    "activation_response": {
+      "message": "🎯 HCSS FOCUS ACTIVATED (Phase 1)\n\nSandbox: /hcss_sandbox/\nProjects: HCSS, RAL, TGIF\nPhase: 1 (Core Ingestion & Routing)\n\nYou can now:\n- Ingest Gmail content\n- Process Otter transcripts\n- Route content to HCSS/RAL/TGIF\n- Review routed content\n\nSay 'exit focus' when done.",
+      "setup_actions": [
+        "Load routing configuration from /hcss_sandbox/config/routing.json",
+        "Initialize sandbox directories",
+        "Load processed emails tracker",
+        "Set focus flag to 'hcss_active'",
+        "Display current status"
+      ]
+    },
+    "isolation_rules": {
+      "working_directory": "/hcss_sandbox/",
+      "file_operations": "All file operations must be within /hcss_sandbox/ only",
+      "context_scope": "Only HCSS-related files and operations",
+      "no_cross_contamination": "Do not reference or modify files outside /hcss_sandbox/",
+      "documentation_location": "/hcss_sandbox/ only",
+      "logs_location": "/hcss_sandbox/logs/ only",
+      "config_location": "/hcss_sandbox/config/ only"
+    }
+  },
+  
+  "workflows": {
+    "email_otter_ingestion": {
+      "title": "Email/Otter Ingestion → Mining → Routing",
+      "description": "Process Gmail and Otter content, extract key information, route to appropriate project",
+      "phases": [
+        {
+          "phase": "1. Ingest",
+          "description": "Retrieve Gmail/Otter content",
+          "inputs": ["Gmail messages", "Otter transcripts", "Attachments"],
+          "actions": [
+            "Fetch email content (subject, body, attachments)",
+            "Fetch Otter transcript content",
+            "Save raw content to /hcss_sandbox/raw/",
+            "Generate unique ID for tracking"
+          ],
+          "outputs": ["Raw files in /raw/", "Ingestion log entry"]
+        },
+        {
+          "phase": "2. Mine",
+          "description": "Extract structured information",
+          "inputs": ["Raw content from /raw/"],
+          "actions": [
+            "Parse email/transcript text",
+            "Extract: sender, date, key topics, action items, decisions",
+            "Generate mining report with metadata",
+            "Save to /hcss_sandbox/mined/"
+          ],
+          "outputs": ["Mining report JSON in /mined/"]
+        },
+        {
+          "phase": "3. Route",
+          "description": "Classify and route to project",
+          "inputs": ["Mining report", "Routing configuration"],
+          "actions": [
+            "Load routing rules from config/routing.json",
+            "Score content against HCSS/RAL/TGIF keywords",
+            "Calculate confidence score",
+            "Route to target folder if confidence > 0.8",
+            "Flag for review if confidence < 0.8",
+            "Update routing log"
+          ],
+          "outputs": ["Routed content in /routed/{project}/", "Routing log entry"]
+        },
+        {
+          "phase": "4. Archive",
+          "description": "Move processed content to archives",
+          "inputs": ["Processed content"],
+          "actions": [
+            "Verify all content routed",
+            "Move raw files to /archives/",
+            "Update processed tracker",
+            "Generate session summary"
+          ],
+          "outputs": ["Archived content", "Session summary"]
+        }
+      ]
+    }
+  },
+  
+  "agents": {
+    "EmailRouterAgent": {
+      "purpose": "Classify and route content to HCSS/RAL/TGIF",
+      "inputs": ["Mining report", "Routing configuration"],
+      "outputs": ["Routed content", "Confidence score", "Routing decision"],
+      "algorithm": "Keyword scoring with negative filters",
+      "confidence_threshold": 0.8,
+      "dedup_check": true
+    },
+    "ChatMiningAgent": {
+      "purpose": "Extract structured information from transcripts",
+      "inputs": ["Raw transcript text"],
+      "outputs": ["Mining report with topics, action items, decisions"],
+      "fallback": "Simple parser when no API key available",
+      "domain_prompts": "RAL/TGIF-specific extraction patterns"
+    }
+  },
+  
+  "routing_logic": {
+    "hcss": {
+      "keywords": ["hcss", "construction software", "heavy construction"],
+      "negative_keywords": ["ral release", "tgif rollout", "store setup"],
+      "target": "/routed/hcss/",
+      "priority": 1
+    },
+    "ral": {
+      "keywords": ["ral", "release", "governance", "ticket", "defect", "bug"],
+      "negative_keywords": ["tgif", "rollout", "store", "pricing"],
+      "target": "/routed/ral/",
+      "priority": 2
+    },
+    "tgif": {
+      "keywords": ["tgif", "rollout", "store setup", "pricing", "invoice", "training"],
+      "negative_keywords": ["ral release", "defect", "bug"],
+      "target": "/routed/tgif/",
+      "priority": 2
+    }
+  },
+  
+  "commands": {
+    "ingest_gmail": {
+      "command": "ingest gmail",
+      "description": "Process Gmail content",
+      "workflow": "Fetch → Mine → Route → Archive"
+    },
+    "ingest_otter": {
+      "command": "ingest otter",
+      "description": "Process Otter transcripts",
+      "workflow": "Fetch → Mine → Route → Archive"
+    },
+    "route_content": {
+      "command": "route content",
+      "description": "Classify and route mined content",
+      "workflow": "Load config → Score → Route → Log"
+    },
+    "review_routed": {
+      "command": "review routed [project]",
+      "description": "Review routed content for HCSS/RAL/TGIF",
+      "options": ["hcss", "ral", "tgif"]
+    }
+  },
+  
+  "focus_exit": {
+    "exit_command": "exit focus",
+    "exit_protocol": {
+      "steps": [
+        "1. Verify all raw content processed",
+        "2. Verify mining reports generated",
+        "3. Verify routing complete",
+        "4. Verify logs updated",
+        "5. Verify files saved",
+        "6. Validate JSON",
+        "7. Sync brain to Downloads (8825_brain_sync_protocol)"
+      ]
+    },
+    "exit_response": {
+      "message": "✅ HCSS FOCUS COMPLETE\n\nProcessed: {count} items\nRouted: HCSS ({hcss_count}), RAL ({ral_count}), TGIF ({tgif_count})\nFlagged for review: {review_count}\n\nAll files saved and validated.\n\nReturning to 8825 mode."
+    },
+    "returns_to": "8825 mode"
+  },
+  
+  "phase_roadmap": {
+    "phase_1": {
+      "status": "current",
+      "scope": "Core ingestion and routing",
+      "features": [
+        "Gmail/Otter ingestion",
+        "Basic mining",
+        "Keyword routing",
+        "REF → ARCHV lifecycle"
+      ]
+    },
+    "phase_2": {
+      "status": "planned",
+      "scope": "RAL Governance",
+      "features": [
+        "RAL subfocus activation",
+        "Governance tracking ledger",
+        "Bug/defect triage workflow",
+        "ral_governance.json"
+      ]
+    },
+    "phase_3": {
+      "status": "planned",
+      "scope": "TGIF Rollout",
+      "features": [
+        "TGIF subfocus activation",
+        "Rollout milestone tracking",
+        "Coverage and pricing monitoring",
+        "tgif_rollout.json"
+      ]
+    },
+    "phase_4": {
+      "status": "future",
+      "scope": "Advanced Features",
+      "features": [
+        "Invoice intelligence",
+        "Job aid creation",
+        "ERP integration",
+        "Advanced analytics"
+      ]
+    }
+  },
+  
+  "integration_with_8825": {
+    "inherits_protocols": [
+      "8825_decision-making",
+      "8825_learning_protocol",
+      "8825_mining"
+    ],
+    "uses_agents": [
+      "EmailRouterAgent",
+      "ChatMiningAgent"
+    ],
+    "follows_patterns": [
+      "REF → ARCHV lifecycle",
+      "Confidence-based routing",
+      "Deduplication checks"
+    ]
+  },
+  
+  "configuration": {
+    "routing_config": "/hcss_sandbox/config/routing.json",
+    "schema_config": "/hcss_sandbox/config/schema.json",
+    "processed_tracker": "/hcss_sandbox/logs/processed_emails.json",
+    "routing_log": "/hcss_sandbox/logs/routing_log.txt"
+  }
+}

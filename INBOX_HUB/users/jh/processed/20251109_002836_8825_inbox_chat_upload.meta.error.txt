@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: 8825_inbox_chat_upload.meta.json
+Timestamp: 20251109_002836

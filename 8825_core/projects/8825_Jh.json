@@ -1,0 +1,231 @@
+{
+  "project": "jh_personal",
+  "version": "1.1.0",
+  "last_updated": "2025-11-10",
+  "last_mined_at": "2025-11-03T05:45:07Z",
+  "description": "Justin Harmon personal context - financial projections, aspirations, philosophy, home projects, 7247 property, personal finance. Includes jh-assistant integration layer for all task, time, calendar, and financial tools.",
+  
+  "routing_keywords": [
+    "personal",
+    "7247",
+    "financial projections",
+    "aspirations",
+    "philosophy",
+    "philosophical",
+    "speculation",
+    "home project",
+    "personal finance",
+    "grand vision",
+    "future plans",
+    "life goals",
+    "jh-assistant",
+    "jh_assistant",
+    "task",
+    "calendar",
+    "schedule",
+    "bill",
+    "financial tool"
+  ],
+  
+  "patterns": {
+    "do": [
+      "Capture speculative financial projections without judgment",
+      "Document grand aspirations and long-term visions",
+      "Track philosophical explorations and personal reflections",
+      "Record home project ideas and progress",
+      "Maintain personal finance context and decisions",
+      "Keep 7247 property-related information centralized",
+      "Separate personal context from professional/client work",
+      "Frame mission as saving capitalist democracy via fair participation and shared ownership",
+      "Sequence stability → cooperative layer → cultural movement",
+      "Return control of data and value to contributors through cooperative infrastructure",
+      "Route ALL task, time, calendar, and financial inputs through jh-assistant layer",
+      "Treat jh-assistant as single integration/control point even when tools configured elsewhere",
+      "Maintain jh-assistant as authoritative source for personal productivity and finance workflows"
+    ],
+    "dont": [
+      "Mix personal financial speculation with client work",
+      "Conflate personal aspirations with project commitments",
+      "Expose personal finance details in professional contexts",
+      "Do not frame as post-capitalist replacement",
+      "Do not suggest anti-democratic centralization"
+    ],
+    "framing": [
+      "Personal context is valid and valuable for long-term planning",
+      "Speculation and aspiration drive innovation and growth",
+      "Home and personal projects inform professional perspective",
+      "Restorative capitalism",
+      "Economic democracy",
+      "Human–AI collaboration as civic fabric"
+    ]
+  },
+  
+  "lexicon": [
+    {
+      "term": "7247",
+      "definition": "Justin's property address - home projects, property management, personal space",
+      "context": "personal"
+    },
+    {
+      "term": "Personal finance",
+      "definition": "Financial planning, projections, and decisions for personal/family context",
+      "context": "private"
+    },
+    {
+      "term": "Philosophical speculation",
+      "definition": "Explorations of meaning, purpose, systems thinking applied to life",
+      "context": "reflective"
+    },
+    {
+      "term": "Restorative capitalism",
+      "definition": "Reform that reopens markets and ties rewards to verified contribution",
+      "context": "mission"
+    },
+    {
+      "term": "Economic democracy",
+      "definition": "Participatory, transparent governance of digital value creation",
+      "context": "mission"
+    },
+    {
+      "term": "Bridge",
+      "definition": "Practical path from financial stability to cooperative, open infrastructure",
+      "context": "strategy"
+    },
+    {
+      "term": "jh-assistant",
+      "definition": "Integration and control layer for all task, time, calendar, and financial tools. Every input runs through this layer regardless of where underlying tools are configured.",
+      "context": "system_architecture",
+      "scope": [
+        "Task management",
+        "Time tracking",
+        "Calendar integration",
+        "Financial tools (Phil's Ledger, bill routing, Monarch API)",
+        "Personal automation"
+      ],
+      "principle": "Single control point for personal productivity and finance - tools may live elsewhere but all inputs flow through jh-assistant"
+    }
+  ],
+  
+  "calendar_sync": {
+    "workflow": "hcss_calendar_sync.md",
+    "schedule": "Every Monday 8:00 AM CST",
+    "target_calendar": "harmon.justin@gmail.com",
+    "source_calendar": "personal",
+    "meeting_types": [
+      "JustinBecky Check-in (Teams)",
+      "Portal Development Weekly Touchbase (Teams - Tuesday 1 PM)",
+      "TGIF Internal Touchbase (Teams)",
+      "TGI Fridays meetings",
+      "Crunchtime project calls",
+      "Toast Readiness meetings"
+    ],
+    "status": "active",
+    "automation_level": "manual_with_reminder",
+    "last_sync": null,
+    "next_reminder": "2025-11-11T08:00:00-06:00"
+  },
+  
+  "household_tasks": [
+    {
+      "id": "HH-2025-11-10-001",
+      "task": "Install light in guest bedroom",
+      "status": "planning",
+      "priority": "high",
+      "date_added": "2025-11-10",
+      "notes": "Need to get started today - at minimum create plan"
+    },
+    {
+      "id": "HH-2025-11-10-002",
+      "task": "Get KC's wardrobe going",
+      "status": "planning",
+      "priority": "high",
+      "date_added": "2025-11-10",
+      "notes": "Need to get started today - at minimum create plan"
+    }
+  ],
+  
+  "categories": {
+    "financial": {
+      "description": "Personal finance, projections, speculative scenarios",
+      "privacy": "high"
+    },
+    "aspirations": {
+      "description": "Grand visions, long-term goals, life aspirations",
+      "privacy": "medium"
+    },
+    "philosophy": {
+      "description": "Philosophical explorations, systems thinking, reflections",
+      "privacy": "low"
+    },
+    "home_projects": {
+      "description": "7247 property, home improvements, personal space projects",
+      "privacy": "medium"
+    },
+    "personal_context": {
+      "description": "General personal information, preferences, life context",
+      "privacy": "medium"
+    },
+    "jh_assistant": {
+      "description": "Integration layer for task, time, calendar, and financial tools",
+      "privacy": "high",
+      "scope": [
+        "Task management",
+        "Calendar/scheduling",
+        "Financial tools (bills, ledger, banking)",
+        "Time tracking",
+        "Personal automation"
+      ],
+      "architecture": "Single control layer - all inputs flow through here regardless of underlying tool location"
+    }
+  },
+  
+  "stats": {
+    "lexicon": 7,
+    "patterns": 19,
+    "categories": 6,
+    "household_tasks": 2,
+    "workflows": 1
+  },
+  
+  "secure_credentials": {
+    "note": "Sensitive backup codes and credentials - handle with care",
+    "uscis": {
+      "backup_code": "80142f3e9b",
+      "purpose": "Two-step authentication backup for USCIS online account",
+      "saved_date": "2025-11-03",
+      "warning": "Keep secure - use only if lose access to mobile/email 2FA"
+    }
+  },
+
+  "decisions": [
+    {
+      "what": "Reframe mission statement to emphasize redemption of markets and democracy",
+      "why": "Aligns with clarified founder intent",
+      "when": "2025-11-03",
+      "status": "approved"
+    },
+    {
+      "what": "Open-source fundamentals with cooperative governance",
+      "why": "Prevents capture by oligopolies and spreads ownership",
+      "when": "2025-11-03",
+      "status": "approved"
+    },
+    {
+      "what": "Establish jh-assistant as integration/control layer for all task, time, calendar, and financial functions",
+      "why": "Single control point for personal productivity and finance - tools may be configured elsewhere but all inputs flow through this layer",
+      "when": "2025-11-10",
+      "status": "approved",
+      "scope": [
+        "Task management",
+        "Calendar/scheduling",
+        "Financial tools (Phil's Ledger, bill routing, Monarch API)",
+        "Time tracking",
+        "Personal automation"
+      ]
+    }
+  ],
+  
+  "source_reports": [
+    "8825_value_mission_and_mining_standard_20251103T054507.json"
+  ]
+}

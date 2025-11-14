@@ -1,0 +1,174 @@
+{
+  "project": "HCSS",
+  "version": "1.1.0",
+  "last_updated": "2025-11-02",
+  "description": "HCSS consulting projects including ATX Love nonprofit initiative and strategic partnerships",
+  "tagline": "HCSS process design, AI-driven operational support, and grant-funded collaboration",
+  
+  "patterns": [
+    {
+      "category": "project_initialization",
+      "items": [
+        "Establish project scope and objectives",
+        "Define key stakeholders and communication patterns",
+        "Set up governance and decision-making frameworks"
+      ]
+    },
+    {
+      "category": "grant_strategy",
+      "items": [
+        "Frame intersection: ATX Love (why) + 8825 (how) + Academic Partner (grant infrastructure)",
+        "Position nonprofit acceleration model with measurable efficiency for post-federal-cuts funding landscape",
+        "Leverage academic partnerships for research validation and AI-for-impact demonstration projects"
+      ]
+    },
+    {
+      "category": "partnership_development",
+      "items": [
+        "Draft 1-page positioning brief for strategic alignment",
+        "Explore co-funding opportunities with academic institutions",
+        "Prepare workshop prototypes for grant proposal use"
+      ]
+    }
+  ],
+  
+  "lexicon": [
+    {
+      "term": "HCSS",
+      "definition": "Hammer Consulting Strategic Services - Process design and operational consulting",
+      "examples": [
+        "HCSS-style process design for nonprofits",
+        "AI-driven operational support frameworks"
+      ]
+    },
+    {
+      "term": "ATX Love",
+      "definition": "Becky Hammer's nonprofit empowerment initiative using HCSS process design and AI support",
+      "mission": "Empower nonprofits through HCSS-style process design and AI-driven operational support",
+      "examples": [
+        "Nonprofit acceleration model",
+        "Measurable efficiency demonstrations for grant funders"
+      ]
+    }
+  ],
+  
+  "agent_recipes": [],
+  
+  "checklists": [],
+  
+  "partnerships": {
+    "atx_love": {
+      "lead": "Becky Hammer",
+      "mission": "Empower nonprofits through HCSS-style process design and AI-driven operational support",
+      "alignment_with_8825": "ATX Love + 8825 create nonprofit acceleration model demonstrating measurable efficiency",
+      "status": "active"
+    },
+    "lucas_hill_uw_madison": {
+      "contact": "Lucas B. Hill, Ph.D.",
+      "institution": "University of Wisconsin–Madison",
+      "affiliations": [
+        "Wisconsin Center for Education Research (WCER)",
+        "Center for the Integration of Research, Teaching and Learning (CIRTL)"
+      ],
+      "expertise": [
+        "Organizational Change",
+        "Educational Research & Evaluation",
+        "Network-based Collaboration",
+        "Grant Development (Kresge, Lumina Foundations)"
+      ],
+      "proposal_focus": "Holistic career advising platform (K–12 through higher ed to employment)",
+      "strategic_fit": [
+        "Grant initiative complements 8825's AI infrastructure for data-driven pathways",
+        "UW–Madison ecosystem offers research validation, data pilots, AI-for-impact demos"
+      ],
+      "next_steps": [
+        "Draft positioning brief: ATX Love + 8825 + Lucas Hill grant infrastructure",
+        "Reach out via Matthew to explore co-funding/pilot opportunities",
+        "Prepare ATX Love x 8825 Workshop prototype for grant proposals"
+      ],
+      "status": "opportunity"
+    }
+  },
+  
+  "open_loops": [
+    {
+      "area": "lucas_hill_grant_opportunity",
+      "status": "active",
+      "priority": "high",
+      "next_actions": [
+        "Draft 1-page positioning brief",
+        "Contact Lucas Hill via Matthew",
+        "Outline ATX Love x 8825 Workshop prototype"
+      ]
+    }
+  ],
+  
+  "active_projects": {
+    "tgif": {
+      "name": "TGIF Restaurant Operations",
+      "file": "projects/8825_HCSS-TGIF.json",
+      "status": "Top Priority",
+      "description": "Sysco, Toast, NetSuite integration with automated meeting mining"
+    },
+    "ral": {
+      "name": "RAL Portal 2.0",
+      "file": "projects/8825_HCSS-RAL.json",
+      "status": "Active",
+      "description": "Reinsurance portal governance and post-vendor stability"
+    },
+    "atx_love": {
+      "name": "ATX Love Nonprofit Initiative",
+      "status": "Active",
+      "description": "Nonprofit empowerment through HCSS process design"
+    }
+  },
+  
+  "phase_1_strategy": {
+    "objective": "Deploy initial 8825 agent architecture starting with TGIF and RAL",
+    "agents_deploying": [
+      "Chat Mining Agent (PromptGen 1.0)",
+      "Governance Tracker Agent",
+      "Knowledge Retention Agent"
+    ],
+    "data_sources": [
+      "Dropbox folders (TGIF, RAL documentation)",
+      "Email archives (project decisions and context)"
+    ],
+    "timeline": "2025-11-02 to 2025-11-10",
+    "success_criteria": "Automated knowledge capture feeding 8825 memory layer"
+  },
+  
+  "summary_log": [
+    {
+      "when": "2025-10-31",
+      "topic": "HCSS project initialization",
+      "notes": "Created initial project structure. Awaiting content extraction from mining reports to populate patterns, lexicon, and operational knowledge."
+    },
+    {
+      "when": "2025-11-02",
+      "topic": "ATX Love + Lucas Hill grant opportunity",
+      "notes": "Identified Lucas B. Hill (UW-Madison) as university contact for grant-funded educational tech. Strategic alignment: ATX Love (nonprofit empowerment) + 8825 (AI infrastructure) + Lucas Hill (academic grant infrastructure). Added partnership details, grant strategy patterns, and next action items."
+    },
+    {
+      "when": "2025-11-02",
+      "topic": "Phase 1 agent deployment - TGIF & RAL",
+      "notes": "Established Phase 1 plan for 8825 agent architecture. TGIF = top priority test environment for Chat Mining Agent (meeting automation). RAL = governance tracking and post-vendor documentation. Deploying 3 agents: Chat Mining, Governance Tracker, Knowledge Retention. Mining Dropbox + Email to populate 8825 memory layer."
+    }
+  ],
+  
+  "stats": {
+    "lexicon": 2,
+    "patterns": 9,
+    "partnerships": 2,
+    "active_projects": 3,
+    "agent_recipes": 0,
+    "checklists": 0
+  },
+  
+  "source_reports": [
+    "8825_mining_report_ATXLove_LucasHill_2025-11-02.json",
+    "HCSS_RAL_TGIF_PHASE1_miningreport_20251102.json"
+  ],
+  
+  "last_mined_at": "2025-11-02T22:50:00Z"
+}

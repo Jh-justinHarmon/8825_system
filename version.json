@@ -1,0 +1,50 @@
+{
+  "system_version": "3.1.0",
+  "release_name": "Layered Architecture",
+  "schema_version": "4",
+  "migration_level": 3,
+  "last_updated": "2025-11-13",
+  "compatibility": {
+    "min_version": "3.0.0",
+    "max_version": "3.x.x",
+    "breaking_changes_from": "2.x.x"
+  },
+  "architecture": {
+    "type": "layered",
+    "layers": ["core", "shared", "focuses", "sandbox"],
+    "promotion_flow": "sandbox → shared/focuses → core"
+  },
+  "migrations_applied": [
+    {
+      "id": 1,
+      "name": "initial_structure",
+      "date": "2025-11-07",
+      "description": "Created initial 8825-system structure"
+    },
+    {
+      "id": 2,
+      "name": "mcp_consolidation",
+      "date": "2025-11-13",
+      "description": "Consolidated MCP servers to ~/mcp_servers/"
+    },
+    {
+      "id": 3,
+      "name": "layered_architecture",
+      "date": "2025-11-13",
+      "description": "Implemented core/shared/sandbox layered architecture"
+    }
+  ],
+  "features": {
+    "cascade_lock": true,
+    "poc_auditor": true,
+    "promotion_helper": true,
+    "deletion_log": true,
+    "layered_structure": true
+  },
+  "notes": [
+    "No version numbers in paths - this file tracks versions",
+    "Use git tags for code versions (v3.1.0, etc.)",
+    "Migration level tracks structural changes",
+    "Schema version tracks data format changes"
+  ]
+}

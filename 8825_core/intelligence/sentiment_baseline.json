@@ -1,0 +1,123 @@
+{
+  "created_at": "2025-11-12T09:34:44.453376",
+  "phase": "pre_llom_router",
+  "sentiment_samples": [
+    {
+      "source": "git_commit",
+      "text": "3.0 - ingestion protocol, health monitoring, dynamic philosophy protocol",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478513"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 cleanup & MCP org",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478565"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 - joju user engagment work",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478571"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 governance",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478575"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 exploration & philosophy layer",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478579"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 exploration",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478582"
+    },
+    {
+      "source": "git_commit",
+      "text": "fingers crossed",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478586"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0 + MCPs + ingestion protocol",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478590"
+    },
+    {
+      "source": "git_commit",
+      "text": "3.0",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478593"
+    },
+    {
+      "source": "git_commit",
+      "text": "11/7 morning updates - joju profile and stuff",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478598"
+    },
+    {
+      "source": "git_commit",
+      "text": "first commit",
+      "sentiment_score": 0,
+      "sentiment_label": "neutral",
+      "timestamp": "2025-11-12T09:34:44.478601"
+    },
+    {
+      "source": "doc:SYSTEM_STATUS.md",
+      "text": "### Brain Transport in wrong location",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "timestamp": "2025-11-12T09:34:44.479491"
+    },
+    {
+      "source": "doc:IMPLEMENTATION_COMPLETE.md",
+      "text": "- Quick start guide",
+      "sentiment_score": 1.0,
+      "sentiment_label": "positive",
+      "timestamp": "2025-11-12T09:34:44.479916"
+    },
+    {
+      "source": "doc:IMPLEMENTATION_COMPLETE.md",
+      "text": "Test Results: 7 passed, 0 failed",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "timestamp": "2025-11-12T09:34:44.480122"
+    },
+    {
+      "source": "doc:IMPLEMENTATION_COMPLETE.md",
+      "text": "- Error handling and retries",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "timestamp": "2025-11-12T09:34:44.480273"
+    }
+  ],
+  "performance_baseline": {
+    "avg_response_time": "unknown",
+    "error_rate": "unknown",
+    "user_satisfaction": "unknown"
+  },
+  "baseline_metrics": {
+    "avg_sentiment": -0.13,
+    "positive_count": 1,
+    "negative_count": 3,
+    "neutral_count": 11,
+    "total_samples": 15
+  }
+}

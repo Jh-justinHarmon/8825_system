@@ -1,0 +1,161 @@
+{
+  "curation_session": {
+    "timestamp": "2025-11-05T23:25:00-06:00",
+    "target": "Creativity & Innovation Focused Profile",
+    "source_library": "JH_master_library.json v2.0.0",
+    "additional_mining": "justin-harmon.art",
+    "tone": "Creative, innovative, artistic, visionary"
+  },
+  
+  "creative_work_discovered": {
+    "art_portfolio": {
+      "url": "https://www.justin-harmon.art/",
+      "philosophy": "object permanence—reimagined. everyday icons. familiar forms. nostalgia in the making.",
+      "artist_statement": "I'm interested in the role objects play in our lives— the way they hold memory, carry meaning, and sometimes say more about us than we intend. These paintings are a kind of gamble. An attempt to mark what matters, or maybe what will. They're about connection, recognition, and the quiet joy of belonging to the same story— one object at a time.",
+      "series": [
+        {
+          "name": "Bourbon Series",
+          "pieces": ["Old Fitzgerald No.1", "Hibiki No.1", "Joseph Magnus No.1 (Cigar Blend)", "Blanton's No.1"],
+          "theme": "Luxury spirits as cultural icons"
+        },
+        {
+          "name": "Status Symbols Series",
+          "pieces": ["Chanel No.5", "Old Fitzgerald", "Hibiki", "Stanley No.1", "Joseph Magnus", "Blanton's"],
+          "theme": "Objects that define identity and aspiration"
+        },
+        {
+          "name": "Common Ground Series",
+          "pieces": ["The Arts District - Bisbee, Az", "The Review - Bisbee, Az"],
+          "theme": "Shared spaces and community"
+        },
+        {
+          "name": "Kid Collab Series",
+          "theme": "Collaborative creativity with children"
+        }
+      ]
+    }
+  },
+  
+  "creativity_themes_in_library": {
+    "innovation": [
+      "VSP Innovation Lab - pioneered 3D/CAD prototyping in eyewear",
+      "8825 PCMS - LLM-agnostic knowledge system",
+      "Trustybits - AI-powered hiring intelligence tool",
+      "Joju - Professional OS with zero-config portfolio generation",
+      "Tiger Cut / SHOW.X2 - innovative lens cut options",
+      "Amare Stoudemire goggles - innovative construction",
+      "Shinola collaborations - luxury brand innovation"
+    ],
+    "design_thinking": [
+      "Human-centric design philosophy",
+      "Breaking out of established patterns",
+      "User-focused Industrial Design",
+      "Cross-discipline design thinking",
+      "Creative problem-solving philosophy"
+    ],
+    "artistic_expression": [
+      "justin-harmon.art - fine art practice",
+      "4 painting series exploring object permanence",
+      "Visual storytelling through everyday icons",
+      "Nostalgia and memory in design"
+    ],
+    "entrepreneurship": [
+      "Co-founded PRTCL design agency",
+      "Founded VSP Innovation Lab",
+      "Building Trustybits and Joju platforms",
+      "Managing Partner & Design Lead"
+    ]
+  },
+  
+  "creativity_curation_strategy": {
+    "profile_adjustments": {
+      "profession": "Creative Technologist / Product Designer / Artist",
+      "about_tone": "Emphasize innovation, artistic vision, breaking patterns",
+      "project_selection": "Prioritize innovative, creative, artistic projects",
+      "work_experience_emphasis": "Highlight design innovation, creative solutions, artistic approach"
+    },
+    
+    "content_priorities": {
+      "must_include": [
+        "justin-harmon.art fine art practice",
+        "VSP Innovation Lab (pioneering work)",
+        "8825 PCMS & Trustybits (AI innovation)",
+        "Amare Stoudemire (innovative design solution)",
+        "Shinola collaborations (creative partnerships)",
+        "Tiger Cut (design exploration)",
+        "Creative problem-solving philosophy"
+      ],
+      "emphasize": [
+        "Innovation and pioneering work",
+        "Artistic expression and fine art",
+        "Cross-discipline creativity",
+        "Breaking established patterns",
+        "Human-centric design thinking",
+        "Entrepreneurial ventures"
+      ],
+      "de_emphasize": [
+        "Routine operational work",
+        "Standard business metrics (unless tied to innovation)",
+        "Generic project management"
+      ]
+    },
+    
+    "tone_adjustments": {
+      "language_style": "Visionary, creative, innovative, artistic",
+      "verb_choices": "Pioneered, reimagined, innovated, created, envisioned, explored, challenged",
+      "descriptors": "Innovative, creative, artistic, visionary, pioneering, groundbreaking, experimental",
+      "narrative_focus": "Creative process, innovation journey, artistic vision, design thinking"
+    }
+  },
+  
+  "new_sections_to_add": {
+    "fine_art_practice": {
+      "section": "Side Projects or Creative Work",
+      "content": {
+        "id": "fine_art_practice",
+        "year": "2020 — Present",
+        "heading": "Fine Art Practice - justin-harmon.art",
+        "url": "https://www.justin-harmon.art/",
+        "description": "Exploring object permanence through contemporary painting, examining how everyday icons hold memory, carry meaning, and define cultural identity. Four distinct series investigate the role objects play in our lives: Bourbon Series (luxury spirits as cultural artifacts), Status Symbols Series (objects that define aspiration and identity), Common Ground Series (shared spaces and community), and Kid Collab Series (collaborative creativity). Artist statement: 'These paintings are a kind of gamble. An attempt to mark what matters, or maybe what will. They're about connection, recognition, and the quiet joy of belonging to the same story— one object at a time.'"
+      }
+    }
+  },
+  
+  "creativity_scoring": {
+    "projects_by_creativity_score": [
+      {"project": "justin-harmon.art", "score": 100, "reason": "Pure artistic expression"},
+      {"project": "VSP Innovation Lab", "score": 95, "reason": "Pioneered new technology in industry"},
+      {"project": "8825 PCMS", "score": 90, "reason": "Innovative LLM-agnostic system"},
+      {"project": "Trustybits", "score": 90, "reason": "AI innovation, blue ocean opportunity"},
+      {"project": "Amare Stoudemire Goggles", "score": 85, "reason": "Innovative design solution"},
+      {"project": "Tiger Cut", "score": 85, "reason": "Design exploration and experimentation"},
+      {"project": "Shinola Collaborations", "score": 80, "reason": "Creative luxury brand partnerships"},
+      {"project": "Joju", "score": 80, "reason": "Innovative professional platform"},
+      {"project": "COSTA Performance Eyewear", "score": 70, "reason": "User-centered innovation"}
+    ]
+  },
+  
+  "recommended_profile_structure": {
+    "header": {
+      "profession": "Creative Technologist / Product Designer / Artist",
+      "tagline": "Reimagining everyday experiences through design, technology, and art"
+    },
+    "about": "Multi-disciplinary creative with 20+ years pioneering innovative solutions across industrial design, fine art, and technology. Known for founding the VSP Innovation Lab (revolutionizing eyewear prototyping), creating AI-powered platforms (8825 PCMS, Trustybits), and exploring object permanence through contemporary painting (justin-harmon.art). Philosophy: 'Breaking out of established patterns to look at things in a different way'—applying creative problem-solving across design, technology, and artistic expression.",
+    "featured_projects": [
+      "justin-harmon.art (Fine Art Practice)",
+      "VSP Innovation Lab (3D Design Innovation)",
+      "8825 PCMS (AI Innovation)",
+      "Trustybits (Hiring Intelligence Innovation)",
+      "Amare Stoudemire Goggles (Design Innovation)",
+      "Shinola Collaborations (Creative Partnerships)"
+    ],
+    "work_experience_order": [
+      "8825 PCMS & Trustybits (Innovation focus)",
+      "PRTCL (Creative agency leadership)",
+      "Nike (Innovative design solution)",
+      "COSTA (User-centered innovation)",
+      "Fossil (Design innovation)",
+      "Marchon (VSP Innovation Lab pioneering)"
+    ]
+  }
+}

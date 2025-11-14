@@ -1,0 +1,14 @@
+{
+  "content_type": "note",
+  "target_focus": "hcss",
+  "content": {
+    "title": "TGIF Meeting Notes",
+    "date": "2025-11-08",
+    "attendees": ["Justin", "Team"],
+    "notes": "Discussed Q4 planning and resource allocation"
+  },
+  "metadata": {
+    "source": "chatgpt",
+    "timestamp": "2025-11-08T15:00:00"
+  }
+}

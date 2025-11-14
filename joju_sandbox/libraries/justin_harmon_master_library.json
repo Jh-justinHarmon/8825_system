@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "created": "2025-11-11T06:29:07.193300",
+    "focus": "joju"
+  },
+  "items": [
+    {
+      "id": "joju-20251111-062907",
+      "content_type": "note",
+      "content": {
+        "text": "Error: Missing required fields: content_type, content, metadata\nOriginal file: test_joju_achievement.meta.json\nTimestamp: 20251109_002725\n",
+        "auto_wrapped": true
+      },
+      "metadata": {
+        "source": "auto-wrapped",
+        "timestamp": "2025-11-11T06:29:07.192802",
+        "original_format": "text"
+      },
+      "added_at": "2025-11-11T06:29:07.193383",
+      "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/20251109_002725_test_joju_achievement.meta.error.txt"
+    },
+    {
+      "id": "joju-20251111-062908",
+      "content_type": "note",
+      "content": {
+        "text": "Error: Missing required fields: content_type, content, metadata\nOriginal file: test_joju_achievement.meta.json\nTimestamp: 20251109_002417\n",
+        "auto_wrapped": true
+      },
+      "metadata": {
+        "source": "auto-wrapped",
+        "timestamp": "2025-11-11T06:29:08.158046",
+        "original_format": "text"
+      },
+      "added_at": "2025-11-11T06:29:08.158619",
+      "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/20251109_002417_test_joju_achievement.meta.error.txt"
+    },
+    {
+      "id": "joju-20251111-062908",
+      "content_type": "note",
+      "content": {
+        "text": "Error: Missing required fields: content_type, content, metadata\nOriginal file: test_joju_achievement.meta.json\nTimestamp: 20251109_002837\n",
+        "auto_wrapped": true
+      },
+      "metadata": {
+        "source": "auto-wrapped",
+        "timestamp": "2025-11-11T06:29:08.369175",
+        "original_format": "text"
+      },
+      "added_at": "2025-11-11T06:29:08.369710",
+      "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/20251109_002837_test_joju_achievement.meta.error.txt"
+    }
+  ]
+}

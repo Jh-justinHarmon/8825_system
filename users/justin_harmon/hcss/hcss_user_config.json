@@ -1,0 +1,493 @@
+{
+  "meta": {
+    "name": "8825_consultant_HCSS",
+    "context": "consultant",
+    "owner": "Justin Harmon",
+    "created_at": "2025-11-02",
+    "timezone": "America/Chicago",
+    "version": "2.0.0",
+    "architecture": "synchronized_multi_context",
+    "description": "Sandboxed 8825 core for consulting projects - HCSS, RAL, client work. Quarantined from TrustyBits and personal projects.",
+    "core_sync_rules": {
+      "pattern": "8825_##-*.json files are synchronized core files",
+      "sync_policy": "Changes to core features (essential_patterns, key_lexicon, mining_operations, workflow_rules, usage_instructions) must be replicated across all core files unless change is context-specific (quarantine_rules, authoritative_sources).",
+      "implementation": "When updating one core file, apply same change to all other 8825_##-*.json files EXCEPT when change affects quarantined/forbidden projects.",
+      "context_specific_sections": [
+        "authoritative_sources (consultant-specific)",
+        "quarantine_rules (blocks TrustyBits/LHL)",
+        "meta.context = consultant",
+        "meta.description (consultant-specific)"
+      ],
+      "synchronized_sections": [
+        "essential_patterns",
+        "key_lexicon",
+        "mining_operations",
+        "cross_project_utilities",
+        "workflow_rules",
+        "usage_instructions",
+        "routing_rules (general logic)",
+        "merge_and_conflict_rules"
+      ]
+    },
+    "file_routing": {
+      "how_it_works": "This core file contains summaries. When deeper context is needed, I'll ask you to upload specific project files from the projects/ folder.",
+      "extraction_process": "When user says 'check mining report' or 'incorporate': (1) Read report from - REF - folder, (2) Identify new content vs existing, (3) Ask for confirmation, (4) Extract to relevant project files, (5) Move report to - ARCHV -/Archive/",
+      "when_to_request_files": {
+        "for_general_questions": "Use this core file only. Summaries are sufficient.",
+        "for_specific_project_work": "Request the relevant project file from user.",
+        "for_detailed_updates": "If adding multiple patterns/lexicon entries to a project, request that project file.",
+        "for_comprehensive_analysis": "Request all relevant project files."
+      },
+      "available_files": {
+        "projects/joju.json": "Professional OS ecosystem, LinkedIn alternative, hiring intelligence (6 lexicon terms, 8 patterns)",
+        "projects/the_forge.json": "Mission-based bounty platform, partnership due diligence (2 lexicon terms, 7 patterns)",
+        "projects/8825_pmce.json": "Persistent Memory Context Engine, dual-layer AI architecture (4 lexicon terms, 8 patterns)",
+        "projects/library_miner.json": "This library system itself, mining workflows, WCB patterns (2 lexicon terms, 8 patterns)",
+        "projects/general.json": "Cross-project patterns, beta testing, RSS automation (2 lexicon terms, 6 patterns)"
+      },
+      "request_template": "For more detailed context on [PROJECT], please upload: `projects/[filename]`",
+      "explicit_routing": {
+        "8825": "projects/8825_pmce.json",
+        "project 8825": "projects/8825_pmce.json",
+        "pmce": "projects/8825_pmce.json",
+        "persistent memory context engine": "projects/8825_pmce.json",
+        "memory system": "projects/8825_pmce.json",
+        "memory engine": "projects/8825_pmce.json",
+        "8825 roadmap": "projects/8825_pmce.json",
+        "8825 plan": "projects/8825_pmce.json",
+        "8825 intent": "projects/8825_pmce.json"
+      },
+      "authoritative_sources": {
+        "hcss": "projects/8825_HCSS.json",
+        "hcss_ral": "projects/8825_HCSS-RAL.json",
+        "agents": "projects/8825_00-agents.json",
+        "general": "projects/8825_00-general.json",
+        "library_miner": "projects/8825_00-library_miner.json",
+        "pmce": "projects/8825_00-pmce.json"
+      },
+      "quarantine_rules": {
+        "context": "consultant",
+        "forbidden_references": [
+          "projects/8825_76.json",
+          "projects/8825_76-joju.json",
+          "projects/8825_76-forge.json",
+          "projects/8825_LHL-re.json"
+        ],
+        "enforcement": "CRITICAL: This is CONSULTANT context. Do NOT reference, extract to, or mention TrustyBits (76), Joju, Forge, or LHL projects. Client work is confidential and must remain sandboxed.",
+        "allowed_scope": [
+          "HCSS consulting projects",
+          "RAL (when created)",
+          "General consulting patterns",
+          "Agent capabilities",
+          "Mining operations"
+        ]
+      },
+      "change_policies": {
+        "8825": [
+          "Before editing any 8825 content, read projects/8825_pmce.json",
+          "Append changes to 8825_pmce.summary_log",
+          "Log structural modifications to 8825_pmce.dev_backlog",
+          "Deduplicate against existing patterns/lexicon"
+        ]
+      }
+    },
+    "usage_instructions": {
+      "for_user_in_windsurf": "This is your main library file. When I need project details, I'll read the project files directly from your workspace.",
+      "for_user_external_llm": "Upload this core file for most tasks. If I need more context, I'll ask for specific project files.",
+      "for_llm_in_windsurf": "CRITICAL WORKFLOW: You have WRITE ACCESS to all files. (1) Make DIRECT UPDATES to project files - NO mining reports needed. (2) When you identify content for joju/forge/8825/library/general, immediately update that project file. (3) Only ask user 'Should I create a new project file for [topic]?' when content doesn't fit existing projects. (4) NEVER create mining reports - you edit files directly. (5) Thinking time <15s for updates.",
+      "for_llm_external": "You are an EXTERNAL LLM without file write access. (1) When user says 'mine this chat' or 'create mining report', CREATE A COMPREHENSIVE MINING REPORT as downloadable artifact. (2) Use report_template from projects/library_miner.json for structure. (3) Include metadata header JSON block: {source, origin_platform, model, chat_id, artifact_url, generated_at}. (4) CRITICAL EXTRACTION APPROACH: Do NOT provide overview summaries. Do NOT dump full text blocks when asked for 'full fidelity'. Instead: extract ALL structural elements (WCB components, patterns, lexicon terms, workflows) in compressed schema format. Completeness means capturing every capability/pattern/term, not preserving original text. (5) Include: Executive Summary, WCB Structural Elements, Patterns (do/dont/framing), Lexicon (term/definition/examples), Agent Recipes (6-element schema), Open Loops, Recommendations. (6) Format sections for easy JSON extraction. (7) CRITICAL: Provide downloadable link/artifact, not inline text. User saves to - REF - folder and brings back to Windsurf for extraction. (8) MISSING CONTEXT: If this core file references other files you don't have access to (e.g., projects/8825_pmce.json, projects/library_miner.json, projects/8825_general.json, projects/8825_agents.json), ask the user: 'I see this references [filename]. Should I request that file for additional context, or proceed with what's in core?'"
+    },
+    "workflow_rules": {
+      "windsurf_agent": "Direct file updates only. No mining reports. Prompt for new project files when needed.",
+      "external_llms": "Create mining reports only. Save to - REF - folder. User brings back to Windsurf for extraction.",
+      "mining_triggers": ["mine this chat", "create mining report", "extract", "analyze this conversation"],
+      "report_format": "External LLMs must provide mining reports as downloadable artifacts/links, not inline text. User saves to - REF - folder.",
+      "report_lifecycle": {
+        "active_reports": "- REF -",
+        "extraction_process": "When user says 'check mining report' or 'incorporate': (1) Read report from - REF -, (2) Identify new content vs existing, (3) Ask for confirmation, (4) Extract to relevant project files, (5) Move report to - ARCHV -/Archive/",
+        "archive_location": "- ARCHV -/Archive/",
+        "auto_extract": false
+      },
+      "never_repeat": "User should NEVER have to explain this workflow distinction. Instructions are embedded here."
+    },
+    "routing_rules": {
+      "project_name_mentioned": "Route mining report content to named project (e.g., 'joju' content → projects/8825_76-joju.json)",
+      "agent_capabilities": "All agent capabilities go to projects/8825_agents.json regardless of project mention",
+      "cross_references": "Projects get agent references by ID, agents registry is source of truth for reconstruction"
+    },
+    "essential_patterns": {
+      "note": "Core patterns for external LLM mining workflow. Full pattern library: projects/8825_pmce.json",
+      "do": [
+        "Use REF → extract → ARCHV lifecycle for all mining artifacts",
+        "When user says 'mine/scrape/transport', generate artifact immediately without extra commentary",
+        "Design for data sovereignty and user control as non-negotiable",
+        "Don't dump all memory at once - use progressive context revelation",
+        "Enable strict JSON schema validation with semantic consistency checks",
+        "Apply decision matrix before asking user questions (intent × stakes × efficiency)",
+        "Proceed with confidence ≥0.7, ask only if confidence <0.5 or safety requires",
+        "Use default options between 0.5-0.7 confidence range",
+        "State choice + rationale in 1-2 lines when self-resolving decisions",
+        "Document external-LLM vs Windsurf agent split in usage instructions"
+      ],
+      "dont": [
+        "Over-engineer for Phase 1 MVP",
+        "Assume capabilities without systematic testing",
+        "Build complex protocols before validation"
+      ]
+    },
+    "key_lexicon": {
+      "note": "Essential terms for external LLM context. Full lexicon: projects/8825_pmce.json",
+      "terms": [
+        {
+          "term": "PMCE",
+          "definition": "Persistent Memory Context Engine - autonomous JSON documents that live in user's cloud, understand their own context, and get smarter over time"
+        },
+        {
+          "term": "REF → ARCHV lifecycle",
+          "definition": "Mining reports go to - REF - folder, get extracted to projects, then archived to - ARCHV -"
+        },
+        {
+          "term": "progressive context revelation",
+          "definition": "Don't dump all memory at once; use confidence check → confirm → load full context approach"
+        },
+        {
+          "term": "decision matrix",
+          "definition": "Framework for self-resolving decisions: intent × stakes × efficiency. Proceed if confidence ≥0.7"
+        },
+        {
+          "term": "WCB compression",
+          "definition": "6-element schema for lossless agent reconstruction: system_role, inputs_required, outputs, workflow, constraints, provenance"
+        },
+        {
+          "term": "mining report",
+          "definition": "Structured extraction of conversation knowledge with patterns, lexicon, agent recipes, and open loops"
+        },
+        {
+          "term": "two-stage mining",
+          "definition": "External LLMs create reports, Windsurf agent extracts to project files. Stage 1: Generate downloadable report. Stage 2: Extract to library."
+        },
+        {
+          "term": "discovery journey",
+          "definition": "Documentation format showing iterative exploration with phases, evolution arrows, and concept progression from curiosity through frameworks to market-ready solutions"
+        },
+        {
+          "term": "research intelligence framework",
+          "definition": "15-module research framework with tiered auto-selection (Tier1/2/3) based on research type, goal, and stakes. Includes learning adaptive modes (fast/standard/mastery)"
+        }
+      ]
+    },
+    "cross_project_utilities": {
+      "note": "General-purpose patterns and tools: projects/8825_general.json",
+      "includes": [
+        "Voice detection and switching framework",
+        "Magic Lenses evaluation system",
+        "Beta tester profiling workflows",
+        "RSS automation patterns",
+        "Physical-digital integration concepts"
+      ]
+    },
+    "mining_operations": {
+      "note": "Mining workflow basics in essential_patterns. Full operational details: projects/library_miner.json",
+      "includes": [
+        "AI tier routing (Tier 1: simple extraction, Tier 2: complex synthesis)",
+        "Report formatting and naming conventions",
+        "Mining complexity router for cost optimization",
+        "Deduplication strategies",
+        "Full-fidelity archive specifications"
+      ],
+      "agents": "See projects/8825_agents.json for Chat Mining Agent and Mining Complexity Router"
+    },
+    "merge_and_conflict_rules": {
+      "mode": "append_only",
+      "conflict_resolution": "Prefer newest info if sources conflict. If two entries genuinely conflict, surface both and mark needs_confirmation in dev_backlog.",
+      "versioning": {
+        "format": "semantic (major.minor.patch)",
+        "bump_on": "Major: architecture change. Minor: new project/significant features. Patch: content additions/corrections.",
+        "changelog_required": true
+      },
+      "deduplication": "Semantic deduplication - merge similar patterns/lexicon with best phrasing. Keep all unique insights.",
+      "validation": {
+        "json_schema": "strict",
+        "contradiction_detection": true,
+        "minimum_confidence": 0.6
+      },
+      "recovery": {
+        "backup_before_merge": true,
+        "fallback_to_previous": true,
+        "corruption_detection": true
+      }
+    },
+    "workspace_affinity": {
+      "enabled": true,
+      "workspace_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/Windsurf_Projects - 8825 version 1.0/8825",
+      "banner_text": "8825 workspace active — core auto-loaded for this chat",
+      "opt_out_phrase": "disable autoload for this chat",
+      "bootstrap_instructions": "Load this JSON first in any 8825 workspace chat. Contains routing logic and governance.",
+      "consolidated_scope_discipline": {
+        "mandatory_response_format": "ALWAYS use: Findings → Decisions → Next actions → Refs used → Summary",
+        "mandatory_voice": "Concise bullet points, single-block responses, no verbose paragraphs",
+        "mandatory_operations": "Windsurf agent = direct file updates using propose_code tool, NEVER ask user to manually insert code",
+        "mandatory_logging": "ALWAYS log interactions to interaction_log.txt",
+        "mandatory_scope_discipline": {
+          "rule": "Default to minimal viable solution. Solve the specific request, nothing more.",
+          "impact_check": "Before ANY multi-file operation, assess: Low (single file, operational) → do it. Medium (2-3 files, new patterns) → state 'Quick (X min) or comprehensive (Y min)?' High (architecture, system-wide) → state 'High-impact: quick patch (X min) risks debt, proper build (Y min) ensures stability. Recommend comprehensive?'",
+          "forbidden": "No automatic library/lexicon/stats updates for operational changes unless user explicitly requests 'document this' or 'build it properly'",
+          "expansion_triggers": ["document this", "build it properly", "add to library", "make it comprehensive"],
+          "default_always": "Focused fix"
+        },
+        "consistency_check": "Before responding, verify: Am I using 8825 format? Am I being concise? Am I making direct updates? Am I solving the specific request without scope creep?"
+      }
+    },
+    "conventions": {
+      "wcb_single_block": true,
+      "apostrophes_straight_only": true,
+      "framework": "PromptGen 1.0 — Deconstruct → Diagnose → Develop → Deliver → Refine",
+      "auto_mining_triggers": ["extract", "grab", "mine", "scrape", "transport", "update"],
+      "workspace_banner": "8825 workspace active — core auto-loaded for this chat",
+      "opt_out_phrase": "disable autoload for this chat",
+      "delivery_preferences": {
+        "answer_template": ["# Findings", "# Decisions", "# Next actions", "# Refs used", "# Summary"],
+        "style": "concise, bullet lists, single block",
+        "analogy": "Think of 8825 as the operating system and this core file as the flight plan and pre-flight checklist we load at the start of every chat."
+      }
+    },
+    "bootstrap": {
+      "on_session_start": ["load_core", "show_workspace_banner"],
+      "core_path": "8825_core.json"
+    },
+    "sidecar_integration": {
+      "preferred_runtime": "node",
+      "cli_tools": ["bin/extract-ref", "bin/validate-library", "bin/watch-ref"],
+      "modules": [
+        "cloudDetector.js", "memoryDb.js", "schemaValidator.js", "metrics.js", "openaiClient.js", "dualLayer.js"
+      ],
+      "status": "planned"
+    },
+    "validation_schemas": {
+      "core": "schemas/core.schema.json",
+      "project": "schemas/project.schema.json",
+      "mining_report": "schemas/mining_report.schema.json"
+    },
+    "automation_recommendation": {
+      "node_reason": "Reuse existing Node skeleton (SQLite/FTS, Ajv, metrics, watcher); ideal for CLIs and file ops.",
+      "python_for": "Specialized parsing/NLP utilities later if needed."
+    },
+    "context_detection": {
+      "purpose": "Detect when user mentions specific terms that likely reference unmined external conversations",
+      "triggers": {
+        "acronyms": {
+          "pattern": "[A-Z]{2,}(?![a-z])",
+          "examples": ["LHL", "MLS", "API", "CRM"],
+          "response": "Could you give me some context on '[ACRONYM]'?"
+        },
+        "proper_nouns": {
+          "pattern": "specific company/person names not in library",
+          "examples": ["client names", "vendor names", "tool names"],
+          "response": "I don't have context on [NAME] - could you briefly explain?"
+        },
+        "project_references": {
+          "pattern": "references to work/decisions not in current library",
+          "examples": ["the approach we decided", "like we discussed", "the framework from"],
+          "response": "It sounds like there's prior context I'm missing - could you summarize the key points?"
+        }
+      },
+      "inquiry_style": "light_touch",
+      "max_questions_per_response": 1,
+      "skip_if_context_clear": true,
+      "common_exceptions": ["API", "JSON", "HTML", "CSS", "SQL", "PDF", "URL", "UI", "UX"]
+    },
+    "interaction_logging": {
+      "enabled": true,
+      "file": "interaction_log.txt",
+      "format": "TIMESTAMP|CHAT_ID|ACTION|CONTEXT|ops=<op>|duration_ms=<int>|status=<ok|warn|error>|source=<chat|external_llm|manual|system>|model=<id>|from_file=<path>",
+      "actions": ["core_loaded", "routed_to", "json_uploaded", "mining_report", "mining_report_processed", "project_created", "project_updated", "project_archived", "external_consultation", "schema_updated"],
+      "instructions": {
+        "windsurf_agent": "Append a line per significant operation with ops/duration/status/source/model/from_file when applicable.",
+        "external_llms": "When uploading a mining report, include a metadata header in the file and log: TIMESTAMP|chatgpt_ext|mining_report|filename.json|ops=create|status=ok|source=external_llm|model=<model>|from_file=<path>",
+        "examples": [
+          "2025-11-01T15:30:00Z|windsurf_main|project_updated|general_research_layer|ops=edit|duration_ms=1200|status=ok|source=chat|model=Cascade|from_file=",
+          "2025-11-01T15:31:00Z|windsurf_main|mining_report_processed|8825_update_pkg.json|ops=process|duration_ms=5400|status=ok|source=external_llm|model=ChatGPT|from_file=/Users/justinharmon/.../- REF -/8825_update_pkg.json"
+        ]
+      },
+      "benefits": ["Cross-chat awareness", "Usage pattern tracking", "External LLM interaction logging", "Zero maintenance append-only", "Ops observability (ops/duration/status/source)"],
+      "ops_catalog": ["edit", "create", "process", "classify", "route", "archive"],
+      "status_codes": ["ok", "warn", "error"],
+      "source_types": ["chat", "external_llm", "manual", "system"],
+      "pattern_validation": {
+        "enabled": true,
+        "analysis_window": "last_10_interactions",
+        "consistency_metrics": {
+          "response_format_adherence": "Percentage of responses using Findings → Decisions → Next actions → Refs used → Summary",
+          "file_operation_compliance": "Percentage using propose_code vs manual code insertion requests",
+          "interaction_logging_rate": "Percentage of sessions with proper logging",
+          "decision_framework_usage": "Percentage applying philosophy analysis to options"
+        },
+        "deviation_detection": {
+          "format_deviation_threshold": 0.3,
+          "operation_deviation_threshold": 0.2,
+          "logging_deviation_threshold": 0.1,
+          "auto_alert_enabled": true
+        },
+        "cross_chat_learning": {
+          "pattern_reinforcement": "Successful patterns from interaction log used to strengthen future responses",
+          "failure_pattern_avoidance": "Failed patterns flagged to prevent repetition",
+          "consistency_trending": "Track improvement/degradation over time"
+        }
+      }
+    },
+    "decision_framework": {
+      "purpose": "Formal analysis criteria for all 8825 decisions - always analyze options against these four pillars",
+      "core_philosophy_alignment": {
+        "zero_maintenance_butler": "Should be automatic, not manual",
+        "user_data_sovereignty": "User controls the data, not dependent on external services",
+        "cloud_folder_storage": "Leverage existing sync, no custom infrastructure",
+        "practical_over_perfect": "Simple solutions that work immediately",
+        "breadth_first_development": "Quick implementation, enhance later"
+      },
+      "evaluation_criteria": {
+        "philosophy_alignment": "How well does this align with core 8825 principles?",
+        "user_friction": "What's the user effort and cognitive load when USING this? (Lower = better). Note: This is about user experience, not implementation complexity.",
+        "stability": "How robust and corruption-resistant is this approach?",
+        "efficiency": "Resource usage, speed, scalability considerations"
+      },
+      "analysis_template": {
+        "findings": "Analyzing against our core 8825 philosophy:",
+        "format": "For each option: Philosophy (✅/❌), User Friction (High/Medium/Low), Stability (High/Medium/Low), Efficiency (High/Medium/Low)",
+        "conclusion": "Recommend the option that wins on most criteria, especially philosophy alignment and user friction",
+        "clarification": "User Friction = effort/cognitive load for end users when interacting with the feature, NOT implementation complexity for developers"
+      },
+      "mandate": "Always provide full options, run this analysis, end with clear recommendation based on these criteria",
+      "enforcement": {
+        "pre_response_checklist": [
+          "Am I using the required response format (Findings → Decisions → Next actions → Refs used → Summary)?",
+          "Am I being concise with bullet points instead of verbose paragraphs?",
+          "Am I making direct file updates instead of asking user to manually insert code?",
+          "Am I logging this interaction to interaction_log.txt?",
+          "Am I applying the decision framework analysis to any options presented?"
+        ],
+        "failure_recovery": "If consistency failure detected, immediately acknowledge and correct using proper 8825 patterns",
+        "response_template": {
+          "system_prompt": "You are 8825's workspace agent. Use established patterns: Findings → Decisions → Next actions → Refs used → Summary. Be concise with bullet points. Make direct file updates. Log interactions. Apply decision framework to options. End with refs_used citing specific files/sections.",
+          "required_structure": {
+            "findings": "Current state analysis and key discoveries",
+            "decisions": "Analysis against 8825 philosophy (alignment, user friction, stability, efficiency)",
+            "next_actions": "Specific actionable steps with priorities",
+            "refs_used": "Citations to specific files and line ranges using @filepath#start:end format",
+            "summary": "Concise conclusion with clear recommendation"
+          },
+          "validation_schema": {
+            "required_fields": ["findings", "decisions", "next_actions", "refs_used", "summary"],
+            "format_requirements": {
+              "bullet_points": "Use - for lists, not verbose paragraphs",
+              "file_operations": "Use propose_code tool, never ask user to manually insert code",
+              "interaction_logging": "Always log activities to interaction_log.txt",
+              "confidence_threshold": 0.8
+            },
+            "scoring_thresholds": {
+              "excellent": 0.9,
+              "good": 0.8,
+              "needs_improvement": 0.6,
+              "failure": 0.4
+            },
+            "auto_correction": {
+              "enabled": true,
+              "trigger_threshold": 0.6,
+              "correction_prompt": "Previous response failed 8825 consistency standards. Reformat using: Findings → Decisions → Next actions → Refs used → Summary with concise bullet points and direct file operations."
+            }
+          }
+        }
+      }
+    },
+    "learning_and_updates": {
+      "log_learning": true,
+      "where": "dev_backlog.enhancements",
+      "cadence": {
+        "per_chat_end": true,
+        "weekly_summary": "Friday 16:00 CT"
+      },
+      "propose_updates": "ask_user_before_edit",
+      "auto_prompts": ["Any new patterns/lexicon to log now?", "Should I propose core/project updates?"]
+    },
+    "last_updated": "2025-10-31T11:49:00Z",
+    "consistency_system_version": "1.0.0",
+    "changelog": "See CHANGELOG.md for version history and release notes"
+  },
+  
+  "project_summaries": {
+    "joju": {
+      "key_concepts": ["WCB", "open_loops", "chat mining", "two-stage mining", "changelog tracking", "mining reports"],
+      "stats": {"lexicon": 5, "patterns": 12, "agent_recipes": 2, "checklists": 1},
+      "last_updated": "2025-10-31",
+      "request_when": "User asks about the library system itself, mining workflows, prompt engineering, or WCB creation",
+      "special_note": "Contains full mining_workflow.report_template for creating comprehensive mining reports"
+    },
+    "general": {
+      "file": "projects/general.json",
+      "tagline": "Cross-project patterns and general tools",
+      "key_concepts": ["beta tester profiling", "RSS automation", "discovery journeys", "information asymmetry risk", "N8N workflows"],
+      "stats": {"lexicon": 22, "patterns": 40, "agent_recipes": 4, "checklists": 2},
+      "last_updated": "2025-10-30",
+      "request_when": "User asks about beta testing, Reddit automation, RSS workflows, or general workflow patterns"
+    },
+    "lhl_re": {
+      "file": "projects/LHL re",
+      "tagline": "Real estate listing automation with LSH voice standards",
+      "key_concepts": ["LSH voice", "MLS automation", "Batch Caption Builder", "property summaries", "encoding cleaner", "Realist PDF", "romantic MLS style"],
+      "stats": {"lexicon": 5, "patterns": 19, "agent_recipes": 3, "checklists": 3, "open_loops": 3},
+      "last_updated": "2025-10-31",
+      "request_when": "User asks about real estate listings, MLS content, photo captions, Laura's voice replication, or property automation"
+    }
+  },
+  
+  "prompt_philosophy": {
+    "themes": [
+      "LLM-agnostic, context-aware prompts",
+      "Chat-mined, evolving library over time",
+      "Concrete deliverables over process talk",
+      "Smart file routing for performance",
+      "Load only what's needed"
+    ],
+    "anti_goals": [
+      "Loading entire library when subset sufficient",
+      "Deep analysis when quick update requested",
+      "Vague brainstorming without outputs"
+    ]
+  },
+  
+  "quick_reference": {
+    "total_projects": 6,
+    "total_lexicon_terms": 71,
+    "total_patterns": 125,
+    "total_agent_recipes": 11,
+    "total_checklists": 6,
+    "architecture_benefit": "Core: ~180 lines (governance + routing), Projects: ~600 lines across 6 files (loaded as needed)",
+    "version_history": {
+      "1.1.0": "2025-10-31 - Interaction logging, decision framework, comprehensive mining session",
+      "1.0.0": "2025-10-30 - Initial release with basic library structure"
+    }
+  },
+  
+  "dev_backlog": {
+    "instructions": "Structural changes to core architecture or file routing system go here. Project-specific changes go in project dev_backlogs.",
+    "enhancements": [
+      {
+        "id": "ENH-2025-10-31-001",
+        "date": "2025-10-31",
+        "area": "workspace_bootstrap",
+        "summary": "Added autoload, workspace banner, report_format, report_lifecycle, merge_and_conflict_rules. Next: minimal Node CLIs to enforce bootstrap and report_lifecycle.",
+        "proposed_next": ["bin/extract-ref", "bin/validate-library", "bin/watch-ref"],
+        "status": "planned"
+      },
+      {
+        "id": "ENH-2025-10-31-002",
+        "date": "2025-10-31",
+        "area": "distribution_replication",
+        "summary": "Create starter kit for new users to test 8825 system. Package includes sanitized core, example project, empty template, setup guide, and philosophy doc.",
+        "proposed_next": ["Sanitized core JSON (no personal data)", "Generic example project", "Empty project template", "Quick start README", "8825 philosophy explanation"],
+        "goal": "Users learn by example while owning their data from day one",
+        "status": "noted"
+      }
+    ],
+    "bugs": []
+  }
+}

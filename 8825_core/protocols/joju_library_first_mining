@@ -1,0 +1,255 @@
+{
+  "command_name": "Library-First Mining",
+  "version": "1.0.0",
+  "parent_protocol": "8825_joju_mode v2.0",
+  "created": "2025-11-05T23:10:00-06:00",
+  "purpose": "Automated library-first ingestion workflow with auto-dedup",
+  
+  "command_usage": {
+    "trigger": "mine [source] --library-first",
+    "examples": [
+      "mine /path/to/resume.pdf --library-first",
+      "mine https://portfolio.com --library-first",
+      "mine Jh-ARCHV/folder/ --library-first"
+    ],
+    "description": "Extracts achievements from source, merges to master library with auto-dedup, presents changes for Joju input approval"
+  },
+  
+  "workflow_implementation": {
+    "step_1_extract": {
+      "function": "extract_achievements",
+      "input": "source_path or URL",
+      "process": [
+        "Apply 8825_mining protocol to source",
+        "Extract achievements with metrics, evidence, confidence scores",
+        "Create structured JSON output"
+      ],
+      "output": {
+        "file": "/joju_sandbox/mined/{source}_achievements.json",
+        "structure": {
+          "mining_session": {
+            "timestamp": "ISO 8601",
+            "source": "path or URL",
+            "total_achievements": "number"
+          },
+          "achievements": [
+            {
+              "id": "unique_id",
+              "text": "achievement description",
+              "metrics": {},
+              "evidence": {},
+              "confidence_score": "0-100",
+              "category": "design|technical|leadership|etc",
+              "tags": []
+            }
+          ]
+        }
+      }
+    },
+    
+    "step_2_merge_to_library": {
+      "function": "merge_to_master_library",
+      "input": "mined achievements JSON",
+      "process": [
+        "Load JH_master_library.json",
+        "Initialize dedup engine",
+        "For each mined achievement:",
+        "  1. Calculate semantic similarity with existing library achievements",
+        "  2. If similarity > 80%:",
+        "     - Mark as duplicate",
+        "     - Merge new metrics/evidence into existing",
+        "     - Update confidence score (take highest)",
+        "     - Add to enrichment_history",
+        "  3. If similarity < 80%:",
+        "     - Add as new achievement",
+        "     - Set joju_status = 'pending_joju'",
+        "     - Tag with source and timestamp",
+        "Save updated library",
+        "Generate merge report"
+      ],
+      "dedup_algorithm": {
+        "method": "Keyword overlap + context matching",
+        "steps": [
+          "Extract key terms from both achievements",
+          "Calculate Jaccard similarity of keywords",
+          "Check for matching metrics/numbers",
+          "Check for matching company/project names",
+          "Combine scores with weights: keywords(50%), metrics(30%), context(20%)"
+        ],
+        "threshold": "80% = duplicate, 60-79% = similar (flag for review), <60% = unique"
+      },
+      "merge_strategy": {
+        "metrics": "Combine all unique metrics from both",
+        "evidence": "Append new evidence to existing",
+        "confidence": "Take max(existing, new)",
+        "text": "Keep most detailed version",
+        "tags": "Union of all tags"
+      },
+      "output": {
+        "updated_library": "JH_master_library.json",
+        "merge_report": "/joju_sandbox/merged/{source}_merge_report.json",
+        "report_structure": {
+          "summary": {
+            "new_achievements": "count",
+            "enrichments": "count",
+            "duplicates_skipped": "count",
+            "total_processed": "count"
+          },
+          "new_achievements": ["list with IDs"],
+          "enrichments": [
+            {
+              "existing_id": "id",
+              "existing_text": "original",
+              "new_additions": "what was added",
+              "confidence_change": "before → after"
+            }
+          ],
+          "duplicates_skipped": ["list with similarity scores"]
+        }
+      }
+    },
+    
+    "step_3_present_changes": {
+      "function": "present_to_user",
+      "input": "merge_report.json",
+      "format": {
+        "header": "📚 Library Updated!",
+        "summary": "✅ {new} new achievements\n✅ {enriched} enrichments\n✅ {skipped} duplicates merged",
+        "details": {
+          "new_section": {
+            "title": "🆕 New Achievements",
+            "format": "- [{confidence}%] {achievement_text}",
+            "limit": "Show top 10, offer to see all"
+          },
+          "enriched_section": {
+            "title": "✨ Enrichments",
+            "format": "- {existing_text}\n  + Added: {new_additions}",
+            "limit": "Show top 5"
+          },
+          "skipped_section": {
+            "title": "🔄 Duplicates Merged",
+            "format": "- {achievement_text} ({similarity}% match)",
+            "limit": "Show top 3"
+          }
+        },
+        "prompt": {
+          "question": "Add to Joju input?",
+          "options": [
+            "A. Add all new achievements",
+            "B. Add selected achievements (I'll specify)",
+            "C. Skip for now (keep in library only)",
+            "D. Show detailed comparison"
+          ]
+        }
+      }
+    },
+    
+    "step_4_update_joju_input": {
+      "function": "update_joju_from_library",
+      "input": "user selection + library",
+      "process": [
+        "For each approved achievement:",
+        "  1. Pull from library (with all enrichments)",
+        "  2. Determine target section (workExperience, projects, skills)",
+        "  3. Format for Joju readCV structure",
+        "  4. Insert into appropriate section",
+        "  5. Update library: set joju_status = 'active_in_joju'",
+        "  6. Update library: set joju_section and date_added_to_joju",
+        "Validate JSON structure",
+        "Save justin_harmon_joju_input.json"
+      ],
+      "section_mapping": {
+        "workExperience": "Achievements with company/role context",
+        "projects": "Standalone projects or initiatives",
+        "skills": "Technical skills, tools, methodologies",
+        "awards": "Recognition, certifications, honors"
+      },
+      "formatting_rules": {
+        "bullet_format": "- {achievement_text}",
+        "max_length": "200 characters per bullet",
+        "metric_emphasis": "Bold or highlight key metrics",
+        "deduplication": "Don't add if already exists in Joju input"
+      }
+    },
+    
+    "step_5_version": {
+      "function": "create_versions",
+      "process": [
+        "Increment revision number (get from library)",
+        "Generate version suffix from source name",
+        "Copy JH_master_library.json → 8825X76 sandbox/JH_master_library_{rev#}-{source}.json",
+        "Copy justin_harmon_joju_input.json → 8825X76 sandbox/justin_harmon_joju_input_{rev#}-{source}.json",
+        "Update library session log",
+        "Validate both copies"
+      ],
+      "naming_convention": {
+        "format": "{filename}_{rev#}-{source-type}.json",
+        "rev_format": "Two digits with leading zero (01, 02, 03...)",
+        "source_format": "Lowercase, hyphenated (prtcl-shinola, trustybits, portfolio-website)"
+      }
+    }
+  },
+  
+  "error_handling": {
+    "extraction_failure": {
+      "action": "Log error, skip source, notify user",
+      "recovery": "Offer to retry with different extraction method"
+    },
+    "library_merge_conflict": {
+      "action": "Flag conflicting achievements for user review",
+      "display": "Show both versions side-by-side",
+      "prompt": "Which version to keep? [Existing/New/Merge manually]"
+    },
+    "joju_validation_failure": {
+      "action": "Rollback Joju input changes, keep library updates",
+      "notify": "Library updated but Joju input unchanged due to validation error",
+      "recovery": "Fix validation issue and retry step 4"
+    }
+  },
+  
+  "efficiency_features": {
+    "auto_dedup": "No manual comparison needed, semantic matching is automatic",
+    "smart_merge": "Enriches existing achievements instead of creating duplicates",
+    "single_source_of_truth": "Library is always up-to-date, Joju input is derived view",
+    "minimal_user_input": "User only approves final Joju changes, library updates are automatic",
+    "rollback_safety": "Versioned copies enable easy rollback if needed",
+    "batch_processing": "Can process multiple sources in sequence with cumulative updates"
+  },
+  
+  "example_session": {
+    "command": "mine Jh-ARCHV/new-resume.pdf --library-first",
+    "output_sequence": [
+      "🔍 Extracting achievements from new-resume.pdf...",
+      "✅ Extracted 15 achievements",
+      "📚 Merging to master library...",
+      "  - 8 new achievements added",
+      "  - 5 enrichments to existing",
+      "  - 2 duplicates merged",
+      "✅ Library updated (v2.1.0)",
+      "",
+      "📊 Summary:",
+      "🆕 8 New Achievements:",
+      "  - [92%] Led design team of 12 across 3 product lines...",
+      "  - [88%] Increased conversion rate by 34% through UX redesign...",
+      "  ...",
+      "",
+      "✨ 5 Enrichments:",
+      "  - Existing: Designed eyewear collections...",
+      "    + Added: Worked with Italian factories, 15+ collections",
+      "  ...",
+      "",
+      "Add to Joju input? [A/B/C/D]",
+      "> A",
+      "",
+      "✅ Joju input updated!",
+      "✅ Rev 10 created: justin_harmon_joju_input_10-new-resume.json",
+      "✅ Library saved: JH_master_library_10-new-resume.json"
+    ]
+  },
+  
+  "integration_with_existing": {
+    "backward_compatible": "Can still use old workflow if needed",
+    "migration_path": "Existing library can be enhanced with joju_status fields",
+    "command_flag": "Use --library-first flag to trigger new workflow, default to old workflow for compatibility"
+  }
+}

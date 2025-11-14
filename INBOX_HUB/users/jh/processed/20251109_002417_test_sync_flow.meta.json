@@ -1,0 +1,10 @@
+{
+  "lane": "A",
+  "priority": 0.81,
+  "scope": "local",
+  "change_pressure": "low",
+  "target_focus": "jh",
+  "source": "manual",
+  "freshness": 1.0,
+  "processed_at": "2025-11-09T00:28:36.210640"
+}

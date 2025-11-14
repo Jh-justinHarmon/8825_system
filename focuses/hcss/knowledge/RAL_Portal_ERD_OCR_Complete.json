@@ -1,0 +1,240 @@
+{
+  "image_000": {
+    "image_number": 0,
+    "filename": "erd_page_000.png",
+    "text": "2017 TAX DATA\n\n[dbo]. [TaxCalcData2017_old]\n\nClient] [varchar](255) NULL\n\n[dbo].[TaxCalcData201 7]\n\nClient] [varchar](255) NULL\n\nEIN] [varchar(255) NULL EIN] [varchar(255) NULL\n\nOVERPAYMENT TO C/Y] [money] NULL OVERPAYMENT] [money] NULL\n1st Quarter] [money] NULL Q1] [money] NUL\n2nd Quarter] [money] NULL Q2] [money] NUL\n\n3rd Quarter] [money] NULL Q3] [money] NULL\n\n4th Quarter] [money] NULL @4] [money] NULL\n\nAmount Deposited with Extension] [money] NULL\n\nExtension] [money] NULL\n\nFQ] [varchar((255) NUL InsuranceLicenceDate] [datetime] NULL\n\nvarchar](255) NU Client_id] [int] NULL\nvarchar](255) NU\n\nvarchar](255) NU\n\n[dbo]. [TaxClientFormLog_2017]\nPx | CONSTRAINT [PK_TaxClientFormLog] C\n\nTaxClientFormLog_ID] [int] IDENTITY(1,1)\n\nvarchar](255) NU\nvarchar](255) NU\n\nvarchar(255) NU Client_ID] [int] NOT NULL\n\nvarchar|(255) NU Year] [int] NOT NULL\n\nvarchar(255) NU FormCreated] [int] NOT NULL\n\nwarehar255)NU ProjectCreated] [int] NOT NULL\n\nvarchar](255) NU\n\nTaxClientFormLog_ID] ASC\nvarchar](255) NU\n\nvarchar](255) NU\nvarchar](255) NU\nvarchar](255) NU\n\nvarchar](255) NU\n\nvarchar](255) NU\n\nClients\n\n[dbo]. [TaxClientsNew2017]\n\n[ClientName] [varchar](255) NULL Client_ID\n\n[Client_ID] [float] NULL\n",
+    "line_count": 68,
+    "char_count": 1196
+  },
+  "image_001": {
+    "image_number": 1,
+    "filename": "erd_page_001.png",
+    "text": "CALENDARS\n\n[dbo].[Calendars] [dbo]. [Calendars_TD]\n\nPx | CONSTRAINT [PK_dbo.Calendars] CLUSTERED Px | CONSTRAINT [PK_dbo.Calendarsff] CLUSTERED}\n\nCalendar_ID] [int] IDENTITY(1,1) NOT NULL PK | [Calendar_ID] [int] IDENTITY(1,1) NOT NULL\nCalendarDate] [datetime] NOT NULL CalendarDate] [datetime] NOT NULL\n\nYear] [int] NOT NULL Year] [int] NOT NULL\n\nYearMonth] [int] NOT NULL YearWeek] [int] NULL\n\nQuarter] [int] NOT NULL YearMonth] [int] NOT NULL\n\nQuarterDescription] [varchar](2) NULL YearQuarter] [int] NULL\n\nMonthName] [varchar](10) NULL Quarter] [int] NOT NULL\n\nMonth] [int] NOT NULL QuarterDescription] [varchar](2) NULL\nLastMonthofQuarter] [int] NOT NULL MonthName] [varchar](10) NULL\nWeek] [int] NOT NULL Month] [int] NOT NULL\n\nDayOfYear] [int] NOT NULL LastMonthofQuarter] [int] NOT NULL\nDayOfQuarter] [int] NOT NULL Week] [int] NOT NULL\n\nDayOfMonth] [int] NOT NULL DayOfYear] [int] NOT NULL\n\nDayOfWeek] [int] NOT NULL DayOfQuarter] [int] NOT NULL\n\nDayNameOfWeek] [varchar(10) NULL DayOfMonth] [int] NOT NULL\n\nYearQuarter] [int] NOT NULL DayOfWeek] [int] NOT NULL\n\nYearWeek] [int] NOT NULL DayNameOfWeek] [varchar(10) NULL\n\nCalendar_ID] ASC Calendar_ID] ASC\n\n",
+    "line_count": 39,
+    "char_count": 1166
+  },
+  "image_002": {
+    "image_number": 2,
+    "filename": "erd_page_002.png",
+    "text": "ENTITY\n\n[dbo]. [EntityEvents] [dbo]. [EntityUsers]\nPx | CONSTRAINT [PK_dbo.EntityEvents] CLUSTERE! Px | CONSTRAINT [PK_dbo.EntityUsers] CLUSTERED\n\nEntityEvent_ID] [int] IDENTITY(1,1) NOT NULL EntityUser_ID] [int] IDENTITY(1,1) NOT NULL\n\nEntityType_ID] [int] NOT NULL\n\nUser_ID] [int] NOT NULL\n\nEntity_ID] [int] NOT NULL EntityType_ID] [int] NOT NULL\n\nAppEvent_ID] [int] NOT NULL\n\nEntity_ID] [int] NOT NULL\n\nEntityEventPeriod] [int] NOT NULL UserOrganizationld] [varchar](255) NULL\n\nEntityEventCreatedDate] [datetine] NOT NULL Contact_ID] [int] NULL\n\nProject_ID] [int] NOT NULL EntityUser_ID] ASC\n\nProjectlaskChecksum] [int] NULL\n\nEntityEvent_ID] ASC\n[dbo]. [EntityLockouts]\nPx | CONSTRAINT [PK_dbo.EntityLockouts] CLUSTER\n\nEntityLockout_ID] [int] IDENTITY(1,1) NOT NULL\n\n[dbo]. [EntityRelations]\n\nEntityType_ID] [int] NOT NULL\nCONSTRAINT [PK_dbo.EntityRelations] CLUSTER\n\n; ; ; Entity_ID] [int] NOT NULL\nEntityRelation_ID] [int] IDENTITY(1,1) NOT NULL\n\n; ; | ControllerName] [varchar(255) NOT NULL\nEntityRelationType_ID] [int] NOT NULL\n\n\u2014 \u2018 User_ID] [int] NOT NULL\nHomeEntityType_ID] [int] NOT NULL\n\n; . IsActive] [bit] NOT NULL\nHomeEntity_ID] [int] NOT NULL\n\n; | ActiveStartDateTime] [datetime] NOT NULL\nRelatedEntityType_ID] [int] NOT NULL\n\n; | LastActivityDateTime] [datetine] NOT NULL\nRelatedEntity_ID] [int] NOT NULL\n\n; | EntityLockout_ID] ASC\nActiveFromDate] [datetime] NOT NULL\n\nActiveToDate] [datetime] NULL\n\nEntityRelationDescription] [varchar(255) NOT NULL]\n\n[dbo].[EntityTypes]\nPx | CONSTRAINT [PK_dbo.EntityTypes] CLUSTERED\n\n[EntityType_1D] [int] IDENTITY(1,1) NOT NULL\n\n[EntityTypeName] [varchar(25) NOT NULL\n[dbo]. [EntityRelationTypes]\n[EntityType_ID] ASC\nCONSTRAINT [PK_dbo.EntityRelationTypes] CLUS\n\n[EntityRelationType_ID] [int] IDENTITY(1,1) NOT NUL\n\n[EntityRelationTypeName] [varchar(25) NOT NULL .\nProjects AppEvents\n[EntityRelationType_ID] ASC Project_ID AppEvent_ID\n\nEntityRelation_ID] ASC\n\n",
+    "line_count": 80,
+    "char_count": 1913
+  },
+  "image_003": {
+    "image_number": 3,
+    "filename": "erd_page_003.png",
+    "text": "TABLES\n\n[dbo].[BaseTables]\n\nPx | CONSTRAINT [PK_dbo.BaseTables] CLUSTERED\n\n[dbo].[RelatedTables]\n\nPx | CONSTRAINT [PK_dbo.RelatedTables] CLUSTER!\n\n[RelatedTableld] [int] IDENTITY(1,1) NOT NULL BaseTableld] [int] IDENTITY(1,1) NOT NULL\n\n[RelatedTableld] ASC RelatedTableld] [int] NOT NULL\n\notherld] [int] NOT NULL\n\nRelatedTable_RelatedTableld] [int] NULL\n\n[dbo]. [StatusTables]\n\nPx | CONSTRAINT [PK_dbo.StatusTables] CLUSTERE\n\nRelatedTable 1_RelatedTableld] [int] NULL\n\nBaseTableld] ASC\n\n[Status_|D] [int] IDENTITY(1,1) NOT NULL\n\n[StatusName] [varchar(50) NOT NULL\n[StatusDesc] [varchar](100) NULL\n\n[Status_ID] ASC\n\n",
+    "line_count": 34,
+    "char_count": 615
+  },
+  "image_004": {
+    "image_number": 4,
+    "filename": "erd_page_004.png",
+    "text": "CONSTRAINT [PK_ dbo. Bankscession2016] CL\n\n[BankCession2016_1D) [int] IDENTITY (1,1) NOT N\n\n[BankDataw] [varchar](255) NULL\n\n[Accountant] [varchar] (255) NULL\n[Agency] [varchar](255) NULL\n\n[Client] [varchar)(255) NULL\n\n[Bankinsurer] [varchar](255) NULL\n\n[AccountNumberProduct] [varchar](255) NULL\n\n[Contact] [varchar](255) NULL\n\n[Contactemail] [varchar](255) NULL\n\n[DOCUMENTSRCVD] [varchar](255) NULL\n\n[Login] [varchar](255) NULL.\n(JAN_R] [varchar](255) NULL\n(JAN_B] [varchar](255) NULL\n[FEB_R] [varchar](255) NULL.\n[FEB_B] [varchar](255) NULL\n[MAR_R] [varchar](255) NULL.\n[MAR_B] [varchar](255) NULL.\n[APR_R] [varchar](255) NULL.\n[APR_B] [varchar](255) NULL\n[MAY _R] [varchar](255) NULL.\n[MAY _B] [varchar](255) NULL\n(JUN_R] [varchar](255) NULL.\n(JUN_B] [varchar](255) NULL\n(JUL_R] [varchar](255) NULL\n(JUL_B) [varchar](255) NULL\n[AUG_R] [varchar](255) NULL.\n[AUG_B] [varchar](255) NULL\n[SEP_R] [varchar](255) NULL\n[SEP_B] [varchar](255) NULL.\n[OCT_R] [varchar](255) NULL\n[OCT_B] [varchar](255) NULL.\n[NOV_R] [varchar](255) NULL.\n[NOV_B] [varchar](255) NULL\n[DEC_R] [varchar](255) NULL\n[DEC_B] [varchar](255) NULL\n[Quarterly] [bit] NULL.\n[JAN_R_Date] [date] NULL.\n(JAN_B Date] [date] NULL\n[FEB_R_Date] [date] NULL\n[FEB_B_Date] [date] NULL\n[MAR_R_Date] [date] NULL\n[MAR_B_Date] [date] NULL\n[APR_R_Date] [date] NULL\n[APR_B_Date] [date] NULL\n[MAY _R_Date] [date] NULL\n\n[MAY _B Date] [date] NULL\n\nCESSIONS P2\n\nNOTE: The table on\nthe right, is simply the\n\nsecond half of the table on the\nleft, since the attributes were\ntoo long to fit on one page.\n\n[JUN_R_Date] [date] NULL\n[JUN_B_Date] [date] NULL.\n[JUL_R_Date] [date] NULL\n\n[JUL_B_Date] [date] NULL\n\n[AUG_R_Date] [date] NULL\n[AUG_B_Date] [date] NULL\n[SEP_R_Date] [date] NULL\n[SEP_B_Date] [date] NULL\n[OCT_R_Date] [date] NULL\n[OCT_B_Date] [date] NULL\n[NOV_R_Date] [date] NULL\n[NOV_B_Date] [date] NULL\n[DEC_R_Date] [date] NULL\n[DEC_B_Date] [date] NULL\n\n[BS_D] fint] NOT NULL\n\n[Client_1D} fint] NULL\n\n[BankData] [bit] NULL\n\n[BankCession2016_ID] ASC\n",
+    "line_count": 93,
+    "char_count": 1995
+  },
+  "image_005": {
+    "image_number": 5,
+    "filename": "erd_page_005.png",
+    "text": "MISC P2\n\n[dbo].[__MigrationHistory] [dbo].[DismissedAlerts]\nCONSTRAINT [PK dbo. MiarationHistory2] CLUSTERED CONSTRAINT [PK dbo. DismissedAlerts] CLUSTERED\n\n(Migration! d] [nvarchar](150) NOT NULL [DismissedAlerts_ID] [int] IDENTITY (1,1) NOT NULL\n[ContextKey] [nvarchar](300) NOT NULL {User_ID) fint] NOT NULL\n\n[Model] [varbinary](max) NOT NULL [DismissedDate] [datetime] NOT NULL\n[ProductVersion] [nvarchar](32) NOT NULL [DismissedType] fint] NOT NULL\n\n[Migration!d] ASC [DismissedAlerts_ID] ASC\n\n[Contextkey] ASC\n\n[dbo].[BSMatrices]\nCONSTRAINT [PK_dbo.BSMatrices] CLUSTERED\n\n[BSMatrix_|D] [int] IDENTITY(1,1) NOT NULL\n\n[dbo].[AppEvents]\n\nCONSTRAINT [PK_dbo.AppEvents] CLUSTERED\n[AppEvent_[D] fint] IDENTITY (4,1) NOT NULL [Client_1D) fint] NOT NULL\n[EventName] [varchar](100) NOT NULL {Carrier_1D) fint] NOT NULL\n[EventFrequency] [varchar](100) NOT NULL [InsuranceType_|D] [int] NOT NULL\n[ProjectTemplate_ID] [int] NOT NULL [Administrator_ID] [int] NOT NULL\n[EventFrequencyDateNum] [int] NULL [InsuranceTypedesc] [varchar](8000) NULL\n{EntityType_ID] [int] NOT NULL [InsuranceTypeContact] [varchar] (8000) NULL\n{Entity_|D) [int] NOT NULL [MGAName] [varchar](8000) NULL\n[ActiveFromDate] [datetime] NULL [TrustBankNam\u00e9] [varchar] (8000) NULL\n[ActiveToDate] [datetime] NULL [TrustBankAcct] [varchar](000) NULL\n[AppEvent_ID] ASC [TrustBankContact] [varchar](000) NULL\n[InvestmentBankName] [varchar](000) NULL\n\n[InvestmentBankAcct] [varchar](000) NULL\n\nEntityTypes\n\nEntityType_ID\n\nClient_ID\n\nAdministrators\n\nAdministrator_ID\n\n[investmentBankContact] [varchar](000) NULL\n\n[Bs_ID_Product] [int] NOT NULL.\n\n[Bs_ID_Trust] [int] NOT NULL\n\nCarriers\n[Bs_ID_Investment] [int] NOT NULL\n\nCarier_ID\n\n[BSMatrix_ID] ASC\n\nInsuranceTypes\n\nClient_ID\n",
+    "line_count": 64,
+    "char_count": 1731
+  },
+  "image_006": {
+    "image_number": 6,
+    "filename": "erd_page_006.png",
+    "text": "TEMPLATES\n\n[dbo].[Templates]\nfr | cossmaurindonmmncue |\nPK\n\n[Template_|D] [int] IDENTITY(1,1) NOT NULL\n\n[dbo].[TemplateTaskActions]\n(PK | [lemplateTaskAction_ID) [int] IDENTITY (1,1) NOT NULL.\n\n[TemplateName] [varchar](255) NOT NULL\n\n[TemplateTask_1D) [int] NOT NULL\n\n[TemplateDesc] [varchar](255) NULL [TaskResultFlag] [bit] NOT NULL\n\n{CreateDate] [datetime] NOT NULL [NextAction_ID] fint] NOT NULL\n\n{IsDefautt] [bit] NOT NULL [TemplateTaskAction_ID] ASC\n\n{Template_ID] ASC\n\n[dbo] [TemplateTasks]\n| | CONSTRAINT [PK_dbo. TemplateTasks] CLUSTERED\n\n\u2018PK | [TemplateTask_ID] [int] IDENTITY(1,1) NOT NULL\n\n[Template_ID} {int} NOT NULL\n\n[Taskitem_1D} [int] NOT NULL\n\n[TaskSequence] [int] NOT NULL.\n\n[CreateDate] [datetime] NOT NULL\n\n[TemplateTask_1D] ASC\n\nTaskitems\n\nTaskitem_ID\n\n",
+    "line_count": 43,
+    "char_count": 775
+  },
+  "image_007": {
+    "image_number": 7,
+    "filename": "erd_page_007.png",
+    "text": "ASP_NET\n\n[dbo].[AspNetUsers] [dbo].[AspNetUserLogins]\n\nPx | CONSTRAINT [PK_dbo.AspNetUsers] CLUSTEREI Px | CONSTRAINT [PK_dbo.AspNetUserLogins] CLUS\n\nId] [nvarchar|(128) NOT NULL\n\nLoginProvider] [nvarchar](128) NOT NULL\nFirstName] [nvarchar}(100) NOT NULL ProviderKey] [nvarchar](128) NOT NULL\n\nLastName] [nvarchar](100) NOT NULL\n\nUserld] [nvarchar(128) NOT NULL\n\nUserOrganizationld] [nvarchar\\128) NULL LoginProvider] ASC\n\nEmail] [nvarchar](256) NULL ProviderkKey] ASC\n\nEmailConfirmed] [bit] NOT NULL Userld] ASC\n\nPasswordHash] [nvarchar](max) NULL\n\nSecurityStamp] [nvarchar](max) NULL [dbo].[AspNetUserClaims]\nPhoneNumber] [nvarchar](max) NULL Px | CONSTRAINT [PK_dbo.AspNetUserClaims] CLUS\n\nPhoneNumberConfirmed] [bit] NOT NULL [Id] [int] IDENTITY(4,1) NOT NULL\nTwoFactorEnabled] [bit] NOT NULL [Userld] [nvarchar](128) NOT NULL\n\nLockoutEndDateUtc] [datetime] NULL [ClaimType] [nvarchar](max) NULL\n\nLockoutEnabled] [bit] NOT NULL [ClaimValue] [nvarchar](max) NULL\n\nAccessFailedCount] [int] NOT NULL [Id] ASC\n\nUserName] [nvarchar(256) NOT NULL\n\nIsActive] [bit] NOT NULL\n[dbo]. [AspNetRoles]\n\nId] ASC\nCONSTRAINT [PK_dbo.AspNetRoles] CLUSTERE\n\n[Id] [nvarchar](128) NOT NULL\n\n[Name] [nvarchar](256) NOT NULL\n[dbo]. [AspNetUserRoles]\n| [RoleType_ID] [bigint] NULL\nCONSTRAINT [PK_dbo.AspNetUserRoles] CLUS\u2019\n\n[Userld] [nvarchar|(128) NOT NULL [Discriminator] [nvarchar](128) NOT NULL\n\n[ld] ASC\n\n[Roleld] [nvarchar](128) NOT NULL\n\n[Userld] ASC\n\n[Roleld] ASC UserOrganizations RoleTypes\nUserOrganizationld RoleType_ID\n\n",
+    "line_count": 62,
+    "char_count": 1513
+  },
+  "image_008": {
+    "image_number": 8,
+    "filename": "erd_page_008.png",
+    "text": "FINAL RESULT 2\n\nThis is a Temporary\n\nStatementType] [varchar](7) NOT NULL T;\nable\n\nClientName] [varchar](255) NOT NULL\n\nBankName] Warenar( i) NOT NEN: It is generated as the result\nBankAccountNumber] [varchar](1) NOT NULL of a stored procedure at run-\nCarrierName] [varchar](255) NULL time and is not used for\n\nAdministratorN: har](255) NULL a zi\nnner eae) storing data otherwise.\n\nInsuranceTypeName] [varchar](255) NULL\nReceivedYearMonth] [varchar](61) NULL\nBookedYearMonth] [varchar](61) NULL\nClient_ID] [int] NOT NULL\nAccountOrCession_|D] [int] NOT NULL\nAcctName] [varchar](255) NULL\nComments] [varchar](max) NULL\n\ncalrx] [int] NULL\n\ncalbx] [int] NULL\n\nAgencyName] [varchar(255) NULL\nsQuarterly] [bit] NOT NULL\n\nFrequency] [varchar](255) NOT NULL\nDelivery] [varchar](255) NULL\nContactEmail] [varchar](255) NULL\nPercentRecieved] [int] NULL\nPercentBooked] [int] NULL\nPercentCompleted] [int] NULL\n\nPercentRecievedCurrentYear] [int] NULL\n\nPercentBookedCurrentYear] [int] NULL\n\nPercentCompletedC urrentYear] [int] NULL\n\n",
+    "line_count": 45,
+    "char_count": 1018
+  },
+  "image_009": {
+    "image_number": 9,
+    "filename": "erd_page_009.png",
+    "text": "KEY\n\nRectangles with\nCircular Edges\n\nThese indicate a table that is listed on\nanother page, one that provides a\n\nkey reference to a table on the\npage where it is placed upon. Clicking\non them will lead to the sheet on\nwhich they are defined.\n\n\u2018These reference an\n\u2018existing primary key.\n\n[dbo]. [TaxClientFormLog_2017]\nFK CONSTRAINT [PK_TaxClientFormLoa] C\ni TaxClientFormLog_ID] [int] IDENTITY(1,1)\n\nThese reference a Client_ID] [int] NOT NULL\nmissing foreign key Year] [int] NOT NULL\ndependency, that need\n\u2018be added, and\n\u2018inherited from the ProjectCreated] [int] NOT NULL\nitable the arrow TaxClientFormLog_ID] ASC\n\n\u2018originates from.\n\nCONSTRAINT [PK dbo.ClientBankAccounts] CLUSTERED\n\nFormCreated] [int] NOT NULL\n\n[ClientBankAccount_ID] [int] IDENTITY (1,1) NOT NULL\n\n{Client_1D] fint] NOT NULL\n\nThese reference a\ni possible foreign key [IsQuarterly) [bit] NOT NULL\ni \u2018relationship, origin [ContactName] [verchar](256) NULL\n' unknown. [ContactEmail] [varchar](255) NULL\n\n[BS_[D] [int] NOT NULL\n\n[BankAccount_{D] fint] NOT NULL\n\n[ActiveFromDate] [datetime] NULL.\n[ActiveToDate] [datetime] NULL\n[User_ID] [int] NOT NULL\n[Contact_ID] [int] NULL\n\nThese reference an [RecordCreatecDate} [datetime] NULL\n\nexisting foreign key. (BankCessionDelvery_[D) Int NULL\n\n[SurplusAccount] [bit] NULL\n\n[ClientBankAccount_ID] ASC\n\nThese reference an\nindex.\n",
+    "line_count": 62,
+    "char_count": 1338
+  },
+  "image_010": {
+    "image_number": 10,
+    "filename": "erd_page_010.png",
+    "text": "CLIENTS P3\n\n[dbo] {ClientBankAccountDatas]\n\nCONSTRAINT [PK dbo. ClientBankAccountDatas] CLUSTERED\n\n{ClientBankAccountData_ID) [int] IDENTITY (1,1) NOT NULL\n\nClientBankAccounts\nClientBankAccount_ID\n\nCalendars [ClientBankAccount_ID] [int] NOT NULL\n\nCalendar_ID [Calendar_|D] [int] NOT NULL\n\n[ReceivedDate] [datetime] NULL\n\n[BookedDate] [datetime] NULL\n\n[Amount] [decimal](18, 2) NULL\n\n[Comment] [varchar](255) NULL\n\n[DateWorked] [datetime] NULL\n\n[ExpiryDateWorked] [datetime] NULL\n\n[RecordCreatedDate] [datetime] NULL\n\n[ClientBankAccountData_ID] ASC\n",
+    "line_count": 31,
+    "char_count": 548
+  },
+  "image_011": {
+    "image_number": 11,
+    "filename": "erd_page_011.png",
+    "text": "LICENSING\n\n[dbo].[LicensingAuthLocations]\nCONSTRAINT [PK_dbo.LicensingAuthLocations\n\nLicensingAuthLocation_ID] [int] IDENTITY(1,1) NOT 'PK | [LicensingAuth_ID] [int] IDENTITY(1,1) NOT NULL\n\n[dbo].[LicensingAuths]\n\nPx | CONSTRAINT [PK_dbo.LicensingAuths] CLUSTE\n\nLicensingAuth_ID] [int] NOT NULL LicensingAuthName] [varchar](255) NOT NULL\nLocation_ID] [int] NOT NULL LicenseNumber] [varchar(50) NULL\nEffectiveDate] [datetime] NOT NULL Taxl DNumber] [varchar](20) NULL\n\nExpirationDate] [datetime] NOT NULL Domicile] [varchar\\255) NULL\n\nSourceLicensingAuthL ocationCode] [nvarchar](max) LicensingAuth_ID] ASC\n\nLicensingAuthLocation_ID] ASC.\n\nLocations\n\nLocation_ID\n",
+    "line_count": 25,
+    "char_count": 662
+  },
+  "image_012": {
+    "image_number": 12,
+    "filename": "erd_page_012.png",
+    "text": "RAL CONTACTS\n\n[dbo]. [ClientRALContacts] [dbo].[RALContacts]\n\nClient_ID] [int] NOT NULL ContactlD] [int] IDENTITY(1,1) NOT NULL\nContactlD] [int] NOT NULL Name] [varchar(255) NOT NULL\nFamilyRelationship] [varchar](100) NULL Address 1] [varchar](255) NULL\nOwnershipPerc] [decimal](18, 2) NULL Address2] [varchar](255) NULL\nBankAccountSign] [bit] NULL City] [varchar](100) NULL\nPrimaryContactFlag] [bit] NULL State] [varchar](100) NULL\nDealershipProducerFlag] [bit] NULL Zip] [varchar](5) NULL\nRICShareholderFlag] [bit] NULL Email] [varchar](100) NULL\nDirectorFlag] [bit] NULL Phone] [varchar](20) NULL\n\nOfficerFlag] [bit] NULL Fax] [varchar(20) NULL\n\nRegisteredAgent] [bit] NULL DOB] [datetime] NULL\n\nOfficerTitle] [varchar](25) NULL SSN] [varchar](11) NULL\n\nPresidentFlag] [bit] NULL EIN] [varchar\\11) NULL\n\nVicePresidentFlag] [bit] NULL ContactID] ASC\n\nSecretaryFlag] [bit] NULL\n\nTreasurerFlag] [bit] NULL .\nClients\n\nClassBStockFl bit] NULL Client_ID\n\nClassification_ int] NULL\n\nCONSTRAINT [UNQ_CLientContact] UNIQUE NONq Classifications\n\nClassification_ID\n\nContactID] ASC\n\nClient_ID] ASC\n\n",
+    "line_count": 42,
+    "char_count": 1090
+  },
+  "image_013": {
+    "image_number": 13,
+    "filename": "erd_page_013.png",
+    "text": "TASKS\n\n[dbo]. [Taskltems] [dbo]. [TaskNotes]\n\nPx | CONSTRAINT [PK_dbo.Taskltems] CLUSTERED Px | CONSTRAINT [PK_dbo.TaskNotes] CLUSTERED\nTaskltem_ID] [int] IDENTITY(1,1) NOT NULL TaskNotes_|D] [int] IDENTITY(1,1) NOT NULL\n\nTaskName] [varchar](255) NOT NULL Project_ID] [int] NOT NULL\n\nTaskDescription] [varchar](3000) NULL\n\nProjectTask_ID] [int] NOT NULL\nTaskAction_ID] [int] NOT NULL Taskltem_ID] [int] NOT NULL\n\nTaskObject_ID] [int] NOT NULL ProjectTaskActivity_ID] [int] NOT NULL\n\nDueDay_|D] [int] NOT NULL NoteCreateDate] [datetime] NOT NULL\n\nUserRole_!ID] [int] NOT NULL NoteCreateUser_ID] [int] NOT NULL\n\nTaskitem_ID] ASC NoteUpdateDate] [datetime] NOT NULL\n\nNoteUpdateUser_ID] [int] NOT NULL\n\nNoteHtml] [varchar(3000) NOT NULL\n\n[dbo]. [TaskObjects]\nPx | CONSTRAINT [PK_dbo.TaskObjects] CLUSTERED\n\n[TaskObject_ID] [int] IDENTITY(1,1) NOT NULL\n\nTaskNotes_ID] ASC\n\n[TaskObjectName] [varchar](50) NOT NULL\n\nUserRoles ProjectTaskActivities\n\n[IsDefault] [bit] NOT NULL ProjectTaskActivity_ID\n\nUserRole_ID\n\n[TaskObject_ID] ASC\n\nProjectTasks DueDays\n\n[dbo]. [TaskActions]\nPx | CONSTRAINT [PK_dbo.TaskActions] CLUSTERED\n[TaskAction_ID] [int] IDENTITY(1,1) NOT NULL (Projects\n\n[ActionName] [varchar](50) NOT NULL Project_ID\n\n[IsDefault] [bit] NOT NULL\n\n[TaskAction_ID] ASC\n\n",
+    "line_count": 56,
+    "char_count": 1270
+  },
+  "image_014": {
+    "image_number": 14,
+    "filename": "erd_page_014.png",
+    "text": "ACCOUNTANTS\n\n[dbo]. [PublicAccountants] [dbo]. [PublicAccountantLocations]\n\nPx | CONSTRAINT [PK_dbo.PublicAccountants] CLUSTERED\n\nPx | CONSTRAINT [PK_dbo.PublicAccountantLocations] CLUSTERED\n\n[PublicAccountant_ID] [int] IDENTITY (1,1) NOT NULL PK [PublicAccountantLocation_ID] [int] IDENTITY(4,1) NOT NULL\n\n[PublicAccountantName] [varchar](255) NOT NULL FK | [PublicAccountant_ID] [int] NOT NULL\n\n[PublicAccountant_ID] ASC. FK | [Location_ID] [int] NOT NULL\n\n[EffectiveDate] [datetime] NOT NULL\n\n; [ExpirationDate] [datetime] NOT NULL\nLocations\n\n[PublicAccountantLocation_ID] ASC\n\nLocation_ID\n\n",
+    "line_count": 24,
+    "char_count": 594
+  },
+  "image_015": {
+    "image_number": 15,
+    "filename": "erd_page_015.png",
+    "text": "CLIENTS P2\n\n[dbo]. [UpdatedClientattributes] [dbo].{ClientinsuranceTypes]\n[.beniamel bertenteeniiUkh CONSTRAINT [PK dbo. ClientinsuranceTypes] CLUSTERED\n[Manager] [varchar](255) NULL\n\n[ClientInsuranceType_ID] [int] IDENTITY (1,1) NOT NULL\n[Accountant] [varchar] (255) NULL\n[Client_1D} {int} NOT NULL\n[AccountingSupportSpecialist] [varchar](255) NULL\n[InsuranceType_|D] [int] NOT NULL\n[FormationSpecialist] [varchar](255) NULL\n{[InsuredName] [varchar](255) NULL\n[FormationSupport] [varchar] (255) NULL\n\n[OtherType] [varchar](255) NULL\n[LeadAccountant] [varchar](255) NULL\n{Carrier_1D} fint] NOT NULL\n[CompanyRelations] [varchar](255) NULL\n[ClientInsuranceType_ID] ASC\n\n[Client_1D} (float) NULL\n\n[dbo] .[ClientTaxCalcHistory]\n[dbo].[ClientBankAccounts]\n\nCONSTRAINT [PK _ClientTaxCalcHistory] CLUSTERED\n\nCONSTRAINT [PK_dbo.ClientBankAccounts] CLUSTERED\nPK\n\n[DataValueType] [varchar](255) NOT NULL\n\n[ContactName] [varchar](255) NULL\n[DataVValue] [sql_variant] NOT NULL\n{ContactEmail] [varchar](255) NULL\n[ClientNameFromWorkSheet] [varchar](255) NOT NULL\n(BS_[D] fint] NOT NULL\n[WorkSheetName] [varchar](255) NOT NULL\n[ActiveFromDate] [datetime] NULL\n\nPK | [ClientTaxCalcHistory_ID] fint] IDENTITY (41,1) NOT NULL\n[ClientBankAccount_ID] [int] IDENTITY (1,1) NOT NULL\nBB | [client_10) fin) NOT NULL\n[Client_1D) {int} NOT NULL\n[TaxYear] [int] NOT NULL\n[BankAccount_ID] fint] NOT NULL\n[ColurnnName] [varchar](255) NOT NULL\n('sQuarterly] [bit] NOT NULL\n\n[(ClientTaxCalcHistory_ID] ASC\n[ActiveToDate] [datetime] NULL\n\n[User_ID] [int] NOT NULL\n[Sontacte| Py [int] NO EE. [dbo].[ClientLocations]\n[RecordCreatedDate] [datetime] NULL\n\n[BankCessionDelivery_1D] int) NULL PK CONSTRAINT [PK_ dbo. ClientLocations] CLUSTERED\n\n[SurplusAccount] [bit] NULL [(ClientLocation_[D] fint] IDENTITY (1,1) NOT NULL\n\n[ClientBankAccount_ID] ASC [Client_1D} {int} NOT NULL\n{Location_ID] [int] NOT NULL\n[EffectiveDate] [datetime] NOT NULL\n(ExpirationDate] [datetime] NOT NULL\n\n[ClientName] [varchar}(255) NULL [ClientLocation 1D] ASC\n\n[Client_1D} ffloat] NULL\n\nBankAccounts InsuranceTypes Carriers\nClientName BankAccount_ID InsuranceType_ID CarrierName\nClient_ID\n\nLocation_ID Contact_ID BankCessionDelivery_ID\n\n",
+    "line_count": 77,
+    "char_count": 2179
+  },
+  "image_016": {
+    "image_number": 16,
+    "filename": "erd_page_016.png",
+    "text": "FINAL RESULT 1\n\n[dbo]. [FinalREsultt]\n\nThis is a Temporary\n\nStatementType] [varchar](12) NOT NULL T;\nable\n\nClientName] [varchar](255) NOT NULL\n\nBankName] [varchar](255) NOT NULL It is generated as the result\nBankAccountNumber] [varchar](255) NOT NULL of a stored procedure at run-\nCarrierName] [varchar](1) NOT NULL time and is not used for\n\nAdministratorN: h 1) NOT NULL 5 '\nminisuatonvameg erenerih storing data otherwise.\n\nInsuranceTypeName] [varchar](1) NOT NULL\n\nReceivedYearMonth] [varchar](61) NULL\n\nBookedYearMonth] [varchar](61) NULL\nClient_ID] [int] NOT NULL\nAccountOrCession_|D] [int] NOT NULL\nAcctName] [varchar](255) NULL\nComments] [varchar|(max) NULL\ncalrx] [int] NULL\n\ncalbx] [int] NULL\n\nAgencyName] [varchar(255) NULL\n\nsQuarterly] [bit] NOT NULL\nFrequency] [varchar](9) NOT NULL\nDelivery] [varchar](255) NULL\n\nContactEmail] [varchar](255) NULL\nPercentRecieved] [int] NULL\nPercentBooked] [int] NULL\nPercentCompleted] [int] NULL\n\nPercentRecievedCurrentYear] [int] NULL\n\nPercentBookedCurrentYear] [int] NULL\n\nPercentCompletedC urrentYear] [int] NULL\n\n",
+    "line_count": 49,
+    "char_count": 1064
+  },
+  "image_017": {
+    "image_number": 17,
+    "filename": "erd_page_017.png",
+    "text": "PROJECT TASKS\n\n[dbo]. [ProjectTaskActions]\n\nCONSTRAINT [PK_dbo.ProjectTaskActions] CLUSTERED\n\n[ProjectTaskAction_ID] [int] IDENTITY (1,1) NOT NULL\n\n[dbo].[ProjectTasks]\nCONSTRAINT [PK_dbo.ProjectTasks] CLUSTERED\n\n[ProjectTask_[D] [int] IDENTITY (1,1) NOT NULL\n\n[ProjectTask_ 1D] [int] NOT NULL [Project_ID) int] NOT NULL\n\n[NextProjectTask_ID] fint] NOT NULL [UserRole_ID] [int] NOT NULL\n\n[TaskResultFlag] [bit] NOT NULL (UserID) [int] NOT NULL\n\n[ProjectTaskAction_ID] ASC [askAction_D] fint] NOT NULL\n\n[DueDay_1D] [int] NOT NULL\n\n[askObject_ID] [int] NOT NULL\n\n[dbo]. [ProjectTaskActivities]\n\n[TaskName] [varchar](255) NOT NULL\nCONSTRAINT [PK_dbo.ProjectTaskActivities] CLUSTERED\n\n[TaskDescription] [nvarchar](3000) NOT NULL\n\nPK | [ProjectTaskActivity_ID] [int] IDENTITY (1,1) NOT NULL\n\n[laskSequence] [int] NOT NULL\n[Project_ID] [int] NOT NULL\n\n[ProjectTask ID] ASC\n[ProjectTask_ 1D] [int] NOT NULL\n\n[Status_[D] fint] NOT NULL\n\n[TaskResultFlag] [bit] NULL [dbo].[ProjectTemplateTasks]\n[CreateDate] [datetime] NOT NULL CONSTRAINT [PK_dbo.ProjectTemplateTasks] CLUSTERED\n\n[UpdateDate] [datetime] NOT NULL\n\n[ProjectTemplateTask_ID] fint] IDENTITY (1,1) NOT NULL\n\n(UserID) [int] NOT NULL [Project_ID] [int] NOT NULL\n\n[EypassFlag] [bit] NULL [TemplateTask_ID) [int] NOT NULL\n\n[ProjectTaskActivity_ID] ASC\n\nL FK | [UserRole_ID) [int] NOT NULL\n\n[UserID [nvarchar](max) NOT NULL\n\n7 [ProjectTemplateTask_ID] ASC\n\nTaskObjects Template Tasks UserRoles\nTaskObject_ID TemplateTask_ID UserRole_ID\n\nDueDays TaskActions\n\nDueDay_ID TaskAction_ID\n\nUser_ID Project_ID\n\nStatus Tables\n\nStatus_ID\n",
+    "line_count": 74,
+    "char_count": 1576
+  },
+  "image_018": {
+    "image_number": 18,
+    "filename": "erd_page_018.png",
+    "text": "CESSION INSURANCE\n\n[dbo]. [InsuranceTypes]\n\n[dbo] {CessioninsuranceTypes]\n\na CONSTRAINT [PK_dbo.CessioninsuranceTypes] CLUSTERED\n\n[CessionInsuranceType_ID] [int] IDENTITY (1,1) NOT NULL\n\nCONSTRAINT [PK dbo. InsuranceTypes] CLUSTERED\n\n{InsuranceType_1D] [int] IDENTITY(1,1) NOT NULL\n\n{(ClientCession_D] [int] NOT NULL {InsuranceTypeName] [varchar](255) NOT NULL\n\n{InsuranceType_ID] [int] NOT NULL [InsuranceType_ID] ASC\n\n{CessionInsuranceTypeDesc] [varchar}(255) NULL\n\n{CessionInsuranceType_ID] ASC\n\nClientCessions\n\nClientCession_ID\n\n[dbo]. {CessionInsuranceTypePeriods]\n{CessionInsuranceTypePeriod_ID] [int] IDENTITY(1,1) NOT NULL\n{CessionInsuranceType_ID] [int] NOT NULL\n{CreatedDate] [datetime] NOT NULL\n[ActiveFromDate] [datetime] NULL\n[ActiveToDate] [datetime] NULL\n\n{FirstActivityDate] [datetime] NULL\n\n[LastActivityDate] [datetime] NULL\n\n[CessioninsuranceTypePeriod_ID] ASC\n\n",
+    "line_count": 40,
+    "char_count": 881
+  },
+  "image_019": {
+    "image_number": 19,
+    "filename": "erd_page_019.png",
+    "text": "GENERAL P2\n\n[dbo]. [Audiences]\nPx | CONSTRAINT [PK_dbo.Audiences] CLUSTERED\n\n[Clientid] [nvarchar](128) NOT NULL\n\n[Base64Secret] [nvarchar](80) NOT NULL\n[Name] [nvarchar](100) NOT NULL\n[Clientid] ASC\n\n[dbo].[Administrators]\n\nPx | CONSTRAINT [PK_dbo.Administrators] CLUSTER\n\n[Administrator_ID] [int] IDENTITY(1,1) NOT NULL\n[AdministratorName] [varchar](255) NOT NULL\n[Administrator_ID] ASC\n\n[dbo].[Agencies]\n\nPx | CONSTRAINT [PK_dbo.Agencies] CLUSTERED\n\nAgency_ID] [int] IDENTITY(1,1) NOT NULL\nAgencyName] [varchar(255) NOT NULL\nLicenseN umber] [varchar(255) NULL\nTax|DNumber] [varchar](255) NULL\nLocation_ID] [int] NULL\n\nProducer_ID] [int] NULL\n\nSourceAgencyCode] [varchar](255) NULL\nAgentAccountantUser_!D] [int] NOT NULL\nAgency_ID] ASC\n\nStatusTables Producers\n\nStatus_ID Producer_ID\n\nLocations\n\nUser_ID Location_ID\n\nEntityTypes\n\nEntityType_ID\n\n[dbo]. [AdministratorLocations]\n[Px | comers essnnsmastscnontcusteco |\n\n[AdministratorLocation_ID] [int] IDENTITY(1,1) NOT NULL\n\n[Administrator_ID] [int] NOT NULL\n[Location_ID] [int] NOT NULL\n\n[EffectiveDate] [datetime] NOT NULL\n[ExpirationDate] [datetime] NOT NULL\n[AdministratorLocation_ID] ASC\n\n[dbo].[AgencyLocations]\nPx | CONSTRAINT [PK_dbo.AgencyLocations] CLUS\u2019\n\n[AgencyLocation_ID] [int] IDENTITY(1,1) NOT NULL\n[Agency_ID] [int] NOT NULL\n\n[Location_ID] [int] NOT NULL\n\n[EffectiveDate] [datetime] NOT NULL\n[ExpirationDate] [datetime] NOT NULL\n[SourceAgencyLocationCode] [varchar](255) NULL\n[AgencyLocation_ID] ASC\n\n[dbo]. [Projects]\n\nPx | CONSTRAINT [PK_dbo.Projects] CLUSTERED\n\nProject_ID] [int] IDENTITY(1,1) NOT NULL\nProjectName] [varchar](255) NOT NULL\nProjectDesc] [varchar](255) NULL\nStatus_ID] [int] NOT NULL\nReasonNotCompleted] [varchar](100) NULL\nAccountingYear] [int] NOT NULL\n\nUser_ID] [int] NOT NULL\n\nComments] [varchar](255) NULL\nEntity_ID] [int] NOT NULL\n\nEntityType_ID] [int] NOT NULL\nProjectType] [int] NOT NULL\n\nProject_ID] ASC\n\n",
+    "line_count": 94,
+    "char_count": 1899
+  },
+  "image_021": {
+    "image_number": 21,
+    "filename": "erd_page_021.png",
+    "text": "2018 TAX DATA\n\n[dbo].[TaxCalcData2018]\n\nClient] [varchar](255) NULL\n\u2018Client_ID] [float] NULL\nOverpayment] [money] NULL\nQ1] [money] NULL\n\nQ2] [money] NULL\n\nQ3] [money] NULL\n\nQ4] [money] NULL\n\nInsuranceLicenceDate] [datetime] NULL\n\n[dbo]. [TaxClientsNew2018]\n\n[ClientName] [varchar](255) NULL\n\n[BB | [Client_1D] [float] NULL\n\nClients\n\nClient_ID\n",
+    "line_count": 27,
+    "char_count": 343
+  },
+  "image_022": {
+    "image_number": 22,
+    "filename": "erd_page_022.png",
+    "text": "PublicAccountants\nPublicAccountant_ID CLIENTS\n\nCONSTRAINT [PK dbo. Clients] CLUSTERED CONSTRAINT [PK dbo. ClientContacts] CLUSTERED\n\n[Client_1D] [int] IDENTITY(1,1} NOT NULL [ClientContact_|D] [int] IDENTITY(1,1) NOT NULL.\n\n[ClientName] [varchar](255) NOT NULL {Client_1D] {int} NOT NULL\n[ClientDese] [varchar](255) NULL [Name] [varchar] 255) NOT NULL\n[Company 1stChoiceName] [varchar] (255) NULL [Address1] [varchar](255) NULL\n[Company2ndChoiceName] [varchar](255) NULL [Address2] [varchar}(255) NULL\n[Company3rdChoiceName] [varchar] (255) NULL [City] [varchar](100) NULL\n[Requestor] [varchar](255) NULL [State] [varchar](100) NULL\n{CapitalSurplus] [money] NULL [Zip] (varchar](5) NULL\n[AnnualMeetingDate] [datetime] NULL Email] [varchar](100) NULL\n[VehiclesPerMonth] [int] NULL [Phone] [varchar](20) NULL\n[QuotaSharePercentage] [decimal](18, 2) NULL [Fax] [varchar](20) NULL\n(WizardComplete] [bit] NULL [DOB] [datetime] NULL\n[Agency_ID] [int] NULL [SSN] [varchar](11) NULL\n[LicensingAuth_ID] [int] NULL [FamilyRelationship] [varchar](100) NULL\n[CreateFormationProject] [bit] NULL [OwnershipPerc] [decimal](18, 2) NULL\n[FormationProjectCreated) [bit] NULL [BankAccountSign] [bit] NULL\n[PaymentReceived] [bit] NULL [PrimaryContactFlag] [bit] NULL\n[PaymentAmount] [decimal](18, 2) NULL [DealershipProducerFlag] [bit] NULL\n[CheckNumber] [varchar](75) NULL [RICShareholderFlag] [bit] NULL\n\u2014\n\n[DateCheckReceived] [datetime] NOT NULL [DirectorFlag] [bit] NULL\n\n[IsActive] [bit] NULL [OfficerFlag] [bit] NULL\n[CreateDate] [datetime] NULL [RegisteredAgent] [bit] NULL\n[ActiveTax] [bit] NULL [OfficerTitle] (varchar](25) NULL\n[TaxActiveFrom] [datetime] NULL [PresidentFlag] [bit] NULL\n[TaxActiveTo] [datetime] NULL [VicePresidentFlag] [bit] NULL\n[CharterRenewal] [bit] NULL [SecretaryFlag] [bit] NULL\n[CharterRenewalActiveFrom] [datetime] NULL [TreasuretFlag] [bit] NULL\n[CharterRenewalActiveTo] [datetime] NULL [ClassBStockFlag] [bit] NULL\n(139530) [bit] NULL (EIN) [varchar](11) NULL\n[PublicAccountant_ID] fint] NULL {(Classification_ID] [int] NULL\n{(Classification_ID] [int] NULL [ClientContact_ID] ASC\n\n[Domicile] [varchar](255) NULL\n[dbo].[ClientRoles]\n\nCONSTRAINT [PK_ dbo. ClientRoles] CLUSTERED\n\n[ClientRoles_ID) [int] IDENTITY (1,1) NOT NULL\n\n[axl Number] [varchar](20) NULL\n\n[IncorporationDate] [datetime] NULL\n\n[NAlCnumber] [nvarchar](50) NULL\n\n[Client_1D} {int} NOT NULL\n{LicenseNumber [nvarchar](50) NULL\n\n[UserRole_ID] [int] NOT NULL\n[date953D] [datetime] NULL\n\n(UserID) [int] NOT NULL\n[effectivedate953D] [datetime] NULL\n\n[ClientRole_ClientRoles_ID) [int] NULL\n[TaxFinalized] [bit] NULL\n\n[ClientRoles_ID] ASC\n[CorporateDoc] [varchar](100) NULL\n\n[ReinsuranceManager] [varchar](50) NOT NULL\n{ClientOrigin] [varchar}(50) NULL\n\n[ClientClosing] [varchar](50) NULL\n\n{Client_ID] ASC\n",
+    "line_count": 76,
+    "char_count": 2783
+  },
+  "image_023": {
+    "image_number": 23,
+    "filename": "erd_page_023.png",
+    "text": "FINAL RESULT\n\n[dbo].[FinalResult]\n\nStatementType] [varchar](12) NOT NULL\nClientName] [varchar](255) NOT NULL\nBankName] [varchar](255) NOT NULL\nBankAccountNumber] [varchar](255) NOT NULL\nCarrierName] [varchar](1) NOT NULL\nAdministratorName] [varchar](1) NOT NULL\nInsuranceTypeName] [varchar](1) NOT NULL\nReceivedYear] [sql_variant] NULL\nReceivedMonth] [sql_variant] NULL\nBookedYear] [sql_variant] NULL\nBookedMonth] [sql_variant] NULL\n\nClient_ID] [int] NOT NULL\nAccountOrCession_ID] [int] NOT NULL\nAcctName] [varchar](255) NULL\n\nComments] [varchar(max) NULL\n\ncalrx] [int] NULL\n\ncalbx] [int] NULL\n\nAgencyName] [varchar(255) NULL\nIsQuarterly] [bit] NOT NULL\n\nFrequency] [varchar](1) NOT NULL\n\nDelivery] [varchar](255) NULL\n\nContactEmail] [varchar](255) NULL\n\nThis is a Temporary\nTable\n\nIt is generated as the result\nof a stored procedure at run-\ntime, and is not used for\nstoring data otherwise.\n\n",
+    "line_count": 44,
+    "char_count": 893
+  },
+  "image_024": {
+    "image_number": 24,
+    "filename": "erd_page_024.png",
+    "text": "GENERAL\n\n[dbo].[States]\n\nPx | CONSTRAINT [PK_dbo.States] CLUSTERED\n\n[dbo]. [Classifications]\n\nPx | CONSTRAINT [PK_dbo.Classifications] CLUSTER\n\n[State_ID] [int] IDENTITY(1,1) NOT NULL [Classification_ID] [int] IDENTITY(1,1) NOT NULL\n\n[StateName] [varchar100) NOT NULL [ClassificationDesc] [varchar(255) NOT NULL\n[StateAbbreviation] [varchar](2) NOT NULL [ClassificationType] [varchar](20) NOT NULL\n\n[State_ID] ASC [TaxldentifierType] [varchar](10) NULL\n\n[Classification_ID] ASC\n\n[dbo]. [Locations]\n\nPx | CONSTRAINT [PK_dbo.Locations] CLUSTERED\n\n[dbo]. [Contacts]\n\nLocation_ID] [int] IDENTITY(1,1) NOT NULL Px | CONSTRAINT [PK_dbo.Contacts] CLUSTERED\nLocationName] [varchar](255) NULL Contact_ID] [int] IDENTITY(1,1) NOT NULL\nAddress1] [varchar](255) NULL FirstName] [varchar](255) NOT NULL\n\nAddress2] [varchar](255) NULL LastName] [varchar](255) NULL\n\nCity] [varchar](100) NULL MiddleName] [varchar](50) NULL\n\nState] [varchar](100) NULL Title] [varchar](50) NULL\n\nZipCode] [varchar](5) NULL Email] [varchar(255) NULL\nPhoneNumber] [varchar](20) NULL PhoneNumber1] [varchar(20) NULL\nFaxNumber] [varchar](20) NULL PhoneNumber2] [varchar(20) NULL\n\nEmail] [varchar](120) NULL FaxNumber] [varchar](20) NULL\n\nLocation_ID] ASC ContactType] [int] NOT NULL\n\nSelectedClient] [nvarchar(max) NULL\n\nContact_ID] ASC\n[dbo].[Carriers]\n\nPx | CONSTRAINT [PK_dbo.Carriers] CLUSTERED\n\n[Carrier_ID] [int] IDENTITY(1,1) NOT NULL [dbo].[ContactLocations]\n\n[CarrierName] [varchar](255) NOT NULL Px | CONSTRAINT [PK_dbo.ContactLocations] CLUS\u2019\n\n[CarrierName] [varchar](255) NOT NULL ContactLocation_ID] [int] IDENTITY(1,1) NOT NULL\n[Carrier_ID] ASC Contact_ID] [int] NOT NULL\n\nLocation_ID] [int] NOT NULL\n\nEffectiveDate] [datetime] NOT NULL\n\nExpirationDate] [datetime] NOT NULL\n\nContactLocation_ID] ASC\n",
+    "line_count": 65,
+    "char_count": 1777
+  },
+  "image_025": {
+    "image_number": 25,
+    "filename": "erd_page_025.png",
+    "text": "PRODUCERS\n\n[dbo]. [Producers]\n\nPx | CONSTRAINT [PK_dbo.Producers] CLUSTERED\n\n[dbo]. [ProducerLocations]\n\nPx | CONSTRAINT [PK_dbo.ProducerLocations] CLUS\n\nProducer_ID] [int] IDENTITY(1,1) NOT NULL ProducerLocation_ID] [int] IDENTITY(1,1) NOT NUL\nProducerName] [varchar](255) NOT NULL Producer_ID] [int] NOT NULL\n\nProducerType_|D] [int] NOT NULL FK | [Location_ID] [int] NOT NULL\n\nCorporateStructure] [varchar(255) NULL EffectiveDate] [datetine] NOT NULL\n\nEIN] [varchar\\(15) NULL ExpirationDate] [datetime] NOT NULL\n\nProducer_ID] ASC ProducerLocation_ID] ASC\n\nLocations\n\n[dbo]. [ProducerTypes]\nPx | CONSTRAINT [PK_dbo.ProducerTypes] CLUSTER\n\n[ProducerType_ID] [int] IDENTITY(1,1) NOT NULL\n\nLocation_ID\n\n[ProducerTypeName] [varchar](255) NOT NULL\n\n[ProducerType_ID] ASC\n",
+    "line_count": 34,
+    "char_count": 767
+  },
+  "image_026": {
+    "image_number": 26,
+    "filename": "erd_page_026.png",
+    "text": "[dbo].[Users]\n\nCONSTRAINT [PK_dbo.Users] CLUSTERED\nUser_ID] [int] IDENTITY(1,1) NOT NULL\nFirstName] [varchar](255) NULL\n\nLastName] [varchar](255) NULL\n\nFullName] [varchar](510) NULL\n\nEmail] [varchar(255) NULL\n\nUserName] [varchar](255) NULL\n\nUserOrganizationld] [varchar](255) NULL\n\nASPNetUser_Id] [nvarchar](128) NULL\n\nUser_ID] ASC\n\n[dbo].[UserRoleAssignments]\n\nCONSTRAINT [PK_dbo.UserRoleAssignments] C!\n\nUserRoleAssignment_ID] [int] IDENTITY(1,1) NOT\nUser_ID] [int] NOT NULL\n\nUserRole_ID] [int] NOT NULL\n\nEffectiveDate] [datetine] NOT NULL\n\nExpirationDate] [datetine] NOT NULL\n\nUserRoleAssignment_ID] ASC\n\n[dbo]. [Role Types]\n\nCONSTRAINT [PK_dbo.RoleTypes] CLUSTERED\n\n[RoleType_ID] [bigint] IDENTITY(1,1) NOT NULL\n[RoleTypeName] [varchar](50) NOT NULL\n\n[RoleType_ID] ASC\n\nUSERS\n\n[dbo].[UserActivityTokens]\nPx | CONSTRAINT [PK_dbo.UserActivityTokens] CLU$\n\nUserActivityTokenId] [bigint] IDENTITY(1,1) NOT N\n\nUserld] [nvarchar(max) NOT NULL\n\nToken] [nvarchar}(max) NOT NULL\n\nTimeout] [datetime2)(7) NOT NULL\nParentToken] [nvarchar}(max) NULL\n\nUserActivityTokenld] ASC\n\n[dbo]. [UserOrganizations]\n\nPx | CONSTRAINT [PK_dbo.UserOrganizations] CLUS|\n\n[UserOrganizationld] [nvarchar(128) NOT NULL\n\n[Name] [nvarchar](max) NOT NULL\n\n[EntityType_1D] [int] NOT NULL\n\n[Entity_1D] [int] NOT NULL\n\n[UserOrganizationld] ASC\n\n[dbo]. [UserRoles]\n\nPx | CONSTRAINT [PK_dbo.UserRoles] CLUSTERED\n\n[UserRole_ID] [int] IDENTITY(1,1) NOT NULL\n\n[RoleName] [varchar](50) NOT NULL\n\n[RoleType_ID] [bigint] NOT NULL\n\n[IsDefault] [bit] NOT NULL\n\n[UserRole_ID] ASC\n\nEntityTypes\n\nEntityType_ID\n\nAspNetUsers\n\nProject_ID\n",
+    "line_count": 96,
+    "char_count": 1589
+  },
+  "image_027": {
+    "image_number": 27,
+    "filename": "erd_page_027.png",
+    "text": "REINSURANCE\nASSOCIATES\n",
+    "line_count": 3,
+    "char_count": 23
+  },
+  "image_028": {
+    "image_number": 28,
+    "filename": "erd_page_028.png",
+    "text": "2016 TAX DATA\n\n[dbo]. [TaxClientsNew2016]\n\nPK | CONSTRAINT [PK_TaxClientsNew2016] CLUSTER\n[ID] [int] IDENTITY(1,1) NOT NULL\n\nClients [ClientName] [varchar](255) NOT NULL\n\nClient_ID\n\n[Client_ID] [int] NULL\n\n[ID] ASC\n\n",
+    "line_count": 16,
+    "char_count": 216
+  },
+  "image_029": {
+    "image_number": 29,
+    "filename": "erd_page_029.png",
+    "text": "BAN\n\n[dbo].[BankLocations]\n\nCONSTRAINT [PK_dbo.BankLocations] CLUSTER\n\nBankLocation_ID] [int] IDENTITY(1,1) NOT NULL\nBank_ID] [int] NOT NULL\n\nLocation_ID] [int] NOT NULL\n\nEffectiveDate] [datetime] NOT NULL\n\nExpirationDate] [datetime] NOT NULL\n\nBankLocation_ID] ASC\n\nLocations\n\nLocations_ID\n\nKS\n\n[dbo].[Banks]\nCONSTRAINT [PK_dbo.Banks] CLUSTERED\n[Bank_ID] [int] IDENTITY(1,1) NOT NULL\n[BankName] [varchar](255) NOT NULL\n\n[Bank_ID] ASC\n\n[dbo].[BankAccounts]\n\nPK\n\nCONSTRAINT [PK_dbo.BankAccounts] CLUSTER\n\n[BankAccount_ID] [int] IDENTITY(1,1) NOT NULL\n[Bank_ID] [int] NOT NULL\n\n[BankAccountNumber] [varchar](255) NOT NULL\n\n[BankAccount_ID] ASC\n\n",
+    "line_count": 44,
+    "char_count": 642
+  },
+  "image_030": {
+    "image_number": 30,
+    "filename": "erd_page_030.png",
+    "text": "DUE DAYS\n\n[dbo].[DueDayChanges]\nCONSTRAINT [PK_dbo.DueDayChanges] CLUSTE\n\nDueDayChanges_ID] [int] IDENTITY(1,1) NOT NUL|\nProject_ID] [int] NOT NULL\n\nProjectTask_ID] [int] NOT NULL\n\nProjectTaskActivity_ID\n\n[int] NOT NULL\nUpdateDate] [datetime] NOT NULL\nUser_ID] [int] NOT NULL\nDueDayFromDate] [datetime] NOT NULL\nDueDayToDate] [datetime] NOT NULL\n\nNOT NULL\n\nDueDay_ID_From] [int]\n\nDueDay_ID_To] [int] NOT NULL\n\nDueDayChanges_ID] ASC\n\nRELATI\n\nmay NC\n\nONSHIE\n\nNEED\n\n[dbo].[DueDays]\n\nPx | CONSTRAINT [PK_dbo.DueDaysn] CLUSTERED\n\n[DueDay_ID] [int] IDENTITY(0,1) NOT NULL\n[DueDayNum] [int] NOT NULL\n[IsDefault] [bit] NOT NULL\n\n[DueDay_ID] ASC\n\nProjects\n\nProject_ID\n\nUser_ID\n",
+    "line_count": 50,
+    "char_count": 668
+  },
+  "image_031": {
+    "image_number": 31,
+    "filename": "erd_page_031.png",
+    "text": "MISC\n\n[dbo]. [Notes] [dbo]. [Attachments]\n| Sosa se ERD oe\n\ne_ID] [int] IDENTITY(1,1) NOT NULL Attachment_ID] [int] IDENTITY(1,1) NOT NULL\n\neType] [int] NOT NULL Project_ID] [int] NOT NUL\neCreateDate] [datetime] NOT NULL ProjectTask_ID] [int] NOT\neCreateUser_ID] [int] NOT NULL ProjectTaskActivity_ID] [in\n\neUpdate Date] [datetine] NOT NULL TaskNote_|D] [int] NULL\n\neUpdate User_ID] [int] NOT NULL AttachmentLocation] [varchar(255) NOT NULL\n\neType_ID] [int] NOT NULL FileName] [varchar](128) NOT NULL\n\neHtml] [varchar(3000) NULL achmentFile Type] [varchar(255) NOT NULL\n\ne_ID]ASC FK achmentType_ID] [int] NOT NULL\n\nachmentCreateDate] [datetime] NOT NULL\n\nFileSize] [bigint] NOT NULL\n[dbo]. [PrintReports]\nCONSTRAINT [PK_dbo.PrintReports] CLUSTERED\n\n; ; Entity_1D] [int] NOT NULL\n[PrintReport_ID] [int] IDENTITY(1,1) NOT NULL\n\n, AttachedFileExtension] [varchar(6) NOT NULL\n[PrintReportName] [varchar](255) NOT NULL\n\nFileDescription] [varchar](255) NULL\n[StoredProcedureName] [varchar](255) NOT NULL\n\nAttachment_ID] ASC\n[PrintReport_ID] ASC =\n\n[dbo]. [AttachmentTypes] TaskNotes\n[saan || || [Fr =\n\n[AttachmentType_ID] [int] IDENTITY(1,1) NOT NULL\n\n[AttachmentTypeName] [varchar](50) NOT NULL\nProjectTaskActivities\n\nEntityTypes\n\nProjectTasks\n\nProjectTask_ID\n\n",
+    "line_count": 54,
+    "char_count": 1256
+  },
+  "image_032": {
+    "image_number": 32,
+    "filename": "erd_page_032.png",
+    "text": "REINSURANCE\n\n[dbo].[ReinsuranceManagers]\n[Px | coumarin detects |\n\n[ReinsuranceManager_ID] [int] IDENTITY(4,1) NOT NULL\n\n[ReinsuranceManagerName] [varchar{255) NOT NULL\n\n[ReinsuranceManager_ID] ASC\n\nLocations\nLocation_ID\n\n[dbo].[ReinsuranceManagerLocations]\n\nPx | CONSTRAINT [PK dbo. ReinsuranceManagerLocations] CLUSTERED.\n\n[ReinsuranceManagerLocation_ID] fint] IDENTITY (4,1) NOT NULL\n[ReinsuranceManager_|D) [int] NOT NULL\n\n[Location_ID] {int} NOT NULL\n\n[EffectiveDate] [datetime] NOT NULL\n\n(ExpirationDate] [datetime] NOT NULL\n\n[ReinsuranceManagerLocation_ID] ASC\n\n",
+    "line_count": 30,
+    "char_count": 569
+  },
+  "image_033": {
+    "image_number": 33,
+    "filename": "erd_page_033.png",
+    "text": "CESSIONS\n\n[dbo].[BankCessionDeliveries]\n\n[BankCessionDelivery_ID] ASC\n\n[BankCessionDeliveryType] [varchar]( 255) NOT NULL\n\n[dbo].[BankCessionFrequencies]\n\n[BankCessionFrequencyType] [varchar](255) NOT NULL\n\n[BankCessionFrequency_ID] ASC\n\n[dbo].[ClientCessionDatas]\n\n[ClientCession_1D] [int] NOT NULL\n\n[Calendar_D] fint] NOT NULL\n\n[ReceivedDate] [datetime] NULL\n\n[BookedDate] [datetime] NULL\n\n[Amount] [decimal}(18, 2) NULL\n\n[Comment] [varchar](255) NULL\n\n[DateWorked] [datetime] NULL\n\n[ExpityDateWorked] [datetime] NULL\n\n[RecordCreatedDate] [datetime] NULL\n\n[ClientCessionData_ID] ASC\n\nCalendar_ID Contact_ID\n\nClientBankAccounts\n\nClientBankAccount_ID\n\n[dbo].[ClientCessions]\n\nCONSTRAINT [PK_ dbo. BankCessionDeliveries] CLUSTERED CONSTRAINT [PK dbo. ClientCessions] CLUSTERED\n\n[BankCessionDelivery_|D} [int] IDENTITY(1,1) NOT NULL\n\n[ClientCession_ID] [int] IDENTITY (1,1) NOT NULL\n\n[Client_1D] fint] NOT NULL\n\n{InsuranceType_ID] [int] NULL\n\n{Carrier_ID] [int] NULL\n\n[Administrator_ID] [int] NULL\n\nCONSTRAINT [PK_ dbo. BankCessionFrequencies] CLUSTERED [TrustClientBankAccount_ID] [int] NULL\nt } [int] (14)\n\n[BankCessionFrequency_|D] [int] IDENTITY(1,1) NOT NULL.\n\n[nvestmentClientBankAccount_[D] [int] NULL\n\n[sQuarterly} [bit] NOT NULL\n\n[ContactName] [varchar](255) NULL\n\n{ContactEmail] [varchar](255) NULL\n\n[BS_[D] fint] NOT NULL\n\nCONSTRAINT [PK_dbo.ClientCessionDatas] CLUSTERED [ActiveFromDate] [datetime] NULL.\nPK ti\n\n[ClientCessionData_ID) [int] IDENTITY (1,1) NOT NULL\n\n[ActiveToDate] [datetime] NULL\n\n[AdminDesc] [varchar](255) NULL\n\n[ProductDes\u00a2] [varchar}(255) NULL\n\n{User_ID] [int] NOT NULL\n\n[Contact_ID] {int] NULL\n\n[RecordCreatedDate] [datetime] NULL\n\n[BankCessionDelivery_1D] [int] NULL\n\n[BankCessionFrequency_ID) [int] NULL\n\n[InProcess] [bit] NULL\n\n[FundsHeld] [bit] NULL\n\n[ClientCession_ID] ASC\n\nAdministrators InsuranceTypes\nAdministrator_ID InsuranceType_ID\n\n",
+    "line_count": 104,
+    "char_count": 1876
+  },
+  "image_034": {
+    "image_number": 34,
+    "filename": "erd_page_034.png",
+    "text": "[dbo].[TaxCalcData]\nCONSTRAINT [PK_ClientTaxCalcHistoryffsd] CL!\n\nTaxCalcData_ID] [int] IDENTITY(1,1) NOT NULL\nAgency] [varchar](255) NULL\n\nClient] [varchar](255) NULL\n\nEIN] [varchar(255) NULL\n\nOverpayment] [money] NULL\n\nOverpayment2] [money] NULL\n\nQ1] [money] NU\nQ2] [money] NU\n\nQ3] [money] NU\n\n@4] [money] NU\n\nExtension] [money] NULL\n\nWithholding] [money] NULL\n\n5 Payments] [varchar](255) NULL\n\n2015 Estimated Tax] [varchar](255) NULL\nRemaining 2016 Tax Due] [varchar](255) NULL\n2015 Tax Liability] [varchar(255) NULL\n\n2015 P&l] [varchar](255) NULL\n\n5 Tax Due] [varchar(255) NULL\n\n5 Credit] [varchar(255) NULL\n\nEstimated 2017 tax liability] [varchar](255) NULL\n\n2016 tax deposit due] [varchar(255) NULL\n\nClient_ID] [int] NULL\n\nTaxCalcData_ID] ASC\n\nTAX CALC DATA\n\n[dbo].[TaxClientFormLog]\n\nPx | CONSTRAINT [PK_TaxClientFormLog1] CLUSTER\n\nTaxClientFormLog_ID] [int] IDENTITY(1,1) NOT NU\nClient_ID] [int] NOT NULL\n\nYear] [int] NOT NULL\n\nFormCreated] [int] NOT NULL\n\nProjectCreated] [int] NOT NULL\n\nTaxClientFormLog_ID] ASC\n\nClients\n\nClient_ID\n",
+    "line_count": 66,
+    "char_count": 1042
+  }
+}

@@ -1,0 +1,118 @@
+
+# Documentation: Old National to RAL Job Aid Slide Conversion
+## Date: 2025-11-08
+## Author: 8825 assistant (automated via ChatGPT)
+
+---
+
+## SUMMARY
+
+This document captures the full attempt history and proposes a new, stable workflow for converting Scribe-generated slide content (e.g. Old National) into properly styled RAL job aids using the Allstate format as a visual template. It is based on the assistant’s integration history, scripting trials, Pandoc compatibility, and current template management status.
+
+---
+
+## PAST ATTEMPTS
+
+### Attempt 1 — Direct Reuse of Scribe Slides
+- **Source:** Original Scribe PDF converted to PNGs
+- **Action:** Inserted screenshots into pre-styled RAL backgrounds
+- **Problems:**
+  - “Made with Scribe” tag persisted
+  - Text was embedded in screenshots, not editable
+  - Not visually consistent with Allstate format
+
+### Attempt 2 — Clean Text Extraction + Slide Generation
+- **Source:** Scribe PDF → Text extraction + Cleaned steps
+- **Action:** Converted each step into a PowerPoint slide using rounded container boxes
+- **Problems:**
+  - No red step indicator circles
+  - Missing proper typography, image cropping, and alignment
+  - Looked “flat” compared to Allstate
+
+### Attempt 3 — Old National → Blank Template Transfer
+- **Source:** “Old_National_Reformatted_Final.pptx” + “Blank_RAL_Template.pptx”
+- **Action:** Transferred text/image into blank, added rounded containers
+- **Problems:**
+  - Used raw slide creation (no layouts defined)
+  - Font styling and step formatting still incorrect
+  - Red step circles and screenshots improperly styled
+
+### Attempt 4 — Allstate Reverse Engineering
+- **Source:** Dissected layout of "Allstate Instructions (rev).pptx"
+- **Learned:**
+  - Title = Arial, 20pt, Bold
+  - Steps = 14pt regular, white-on-red circle markers, consistent spacing
+  - Screenshot = Rounded rectangle crop + dark green border
+  - Containers = Light gray w/ dark green border (approx. RGB #F9FAFB and #00463C)
+
+### Attempt 5 — Styled Sample Recreation
+- **Action:** Rebuilt Slide 1 manually using true Allstate formatting
+- **Result:** Success — sample output matched expectations, pending full batch processing
+- **Limitation:** Screenshot was placeholder (missing image file)
+
+---
+
+## PROPOSED WORKFLOW (v1.0 – Pandoc-Compatible Slide Authoring)
+
+### 1. AUTHORING FORMAT
+
+Use plain text `.md` or `.txt` input files with structured step blocks:
+
+```
+# Slide Title
+1. Step one instruction here.
+2. Step two instruction here.
+![optional_image](image1.png)
+```
+
+- Supports future export to:
+  - PowerPoint (`.pptx`) via Python-pptx
+  - PDF via Pandoc
+  - HTML/Markdown for quick reviews
+
+### 2. RAL STYLE RULES (APPLIED PER SLIDE)
+
+- **Title:**
+  - Font: Arial
+  - Size: 20pt, Bold
+- **Background:**
+  - Light Gray container (RGB: #F9FAFB)
+  - Border: Dark Teal (RGB: #00463C), 0.75pt
+- **Step Indicators:**
+  - Circle: Red fill (RGB: #FF3B30)
+  - Text: White, Arial Bold, Centered
+- **Text Block:**
+  - Font: Arial
+  - Size: 14pt
+- **Image:**
+  - Rounded corners
+  - Border: 0.75pt Dark Teal
+
+### 3. AUTOMATION STEPS
+
+- Parse input `.md` or `.txt`
+- For each slide:
+  - Generate layout with containers
+  - Insert steps as textboxes with red circle markers
+  - Add cropped/styled images if present
+- Output to `.pptx`
+- Optional: Run `pandoc` to export to PDF/HTML/etc.
+
+### 4. FUTURE INTEGRATIONS
+
+- Integrate with 8825 `windsurf-project` for batch slide doc automation
+- Pull slide content from structured JSON or Notion exports
+- Attach `image_paths[]` per step to allow automated screenshot placement
+
+---
+
+## RECOMMENDED NEXT STEP
+
+- Continue building 1–2 more slides manually
+- Use output as visual gold standard
+- Migrate workflow into repeatable Python + Pandoc flow using `.txt` or `.md` content
+- Drop completed versions into Windsurf or 8825_MCP inbox
+
+---
+
+## END

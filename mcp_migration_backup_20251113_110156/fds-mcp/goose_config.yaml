@@ -1,0 +1,10 @@
+# Goose Configuration for File Dispatch System (FDS)
+# Add this to your Goose profiles configuration
+
+mcpServers:
+  file-dispatch-system:
+    command: python3
+    args:
+      - /Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/integrations/mcp-servers/fds-mcp/server.py
+    env:
+      PYTHONPATH: /Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/INBOX_HUB/file_dispatch_system

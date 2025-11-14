@@ -1,0 +1,381 @@
+{
+  "project": "the_forge",
+  "version": "1.0.0",
+  "last_updated": "2025-11-01",
+  "description": "Mission-based bounty environment and agency arm within TrustyBits. Professional creative execution where creators get paid for mission-driven work.",
+  "patterns": {
+    "do": [
+      "Position as professional creative agency within TrustyBits ecosystem",
+      "Emphasize creators get paid for mission-based work (vs education/volunteer models)",
+      "Research competitive models to clarify positioning and value differentiation",
+      "Document fundamental business model differences (education vs execution, pay-to-play vs pay-for-work)",
+      "Validate partnership claims through independent research before commitment",
+      "Align with proof-of-work trends: demonstrated impact over portfolios",
+      "Use hybrid approach: internal projects + external clients + portfolio services",
+      "Build portfolio ecosystem with Joju as source of truth",
+      "Create self-sustaining bounty economy where participants earn by contributing",
+      "Start with productized services before custom agency work",
+      "Use 3-gate review process for quality control (direction, mid-point, final)",
+      "Leverage Figma-to-Kanban automation for project setup efficiency",
+      "Apply project evaluation scorecard (24-point system) before commitment",
+      "Integrate portfolio services as lead generation for agency work",
+      "Use Joju API for dynamic portfolio updates (single source of truth)"
+    ],
+    "dont": [
+      "Accept partnership listings as legitimacy validation without verification",
+      "Present theoretical partnership explorations as current operational reality",
+      "Wait for perfect Joju API before starting portfolio services",
+      "Over-engineer delivery process before market validation",
+      "Accept projects below $5K for external clients (except strategic reasons)",
+      "Skip project evaluation scorecard for external work",
+      "Launch platform marketplace before proving agency model",
+      "Neglect quality gates when using participant workforce"
+    ],
+    "qa_loops": [
+      "Research claimed partnerships independently"
+    ],
+    "framing": [
+      "Professional alternative to education/volunteer creative platforms",
+      "Mission-based bounty platform funding creative work through revenue",
+      "Agency-first bootstrap model funding long-term platform vision",
+      "Portfolio ecosystem: Joju as warehouse, Forge as construction crew",
+      "Closed-loop economics: Revenue funds bounties, bounties fund participant work",
+      "Flywheel: Free analysis → Joju signup → Paid services → Participant contributions"
+    ]
+  },
+  "lexicon": [
+    {
+      "term": "The Forge (76Forge)",
+      "definition": "TrustyBits platform for individuals to level up through real-world projects, gaining experience and building relationships. Mission-based bounty environment where creators get paid for mission-driven work.",
+      "examples": [
+        "76Forge: TrustyBits' project platform for skill-building quests and mentorship",
+        "Real-world experience through technology projects with measurable outcomes",
+        "Professional alternative to education/volunteer creative platforms",
+        "Mission-based bounty platform funding creative work through revenue"
+      ]
+    },
+    {
+      "term": "vibe coded",
+      "definition": "Mission-aligned partnership where values and working styles naturally complement each other",
+      "examples": [
+        "Shared commitment to creative mission-based work",
+        "Complementary skills (creative + sales, design + execution)",
+        "Natural workflow integration without forced processes"
+      ]
+    },
+    {
+      "term": "90-day pilot methodology",
+      "definition": "Structured partnership validation with clear metrics, roles, and exit clauses",
+      "examples": [
+        "Target: $20-40K MRR by Day 90 with defined success metrics",
+        "30-day exit clause for low-risk partnership testing",
+        "Clear role definition: BD lead, creative direction, execution support"
+      ]
+    },
+    {
+      "term": "IterateUX",
+      "definition": "Discord-based UX design education platform (founded 2020) using apprenticeship model where participants pay to work on real business projects for portfolio building",
+      "examples": [
+        "5-week UX Launchpad: businesses get discounted UX work from guided student teams",
+        "9-week UX Cohort: participants pay tuition to gain experience and potential internships",
+        "Competitive contrast: participants pay vs Forge model where creators earn",
+        "Education-first vs Forge's execution-first philosophy"
+      ]
+    },
+    {
+      "term": "Chingu.io",
+      "definition": "Project-cycle platform for developers/designers to collaborate globally, learn, and build portfolios through volunteer-driven team projects",
+      "examples": [
+        "Volunteer-driven model prioritizing skill development and teamwork",
+        "Global project cycles with collaborative team structure",
+        "Competitive contrast: free volunteer work vs Forge's paid professional execution",
+        "Portfolio-building focus vs Forge's revenue-generating mission work"
+      ]
+    },
+    {
+      "term": "OpenSeek",
+      "definition": "Proof-of-work network bridging UX design education and hiring through validated project experience with mentor feedback loops and transparent hiring verification",
+      "examples": [
+        "Micro-task platform focusing on verified deliverables over portfolios",
+        "Mentor feedback loops integrated into hiring process",
+        "Proof-of-work validation rising trend in design/UX recruitment",
+        "Transparent hiring through real project deliverables, not credentials",
+        "Competitive positioning: verification-focused vs Forge's mission-execution focus"
+      ]
+    },
+    {
+      "term": "proof-of-work validation",
+      "definition": "Hiring and recruitment trend emphasizing verified project deliverables and demonstrated ability over traditional portfolios and credentials",
+      "examples": [
+        "OpenSeek model: validated project experience with mentor verification",
+        "Movement away from portfolio-based to deliverable-based hiring",
+        "Micro-task breakdown for verified experience tracking",
+        "Forge alignment: 90-day pilots provide operational proof-of-concept"
+      ]
+    },
+    {
+      "term": "hybrid revenue model",
+      "definition": "Three-pronged approach combining internal projects, external agency work, and productized portfolio services",
+      "examples": [
+        "Internal: TrustyBits projects as portfolio building and team training",
+        "Agency: $10-15K client retainers for design/UX services",
+        "Portfolio: Analysis ($0-100), DIY class ($500-750), Full build ($3,500-6,000)",
+        "Target: $30-44K MRR by Month 3 across all streams"
+      ]
+    },
+    {
+      "term": "portfolio ecosystem flywheel",
+      "definition": "Self-sustaining system where portfolio analysis leads to Joju adoption, paid services, and participant contributions",
+      "examples": [
+        "Stage 1: Free portfolio analysis → Structure achievements into Joju",
+        "Stage 2: Joju profile (free/Pro $10-15/mo) → Source of truth for career",
+        "Stage 3: DIY portfolio class ($500-750) → Build with Joju integration",
+        "Stage 4: Full-service build ($3,500-6K) → Custom Joju-powered site",
+        "Participants earn bounty credits by working on others' portfolios"
+      ]
+    },
+    {
+      "term": "bounty credit system",
+      "definition": "Internal currency where participants earn credits through contributions and redeem for services",
+      "examples": [
+        "Portfolio analysis (30 min) = 50 credits",
+        "Peer review in class = 100 credits",
+        "Case study writing = 200 credits",
+        "Design work = 300 credits",
+        "Website build assistance = 500 credits",
+        "Redemption: 500 credits = DIY class, 3,000 credits = Full portfolio build"
+      ]
+    },
+    {
+      "term": "tiered team structure",
+      "definition": "Three-level workforce model balancing cost, quality, and learning opportunities",
+      "examples": [
+        "Tier 1: Certified Guides (paid $50-100/hr, experienced, client-facing)",
+        "Tier 2: Volunteers (unpaid but credentialed, supervised execution)",
+        "Tier 3: Participants (free, building experience, specific tasks)",
+        "Quality maintained through 3-gate review process by Guides",
+        "Legal: Educational framework, opt-in agreements, Joju credentials as value"
+      ]
+    },
+    {
+      "term": "3-gate review process",
+      "definition": "Quality assurance system with three mandatory checkpoints on every client project",
+      "examples": [
+        "Gate 1: Direction alignment at kickoff (strategy, scope, expectations)",
+        "Gate 2: Mid-point review at 50% completion (design/approach validation)",
+        "Gate 3: Final approval pre-delivery (quality standards, client satisfaction)",
+        "Certified Guide owns gates and client relationship",
+        "Participants/Volunteers execute between gates with supervision"
+      ]
+    },
+    {
+      "term": "project evaluation scorecard",
+      "definition": "24-point assessment framework determining Forge project fit before commitment",
+      "examples": [
+        "8 criteria scored 0-3: Mission alignment, Budget, Scope clarity, Timeline, Learning value, Portfolio potential, Client fit, Team capacity",
+        "Green light (18-24): Proceed with enthusiasm",
+        "Yellow light (15-17): Negotiate improvements before commit",
+        "Red light (<15): Decline or radically rescope",
+        "Auto-accept: Internal TrustyBits, trusted referrals, repeat clients",
+        "Auto-decline: <$5K budget, unethical missions, unrealistic constraints"
+      ]
+    },
+    {
+      "term": "Figma-to-Kanban automation",
+      "definition": "Streamlined project setup converting Figma component templates to project management boards",
+      "examples": [
+        "Manual process: 2-4 hours per project setup",
+        "Automated: 5-10 minutes via script",
+        "Approach 1: Figma plugin reads frames → exports JSON → generates board",
+        "Approach 2: Master template → duplicate/customize → one-command deploy",
+        "Supports Notion, Linear, Trello via API integration",
+        "ROI: Break-even after 10 projects (~Month 2)"
+      ]
+    },
+    {
+      "term": "Joju-powered portfolio",
+      "definition": "Portfolio websites that dynamically pull content from Joju via API, eliminating manual updates",
+      "examples": [
+        "User updates achievement in Joju → Auto-syncs to portfolio site",
+        "Joju = CMS backend, Portfolio = dynamic frontend",
+        "Never manually update portfolio again",
+        "Unique differentiator: No competitor offers this integration",
+        "Technical: REST API queries Joju for achievements, projects, skills, timeline"
+      ]
+    }
+  ],
+  "agent_references": {
+    "note": "Agent capabilities moved to projects/agent_registry.json to prevent duplication",
+    "agents_from_this_project": [
+      "AGENT-FORGE-PARTNERSHIP-DUE-DILIGENCE-0001"
+    ],
+    "reconstruction": "Use 'recreate WCB for <agent_id>' to regenerate from registry"
+  },
+  "checklists": [
+    {
+      "name": "Partnership Assessment",
+      "items": [
+        "Verify partnership is vetted vs self-service listing",
+        "Check financial health and revenue trends",
+        "Assess platform legitimacy and operational capacity",
+        "Identify potential value gaps or risks"
+      ]
+    }
+  ],
+  "revenue_streams": {
+    "agency_services": {
+      "model": "Creative agency using tiered team structure",
+      "target_mrr": "$20-40K by Month 3",
+      "services": [
+        "Visual design systems ($15K)",
+        "UX architecture & user research ($8-15K)",
+        "Brand narrative & positioning ($12K)",
+        "Product marketing assets ($5-10K)"
+      ],
+      "team_structure": {
+        "tier_1": "Certified Guides ($50-100/hr, client-facing)",
+        "tier_2": "Volunteers (credentialed, supervised)",
+        "tier_3": "Participants (experience building)"
+      }
+    },
+    "portfolio_services": {
+      "analysis": {
+        "price": "$0-100 (lead gen)",
+        "timeline": "30-60 min",
+        "deliverable": "Structured achievements in Joju + recommendations"
+      },
+      "diy_class": {
+        "price": "$500-750",
+        "timeline": "4 weeks (cohort-based)",
+        "deliverable": "Self-built portfolio with Joju integration",
+        "target_size": "10-20 students per cohort"
+      },
+      "full_build": {
+        "price": "$3,500-6,000",
+        "timeline": "3-4 weeks",
+        "deliverable": "Custom Joju-powered portfolio site",
+        "team": "1 Guide + 2-3 Participants"
+      }
+    },
+    "joju_subscriptions": {
+      "free_tier": "Basic profile, 10 achievements",
+      "pro_tier": "$10-15/mo, unlimited achievements, advanced features",
+      "target": "300 Pro users by Month 6"
+    },
+    "projections": {
+      "month_1": "$10-13K (internal + portfolio pilot)",
+      "month_3": "$30-44K (agency + portfolio + Joju)",
+      "month_6": "$70-75K (scaled operations)"
+    }
+  },
+  "operational_framework": {
+    "phase_1_foundation": {
+      "timeline": "Weeks 1-4",
+      "objectives": [
+        "Establish legal/contractual framework",
+        "Build team structure (2-3 Guides, 3-5 Volunteers)",
+        "Create quality gates",
+        "Deploy Figma-to-Kanban automation"
+      ]
+    },
+    "phase_2_revenue_ops": {
+      "timeline": "Weeks 5-12",
+      "objectives": [
+        "Close first 2 paying clients",
+        "Deliver with quality (3-gate process)",
+        "Build case studies",
+        "Launch portfolio analysis funnel"
+      ]
+    },
+    "phase_3_scale": {
+      "timeline": "Months 4-6",
+      "objectives": [
+        "$30-40K MRR sustained",
+        "Expand team capacity",
+        "Launch DIY class cohorts",
+        "Fund ongoing bounties from profits"
+      ]
+    },
+    "quality_assurance": {
+      "gate_1": "Direction alignment at kickoff",
+      "gate_2": "Mid-point review at 50%",
+      "gate_3": "Final approval pre-delivery",
+      "ownership": "Certified Guide owns client relationship and all gates"
+    }
+  },
+  "success_metrics": {
+    "month_1": {
+      "portfolio_analyses": 20,
+      "joju_pro_signups": 30,
+      "diy_enrollments": "8-10",
+      "full_builds": 1,
+      "active_participants": 5
+    },
+    "month_3": {
+      "joju_pro_users": 100,
+      "diy_cohorts": 2,
+      "full_builds_monthly": "3-4",
+      "active_participants": 20,
+      "monthly_revenue": "$30K+"
+    },
+    "month_6": {
+      "joju_pro_users": 300,
+      "diy_cohorts_monthly": 4,
+      "full_builds_monthly": 6,
+      "active_participants": 40,
+      "monthly_revenue": "$70K+",
+      "bounty_economy": "Self-sustaining"
+    }
+  },
+  "summary_log": [
+    {
+      "when": "2025-10-30",
+      "topic": "DemocracyLab financial health assessment",
+      "notes": "Due diligence research revealed DemocracyLab operating on <$15K annually with 88% revenue decline. Critical finding: demonstrated importance of verifying partnership claims vs accepting listings at face value."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "IterateUX competitive analysis and positioning differentiation",
+      "notes": "Researched IterateUX.com (Vancouver-based, founded 2020) as competitive reference point. Key finding: fundamentally different business models. IterateUX = apprenticeship/education model (participants PAY to work on projects for portfolio building, businesses get discounted student labor). The Forge = professional execution model (creators GET PAID for mission-based work, businesses get professional-grade output). IterateUX strengths: 4+ year track record, lower business costs, structured programs. Forge differentiators: creators earn vs pay, professional quality, broader creative scope beyond UX, revenue-sharing alignment, integrated into TrustyBits ecosystem. Clear positioning: Forge is NOT a learning platform - it's a professional creative agency with mission focus."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Expanded competitive landscape and platform trends analysis",
+      "notes": "Comprehensive competitor mapping reveals distinct models: (1) IterateUX - education/apprenticeship, participants pay; (2) Chingu.io - volunteer collaboration, free team projects; (3) OpenSeek - proof-of-work network with micro-task verification; (4) DemocracyLab - volunteer civic platform, flagged for revenue decline. Key platform trends emerging: proof-of-work validation rising in design/UX recruitment (replacing portfolio-based hiring), micro-task project breakdown for verified experience, mentor feedback loops integrated into hiring cycles, movement toward demonstrated deliverables over credentials. Forge positioning strengthened: paid professional work (vs volunteer/education models), mission-based creative execution within TrustyBits, revenue-sharing for sustainable creator economics."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Clarification: The Forge is 100% TrustyBits",
+      "notes": "Cleaned up project file to clarify that The Forge is entirely within TrustyBits ecosystem. Moved theoretical Arena/Sandbox partnership exploration to separate section marked as hypothetical only. This content should only surface if Arena/Sandbox collaboration is explicitly mentioned, not in general Forge discussions."
+    },
+    {
+      "when": "2025-11-04",
+      "topic": "Comprehensive Forge revenue and operational strategy",
+      "notes": "Conducted extensive strategic analysis applying 8825 decision matrix framework. Evaluated 4 approaches (Agency-first, Internal-first, Hybrid, Platform-first) across philosophy alignment, user friction, stability, and efficiency. Hybrid model scored highest (4.3/5). Developed complete revenue strategy: (1) Agency services ($20-40K MRR via tiered team), (2) Portfolio ecosystem flywheel (free analysis → Joju → DIY class $500-750 → Full build $3.5-6K), (3) Bounty credit system enabling participants to earn services through contributions. Key innovation: Joju-powered portfolios with API integration eliminating manual updates. Created operational framework with 3 phases, project evaluation scorecard (24-point system), 3-gate quality process, Figma-to-Kanban automation strategy. Financial modeling shows path to $30-44K MRR by Month 3, $70K+ by Month 6. Portfolio services create self-sustaining flywheel: lead gen feeds Joju adoption, paid services fund bounties, participants earn while learning. Competitive advantage: Only platform paying creators (vs IterateUX/Chingu volunteer models) with Joju integration no competitor offers. Documented tiered team structure (Guides/Volunteers/Participants), legal framework for educational volunteering, risk mitigation strategies, and success metrics per phase.",
+      "duration_estimate": "60 minutes",
+      "actual_duration": "~75 minutes",
+      "time_breakdown": "Context compilation (8min) + Competitive analysis (6min) + Revenue strategy (12min) + Portfolio ecosystem design (18min) + Operational framework (10min) + Decision matrix analysis (7min) + Financial modeling (8min) + Documentation (6min)"
+    }
+  ],
+  
+  "theoretical_explorations": {
+    "note": "This section contains hypothetical partnership models explored but NOT currently operational. Only reference if Arena/Sandbox collaboration is explicitly mentioned.",
+    "arena_sandbox_partnership_model": {
+      "status": "Theoretical exploration only - not current reality",
+      "explored": "2025-10-30",
+      "concept": "Multi-partner execution structure with specialized roles",
+      "structure": {
+        "forge_role": "Creative direction and strategy",
+        "arena_role": "Business development and client acquisition (theoretical partner)",
+        "sandbox_role": "Execution support and production work (theoretical partner)"
+      },
+      "methodology": {
+        "pilot_structure": "90-day partnership validation with clear metrics",
+        "target_metrics": "$20-40K MRR by Day 90",
+        "revenue_split": "70% Forge / 30% BD lead with execution partner allocation",
+        "exit_strategy": "30-day exit clause for low-risk testing"
+      },
+      "key_insight": "Framework for validating partnerships through operational proof-of-concept before full commitment. Useful methodology if future partnerships are considered."
+    }
+  }
+}

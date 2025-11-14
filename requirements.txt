@@ -1,0 +1,22 @@
+# Core dependencies for 8825 System
+flask==3.0.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Document processing
+python-docx>=0.8.11
+
+# File system monitoring
+watchdog>=3.0.0
+
+# Google API integration (bill processor)
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+google-api-python-client>=2.100.0
+
+# OCR and image processing
+pillow>=10.0.0
+pytesseract>=0.3.10
+pillow-heif>=0.13.0

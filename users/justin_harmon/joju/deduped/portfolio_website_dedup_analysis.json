@@ -1,0 +1,264 @@
+{
+  "deduplication_session": {
+    "timestamp": "2025-11-05T21:47:00-06:00",
+    "mined_source": "joju_sandbox/mined/portfolio_website_achievements.json",
+    "compared_against": [
+      "justin_harmon_joju_input.json (existing hammer_consulting entry)",
+      "justin_harmon_joju_input_05-trustybits-detailed.json (current version)"
+    ],
+    "total_mined_achievements": 12,
+    "analysis_complete": true
+  },
+  
+  "existing_hammer_consulting_content": {
+    "source": "justin_harmon_joju_input_05-trustybits-detailed.json",
+    "company": "Hammer Consulting & Support Services",
+    "year": "2015 — Now",
+    "existing_bullets": [
+      "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%.",
+      "Aligned user needs with business goals by leading cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance.",
+      "Resolved critical user pain points through in-depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction.",
+      "Enhanced stakeholder engagement by creating and presenting intuitive UI prototypes using Figma and Adobe XD, effectively communicating innovative product features that drove client buy-in.",
+      "Spearheaded the delivery of new features for online statement processing tools, increasing usability, accessibility, and operational efficiency for end-users.",
+      "Led a comprehensive website redesign initiative for a non-profit division, conducting user research and overseeing wireframing and prototyping to deliver scalable, user-driven solutions aligned with organizational goals."
+    ],
+    "assessment": "Good coverage but generic - lacks specific Reinsurance Associates project details, automation metrics, and feature specifics from portfolio"
+  },
+  
+  "deduplication_results": {
+    "exact_duplicates": {
+      "count": 0,
+      "items": [],
+      "action": "None found"
+    },
+    
+    "semantic_duplicates": {
+      "count": 3,
+      "items": [
+        {
+          "mined_id": "portfolio_002",
+          "existing_bullet": "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%.",
+          "similarity": "VERY HIGH - Same project (Reinsurance Associates), overlapping metrics",
+          "recommendation": "ENRICH - Mined version adds: 55% online auto-collection, 68% PDF auto-filing, 2,400 statements/month, ahead of tax deadlines",
+          "action": "Replace with more detailed version including all automation metrics"
+        },
+        {
+          "mined_id": "portfolio_004",
+          "existing_bullet": "Resolved critical user pain points through in-depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction.",
+          "similarity": "HIGH - Both about user research and problem solving",
+          "recommendation": "ENRICH - Mined version adds specific report redesign with user quotes",
+          "action": "Add report redesign specifics and user interview details"
+        },
+        {
+          "mined_id": "portfolio_005",
+          "existing_bullet": "Spearheaded the delivery of new features for online statement processing tools, increasing usability, accessibility, and operational efficiency for end-users.",
+          "similarity": "HIGH - Both about feature delivery for statement processing",
+          "recommendation": "ENRICH - Mined version adds 3 web crawlers, 2,400 statements/month, quantitative analysis",
+          "action": "Add web crawler specifics and automation metrics"
+        }
+      ]
+    },
+    
+    "new_achievements": {
+      "count": 6,
+      "items": [
+        {
+          "id": "portfolio_003",
+          "title": "Secret Vault Credential Management System",
+          "status": "NEW - Specific feature missing",
+          "priority": "MEDIUM",
+          "reason": "Distinct feature with shared 2FA, eliminated Excel tracking"
+        },
+        {
+          "id": "portfolio_006",
+          "title": "Drag-and-Drop Upload with Auto-Filing",
+          "status": "NEW - Specific feature missing",
+          "priority": "HIGH",
+          "reason": "68% auto-filing rate, learning mapper, PDF parsing - major feature"
+        },
+        {
+          "id": "portfolio_007",
+          "title": "Discovery Phase User Interviews",
+          "status": "OVERLAPS with existing",
+          "priority": "LOW",
+          "reason": "Existing mentions user research, mined adds specific quotes"
+        },
+        {
+          "id": "portfolio_008",
+          "title": "Shot Tracker Branding & UX",
+          "status": "NEW - Different project",
+          "priority": "LOW",
+          "reason": "Early career project, shelved, learning experience"
+        },
+        {
+          "id": "portfolio_009",
+          "title": "Shot Tracker Competitive Research",
+          "status": "NEW - Different project",
+          "priority": "LOW",
+          "reason": "Part of shelved project, less impactful"
+        },
+        {
+          "id": "portfolio_012",
+          "title": "Early Figma Learning",
+          "status": "NEW - Learning experience",
+          "priority": "LOW",
+          "reason": "Could mention as early tool adoption"
+        }
+      ]
+    },
+    
+    "amare_stoudemire_project": {
+      "status": "NEW STANDALONE PROJECT",
+      "achievements": [
+        "portfolio_001 - Custom protective goggles design",
+        "portfolio_010 - Usability testing methodology",
+        "portfolio_011 - Design philosophy integration"
+      ],
+      "recommendation": "ADD as separate work experience entry",
+      "rationale": "Unique Nike collaboration, industrial design showcase, strong narrative with career-long outcome",
+      "suggested_bullets": 3
+    },
+    
+    "enrichment_opportunities": {
+      "count": 3,
+      "items": [
+        {
+          "existing_bullet": "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%.",
+          "enhancement": "Add: '55% of online statements auto-collected, 68% of PDFs auto-filed, 2,400+ statements/month via 3 web crawlers, team ahead of tax deadlines for first time, fewest seasonal temps in 5 years'",
+          "mined_source": "portfolio_002, portfolio_005, portfolio_006"
+        },
+        {
+          "existing_bullet": "Resolved critical user pain points through in-depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction.",
+          "enhancement": "Add: 'redesigned reports with simplified filters after user interviews revealed \"super annoying to navigate\" filters, transforming unused feature into valuable tool'",
+          "mined_source": "portfolio_004, portfolio_007"
+        },
+        {
+          "existing_bullet": "Spearheaded the delivery of new features for online statement processing tools, increasing usability, accessibility, and operational efficiency for end-users.",
+          "enhancement": "Add: 'including Secret Vault credential management eliminating Excel tracking, drag-and-drop upload with 68% auto-filing via learning mapper, and 3 web crawlers collecting 2,400+ statements monthly'",
+          "mined_source": "portfolio_003, portfolio_005, portfolio_006"
+        }
+      ]
+    },
+    
+    "conflicts": {
+      "count": 1,
+      "items": [
+        {
+          "issue": "Metric discrepancy",
+          "existing": "cutting manual tasks by 55% and reducing seasonal staff reliance by 65%",
+          "mined": "55% of online statements auto-collected, 68% of PDFs auto-filed, fewest seasonal temps in 5 years",
+          "analysis": "Different metrics - existing uses '55% manual task reduction', mined uses '55% auto-collection rate'",
+          "resolution": "These appear to be different metrics from same project. Combine both for comprehensive picture.",
+          "recommendation": "Keep both metrics, clarify: '55% reduction in manual tasks through automation achieving 55% auto-collection rate and 68% auto-filing rate'"
+        }
+      ]
+    }
+  },
+  
+  "recommendations": {
+    "action": "ENRICH existing Hammer Consulting + ADD Amare Stoudemire project",
+    "priority": "HIGH",
+    "reasoning": [
+      "Existing bullets are generic, mined adds specific project details and metrics",
+      "Portfolio provides concrete feature names (Secret Vault, drag-and-drop, web crawlers)",
+      "Amare Stoudemire is unique Nike collaboration deserving standalone entry",
+      "Enrichments add significant value without major restructuring"
+    ],
+    
+    "proposed_structure": {
+      "hammer_consulting_enrichments": {
+        "bullet_1": "ENRICH with comprehensive automation metrics (55% auto-collection, 68% auto-filing, 2,400/month, fewest temps in 5 years, ahead of deadlines)",
+        "bullet_3": "ENRICH with report redesign specifics and user quotes",
+        "bullet_5": "ENRICH with specific feature names (Secret Vault, drag-and-drop, web crawlers)",
+        "keep_as_is": ["bullet_2", "bullet_4", "bullet_6"],
+        "total_bullets": 6
+      },
+      "amare_stoudemire_new_project": {
+        "add_as": "New work experience entry",
+        "year": "2011",
+        "title": "Industrial Designer (Contract)",
+        "company": "Nike",
+        "bullets": [
+          "Designed custom protective goggles for NBA star Amare Stoudemire through user-centered industrial design process, conducting direct athlete interviews, prototyping 2 design solutions, and implementing user-tested modifications that resolved stability and comfort issues causing bruising and irritation",
+          "Implemented comprehensive usability testing methodology presenting prototypes during Nike photo shoot warm-up, observing distinct preference for silicone strap solution, then integrating feedback into innovative construction requiring specialized NYC fabrication",
+          "Achieved design philosophy integration realizing user-focused Industrial Design process aligns with UX fundamentals, showcasing full integration of user and usability testing as crowning achievement demonstrating cross-discipline design thinking"
+        ],
+        "outcome": "Athlete wore goggles for remainder of career, preventing potential blindness",
+        "total_bullets": 3
+      }
+    }
+  },
+  
+  "quality_assessment": {
+    "existing_content": {
+      "specificity": "MEDIUM - Good metrics but lacks project details",
+      "context": "PARTIAL - Generic feature descriptions, no project names",
+      "completeness": "INCOMPLETE - Missing specific features and Nike project",
+      "grade": "B-"
+    },
+    "mined_content": {
+      "specificity": "HIGH - Specific features, project names, user quotes",
+      "context": "COMPREHENSIVE - Full project narratives with outcomes",
+      "completeness": "EXCELLENT - Detailed metrics and feature descriptions",
+      "grade": "A"
+    },
+    "recommendation": "Enrich Hammer Consulting (B- → A-) + Add Amare Stoudemire (A)"
+  },
+  
+  "user_review_required": {
+    "critical_decisions": [
+      {
+        "decision": "Enrich 3 Hammer Consulting bullets with specific project details?",
+        "impact": "MEDIUM - Adds depth without changing structure",
+        "recommendation": "YES - Adds concrete feature names and comprehensive metrics"
+      },
+      {
+        "decision": "Add Amare Stoudemire as new standalone Nike project (3 bullets)?",
+        "impact": "HIGH - Adds new work experience entry",
+        "recommendation": "YES - Unique industrial design showcase, strong narrative, career-long outcome"
+      },
+      {
+        "decision": "Resolve metric discrepancy (55% task reduction vs 55% auto-collection)?",
+        "impact": "LOW - Clarification needed",
+        "recommendation": "Combine both metrics for comprehensive picture"
+      },
+      {
+        "decision": "Include Shot Tracker project?",
+        "impact": "LOW - Early career, shelved project",
+        "recommendation": "NO - Less impactful, could mention Figma adoption elsewhere if desired"
+      }
+    ],
+    
+    "questions_for_user": [
+      "Approve enriching 3 Hammer Consulting bullets with Reinsurance Associates details?",
+      "Approve adding Amare Stoudemire as new Nike work experience entry (2011)?",
+      "Should we clarify the 55% metric (task reduction AND auto-collection rate)?",
+      "Any concerns about adding a 2011 project to current resume?"
+    ]
+  },
+  
+  "implementation_status": {
+    "status": "AWAITING USER APPROVAL",
+    "note": "Deduplication analysis complete, awaiting user approval before updating",
+    "current_state": "justin_harmon_joju_input.json unchanged",
+    "versioned_copy_ready": "justin_harmon_joju_input_05-trustybits-detailed.json",
+    "next_version": "justin_harmon_joju_input_06-portfolio-website.json",
+    "rollback_available": "YES - justin_harmon_joju_input_05-trustybits-detailed.json"
+  },
+  
+  "next_steps": {
+    "immediate": [
+      "Present this dedup analysis to user",
+      "Get user approval for enrichments and Amare Stoudemire addition",
+      "Implement approved changes"
+    ],
+    "after_approval": [
+      "Enrich 3 Hammer Consulting bullets with Reinsurance Associates details",
+      "Add Amare Stoudemire as new work experience entry (2011)",
+      "Resolve metric clarification",
+      "Create versioned copy: justin_harmon_joju_input_06-portfolio-website.json",
+      "Update JH_master_library.json",
+      "Validate JSON structure"
+    ]
+  }
+}

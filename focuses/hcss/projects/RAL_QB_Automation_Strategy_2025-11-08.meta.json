@@ -1,0 +1,11 @@
+{
+  "lane": "A",
+  "priority": 0.81,
+  "scope": "local",
+  "change_pressure": "low",
+  "target_focus": "hcss",
+  "source": "manual",
+  "freshness": 1.0,
+  "processed_at": "2025-11-09T01:37:17.400881",
+  "corrected_at": "2025-11-09T16:50:00"
+}

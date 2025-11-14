@@ -1,0 +1,259 @@
+{
+  "project": "workflows_registry",
+  "version": "1.0.0",
+  "last_updated": "2025-11-13",
+  "description": "Registry of WORKFLOWS - manual processes with documented steps, user provides inputs, system follows structured process",
+  
+  "workflows": {
+    "joju_problem_definition_workflow": {
+      "original_id": "AGENT-JOJU-PROBLEM-DEFINITION-0001",
+      "system_role": "Clarifies Joju product problems and outputs either a simple or detailed problem definition.",
+      "inputs_required": [
+        "Joju feature area",
+        "primary pain or friction",
+        "definition of success",
+        "affected user type",
+        "output mode (simple | detailed)"
+      ],
+      "outputs": {
+        "simple": ["Problem", "Goal", "Context"],
+        "detailed": [
+          "Problem Statement (narrative)",
+          "Context",
+          "Current Situation",
+          "User Need",
+          "Pain Points",
+          "Stakeholders",
+          "Constraints",
+          "Success Criteria"
+        ]
+      },
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Do not propose solutions unless explicitly asked",
+        "Tone must be concrete, empathetic, and grounded in user reality"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual process with documented steps. User provides inputs, agent follows 5-step process, outputs structured definition. No autonomous decisions.",
+      "created_at": "2025-11-01T23:19:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "workshop_roadmap_workflow": {
+      "original_id": "AGENT-WORKSHOP-ROADMAP-0001",
+      "system_role": "Generates fast, efficient workshop roadmaps based on sprint and desirability testing logic.",
+      "inputs_required": [
+        "Core goal",
+        "Participants + roles",
+        "Time / environmental constraints",
+        "Expected final artifact"
+      ],
+      "outputs": [
+        "Workshop roadmap (3–5 phases)",
+        "Facilitator cues",
+        "Variant timebox options (1-day, 2-day, async)"
+      ],
+      "workflow": ["Deconstruct goal", "Classify workshop type", "Develop phased plan", "Deliver formatted roadmap", "Refine pacing"],
+      "constraints": [
+        "Minimize unnecessary ceremony",
+        "Focus on progress over documentation"
+      ],
+      "routing": "general",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual roadmap generation. User provides goal/participants/constraints, agent generates phased plan. No autonomous decisions, just structured output.",
+      "created_at": "2025-11-01T23:19:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "beta_tester_profiler_workflow": {
+      "original_id": "AGENT-GENERAL-BETA-TESTER-PROFILER-0001",
+      "system_role": "Analyze Reddit users for beta tester fit via comprehensive post/comment history review.",
+      "inputs_required": ["Reddit username or RSS feed data"],
+      "outputs": ["Detailed profile with technical skills", "Shipped products analysis", "Pain points assessment", "Engagement style evaluation", "Priority ranking", "Outreach strategy"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Flag competitive conflicts",
+        "Assess information asymmetry risks",
+        "Distinguish between casual interest and active building"
+      ],
+      "routing": "general",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual profiling process. User provides username/feed, agent analyzes and generates profile. No scoring/routing decisions (unlike AGENT-REDDIT-BETA-0001).",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "discovery_journey_workflow": {
+      "original_id": "AGENT-GENERAL-DISCOVERY-JOURNEY-DOCUMENTOR-0001",
+      "system_role": "Capture iterative exploration as phased narrative showing concept evolution.",
+      "inputs_required": ["Conversational exploration with multiple pivots"],
+      "outputs": ["JSON summary with phases", "Key insights per phase", "Evolution arrows", "Culminating concepts"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Show how ideas built on each other",
+        "Distinguish between starting questions and ending frameworks"
+      ],
+      "routing": "general",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual documentation process. User provides conversation, agent structures as phased narrative. No decisions, just transformation.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "hiring_profile_workflow": {
+      "original_id": "AGENT-JOJU-THREE-PROFILE-BLUEPRINT-0001",
+      "system_role": "Generate hiring search profiles across conventional/adjacent/wild card dimensions.",
+      "inputs_required": ["Team composition analysis", "Role requirements"],
+      "outputs": ["Three distinct candidate profiles", "Search criteria per profile", "Value propositions", "Sourcing strategies"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Work with existing HR systems",
+        "Provide actionable search terms",
+        "Explain transferability logic for adjacent candidates"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual profile generation. User provides team/role context, agent generates 3 profiles. No decisions, just structured output.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "persona_matrix_workflow": {
+      "original_id": "AGENT-JOJU-PERSONA-MATRIX-BUILDER-0001",
+      "system_role": "Mine target user personas with motivations, pain points, and digital behaviors.",
+      "inputs_required": ["Product context (joju features, value props)"],
+      "outputs": ["Persona matrix with daily habits", "Workflows", "Platform usage", "Pain points"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Anchor only in validated product data",
+        "Flag gaps where user research needed",
+        "Avoid speculation beyond available evidence"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual persona mining. User provides product context, agent generates persona matrix. No decisions, just structured output.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "relationship_outreach_workflow": {
+      "original_id": "AGENT-GENERAL-RELATIONSHIP-OUTREACH-0001",
+      "system_role": "Prep Justin for warm, confidence-building conversations by spotting mutual value, suggesting friendly frames, drafting messages, and nudging toward concrete meeting times.",
+      "inputs_required": [
+        "Person: name, role/title, relationship context",
+        "Known cues (optional): interests, last interaction, recent wins, shared ties",
+        "Justin_initiatives: current projects",
+        "Justin_weaknesses_or_gaps (optional)",
+        "Scheduling_prefs (optional)"
+      ],
+      "outputs": [
+        "Conversation Prep Brief",
+        "Message Kit (SMS/DM/Email/Call variants)",
+        "Micro-Plan & Nudge (time windows, checklist)",
+        "Confidence Gate (ask if <0.7)",
+        "Logging Stub"
+      ],
+      "workflow": [
+        "Deconstruct: Parse person info + cues",
+        "Diagnose: Score alignment person↔initiative",
+        "Develop: Draft Prep Brief, Message Kit",
+        "Deliver: Propose time windows",
+        "Refine: Only if confidence <0.7"
+      ],
+      "constraints": [
+        "Friendly, specific, zero-pressure tone",
+        "Minimal questions",
+        "Keep all outputs concise and copy-ready",
+        "Confidence gate: ask max ONE question if <0.7"
+      ],
+      "routing": "general",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual outreach prep. User provides person info, agent generates prep brief + message kit. Confidence gate (asks if <0.7) is not autonomous decision-making.",
+      "created_at": "2025-11-04T13:25:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "user_provided_prompt_2025-11-04"
+    },
+    
+    "joju_library_mining_workflow": {
+      "original_id": "AGENT-JOJU-LIBRARY-FIRST-MINING-0001",
+      "system_role": "Mines Joju-related content with library-first approach, extracting achievements, proof points, and work samples while maintaining Achievement of Fact standards",
+      "inputs_required": [
+        "Source content (resume, portfolio, LinkedIn, etc.)",
+        "Mining parameters (focus areas, depth)",
+        "Existing library for deduplication"
+      ],
+      "outputs": [
+        "Extracted achievements with AoF ratings",
+        "Proof points and evidence",
+        "Work samples categorized",
+        "Library entries (JSON format)"
+      ],
+      "workflow": [
+        "Scan content for achievements",
+        "Identify proof points",
+        "Extract work samples",
+        "Structure data per library schema",
+        "Validate entries against AoF standards",
+        "Deduplicate against existing library"
+      ],
+      "constraints": [
+        "Library-first approach (structure before content)",
+        "Maintain data integrity and accuracy",
+        "Follow Achievement of Fact standards",
+        "Preserve source attribution"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_workflow": "Manual mining process. User provides source content, agent extracts and structures data. No autonomous decisions, follows documented extraction process.",
+      "created_at": "2025-11-07T18:28:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "joju_library_first_mining_protocol"
+    }
+  },
+  
+  "routing_index": {
+    "joju": [
+      "joju_problem_definition_workflow",
+      "hiring_profile_workflow",
+      "persona_matrix_workflow",
+      "joju_library_mining_workflow"
+    ],
+    "general": [
+      "workshop_roadmap_workflow",
+      "beta_tester_profiler_workflow",
+      "discovery_journey_workflow",
+      "relationship_outreach_workflow"
+    ]
+  },
+  
+  "stats": {
+    "total_workflows": 8,
+    "implemented": 0,
+    "not_implemented": 8,
+    "by_routing": {
+      "joju": 4,
+      "general": 4
+    }
+  },
+  
+  "implementation_notes": {
+    "workflows_vs_agents": "Workflows are manual processes with documented steps. User provides inputs, system follows structured process, outputs results. Unlike agents, they don't make autonomous decisions or adapt based on conditions.",
+    "documentation": "Workflows need clear documentation of steps, inputs, outputs, and constraints.",
+    "templates": "Consider creating templates or forms to streamline workflow execution."
+  },
+  
+  "audit_notes": {
+    "date": "2025-11-13",
+    "auditor": "Cascade",
+    "criteria": "Workflows are manual processes with documented steps, user provides inputs",
+    "reclassified_from": "agent_registry.json",
+    "count": 8
+  }
+}

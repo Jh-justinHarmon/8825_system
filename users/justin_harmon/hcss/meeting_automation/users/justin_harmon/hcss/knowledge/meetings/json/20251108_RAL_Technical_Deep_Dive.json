@@ -1,0 +1,16 @@
+{
+  "title": "RAL Technical Deep Dive",
+  "date": "2025-11-08",
+  "source": "sample_data",
+  "transcript": "Sample transcript for RAL Technical Deep Dive",
+  "summary": "# RAL Technical Deep Dive\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "1 hour 30 min",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "RAL"
+  },
+  "processed_at": "2025-11-11T12:28:43.906242"
+}

@@ -1,0 +1,392 @@
+{
+  "project": "8825_pmce",
+  "version": "1.1.0",
+  "last_updated": "2025-11-02",
+  "description": "Persistent Memory Context Engine - autonomous JSON documents that live in user's cloud, understand their own context, and get smarter over time",
+  "stats": {
+    "lexicon": 21,
+    "patterns": 41,
+    "agent_recipes": 0,
+    "automation_infrastructure": 2,
+    "checklists": 2
+  },
+  "patterns": {
+    "do": [
+      "Choose practical solutions over perfect engineering",
+      "Use breadth-first development for faster validation (36-hour smoke test)",
+      "Design for data sovereignty and user control as non-negotiable",
+      "Position as infrastructure/middleware, not end-user application",
+      "Don't dump all memory at once - use progressive context revelation",
+      "Route queries to cheapest capable model (AI arbitrage)",
+      "Use Foundation Sprint methodology post-MVP validation, not pre-validation",
+      "Implement answer contract validation to eliminate debugging headaches",
+      "Position as memory-as-infrastructure, not competing with AI providers",
+      "Create 'sandbox' for AI collaboration with user data sovereignty",
+      "Use breadth-first development: 1 week to testable MVP vs 6 weeks depth-first",
+      "Leverage existing cloud provider sync mechanisms over custom backend",
+      "Prove core value with 10-20 test users before enterprise features",
+      "Use adaptive thresholds for subject change detection (0.6-0.85 range)",
+      "Implement memory weighting: 70% recency, 20% frequency, 10% importance",
+      "Allocate context budget: 500 profile, 2048 pinned, 3000 snippets, 452 buffer",
+      "Enable strict JSON schema validation with semantic consistency checks",
+      "Track entity mentions and cross-reference related decisions",
+      "Use REF → extract → ARCHV lifecycle for all mining artifacts",
+      "When user says 'mine/scrape/transport', generate artifact immediately without extra commentary",
+      "Document external-LLM vs Windsurf agent split in usage instructions",
+      "Enforce response format and deviation thresholds",
+      "Explore team collaboration workflows with workspace isolation constraints",
+      "Document multi-workspace architecture for enterprise PMCE deployment",
+      "Validate Cascade capabilities before designing team workflows",
+      "Test cross-workspace file reading and Cascade chat storage access",
+      "Link physical objects to persistent memory entries via serialized identity",
+      "Create digital twin tokens connecting tangible artifacts to 8825 memory capsules",
+      "Enable NFC/QR/serial-based access to stored memory contexts",
+      "Apply decision matrix before asking user questions (intent × stakes × efficiency)",
+      "Proceed with confidence ≥0.7, ask only if confidence <0.5 or safety requires",
+      "Use default options between 0.5-0.7 confidence range",
+      "State choice + rationale in 1-2 lines when self-resolving decisions",
+      "Log decision choices with confidence scores for loop detection",
+      "Use chokidar-based Node watchers with awaitWriteFinish and brief debounce",
+      "Validate JSON before copying to prevent broken artifacts in - REF -",
+      "Write atomically using temporary files; create timestamped backups before overwriting",
+      "Respect meta.core_sync_rules.synchronized_sections for governed propagation",
+      "Run via LaunchAgents to start at login and keep alive",
+      "Prefer absolute paths; log to /tmp/*.log for troubleshooting"
+    ],
+    "dont": [
+      "Over-engineer for Phase 1 MVP",
+      "Design team workflows before validating individual user value",
+      "Assume Cascade capabilities without systematic testing",
+      "Build complex sync protocols before validation",
+      "Don't rely on Shortcuts for core workflows",
+      "Don't overwrite differing files in - REF - without suffixing a timestamp",
+      "Don't sync context-specific sections (authoritative_sources, quarantine_rules, meta.context)"
+    ],
+    "framing": [
+      "Memory as inevitable, not intentional (zero maintenance butler)",
+      "Infrastructure play, not feature"
+    ]
+  },
+  "lexicon": [
+    {
+      "term": "PMCE",
+      "definition": "Persistent Memory Context Engine - autonomous JSON documents that live in user's cloud, understand their own context, and get smarter over time",
+      "examples": [
+        "Dual-layer AI system with intelligence layer (gpt-4o-mini for routing/search) + response layer (main model)",
+        "Self-modifying JSON configuration serving as both spec and memory container",
+        "Cloud folder storage for multi-device sync with user data sovereignty"
+      ]
+    },
+    {
+      "term": "memory-as-infrastructure",
+      "definition": "Positioning AI memory as middleware/infrastructure layer rather than end-user feature; creates interoperability between AI systems",
+      "examples": [
+        "Swiss bank account for AI memory - neutral, private, yours",
+        "Not competing with ChatGPT/Claude, creating sandbox for AI collaboration"
+      ]
+    },
+    {
+      "term": "zero maintenance butler",
+      "definition": "Design philosophy where memory becomes inevitable rather than intentional; contrast to manual knowledge management tools",
+      "examples": [
+        "vs Obsidian: butler (automatic) vs filing cabinet (manual)",
+        "Compounding value through personal language modeling over time"
+      ]
+    },
+    {
+      "term": "36-hour smoke test",
+      "definition": "MVP validation strategy: build minimally testable prototype in 36 hours to validate core value proposition with 2-3 users before full build",
+      "examples": [
+        "Breadth-first over depth-first development",
+        "Speed to market validation before 155-220 hour full MVP"
+      ]
+    },
+    {
+      "term": "answer contract validator",
+      "definition": "20-line Node.js helper that validates AI responses against required schema, eliminating debugging headaches",
+      "examples": [
+        "Enforces refs_used trailers in responses",
+        "Validates JSON structure before persistence",
+        "Two-call pipeline: Answer → Summary → Validate → Persist"
+      ]
+    },
+    {
+      "term": "progressive context revelation",
+      "definition": "Don't dump all memory at once; use confidence check → confirm → load full context approach",
+      "examples": [
+        "Prevents overwhelming AI with irrelevant context",
+        "User controls when to load full memory",
+        "Intelligent context budgeting within 6000 token limit"
+      ]
+    },
+    {
+      "term": "memory modes",
+      "definition": "Three context strategies: focused (single project), exploratory (blend topics), fresh (no memory)",
+      "examples": [
+        "Focused: lock context to single project for deep work",
+        "Exploratory: blend multiple related topics for discovery",
+        "Fresh: no memory injection for clean slate thinking"
+      ]
+    },
+    {
+      "term": "AI arbitrage routing",
+      "definition": "Route queries to cheapest capable model to optimize cost while maintaining quality",
+      "examples": [
+        "Simple queries → gpt-4o-mini",
+        "Complex analysis → gpt-4",
+        "Further cost reduction beyond dual-layer architecture"
+      ]
+    },
+    {
+      "term": "ambient context preloading",
+      "definition": "Predictively load relevant context while user types to make system feel instantaneous",
+      "examples": [
+        "Background loading based on typing patterns",
+        "Cache warming for likely next queries",
+        "Seamless user experience with zero perceived latency"
+      ]
+    },
+    {
+      "term": "zero maintenance butler",
+      "definition": "Memory becomes inevitable rather than intentional, contrasting with manual knowledge management tools",
+      "examples": [
+        "vs Obsidian: butler (automatic) vs filing cabinet (manual)",
+        "Compounding value through personal language modeling over time",
+        "Lock-in through integration (browser history, calendars, dev environments)"
+      ]
+    },
+    {
+      "term": "memory-as-infrastructure positioning",
+      "definition": "Position as middleware/infrastructure layer rather than competing directly with AI providers",
+      "examples": [
+        "Swiss bank account for AI memory - neutral, private, yours",
+        "Creating sandbox for AI collaboration and interoperability",
+        "Not competing with ChatGPT/Claude, enabling them to work together"
+      ]
+    },
+    {
+      "term": "smoke test MVP",
+      "definition": "36-hour user-testable prototype to validate core value before full development",
+      "examples": [
+        "Basic memory persistence and simple search",
+        "Breadth-first over depth-first development approach",
+        "1 week to testable vs 6 weeks to complete feature"
+      ]
+    },
+    {
+      "term": "subject change detection",
+      "definition": "Adaptive algorithm detecting topic shifts using embedding similarity, time gaps, and explicit signals",
+      "examples": [
+        "Embedding cosine similarity threshold 0.72 (adaptive 0.6-0.85)",
+        "Time gap detection: 45 minutes between messages",
+        "Explicit signals: 'new topic', 'switching gears', 'different subject'"
+      ]
+    },
+    {
+      "term": "memory weighting algorithms",
+      "definition": "Scoring system balancing recency (70%), access frequency (20%), and importance (10%) with decay",
+      "examples": [
+        "30-day half-life decay with 0.1 minimum retention score",
+        "Recent items weighted more heavily than old frequent items",
+        "Importance scores manually assigned or ML-derived"
+      ]
+    },
+    {
+      "term": "context allocation budgeting",
+      "definition": "Token budget management across different context types within 6000 token limit",
+      "examples": [
+        "Project profile: 500 tokens (core identity)",
+        "Pinned facts: 2048 tokens (critical context)",
+        "Retrieved snippets: 3000 tokens (dynamic context)",
+        "Conversation buffer: 452 tokens (recent exchanges)"
+      ]
+    },
+    {
+      "term": "validation schemas",
+      "definition": "Strict JSON schema enforcement with semantic consistency and contradiction detection",
+      "examples": [
+        "Required fields: conversation_summary, key_conclusions, decisions_made",
+        "Contradiction threshold: 0.8 confidence for flagging conflicts",
+        "Minimum confidence: 0.6 for acceptance, flag below for review"
+      ]
+    },
+    {
+      "term": "entity extraction",
+      "definition": "Automated identification and tracking of people, projects, features, deadlines, and metrics",
+      "examples": [
+        "Types: person, project, feature, deadline, metric",
+        "Minimum confidence: 0.7 for extraction",
+        "Cross-reference strength: strong (0.8), medium (0.6), weak (0.4)"
+      ]
+    },
+    {
+      "term": "deviation thresholds",
+      "definition": "Trigger alerts when format/operation/logging fall below set percentages",
+      "examples": [
+        "Format deviation threshold: 0.3 (30% non-compliance triggers alert)",
+        "Operation deviation threshold: 0.2 (20% manual code insertion triggers alert)",
+        "Logging deviation threshold: 0.1 (10% missing interaction logs triggers alert)"
+      ]
+    },
+    {
+      "term": "serialized memory object",
+      "definition": "Physical artifact with unique identifier linking to specific PMCE memory entry",
+      "examples": [
+        "NFC-enabled token opening dedicated memory capsule",
+        "QR-coded object launching specific 8825 context page",
+        "Serial-numbered artifact with corresponding digital twin entry"
+      ]
+    },
+    {
+      "term": "decision loop prevention",
+      "definition": "Framework preventing user-induced clarification loops by enabling autonomous decision-making with confidence thresholds",
+      "examples": [
+        "Confidence ≥0.7: proceed and state choice + rationale",
+        "Confidence 0.5-0.7: use default option from catalog",
+        "Confidence <0.5: ask one crisp question with proposed default",
+        "Loop detection tracks turns-to-decision and override rates"
+      ]
+    },
+    {
+      "term": "confidence thresholds",
+      "definition": "Decision boundaries determining when to proceed autonomously vs ask for clarification",
+      "examples": [
+        "Proceed threshold: 0.7 (high confidence in intent inference)",
+        "Ask threshold: 0.5 (low confidence requires user input)",
+        "Default range: 0.5-0.7 (use pre-defined defaults from catalog)",
+        "Evaluation targets: loop rate ≤5%, avg turns to decision ≤2"
+      ]
+    },
+    {
+      "term": "defaults catalog",
+      "definition": "Pre-defined default choices for common decision types to enable autonomous operation",
+      "examples": [
+        "Research mode default: Tier2_StructuredReview",
+        "Learning mode default: Standard",
+        "Investor voice general: StrategicButWarm",
+        "Investor voice Sequoia: FounderAsSystemsArchitect"
+      ]
+    },
+    {
+      "term": "REF Intake Watcher",
+      "definition": "Background watcher that copies valid JSON from Downloads into - REF - with safe writes and dedupe",
+      "implementation": "Node.js + chokidar with atomic writes and timestamped conflict resolution"
+    },
+    {
+      "term": "Core Sync Watcher",
+      "definition": "Watcher that mirrors only synchronized sections from primary 8825 core into sibling cores, preserving context-specific data",
+      "governed_by": "meta.core_sync_rules.synchronized_sections"
+    },
+    {
+      "term": "Stable-file check",
+      "definition": "Loop that waits for file size to stop changing before reading to avoid partial copies",
+      "implementation": "awaitWriteFinish in chokidar"
+    },
+    {
+      "term": "Atomic write",
+      "definition": "Write to .tmp file then rename to final path to avoid corruption",
+      "pattern": "fs.writeFileSync(tmpPath); fs.renameSync(tmpPath, finalPath)"
+    },
+    {
+      "term": "Timestamped dedupe",
+      "definition": "If destination exists and differs, append ISO-like timestamp to filename instead of overwriting",
+      "example": "file.json → file_2025-11-02T22-54-00.json"
+    }
+  ],
+  "summary_log": [
+    {
+      "when": "2025-10-01 to 2025-10-11",
+      "topic": "Project 8825 - Persistent Memory Context Engine (PMCE) development",
+      "notes": "Evolved from initial AI comparison through complete technical architecture to strategic positioning. Key innovations: dual-layer AI system (42% cost savings), self-modifying JSON configuration, cloud folder storage with user data sovereignty, memory-as-infrastructure positioning. MVP timeline: 36-hour smoke test, 155-220 hours complete build. Joju fork proved portability with ~600 lines of domain-specific code. Core philosophy: practical over perfect, breadth-first development, 'zero maintenance butler' vs manual knowledge management."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Core routing + sidecar plan (authoritative mapping to 8825_pmce)",
+      "notes": "Core updated with explicit_routing so all '8825/PMCE/memory system/intent/roadmap' references route to projects/8825_pmce.json. Added change_policies to consult PMCE before edits and append to summary_log. Planned Node sidecar CLIs (extract-ref, validate-library, watch-ref) and Ajv schemas for validation."
+    },
+    {
+      "when": "2025-11-02",
+      "topic": "File watcher automation for REF intake and core sync",
+      "notes": "Added automation infrastructure to replace Shortcuts with Node.js watchers. REF Intake Watcher: auto-copies valid JSON from Downloads to - REF - with validation, atomic writes, timestamped dedupe. Core Sync Watcher: auto-propagates synchronized sections from 8825_01-core.json to sibling cores while preserving context-specific sections. Both run via LaunchAgents for persistence. Aligns with zero_maintenance_butler principle and supports REF → extract → ARCHV lifecycle."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Technical architecture extraction from archived planning sessions",
+      "notes": "Extracted key technical concepts from archived files: progressive context revelation (confidence check → confirm → load), memory modes (focused/exploratory/fresh), AI arbitrage routing (cheapest capable model), ambient context preloading (predictive loading), answer contract validation (20-line Node.js helper), template system architecture (Outlook/Word/Plain with placeholders and fallbacks). Foundation Sprint methodology positioned post-MVP. Two-call pipeline: Answer → Summary → Validate → Persist. Context budget management within 6000 token limit."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Strategic positioning and development methodology extraction",
+      "notes": "Extracted strategic concepts from comprehensive chat mining report: zero maintenance butler philosophy (inevitable vs intentional memory), memory-as-infrastructure positioning (middleware not competitor), smoke test MVP approach (36-hour validation), breadth-first development strategy, cloud provider sync leverage, and user data sovereignty principles. Focused on technical architecture and positioning while excluding financial projections."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Technical architecture deep dive from 8825_blank.json",
+      "notes": "Extracted comprehensive technical architecture: subject change detection with adaptive thresholds (0.6-0.85), memory weighting algorithms (70% recency, 20% frequency, 10% importance), context allocation budgeting (6000 token limit across 4 categories), validation schemas with semantic consistency checks, entity extraction with confidence scoring, and redirection rules for sensitive data. Added monitoring and health check frameworks."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Full fidelity archive governance updates",
+      "notes": "Updated with external-LLM vs Windsurf agent split documentation, REF → extract → ARCHV lifecycle enforcement, deviation threshold monitoring, and immediate artifact generation patterns. Added dev backlog item for interaction logging metrics dashboard integration."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Physical-digital integration patterns from MTRL TrustyBits collaboration",
+      "notes": "Added patterns for linking physical objects to PMCE memory entries through serialized identity. Explored digital twin tokens that connect tangible artifacts to persistent memory capsules via NFC/QR/serial access methods. Extends PMCE concept to physical-digital continuity and portable memory embodiment."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Decision loop prevention framework implementation",
+      "notes": "Implemented autonomous decision-making framework with confidence thresholds to prevent user clarification loops. Key components: decision matrix (intent × stakes × efficiency), confidence thresholds (≥0.7 proceed, 0.5-0.7 use defaults, <0.5 ask), defaults catalog for common choices, decision logging with loop detection. Evaluation metrics: loop rate ≤5%, avg turns to decision ≤2, override rate 10-25%, correct default rate ≥70%. Reduces user effort while maintaining agency through override capability."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Team collaboration and enterprise workflow exploration (8825_enterprise_76)",
+      "notes": "Initiated exploration of team workflows for Joju development with PMCE integration. Key discovery: workspace isolation constraint where Cascade conversations in separate workspaces may not cross-communicate. Created sandbox project 8825_enterprise_76 to document multi-workspace architecture options: Shared Dropbox Bridge, Single Unified Workspace, and Cascade History Export. Critical unknowns: Can Cascade access own history? Can Cascade read across workspaces? Need systematic testing of Windsurf capabilities before designing team workflow."
+    }
+  ],
+  "open_loops": {
+    "sidecar_integration": [
+      "Implement Node CLIs: bin/extract-ref, bin/validate-library, bin/watch-ref",
+      "Split archived JS into modules: cloudDetector, memoryDb, schemaValidator, metrics, openaiClient, dualLayer"
+    ],
+    "schemas": [
+      "Author schemas/core.schema.json",
+      "Author schemas/project.schema.json",
+      "Author schemas/mining_report.schema.json"
+    ],
+    "conflict_enforcement": [
+      "Script to enforce merge_and_conflict_rules on project updates",
+      "Backup-before-merge and fallback-to-previous automation"
+    ]
+  },
+
+  "dev_backlog": {
+    "enhancements": [
+      {
+        "id": "ENH-8825-2025-10-31-001",
+        "area": "routing_and_sidecar",
+        "summary": "Explicit routing to 8825_pmce; sidecar CLIs planned; schemas to validate library and reports.",
+        "status": "planned"
+      }
+    ],
+    "bugs": []
+  },
+
+  "source_reports": [
+    "- ARCHV -/Archive/8825 - enhanced_memory_config v4.json",
+    "- ARCHV -/Archive/project8825-production.js",
+    "- ARCHV -/Archive/8825 - conversation_summary.json",
+    "- ARCHV -/Archive/8825 - complete-roadmap.txt",
+    "- ARCHV -/Archive/8825 - formatting_templates_config.json",
+    "- ARCHV -/Archive/8825_maestra/8825_blank.json",
+    "project_chat_mining_report (1).md",
+    "8825_core.json",
+    "8825_Full_Fidelity_Archive_2025-10-31.json",
+    "mtrl_trustybits_brainstorm_report.json",
+    "8825_decision_loop_prevention_2025-11-01.json",
+    "8825_mining_report_ref_watchers.json"
+  ],
+
+  "last_mined_at": "2025-11-02T22:56:00Z"
+}

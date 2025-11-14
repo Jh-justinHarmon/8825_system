@@ -1,0 +1,14 @@
+{
+  "content_type": "achievement",
+  "target_focus": "joju",
+  "content": {
+    "achievement": "Built complete inbox ingestion system with Lane A/B routing",
+    "date": "2025-11-08",
+    "evidence": ["8825_core/inbox/", "Phase 0 complete"],
+    "impact": "Prevents system drift, enables intelligent pattern handling"
+  },
+  "metadata": {
+    "source": "windsurf",
+    "timestamp": "2025-11-08T15:45:00"
+  }
+}

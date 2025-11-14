@@ -1,0 +1,180 @@
+{
+  "protocol_name": "8825 Partner Credit System",
+  "version": "1.0.0",
+  "effective_date": "2025-11-08",
+  "partners": ["Smart", "HCSS"],
+  "description": "Non-crypto credit-based barter system for partner work exchange",
+  
+  "credit_rules": {
+    "peg_value": {
+      "amount": 100,
+      "currency": "USD",
+      "description": "1 credit = $100 equivalent value"
+    },
+    "expiry": {
+      "duration_months": 18,
+      "warning_days": 30,
+      "description": "Credits expire 18 months after issuance with 30-day warning"
+    },
+    "balance_tolerance": {
+      "percentage": 15,
+      "description": "Quarterly true-up if balance exceeds ±15%"
+    },
+    "true_up_options": [
+      "Cash settlement at 80% peg",
+      "Roll over to next quarter",
+      "Convert to equity (if applicable)"
+    ]
+  },
+  
+  "skill_multipliers": {
+    "1.0x_base": {
+      "rate": 1.0,
+      "examples": [
+        "Standard engineering",
+        "Basic automation",
+        "Documentation",
+        "Code maintenance"
+      ]
+    },
+    "1.25x_specialized": {
+      "rate": 1.25,
+      "examples": [
+        "Data engineering",
+        "Security hardening",
+        "Complex integrations",
+        "8825 MCP development",
+        "API design"
+      ]
+    },
+    "1.5x_scarce": {
+      "rate": 1.5,
+      "examples": [
+        "Real-time systems",
+        "ML/AI implementation",
+        "Novel architecture design",
+        "8825 core protocol design",
+        "Performance optimization"
+      ]
+    },
+    "0.8x_advisory": {
+      "rate": 0.8,
+      "examples": [
+        "Consulting without deliverables",
+        "Code review only",
+        "Architecture review only",
+        "Strategic planning"
+      ]
+    }
+  },
+  
+  "work_order_caps": {
+    "minimum": 25,
+    "maximum": 150,
+    "description": "Work orders must be between 25-150 credits. Larger projects split into multiple WOs."
+  },
+  
+  "priority_levels": {
+    "P1_critical": {
+      "sla_days": 7,
+      "description": "Production down, security issue, blocking launch"
+    },
+    "P2_high": {
+      "sla_days": 14,
+      "description": "Important feature, significant impact, time-sensitive"
+    },
+    "P3_normal": {
+      "sla_days": 30,
+      "description": "Standard work, planned improvements"
+    },
+    "P4_low": {
+      "sla_days": 60,
+      "description": "Nice-to-have, backlog items"
+    }
+  },
+  
+  "governance": {
+    "steering_group": {
+      "composition": "2 representatives per partner",
+      "meeting_frequency": "Monthly",
+      "decision_making": "Consensus or majority vote",
+      "responsibilities": [
+        "Approve work orders >100 credits",
+        "Resolve disputes",
+        "Adjust multipliers/caps",
+        "Quarterly true-up review"
+      ]
+    },
+    "pilot_duration": {
+      "days": 90,
+      "review_date": "2025-02-08",
+      "success_criteria": [
+        "At least 3 work orders completed per partner",
+        "Balance within ±15% tolerance",
+        "No unresolved disputes",
+        "Mutual satisfaction rating >4/5"
+      ]
+    }
+  },
+  
+  "dispute_resolution": {
+    "level_1": {
+      "handler": "Steering group",
+      "timeline_days": 3,
+      "description": "Initial review and mediation"
+    },
+    "level_2": {
+      "handler": "Independent technical review",
+      "timeline_days": 7,
+      "description": "External expert evaluation"
+    },
+    "level_3": {
+      "handler": "Binding arbitration or cash settlement",
+      "timeline_days": 14,
+      "settlement_rate": 0.8,
+      "description": "Final resolution at 80% peg if needed"
+    },
+    "pause_rule": "Disputed work paused; unrelated work continues",
+    "evidence_required": [
+      "Work order specification",
+      "Acceptance criteria",
+      "Delivery artifacts",
+      "Communication trail",
+      "Test results"
+    ]
+  },
+  
+  "ip_licensing": {
+    "default_license": "Perpetual, royalty-free for partner internal use",
+    "shared_repo": "Required for all deliverables",
+    "license_file": "LICENSE.md in each project root",
+    "commercialization": {
+      "internal_use": "Free for both partners",
+      "external_licensing": {
+        "revenue_share_options": [
+          "80/20 (builder/requester)",
+          "50/50 (equal split)",
+          "Custom per agreement"
+        ],
+        "approval_required": "Both partners must approve external licensing"
+      }
+    }
+  },
+  
+  "quality_standards": {
+    "acceptance_criteria": "Must be defined in work order before start",
+    "testing_required": "Unit tests for code, validation checklist for other work",
+    "documentation_required": "README + runbook for all automations",
+    "rework_policy": "Free rework if acceptance criteria not met",
+    "quality_tokens": {
+      "validator_bonus": 0.1,
+      "description": "QA validators earn 10% of work order credits"
+    }
+  },
+  
+  "ledger_location": "Manual tracking in Notion/Airtable during Phase 1",
+  "automation_catalog_location": "8825_focus_hcss/automations/",
+  
+  "phase": "Phase 1 - Manual Tracking",
+  "next_phase": "Phase 2 - Automation & Integration (refactor-003)"
+}

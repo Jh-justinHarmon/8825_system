@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: 8825_BRAIN_TRANSPORT_2025-11-08.json
+Timestamp: 20251109_002725

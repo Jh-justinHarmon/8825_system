@@ -1,0 +1,137 @@
+{
+  "ticket_id": "T-8825-20251108-163843",
+  "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/8825_inbox_chat_upload.json",
+  "proposed_change": {
+    "summary": "User and assistant aligned on a two-layer automation pattern: 8825 produces explicit, execution-ready task specs (in Windsurf) and Goose acts on them locally via MCP. This preserves 8825 as the brain/context layer and uses Goose as the arms/legs layer. We also validated a concrete business-style use case: scanned letter is OCR'd, run through 2 LLM passes (context/routing via 8825, then deadline extraction), and then an agent creates calendar events for the target recipient.",
+    "original_context": "Conversation about using Windsurf as dry-run for 8825 task specs, then handing to Goose as execution layer; includes scanned-letter\u2192OCR\u21928825\u2192deadline\u2192calendar use case.",
+    "scope": "focus-wide",
+    "estimated_effort": "Unknown"
+  },
+  "ai_sweep_result": {
+    "touchpoints": [
+      {
+        "file_path": "8825_core/protocols/8825_joju_focus.json",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/logs/ingestion.log",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/data/processed_files.json",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/protocols/8825_joju_curation_agent",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/FIRST_RUN_COMPLETE.md",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/BRAIN_AND_MCP_COMPLETE.md",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/protocols/joju_library_first_mining",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/protocols/8825_md_conversion_protocol.json",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/scripts/routers/library_merger.py",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/scripts/processors/relationship_mapper.py",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, agent, routing"
+      },
+      {
+        "file_path": "focuses/hcss/workflows/tgif_auto_route.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Production routing for HCSS TGIF meetings"
+      },
+      {
+        "file_path": "joju_sandbox/patterns/achievement_detection.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Core Joju functionality for mining achievements"
+      },
+      {
+        "file_path": "8825_core/mcp/inbox_server.py",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: ChatGPT \u2192 Windsurf transport layer"
+      },
+      {
+        "file_path": "8825_core/mcp/universal_inbox_watch.py",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Multi-location inbox monitoring"
+      }
+    ],
+    "related_patterns": [
+      {
+        "pattern_name": "20251108_note_1",
+        "location": "focuses/hcss/knowledge/20251108_note_1.md",
+        "similarity": 0.6,
+        "context": "Similar note in different focus"
+      },
+      {
+        "pattern_name": "20251108_note",
+        "location": "focuses/hcss/knowledge/20251108_note.md",
+        "similarity": 0.6,
+        "context": "Similar note in different focus"
+      }
+    ],
+    "conflicts": [
+      {
+        "type": "override",
+        "severity": "high",
+        "description": "Would affect 4 critical protected patterns",
+        "affected_files": [
+          "focuses/hcss/workflows/tgif_auto_route.json",
+          "joju_sandbox/patterns/achievement_detection.json",
+          "8825_core/mcp/inbox_server.py",
+          "8825_core/mcp/universal_inbox_watch.py"
+        ]
+      }
+    ],
+    "blast_radius": "system-wide",
+    "recommendation": "\u26a0\ufe0f CAUTION: 1 high-severity conflicts. Recommend refactoring existing patterns instead of adding new one.",
+    "confidence": 0.7000000000000001
+  },
+  "questions": [
+    "Should we refactor existing patterns instead of adding new one?",
+    "Should we consolidate with existing patterns in focuses/hcss/knowledge/20251108_note_1.md?",
+    "Is the wide impact intentional or should we narrow the scope?"
+  ],
+  "required_mode": "teaching_mode",
+  "export_target": "windsurf",
+  "status": "pending",
+  "created_at": "2025-11-08T16:38:43.689274"
+}

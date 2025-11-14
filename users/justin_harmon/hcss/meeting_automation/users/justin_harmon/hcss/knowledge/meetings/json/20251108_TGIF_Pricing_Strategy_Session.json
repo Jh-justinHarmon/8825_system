@@ -1,0 +1,16 @@
+{
+  "title": "TGIF Pricing Strategy Session",
+  "date": "2025-11-08",
+  "source": "sample_data",
+  "transcript": "Sample transcript for TGIF Pricing Strategy Session",
+  "summary": "# TGIF Pricing Strategy Session\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "2 hours",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "TGIF"
+  },
+  "processed_at": "2025-11-11T12:28:43.906129"
+}

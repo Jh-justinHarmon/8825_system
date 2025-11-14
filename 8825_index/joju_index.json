@@ -1,0 +1,511 @@
+{
+  "focus": "joju",
+  "version": "3.0.0",
+  "built_at": "2025-11-07T19:14:55.923965",
+  "files": {
+    "focuses/joju/mcp_server/server.py": {
+      "type": "py",
+      "size": 3202,
+      "modified": "2025-11-07T19:10:37.177557",
+      "source": "focus"
+    },
+    "focuses/joju/mcp_server/config.json": {
+      "type": "json",
+      "size": 925,
+      "modified": "2025-11-07T19:11:01.637919",
+      "source": "focus"
+    },
+    "focuses/joju/mcp_server/start_mcp.sh": {
+      "type": "sh",
+      "size": 317,
+      "modified": "2025-11-07T19:10:37.178085",
+      "source": "focus"
+    },
+    "focuses/joju/mcp_server/config_schema.json": {
+      "type": "json",
+      "size": 1386,
+      "modified": "2025-11-07T19:10:37.176762",
+      "source": "focus"
+    },
+    "users/justin_harmon/joju/render_pdf_pages.py": {
+      "type": "py",
+      "size": 7822,
+      "modified": "2025-11-07T19:03:18.244605",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/capture_website_images.py": {
+      "type": "py",
+      "size": 5544,
+      "modified": "2025-11-07T19:03:18.201323",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/master_library.json": {
+      "type": "json",
+      "size": 45817,
+      "modified": "2025-11-07T19:03:11.346652",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/rhino_contribution_scanner.py": {
+      "type": "py",
+      "size": 8751,
+      "modified": "2025-11-07T19:03:18.245503",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/RHINO_SCANNER_README.md": {
+      "type": "md",
+      "size": 4969,
+      "modified": "2025-11-07T19:03:18.186620",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/jh_profile_config.json": {
+      "type": "json",
+      "size": 13754,
+      "modified": "2025-11-07T19:03:18.232185",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/profile_builder.py": {
+      "type": "py",
+      "size": 60510,
+      "modified": "2025-11-07T19:03:18.241268",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/setup_image_capture.sh": {
+      "type": "sh",
+      "size": 1417,
+      "modified": "2025-11-07T19:03:18.246593",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/extract_archive_images.py": {
+      "type": "py",
+      "size": 9096,
+      "modified": "2025-11-07T19:03:18.231665",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/requirements_images.txt": {
+      "type": "txt",
+      "size": 223,
+      "modified": "2025-11-07T19:03:18.245032",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/analogy_generator.py": {
+      "type": "py",
+      "size": 5154,
+      "modified": "2025-11-07T19:03:18.187598",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/scrape_designer_profiles.py": {
+      "type": "py",
+      "size": 3810,
+      "modified": "2025-11-07T19:03:18.246184",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/joju_image_capture.py": {
+      "type": "py",
+      "size": 11003,
+      "modified": "2025-11-07T19:03:18.232683",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/analysis/design_capability_gap_analysis.json": {
+      "type": "json",
+      "size": 14595,
+      "modified": "2025-11-07T19:03:18.188845",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/output/publish_report.md": {
+      "type": "md",
+      "size": 9534,
+      "modified": "2025-11-07T19:03:18.238897",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/output/library_update_report.md": {
+      "type": "md",
+      "size": 5471,
+      "modified": "2025-11-07T19:03:18.239619",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/output/joju_upload_ready.json": {
+      "type": "json",
+      "size": 14273,
+      "modified": "2025-11-07T19:03:18.240167",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/output/publish_report.md": {
+      "type": "md",
+      "size": 9337,
+      "modified": "2025-11-07T19:03:18.191298",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/output/library_update_report.md": {
+      "type": "md",
+      "size": 5471,
+      "modified": "2025-11-07T19:03:18.192065",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/output/joju_upload_ready.json": {
+      "type": "json",
+      "size": 15062,
+      "modified": "2025-11-07T19:03:18.192690",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/mined/resume_bullets_mined.json": {
+      "type": "json",
+      "size": 16935,
+      "modified": "2025-11-07T19:03:18.194196",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/deduped/dedup_analysis.json": {
+      "type": "json",
+      "size": 5830,
+      "modified": "2025-11-07T19:03:18.195183",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/raw/pm_bullets.docx": {
+      "type": "docx",
+      "size": 19240,
+      "modified": "2025-11-07T19:03:18.196061",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/raw/id_bullets.docx": {
+      "type": "docx",
+      "size": 19487,
+      "modified": "2025-11-07T19:03:18.196556",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/archives/jm_001_20251105/raw/proj_bullets.docx": {
+      "type": "docx",
+      "size": 19093,
+      "modified": "2025-11-07T19:03:18.197147",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/portfolio_website_achievements.json": {
+      "type": "json",
+      "size": 20355,
+      "modified": "2025-11-07T19:03:18.233799",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/trustybits_detailed_achievements.json": {
+      "type": "json",
+      "size": 24339,
+      "modified": "2025-11-07T19:03:18.234569",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/justin_harmon_art_achievements.json": {
+      "type": "json",
+      "size": 2108,
+      "modified": "2025-11-07T19:03:18.235159",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/prtcl_shinola_achievements.json": {
+      "type": "json",
+      "size": 11519,
+      "modified": "2025-11-07T19:03:18.235811",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/8825_trustybits_achievements.json": {
+      "type": "json",
+      "size": 16177,
+      "modified": "2025-11-07T19:03:18.236483",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/resume_bullets_mined.json": {
+      "type": "json",
+      "size": 16935,
+      "modified": "2025-11-07T19:03:18.237040",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/mined/work_samples_ocr_results.json": {
+      "type": "json",
+      "size": 4569,
+      "modified": "2025-11-07T19:03:18.237824",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/deduped/portfolio_website_dedup_analysis.json": {
+      "type": "json",
+      "size": 13876,
+      "modified": "2025-11-07T19:03:18.207252",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/deduped/prtcl_shinola_dedup_analysis.json": {
+      "type": "json",
+      "size": 11615,
+      "modified": "2025-11-07T19:03:18.208800",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/deduped/trustybits_dedup_analysis.json": {
+      "type": "json",
+      "size": 16380,
+      "modified": "2025-11-07T19:03:18.209437",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/deduped/dedup_analysis.json": {
+      "type": "json",
+      "size": 5830,
+      "modified": "2025-11-07T19:03:18.210255",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/PROFILE_BUILDER_V2.md": {
+      "type": "md",
+      "size": 7378,
+      "modified": "2025-11-07T19:03:18.213798",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/JOJU_PROFILE_WITH_IMAGES_SUMMARY.md": {
+      "type": "md",
+      "size": 6959,
+      "modified": "2025-11-07T19:03:18.214538",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/ADDITIONAL_DATA_SOURCES.md": {
+      "type": "md",
+      "size": 10495,
+      "modified": "2025-11-07T19:03:18.215185",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/QUICK_START_IMAGES.md": {
+      "type": "md",
+      "size": 2094,
+      "modified": "2025-11-07T19:03:18.215635",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/MANUAL_WEBSITE_CAPTURE.md": {
+      "type": "md",
+      "size": 2022,
+      "modified": "2025-11-07T19:03:18.216093",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/MATTHEW_FINAL_COMPARISON.md": {
+      "type": "md",
+      "size": 10910,
+      "modified": "2025-11-07T19:03:18.216596",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/ADDITIVE_MODE.md": {
+      "type": "md",
+      "size": 8134,
+      "modified": "2025-11-07T19:03:18.217144",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/JOJU_PROFILE_FINAL.md": {
+      "type": "md",
+      "size": 9213,
+      "modified": "2025-11-07T19:03:18.217624",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/STATUS.md": {
+      "type": "md",
+      "size": 1497,
+      "modified": "2025-11-07T19:03:18.218039",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/WORK_HISTORY_ADDED.md": {
+      "type": "md",
+      "size": 4727,
+      "modified": "2025-11-07T19:03:18.218590",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/READ_CV_FORMAT_FIXED.md": {
+      "type": "md",
+      "size": 7159,
+      "modified": "2025-11-07T19:03:18.219557",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/ALL_SOURCES_IMPLEMENTED.md": {
+      "type": "md",
+      "size": 6474,
+      "modified": "2025-11-07T19:03:18.222062",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/IMAGE_CAPTURE_SESSION_SUMMARY.md": {
+      "type": "md",
+      "size": 9175,
+      "modified": "2025-11-07T19:03:18.222607",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/MATTHEW_SCRAPED_ANALYSIS.md": {
+      "type": "md",
+      "size": 7694,
+      "modified": "2025-11-07T19:03:18.223196",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/DESIGNER_SOURCES.md": {
+      "type": "md",
+      "size": 9848,
+      "modified": "2025-11-07T19:03:18.223750",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/README.md": {
+      "type": "md",
+      "size": 4552,
+      "modified": "2025-11-07T19:03:18.224326",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/VERIFICATION_IMPLEMENTED.md": {
+      "type": "md",
+      "size": 6346,
+      "modified": "2025-11-07T19:03:18.224868",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/IMAGE_CAPTURE_README.md": {
+      "type": "md",
+      "size": 6095,
+      "modified": "2025-11-07T19:03:18.225427",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/IMPLEMENTATION_ROADMAP.md": {
+      "type": "md",
+      "size": 7051,
+      "modified": "2025-11-07T19:03:18.226046",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/SESSION_SUMMARY.md": {
+      "type": "md",
+      "size": 7562,
+      "modified": "2025-11-07T19:03:18.226671",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/FAKE_PROFILE_GENERATOR.md": {
+      "type": "md",
+      "size": 10630,
+      "modified": "2025-11-07T19:03:18.227132",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/ENHANCED_LOGIC.md": {
+      "type": "md",
+      "size": 13181,
+      "modified": "2025-11-07T19:03:18.227608",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/FINAL_SUMMARY.md": {
+      "type": "md",
+      "size": 7515,
+      "modified": "2025-11-07T19:03:18.228230",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/DATA_INGESTION_OPTIONS.md": {
+      "type": "md",
+      "size": 9069,
+      "modified": "2025-11-07T19:03:18.228750",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/MCP_PROFILE_BUILDER.md": {
+      "type": "md",
+      "size": 7854,
+      "modified": "2025-11-07T19:03:18.229260",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/MATTHEW_GALLEY_ANALYSIS.md": {
+      "type": "md",
+      "size": 10436,
+      "modified": "2025-11-07T19:03:18.229764",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/IDENTITY_VERIFICATION.md": {
+      "type": "md",
+      "size": 10928,
+      "modified": "2025-11-07T19:03:18.230131",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/DEDUPLICATION_STATUS.md": {
+      "type": "md",
+      "size": 4063,
+      "modified": "2025-11-07T19:03:18.230619",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/docs_from_2.1/CHARACTER_DRIVEN_PROFILES.md": {
+      "type": "md",
+      "size": 6960,
+      "modified": "2025-11-07T19:03:18.231138",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/backups/JH_master_library_20251105_200600.json": {
+      "type": "json",
+      "size": 36847,
+      "modified": "2025-11-07T19:03:18.198566",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/backups/justin_harmon_joju_input_backup_20251105.json": {
+      "type": "json",
+      "size": 16028,
+      "modified": "2025-11-07T19:03:18.199495",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/backups/justin_harmon_joju_input_incorrect_format_20251105.json": {
+      "type": "json",
+      "size": 15062,
+      "modified": "2025-11-07T19:03:18.200447",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/raw/costa_onboarding_extracted.txt": {
+      "type": "txt",
+      "size": 57,
+      "modified": "2025-11-07T19:03:18.242299",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/raw/pm_bullets.docx": {
+      "type": "docx",
+      "size": 19240,
+      "modified": "2025-11-07T19:03:18.242769",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/raw/id_bullets.docx": {
+      "type": "docx",
+      "size": 19487,
+      "modified": "2025-11-07T19:03:18.243348",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/raw/proj_bullets.docx": {
+      "type": "docx",
+      "size": 19093,
+      "modified": "2025-11-07T19:03:18.243871",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/justin_harmon_joju_CREATIVITY.json": {
+      "type": "json",
+      "size": 30019,
+      "modified": "2025-11-07T19:03:18.202408",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/VARIATIONS_SUMMARY.md": {
+      "type": "md",
+      "size": 6917,
+      "modified": "2025-11-07T19:03:18.203162",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/justin_harmon_joju_TECHNICAL_PM.json": {
+      "type": "json",
+      "size": 29526,
+      "modified": "2025-11-07T19:03:18.203759",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/justin_harmon_joju_UX_FOCUSED.json": {
+      "type": "json",
+      "size": 28610,
+      "modified": "2025-11-07T19:03:18.204281",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/justin_harmon_joju_ENTREPRENEURSHIP.json": {
+      "type": "json",
+      "size": 28518,
+      "modified": "2025-11-07T19:03:18.205121",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/creativity_variation_analysis.json": {
+      "type": "json",
+      "size": 7921,
+      "modified": "2025-11-07T19:03:18.205858",
+      "source": "user"
+    },
+    "users/justin_harmon/joju/curations/justin_harmon_joju_DESIGN_LEADERSHIP.json": {
+      "type": "json",
+      "size": 28502,
+      "modified": "2025-11-07T19:03:18.206300",
+      "source": "user"
+    }
+  },
+  "concepts": {},
+  "stats": {
+    "total_files": 83,
+    "total_size": 0,
+    "file_types": {}
+  }
+}

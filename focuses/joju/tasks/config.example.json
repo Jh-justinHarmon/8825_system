@@ -1,0 +1,44 @@
+{
+  "notion": {
+    "api_key": "secret_YOUR_NOTION_API_KEY_HERE",
+    "database_id": "YOUR_DATABASE_ID_HERE",
+    "workspace": "Joju"
+  },
+  "sync": {
+    "auto_sync": false,
+    "sync_interval_minutes": 30,
+    "conflict_resolution": "notion_wins"
+  },
+  "defaults": {
+    "status": "Backlog",
+    "priority": "Medium",
+    "owner": "Unassigned"
+  },
+  "task_types": [
+    "Feature",
+    "Bug",
+    "Enhancement",
+    "Research",
+    "Documentation"
+  ],
+  "priorities": [
+    "Critical",
+    "High",
+    "Medium",
+    "Low"
+  ],
+  "statuses": [
+    "Backlog",
+    "To Do",
+    "In Progress",
+    "In Review",
+    "Done"
+  ],
+  "sources": [
+    "User Feedback",
+    "Team Idea",
+    "Bug Report",
+    "Survey",
+    "Competitive Analysis"
+  ]
+}

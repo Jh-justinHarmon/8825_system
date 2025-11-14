@@ -1,0 +1,24 @@
+#!/bin/bash
+# Git post-commit hook for auto-registering new scripts
+# To install: cp 8825_core/registry/post-commit.hook .git/hooks/post-commit && chmod +x .git/hooks/post-commit
+
+REGISTRY_DIR="$(cd "$(dirname "$0")/../../8825_core/registry" && pwd)"
+
+# Find new/modified scripts in this commit
+new_scripts=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -E '\.(sh|py)$')
+
+if [ -n "$new_scripts" ]; then
+    echo ""
+    echo "=== Auto-Registering New Scripts ==="
+    echo ""
+    
+    echo "$new_scripts" | while read -r script; do
+        if [ -f "$script" ]; then
+            "$REGISTRY_DIR/auto_register.sh" "$script"
+        fi
+    done
+    
+    echo ""
+    echo "Registry updated. Run '8825 registry review' to refine entries."
+    echo ""
+fi

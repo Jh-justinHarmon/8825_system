@@ -1,0 +1,439 @@
+{
+  "project": "joju",
+  "version": "1.1.0",
+  "last_updated": "2025-11-03",
+  "description": "Professional OS ecosystem - proof-based career platform",
+  
+  "patterns": {
+    "do": [
+      "Frame exploration as discovery journeys with phases and evolution",
+      "Solve cold start problems with Trojan Horse entry strategies",
+      "Segment audiences with distinct value propositions and entry points",
+      "Provide three-tier candidate profiles (conventional/adjacent/wild card)",
+      "Generate downloadable PDFs with multiple style variants (Classic/Modern/Corporate)",
+      "Use typography variants: Lora+Source Sans (classic), Inter (modern), Work Sans (corporate)",
+      "Implement personalized file naming: JustinHarmon_<Variant>.pdf format",
+      "Create screen-ready layouts with embedded fonts and elevated contrast",
+      "Parse JSON resume data and select/trim content for different audience contexts",
+      "Use PromptGen workflow: Parse → Select → Render → Validate → Export",
+      "Implement layout strategies: single-column (classic), two-column sidebar (modern), banner header (corporate)",
+      "Never revert to previous versions once user approves styling decisions",
+      "Use data-adaptive layout modes for sparse vs dense profiles",
+      "Design semantic CSS mapping from data fields to visual hierarchy",
+      "Implement conditional rendering based on content availability",
+      "Create zero-configuration export workflows (30 seconds or less)",
+      "Centralize customizable values in CSS variables for easy theming",
+      "Optimize web documents for print with explicit page and media rules",
+      "Use comprehensive font fallback chains for cross-platform consistency",
+      "Diagnose systematically before implementing solutions (two-stage debugging)",
+      "Anchor reasoning only in validated product data when positioning",
+      "Use proof-of-work credibility layer framing to differentiate from portfolio builders",
+      "Position content along awareness → trust → validation pipeline",
+      "Follow JSDoc Protocol for all code documentation in Windsurf",
+      "Use /** */ comment blocks with required tags for all public functions",
+      "Document all parameters with types and return values",
+      "Include examples for non-trivial functions and complex implementations",
+      "Enforce TypeScript-compatible type syntax in JSDoc annotations"
+    ],
+    "dont": [
+      "Over-promise on market sizing without validation",
+      "Build features before solving cold start problems",
+      "Recommend platform switching without migration bridges"
+    ],
+    "framing": [
+      "Position new products as enhancements before replacements",
+      "Show evolution from curiosity → frameworks → market-ready solutions"
+    ]
+  },
+  
+  "lexicon": [
+    {
+      "term": "joju",
+      "definition": "Professional development ecosystem and 'professional OS' for capturing/framing work experiences; alternative to LinkedIn based on proof over performance theater",
+      "examples": [
+        "Core platform: professional identity with proof-based profiles",
+        "The Forge: experience engine and agency arm",
+        "Career/College Planning: trajectory mapping tool",
+        "Hiring Manager Intelligence: team building and candidate discovery"
+      ]
+    },
+    {
+      "term": "proof decay",
+      "definition": "Mechanism where skills and experiences have half-lives requiring continuous validation; contrast to static credentials",
+      "examples": [
+        "Skills lose value over time without fresh proof",
+        "Professional physics vs LinkedIn's chemistry model"
+      ]
+    },
+    {
+      "term": "LinkedIn audit Trojan Horse",
+      "definition": "Low-friction entry strategy: tool analyzes existing LinkedIn profiles, suggests improvements, publishes back to LinkedIn while gradually pulling users into superior editing experience",
+      "examples": [
+        "Enhancement positioning rather than replacement",
+        "Behavioral change over time through superior UX"
+      ]
+    },
+    {
+      "term": "subtle converts",
+      "definition": "Target segment: risk-averse job seekers who want better LinkedIn outcomes without platform switching",
+      "examples": [
+        "Entry via LinkedIn audit tool",
+        "Gradual migration through profile enhancement workflow"
+      ]
+    },
+    {
+      "term": "evangelists",
+      "definition": "Target segment: tool-obsessed early adopters (designers, indie makers) who signal status through platform choice",
+      "examples": [
+        "Design-focused users seeking Read.cv/Bento.me alternatives",
+        "Early adopters who showcase tools as personal brand"
+      ]
+    },
+    {
+      "term": "three-profile blueprint",
+      "definition": "Hiring framework providing HR with conventional fit, adjacent transferable, and wild card high-ceiling candidate profiles",
+      "examples": [
+        "Works with existing ATS systems",
+        "Expands candidate pool beyond keyword matches"
+      ]
+    },
+    {
+      "term": "description density",
+      "definition": "Measure of how much descriptive text exists per experience/proof entry; drives PDF layout mode selection",
+      "examples": [
+        "Sparse profiles (minimal descriptions) use MINIMAL mode with larger typography",
+        "Dense profiles (detailed descriptions) use STANDARD mode with compact spacing"
+      ]
+    },
+    {
+      "term": "semantic field mapping",
+      "definition": "Direct translation from JSON data fields to PDF visual elements without user configuration",
+      "examples": [
+        "title → H2 heading, organization → metadata, description → body text",
+        "Eliminates export customization decisions"
+      ]
+    },
+    {
+      "term": "layout mode",
+      "definition": "Automatic PDF formatting preset selected based on profile content characteristics",
+      "examples": [
+        "MINIMAL: <100 chars total description, 18pt titles, generous spacing",
+        "STANDARD: >100 chars, 14pt titles, compact spacing"
+      ]
+    },
+    {
+      "term": "sparse entry",
+      "definition": "Experience/proof with no description field or very brief description requiring visual adaptation",
+      "examples": [
+        "Title and organization only, no bullet points",
+        "System increases title size to compensate for missing content"
+      ]
+    },
+    {
+      "term": "typography variants",
+      "definition": "Different font combinations optimized for specific resume styles and target audiences",
+      "examples": [
+        "Classic: Lora headers + Source Sans body (traditional, readable)",
+        "Modern: Inter headers + Inter body (clean, contemporary)",
+        "Corporate: Work Sans headers + Work Sans body (professional, streamlined)"
+      ]
+    },
+    {
+      "term": "screen-ready layouts",
+      "definition": "PDF formatting optimized for digital viewing with embedded fonts and elevated contrast",
+      "examples": [
+        "RGB color profile for screen display",
+        "Embedded fonts to prevent rendering issues",
+        "Elevated contrast for readability across devices"
+      ]
+    },
+    {
+      "term": "multi-variant generation",
+      "definition": "Single JSON input generating multiple styled PDF outputs for different contexts",
+      "examples": [
+        "Classic Edition: traditional single-column with section dividers",
+        "Modern Creative: two-column with left sidebar and blue accents",
+        "Corporate Streamlined: banner header with right-column highlights"
+      ]
+    },
+    {
+      "term": "personalized file naming",
+      "definition": "Consistent naming convention that includes person name and variant type",
+      "examples": [
+        "JustinHarmon_Classic.pdf",
+        "JustinHarmon_Modern.pdf",
+        "JustinHarmon_Corporate.pdf"
+      ]
+    },
+    {
+      "term": "credibility engine",
+      "definition": "Joju's system that translates raw project data into career capital and professional narrative",
+      "examples": [
+        "Joju acts as your personal credibility engine",
+        "Proof-of-work credibility layer differentiates from simple portfolio builders",
+        "Credibility before visibility as positioning mantra"
+      ]
+    },
+    {
+      "term": "proof-of-work credibility",
+      "definition": "Career validation through demonstrated deliverables rather than traditional credentials",
+      "examples": [
+        "GitHub contributions over computer science degree",
+        "Portfolio of shipped products over years of experience",
+        "Client testimonials over job titles"
+      ]
+    },
+    {
+      "term": "Achievement Analysis Tool",
+      "definition": "Joju component that scores and classifies achievements using structured analysis with tier classification and framework alignment heuristics",
+      "examples": [
+        "Rev 01 JSON schema for achievement validation",
+        "Scoring system for achievement impact and relevance",
+        "Tier classification for achievement hierarchy"
+      ]
+    },
+    {
+      "term": "Career OS",
+      "definition": "Joju's positioning as AI-powered version control system for human achievement and identity across platforms and contexts",
+      "examples": [
+        "Trusted, AI-powered version control system for evolving identities",
+        "Deep workflow integration with professional tools",
+        "Expansion from job search into holistic identity and growth analytics"
+      ]
+    },
+    {
+      "term": "AI Intake Partner",
+      "definition": "Conversational AI system that structures data while enabling natural storytelling during profile creation",
+      "examples": [
+        "Human-first data experience starting with conversation",
+        "AI guides and structures inputs while keeping users in control",
+        "Procedural Q&A to reduce onboarding friction"
+      ]
+    },
+    {
+      "term": "Proof Layer",
+      "definition": "Live, trusted data sync system that maintains quality with inline cleaning and visible system activity",
+      "examples": [
+        "Sync from source tools with background activity visibility",
+        "Live integrations as streams, not static imports",
+        "Privacy-first cleaning and classification with history tracking"
+      ]
+    },
+    {
+      "term": "interactive, intelligent proof ecosystem",
+      "definition": "Joju's core positioning from Foundation Sprint - unifies achievements, narrative, and identity into a living source of truth",
+      "examples": [
+        "Interactive system that responds to user needs and context",
+        "Intelligent processing of achievements and career data",
+        "Proof ecosystem that validates and connects professional accomplishments",
+        "Living source of truth that evolves with user's career journey"
+      ]
+    },
+    {
+      "term": "JSDoc Protocol for Windsurf",
+      "definition": "Joju's code documentation standard using JSDoc format with specific rules for Windsurf development",
+      "examples": [
+        "/** */ comment blocks with brief description ending with period",
+        "@param {Type} paramName - Description with type annotations",
+        "@returns {Type} Description of return value",
+        "@example usage demonstrations for complex functions",
+        "@throws {ErrorType} documentation for error conditions",
+        "TypeScript-compatible type syntax: {string|number}, {Array<Type>}, {Promise<Type>}"
+      ]
+    },
+    {
+      "term": "JSDoc Generation Guide",
+      "definition": "Comprehensive template and rules for generating JSDoc comments for JavaScript/TypeScript code in Joju development",
+      "examples": [
+        "Structure: Start /** end */, brief description (third-person singular, period-terminated)",
+        "Document ALL parameters with @param {Type} name - Description.",
+        "Document return values with @returns {Type} Description.",
+        "Type syntax: Primitives {string}, {number}, {boolean}; Complex {Object}, {Array<Type>}, {Promise<Type>}",
+        "Optional parameters: [paramName] or {Type|undefined}; Unions: {Type1|Type2}",
+        "Rules: Document every exported function/class/module, use TypeScript-compatible types",
+        "Include practical examples, mark private code with @private",
+        "Add @deprecated with alternatives when applicable, consistent punctuation"
+      ]
+    }
+  ],
+  
+  "agent_references": {
+    "note": "Agent capabilities moved to projects/agent_registry.json to prevent duplication",
+    "agents_from_this_project": [
+      "AGENT-JOJU-THREE-PROFILE-BLUEPRINT-0001",
+      "AGENT-JOJU-PORTFOLIO-PDF-GENERATOR-0001",
+      "AGENT-JOJU-PERSONA-MATRIX-BUILDER-0001",
+      "AGENT-JOJU-VALIDATION-LOOP-0001"
+    ],
+    "reconstruction": "Use 'recreate WCB for <agent_id>' to regenerate from registry"
+  },
+  
+  "schemas": {
+    "joju_achievement_rev01": {
+      "description": "JSON schema for Joju achievement analysis and validation (Rev 01)",
+      "source_report": "mining_report_joju_rev01.json",
+      "wcb_reference": "Joju Achievement Analysis (Rev 01)",
+      "status": "extracted_from_mining_report",
+      "integration_needed": true
+    }
+  },
+  
+  "checklists": [
+    {
+      "name": "Cold Start Problem Solving",
+      "items": [
+        "Identify Trojan Horse entry strategy (enhancement before replacement)",
+        "Design low-friction first-touch experience",
+        "Map behavioral change pathway",
+        "Segment audiences with distinct entry points",
+        "Create migration bridges from existing platforms"
+      ]
+    },
+    {
+      "name": "PDF Export Quality Validation",
+      "items": [
+        "Phase 1: Data integrity - all JSON fields map correctly to PDF sections",
+        "Phase 2: Layout adaptation - sparse profiles use MINIMAL mode, dense use STANDARD",
+        "Phase 3: Typography hierarchy - titles 18pt/14pt, metadata 12pt, body 11pt, proper line heights",
+        "Phase 4: Print optimization - page breaks clean, margins consistent, fonts embed correctly",
+        "Phase 5: Zero config test - user clicks export, gets professional PDF in 30 seconds, no decisions needed"
+      ]
+    }
+  ],
+  
+  "summary_log": [
+    {
+      "when": "2025-10-30",
+      "topic": "PDF export system implementation and typography variants",
+      "notes": "Successfully implemented multi-variant PDF generation system with three distinct styles (Classic, Modern, Corporate). Each variant uses different typography systems and layouts optimized for specific audiences. Added personalized file naming convention and screen-ready formatting with embedded fonts."
+    },
+    {
+      "when": "2025-10-31",
+      "topic": "Resume rendering workflow extraction from ChatGPT session",
+      "notes": "Extracted comprehensive resume rendering patterns from Chat_Mining_Complete report. Added PromptGen workflow (Parse → Select → Render → Validate → Export), layout strategies for each variant, and never-revert versioning policy. Enhanced typography variants with specific font fallbacks and screen optimization techniques."
+    },
+    {
+      "when": "2025-10-15",
+      "topic": "PromptGen 1.0 LLM onboarding system for joju",
+      "notes": "Created comprehensive 4000+ word prompt using conversation_search to reconstruct joju's full ecosystem vision. Documented four interconnected platforms with proof decay, LinkedIn audit Trojan Horse strategy, and three-segment GTM approach."
+    },
+    {
+      "when": "2025-10-01",
+      "topic": "Team science and AI-powered hiring intelligence discovery journey",
+      "notes": "Exploration progressed through 8 phases from curiosity about team building psychology to market-ready 'Three-Profile Blueprint' concept. Journey: team psychology foundations → AI personality analysis → LinkedIn API limitations → diversity challenges in ATS systems → insight that traditional ATS creates homogeneous pools through keyword screening. Culminated in innovation that works with existing HR processes: provides hiring managers three candidate search profiles (conventional fits, adjacent transferable, wild card high-ceiling)."
+    },
+    {
+      "when": "2025-10-01",
+      "topic": "Hiring Manager Intelligence tool ideation and refinement",
+      "notes": "Deep product development for tool that translates team dynamics into actionable HR search criteria. Core innovation: empowers hiring managers directly, bypassing HR adoption challenges. Analyzes existing team using Big Five and Belbin frameworks, generates three-profile blueprint for searches. Advanced features discussed: real-time team chemistry modeling, dynamic context awareness, competitive intelligence layers, Team Simulation Mode for test-driving candidate fit."
+    },
+    {
+      "when": "2025-10-01",
+      "topic": "Joju strategic product vision and professional infrastructure positioning",
+      "notes": "Extensive discussion positioning joju as comprehensive professional development infrastructure vs just another profile platform. Multi-faceted vision: core profile functionality, The Forge (project-based experience engine), career planning, hiring manager intelligence. Breakthrough concepts: time-based proof decay (credentials lose value without fresh validation), cross-pollination intelligence between components, positioning as infrastructure other platforms could integrate via APIs."
+    },
+    {
+      "when": "2025-10-01",
+      "topic": "Joju cold start problem and LinkedIn audit Trojan Horse strategy",
+      "notes": "Developed 'LinkedIn audit' Trojan Horse strategy to solve cold start. Three key segments: subtle converts, evangelists, recruiters with distinct entry points and value props."
+    },
+    {
+      "when": "2025-10-30",
+      "topic": "Portfolio JSON to PDF export system (joju export experiment)",
+      "notes": "Built proof-of-concept PDF export feature for joju profiles. Core innovation: data-adaptive layout (MINIMAL mode for sparse profiles, STANDARD for detailed). Automatic semantic field mapping (JSON → visual hierarchy) with zero user configuration. Tested with Matthew Galley resume - proved system handles sparse entries gracefully. 30-second export workflow, browser-based, professional typography (Source Sans Pro/Crimson Text). Strategic fit: supports LinkedIn audit Trojan Horse by providing polished PDF that stays current with joju profile updates. Validates export as key retention feature."
+    },
+    {
+      "when": "2025-10-30",
+      "topic": "GTM strategy and persona mapping (external LLM mining report)",
+      "notes": "Extracted positioning framework from external mining report. Added 'credibility engine' framing to differentiate from portfolio builders. Created two new agent recipes: Persona Matrix Builder (mines target user personas with behaviors and pain points) and Validation Loop Agent (tracks early user feedback and pricing signals). Identified four GTM validation open loops: persona behavior mapping, competitor monitoring, early adopter validation, and scaling metrics. Emphasizes awareness → trust → validation pipeline for content positioning."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Achievement Analysis Tool backbone development (Rev 01)",
+      "notes": "Extracted from mining report: Defined Joju Achievement Analysis WCB using PromptGen 1.0 framework. Added full JSON schema for achievements (Rev 01). Established scoring, tier classification, and framework alignment heuristics. Schema and WCB content needs integration into joju system."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Foundation Sprint - core purpose and differentiation",
+      "notes": "Completed Foundation Sprint establishing Joju's core purpose, differentiation, and decision criteria through structured workshops. Key outcome: framed Joju as 'interactive, intelligent proof ecosystem' that unifies achievements, narrative, and identity into a living source of truth. Foundation Sprint provided strategic framework that informed subsequent Design Sprint 1.0 tactical implementation."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Design Sprint 1.0 comprehensive workshop outputs",
+      "notes": "Completed comprehensive design sprint defining Joju as human-first, AI-augmented 'Career OS.' Core philosophy: human-first data experience with conversational AI intake, live trusted Proof Layer with visible sync activity, playful but precise UX borrowing game mechanics. Long-term vision: AI-powered version control system for human achievement and identity across platforms. Key differentiator: living loop between expression, validation, and iteration. Identified 5 concrete opportunities: AI Intake Partner, live sync architecture, multi-version CV control, radial tagging with game tooltips, inline cleaning with privacy-first controls. Next steps: prototype 3 intake flows, build visible intelligence activity panel, validate recruiter acceptance, establish public feedback channel. Focus on living loop between expression, validation, and iteration. Make Joju feel 'alive' - adaptive, transparent, and empowering. Follow JSDoc Protocol for all code documentation in Windsurf. Use /** */ comment blocks with required tags for all public functions. Document all parameters with types and return values. Include examples for non-trivial functions and complex implementations. Enforce TypeScript-compatible type syntax in JSDoc annotations."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "JSDoc Protocol build philosophy implementation",
+      "notes": "Established JSDoc Protocol for Windsurf Rules as core build philosophy for Joju development. Key requirements: /** */ comment blocks for all public functions, required @param and @returns tags with TypeScript-compatible types, @example for complex functions, @throws for error conditions. Enforcement rules: all exported functions/classes must have JSDoc, all parameters must be documented with types, include examples for non-trivial functions. Protocol ensures consistent, maintainable codebase with clear documentation standards."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "JSDoc Generation Guide comprehensive template",
+      "notes": "Extended JSDoc Protocol with comprehensive generation guide for JavaScript/TypeScript code. Template includes structure requirements (/** */ blocks, third-person descriptions), complete type syntax (primitives, complex types, optionals, unions), and enforcement rules (document every exported function/class/module, TypeScript-compatible types, practical examples). Guide ensures consistent documentation generation across all Joju development with specific formatting and punctuation standards."
+    }
+  ],
+
+  "open_loops": {
+    "joju_export_integration": {
+      "status": "Design phase",
+      "priority": "High",
+      "description": "Integrate adaptive PDF generator into joju export workflow",
+      "requirements": [
+        "Create joju → profileData.json schema converter",
+        "Add one-click export button to joju UI",
+        "Build color theme library (5-10 accent colors)",
+        "Implement live HTML preview before PDF download"
+      ],
+      "timeline": "Next sprint"
+    },
+    "export_enhancements": {
+      "status": "Backlog",
+      "priority": "Medium",
+      "items": [
+        "AI-generated descriptions from joju proofs",
+        "Multi-page handling for 15+ year careers",
+        "Skills section mapping (not in current schema)",
+        "Photo placement strategy if profilePhoto exists",
+        "Proof freshness indicators (highlight stale entries)"
+      ]
+    },
+    "gtm_validation": {
+      "status": "Discovery phase",
+      "priority": "High",
+      "items": [
+        "Persona behavior mapping (daily habits, workflows, platform usage)",
+        "Competitor monitoring plan (platforms, hashtags, subreddits to track)",
+        "Early adopter validation (real users, willingness to pay signals)",
+        "Scaling metrics definition (user counts, CAC/LTV targets)"
+      ]
+    },
+    "achievement_analysis_integration": {
+      "status": "Schema extracted, integration needed",
+      "priority": "Medium",
+      "items": [
+        "Store joju_achievement.schema.json (Rev 01) in schemas directory",
+        "Patch joju.json to include Achievements section with schema reference",
+        "Schedule validation/promotion flow spec for Artifact Vault integration",
+        "Implement Achievement Analysis WCB in joju system"
+      ]
+    }
+  },
+  
+  "profile_archives": {
+    "note": "Justin Harmon's Joju profile versions - condensed from external LLM exports",
+    "files": [
+      "projects/8825_76-joju_Jh-v00.json (archival history)",
+      "projects/8825_76-joju_Jh-v01.json (strategic narrative)"
+    ],
+    "mapping_package": "PKG-8825-joju-mapping-20251103T044707.json (in REF - available for integration)"
+  },
+  
+  "source_reports": [
+    "8825_76-joju_Jh-v00.json",
+    "8825_76-joju_Jh-v01.json",
+    "PKG-8825-joju-mapping-20251103T044707.json"
+  ],
+  
+  "last_mined_at": "2025-11-03T04:47:07"
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "last_updated": "2025-11-08",
+    "total_items": 3,
+    "next_refactor_date": "2025-12-01",
+    "description": "Incremental improvements to existing code"
+  },
+  "items": [
+    {
+      "id": "refactor-001",
+      "title": "Extract shared ingestion core",
+      "description": "Create unified ingestion system for inbox + input hub to prevent code duplication",
+      "source": "input_hub_analysis",
+      "source_id": "INPUT_HUB_DECISION.md",
+      "priority": "high",
+      "effort": "medium",
+      "effort_hours": 4,
+      "impact": "high",
+      "dependencies": [],
+      "tags": ["architecture", "ingestion", "v3.0", "tech-debt"],
+      "status": "queued",
+      "created": "2025-11-08",
+      "notes": "Prevents duplication between inbox and input hub systems. Both systems need validation, classification, routing, and deduplication. Extract common patterns into shared core that both can use.",
+      "benefits": [
+        "Zero code duplication",
+        "Single source of truth for ingestion logic",
+        "Easier to maintain and extend",
+        "Consistent behavior across all input types"
+      ],
+      "approach": "Extract validator, classifier, router into shared core. Both inbox and input hub become thin wrappers that call shared logic with input-type-specific handlers."
+    },
+    {
+      "id": "refactor-002",
+      "title": "Refactor existing patterns for 8825+Goose integration",
+      "description": "Integrate two-layer automation pattern (8825 brain + Goose execution) into existing workflow patterns rather than creating parallel system",
+      "source": "teaching_ticket",
+      "source_id": "T-8825-20251108-163843",
+      "priority": "medium",
+      "effort": "large",
+      "effort_hours": 16,
+      "impact": "high",
+      "dependencies": [],
+      "tags": ["architecture", "mcp", "goose", "automation", "integration"],
+      "status": "queued",
+      "created": "2025-11-08",
+      "notes": "AI sweep identified 14 touchpoints and 4 critical pattern conflicts. Recommendation is to refactor existing patterns rather than add new parallel system. This preserves 8825 as brain/context layer and uses Goose as execution layer via MCP.",
+      "ai_analysis": {
+        "touchpoints": 14,
+        "conflicts": 1,
+        "severity": "high",
+        "affected_critical_patterns": [
+          "focuses/hcss/workflows/tgif_auto_route.json",
+          "joju_sandbox/patterns/achievement_detection.json",
+          "8825_core/mcp/inbox_server.py",
+          "8825_core/mcp/universal_inbox_watch.py"
+        ],
+        "blast_radius": "system-wide",
+        "recommendation": "Refactor existing patterns instead of adding new one"
+      },
+      "benefits": [
+        "Unified automation approach across all workflows",
+        "Preserves 8825 as brain/context layer",
+        "Uses Goose as execution layer via MCP",
+        "Prevents fragmentation of automation patterns",
+        "Maintains consistency with existing critical patterns"
+      ],
+      "approach": "Review and refactor existing workflow patterns (TGIF auto-route, achievement detection, MCP servers) to support 8825→Goose handoff pattern. Ensure task specs from 8825 can be executed by Goose via MCP without creating parallel systems.",
+      "use_cases": [
+        "Scanned letter → OCR → 8825 routing → deadline extraction → Goose creates calendar events",
+        "Achievement detection → 8825 context → Goose executes mining",
+        "TGIF notes → 8825 routing → Goose handles distribution"
+      ],
+      "questions": [
+        "Which existing patterns need refactoring first?",
+        "What's the right abstraction boundary between 8825 (brain) and Goose (execution)?",
+        "How do we maintain backward compatibility with existing workflows?"
+      ]
+    },
+    {
+      "id": "refactor-003",
+      "title": "Partner Credit System - Automation & Integration",
+      "description": "Automate credit tracking and integrate with 8825 task history, validation protocol, and metrics dashboard",
+      "source": "partner_barter_proposal",
+      "source_id": "PARTNER_CREDIT_PHASES.md",
+      "priority": "medium",
+      "effort": "medium",
+      "effort_hours": 20,
+      "impact": "high",
+      "dependencies": ["Phase 1 complete", "90-day pilot validated"],
+      "tags": ["credits", "partner", "automation", "integration", "governance"],
+      "status": "queued",
+      "created": "2025-11-08",
+      "notes": "Phase 2 of partner credit system. Phase 1 (manual tracking) must complete 90-day pilot successfully before building automation.",
+      "benefits": [
+        "Auto-log credits to 8825 ledger",
+        "Link work orders to 8825 task history",
+        "Feed actual hours to time estimator",
+        "Real-time metrics dashboard",
+        "Automated validation protocol",
+        "Quality token minting for validators",
+        "Searchable automation catalog via MCP"
+      ],
+      "approach": "Build 8825 integration layer with auto-logging to ledger, validation protocol automation, metrics dashboard, and automation catalog. Integrate with existing task tracking and time estimation systems.",
+      "deliverables": [
+        "8825 integration layer (auto-log credits)",
+        "Validation protocol automation",
+        "Metrics dashboard (balance, WOs, cycle time, SLA)",
+        "Automation catalog (searchable via MCP)",
+        "Quality token system (10% to validators)"
+      ],
+      "phase_1_location": "8825_core/protocols/partner_credit_protocol.json"
+    }
+  ]
+}

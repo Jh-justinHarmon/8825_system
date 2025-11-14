@@ -1,0 +1,271 @@
+{
+  "project": "HCSS-TGIF",
+  "version": "1.0.0",
+  "last_updated": "2025-11-02",
+  "description": "Restaurant operations modernization project - Sysco, Toast, NetSuite integration",
+  "tagline": "Automate meeting mining and decision capture for rollout governance",
+  "priority_status": "Top Priority – first test environment for Chat Mining Agent",
+  
+  "patterns": [
+    {
+      "category": "meeting_automation",
+      "items": [
+        "Deploy Chat Mining Agent for automatic meeting transcription",
+        "Capture decisions and action items from meetings",
+        "Generate structured summaries for rollout governance",
+        "Track meeting outcomes in persistent library"
+      ]
+    },
+    {
+      "category": "rollout_governance",
+      "items": [
+        "Document integration decisions (Sysco, Toast, NetSuite)",
+        "Track rollout milestones and blockers",
+        "Maintain decision history for stakeholder alignment",
+        "Automate governance reporting",
+        "Schedule regular sync meetings during rollout phases",
+        "Provide multiple time options for meetings to accommodate different schedules",
+        "Include all relevant stakeholders in communication threads"
+      ]
+    },
+    {
+      "category": "onsite_support",
+      "items": [
+        "Check Toast coverage for store rollouts",
+        "Coordinate inter-restaurant training and exposure",
+        "Ensure MA stores are prepared for going live",
+        "Use feedback to guide decisions on coverage and training"
+      ]
+    },
+    {
+      "category": "store_setup",
+      "items": [
+        "Ensure inventory and labor accounts are set up correctly",
+        "Schedule inventories for new locations",
+        "Import employee data and vendor setup in advance",
+        "Verify location products before rollout to avoid missing data",
+        "Finalize liquor vendors before store openings"
+      ]
+    },
+    {
+      "category": "pricing_management",
+      "items": [
+        "Test new pricing systems in lab before publishing to live stores",
+        "Implement price levels using spreadsheets for accuracy",
+        "Set up time-specific discounts (e.g., happy hour) with legal considerations",
+        "Ensure accurate pricing to avoid legal issues"
+      ]
+    },
+    {
+      "category": "restaurant_operations",
+      "items": [
+        "Modernize restaurant operations through system integration",
+        "Connect Sysco (supply chain) + Toast (POS) + NetSuite (ERP)",
+        "Streamline operational workflows",
+        "Enable data-driven decision making"
+      ]
+    }
+  ],
+  
+  "lexicon": [
+    {
+      "term": "TGIF",
+      "definition": "Restaurant operations modernization project",
+      "integrations": ["Sysco", "Toast", "NetSuite"],
+      "focus": "Meeting mining and decision capture for rollout governance"
+    },
+    {
+      "term": "Sysco Integration",
+      "definition": "Supply chain management system integration",
+      "purpose": "Streamline restaurant supply ordering and inventory"
+    },
+    {
+      "term": "Toast Integration",
+      "definition": "Point-of-sale (POS) system integration",
+      "purpose": "Modernize restaurant transaction processing"
+    },
+    {
+      "term": "NetSuite Integration",
+      "definition": "Enterprise Resource Planning (ERP) system integration",
+      "purpose": "Centralize financial and operational data"
+    },
+    {
+      "term": "Rollout phase",
+      "definition": "The period during which a new system or process is implemented and monitored"
+    },
+    {
+      "term": "Sync meeting",
+      "definition": "A scheduled meeting for team members to align on progress, updates, and next steps"
+    },
+    {
+      "term": "POS Onboarding Consultant",
+      "definition": "A professional responsible for guiding clients through the implementation of Point of Sale systems"
+    },
+    {
+      "term": "Toast coverage",
+      "definition": "Staffing and support available for the Toast system during store rollouts"
+    },
+    {
+      "term": "Inter-restaurant training/exposure",
+      "definition": "A training model where staff from different restaurants are exposed to each other's operations to enhance skills and knowledge sharing"
+    },
+    {
+      "term": "Going live",
+      "definition": "The process of officially launching a new store or system, making it operational for customers"
+    },
+    {
+      "term": "Go Live Checklist",
+      "definition": "A document outlining the necessary steps and requirements for launching a project or system"
+    },
+    {
+      "term": "Ownership Groups",
+      "definition": "The designated teams or individuals responsible for overseeing specific aspects of the rollout"
+    },
+    {
+      "term": "POC",
+      "definition": "Point of Contact; the individual designated to communicate and coordinate on behalf of a group"
+    },
+    {
+      "term": "Net-Chef",
+      "definition": "A software platform used for inventory management and operational support in the restaurant industry (CrunchTime product)"
+    },
+    {
+      "term": "By Exception Setup",
+      "definition": "A method of inventory management that focuses on addressing discrepancies or exceptions rather than tracking every item continuously"
+    },
+    {
+      "term": "Waste Tracking",
+      "definition": "The process of monitoring and recording waste generated in the inventory to improve efficiency and reduce losses"
+    },
+    {
+      "term": "Location products",
+      "definition": "Product data specific to each store location that must be configured before rollout"
+    },
+    {
+      "term": "Price levels",
+      "definition": "Different pricing tiers for items (e.g., regular, happy hour) managed through the POS system"
+    },
+    {
+      "term": "Time-specific discounts",
+      "definition": "Pricing adjustments that apply during specific time periods (e.g., happy hour pricing)"
+    }
+  ],
+  
+  "agent_recipes": [],
+  
+  "checklists": [],
+  
+  "phase_1_actions": [
+    {
+      "id": "ACT-002",
+      "action": "Create TGIF Chat Mining Agent schema and WCB",
+      "owner": "ChatGPT / PromptGen system",
+      "due": "2025-11-04",
+      "output": "TGIF_ChatMining_Agent.wcb"
+    },
+    {
+      "id": "ACT-003",
+      "action": "Automate Dropbox + Email ingestion loop",
+      "owner": "Justin Harmon",
+      "status": "Planned",
+      "methods": [
+        "Dropbox API (Python SDK or Zapier) for text extraction",
+        "Email parsing via Gmail API, Takeout, or Mailparser.io",
+        "Merge via jq CLI or JSON pipeline"
+      ]
+    }
+  ],
+  
+  "agent_integration": {
+    "chat_mining_agent": "First test environment - Deploy for meeting transcription and decision capture",
+    "governance_tracker_agent": "Monitor rollout decisions and milestones",
+    "knowledge_retention_agent": "Build persistent library of TGIF project knowledge"
+  },
+  
+  "system_integrations": {
+    "sysco": {
+      "type": "Supply Chain Management",
+      "status": "In rollout",
+      "purpose": "Restaurant supply ordering and inventory"
+    },
+    "toast": {
+      "type": "Point of Sale (POS)",
+      "status": "In rollout",
+      "purpose": "Transaction processing and customer management"
+    },
+    "netsuite": {
+      "type": "Enterprise Resource Planning (ERP)",
+      "status": "In rollout",
+      "purpose": "Financial and operational data centralization"
+    }
+  },
+  
+  "open_loops": [
+    {
+      "area": "chat_mining_agent_deployment",
+      "status": "active",
+      "priority": "critical",
+      "due": "2025-11-04",
+      "next_actions": [
+        "Create TGIF_ChatMining_Agent.wcb",
+        "Test with first TGIF meeting",
+        "Validate decision capture accuracy"
+      ]
+    },
+    {
+      "area": "dropbox_email_automation",
+      "status": "planned",
+      "priority": "high",
+      "next_actions": [
+        "Set up Dropbox API integration",
+        "Configure email parsing",
+        "Build JSON merge pipeline"
+      ]
+    }
+  ],
+  
+  "summary_log": [
+    {
+      "when": "2025-11-02",
+      "topic": "TGIF project initialization and Phase 1 plan",
+      "notes": "Extracted TGIF context from HCSS_RAL_TGIF mining report. Designated as TOP PRIORITY and first test environment for Chat Mining Agent. Focus: automate meeting mining and decision capture for Sysco/Toast/NetSuite rollout governance. Creating TGIF_ChatMining_Agent.wcb by 2025-11-04."
+    },
+    {
+      "when": "2025-11-03",
+      "topic": "Forwarded emails extraction - Rollout coordination",
+      "notes": "Extracted 3 forwarded emails from REF folder. (1) Toast rollout weekly sync scheduling with Tiana Awerbuch - established weekly meetings during rollout phase. (2) MA stores onsite support - need to check Toast coverage and coordinate inter-restaurant training with Barb. (3) Toast Go Live Checklist shared for IT tracking. Added patterns for onsite support and rollout governance. Expanded lexicon with rollout terminology."
+    },
+    {
+      "when": "2025-11-03",
+      "topic": "Forwarded emails extraction - Training and meetings",
+      "notes": "Extracted 2 more forwarded emails. (1) Toast rollout discussion meeting with Trevor Samuelson - agenda focused on ownership groups, POCs, existing locations, and timeline. (2) CrunchTime onsite validation Day 1 training - Net-Chef dashboard, inventory setup, storage locations, by exception setup, waste tracking. Added lexicon for ownership groups, POC, Net-Chef, by exception setup, and waste tracking."
+    },
+    {
+      "when": "2025-11-03",
+      "topic": "Otter transcripts - Oct 31 store rollout meetings",
+      "notes": "Extracted 2 Otter meeting transcripts from Oct 31. (1) Josh Matulsky and Tricia McHargue discussed setup for Stoughton and Methuen locations - addressed missing location products, inventory/labor account setup, scheduled inventories, employee data import, and vendor setup for Cisco Boston. Upcoming: 6 new stores Nov 11-12, finalize liquor vendors. (2) Mario Madaffari and Joe Kolafa discussed new price levels implementation - time-specific discounts for happy hour, testing in lab before publishing, legal considerations for accurate pricing. Added patterns for store setup and pricing management."
+    }
+  ],
+  
+  "stats": {
+    "lexicon": 19,
+    "patterns": 27,
+    "system_integrations": 3,
+    "phase_1_actions": 2,
+    "agent_recipes": 0,
+    "checklists": 0
+  },
+  
+  "source_reports": [
+    "HCSS_RAL_TGIF_PHASE1_miningreport_20251102.json",
+    "gmail_26709_20251103.json - Toast rollout weekly sync",
+    "gmail_26737_20251103.json - MA stores onsite support",
+    "gmail_26738_20251103.json - Toast Go Live Checklist",
+    "gmail_25924_20251103.json - Toast rollout discussion meeting",
+    "gmail_25931_20251103.json - CrunchTime onsite validation training",
+    "gmail_otter_26680_20251103.json - Oct 31 store setup meeting",
+    "gmail_otter_26679_20251103.json - Oct 31 pricing system meeting"
+  ],
+  
+  "last_mined_at": "2025-11-03T21:18:00Z"
+}

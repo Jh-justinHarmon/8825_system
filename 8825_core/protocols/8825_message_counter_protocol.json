@@ -1,0 +1,129 @@
+{
+  "protocol_name": "8825 Message Counter Protocol",
+  "version": "1.0.0",
+  "purpose": "Track message count in conversations to trigger brain refreshes and maintain context awareness",
+  
+  "message_counter": {
+    "display_format": "💬 Message {current}/{threshold}",
+    "display_location": "End of AI response (after main content, before final line break)",
+    "display_frequency": "Every response",
+    
+    "thresholds": {
+      "production_mode": {
+        "warning": 80,
+        "max": 100,
+        "action_at_max": "Suggest exit protocol"
+      },
+      "exploratory_mode": {
+        "refresh": 50,
+        "warning": 150,
+        "action_at_refresh": "Suggest brain refresh",
+        "action_at_warning": "Recommend considering exit"
+      },
+      "adhoc_mode": {
+        "warning": 15,
+        "max": 20,
+        "action_at_max": "Suggest completing task"
+      }
+    }
+  },
+  
+  "response_template": {
+    "standard_response": [
+      "[Main response content]",
+      "",
+      "---",
+      "💬 Message {current}/{threshold} | Mode: {mode} | {status_indicator}"
+    ],
+    
+    "status_indicators": {
+      "normal": "✅",
+      "approaching_refresh": "⚠️ Brain refresh recommended",
+      "approaching_max": "🔴 Consider closing chat",
+      "max_reached": "🛑 Exit protocol recommended"
+    }
+  },
+  
+  "mode_detection": {
+    "production": {
+      "triggers": ["hcss focus", "joju focus", "phils ledger", "focus mode"],
+      "threshold": 100
+    },
+    "exploratory": {
+      "triggers": ["brainstorm", "exploration", "analysis", "8825 mode"],
+      "threshold": 150,
+      "refresh_interval": 50
+    },
+    "adhoc": {
+      "triggers": ["quick", "edit", "check", "fix"],
+      "threshold": 20
+    }
+  },
+  
+  "auto_actions": {
+    "at_refresh_threshold": {
+      "message": "💡 **Brain Refresh Recommended** (50 messages reached)\n\nType `refresh brain` or `rb` to re-anchor to protocols and brain state.",
+      "display": "Once at threshold"
+    },
+    "at_warning_threshold": {
+      "message": "⚠️ **Long Chat Warning** ({threshold} messages reached)\n\nConsider:\n- Closing chat and starting fresh\n- Running brain refresh if continuing\n- Saving current state",
+      "display": "Once at threshold"
+    },
+    "at_max_threshold": {
+      "message": "🛑 **Chat Length Limit Reached** ({threshold} messages)\n\nRecommended action:\n1. Run exit protocol\n2. Save all state\n3. Close chat\n4. Start fresh for next task",
+      "display": "Every response after threshold"
+    }
+  },
+  
+  "implementation_notes": {
+    "message_counting": "AI should maintain internal count of user messages in current conversation",
+    "reset_on_new_chat": "Counter resets to 0 when new chat starts",
+    "mode_switching": "If mode changes mid-chat, update threshold accordingly",
+    "override": "User can disable counter with 'hide counter' command"
+  },
+  
+  "examples": {
+    "normal_response": {
+      "message_count": 25,
+      "mode": "exploratory",
+      "output": "---\n💬 Message 25/150 | Mode: Exploratory | ✅"
+    },
+    "refresh_threshold": {
+      "message_count": 50,
+      "mode": "exploratory",
+      "output": "---\n💬 Message 50/150 | Mode: Exploratory | ⚠️ Brain refresh recommended\n\n💡 **Brain Refresh Recommended** (50 messages reached)\n\nType `refresh brain` or `rb` to re-anchor to protocols and brain state."
+    },
+    "warning_threshold": {
+      "message_count": 80,
+      "mode": "production",
+      "output": "---\n💬 Message 80/100 | Mode: Production | ⚠️ Consider closing chat"
+    },
+    "max_threshold": {
+      "message_count": 100,
+      "mode": "production",
+      "output": "---\n💬 Message 100/100 | Mode: Production | 🛑 Exit protocol recommended\n\n🛑 **Chat Length Limit Reached** (100 messages)\n\nRecommended action:\n1. Run exit protocol\n2. Save all state\n3. Close chat\n4. Start fresh for next task"
+    }
+  },
+  
+  "user_commands": {
+    "hide_counter": {
+      "command": "hide counter",
+      "effect": "Stop displaying message counter",
+      "duration": "Current chat only"
+    },
+    "show_counter": {
+      "command": "show counter",
+      "effect": "Resume displaying message counter"
+    },
+    "check_count": {
+      "command": "message count",
+      "effect": "Display current count and threshold info"
+    }
+  },
+  
+  "integration": {
+    "applies_to": "All 8825 modes and focuses",
+    "priority": "Display after main content, before final sign-off",
+    "conflicts": "None - additive to existing protocols"
+  }
+}

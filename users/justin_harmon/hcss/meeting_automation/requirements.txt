@@ -1,0 +1,14 @@
+# Gmail API
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+google-api-python-client==2.108.0
+
+# Otter.ai API (unofficial)
+# Install with: pip install git+https://github.com/gmchad/otterai-api.git
+
+# Standard library (no install needed)
+# - json
+# - pathlib
+# - datetime
+# - subprocess
+# - signal

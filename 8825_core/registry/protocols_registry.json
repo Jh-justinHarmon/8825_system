@@ -1,0 +1,89 @@
+{
+  "project": "protocols_registry",
+  "version": "1.0.0",
+  "last_updated": "2025-11-13",
+  "description": "Registry of PROTOCOLS - methodologies and frameworks to follow, not systems that run",
+  
+  "protocols": {
+    "joju_validation_protocol": {
+      "original_id": "AGENT-JOJU-VALIDATION-LOOP-0001",
+      "system_role": "Track early user feedback, referrals, pricing validation across GTM phases.",
+      "purpose": "Defines methodology for tracking validation metrics",
+      "tracking_areas": [
+        "User feedback loops",
+        "Referral patterns",
+        "Pricing validation",
+        "GTM phase progress"
+      ],
+      "outputs": ["Progress tracking with blockers", "Next actions"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Requires real user data",
+        "Simulate when data unavailable but mark as hypothetical",
+        "Focus on actionable metrics"
+      ],
+      "routing": "joju",
+      "implementation_status": "not_implemented",
+      "why_protocol": "Defines methodology for tracking validation. Not a system that runs, but a framework to follow.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    },
+    
+    "partnership_due_diligence_protocol": {
+      "original_id": "AGENT-FORGE-PARTNERSHIP-DUE-DILIGENCE-0001",
+      "system_role": "Validate partnership claims and assess organizational health.",
+      "purpose": "Defines methodology for partnership validation",
+      "validation_areas": [
+        "Financial health assessment",
+        "Legitimacy validation",
+        "Strategic implications",
+        "Self-service vs vetted partnerships",
+        "Revenue trends",
+        "Structural weaknesses"
+      ],
+      "inputs_required": ["Partnership claim or org name"],
+      "outputs": ["Financial health assessment", "Legitimacy validation", "Strategic implications"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Distinguish between self-service listings and vetted partnerships",
+        "Flag revenue declines and structural weaknesses"
+      ],
+      "routing": "the_forge",
+      "implementation_status": "not_implemented",
+      "why_protocol": "Defines methodology for due diligence. Could be implemented as workflow or checklist.",
+      "created_at": "2025-11-01T23:32:00Z",
+      "reclassified_at": "2025-11-13",
+      "source_report": "existing_project_migration"
+    }
+  },
+  
+  "routing_index": {
+    "joju": ["joju_validation_protocol"],
+    "the_forge": ["partnership_due_diligence_protocol"]
+  },
+  
+  "stats": {
+    "total_protocols": 2,
+    "implemented": 0,
+    "not_implemented": 2,
+    "by_routing": {
+      "joju": 1,
+      "the_forge": 1
+    }
+  },
+  
+  "implementation_notes": {
+    "protocols_vs_workflows": "Protocols define methodologies. Workflows are the execution of those methodologies. A protocol might become a workflow when implemented.",
+    "documentation": "Protocols should be documented in 8825_core/protocols/ directory as .md files.",
+    "usage": "Protocols are referenced and followed, not executed automatically."
+  },
+  
+  "audit_notes": {
+    "date": "2025-11-13",
+    "auditor": "Cascade",
+    "criteria": "Protocols define methodologies to follow, not systems that run",
+    "reclassified_from": "agent_registry.json",
+    "count": 2
+  }
+}

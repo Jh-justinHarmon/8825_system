@@ -1,0 +1,50 @@
+{
+  "DEEP_DIVE_RESEARCH_PROTOCOL": {
+    "use_count": 1,
+    "successes": 1,
+    "failures": 0,
+    "contexts": [
+      "Debugging Downloads sync issue"
+    ],
+    "created_at": "2025-11-13T18:50:12.378225",
+    "last_used": "2025-11-13T18:50:12.378319",
+    "status": "active",
+    "confidence": 0.8
+  },
+  "CONTEXT_FIRST_PROTOCOL": {
+    "use_count": 1,
+    "successes": 1,
+    "failures": 0,
+    "contexts": [
+      "Building protocol tracker"
+    ],
+    "created_at": "2025-11-13T18:59:55.383381",
+    "last_used": "2025-11-13T18:59:55.383624",
+    "status": "active",
+    "confidence": 0.8
+  },
+  "TEAM_EXECUTION_PROTOCOL": {
+    "use_count": 1,
+    "successes": 1,
+    "failures": 0,
+    "contexts": [
+      "Created complete team execution groundwork - protocol, templates, onboarding, workspace, registry updates, and first agent spec"
+    ],
+    "created_at": "2025-11-13T23:07:00.343970",
+    "last_used": "2025-11-13T23:07:00.344309",
+    "status": "active",
+    "confidence": 0.8
+  },
+  "PROMPTGEN_INTEGRATION_PROTOCOL": {
+    "use_count": 1,
+    "successes": 1,
+    "failures": 0,
+    "contexts": [
+      "Applied PromptGen to Library Mining Router - created complete spec with all 7 steps"
+    ],
+    "created_at": "2025-11-13T23:07:08.200247",
+    "last_used": "2025-11-13T23:07:08.200390",
+    "status": "active",
+    "confidence": 0.8
+  }
+}

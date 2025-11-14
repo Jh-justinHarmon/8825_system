@@ -1,0 +1,78 @@
+{
+  "auto_route": [],
+  "suggest": [
+    {
+      "file": "invoiceLogs (6).pdf",
+      "project": "HCSS",
+      "confidence": 55,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "size_mb": 0.039277076721191406
+    },
+    {
+      "file": "Justin's Meeting Notes_otter_ai (1).txt",
+      "project": "Jh",
+      "confidence": 55,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system (v2.0 deleted)/Jh_sandbox/",
+      "size_mb": 0.01572132110595703
+    }
+  ],
+  "ask_user": [
+    {
+      "file": "GoLive_Issue_Tracker_Template.xlsx",
+      "project": "HCSS",
+      "confidence": 15,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "size_mb": 0.026638031005859375
+    },
+    {
+      "file": "Integrations_Spreadsheet.xlsx",
+      "project": "HCSS",
+      "confidence": 15,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "size_mb": 0.0068511962890625
+    },
+    {
+      "file": "Scanned Document 8-26-25 at 10.44.26\u202fAM 2.pdf",
+      "project": "RAL",
+      "confidence": 15,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/RAL/",
+      "size_mb": 2.1665916442871094
+    },
+    {
+      "file": "search(32).rss",
+      "project": "RAL",
+      "confidence": 0,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/RAL/",
+      "size_mb": 0.0005693435668945312
+    },
+    {
+      "file": "Detailed_Ticket_Table.csv",
+      "project": "RAL",
+      "confidence": 0,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/RAL/",
+      "size_mb": 0.0025177001953125
+    },
+    {
+      "file": "Discord.dmg",
+      "project": "RAL",
+      "confidence": 0,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/RAL/",
+      "size_mb": 182.33306884765625
+    },
+    {
+      "file": "Invoice_Category_Breakdown.csv",
+      "project": "HCSS",
+      "confidence": 5,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "size_mb": 0.0001735687255859375
+    },
+    {
+      "file": "Book1-JH.xlsx",
+      "project": "HCSS",
+      "confidence": 15,
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "size_mb": 0.013476371765136719
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "content": {
+    "title": "Test from iCloud",
+    "content": "This file was saved to iCloud inbox",
+    "tags": ["test", "icloud"]
+  },
+  "metadata": {
+    "source": "test",
+    "timestamp": "2025-11-08T08:32:00Z",
+    "note": "Testing universal inbox from iCloud"
+  }
+}

@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: 20251108_155917_test_hcss_meeting_notes.meta.json
+Timestamp: 20251109_002725

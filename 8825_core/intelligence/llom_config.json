@@ -1,0 +1,167 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-11-12",
+  
+  "models": {
+    "cheap": {
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "cost_per_million_tokens": 0.15
+    },
+    "expensive": {
+      "provider": "openai",
+      "model": "gpt-4o",
+      "cost_per_million_tokens": 2.50
+    },
+    "fallback": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "cost_per_million_tokens": 3.00
+    }
+  },
+  
+  "routing_rules": {
+    "ingestion": {
+      "file_naming": {
+        "try_pattern": true,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      },
+      "content_analysis": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      },
+      "similarity_detection": {
+        "try_pattern": false,
+        "always_use": "cheap"
+      }
+    },
+    
+    "email": {
+      "extract_data": {
+        "try_pattern": true,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      },
+      "generate_response": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive",
+        "quality_threshold": 0.8
+      },
+      "categorize": {
+        "try_pattern": true,
+        "fallback": "cheap",
+        "never_use": ["expensive"]
+      }
+    },
+    
+    "analysis": {
+      "weekly_summary": {
+        "try_pattern": false,
+        "always_use": "expensive",
+        "reason": "quality_critical"
+      },
+      "meeting_summary": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      },
+      "pattern_learning": {
+        "try_pattern": false,
+        "always_use": "expensive",
+        "reason": "accuracy_critical"
+      },
+      "extract_action_items": {
+        "try_pattern": true,
+        "fallback": "cheap"
+      }
+    },
+    
+    "search": {
+      "keyword_search": {
+        "try_pattern": true,
+        "never_use_llm": true
+      },
+      "semantic_search": {
+        "try_pattern": false,
+        "always_use": "cheap"
+      },
+      "deep_context": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      }
+    },
+    
+    "code": {
+      "simple_analysis": {
+        "try_pattern": true,
+        "fallback": "cheap"
+      },
+      "complex_analysis": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      },
+      "teaching_ticket": {
+        "try_pattern": false,
+        "complexity_check": true,
+        "simple": "cheap",
+        "complex": "expensive"
+      }
+    },
+    
+    "brain": {
+      "generate_transport": {
+        "try_pattern": false,
+        "always_use": "cheap",
+        "reason": "structured_data"
+      },
+      "analyze_patterns": {
+        "try_pattern": false,
+        "always_use": "expensive",
+        "reason": "quality_critical"
+      }
+    }
+  },
+  
+  "cost_limits": {
+    "per_task_max": 0.10,
+    "per_hour_max": 1.00,
+    "per_day_max": 10.00,
+    "per_month_max": 200.00,
+    "alert_threshold": 0.80
+  },
+  
+  "quality_checks": {
+    "enabled": true,
+    "sample_rate": 0.10,
+    "compare_models": true,
+    "log_disagreements": true
+  },
+  
+  "optimization": {
+    "enable_caching": true,
+    "cache_ttl_seconds": 3600,
+    "enable_batching": false,
+    "batch_size": 10,
+    "enable_learning": true,
+    "pattern_confidence_threshold": 0.9
+  },
+  
+  "logging": {
+    "log_decisions": true,
+    "log_costs": true,
+    "log_quality_checks": true,
+    "log_file": "/tmp/llom_router.log"
+  }
+}

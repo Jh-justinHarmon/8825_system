@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+"""
+8825 brain execute <action>
+Execute an action with full coordination
+"""
+
+import sys
+import json
+from pathlib import Path
+
+# Add brain module to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "brain"))
+
+from brain_api import BrainAPI
+from prediction_engine import PredictionEngine
+
+def main():
+    """Main entry point"""
+    if len(sys.argv) < 2:
+        print("Usage: 8825-brain-execute <action>")
+        print()
+        print("Examples:")
+        print("  8825-brain-execute 'restart inbox_daemon'")
+        print("  8825-brain-execute 'start downloads_sync'")
+        print("  8825-brain-execute 'cleanup old files'")
+        sys.exit(1)
+    
+    action = " ".join(sys.argv[1:])
+    
+    print(f"🎯 Action: {action}\n")
+    
+    # Connect to brain
+    api = BrainAPI()
+    
+    # First, predict impact
+    print("📊 Analyzing impact...")
+    prediction = api.predict_action(action)
+    
+    if "error" in prediction:
+        print(f"❌ Error: {prediction['error']}")
+        sys.exit(1)
+    
+    # Show prediction
+    risk = prediction.get('risk_level', 'unknown')
+    recommendation = prediction.get('recommendation', '')
+    
+    print(f"Risk: {risk.upper()}")
+    print(f"Recommendation: {recommendation}\n")
+    
+    # Check if safe
+    if not prediction.get('safe_to_proceed', False):
+        print("❌ Not safe to proceed")
+        sys.exit(1)
+    
+    # Ask for confirmation if medium/high risk
+    if risk in ['medium', 'high']:
+        response = input("Proceed? (y/n): ")
+        if response.lower() != 'y':
+            print("❌ Cancelled")
+            sys.exit(0)
+    
+    # Create safe workflow
+    print("\n🔄 Creating safe workflow...")
+    
+    # Use prediction engine to create workflow
+    from brain_daemon import BrainDaemon
+    brain = BrainDaemon()
+    brain.sync_all()
+    
+    predictor = PredictionEngine(brain.state)
+    parsed = prediction.get('parsed', {})
+    workflow = predictor.create_safe_workflow(parsed)
+    
+    print(f"Workflow: {workflow['id']}")
+    print(f"Steps: {len(workflow['steps'])}\n")
+    
+    # Execute workflow
+    print("🚀 Executing...\n")
+    result = api.execute_workflow(workflow)
+    
+    if "error" in result:
+        print(f"\n❌ Error: {result['error']}")
+        sys.exit(1)
+    
+    # Show result
+    status = result.get('status', 'unknown')
+    
+    if status == 'success':
+        print(f"\n✅ Success!")
+        print(f"Steps completed: {result.get('steps_completed', 0)}")
+    elif status == 'failed':
+        print(f"\n❌ Failed at step {result.get('failed_step', '?')}")
+        print(f"Error: {result.get('error', 'Unknown')}")
+        sys.exit(1)
+    elif status == 'blocked':
+        print(f"\n🛑 Blocked: {result.get('reason', 'Unknown')}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

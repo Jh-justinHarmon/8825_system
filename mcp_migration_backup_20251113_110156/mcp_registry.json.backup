@@ -1,0 +1,51 @@
+{
+  "version": "3.0.0",
+  "description": "Registry of all available MCP servers in 8825 v3.0",
+  "last_updated": "2025-11-07",
+  
+  "available_mcps": {
+    "hcss_mcp": {
+      "mcp_id": "hcss_mcp",
+      "name": "HCSS Consultant MCP",
+      "location": "focuses/hcss/mcp_server/",
+      "port": 8826,
+      "status": "available",
+      "users": ["justin_harmon"],
+      "description": "Client consulting work - RAL, TGIF, general HCSS"
+    },
+    "team76_mcp": {
+      "mcp_id": "team76_mcp",
+      "name": "Team 76 MCP",
+      "location": "focuses/joju/mcp_server/",
+      "port": 8827,
+      "status": "available",
+      "users": ["justin_harmon", "matthew_galley", "cam_watkins"],
+      "description": "Team 76 projects - Joju profile system and Forge"
+    },
+    "jh_mcp": {
+      "mcp_id": "jh_mcp",
+      "name": "Jh Personal Assistant MCP",
+      "location": "focuses/jh_assistant/mcp_server/",
+      "port": 8828,
+      "status": "available",
+      "users": ["justin_harmon"],
+      "description": "Personal productivity - Jh COMMs, Download Wedge, etc."
+    }
+  },
+  
+  "routing": {
+    "default_mcp": "jh_mcp",
+    "auto_route_by_context": true,
+    "routing_rules": {
+      "hcss|ral|tgif|client": "hcss_mcp",
+      "joju|forge|team.*76|profile|library": "team76_mcp",
+      "personal|jh|download|comms|assistant": "jh_mcp"
+    }
+  },
+  
+  "orchestration": {
+    "start_all_script": "8825_core/scripts/start_all_mcps.sh",
+    "stop_all_script": "8825_core/scripts/stop_all_mcps.sh",
+    "health_check_interval": 60
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "projects": {
+    "RAL": {
+      "name": "RAL",
+      "description": "Design and creative client work",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/RAL/",
+      "keywords": [
+        "RAL",
+        "design",
+        "creative",
+        "client",
+        "mockup",
+        "wireframe",
+        "prototype",
+        "figma",
+        "sketch",
+        "adobe"
+      ],
+      "file_types": [
+        ".psd",
+        ".ai",
+        ".fig",
+        ".sketch",
+        ".pdf",
+        ".png",
+        ".jpg"
+      ],
+      "patterns": [
+        "RAL_*",
+        "*_design_*",
+        "*_mockup_*"
+      ]
+    },
+    "HCSS": {
+      "name": "HCSS",
+      "description": "Hammer Consulting business documents",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/",
+      "keywords": [
+        "HCSS",
+        "Hammer Consulting",
+        "business",
+        "consulting",
+        "client",
+        "proposal",
+        "contract",
+        "invoice"
+      ],
+      "file_types": [
+        ".docx",
+        ".pdf",
+        ".xlsx",
+        ".pptx"
+      ],
+      "patterns": [
+        "HCSS_*",
+        "*_consulting_*",
+        "*_proposal_*"
+      ]
+    },
+    "TGIF": {
+      "name": "TGIF",
+      "description": "TGIF meeting summaries",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/HCSS/TGI Fridays/ - meeting summaries -/",
+      "keywords": [
+        "TGIF",
+        "TGI Friday",
+        "Friday",
+        "meeting",
+        "weekly",
+        "summary",
+        "action items",
+        "decisions"
+      ],
+      "file_types": [
+        ".md",
+        ".docx",
+        ".html",
+        ".pdf"
+      ],
+      "patterns": [
+        "tgif_*",
+        "*_meeting_*",
+        "TGIF_*"
+      ],
+      "auto_route": true
+    },
+    "76": {
+      "name": "76",
+      "description": "Joju, Forge, TrustyBit projects",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/76/",
+      "keywords": [
+        "76",
+        "Joju",
+        "Forge",
+        "TrustyBit",
+        "Trustybits",
+        "profile",
+        "achievement",
+        "portfolio",
+        "contact",
+        "hiring"
+      ],
+      "file_types": [
+        ".json",
+        ".md",
+        ".pdf",
+        ".docx"
+      ],
+      "patterns": [
+        "76_*",
+        "*_joju_*",
+        "*_profile_*",
+        "*_forge_*"
+      ]
+    },
+    "8825": {
+      "name": "8825",
+      "description": "8825 system protocols and workflows",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system (v2.0 deleted)/",
+      "keywords": [
+        "8825",
+        "protocol",
+        "workflow",
+        "system",
+        "agent",
+        "automation",
+        "cascade",
+        "mining",
+        "curation"
+      ],
+      "file_types": [
+        ".json",
+        ".md",
+        ".py"
+      ],
+      "patterns": [
+        "8825_*",
+        "*_protocol_*",
+        "*_workflow_*"
+      ]
+    },
+    "Jh": {
+      "name": "Jh",
+      "description": "Justin Harmon personal workspace",
+      "destination": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system (v2.0 deleted)/Jh_sandbox/",
+      "keywords": [
+        "Jh",
+        "Justin",
+        "personal",
+        "script",
+        "tool",
+        "note",
+        "experiment",
+        "sandbox"
+      ],
+      "file_types": [
+        ".py",
+        ".sh",
+        ".md",
+        ".txt"
+      ],
+      "patterns": [
+        "Jh_*",
+        "*_personal_*",
+        "*_script_*"
+      ]
+    }
+  },
+  "global_settings": {
+    "auto_route_threshold": 90,
+    "suggest_threshold": 50,
+    "ask_threshold": 0,
+    "learning_enabled": true,
+    "notification_enabled": true
+  }
+}

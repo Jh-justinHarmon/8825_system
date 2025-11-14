@@ -1,0 +1,93 @@
+{
+  "change_pressure_keywords": {
+    "high": [
+      "workflow",
+      "protocol",
+      "agent",
+      "auto-route",
+      "global rule",
+      "system-wide",
+      "modify routing",
+      "change behavior",
+      "update core"
+    ],
+    "medium": [
+      "pattern",
+      "feature",
+      "routing",
+      "validation",
+      "integration",
+      "automation"
+    ],
+    "low": [
+      "note",
+      "achievement",
+      "mining",
+      "reference",
+      "meeting",
+      "summary",
+      "context"
+    ]
+  },
+  "scope_keywords": {
+    "system-wide": [
+      "global",
+      "all focuses",
+      "system-wide",
+      "8825_core",
+      "everywhere",
+      "universal"
+    ],
+    "focus-wide": [
+      "hcss",
+      "joju",
+      "team76",
+      "focus",
+      "project-wide"
+    ],
+    "local": [
+      "personal",
+      "one-time",
+      "specific",
+      "single",
+      "this only"
+    ]
+  },
+  "focus_routing_keywords": {
+    "joju": [
+      "joju",
+      "intake design sprint",
+      "user testing",
+      "user test",
+      "product testing",
+      "ux testing",
+      "design sprint",
+      "team76",
+      "trustybits",
+      "notion screener",
+      "survey response",
+      "user engagement",
+      "beta feedback"
+    ],
+    "hcss": [
+      "hcss",
+      "tgif",
+      "crunchtime",
+      "toast",
+      "store rollout",
+      "restaurant",
+      "pos system"
+    ],
+    "jh": [
+      "personal",
+      "jh assistant",
+      "general"
+    ]
+  },
+  "source_trust_scores": {
+    "chatgpt": 0.9,
+    "windsurf": 1.0,
+    "manual": 0.7,
+    "external": 0.5
+  }
+}

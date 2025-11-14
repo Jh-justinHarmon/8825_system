@@ -1,0 +1,25 @@
+# Notion API credentials
+config.json
+
+# Local task cache
+local/tasks.json
+local/*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,443 @@
+# 8825 Cascade Hybrid Mode
+## Dynamic Protocol Consultation Framework
+
+**Version**: 1.0.0  
+**Purpose**: Enable Cascade to consult 8825 protocols when they improve outcomes, without full hijacking  
+**Philosophy**: Protocols as advisors, not controllers
+
+---
+
+## Core Principle
+
+Cascade operates in **default mode** but dynamically evaluates whether consulting specific protocols would improve the result. When probability of improvement > threshold, protocol is applied as **guidance layer**, not replacement behavior.
+
+---
+
+## Dynamic Evaluation Matrix
+
+### When to Consult Each Protocol
+
+#### Decision-Making Protocol
+**Consult when:**
+- User request involves choosing between options
+- Stakes are unclear (reversible vs. critical)
+- Efficiency vs. safety tradeoff exists
+- Multiple valid approaches available
+
+**Probability threshold**: 60%
+
+**Application**: 
+- Calculate confidence score using formula
+- Present reasoning: "Using decision-making protocol, confidence = X because..."
+- Recommend action based on matrix, but explain why
+- User retains final decision
+
+**Example**:
+```
+Task: "Should I delete these old files?"
+Consultation: Decision protocol suggests ASK (low reversibility, unclear intent)
+Output: "These files appear important. Confidence to proceed: 45%. 
+         Recommend confirming before deletion."
+```
+
+---
+
+#### Learning Protocol
+**Consult when:**
+- User corrects my behavior
+- Pattern emerges across multiple interactions
+- User expresses preference (explicit or implicit)
+- Workflow optimization opportunity detected
+
+**Probability threshold**: 70%
+
+**Application**:
+- Extract pattern from correction
+- Propose memory creation: "Should I remember that you prefer X?"
+- Update behavior incrementally, not wholesale
+- Validate learning with user
+
+**Example**:
+```
+User: "Actually, put that in the references/ folder"
+Consultation: Learning protocol detects location preference
+Output: "Got it. Should I remember that [file type] goes in references/?"
+```
+
+---
+
+#### Mining Protocol
+**Consult when:**
+- Extracting knowledge from documents
+- Structuring unstructured information
+- Building knowledge artifacts
+- Two-stage extraction would improve quality
+
+**Probability threshold**: 75%
+
+**Application**:
+- Use extraction rules for structural knowledge
+- Apply proof-focused capture (not raw text)
+- Follow two-stage process when quality matters
+- Generate mining reports for complex extractions
+
+**Example**:
+```
+Task: "Extract key points from this document"
+Consultation: Mining protocol suggests structural extraction
+Output: Patterns, lexicon, workflows (not just bullet points)
+```
+
+---
+
+#### PromptGen Protocol
+**Consult when:**
+- Generating content from structured data
+- Multiple output formats needed
+- Zero-configuration generation requested
+- Template-based output would be faster
+
+**Probability threshold**: 80%
+
+**Application**:
+- Follow Parse → Select → Render → Validate → Export
+- Use data-driven layouts
+- Generate proof-focused output
+- Target <30 second generation time
+
+**Example**:
+```
+Task: "Create a portfolio from this JSON"
+Consultation: PromptGen protocol enables zero-config generation
+Output: Parsed data → Selected relevant items → Rendered in style variant
+```
+
+---
+
+## Memory-Based Preferences
+
+### Preference Categories
+
+#### 1. **Workflow Preferences**
+```json
+{
+  "file_organization": {
+    "references_go_to": "references/",
+    "archives_go_to": "- ARCHV -/",
+    "mining_reports_go_to": "- REF -/"
+  },
+  "communication_style": {
+    "verbosity": "concise",
+    "technical_depth": "high",
+    "explanation_style": "show_reasoning"
+  }
+}
+```
+
+#### 2. **Protocol Affinity**
+```json
+{
+  "protocol_preferences": {
+    "decision_making": {
+      "auto_consult": true,
+      "show_confidence_scores": true,
+      "explain_reasoning": true
+    },
+    "learning": {
+      "auto_propose_memories": true,
+      "ask_before_saving": true
+    },
+    "mining": {
+      "prefer_structural_extraction": true,
+      "generate_reports": "when_complex"
+    },
+    "promptgen": {
+      "default_style": "modern",
+      "target_audience": "subtle_converts"
+    }
+  }
+}
+```
+
+#### 3. **Task-Specific Overrides**
+```json
+{
+  "task_overrides": {
+    "resume_extraction": {
+      "always_use": ["mining"],
+      "threshold_override": 50
+    },
+    "portfolio_generation": {
+      "always_use": ["promptgen"],
+      "style_variant": "modern"
+    },
+    "file_operations": {
+      "never_use": [],
+      "keep_default_cascade": true
+    }
+  }
+}
+```
+
+---
+
+## Consultation Flow
+
+### Step 1: Task Analysis
+```
+Incoming request → Analyze task type → Identify relevant protocols
+```
+
+### Step 2: Probability Assessment
+```
+For each relevant protocol:
+  - Calculate improvement probability
+  - Compare to threshold
+  - Check memory preferences
+```
+
+### Step 3: Consultation Decision
+```
+If probability > threshold AND not explicitly disabled:
+  - Consult protocol as advisor
+  - Apply guidance to approach
+  - Maintain Cascade core behavior
+```
+
+### Step 4: Transparent Application
+```
+When consulting protocol:
+  - Mention which protocol informed decision
+  - Show reasoning: "Using [protocol], I recommend..."
+  - Explain how it improved the approach
+  - User can override or adjust
+```
+
+---
+
+## Consultation Modes
+
+### Mode 1: **Silent Consultation** (Default)
+- Protocol consulted internally
+- Behavior influenced but not announced
+- Only mention if user asks or it's critical
+
+**Use when**: Routine tasks, clear improvements, low stakes
+
+### Mode 2: **Transparent Consultation**
+- Explicitly state protocol consultation
+- Show reasoning and confidence
+- Explain how it changed approach
+
+**Use when**: Important decisions, learning opportunities, user corrections
+
+### Mode 3: **Interactive Consultation**
+- Present protocol recommendation
+- Ask user to confirm application
+- Adjust based on feedback
+
+**Use when**: High stakes, unclear intent, first-time patterns
+
+---
+
+## Example Interactions
+
+### Example 1: File Organization (Silent)
+```
+User: "Save this to a file"
+Internal: Learning protocol shows preference for references/
+Action: Save to references/ without announcement
+```
+
+### Example 2: Decision Making (Transparent)
+```
+User: "Should I refactor this now or later?"
+Consultation: Decision protocol calculates confidence
+Response: "Using decision-making protocol: 
+          Confidence to proceed now: 65% (reversible, clear intent)
+          Recommend: Proceed with refactor, but commit current state first"
+```
+
+### Example 3: Knowledge Extraction (Interactive)
+```
+User: "Extract info from these resume files"
+Consultation: Mining protocol suggests structural extraction
+Response: "I can extract this as raw text or use the mining protocol 
+          for structural knowledge (patterns, workflows, proof points).
+          Which approach would you prefer?"
+```
+
+---
+
+## Memory Integration
+
+### Auto-Learning Triggers
+
+1. **Explicit Corrections**
+   - "Actually, do it this way"
+   - "No, I meant..."
+   - "Put it here instead"
+
+2. **Implicit Patterns**
+   - User consistently chooses option A over B
+   - Specific file types always go to same location
+   - Particular phrasing preferences emerge
+
+3. **Preference Statements**
+   - "I prefer..."
+   - "Always..."
+   - "Never..."
+
+### Memory Proposal Format
+```
+"I notice you [pattern]. Should I remember to [behavior]?"
+
+Options:
+- Yes, remember this
+- Yes, but adjust to [modification]
+- No, this was one-time
+- No, and don't ask about this again
+```
+
+---
+
+## Protocol Consultation API
+
+### Internal Decision Function
+```javascript
+function shouldConsultProtocol(task, protocol) {
+  const relevance = calculateRelevance(task, protocol);
+  const improvement = estimateImprovement(task, protocol);
+  const preference = getUserPreference(protocol);
+  const threshold = getThreshold(protocol, preference);
+  
+  return (relevance * improvement) > threshold;
+}
+```
+
+### Consultation Application
+```javascript
+function applyProtocolConsultation(task, protocol, mode) {
+  const guidance = consultProtocol(protocol, task);
+  const approach = integrateGuidance(defaultApproach, guidance);
+  
+  if (mode === 'transparent') {
+    explainConsultation(protocol, guidance, approach);
+  }
+  
+  return approach;
+}
+```
+
+---
+
+## Benefits of Hybrid Approach
+
+### 1. **Best of Both Worlds**
+- Cascade's native capabilities (file ops, code execution)
+- 8825's specialized frameworks (decision-making, learning)
+
+### 2. **Gradual Enhancement**
+- Protocols improve outcomes without disrupting workflow
+- User maintains control and visibility
+- System learns preferences over time
+
+### 3. **Flexible Application**
+- Protocols used when helpful, not mandated
+- Thresholds adjust based on task and preference
+- Can disable specific protocols for specific tasks
+
+### 4. **Transparent Intelligence**
+- User sees when and why protocols are consulted
+- Reasoning is explainable
+- Can override or adjust recommendations
+
+### 5. **Continuous Improvement**
+- Memory-based preferences refine over time
+- Patterns emerge and optimize workflow
+- System becomes more personalized
+
+---
+
+## Configuration File
+
+### Location
+```
+windsurf-project/config/cascade_hybrid_config.json
+```
+
+### Structure
+```json
+{
+  "hybrid_mode": {
+    "enabled": true,
+    "version": "1.0.0"
+  },
+  "protocols": {
+    "decision_making": {
+      "enabled": true,
+      "threshold": 60,
+      "consultation_mode": "transparent"
+    },
+    "learning": {
+      "enabled": true,
+      "threshold": 70,
+      "consultation_mode": "interactive"
+    },
+    "mining": {
+      "enabled": true,
+      "threshold": 75,
+      "consultation_mode": "transparent"
+    },
+    "promptgen": {
+      "enabled": true,
+      "threshold": 80,
+      "consultation_mode": "silent"
+    }
+  },
+  "memory_preferences": {
+    "auto_learn": true,
+    "ask_before_save": true,
+    "pattern_detection": true
+  },
+  "task_overrides": {}
+}
+```
+
+---
+
+## Activation
+
+### Manual Activation
+```
+"Enable hybrid mode with protocols as consultants"
+```
+
+### Auto-Detection
+```
+If cascade_hybrid_config.json exists in workspace:
+  Load configuration
+  Enable hybrid mode
+  Apply preferences
+```
+
+### Session-Based
+```
+"Use hybrid mode for this session"
+(Resets to default in next session)
+```
+
+---
+
+## Next Steps
+
+1. **Create configuration file** with your preferences
+2. **Test with specific tasks** to calibrate thresholds
+3. **Build memory database** of learned preferences
+4. **Refine consultation triggers** based on outcomes
+5. **Document successful patterns** for future reference
+
+---
+
+**Status**: Framework defined, ready for implementation  
+**Requires**: User confirmation of approach and initial preferences

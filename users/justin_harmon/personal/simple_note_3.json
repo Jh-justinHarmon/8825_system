@@ -1,0 +1,17 @@
+{
+  "content_type": "mining_report",
+  "target_focus": "joju",
+  "content": {
+    "source": "ChatGPT conversation",
+    "date": "2025-11-08",
+    "insights": [
+      "User prefers terse communication style",
+      "Focuses on execution over discussion",
+      "Values system-wide thinking"
+    ]
+  },
+  "metadata": {
+    "source": "chatgpt",
+    "timestamp": "2025-11-08T16:04:00"
+  }
+}

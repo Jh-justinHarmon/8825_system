@@ -1,0 +1,116 @@
+{
+  "ticket_id": "T-8825-20251109-002836",
+  "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/test_lane_b_workflow.json",
+  "proposed_change": {
+    "summary": "New Auto-Route Workflow",
+    "original_context": "No context provided",
+    "scope": "system-wide",
+    "estimated_effort": "Unknown"
+  },
+  "ai_sweep_result": {
+    "touchpoints": [
+      {
+        "file_path": "8825_core/protocols/8825_hcss_focus.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/scripts/routers/library_merger.py",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/logs/ingestion.log",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/STATUS.md",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/protocols/8825_decision-making",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/DEDUP_AND_LIBRARY_COMPLETE.md",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/scripts/routers/project_router.py",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/FIRST_RUN_COMPLETE.md",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/config/ingestion_config.json",
+        "type": "workflow",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "8825_core/protocols/8825_mining",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: workflow, routing, auto-route"
+      },
+      {
+        "file_path": "focuses/hcss/workflows/tgif_auto_route.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Production routing for HCSS TGIF meetings"
+      },
+      {
+        "file_path": "joju_sandbox/patterns/achievement_detection.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Core Joju functionality for mining achievements"
+      }
+    ],
+    "related_patterns": [],
+    "conflicts": [
+      {
+        "type": "override",
+        "severity": "high",
+        "description": "Would affect 2 critical protected patterns",
+        "affected_files": [
+          "focuses/hcss/workflows/tgif_auto_route.json",
+          "joju_sandbox/patterns/achievement_detection.json"
+        ]
+      },
+      {
+        "type": "incompatible",
+        "severity": "low",
+        "description": "System-wide scope but focus-specific target",
+        "affected_files": []
+      }
+    ],
+    "blast_radius": "system-wide",
+    "recommendation": "\u26a0\ufe0f CAUTION: 1 high-severity conflicts. Recommend refactoring existing patterns instead of adding new one.",
+    "confidence": 0.6000000000000001
+  },
+  "questions": [
+    "Should this be system-wide or focus-specific?",
+    "Should we refactor existing patterns instead of adding new one?",
+    "Is the wide impact intentional or should we narrow the scope?"
+  ],
+  "required_mode": "teaching_mode",
+  "export_target": "windsurf",
+  "status": "pending",
+  "created_at": "2025-11-09T00:28:36.893798"
+}

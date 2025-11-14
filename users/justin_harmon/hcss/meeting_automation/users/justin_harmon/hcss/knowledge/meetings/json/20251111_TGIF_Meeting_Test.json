@@ -1,0 +1,15 @@
+{
+  "title": "TGIF Meeting Test",
+  "date": "2025-11-11",
+  "source": "test",
+  "transcript": "This is a test transcript.\n\nSpeaker 1: Hello\nSpeaker 2: Hi there",
+  "summary": "# TGIF Meeting Test\n\n**Date:** 2025-11-11  \n**Source:** test  \n**Duration:** 30 min  \n**Participants:** Alice, Bob\n\n---\n\n## Transcript\n\nThis is a test transcript.\n\nSpeaker 1: Hello\nSpeaker 2: Hi there\n\n---\n\n## Notes\n\n- Processed: 2025-11-11 12:23:18\n- Source: test\n\n",
+  "metadata": {
+    "duration": "30 min",
+    "participants": [
+      "Alice",
+      "Bob"
+    ]
+  },
+  "processed_at": "2025-11-11T12:23:18.972487"
+}

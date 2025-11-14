@@ -1,0 +1,303 @@
+{
+  "sources": {
+    "notion_joju_tasks": {
+      "type": "notion_database",
+      "connection": {
+        "database_id": "2a1fe28ff8d681d78e3afccd65f2464d",
+        "api_key_ref": "config.notion_api_key"
+      },
+      "last_mined": "2025-11-05T01:24:33.229874Z",
+      "schema": {
+        "properties": {
+          "Parent Tasks": {
+            "type": "relation",
+            "related_database": "2a1fe28f-f8d6-81d7-8e3a-fccd65f2464d"
+          },
+          "Sprint Points": {
+            "type": "number"
+          },
+          "Last edited time": {
+            "type": "last_edited_time"
+          },
+          "Dependency Chain": {
+            "type": "multi_select",
+            "options": [
+              "No Dependency",
+              "Task Dependency",
+              "Tool Dependency",
+              "People Dependency"
+            ]
+          },
+          "Children Tasks": {
+            "type": "relation",
+            "related_database": "2a1fe28f-f8d6-81d7-8e3a-fccd65f2464d"
+          },
+          "Task Category": {
+            "type": "multi_select",
+            "options": [
+              "\ud83d\udc85 Enhancement",
+              "\ud83d\udcac Feature Request",
+              "\ud83d\udc1e Bug",
+              "\ud83c\udfa8 Design Ops",
+              "Marketing",
+              "Finance",
+              "Product",
+              "Operations"
+            ]
+          },
+          "In-House vs Outsource": {
+            "type": "select",
+            "options": [
+              "In-House",
+              "Outsource"
+            ]
+          },
+          "Roadmap": {
+            "type": "select",
+            "options": [
+              "Active",
+              "Now",
+              "Next",
+              "Later"
+            ]
+          },
+          "Reference Files & media": {
+            "type": "files"
+          },
+          "Loot": {
+            "type": "multi_select",
+            "options": [
+              "$100",
+              "$200",
+              "$10",
+              "20pts"
+            ]
+          },
+          "Created by": {
+            "type": "created_by"
+          },
+          "Last edited by": {
+            "type": "last_edited_by"
+          },
+          "Take Task": {
+            "type": "button"
+          },
+          "Bounty": {
+            "type": "number"
+          },
+          "Created time": {
+            "type": "created_time"
+          },
+          "Task name": {
+            "type": "title",
+            "description": "Primary identifier"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Mobile",
+              "Website",
+              "Improvement",
+              "FE",
+              "BE",
+              "Design",
+              "Research",
+              "DevOps",
+              "Operations"
+            ]
+          },
+          "Assignee": {
+            "type": "people"
+          },
+          "Status": {
+            "type": "status"
+          },
+          "Due": {
+            "type": "date"
+          },
+          "Scoping": {
+            "type": "select",
+            "options": [
+              "3 - Could Have",
+              "2 - Should Have",
+              "1 - Must Have"
+            ]
+          },
+          "Is blocking": {
+            "type": "relation",
+            "related_database": "2a1fe28f-f8d6-81d7-8e3a-fccd65f2464d"
+          },
+          "Blocked by": {
+            "type": "relation",
+            "related_database": "2a1fe28f-f8d6-81d7-8e3a-fccd65f2464d"
+          },
+          "Task ID": {
+            "type": "unique_id"
+          },
+          "GitHub Pull Requests": {
+            "type": "relation",
+            "related_database": "2a1fe28f-f8d6-81d3-9d3f-000b47759df1"
+          }
+        }
+      },
+      "patterns": {
+        "do": [
+          "Use 'Assignee' for accountability and ownership",
+          "Set 'Due' for time-sensitive tasks"
+        ],
+        "dont": [
+          "Leave 'Due' empty for deadline-driven work"
+        ],
+        "framing": [
+          "'Parent Tasks' links to related database",
+          "'Children Tasks' links to related database",
+          "'Is blocking' links to related database",
+          "'Blocked by' links to related database",
+          "'GitHub Pull Requests' links to related database",
+          "'In-House vs Outsource' is optional/rarely used (10% of records)",
+          "'Task name' is frequently used (100% of records)"
+        ],
+        "lexicon": {}
+      },
+      "interaction_template": {
+        "create": {
+          "method": "POST",
+          "endpoint": "https://api.notion.com/v1/pages",
+          "required_fields": [
+            "Task name"
+          ],
+          "optional_fields": [
+            "Parent Tasks",
+            "Sprint Points",
+            "Last edited time",
+            "Dependency Chain",
+            "Children Tasks",
+            "Task Category",
+            "In-House vs Outsource",
+            "Roadmap",
+            "Reference Files & media",
+            "Loot",
+            "Created by",
+            "Last edited by",
+            "Take Task",
+            "Bounty",
+            "Created time",
+            "Tags",
+            "Assignee",
+            "Status",
+            "Due",
+            "Scoping",
+            "Is blocking",
+            "Blocked by",
+            "Task ID",
+            "GitHub Pull Requests"
+          ],
+          "example_payload": {
+            "parent": {
+              "database_id": "2a1fe28ff8d681d78e3afccd65f2464d"
+            },
+            "properties": {
+              "Task name": {
+                "title": [
+                  {
+                    "text": {
+                      "content": "Task title"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "update": {
+          "method": "PATCH",
+          "endpoint": "https://api.notion.com/v1/pages/{page_id}",
+          "updatable_fields": [
+            "Parent Tasks",
+            "Sprint Points",
+            "Last edited time",
+            "Dependency Chain",
+            "Children Tasks",
+            "Task Category",
+            "In-House vs Outsource",
+            "Roadmap",
+            "Reference Files & media",
+            "Loot",
+            "Created by",
+            "Last edited by",
+            "Take Task",
+            "Bounty",
+            "Created time",
+            "Task name",
+            "Tags",
+            "Assignee",
+            "Status",
+            "Due",
+            "Scoping",
+            "Is blocking",
+            "Blocked by",
+            "Task ID",
+            "GitHub Pull Requests"
+          ],
+          "example_payload": {
+            "properties": {}
+          }
+        },
+        "query": {
+          "method": "POST",
+          "endpoint": "https://api.notion.com/v1/databases/2a1fe28ff8d681d78e3afccd65f2464d/query",
+          "filters_available": true,
+          "sorts_available": true
+        }
+      },
+      "metadata": {
+        "database_title": "All Joju Tasks (sandbox)",
+        "database_url": "https://www.notion.so/2a1fe28ff8d681d78e3afccd65f2464d",
+        "total_properties": 25,
+        "sample_size": 10
+      }
+    },
+    "dropbox_8825_projects": {
+      "type": "dropbox_folder",
+      "connection": {
+        "path": "/8825/projects",
+        "api_key_ref": "config.dropbox_token"
+      },
+      "schema": {
+        "file_patterns": [
+          "8825_*.json"
+        ],
+        "structure": {
+          "project_files": "8825_[number]-[name].json",
+          "agent_files": "8825_00-agents.json"
+        }
+      },
+      "patterns": {
+        "do": [
+          "Follow 8825_XX-name.json naming convention"
+        ],
+        "lexicon": {
+          "project_file": "JSON file containing project-specific patterns, lexicon, and context"
+        }
+      }
+    }
+  },
+  "mining_instructions": {
+    "notion_database": {
+      "steps": [
+        "GET /v1/databases/{id} for schema",
+        "POST /v1/databases/{id}/query for sample data",
+        "Analyze properties for patterns",
+        "Generate interaction templates"
+      ]
+    },
+    "dropbox_folder": {
+      "steps": [
+        "List folder contents",
+        "Identify file patterns",
+        "Extract naming conventions",
+        "Map to 8825 structure"
+      ]
+    }
+  }
+}

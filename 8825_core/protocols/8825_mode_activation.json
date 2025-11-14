@@ -1,0 +1,179 @@
+{
+  "protocol_name": "8825 Mode Activation",
+  "version": "3.0.0",
+  "protocol_type": "System Activation Protocol",
+  "parent_system": "8825 PCMS",
+  "created": "2025-11-06",
+  "purpose": "Activate 8825 as an app-like system with focus-based sandboxes for different projects",
+  
+  "overview": {
+    "description": "8825 v3.0 operates as an application that must be explicitly activated. Once activated, users can focus on specific projects (sandboxes) with dedicated workflows, agents, and protocols.",
+    "architecture": "App-based system with modular focus areas (sandboxes)",
+    "activation_model": "Explicit entry → Focus selection → Sandbox operations → Exit with validation"
+  },
+  
+  "mode_activation": {
+    "entry_commands": [
+      "enter 8825 mode",
+      "8825 mode",
+      "activate 8825",
+      "start 8825"
+    ],
+    "activation_response": {
+      "launch_script": "launch_8825.sh",
+      "message": "🚀 8825 MODE ACTIVATED\n\nVersion: 3.0.0\nWorkspace: 8825-system\n\nAvailable Focus Areas:\n- Joju (professional library management)\n- HCSS (client automation)\n- JH Assistant (personal automation)\n\nCommands:\n- 'focus on [project]' - Enter project sandbox\n- 'create focus [name]' - Set up new project sandbox\n- 'list focuses' - Show all available focus areas\n- 'exit 8825 mode' - Deactivate system\n\nWhat would you like to focus on?",
+      "setup_actions": [
+        "Run launch_8825.sh to start all MCP servers",
+        "Set system mode flag to '8825_active'",
+        "Load 8825_master_brain.json",
+        "Initialize workspace at 8825-system",
+        "Scan for available focus areas (sandboxes)",
+        "Load user preferences and protocols"
+      ]
+    }
+  },
+  
+  "focus_system": {
+    "description": "Focus areas are project-specific sandboxes with dedicated workflows, agents, and protocols",
+    "focus_structure": {
+      "focus_name": "Unique identifier for the focus area",
+      "sandbox_location": "/{focus_name}_sandbox/",
+      "protocols": "Project-specific protocols and workflows",
+      "agents": "Specialized agents for this focus",
+      "master_files": "Core data files (libraries, configs, etc.)",
+      "activation_command": "focus on {focus_name}"
+    },
+    
+    "focus_activation": {
+      "command_format": "focus on [project_name]",
+      "examples": [
+        "focus on joju",
+        "focus on forge",
+        "focus on trustybits"
+      ],
+      "activation_steps": [
+        "Verify focus exists",
+        "Load focus-specific protocols",
+        "Initialize sandbox directory structure",
+        "Load master files into memory",
+        "Set focus flag to '{focus_name}_active'",
+        "Display focus-specific commands and status"
+      ]
+    },
+    
+    "registered_focuses": {
+      "joju": {
+        "name": "Joju",
+        "description": "Professional library management and profile curation",
+        "sandbox": "/joju_sandbox/",
+        "master_file": "JH_master_library.json",
+        "current_state": {
+          "revision": 12,
+          "achievements": 79,
+          "variations": 6
+        },
+        "workflow": "library_first",
+        "protocols": ["mining", "deduplication", "variations", "exit_protocol"]
+      },
+      "hcss": {
+        "name": "HCSS",
+        "description": "HCSS project management with Gmail/Otter ingestion and routing",
+        "sandbox": "/hcss_sandbox/",
+        "projects": ["HCSS", "RAL", "TGIF"],
+        "current_state": {
+          "phase": 1,
+          "status": "active"
+        },
+        "workflow": "email_otter_ingestion_routing",
+        "protocols": ["ingestion", "mining", "routing", "exit_protocol"]
+      },
+      "goose": {
+        "name": "Goose",
+        "description": "Goose project management (protocols TBD)",
+        "sandbox": "/goose_sandbox/",
+        "current_state": {
+          "status": "framework_ready",
+          "protocols_defined": false
+        },
+        "workflow": "TBD",
+        "protocols": ["TBD"]
+      },
+      "jh": {
+        "name": "Jh",
+        "description": "Justin Harmon's personal workspace and projects",
+        "sandbox": "/Jh_sandbox/",
+        "sandbox_path": "${USER_DROPBOX}/8825/8825-system (v2.0 deleted)/Jh_sandbox",
+        "current_state": {
+          "status": "active",
+          "protocols_defined": true
+        },
+        "workflow": "personal_projects",
+        "protocols": ["personal_workflow", "project_management"]
+      }
+    },
+    "version": "2.1.0"
+  },
+  
+  "focus_commands": {
+    "list_focuses": {
+      "command": "list focuses",
+      "description": "Display all available focus areas",
+      "output": "List of registered focuses with descriptions and status"
+    },
+    "create_focus": {
+      "command": "create focus [name]",
+      "description": "Set up a new project focus area with sandbox",
+      "triggers_protocol": "8825_create_focus"
+    },
+    "exit_focus": {
+      "command": "exit focus",
+      "description": "Exit current focus area (runs focus-specific exit protocol)",
+      "returns_to": "8825 mode (top level)"
+    }
+  },
+  
+  "mode_exit": {
+    "exit_commands": [
+      "exit 8825 mode",
+      "deactivate 8825",
+      "8825 complete"
+    ],
+    "exit_requirements": [
+      "No active focus (must exit focus first)",
+      "All files saved and validated",
+      "Session logs updated"
+    ],
+    "exit_actions": [
+      "Clear system mode flag",
+      "Archive session logs",
+      "Sync brain to Downloads folder (8825_brain_sync_protocol)",
+      "Display session summary",
+      "Return to normal Cascade operation"
+    ],
+    "exit_response": {
+      "message": "✅ 8825 MODE DEACTIVATED\n\nSession Summary:\n- Focus areas used: [list]\n- Files updated: [count]\n- Protocols executed: [list]\n\nAll changes saved. Ready for normal operation."
+    }
+  },
+  
+  "workspace_structure": {
+    "root": "/8825-system/",
+    "core_files": [
+      "8825_master_brain.json",
+      "README.md",
+      "ARCHITECTURE.md"
+    ],
+    "directories": {
+      "8825_core/": "Core system components (protocols, agents, workflows)",
+      "users/": "User profiles and data",
+      "focuses/": "Focus-specific workspaces (symlinks to user data)",
+      "8825_index/": "Fast discovery layer"
+    }
+  },
+  
+  "integration_with_existing_system": {
+    "backward_compatibility": "v2.0 protocols remain accessible",
+    "migration_path": "All focuses now in unified v3.0 architecture",
+    "protocol_references": "All existing protocols (decision-making, learning, mining, promptgen) remain active",
+    "user_preferences": "Loaded from users/${USER_ID}/profile.json"
+  }
+}

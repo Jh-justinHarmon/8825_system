@@ -1,0 +1,60 @@
+
+Figma Prototyping — Mined Insights & Recommendations
+====================================================
+
+Session Summary:
+-----------------
+This session focused on learning how to simulate checkbox-triggered flag selection using Figma’s prototyping system. The user wanted clicking a flag icon to open an overlay with checkbox options and have the selection (1) remembered visually and (2) reflected by updating the flag icon.
+
+Key Steps Documented:
+----------------------
+
+1. **Overlay Setup**:
+   - A flag icon triggers an overlay with a list of checkboxes.
+   - Only one checkbox can be selected at a time (using component variants).
+
+2. **Variant Structure**:
+   - The flag icon was made into a component set with different visual styles (e.g., default, hover, selected).
+   - It was later suggested to expand variants to reflect *specific* selection states, like:
+     - none
+     - needsMap
+     - mapNotWorking
+     - missingFromDB
+     - doNotCollect
+
+3. **Naming Best Practices**:
+   - Renamed `Property 1` to `flagStatus`.
+   - Renamed variant values to meaningful names (e.g., `needsMap`) instead of `Variant2`.
+
+4. **Prototyping Limitation & Workaround**:
+   - Figma does not allow changes to one component's state from inside another component (like from overlay → main icon).
+   - Solution: wrap both the flag icon and overlay into a parent frame (e.g., “row”), and create one variant per combined state.
+
+   Example:
+   - `flagStatus: none`, overlay hidden
+   - `flagStatus: needsMap`, overlay hidden
+   - etc.
+
+   On checkbox click → use “Change To” to switch to the right combined state.
+
+5. **Interaction Design**:
+   - Used `On Click → Change To → [variant]` for prototype behavior.
+   - Overlay automatically closes when switching variants (because it’s no longer in the visible frame).
+
+6. **Naming Observations (Fonts)**:
+   - Fonts visually identified in screenshots as likely Segoe UI or Arial — common in Microsoft environments.
+
+Recommendations:
+-----------------
+
+✅ **Use parent component pattern** when interaction between separate elements is needed (e.g., icon affected by overlay state).  
+✅ **Use semantic naming** for properties and variants (`flagStatus`, `selectedReason`) to keep logic clean.  
+✅ **Minimize duplication** by combining overlay and trigger in a shared parent so state flows naturally.  
+✅ **Avoid variables for UI state** — use variants and prototype links instead unless using Figma Dev Mode or APIs.
+
+Optional Next Steps:
+---------------------
+- Create a component set for the entire row (flag + overlay) to manage full state visually.
+- Use Smart Animate between states for smoother transitions.
+- Explore [Figma’s interactive components beta] if you'd like to reduce frame duplication.
+

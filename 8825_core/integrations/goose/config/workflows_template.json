@@ -1,0 +1,107 @@
+{
+  "_comment": "Goose Focus - Workflow Configuration Template",
+  "_version": "1.0.0",
+  "_created": "2025-11-06",
+  "_status": "Template - Copy and customize for your workflows",
+  
+  "workflows": {
+    "example_workflow": {
+      "enabled": false,
+      "description": "Example workflow template",
+      "schedule": "manual",
+      "phases": [
+        {
+          "phase": "1. Input",
+          "description": "Gather and validate input data",
+          "actions": [
+            "Read files from raw/",
+            "Validate format",
+            "Check completeness"
+          ],
+          "outputs": ["validated_input"],
+          "error_handling": "stop"
+        },
+        {
+          "phase": "2. Process",
+          "description": "Transform and process data",
+          "actions": [
+            "Apply transformations",
+            "Run agents",
+            "Generate intermediate results"
+          ],
+          "outputs": ["processed_data"],
+          "error_handling": "retry"
+        },
+        {
+          "phase": "3. Output",
+          "description": "Generate final deliverables",
+          "actions": [
+            "Format output",
+            "Save to output/",
+            "Generate report"
+          ],
+          "outputs": ["final_output"],
+          "error_handling": "continue"
+        },
+        {
+          "phase": "4. Archive",
+          "description": "Clean up and archive",
+          "actions": [
+            "Move processed files to archives/",
+            "Update logs",
+            "Generate summary"
+          ],
+          "outputs": ["archive_complete"],
+          "error_handling": "continue"
+        }
+      ],
+      "agents": ["ExampleAgent"],
+      "inputs": {
+        "source": "raw/",
+        "formats": ["json", "txt", "csv"],
+        "required_fields": []
+      },
+      "outputs": {
+        "destination": "output/",
+        "format": "json",
+        "naming": "goose_output_{timestamp}.json"
+      },
+      "settings": {
+        "timeout": 300,
+        "retry_count": 3,
+        "parallel": false
+      }
+    }
+  },
+  
+  "workflow_defaults": {
+    "error_handling": "stop",
+    "timeout": 300,
+    "retry_count": 3,
+    "logging": true,
+    "notifications": false
+  },
+  
+  "instructions": {
+    "how_to_use": [
+      "1. Copy this template to workflows.json",
+      "2. Define your workflow phases",
+      "3. Specify inputs and outputs",
+      "4. Configure agents to use",
+      "5. Set enabled: true",
+      "6. Test with manual execution"
+    ],
+    "phase_structure": {
+      "phase": "Phase name (e.g., '1. Input')",
+      "description": "What this phase does",
+      "actions": ["List of actions to perform"],
+      "outputs": ["What this phase produces"],
+      "error_handling": "stop|retry|continue"
+    },
+    "error_handling_options": {
+      "stop": "Stop workflow on error",
+      "retry": "Retry failed action up to retry_count times",
+      "continue": "Log error and continue to next action"
+    }
+  }
+}

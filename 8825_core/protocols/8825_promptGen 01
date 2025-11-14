@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "name": "8825_promptgen_protocol",
+    "version": "1.0.0",
+    "created": "2025-11-05",
+    "description": "PromptGen workflow - Zero-configuration content generation from structured data",
+    "origin": "Joju portfolio/resume generation system"
+  },
+  
+  "core_principle": "Parse → Select → Render → Validate → Export in <30 seconds",
+  
+  "workflow": {
+    "phase_1_parse": {
+      "description": "Extract structured data from source",
+      "inputs": [
+        "JSON resume data",
+        "LinkedIn profile export",
+        "Manual input forms",
+        "Existing portfolio files"
+      ],
+      "outputs": {
+        "structured_data": {
+          "personal": ["name", "email", "phone", "location"],
+          "experience": ["company", "role", "dates", "achievements"],
+          "skills": ["technical", "soft", "domain"],
+          "education": ["institution", "degree", "dates"],
+          "projects": ["name", "description", "technologies", "outcomes"]
+        }
+      },
+      "rules": [
+        "Normalize date formats",
+        "Extract proof points (metrics, outcomes)",
+        "Identify skill categories automatically",
+        "Flag missing critical fields"
+      ]
+    },
+    
+    "phase_2_select": {
+      "description": "Choose relevant content for target audience",
+      "context_aware": true,
+      "selection_strategies": {
+        "for_subtle_converts": {
+          "audience": "Risk-averse job seekers",
+          "prioritize": ["Conventional experience", "Clear career progression", "Recognizable companies"],
+          "deemphasize": ["Experimental projects", "Career gaps", "Unconventional paths"]
+        },
+        "for_evangelists": {
+          "audience": "Design-focused early adopters",
+          "prioritize": ["Unique projects", "Creative work", "Technical depth"],
+          "deemphasize": ["Corporate experience", "Traditional credentials"]
+        },
+        "for_hiring_managers": {
+          "audience": "Recruiters seeking proof",
+          "prioritize": ["Measurable outcomes", "Relevant skills", "Recent experience"],
+          "deemphasize": ["Old credentials", "Irrelevant experience"]
+        }
+      },
+      "content_trimming": {
+        "sparse_profile": "Include everything, pad with skills/interests",
+        "dense_profile": "Prioritize by relevance, trim low-value items",
+        "rules": [
+          "Maximum 2 pages for professional",
+          "Lead with strongest proof points",
+          "Remove content >10 years old unless exceptional"
+        ]
+      }
+    },
+    
+    "phase_3_render": {
+      "description": "Generate visual output with selected style",
+      "style_variants": {
+        "classic": {
+          "typography": "Lora + Source Sans Pro",
+          "layout": "Single-column flow",
+          "tone": "Traditional, professional",
+          "use_case": "Corporate roles, conservative industries"
+        },
+        "modern": {
+          "typography": "Inter",
+          "layout": "Two-column sidebar",
+          "tone": "Contemporary, clean",
+          "use_case": "Tech companies, startups, design roles"
+        },
+        "corporate": {
+          "typography": "Work Sans",
+          "layout": "Banner header with sections",
+          "tone": "Executive, authoritative",
+          "use_case": "Leadership roles, consulting, enterprise"
+        }
+      },
+      "rendering_rules": [
+        "Embedded fonts for cross-platform consistency",
+        "Elevated contrast for readability",
+        "Print-optimized with explicit page rules",
+        "Mobile-responsive preview",
+        "Semantic CSS mapping from data fields"
+      ],
+      "data_adaptive_layout": {
+        "sparse_content": "Expand sections, larger fonts, more whitespace",
+        "dense_content": "Compact sections, efficient use of space",
+        "conditional_rendering": "Show/hide sections based on content availability"
+      }
+    },
+    
+    "phase_4_validate": {
+      "description": "Check output quality before export",
+      "validation_checks": {
+        "content": [
+          "No placeholder text (Lorem ipsum, TODO, etc.)",
+          "All required sections present",
+          "Contact information complete",
+          "No broken formatting"
+        ],
+        "visual": [
+          "Proper page breaks (no orphaned headers)",
+          "Consistent spacing and alignment",
+          "No overlapping text",
+          "Images load correctly"
+        ],
+        "proof": [
+          "Proof points are measurable",
+          "No unsubstantiated claims",
+          "Dates are consistent",
+          "Skills match experience"
+        ]
+      },
+      "quality_gates": {
+        "must_pass": [
+          "Contact info complete",
+          "No placeholder text",
+          "Readable contrast ratios"
+        ],
+        "should_pass": [
+          "At least 3 proof points",
+          "Recent experience <2 years",
+          "Skills match job target"
+        ],
+        "nice_to_have": [
+          "Portfolio links active",
+          "Testimonials included",
+          "Metrics in every role"
+        ]
+      }
+    },
+    
+    "phase_5_export": {
+      "description": "Generate final output with proper naming",
+      "file_naming": {
+        "pattern": "FirstnameLastname_Variant.pdf",
+        "examples": [
+          "JustinHarmon_Classic.pdf",
+          "JustinHarmon_Modern.pdf",
+          "JustinHarmon_Corporate.pdf"
+        ]
+      },
+      "export_options": {
+        "pdf": {
+          "quality": "Print-ready (300dpi equivalent)",
+          "fonts": "Embedded",
+          "links": "Active and clickable"
+        },
+        "web": {
+          "format": "HTML + CSS",
+          "responsive": true,
+          "seo_optimized": true
+        },
+        "markdown": {
+          "format": "GitHub-flavored Markdown",
+          "use_case": "Version control, plain text backup"
+        }
+      },
+      "multi_variant_export": {
+        "generate_all_three": true,
+        "zip_bundle": "FirstnameLastname_Portfolio.zip",
+        "include_sources": false
+      }
+    }
+  },
+  
+  "performance_targets": {
+    "total_time": "<30 seconds from data to PDF",
+    "parse": "<5 seconds",
+    "select": "<5 seconds",
+    "render": "<15 seconds",
+    "validate": "<3 seconds",
+    "export": "<2 seconds"
+  },
+  
+  "design_principles": {
+    "zero_configuration": {
+      "description": "No manual layout tweaking required",
+      "implementation": [
+        "Automatic content fitting",
+        "Smart section ordering",
+        "Adaptive spacing",
+        "Intelligent page breaks"
+      ]
+    },
+    "data_driven": {
+      "description": "Layout adapts to content",
+      "implementation": [
+        "Conditional section visibility",
+        "Dynamic column widths",
+        "Content-aware spacing",
+        "Proof-point prominence"
+      ]
+    },
+    "proof_focused": {
+      "description": "Highlight measurable outcomes",
+      "implementation": [
+        "Metrics get visual emphasis",
+        "Proof points in bold or color",
+        "Outcomes before responsibilities",
+        "Validation timestamps visible"
+      ]
+    }
+  },
+  
+  "extension_points": {
+    "custom_sections": {
+      "publications": "Academic papers, articles",
+      "speaking": "Conferences, presentations",
+      "awards": "Recognition, achievements",
+      "volunteer": "Community involvement"
+    },
+    "industry_templates": {
+      "tech": "Emphasize GitHub, stack, projects",
+      "design": "Portfolio images, Figma/Dribbble links",
+      "business": "Revenue impact, team size, scope",
+      "academic": "Publications, citations, grants"
+    },
+    "language_support": {
+      "i18n": "Multiple language outputs",
+      "rtl_support": "Right-to-left languages",
+      "locale_formats": "Date/number formatting by region"
+    }
+  },
+  
+  "integration_with_joju": {
+    "data_source": "Joju profile (single source of truth)",
+    "proof_validation": "Joju tracks proof decay",
+    "audience_targeting": "Select variant based on user segment",
+    "version_control": "Track changes to profile over time",
+    "api_endpoint": "POST /api/generate-portfolio"
+  },
+  
+  "error_handling": {
+    "missing_required_data": {
+      "action": "Prompt user for minimum required fields",
+      "fallback": "Generate partial portfolio with warnings"
+    },
+    "invalid_format": {
+      "action": "Attempt to parse and correct",
+      "fallback": "Show specific errors, request manual fix"
+    },
+    "rendering_failure": {
+      "action": "Try alternative renderer",
+      "fallback": "Export as plain text with formatting instructions"
+    }
+  },
+  
+  "quality_assurance": {
+    "automated_checks": [
+      "Spell check all text content",
+      "Validate URLs are accessible",
+      "Check date consistency",
+      "Verify contact info format"
+    ],
+    "manual_review_triggers": [
+      "First-time user",
+      "Critical role application",
+      "User-requested review"
+    ]
+  },
+  
+  "usage": {
+    "for_ai": [
+      "Use this workflow for any content generation task",
+      "Parse → Select → Render → Validate → Export",
+      "Complete in <30 seconds",
+      "Adapt to user's audience context"
+    ],
+    "for_user": [
+      "Upload data or connect LinkedIn",
+      "Select target audience",
+      "Choose style variant",
+      "Download in <30 seconds"
+    ],
+    "for_developers": [
+      "Each phase is modular and replaceable",
+      "API accepts JSON, returns PDF",
+      "Extend with custom templates",
+      "Hook validation checks as needed"
+    ]
+  }
+}

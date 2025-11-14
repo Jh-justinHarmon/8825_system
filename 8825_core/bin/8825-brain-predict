@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""
+8825 brain predict <action>
+Predict impact of an action before executing
+"""
+
+import sys
+import json
+from pathlib import Path
+
+# Add brain module to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "brain"))
+
+from brain_api import BrainAPI
+
+def format_prediction(prediction):
+    """Format prediction for display"""
+    if "error" in prediction:
+        print(f"❌ Error: {prediction['error']}")
+        if "hint" in prediction:
+            print(f"💡 {prediction['hint']}")
+        return
+    
+    print("=== Impact Prediction ===\n")
+    
+    # Action
+    print(f"Action: {prediction.get('action', 'unknown')}")
+    parsed = prediction.get('parsed', {})
+    print(f"Type: {parsed.get('type', 'unknown')}")
+    print(f"Target: {parsed.get('target', 'unknown')}")
+    print()
+    
+    # Risk level
+    risk = prediction.get('risk_level', 'unknown')
+    risk_emoji = {
+        'low': '✅',
+        'medium': '⚠️ ',
+        'high': '🔴',
+        'critical': '🛑'
+    }.get(risk, '❓')
+    
+    print(f"Risk Level: {risk_emoji} {risk.upper()}")
+    print()
+    
+    # Conflicts
+    conflicts = prediction.get('conflicts', [])
+    if conflicts:
+        print(f"Conflicts Detected ({len(conflicts)}):")
+        for conflict in conflicts:
+            severity_emoji = '🔴' if conflict.get('severity') == 'high' else '⚠️ '
+            print(f"  {severity_emoji} {conflict.get('reason', 'Unknown')}")
+            print(f"     Resolution: {conflict.get('resolution', 'unknown')}")
+        print()
+    else:
+        print("Conflicts: ✅ None detected")
+        print()
+    
+    # Historical data
+    history = prediction.get('history', {})
+    if history.get('total_attempts', 0) > 0:
+        print("Historical Data:")
+        print(f"  Total attempts: {history['total_attempts']}")
+        print(f"  Success rate: {history['success_rate']*100:.0f}%")
+        print(f"  Pattern: {history.get('pattern', 'unknown')}")
+        
+        last = history.get('last_attempt')
+        if last:
+            print(f"  Last attempt: {'✅ Success' if last.get('success') else '❌ Failed'}")
+        print()
+    else:
+        print("Historical Data: No previous attempts")
+        print()
+    
+    # Impact
+    impact = prediction.get('impact', {})
+    affected = impact.get('affected_components', [])
+    if affected:
+        print(f"Affected Components ({len(affected)}):")
+        for comp in affected[:5]:  # Show first 5
+            print(f"  - {comp}")
+        if len(affected) > 5:
+            print(f"  ... and {len(affected) - 5} more")
+        print()
+    
+    # Recommendation
+    recommendation = prediction.get('recommendation', '')
+    print("Recommendation:")
+    print(f"  {recommendation}")
+    print()
+    
+    # Safe to proceed
+    safe = prediction.get('safe_to_proceed', False)
+    if safe:
+        print("✅ Safe to proceed")
+    else:
+        print("❌ Not recommended to proceed")
+
+def main():
+    """Main entry point"""
+    if len(sys.argv) < 2:
+        print("Usage: 8825-brain-predict <action>")
+        print()
+        print("Examples:")
+        print("  8825-brain-predict 'restart inbox_daemon'")
+        print("  8825-brain-predict 'start downloads_sync'")
+        print("  8825-brain-predict 'cleanup old files'")
+        sys.exit(1)
+    
+    action = " ".join(sys.argv[1:])
+    
+    api = BrainAPI()
+    prediction = api.predict_action(action)
+    format_prediction(prediction)
+
+if __name__ == "__main__":
+    main()

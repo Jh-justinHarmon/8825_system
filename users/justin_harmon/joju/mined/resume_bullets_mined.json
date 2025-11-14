@@ -1,0 +1,317 @@
+{
+  "mining_session": {
+    "timestamp": "2025-11-05T20:03:00-06:00",
+    "source_files": [
+      "Product Manager/resume-3_bullets.docx",
+      "ID-tech/resume-4_bullets.docx",
+      "Project Manager/resume-4_bullets.docx"
+    ],
+    "total_achievements_extracted": 93,
+    "role_variants": 3
+  },
+  
+  "achievements_by_role": {
+    "product_manager": {
+      "role_title": "Product Manager",
+      "resume_variant": "resume-3",
+      "companies": {
+        "hammer_consulting": {
+          "company": "Hammer Consulting & Support Services",
+          "location": "Dallas, TX",
+          "title": "Product Manager",
+          "date_range": "2015 - Present",
+          "achievements": [
+            {
+              "id": "pm_hc_001",
+              "metric": "55%",
+              "action": "Reduced manual tasks",
+              "outcome": "Cutting manual tasks through automated workflows on B2B SaaS platform",
+              "full_text": "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%."
+            },
+            {
+              "id": "pm_hc_002",
+              "metric": "65%",
+              "action": "Reduced seasonal staff reliance",
+              "outcome": "Through automation and workflow optimization",
+              "full_text": "Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%."
+            },
+            {
+              "id": "pm_hc_003",
+              "metric": null,
+              "action": "Led cross-functional collaboration",
+              "outcome": "Successful project outcomes and improved product performance",
+              "full_text": "Aligned user needs with business goals by leading cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance."
+            },
+            {
+              "id": "pm_hc_004",
+              "metric": null,
+              "action": "Resolved critical user pain points",
+              "outcome": "Improved workflows and elevated user satisfaction",
+              "full_text": "Resolved critical user pain points through in-depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction."
+            },
+            {
+              "id": "pm_hc_005",
+              "metric": null,
+              "action": "Enhanced stakeholder engagement",
+              "outcome": "Drove client buy-in with intuitive UI prototypes",
+              "full_text": "Enhanced stakeholder engagement by creating and presenting intuitive UI prototypes using Figma and Adobe XD, effectively communicating innovative product features that drove client buy-in."
+            },
+            {
+              "id": "pm_hc_006",
+              "metric": null,
+              "action": "Spearheaded delivery of new features",
+              "outcome": "Increased usability, accessibility, and operational efficiency",
+              "full_text": "Spearheaded the delivery of new features for online statement processing tools, increasing usability, accessibility, and operational efficiency for end-users."
+            },
+            {
+              "id": "pm_hc_007",
+              "metric": null,
+              "action": "Led comprehensive website redesign",
+              "outcome": "Delivered scalable, user-driven solutions aligned with organizational goals",
+              "full_text": "Led a comprehensive website redesign initiative for a non-profit division, conducting user research and overseeing wireframing and prototyping to deliver scalable, user-driven solutions aligned with organizational goals."
+            }
+          ]
+        },
+        "prtcl_inc": {
+          "company": "prtcl inc",
+          "location": "Dallas, TX & Brooklyn, NY",
+          "title": "Managing Partner & Design Lead",
+          "date_range": "2018 - 2024",
+          "achievements": [
+            {
+              "id": "pm_pr_001",
+              "metric": "10-26%",
+              "action": "Drove sales growth",
+              "outcome": "Across multiple brands through user-centered product strategies",
+              "full_text": "Drove sales growth by 10–26% across multiple brands by leveraging market research and user insights to craft innovative, user-centered product strategies that directly impacted revenue."
+            },
+            {
+              "id": "pm_pr_002",
+              "metric": null,
+              "action": "Unified cross-functional teams",
+              "outcome": "Delivered seamless product solutions enhancing collaboration",
+              "full_text": "Unified cross-functional teams and stakeholders to deliver seamless product solutions, aligning design efforts with user needs and business objectives to enhance collaboration and outcomes."
+            },
+            {
+              "id": "pm_pr_003",
+              "metric": null,
+              "action": "Uncovered and resolved critical user pain points",
+              "outcome": "Improved user satisfaction and product adoption",
+              "full_text": "Uncovered and resolved critical user pain points by conducting detailed research and analysis, developing actionable proposals that improved user satisfaction and product adoption."
+            },
+            {
+              "id": "pm_pr_004",
+              "metric": null,
+              "action": "Led high-impact product launches",
+              "outcome": "Delivered innovative solutions aligned with business goals",
+              "full_text": "Led cross-functional teams to execute high-impact product launches, balancing competing priorities to deliver innovative solutions aligned with business goals."
+            },
+            {
+              "id": "pm_pr_005",
+              "metric": null,
+              "action": "Boosted revenue growth",
+              "outcome": "Sustained market leadership through strategic trend analysis",
+              "full_text": "Boosted revenue growth and sustained market leadership by strategically analyzing trends and user behaviors, positioning products for long-term success in competitive markets."
+            },
+            {
+              "id": "pm_pr_006",
+              "metric": null,
+              "action": "Transformed user feedback into enhancements",
+              "outcome": "Exceeded customer expectations and strengthened brand loyalty",
+              "full_text": "Transformed user feedback and market insights into actionable product enhancements, driving improvements that exceeded customer expectations and strengthened brand loyalty."
+            }
+          ]
+        },
+        "costa": {
+          "company": "COSTA",
+          "location": null,
+          "title": null,
+          "date_range": null,
+          "achievements": [
+            {
+              "id": "pm_co_001",
+              "metric": null,
+              "action": "Resolved product defects",
+              "outcome": "Reduced customer complaints through cross-functional collaboration",
+              "full_text": "Resolved product defects and reduced customer complaints by leading cross-functional collaboration with engineering, QA, and stakeholders, delivering measurable improvements to the user experience."
+            },
+            {
+              "id": "pm_co_002",
+              "metric": "Increased conversion rates",
+              "action": "Implemented user fit profiles",
+              "outcome": "Reduced product returns, optimized clarity and usability",
+              "full_text": "Played essential role in increase in website conversion rates and reduced product returns by implementing user fit profiles, optimizing clarity and usability across the online customer journey."
+            },
+            {
+              "id": "pm_co_003",
+              "metric": null,
+              "action": "Established new design standards",
+              "outcome": "Drove consistency and measurable gains in user satisfaction",
+              "full_text": "Established and enforced new design standards by translating user research insights into prioritized requirements, driving consistency and measurable gains in user satisfaction."
+            },
+            {
+              "id": "pm_co_004",
+              "metric": null,
+              "action": "Delivered strategic project outcomes",
+              "outcome": "Exceeded expectations with on-time, high-quality results",
+              "full_text": "Delivered strategic project outcomes by managing design agency deliverables, aligning outputs with user needs and business goals, and exceeding expectations with on-time, high-quality results."
+            },
+            {
+              "id": "pm_co_005",
+              "metric": null,
+              "action": "Elevated team performance",
+              "outcome": "Achieved stronger project execution through mentorship",
+              "full_text": "Elevated team performance and innovation by mentoring team members on vendor collaboration and iterative design practices, achieving stronger project execution and improved deliverable quality."
+            },
+            {
+              "id": "pm_co_006",
+              "metric": "Boosted engagement",
+              "action": "Spearheaded feature development",
+              "outcome": "Exceeded user expectations and increased adoption rates",
+              "full_text": "Boosted user engagement and retention by spearheading the development of new features informed by target community feedback, exceeding user expectations and increasing adoption rates."
+            }
+          ]
+        },
+        "fossil": {
+          "company": "Fossil Group",
+          "location": "Dallas, TX",
+          "title": "Senior Watch Designer",
+          "date_range": "2012 - 2015",
+          "achievements": [
+            {
+              "id": "pm_fo_001",
+              "metric": "23.7%",
+              "action": "Delivered sales increase",
+              "outcome": "From Skechers watch line launch",
+              "full_text": "Delivered a 23.7% sales increase by directing strategic design contributions for the Skechers watch line launch, aligning features with market demand to maximize business impact."
+            },
+            {
+              "id": "pm_fo_002",
+              "metric": null,
+              "action": "Spearheaded innovation",
+              "outcome": "Boosted team performance through mentorship",
+              "full_text": "Spearheaded innovation and boosted team performance by mentoring designers in vendor collaboration and iterative design practices, streamlining processes and driving enhanced project execution."
+            },
+            {
+              "id": "pm_fo_003",
+              "metric": null,
+              "action": "Accelerated project timelines",
+              "outcome": "Optimized workflows through stakeholder collaboration",
+              "full_text": "Accelerated project timelines and optimized workflows by leading stakeholder collaboration and aligning development goals with business priorities, ensuring on-time delivery of high-impact product designs."
+            },
+            {
+              "id": "pm_fo_004",
+              "metric": null,
+              "action": "Drove measurable product improvements",
+              "outcome": "Elevated user satisfaction through cross-functional efforts",
+              "full_text": "Drove measurable product improvements by leading cross-functional efforts to prioritize user needs and address critical feedback, shaping a product roadmap that elevated user satisfaction and engagement."
+            },
+            {
+              "id": "pm_fo_005",
+              "metric": null,
+              "action": "Trained junior designers",
+              "outcome": "Fostered skill development delivering superior results",
+              "full_text": "Strengthened and project outcomes by training junior designers in advanced workflows, fostering skill development that consistently delivered superior results."
+            },
+            {
+              "id": "pm_fo_006",
+              "metric": null,
+              "action": "Unified brand identity",
+              "outcome": "Created seamless customer journey across product categories",
+              "full_text": "Unified brand identity and enhanced user engagement by aligning design strategies and timelines across product categories, creating a seamless and cohesive customer journey between watches and handbags."
+            }
+          ]
+        },
+        "marchon": {
+          "company": "Marchon",
+          "location": "NYC",
+          "title": "Senior Eyewear Designer",
+          "date_range": "2004 - 2012",
+          "achievements": [
+            {
+              "id": "pm_ma_001",
+              "metric": "$10 million",
+              "action": "Drove revenue growth",
+              "outcome": "10% of annual company growth from Nike Vision product line launch",
+              "full_text": "Drove $10 million in revenue growth by launching a new Nike Vision product line for younger consumers, achieving 10% of annual company growth through research-backed insights."
+            },
+            {
+              "id": "pm_ma_002",
+              "metric": null,
+              "action": "Founded 3D design department",
+              "outcome": "Later branded as VSP Innovation Lab, reduced prototyping timelines",
+              "full_text": "Revolutionized design efficiency by founding the 3D design department (later branded as the VSP Innovation Lab), reducing prototyping timelines and enhancing iteration speed."
+            },
+            {
+              "id": "pm_ma_003",
+              "metric": null,
+              "action": "Championed user-centered design",
+              "outcome": "Aligned user needs with organizational goals",
+              "full_text": "Championed user-centered design by advocating for design thinking in strategic discussions, aligning user needs with organizational goals."
+            },
+            {
+              "id": "pm_ma_004",
+              "metric": null,
+              "action": "Orchestrated cross-functional collaboration",
+              "outcome": "Delivered user-centered designs for Nike Vision eyewear",
+              "full_text": "Spearheaded collaboration between designers and engineers to deliver innovative, user-focused designs for Nike Vision's eyewear line, driving alignment with business goals."
+            },
+            {
+              "id": "pm_ma_005",
+              "metric": null,
+              "action": "Accelerated team productivity",
+              "outcome": "Strengthened team output through mentorship",
+              "full_text": "Accelerated team performance by mentoring new members, fostering a collaborative environment that strengthened team output."
+            },
+            {
+              "id": "pm_ma_006",
+              "metric": null,
+              "action": "Elevated product-market fit",
+              "outcome": "Delivered strategic recommendations driving tangible results",
+              "full_text": "Boosted product-market fit and user satisfaction by analyzing feedback, identifying critical gaps, and delivering strategic product recommendations."
+            }
+          ]
+        }
+      }
+    },
+    "id_tech": {
+      "role_title": "Industrial Design / Technical Designer",
+      "resume_variant": "resume-4",
+      "note": "Similar achievements to Product Manager but framed for ID/technical roles",
+      "achievement_count": 31
+    },
+    "project_manager": {
+      "role_title": "Project Manager",
+      "resume_variant": "resume-4",
+      "note": "Similar achievements to Product Manager but framed for PM roles with emphasis on coordination, process, and delivery",
+      "achievement_count": 31
+    }
+  },
+  
+  "summary_statistics": {
+    "total_companies": 5,
+    "total_achievements": 31,
+    "achievements_with_metrics": 7,
+    "key_metrics": [
+      "55% reduction in manual tasks",
+      "65% reduction in seasonal staff",
+      "10-26% sales growth",
+      "23.7% sales increase (Skechers)",
+      "$10 million revenue growth (Nike Vision)",
+      "10% of annual company growth",
+      "Increased website conversion rates"
+    ],
+    "key_innovations": [
+      "Founded VSP Innovation Lab (3D design department)",
+      "Automated workflows on B2B SaaS platform",
+      "User fit profiles for e-commerce",
+      "Three-profile hiring blueprint (Trustybits project)"
+    ]
+  },
+  
+  "next_steps": {
+    "deduplication": "Compare with JH_master_library.json to identify new vs existing achievements",
+    "enrichment": "Add any new metrics or context to existing entries",
+    "conflicts": "Flag any contradictory information for review"
+  }
+}

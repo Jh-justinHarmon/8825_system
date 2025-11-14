@@ -1,0 +1,14 @@
+{
+  "api_keys": {
+    "builtwith_api_key": "",
+    "google_api_key": "",
+    "google_cx": "",
+    "clearbit_api_key": ""
+  },
+  "settings": {
+    "snapshot_frequency": "weekly",
+    "auto_monitor": false,
+    "report_format": "markdown"
+  },
+  "notes": "Add your API keys above. Free tiers available for all services."
+}

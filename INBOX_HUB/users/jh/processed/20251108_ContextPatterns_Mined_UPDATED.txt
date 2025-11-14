@@ -1,0 +1,66 @@
+CONTEXT PATTERNS FROM CHAT MINING — UPDATED 2025-11-08
+
+1. FILE NAMING + REPLACEMENT LOGIC (Tax Returns, 1099s, etc.)
+- System should detect duplicate generated names based on file type selection, not original upload name.
+- Prompt hierarchy:
+  • Prompt 1: “Is this an amended return?” → If yes: use secondary name with "_Amended", etc.
+  • Prompt 2: “Is this a replacement file for [existing file name]?” → If yes: replace. If no: append (1), (2), etc.
+  • If both primary and amended files exist → present checkbox prompt for which version (if any) should be replaced.
+- Applies to files like tax returns, amended docs, reconciliations, corrected 1099s.
+
+2. NAMING CONVENTIONS & ALIAS LIBRARIES
+- New libraries proposed for Admins, Carriers, and Products to manage:
+  • Abbreviated names (improve dropdown readability)
+  • Clean fallback for missing descriptions (avoid “no description” display)
+- Product dropdowns will show: [Carrier Alias] + [Product Name] + [Short Description]
+
+3. DISPLAY & DOWNLOAD BEHAVIOR
+- Chrome inconsistency noted: File preview sometimes displays correct name briefly before reverting to backend filename.
+- Desired behavior:
+  • Preview tab should display portal-assigned name.
+  • Downloads (especially tax documents) should retain portal-facing name for clarity on client side.
+
+4. ROLE / PERMISSION INFRASTRUCTURE (5.5.4)
+- Framework:
+  • Permissions (user, admin, superAdmin) → assigned at user level
+  • Roles = Job title/function
+  • Privileges = Tasks allowed, based on permissions + role
+- SuperAdmins: full access
+- Admins: task-specific access varies by role
+- Users: baseline access
+- Proposal: Add role-level toggles for privilege control (e.g., enable “approve files” for some roles only)
+- Goal: Let Josie manage task access independently, with no ongoing dev lift required
+
+5. COLLECTIONS REPORT FEATURE (PROPOSED)
+- Feature would help client track which employee collected which statements.
+- Inputs:
+  • Dropdown: Employee
+  • Dropdown: Time period
+  • Upload: Excel file listing expected assignments for the period
+- Output:
+  • List of expected Bank/Cession IDs per employee
+  • Column showing TRUE/FALSE if file was actually collected
+- Include option to view “Unassigned” files that may have slipped through
+
+6. FLAGGING FUNCTIONALITY FOR D&D TOOL
+- Replaces old “Flag” column idea with action button inside the portal
+- Clicking opens overlay with options:
+  • Needs Map Created
+  • Map Not Working
+  • Missing from Database
+  • Do Not Collect
+- Filter bar allows sorting by flag type
+- Role Responsibilities:
+  • Uploaders: flag files
+  • Power Users: resolve “Needs Map”
+  • Managers: resolve “Missing from DB” or “Do Not Collect”
+  • HCSS: monitor “Map Not Working”
+
+7. DEVELOPMENT & APPROVAL FLOW
+- 5.5.1 to 5.5.4 devs are managed by release/version sequence
+- Addendums are tracked and rolled into new approvals
+- Staging behavior is actively reviewed and revised before push
+- Devs informed of delays, updates, and testing status with detailed messages
+- Naming issues, bug behavior, and inconsistent UI flows are logged with examples and screenshots
+
+SOURCE: Chat mining from 2025-11-08 (Updated Analysis)

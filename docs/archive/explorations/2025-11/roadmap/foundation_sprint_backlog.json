@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "last_updated": "2025-11-08",
+    "total_items": 3,
+    "next_sprint_date": "2025-11-15",
+    "sprint_theme": "TV Memory Layer, Input Hub, and Partner Credit Marketplace",
+    "description": "New features and capabilities"
+  },
+  "items": [
+    {
+      "id": "proto-001",
+      "title": "MCP Input Hub with context learning",
+      "description": "Full screenshot and file ingestion system with OCR, context extraction, and smart routing",
+      "source": "input_hub_analysis",
+      "source_id": "INPUT_HUB_DECISION.md",
+      "priority": "high",
+      "effort": "medium",
+      "effort_hours": 6.5,
+      "impact": "high",
+      "dependencies": ["refactor-001"],
+      "tags": ["mcp", "automation", "context", "screenshots", "ocr"],
+      "status": "queued",
+      "created": "2025-11-08",
+      "prototype_goals": [
+        "Auto-sync screenshots from Desktop/Downloads (watchdog)",
+        "Extract context via OCR + window title metadata",
+        "Route to correct project/focus based on content",
+        "Learn from user corrections to improve routing",
+        "Integrate with MCP server for seamless workflow"
+      ],
+      "success_criteria": "Can auto-route 80% of screenshots correctly without manual intervention",
+      "phases": {
+        "phase_1": {
+          "status": "complete",
+          "description": "Manual sync for quick reference",
+          "deliverables": [
+            "Folder structure",
+            "Manual sync script",
+            "checking_sg command"
+          ]
+        },
+        "phase_2": {
+          "status": "queued",
+          "description": "Full automation with context learning",
+          "deliverables": [
+            "Watchdog auto-sync",
+            "OCR integration (Apple Vision API or Tesseract)",
+            "Context extraction engine",
+            "Smart routing with learning",
+            "MCP server integration",
+            "User correction feedback loop"
+          ]
+        }
+      },
+      "technical_notes": {
+        "context_extraction": "More challenging than inbox JSON - screenshots have visual + text content, need window title, OCR, and potentially image classification",
+        "routing_complexity": "Can't rely on explicit metadata like inbox JSON. Need to infer project/focus from screenshot content and context",
+        "learning_system": "Track user corrections (when they move files) to improve routing accuracy over time",
+        "integration": "Should use shared ingestion core from refactor-001 to avoid duplication with inbox system"
+      },
+      "user_requirements": {
+        "frequency": "Multiple screenshots per day",
+        "immediate_need": "Quick reference (Phase 1 complete)",
+        "long_term_need": "Full automation with smart routing",
+        "context_challenge": "Even more complex than inbox ingestion"
+      }
+    },
+    {
+      "id": "proto-002",
+      "title": "Project 8825 TV Memory Layer",
+      "description": "TV Memory Layer thought experiment - bookmark model with Siri-first interface for passive memory capture and retrieval",
+      "source": "teaching_ticket",
+      "source_id": "T-8825-20251108-163055",
+      "priority": "high",
+      "effort": "large",
+      "effort_hours": 20,
+      "impact": "high",
+      "dependencies": [],
+      "tags": ["tv", "memory", "siri", "bookmarks", "team76"],
+      "status": "exploration",
+      "exploration_location": "8825_core/explorations/features/tv_memory_layer.md",
+      "created": "2025-11-08",
+      "prototype_goals": [
+        "Design bookmark-based memory model for TV content",
+        "Build Siri-first interface for passive capture",
+        "Integrate with existing achievement detection patterns",
+        "Validate with Team76 use cases",
+        "Ensure compatibility with Joju patterns"
+      ],
+      "success_criteria": "Can capture and retrieve TV-based memories via Siri without manual input",
+      "ai_analysis": {
+        "touchpoints": 11,
+        "conflicts": 1,
+        "severity": "high",
+        "affected_critical_patterns": [
+          "joju_sandbox/patterns/achievement_detection.json"
+        ],
+        "blast_radius": "system-wide",
+        "recommendation": "Refactor existing patterns to integrate TV memory layer rather than adding parallel system"
+      },
+      "questions": [
+        "Should this be system-wide or focus-specific (Team76)?",
+        "Should we refactor existing achievement detection to include TV memories?",
+        "How does this integrate with current Joju mining patterns?"
+      ],
+      "technical_notes": {
+        "integration_challenge": "Affects core Joju achievement detection - needs careful integration",
+        "scope_decision": "System-wide scope but Team76 target - needs clarification",
+        "pattern_refactor": "May require refactoring achievement_detection.json to support TV memories"
+      }
+    },
+    {
+      "id": "proto-004",
+      "title": "Partner Credit Marketplace",
+      "description": "Multi-partner credit exchange and automation marketplace with revenue sharing",
+      "source": "partner_barter_proposal",
+      "source_id": "PARTNER_CREDIT_PHASES.md",
+      "priority": "low",
+      "effort": "medium",
+      "effort_hours": 15,
+      "impact": "medium",
+      "dependencies": ["refactor-003", "Multiple partners onboarded"],
+      "tags": ["marketplace", "multi-partner", "governance", "credits"],
+      "status": "queued",
+      "created": "2025-11-08",
+      "prototype_goals": [
+        "Extend credit system to multiple partners (Team76, etc.)",
+        "Enable cross-partner credit exchange",
+        "Build automation marketplace for licensing",
+        "Track revenue share from external licensing",
+        "Implement steering group voting system"
+      ],
+      "success_criteria": "Can exchange credits across 3+ partners and license automations with automated revenue tracking",
+      "phases": {
+        "phase_1": {
+          "status": "complete",
+          "description": "Manual tracking for Smart/HCSS pilot",
+          "location": "8825_core/protocols/partner_credit_protocol.json"
+        },
+        "phase_2": {
+          "status": "queued",
+          "description": "Automation and 8825 integration",
+          "roadmap_id": "refactor-003"
+        },
+        "phase_3": {
+          "status": "queued",
+          "description": "Multi-partner marketplace",
+          "roadmap_id": "proto-004"
+        }
+      },
+      "technical_notes": {
+        "multi_partner_challenge": "Need to track credit balances across multiple partner pairs, not just Smart/HCSS",
+        "marketplace_complexity": "Automation catalog must support licensing, usage tracking, and revenue distribution",
+        "governance_scaling": "Steering group model needs to scale beyond 2 partners"
+      },
+      "deliverables": [
+        "Multi-partner credit exchange system",
+        "Automation marketplace with licensing",
+        "Revenue share tracking and distribution",
+        "Enhanced governance (voting, contracts)",
+        "Cross-partner credit conversion"
+      ]
+    }
+  ]
+}

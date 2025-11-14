@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "8825 MCP Configuration Schema",
+  "description": "Configuration schema for 8825 v3.0 MCP servers",
+  "type": "object",
+  "required": ["mcp_id", "name", "port", "endpoints"],
+  "properties": {
+    "mcp_id": {
+      "type": "string",
+      "description": "Unique identifier for this MCP",
+      "pattern": "^[a-z0-9_]+_mcp$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for this MCP"
+    },
+    "port": {
+      "type": "integer",
+      "description": "Port number for this MCP server",
+      "minimum": 8826,
+      "maximum": 8900
+    },
+    "endpoints": {
+      "type": "array",
+      "description": "Available API endpoints",
+      "items": {
+        "type": "string",
+        "pattern": "^/[a-z_/]+$"
+      }
+    },
+    "data_sources": {
+      "type": "array",
+      "description": "Paths to data sources for this MCP",
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentials_file": {
+      "type": "string",
+      "description": "Path to .env file with credentials"
+    },
+    "access_control": {
+      "type": "object",
+      "properties": {
+        "allowed_users": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "require_auth": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

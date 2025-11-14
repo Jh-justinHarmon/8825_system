@@ -1,0 +1,43 @@
+{
+  "focus": "hcss",
+  "version": "3.0.0",
+  "built_at": "2025-11-07T19:14:55.928420",
+  "files": {
+    "focuses/hcss/mcp_server/server.py": {
+      "type": "py",
+      "size": 3202,
+      "modified": "2025-11-07T19:10:37.181596",
+      "source": "focus"
+    },
+    "focuses/hcss/mcp_server/config.json": {
+      "type": "json",
+      "size": 828,
+      "modified": "2025-11-07T19:10:49.399042",
+      "source": "focus"
+    },
+    "focuses/hcss/mcp_server/start_mcp.sh": {
+      "type": "sh",
+      "size": 317,
+      "modified": "2025-11-07T19:10:37.181917",
+      "source": "focus"
+    },
+    "focuses/hcss/mcp_server/config_schema.json": {
+      "type": "json",
+      "size": 1386,
+      "modified": "2025-11-07T19:10:37.180776",
+      "source": "focus"
+    },
+    "users/justin_harmon/hcss/hcss_user_config.json": {
+      "type": "json",
+      "size": 29744,
+      "modified": "2025-11-07T19:03:33.491383",
+      "source": "user"
+    }
+  },
+  "concepts": {},
+  "stats": {
+    "total_files": 5,
+    "total_size": 0,
+    "file_types": {}
+  }
+}

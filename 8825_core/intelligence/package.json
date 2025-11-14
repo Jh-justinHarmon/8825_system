@@ -1,0 +1,30 @@
+{
+  "name": "@8825/llom-router",
+  "version": "1.0.0",
+  "description": "LLM Orchestration Module - Intelligent routing for 85-95% cost reduction",
+  "main": "llom_router.js",
+  "scripts": {
+    "test": "node test_router.js"
+  },
+  "keywords": [
+    "llm",
+    "openai",
+    "anthropic",
+    "routing",
+    "cost-optimization",
+    "dual-intelligence"
+  ],
+  "author": "8825 System",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.20.0",
+    "@anthropic-ai/sdk": "^0.9.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "8825-system"
+  }
+}

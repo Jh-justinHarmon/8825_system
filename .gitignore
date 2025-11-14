@@ -1,0 +1,138 @@
+# 8825 AI Operating System .gitignore
+
+# ============================================================================
+# SECRETS & CREDENTIALS (CRITICAL - NEVER COMMIT)
+# ============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*credentials*.json
+*token*.json
+*secret*.json
+*config.json
+!.env.template
+!*example*.json
+
+# API Keys (belt and suspenders)
+*api_key*
+*apikey*
+*API_KEY*
+
+# ============================================================================
+# PERSONAL & CLIENT DATA (PRIVACY)
+# ============================================================================
+# User-specific data
+users/*/
+!users/justin_harmon/.env.template
+
+# Client data (HCSS, TGIF, etc.)
+**/hcss/**
+**/tgif/**
+**/phils_ledger/**
+!**/hcss/README.md
+!**/tgif/README.md
+
+# Personal files
+INBOX_HUB/users/*/
+focuses/*/knowledge/
+focuses/*/user_engagement/
+
+# Email data
+*email_inspiration*
+*gmail_data*
+
+# ============================================================================
+# SYSTEM FILES
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================================================================
+# JAVASCRIPT/NODE
+# ============================================================================
+node_modules/
+package-lock.json
+yarn.lock
+.npm
+.yarn
+dist/
+*.tsbuildinfo
+
+# ============================================================================
+# IDE & EDITORS
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ============================================================================
+# LOGS & TEMPORARY FILES
+# ============================================================================
+*.log
+logs/
+!joju_sandbox/logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# ============================================================================
+# DATABASES & STATE
+# ============================================================================
+*.db
+*.sqlite
+*.sqlite3
+brain_state/
+.8825/
+
+# ============================================================================
+# BACKUPS & ARCHIVES
+# ============================================================================
+*.zip
+*.tar.gz
+*.rar
+*_backup_*/
+*_BACKUP_*/
+*_archive_*/
+*_ARCHIVE_*/
+
+# ============================================================================
+# TESTING & DEVELOPMENT
+# ============================================================================
+test_output/
+.pytest_cache/
+coverage/
+.coverage
+*.cover

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Label: Unique identifier for this LaunchAgent -->
+    <key>Label</key>
+    <string>com.8825.brain_sync_daemon</string>
+    
+    <!-- Program: Path to Python and script -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/brain/brain_sync_daemon.py</string>
+        <string>--daemon</string>
+    </array>
+    
+    <!-- Working Directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/brain</string>
+    
+    <!-- Run at Load: Start when system boots -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- Keep Alive: Auto-restart if crashes -->
+    <key>KeepAlive</key>
+    <dict>
+        <!-- Restart if crashes -->
+        <key>Crashed</key>
+        <true/>
+        <!-- Don't restart if exits cleanly -->
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    
+    <!-- Throttle Interval: Wait 60s before restarting after crash -->
+    <key>ThrottleInterval</key>
+    <integer>60</integer>
+    
+    <!-- Standard Output/Error Logs -->
+    <key>StandardOutPath</key>
+    <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/brain/state/daemon_stdout.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/brain/state/daemon_stderr.log</string>
+    
+    <!-- Environment Variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    
+    <!-- Process Type: Background daemon -->
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <!-- Nice: Lower priority (higher nice value = lower priority) -->
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

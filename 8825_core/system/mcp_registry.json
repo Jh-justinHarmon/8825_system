@@ -1,0 +1,69 @@
+{
+  "version": "3.0.0",
+  "description": "Registry of all available MCP servers",
+  "last_updated": "2025-11-13",
+  
+  "mcp_location": "~/mcp_servers/",
+  
+  "available_mcps": {
+    "8825_core": {
+      "location": "~/mcp_servers/8825-core/",
+      "type": "stdio",
+      "language": "python",
+      "description": "Deep access to 8825 ingestion engine"
+    },
+    "hcss_bridge": {
+      "location": "~/mcp_servers/hcss-bridge/",
+      "type": "stdio",
+      "language": "node",
+      "description": "HCSS automation (Gmail, Otter, routing)"
+    },
+    "figma_make_transformer": {
+      "location": "~/mcp_servers/figma-make-transformer/",
+      "type": "stdio",
+      "language": "node",
+      "description": "Transform Figma Make → Joju React code"
+    },
+    "figjam": {
+      "location": "~/mcp_servers/figjam/",
+      "type": "stdio",
+      "language": "node",
+      "description": "FigJam integration and automation"
+    },
+    "otter_integration": {
+      "location": "~/mcp_servers/otter-integration/",
+      "type": "stdio",
+      "language": "python",
+      "description": "Otter.ai meeting transcription integration"
+    },
+    "fds": {
+      "location": "~/mcp_servers/fds/",
+      "type": "stdio",
+      "language": "python",
+      "description": "FDS integration"
+    },
+    "meeting_automation": {
+      "location": "~/mcp_servers/meeting-automation/",
+      "type": "stdio",
+      "language": "python",
+      "description": "Meeting automation workflows"
+    },
+    "ral_portal": {
+      "location": "~/mcp_servers/ral-portal/",
+      "type": "stdio",
+      "language": "python",
+      "description": "RAL portal integration"
+    },
+    "customer_platform": {
+      "location": "~/mcp_servers/customer-platform/",
+      "type": "stdio",
+      "language": "node",
+      "description": "Customer platform MCP"
+    }
+  },
+  
+  "orchestration": {
+    "start_all_script": "8825_core/system/start_all_mcps.sh",
+    "health_check_interval": 60
+  }
+}

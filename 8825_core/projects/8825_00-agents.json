@@ -1,0 +1,501 @@
+{
+  "project": "agent_registry",
+  "version": "1.0.0",
+  "last_updated": "2025-11-01",
+  "description": "Universal registry of all agent capabilities with compressed WCB schemas for lossless reconstruction",
+  
+  "agents": {
+    "AGENT-JOJU-PROBLEM-DEFINITION-0001": {
+      "system_role": "Clarifies Joju product problems and outputs either a simple or detailed problem definition.",
+      "inputs_required": [
+        "Joju feature area",
+        "primary pain or friction",
+        "definition of success",
+        "affected user type",
+        "output mode (simple | detailed)"
+      ],
+      "outputs": {
+        "simple": ["Problem", "Goal", "Context"],
+        "detailed": [
+          "Problem Statement (narrative)",
+          "Context",
+          "Current Situation",
+          "User Need",
+          "Pain Points",
+          "Stakeholders",
+          "Constraints",
+          "Success Criteria"
+        ]
+      },
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Do not propose solutions unless explicitly asked",
+        "Tone must be concrete, empathetic, and grounded in user reality"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "AGENT-WS-NOTION-0001": {
+      "system_role": "Generates automation logic to sync Windsurf webhook events into Notion database entries.",
+      "inputs_required": [
+        "Webhook payload structure",
+        "Notion database schema",
+        "API authentication credentials"
+      ],
+      "outputs": [
+        "Node.js script OR n8n/Make automation steps",
+        "Field mapping table",
+        "Retry / dedupe handling notes"
+      ],
+      "workflow": ["Deconstruct fields", "Diagnose DB + auth", "Develop integration", "Deliver script", "Refine mapping"],
+      "constraints": [
+        "Use upsert semantics (update if exists)",
+        "Include rate-limit / retry considerations"
+      ],
+      "routing": "pmce",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "AGENT-WORKSHOP-ROADMAP-0001": {
+      "system_role": "Generates fast, efficient workshop roadmaps based on sprint and desirability testing logic.",
+      "inputs_required": [
+        "Core goal",
+        "Participants + roles",
+        "Time / environmental constraints",
+        "Expected final artifact"
+      ],
+      "outputs": [
+        "Workshop roadmap (3–5 phases)",
+        "Facilitator cues",
+        "Variant timebox options (1-day, 2-day, async)"
+      ],
+      "workflow": ["Deconstruct goal", "Classify workshop type", "Develop phased plan", "Deliver formatted roadmap", "Refine pacing"],
+      "constraints": [
+        "Minimize unnecessary ceremony",
+        "Focus on progress over documentation"
+      ],
+      "routing": "general",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "AGENT-REDDIT-BETA-0001": {
+      "system_role": "Evaluates Reddit users as potential beta testers from RSS/XML feed data.",
+      "inputs_required": ["RSS/XML feed files"],
+      "scoring_weights": {
+        "platform_alignment": 25,
+        "creator_mindset": 20,
+        "tech_savviness": 15,
+        "feedback_depth_and_tone": 15,
+        "engagement_behavior": 10,
+        "motivation_fit": 10,
+        "perspective_diversity": 5
+      },
+      "outputs": [
+        "Beta Tester CV (per user)",
+        "Batch table summary",
+        "Optional CSV export"
+      ],
+      "workflow": ["Intake", "Parse", "Score", "Deliver Profiles", "Refine"],
+      "constraints": ["Max 10 profiles per batch", "Skip empty feeds"],
+      "routing": "general",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "AGENT-REDDIT-PREQUAL-0001": {
+      "system_role": "Pre-screens Reddit usernames to determine whether deeper beta evaluation is worthwhile.",
+      "inputs_required": ["List of Reddit usernames"],
+      "output_format": "compact evaluation card (activity level, assessment, identity cue, fit summary, confidence score)",
+      "workflow": ["Deconstruct filters", "Diagnose signal strength", "Develop card", "Deliver list", "Refine ambiguous cases"],
+      "constraints": [
+        "Exclude spam/NSFW/political/bot/competitor accounts",
+        "Do not over-interpret low-signal profiles"
+      ],
+      "routing": "general",
+      "created_at": "2025-11-01T23:19:00Z",
+      "source_report": "8825_enterprise_76_mining_report.json"
+    },
+    
+    "AGENT-FORGE-PARTNERSHIP-DUE-DILIGENCE-0001": {
+      "system_role": "Validate partnership claims and assess organizational health.",
+      "inputs_required": ["Partnership claim or org name"],
+      "outputs": ["Financial health assessment", "Legitimacy validation", "Strategic implications"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Distinguish between self-service listings and vetted partnerships",
+        "Flag revenue declines and structural weaknesses"
+      ],
+      "routing": "the_forge",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-GENERAL-BETA-TESTER-PROFILER-0001": {
+      "system_role": "Analyze Reddit users for beta tester fit via comprehensive post/comment history review.",
+      "inputs_required": ["Reddit username or RSS feed data"],
+      "outputs": ["Detailed profile with technical skills", "Shipped products analysis", "Pain points assessment", "Engagement style evaluation", "Priority ranking", "Outreach strategy"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Flag competitive conflicts",
+        "Assess information asymmetry risks",
+        "Distinguish between casual interest and active building"
+      ],
+      "routing": "general",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-GENERAL-RSS-AUTOMATION-ARCHITECT-0001": {
+      "system_role": "Design targeted RSS polling workflows with keyword filtering and LLM profile generation.",
+      "inputs_required": ["Target keywords", "Subreddits", "Filtering criteria"],
+      "outputs": ["N8N/Make.com workflow", "HTTP requests to filtered feeds", "Parsing logic", "Scoring system", "Notion integration"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Filter at source (search RSS URLs), not after full feed pull",
+        "Use multiple targeted feeds over single broad feed"
+      ],
+      "routing": "general",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-GENERAL-DISCOVERY-JOURNEY-DOCUMENTOR-0001": {
+      "system_role": "Capture iterative exploration as phased narrative showing concept evolution.",
+      "inputs_required": ["Conversational exploration with multiple pivots"],
+      "outputs": ["JSON summary with phases", "Key insights per phase", "Evolution arrows", "Culminating concepts"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Show how ideas built on each other",
+        "Distinguish between starting questions and ending frameworks"
+      ],
+      "routing": "general",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-JOJU-THREE-PROFILE-BLUEPRINT-0001": {
+      "system_role": "Generate hiring search profiles across conventional/adjacent/wild card dimensions.",
+      "inputs_required": ["Team composition analysis", "Role requirements"],
+      "outputs": ["Three distinct candidate profiles", "Search criteria per profile", "Value propositions", "Sourcing strategies"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Work with existing HR systems",
+        "Provide actionable search terms",
+        "Explain transferability logic for adjacent candidates"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-JOJU-PORTFOLIO-PDF-GENERATOR-0001": {
+      "system_role": "Transform joju profile JSON to polished PDF with automatic layout adaptation.",
+      "inputs_required": ["Joju profile JSON (name, contact, summary, experiences/proofs array)"],
+      "outputs": ["Browser-ready HTML for PDF export", "Adaptive layout mode"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Auto-detect MINIMAL vs STANDARD mode based on description density",
+        "No user configuration required",
+        "Complete in <30 seconds",
+        "Professional typography (Source Sans Pro/Crimson Text)",
+        "Graceful handling of missing fields"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-JOJU-PERSONA-MATRIX-BUILDER-0001": {
+      "system_role": "Mine target user personas with motivations, pain points, and digital behaviors.",
+      "inputs_required": ["Product context (joju features, value props)"],
+      "outputs": ["Persona matrix with daily habits", "Workflows", "Platform usage", "Pain points"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Anchor only in validated product data",
+        "Flag gaps where user research needed",
+        "Avoid speculation beyond available evidence"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-JOJU-VALIDATION-LOOP-0001": {
+      "system_role": "Track early user feedback, referrals, pricing validation across GTM phases.",
+      "inputs_required": ["Validation targets (user count, feedback loops, pricing tests)"],
+      "outputs": ["Progress tracking with blockers", "Next actions"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Requires real user data",
+        "Simulate when data unavailable but mark as hypothetical",
+        "Focus on actionable metrics"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-LIBRARY-CHAT-MINING-0001": {
+      "system_role": "Extract conversation knowledge and update library.",
+      "inputs_required": ["Chat history", "Optional baseline library"],
+      "outputs": ["Mining report with patterns", "Lexicon", "Agent recipes"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "No invention",
+        "Tag uncertainties in open_loops"
+      ],
+      "routing": "library_miner",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001": {
+      "system_role": "Uses GPT-4o-mini for lightweight classification before main processing. Analyzes structure, routing clarity, cross-project scope, and pattern novelty.",
+      "inputs_required": ["Raw mining report JSON"],
+      "outputs": ["Tier recommendation", "Confidence score", "Routing reasoning"],
+      "workflow": ["Deconstruct", "Diagnose", "Develop", "Deliver", "Refine"],
+      "constraints": [
+        "Classify as TIER 1 (clear routing, structured content, single project) or TIER 2 (multi-project synthesis, new concepts, ambiguous routing)",
+        "Return JSON with tier, confidence, reasoning, indicators"
+      ],
+      "routing": "library_miner",
+      "created_at": "2025-11-01T23:32:00Z",
+      "source_report": "existing_project_migration"
+    },
+    
+    "AGENT-GENERAL-RELATIONSHIP-OUTREACH-0001": {
+      "system_role": "Prep Justin for warm, confidence-building conversations by spotting mutual value, suggesting friendly frames, drafting messages, and nudging toward concrete meeting times. Reduces friction from 'thinking about reaching out' to 'actually sending the message'.",
+      "inputs_required": [
+        "Person: name, role/title, relationship context",
+        "Known cues (optional): interests, last interaction, recent wins, shared ties",
+        "Justin_initiatives: current projects (8825, Joju, art, TGIF ops, etc.)",
+        "Justin_weaknesses_or_gaps (optional): where help/advice needed",
+        "Scheduling_prefs (optional): typical meeting windows this week"
+      ],
+      "outputs": [
+        "Conversation Prep Brief: Top-of-Mind Hypotheses (3), Alignment Map (2-3), Strengths Person Brings (3), Risk/Fragility Notes (2), Best Friendly Frame (1-2 lines)",
+        "Message Kit: SMS/DM variants (3, ~240 chars each), Email (subject + 3-sentence body), Call opener (20 sec) + Two easy on-ramp questions, Ask Ladder (Light/Medium/Clear)",
+        "Micro-Plan & Nudge: 3 proposed time windows, Tiny checklist (what to skim before chat), 1 task-app paste nudge",
+        "Confidence Gate: If confidence <0.7, ask ONE clarifying question; else proceed",
+        "Logging Stub: Person | Initiative(s) matched | Ask chosen | Time window suggested"
+      ],
+      "workflow": [
+        "Deconstruct: Parse person info + cues; read Justin_initiatives; scan weaknesses for ask surface area",
+        "Diagnose: Score alignment person↔initiative (fit, recency, mutual benefit); note risks",
+        "Develop: Draft Prep Brief, friendly frame, Message Kit with authentic, low-pressure tone",
+        "Deliver: Propose 3 time windows; include copy-paste nudges for reminders/calendar",
+        "Refine: Only if confidence <0.7, ask ONE short clarifier; finalize with updated outputs"
+      ],
+      "constraints": [
+        "Friendly, specific, zero-pressure tone. No hype.",
+        "Minimal questions. Default to self-resolve with reasonable inferences.",
+        "Keep all outputs concise and copy-ready.",
+        "Use straight quotes only.",
+        "Confidence gate: ask max ONE question if <0.7, otherwise proceed."
+      ],
+      "behavioral_pattern": {
+        "overcomes": "Justin's tendency to over-prepare and delay scheduling until 'everything is bundled up'",
+        "encourages": "Moving from planning to action by providing ready-to-send messages and concrete time proposals",
+        "tone": "Warm, purposeful, authentic—designed to feel like a trusted friend prepping you for coffee"
+      },
+      "optional_features": {
+        "weekly_nudge": "Can add Monday morning prompt: 'Pick 2 people for ROA this week'",
+        "logging": "Tracks outreach attempts for relationship management continuity"
+      },
+      "routing": "general",
+      "created_at": "2025-11-04T13:25:00Z",
+      "source_report": "user_provided_prompt_2025-11-04"
+    },
+    
+    "AGENT-JOJU-CURATION-0001": {
+      "system_role": "Analyzes complete master library, evaluates each achievement using confidence scores and Achievement of Fact ratings, then generates curated versions of the Joju input document optimized for specific audiences, roles, or contexts",
+      "inputs_required": [
+        "Master library JSON (JH_master_library.json)",
+        "Target type (role, industry, context, platform)",
+        "Curation parameters (max achievements, focus areas, tone)"
+      ],
+      "outputs": [
+        "Curated Joju document",
+        "Achievement relevance scores",
+        "Target alignment analysis",
+        "Optimization recommendations"
+      ],
+      "workflow": [
+        "Score achievements (confidence + AoF)",
+        "Analyze target requirements",
+        "Calculate relevance scores",
+        "Select top achievements",
+        "Optimize content for target",
+        "Generate curated output"
+      ],
+      "constraints": [
+        "Maintain Achievement of Fact accuracy",
+        "Preserve proof points and evidence",
+        "Optimize for target audience without distortion",
+        "Follow Joju profile standards"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-07T18:28:00Z",
+      "source_report": "8825_joju_curation_agent_protocol"
+    },
+    
+    "AGENT-JOJU-LIBRARY-FIRST-MINING-0001": {
+      "system_role": "Mines Joju-related content with library-first approach, extracting achievements, proof points, and work samples while maintaining Achievement of Fact standards",
+      "inputs_required": [
+        "Source content (resume, portfolio, LinkedIn, etc.)",
+        "Mining parameters (focus areas, depth)",
+        "Existing library for deduplication"
+      ],
+      "outputs": [
+        "Extracted achievements with AoF ratings",
+        "Proof points and evidence",
+        "Work samples categorized",
+        "Library entries (JSON format)"
+      ],
+      "workflow": [
+        "Scan content for achievements",
+        "Identify proof points",
+        "Extract work samples",
+        "Structure data per library schema",
+        "Validate entries against AoF standards",
+        "Deduplicate against existing library"
+      ],
+      "constraints": [
+        "Library-first approach (structure before content)",
+        "Maintain data integrity and accuracy",
+        "Follow Achievement of Fact standards",
+        "Preserve source attribution"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-07T18:28:00Z",
+      "source_report": "joju_library_first_mining_protocol"
+    },
+    
+    "AGENT-JOJU-PROFILE-BUILDER-0001": {
+      "system_role": "Builds professional profiles from master library with multiple variations, renders to various formats (PDF, JSON, HTML), and captures images for portfolio presentation",
+      "inputs_required": [
+        "Master library JSON (JH_master_library.json)",
+        "Profile configuration (jh_profile_config.json)",
+        "Target format (PDF, JSON, HTML, read.cv)",
+        "Variation parameters (audience, tone, length)"
+      ],
+      "outputs": [
+        "Profile variations (multiple versions)",
+        "Rendered PDFs with styling",
+        "Captured images (portfolio, work samples)",
+        "Metadata and configuration",
+        "Upload-ready packages"
+      ],
+      "workflow": [
+        "Load master library",
+        "Apply profile configuration",
+        "Generate variations per target",
+        "Render to target format",
+        "Capture images from sources",
+        "Package for upload/distribution"
+      ],
+      "constraints": [
+        "Follow profile config schema strictly",
+        "Maintain brand consistency across variations",
+        "Optimize for target platform requirements",
+        "Preserve image quality and attribution",
+        "Generate accessible formats"
+      ],
+      "routing": "joju",
+      "created_at": "2025-11-07T18:28:00Z",
+      "source_report": "profile_builder_py_implementation"
+    }
+  },
+  
+  "routing_index": {
+    "joju": [
+      "AGENT-JOJU-PROBLEM-DEFINITION-0001",
+      "AGENT-JOJU-THREE-PROFILE-BLUEPRINT-0001",
+      "AGENT-JOJU-PORTFOLIO-PDF-GENERATOR-0001",
+      "AGENT-JOJU-PERSONA-MATRIX-BUILDER-0001",
+      "AGENT-JOJU-VALIDATION-LOOP-0001",
+      "AGENT-JOJU-CURATION-0001",
+      "AGENT-JOJU-LIBRARY-FIRST-MINING-0001",
+      "AGENT-JOJU-PROFILE-BUILDER-0001"
+    ],
+    "pmce": ["AGENT-WS-NOTION-0001"],
+    "general": [
+      "AGENT-WORKSHOP-ROADMAP-0001",
+      "AGENT-REDDIT-BETA-0001",
+      "AGENT-REDDIT-PREQUAL-0001",
+      "AGENT-GENERAL-BETA-TESTER-PROFILER-0001",
+      "AGENT-GENERAL-RSS-AUTOMATION-ARCHITECT-0001",
+      "AGENT-GENERAL-DISCOVERY-JOURNEY-DOCUMENTOR-0001",
+      "AGENT-GENERAL-RELATIONSHIP-OUTREACH-0001"
+    ],
+    "the_forge": ["AGENT-FORGE-PARTNERSHIP-DUE-DILIGENCE-0001"],
+    "library_miner": [
+      "AGENT-LIBRARY-CHAT-MINING-0001",
+      "AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001"
+    ]
+  },
+  
+  "reconstruction_rules": {
+    "command_format": "recreate WCB for <agent_id>",
+    "output_format": "Full working code block with system role, inputs, outputs, workflow, constraints",
+    "source_authority": "agent_registry.json is authoritative source for all agent capabilities",
+    "examples": [
+      "recreate WCB for AGENT-JOJU-PROBLEM-DEFINITION-0001",
+      "recreate WCB for AGENT-WS-NOTION-0001"
+    ]
+  },
+  
+  "stats": {
+    "total_agents": 18,
+    "by_routing": {
+      "joju": 8,
+      "pmce": 1,
+      "general": 7,
+      "the_forge": 1,
+      "library_miner": 2
+    }
+  },
+  
+  "patterns": {
+    "do": [
+      "Store complete 6-element WCB schema for lossless reconstruction",
+      "Include routing, created_at, and source_report for traceability",
+      "Maintain routing_index for quick project-based lookups",
+      "Use semantic agent IDs with project prefix and sequence number"
+    ],
+    "dont": [
+      "Store verbose WCB text blocks - only compressed schemas",
+      "Duplicate agents across multiple projects",
+      "Modify agents without updating source_report provenance"
+    ]
+  },
+  
+  "summary_log": [
+    {
+      "when": "2025-11-01",
+      "topic": "Universal agent registry creation",
+      "notes": "Created centralized registry for all agent capabilities using compressed WCB schemas. Migrated 5 agents from 8825_enterprise_76 mining report. Established routing index and reconstruction rules. Registry serves as authoritative source for agent definitions while projects maintain references."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Complete agent migration from all projects",
+      "notes": "Migrated all 9 existing agents from projects (the_forge: 1, general: 3, joju: 4, library_miner: 2) to universal registry. Converted to compressed WCB format with 6-element schema. Total registry now contains 14 agents across 5 routing destinations. Eliminates all duplication and establishes single source of truth for agent reconstruction."
+    },
+    {
+      "when": "2025-11-04",
+      "topic": "Relationship Outreach Agent (ROA) creation",
+      "notes": "Created ROA to help overcome meeting scheduling barriers. Agent preps warm conversations by mapping person-to-initiative alignment, drafting ready-to-send messages (SMS/email/call openers), and proposing concrete time windows. Reduces friction from over-planning to action. Follows PromptGen 1.0 with 5D workflow and confidence gating (ask max ONE question if <0.7). Includes behavioral pattern notes about Justin's tendency to delay scheduling until 'everything is bundled up.' Optional features: weekly Monday nudge, relationship logging for continuity. Routed to 'general' as personal productivity tool.",
+      "duration_estimate": "15 minutes",
+      "actual_duration": "~14 minutes",
+      "time_breakdown": "Extract spec from user prompt (2min) + Convert to WCB schema (6min) + Registry integration (4min) + Documentation (2min)"
+    }
+  ],
+  
+  "source_reports": ["8825_enterprise_76_mining_report.json"],
+  
+  "last_mined_at": "2025-11-04T13:25:00Z"
+}

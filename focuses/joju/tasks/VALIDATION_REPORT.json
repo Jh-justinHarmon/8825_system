@@ -1,0 +1,255 @@
+{
+  "total_analyzed": 1,
+  "promotable_count": 22,
+  "promotable_tasks": [
+    {
+      "title": "Revise the empty section displayed component and/or more",
+      "current_status": "Ready",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Adding Section vs. Adding Achievement to Section",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Profile Versions",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Componentizing and Structure of Achievement Sections",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Uploading Additional Docs after Initial Create Profile",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Context aware custom sections vs preset",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Company Profile",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Lock in v1 JSON schema for profiles",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "More Edit button for Achievements that aren\u2019t shown",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/components/ProfileHeader.tsx",
+        "src/components/InlineEdit.tsx",
+        "src/components/InlineDateEdit.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Unique URLs for Sharing CV Versions",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "GitHub Profile Integration",
+      "current_status": "In progress",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Fix/Improve the Section Reorder Feature",
+      "current_status": "Ready",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "View Only Version of CV for Sharing",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Smoother Experience for Re-Ordering Sections",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "TODO - UI enhancement for profile bio",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Joju Profiles for famous people.",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Add Achievement Inline",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/components/ProfileHeader.tsx",
+        "src/components/InlineEdit.tsx",
+        "src/components/InlineDateEdit.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "ROADMAP - Voice chat to fill out profile",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/CVContext.tsx",
+        "src/components/SlugSettings.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Main CV vs Branches that are synced or static",
+      "current_status": "Icebox",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Header/Bio separation from content sections",
+      "current_status": "Ready Review",
+      "files_found": [
+        "src/context/CVContext.tsx",
+        "src/components/VolunteeringSection.tsx",
+        "src/components/CertificationsSection.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "The edit of fields cause a jitter because the size at rest is different",
+      "current_status": "Ready",
+      "files_found": [
+        "src/components/ProfileHeader.tsx",
+        "src/components/InlineEdit.tsx",
+        "src/components/InlineDateEdit.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    },
+    {
+      "title": "Read.cv data mapping",
+      "current_status": "Backlog",
+      "files_found": [
+        "src/App.tsx",
+        "src/context/AuthContext.tsx",
+        "src/context/CVContext.tsx"
+      ],
+      "code_evidence": [],
+      "recommendation": "Mark as Released"
+    }
+  ],
+  "by_status": {
+    "Ready": 3,
+    "Backlog": 16,
+    "In progress": 1,
+    "Icebox": 1,
+    "Ready Review": 1
+  }
+}

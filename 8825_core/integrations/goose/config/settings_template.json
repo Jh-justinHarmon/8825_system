@@ -1,0 +1,141 @@
+{
+  "_comment": "Goose Focus - Settings Configuration Template",
+  "_version": "1.0.0",
+  "_created": "2025-11-06",
+  "_status": "Template - Copy and customize for your settings",
+  
+  "general": {
+    "project_name": "Goose",
+    "version": "1.0.0",
+    "environment": "development|staging|production",
+    "timezone": "America/Chicago",
+    "locale": "en_US"
+  },
+  
+  "paths": {
+    "sandbox_root": "/goose_sandbox/",
+    "raw": "raw/",
+    "processed": "processed/",
+    "output": "output/",
+    "config": "config/",
+    "logs": "logs/",
+    "archives": "archives/"
+  },
+  
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "format": "json",
+    "rotation": {
+      "type": "daily",
+      "max_size_mb": 100,
+      "retention_days": 30
+    },
+    "destinations": {
+      "file": true,
+      "console": true,
+      "remote": false
+    }
+  },
+  
+  "processing": {
+    "max_concurrent_workflows": 1,
+    "max_concurrent_agents": 3,
+    "default_timeout": 300,
+    "default_retry_count": 3,
+    "enable_caching": false,
+    "cache_ttl_seconds": 3600
+  },
+  
+  "quality": {
+    "validation": {
+      "enabled": true,
+      "strict_mode": false,
+      "min_completeness": 0.8,
+      "max_error_rate": 0.1
+    },
+    "thresholds": {
+      "confidence_min": 0.7,
+      "quality_min": 0.8,
+      "completeness_min": 0.9
+    }
+  },
+  
+  "notifications": {
+    "enabled": false,
+    "channels": {
+      "email": false,
+      "slack": false,
+      "webhook": false
+    },
+    "triggers": {
+      "on_error": true,
+      "on_completion": false,
+      "on_threshold_breach": true
+    }
+  },
+  
+  "security": {
+    "require_authentication": false,
+    "api_keys": {
+      "enabled": false,
+      "rotation_days": 90
+    },
+    "encryption": {
+      "at_rest": false,
+      "in_transit": false
+    }
+  },
+  
+  "performance": {
+    "enable_profiling": false,
+    "enable_metrics": true,
+    "metrics_interval_seconds": 60,
+    "optimization": {
+      "parallel_processing": false,
+      "batch_size": 10,
+      "memory_limit_mb": 1024
+    }
+  },
+  
+  "maintenance": {
+    "auto_archive": {
+      "enabled": true,
+      "after_days": 30,
+      "compress": true
+    },
+    "auto_cleanup": {
+      "enabled": true,
+      "temp_files_after_hours": 24,
+      "logs_after_days": 30
+    }
+  },
+  
+  "integrations": {
+    "external_apis": {},
+    "databases": {},
+    "file_systems": {}
+  },
+  
+  "feature_flags": {
+    "enable_experimental": false,
+    "enable_debug_mode": false,
+    "enable_dry_run": false
+  },
+  
+  "instructions": {
+    "how_to_use": [
+      "1. Copy this template to settings.json",
+      "2. Customize values for your environment",
+      "3. Set environment: production when ready",
+      "4. Configure logging and notifications",
+      "5. Adjust performance settings as needed",
+      "6. Enable security features if required"
+    ],
+    "environment_notes": {
+      "development": "Verbose logging, debug mode, no notifications",
+      "staging": "Standard logging, testing integrations",
+      "production": "Minimal logging, all features enabled, notifications on"
+    }
+  }
+}

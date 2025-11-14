@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "critical": {
+    "patterns": [
+      "8825_BRAIN_TRANSPORT.json",
+      "*BRAIN_TRANSPORT*.json",
+      ".DS_Store",
+      "*.tmp",
+      "*.lock"
+    ],
+    "description": "System files that must never be processed",
+    "reason": "Required for system operation"
+  },
+  "sticky": {
+    "patterns": [
+      "sticky_*",
+      "*_sticky.*"
+    ],
+    "description": "User files that should stay in Downloads",
+    "reason": "User preference"
+  },
+  "custom": {
+    "patterns": [
+      "Cubic_Casa_Floorplan_7626_Alto_Caro.png"
+    ],
+    "description": "User-defined exclusions",
+    "reason": "Custom rules"
+  }
+}

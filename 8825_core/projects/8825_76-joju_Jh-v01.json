@@ -1,0 +1,128 @@
+{
+  "general": {
+    "profilePhoto": null,
+    "profilePhotoBg": null,
+    "username": "justin-harmon",
+    "displayName": "Justin R Harmon",
+    "profession": "UX Designer / Product Strategy",
+    "location": "Dallas, TX",
+    "pronouns": null,
+    "byline": "Product-minded UX designer • Proof-driven systems",
+    "website": "",
+    "websiteURL": "",
+    "about": "UX designer and product-minded generalist who turns ambiguity into shipped systems. Combines industrial design rigor, user research, and systems thinking to deliver measurable outcomes. Built PromptGen 1.0 to standardize prompts/agents across projects; comfortable bridging design, engineering, and business.",
+    "status": {
+      "text": null,
+      "emoji": null,
+      "timestamp": null
+    },
+    "sectionOrder": [
+      "Work Experience",
+      "Education",
+      "Projects",
+      "Side Projects",
+      "Skills",
+      "Contact"
+    ]
+  },
+  "projects": [],
+  "sideProjects": [],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "jh001",
+      "year": "2020 — Now",
+      "heading": "UX Consultant & Product Manager at Hammer Consulting & Support Services",
+      "url": null,
+      "collaborators": [],
+      "description": "Streamlined user workflows and reduced inefficiencies on a B2B SaaS platform by designing automated workflows that eliminated 55% of manual tasks and reduced reliance on seasonal employees by 65%. Drove successful project outcomes by leading cross-functional collaboration with development teams and clients, ensuring user needs and business goals were met through organized updates and brainstorming sessions. Unearthed critical user insights through in-depth research, translating findings into actionable design proposals that resolved pain points and improved overall user satisfaction. Designed intuitive UI mockups and interactive prototypes using Figma and Adobe XD, effectively communicating design concepts and enhancing client engagement with new product features. Enhanced product usability and accessibility by contributing to the design and implementation of new features for online statement processing tools, driving operational efficiency for end-users.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "UX Consultant & Product Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "jh002",
+      "year": "2014 — 2020",
+      "heading": "Managing Partner & Design Lead at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "Drove new product designs by leveraging market research and user insights, achieving a 10-26% sales increase across multiple brands through improved design strategies. Facilitated seamless collaboration between stakeholders and design teams, ensuring alignment with user needs and brand objectives to deliver cohesive, user-centered designs. Unearthed key opportunities through in-depth user research and pain point analysis, crafting actionable design proposals that effectively addressed client and user challenges. Delivered impactful product outcomes by leading cross-functional teams to develop and launch innovative design solutions that balanced user objectives with business priorities. Strategically positioned new styles for growth by analyzing market trends and user behavior, driving sustained engagement and revenue growth.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY"
+    },
+    {
+      "id": "jh003",
+      "year": "2012 — 2014",
+      "heading": "Eyewear Design Director at Costa Del Mar",
+      "url": null,
+      "collaborators": [],
+      "description": "Resolved design challenges and reduced usability issues by collaborating with engineering, QA, and stakeholders, leading to a measurable decrease in customer complaints and an improved user experience. Boosted website conversion rates and reduced product returns by partnering with the e-commerce team to introduce user fit profiles, improving clarity and usability across the online journey. Translated user research insights into prioritized design requirements, driving the development of new standards that enhanced consistency and user satisfaction. Delivered impactful project outcomes by coordinating with design agencies, ensuring deliverables aligned with both user needs and strategic project goals. Empowered team growth and innovation by mentoring team members in vendor collaboration and iterative design practices, resulting in stronger project execution.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Eyewear Design Director",
+      "company": "Costa Del Mar",
+      "location": "Dallas, TX & Daytona Beach, FL"
+    },
+    {
+      "id": "jh004",
+      "year": "2010 — 2012",
+      "heading": "Senior Watch Designer at Fossil Group",
+      "url": null,
+      "collaborators": [],
+      "description": "Empowered team growth and innovation by mentoring team members in vendor collaboration and iterative design practices, resulting in stronger project execution. Streamlined design processes and ensured on-time delivery by facilitating collaboration with stakeholders, aligning development timelines with design goals and business needs. Drove user-focused improvements by collaborating with cross-functional teams to prioritize features and updates in the product roadmap, addressing critical user feedback effectively. Fostered team growth and performance by mentoring and training junior designers in design workflows, resulting in stronger skillsets and improved project outcomes. Propelled a 23.7% sales growth by contributing to the successful launch of the Skechers watch line, delivering impactful results for the business.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "jh005",
+      "year": "2007 — 2010",
+      "heading": "Senior Eyewear Designer at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "Optimized product offerings by analyzing user feedback, identifying gaps, and recommending replacements that aligned with evolving business needs and user preferences, enhancing product-market fit. Led cross-functional collaboration with designers and engineers to deliver user-focused designs for Nike Vision's eyewear line, ensuring alignment with user expectations and business objectives. Empowered team performance and growth by onboarding and mentoring team members transitioning into new roles, fostering a collaborative environment that drove stronger project outcomes. Revolutionized prototyping and user testing capabilities by establishing the 3D design department, later branded as the VSP Innovation Lab, enabling faster iterations through enhanced rapid prototyping capabilities. Drove adoption of user-centered design practices by advocating for design thinking in strategic meetings, ensuring team efforts aligned with both user needs and business goals.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC"
+    }
+  ],
+  "volunteering": [],
+  "education": [
+    {
+      "id": "jh_edu001",
+      "year": "2003 — 2007",
+      "heading": "BFA, Industrial Design at California College of the Arts",
+      "url": null,
+      "collaborators": [],
+      "description": "Bachelor of Fine Arts in Industrial Design with focus on user-centered design principles, prototyping, and systems thinking.",
+      "attachments": [],
+      "type": "education",
+      "degree": "BFA, Industrial Design",
+      "school": "California College of the Arts",
+      "location": "San Francisco, CA"
+    }
+  ],
+  "certifications": [],
+  "contact": [],
+  "allCollections": [],
+  "_meta": {
+    "version": "3.0.0",
+    "updated_at": "2025-11-03T11:58:00Z",
+    "template_version": "MG-readCV_format.json",
+    "notes": "Reformatted to exactly match Matthew Galley's read.cv format. Added id, year, heading, url, collaborators, description, attachments, type fields to all entries. Removed skills array (not in MG format). Converted highlights to description paragraphs. Added talks array. Ready for read.cv upload.",
+    "previous_version": "2.0.0 (joju-template)"
+  }
+}

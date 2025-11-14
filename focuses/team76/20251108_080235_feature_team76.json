@@ -1,0 +1,300 @@
+{
+  "content_type": "feature",
+  "target_focus": "team76",
+  "metadata": {
+    "source": "chatgpt",
+    "timestamp": "2025-11-08T08:02:35.552606-06:00",
+    "note": "TV Memory Layer thought experiment (bookmark model + Siri-first)"
+  },
+  "content": {
+    "title": "Project 8825 TV Memory Layer",
+    "spec": {
+      "conversation_id": "project-8825-tv-memory-exploration",
+      "date": "2025-01-09",
+      "version": "1.0",
+      "project_extension": "Project 8825 TV Memory Layer",
+      "executive_summary": {
+        "concept": "Apply 8825's persistent memory/JSON infrastructure to TV/streaming to solve 'where did we watch that show?' problem",
+        "core_insight": "Not replacing streaming apps or aggregators, but creating a memory layer that helps users remember which platform has their shows",
+        "technical_approach": "Bookmark/journal model vs full tracking - capture just platform + show, let apps handle episode details",
+        "viability": "Technically feasible using Siri Shortcuts, share sheets, and browser extensions - no API partnerships needed"
+      },
+      "problem_definition": {
+        "user_pain": "Can't remember which streaming platform has which show",
+        "current_solutions": {
+          "apple_tv_app": "Incomplete coverage, pushes own content",
+          "justwatch_reelgood": "Search engines with affiliate links, no personal history",
+          "trakt": "Third-party tracking service, requires manual setup"
+        },
+        "market_validation": "Universal problem experienced by multi-platform streaming users",
+        "value_proposition": "Personal viewing memory that works across all platforms and devices"
+      },
+      "technical_analysis": {
+        "data_access_barriers": {
+          "apis": {
+            "status": "Not available",
+            "reason": "Netflix, Disney+, etc. don't expose watch history APIs",
+            "workarounds": [
+              "Trakt bridge",
+              "Browser extensions",
+              "Manual logging"
+            ]
+          },
+          "hardware_approaches": {
+            "hdmi_passthrough": {
+              "feasible": true,
+              "cost": "$50-100 per unit",
+              "friction": "High - additional hardware"
+            },
+            "usb_port": {
+              "feasible": false,
+              "reason": "TV USB ports are power-only"
+            }
+          },
+          "platform_restrictions": {
+            "apple_tv_sandboxing": "Apps cannot see other apps' activity",
+            "background_access": "Not permitted",
+            "remote_button_hijacking": "Not possible"
+          }
+        },
+        "viable_solutions": {
+          "siri_shortcuts": {
+            "implementation": "App Intents framework",
+            "capabilities": [
+              "Global voice commands",
+              "Read/write to memory",
+              "Works from any app"
+            ],
+            "example_commands": [
+              "Hey Siri, tell 8825 I'm watching The Bear on Hulu",
+              "Hey Siri, where do I watch Succession?",
+              "Hey Siri, ask 8825 what to watch tonight"
+            ],
+            "priority": "HIGH",
+            "effort": "2-3 days"
+          },
+          "mobile_share_sheets": {
+            "implementation": "iOS/Android share extensions",
+            "capabilities": "Capture title + platform from any streaming app",
+            "user_flow": "Watch \u2192 Share \u2192 Save to 8825",
+            "priority": "HIGH",
+            "effort": "1-2 days"
+          },
+          "browser_extension": {
+            "implementation": "Chrome/Safari/Firefox extension",
+            "capabilities": "Auto-detect streaming on desktop",
+            "automatic": true,
+            "priority": "MEDIUM",
+            "effort": "1 day"
+          },
+          "manual_bookmarking": {
+            "implementation": "Simple UI with platform grid",
+            "capabilities": "Quick manual entry with voice",
+            "friction": "Low - tap and speak",
+            "priority": "HIGH",
+            "effort": "1 day"
+          }
+        }
+      },
+      "data_model_integration": {
+        "uses_8825_core": true,
+        "memory_structure": {
+          "memory_id": "mem_[uuid]",
+          "type": "media_bookmark",
+          "subject": "[show_name]",
+          "timestamp": "[ISO8601]",
+          "content": {
+            "platform": "[Netflix|Hulu|Max|etc]",
+            "title": "[show_name]",
+            "context": {
+              "viewers": [
+                "array_of_names"
+              ],
+              "location": "[living_room|bedroom|etc]",
+              "device": "[TV|iPhone|laptop]",
+              "mood": "[date_night|background|focused]"
+            }
+          },
+          "intelligence": {
+            "detected_genre": "[drama|comedy|etc]",
+            "similar_watched": [
+              "array_of_shows"
+            ],
+            "platform_confidence": 0.0,
+            "refs_used": [
+              "previous_memory_ids"
+            ]
+          }
+        },
+        "integration_benefits": [
+          "Same SQLite/cloud sync infrastructure",
+          "Same FTS5 search",
+          "Same intelligence layer",
+          "Cross-domain context (work + entertainment)",
+          "Unified memory search"
+        ]
+      },
+      "implementation_roadmap": {
+        "mvp_scope": {
+          "timeline": "1 week",
+          "features": [
+            "Siri shortcuts for log/find/recommend",
+            "Simple platform + show storage",
+            "Basic tvOS UI with platform grid",
+            "SQLite storage with 8825 schema"
+          ],
+          "deliverables": {
+            "siri_intents": [
+              "LogShowIntent",
+              "FindShowIntent",
+              "WhatToWatchIntent"
+            ],
+            "ui": "Platform grid launcher",
+            "storage": "8825-compatible JSON memories"
+          }
+        },
+        "phase_2_enhancements": {
+          "timeline": "Week 2-3",
+          "features": [
+            "Mobile share extension",
+            "Browser extension for desktop",
+            "ChatGPT recommendations",
+            "Household sharing",
+            "CloudKit sync"
+          ]
+        },
+        "phase_3_intelligence": {
+          "timeline": "Month 2",
+          "features": [
+            "Pattern recognition",
+            "Viewing habit analysis",
+            "Predictive suggestions",
+            "Cross-platform continue watching"
+          ]
+        }
+      },
+      "key_decisions": {
+        "bookmark_vs_tracking": {
+          "decision": "Bookmark model",
+          "rationale": "Platforms already track episodes, we just need to remember where shows live",
+          "impact": "Dramatically simplifies technical requirements"
+        },
+        "siri_first_approach": {
+          "decision": "Lead with Siri integration",
+          "rationale": "Works globally, Apple-blessed, solves friction",
+          "impact": "Natural interaction model from day 1"
+        },
+        "reuse_8825_infrastructure": {
+          "decision": "Use exact same memory model",
+          "rationale": "Proves 8825 works for any domain, not just work",
+          "impact": "2-day addition instead of new product"
+        }
+      },
+      "competitive_analysis": {
+        "vs_apple_tv_app": {
+          "advantages": [
+            "Platform neutral",
+            "Complete coverage",
+            "User-controlled data",
+            "Voice-first interface"
+          ],
+          "disadvantages": [
+            "Not built-in",
+            "Requires user action"
+          ]
+        },
+        "vs_justwatch": {
+          "advantages": [
+            "Personal history",
+            "Household context",
+            "Voice control",
+            "Integrated with broader memory"
+          ],
+          "disadvantages": [
+            "Less comprehensive catalog data"
+          ]
+        },
+        "unique_value": "Only solution that treats viewing as personal memory, not just data"
+      },
+      "risk_assessment": [
+        {
+          "risk": "User adoption friction",
+          "mitigation": "Siri integration makes logging effortless",
+          "severity": "MEDIUM"
+        },
+        {
+          "risk": "Platform API changes",
+          "mitigation": "Multiple capture methods (share, browser, manual)",
+          "severity": "LOW"
+        },
+        {
+          "risk": "Incomplete data",
+          "mitigation": "Bookmark model doesn't need episode-level precision",
+          "severity": "LOW"
+        }
+      ],
+      "success_metrics": {
+        "week_1": [
+          "Siri shortcuts working",
+          "10 test users successfully logging",
+          "Find queries returning correct platform"
+        ],
+        "month_1": [
+          "100 active users",
+          "Average 5 shows logged per user",
+          "80% successful platform recalls",
+          "ChatGPT recommendations rated helpful"
+        ]
+      },
+      "strategic_value": {
+        "for_8825": [
+          "Proves memory layer works across domains",
+          "Gateway drug for broader 8825 adoption",
+          "Demonstrates practical value immediately",
+          "Non-threatening entry point"
+        ],
+        "market_opportunity": "Could become default TV memory for households",
+        "acquisition_potential": "Attractive to Apple/Roku/streaming platforms"
+      },
+      "technical_snippets": {
+        "siri_shortcut": "See LogShowIntent.swift implementation in conversation",
+        "memory_format": "Standard 8825 JSON with type: 'media_bookmark'",
+        "storage": "Same SQLite/CloudKit as core 8825",
+        "search": "FTS5 with subject detection"
+      },
+      "next_actions": [
+        {
+          "id": "TV-001",
+          "task": "Build Siri Shortcuts proof of concept",
+          "effort": "8 hours",
+          "priority": "HIGH"
+        },
+        {
+          "id": "TV-002",
+          "task": "Create platform grid UI for tvOS",
+          "effort": "4 hours",
+          "priority": "HIGH"
+        },
+        {
+          "id": "TV-003",
+          "task": "Test with 5 households",
+          "effort": "2 hours",
+          "priority": "HIGH"
+        },
+        {
+          "id": "TV-004",
+          "task": "Add ChatGPT recommendations",
+          "effort": "4 hours",
+          "priority": "MEDIUM"
+        }
+      ],
+      "conclusion": {
+        "viability": "HIGH",
+        "alignment_with_8825": "PERFECT",
+        "effort_required": "2-3 days for MVP",
+        "recommendation": "Build as proof of concept for 8825's broader applicability",
+        "key_insight": "Solving 'where to watch' via memory + Siri is achievable today without any API partnerships"
+      }
+    }
+  }
+}

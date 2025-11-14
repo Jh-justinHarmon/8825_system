@@ -1,0 +1,91 @@
+{
+  "generated_at": "2025-11-10T15:21:30.363498",
+  "stats": {
+    "total_sessions": 0,
+    "pain_points": 0,
+    "positive_feedback": 0,
+    "ai_features": 5,
+    "platforms_mentioned": 2
+  },
+  "feedback_items": [
+    {
+      "participant": "Kayson L Conlin",
+      "date": "2025-08-28",
+      "quote": "Teal uses AI to generate bullet points and cover letters, which is more accurate than general chatbots like Claude or ChatGPT because it's based on my specific resume information.",
+      "tags": [
+        "AI Feature",
+        "Positive",
+        "Context-Aware AI"
+      ],
+      "category": "competitive ai positive"
+    },
+    {
+      "participant": "Kayson L Conlin",
+      "date": "2025-08-28",
+      "quote": "Teal aims for a 65-75% correlation between the job requirements and the resume to appear authentic yet optimized.",
+      "tags": [
+        "AI Feature",
+        "Smart Optimization",
+        "Authenticity"
+      ],
+      "category": "competitive ai"
+    },
+    {
+      "participant": "Kayson L Conlin",
+      "date": "2025-08-28",
+      "quote": "Teal boosted my confidence and generated more attention from employers. It's easy to use and parses existing resumes well.",
+      "tags": [
+        "Positive",
+        "User Impact"
+      ],
+      "category": "positive"
+    },
+    {
+      "participant": "Kayson L Conlin",
+      "date": "2025-08-28",
+      "quote": "Missing feature: ability to pull information from a wider range of websites for job applications.",
+      "tags": [
+        "Pain Point",
+        "Feature Request"
+      ],
+      "category": "pain-points"
+    }
+  ],
+  "insights": [
+    {
+      "title": "Context-Aware AI Wins",
+      "description": "Users prefer AI that uses their specific data over generic responses"
+    },
+    {
+      "title": "Balance is Key",
+      "description": "65-75% optimization maintains authenticity while improving results"
+    },
+    {
+      "title": "Automate Tedious, Not Creative",
+      "description": "Users want AI to handle repetitive tasks, not replace creativity"
+    }
+  ],
+  "competitive_intel": [
+    {
+      "platform": "Teal",
+      "description": "AI-powered resume and job application platform",
+      "ai_features": [
+        "Context-Aware AI",
+        "Smart Resume Tailoring",
+        "Auto-Population",
+        "AI Cover Letters",
+        "Job Intelligence"
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "title": "Multi-Platform Presence",
+      "description": "Users expect web, desktop, and browser extensions"
+    },
+    {
+      "title": "Integrated Workflows",
+      "description": "Features should connect across user's journey"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+# 8825 System - Python Dependencies
+# Python 3.10+ required
+
+# ============================================================================
+# CORE DEPENDENCIES
+# ============================================================================
+python-dotenv>=1.0.0          # Environment variable management
+requests>=2.31.0              # HTTP requests
+openai>=1.0.0                 # OpenAI API (GPT-4, embeddings)
+
+# ============================================================================
+# WEB & API
+# ============================================================================
+flask>=3.0.0                  # Web framework (MCP servers)
+flask-cors>=4.0.0             # CORS support
+
+# ============================================================================
+# GOOGLE INTEGRATIONS
+# ============================================================================
+google-auth>=2.23.0           # Google OAuth
+google-auth-oauthlib>=1.1.0   # OAuth flow
+google-auth-httplib2>=0.1.1   # HTTP transport
+google-api-python-client>=2.100.0  # Gmail, Calendar, Drive APIs
+
+# ============================================================================
+# DOCUMENT PROCESSING
+# ============================================================================
+python-docx>=0.8.11           # Word document generation
+pillow>=10.0.0                # Image processing
+pytesseract>=0.3.10           # OCR for bill processing
+pillow-heif>=0.13.0           # HEIF image support
+
+# ============================================================================
+# WEB AUTOMATION
+# ============================================================================
+playwright>=1.40.0            # Browser automation (screenshots)
+html2image>=2.0.0             # HTML to image conversion
+
+# ============================================================================
+# FILE SYSTEM & MONITORING
+# ============================================================================
+watchdog>=3.0.0               # File system monitoring
+
+# ============================================================================
+# DATA PROCESSING
+# ============================================================================
+numpy>=1.24.0                 # Numerical computing (embeddings)
+
+# ============================================================================
+# REDDIT INTEGRATION (Optional)
+# ============================================================================
+praw>=7.7.0                   # Reddit API wrapper
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# System requirements:
+# - Python 3.10 or higher
+# - Tesseract OCR (for pytesseract): brew install tesseract
+# - Playwright browsers: python -m playwright install
+#
+# Installation:
+#   pip install -r requirements-full.txt
+#   brew install tesseract  # macOS
+#   python -m playwright install chromium

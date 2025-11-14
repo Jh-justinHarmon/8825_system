@@ -1,0 +1,814 @@
+{
+  "meta": {
+    "name": "Justin Harmon Professional Library",
+    "version": "1.0.0",
+    "created": "2025-11-05",
+    "description": "Comprehensive library of professional achievements, projects, skills, and innovations",
+    "source": "Compiled from ARCHV folder and resume variants"
+  },
+  "personal_info": {
+    "name": "Justin Harmon",
+    "professional_identity": "Product Developer / Entrepreneur / UX Leader",
+    "specializations": [
+      "Product Design & Development",
+      "UX/UI Design & Strategy",
+      "Project Management",
+      "Team Building & Leadership",
+      "AI-Powered Solutions"
+    ]
+  },
+  "professional_roles": {
+    "ux_designer": {
+      "title": "UX Designer",
+      "resume_variant": "resume-1",
+      "focus_areas": [
+        "User experience design",
+        "Interface design",
+        "User research",
+        "Prototyping",
+        "Usability testing"
+      ],
+      "target_industries": [
+        "Tech",
+        "SaaS",
+        "Digital Products"
+      ]
+    },
+    "ux_manager": {
+      "title": "UX Manager / Design Manager",
+      "resume_variant": "resume-2",
+      "focus_areas": [
+        "Design team leadership",
+        "Design strategy",
+        "Stakeholder management",
+        "Design systems",
+        "Team mentorship"
+      ],
+      "target_industries": [
+        "Tech",
+        "Enterprise",
+        "Product Companies"
+      ]
+    },
+    "product_manager": {
+      "title": "Product Manager",
+      "resume_variant": "resume-3",
+      "focus_areas": [
+        "Product strategy",
+        "Roadmap planning",
+        "Cross-functional leadership",
+        "Market analysis",
+        "Feature prioritization"
+      ],
+      "target_industries": [
+        "Tech",
+        "SaaS",
+        "Startups"
+      ]
+    },
+    "project_manager": {
+      "title": "Project Manager",
+      "resume_variant": "resume-4",
+      "focus_areas": [
+        "Project planning & execution",
+        "Resource management",
+        "Stakeholder coordination",
+        "Risk management",
+        "Delivery optimization"
+      ],
+      "target_industries": [
+        "Tech",
+        "Consulting",
+        "Enterprise"
+      ]
+    },
+    "id_tech": {
+      "title": "Industrial Design / Technical Designer",
+      "resume_variant": "resume-4 (ID-tech)",
+      "focus_areas": [
+        "Industrial design",
+        "Product development",
+        "CAD/3D modeling",
+        "Manufacturing processes",
+        "Material selection"
+      ],
+      "target_industries": [
+        "Consumer Products",
+        "Eyewear",
+        "Manufacturing"
+      ]
+    }
+  },
+  "innovation_projects": {
+    "hiring_manager_intelligence_tool": {
+      "name": "Hiring Manager Intelligence Tool",
+      "category": "AI-Powered HR Tech",
+      "status": "Concept/Design Phase",
+      "description": "Team building advisory tool that empowers hiring managers to translate team dynamics into actionable search criteria for HR",
+      "problem_solved": "Hiring managers consistently get poor candidate matches from HR because they lack tools to communicate team needs effectively",
+      "core_innovation": "Three-profile blueprint system that works within existing HR workflows",
+      "key_features": [
+        "Team composition analysis using Big Five and Belbin frameworks",
+        "Gap identification and complementary trait mapping",
+        "Three-profile candidate blueprint generation",
+        "HR translation engine for search criteria",
+        "Real-time team chemistry modeling",
+        "Predictive compatibility engine"
+      ],
+      "three_profile_system": {
+        "profile_a": "Conventional Fit - Traditional path candidates with standard qualifications",
+        "profile_b": "Adjacent/Transferable Fit - Different industry candidates with transferable skills",
+        "profile_c": "High-Ceiling Wild Card - Unconventional backgrounds but key complementary traits"
+      },
+      "strategic_advantages": [
+        "No organizational change management required",
+        "Works within existing HR workflows",
+        "Promotes diversity through structured spectrum approach",
+        "Focuses on team gaps rather than just individual qualifications",
+        "Provides explainable AI recommendations"
+      ],
+      "market_validation": {
+        "competitive_landscape": "100+ resume building platforms exist, but no tools target hiring managers for team composition analysis",
+        "market_gap": "Blue ocean opportunity - existing solutions are HR-centric or post-hire focused",
+        "category_creation": "Hiring Manager Intelligence Tools - democratizing strategic consulting capability",
+        "market_value": "$1.5-7.5 billion (recruitment tech market)"
+      },
+      "scientific_foundation": {
+        "frameworks_used": [
+          "Big Five (OCEAN) personality model",
+          "Belbin's Team Roles",
+          "Tuckman's Development Stages",
+          "Psychological Safety (Amy Edmondson)",
+          "Group Dynamics (Kurt Lewin)"
+        ],
+        "team_roles_mapped": [
+          "Visionary/Innovator (High Openness)",
+          "Organizer/Executor (High Conscientiousness)",
+          "Connector/Diplomat (High Agreeableness)",
+          "Driver/Challenger (High Extraversion)",
+          "Guardian/Stabilizer (Low Neuroticism)"
+        ]
+      },
+      "adoption_strategies": [
+        "One-Click Team Snapshot - Upload LinkedIn profiles, get instant analysis",
+        "Fix My Last Bad Hire Entry Point",
+        "Viral Internal Demo Strategy",
+        "Zero Learning Curve Design",
+        "Beta Tester Psychological Positioning"
+      ],
+      "value_propositions": [
+        "Team-chemistry-aware hiring guidance",
+        "Reduces candidate-to-interview ratio",
+        "Decreases time-to-hire",
+        "Improves 90-day retention rates",
+        "Enhances team diversity"
+      ],
+      "files_referenced": [
+        "hiring_discovery_summary.json",
+        "hiring_tool_summary.json",
+        "ideation_refinement_gaps.json",
+        "team_building_ai_summary.json"
+      ]
+    },
+    "joju": {
+      "name": "Joju - Professional OS",
+      "category": "Professional Networking / Career Platform",
+      "status": "Active Development",
+      "description": "LinkedIn alternative with proof-based profiles and zero-configuration portfolio generation",
+      "positioning": "Professional OS vs social network",
+      "value_proposition": "Proof points over credentials",
+      "target_segments": {
+        "subtle_converts": "Risk-averse job seekers who need conventional framing",
+        "evangelists": "Design-focused early adopters"
+      },
+      "core_features": [
+        "Proof-based profiles",
+        "Zero-configuration portfolio generation",
+        "PromptGen workflow (Parse → Select → Render → Validate → Export)",
+        "Proof decay tracking",
+        "Multiple style variants (Classic, Modern, Corporate)"
+      ],
+      "strategic_approach": "Frame as enhancement before replacement",
+      "performance_target": "<30 seconds from data to portfolio",
+      "files_referenced": [
+        "references/joju-template_download-homepage.json",
+        "references/justin-harmon-cv_joju-export.json"
+      ]
+    },
+    "8825_pcms": {
+      "name": "8825 PCMS (Persistent Context Memory Sidecar)",
+      "category": "AI Knowledge Management",
+      "status": "Production Ready (v2.0.0)",
+      "description": "LLM-agnostic portable knowledge system for maintaining consistent AI behavior across platforms",
+      "core_innovation": "Single JSON file contains all context for any LLM",
+      "key_features": [
+        "Portability across all LLM platforms",
+        "Confidence-based decision making",
+        "Two-stage knowledge mining",
+        "Zero-configuration content generation",
+        "Adaptive learning from corrections"
+      ],
+      "protocols": [
+        "Decision-making (formula-based confidence matrix)",
+        "Learning (adaptive behavior)",
+        "Mining (two-stage extraction)",
+        "PromptGen (zero-config generation)"
+      ]
+    }
+  },
+  "professional_experience": {
+    "industries": [
+      "Eyewear Design & Manufacturing",
+      "Consumer Products",
+      "Technology / SaaS",
+      "Restaurant Technology",
+      "Design Consulting"
+    ],
+    "companies_worked_with": [
+      "Costa Del Mar (eyewear)",
+      "Marchon Eyewear",
+      "Dragon Alliance",
+      "Native Eyewear",
+      "Shinola",
+      "Fossil",
+      "Puma",
+      "Nike",
+      "Crunchtime (restaurant tech)",
+      "Toast (restaurant tech)"
+    ],
+    "project_types": [
+      "Product design and development",
+      "Brand strategy and positioning",
+      "Competitive analysis",
+      "Design systems",
+      "Go-to-market planning",
+      "Team onboarding and training",
+      "UX research and testing",
+      "Prototyping and CAD modeling"
+    ]
+  },
+  "design_portfolio_samples": {
+    "eyewear_projects": [
+      {
+        "project": "Costa Del Mar Collections",
+        "years": "2016-2018",
+        "deliverables": [
+          "Competitive audit and design strategy",
+          "Product catalogs",
+          "Seasonal collections (Spring/Fall)",
+          "Ocearch collaboration collection",
+          "Optical master records",
+          "3D renderings and CAD files"
+        ],
+        "files": [
+          "LSD_Costa - Competitive Audit 2016.pdf",
+          "LSD_Costa - Design Strategy 2016.pdf",
+          "2017_costa-Catalogue.pdf",
+          "CDM-17005-Ocearch-Creative.pdf",
+          "COSTA-fonts/",
+          "finalOcearchRenderings.rar"
+        ]
+      },
+      {
+        "project": "Dragon Alliance Eyewear",
+        "years": "2018-2019",
+        "deliverables": [
+          "Preliminary moodboards",
+          "Sketchbook reviews",
+          "SP21 optical collections",
+          "Design feedback integration"
+        ],
+        "files": [
+          "dragon_prelim-moodboards_092118_outline.pdf",
+          "dragon_sketchbook_review_102318_marchonFEEDBACK.pdf",
+          "dragon_ophs_sp21_moodboards_120519_mtg_notes.pdf"
+        ]
+      },
+      {
+        "project": "Native Eyewear",
+        "years": "2016",
+        "deliverables": [
+          "Competitive audit",
+          "Design strategy"
+        ],
+        "files": [
+          "LSD_Native - Competitive Audit_Strategy 2016.pdf"
+        ]
+      },
+      {
+        "project": "Marchon Eyewear Samples",
+        "deliverables": [
+          "Product samples portfolio"
+        ],
+        "files": [
+          "JHarmon_marchon-samples.pdf"
+        ]
+      },
+      {
+        "project": "Fossil Eyewear Samples",
+        "deliverables": [
+          "Product samples portfolio"
+        ],
+        "files": [
+          "JHarmon_fossil-samples.pdf"
+        ]
+      }
+    ],
+    "brand_collaborations": [
+      {
+        "project": "Shinola Collaboration Collection",
+        "year": "2021",
+        "deliverables": [
+          "Collection 0 presentation deck",
+          "Watch designs (Monster, Runwell)",
+          "Bicycle designs (Arrow)",
+          "Instagram content"
+        ],
+        "files": [
+          "shinola_collab_collection_0_DECK_062821_rev02.pdf",
+          "shinola_collab_collection_0_DECK_101121.pdf",
+          "SHINOLA-instagram.zip"
+        ]
+      }
+    ],
+    "restaurant_tech": [
+      {
+        "project": "Crunchtime & Toast Integration",
+        "deliverables": [
+          "Get Ready Plan presentation"
+        ],
+        "files": [
+          "Crunchtime_Toast_Get Ready Plan.pptx"
+        ]
+      }
+    ],
+    "other_projects": [
+      {
+        "project": "Product Development Presentations",
+        "deliverables": [
+          "Product breakout presentations",
+          "Consumer profiles",
+          "Product categories and segments",
+          "Onboarding materials"
+        ],
+        "files": [
+          "productBreakout_102116.pptx",
+          "productCategories-consumerSegments.pdf",
+          "18-0110_onBoarding.pptx"
+        ]
+      }
+    ]
+  },
+  "technical_skills": {
+    "design_tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Figma",
+      "Sketch",
+      "InVision"
+    ],
+    "3d_cad": [
+      "CAD modeling",
+      "3D rendering",
+      "Technical drawings",
+      "Tooling specifications"
+    ],
+    "prototyping": [
+      "Rapid prototyping",
+      "Wireframing",
+      "Interactive prototypes",
+      "User testing"
+    ],
+    "project_management": [
+      "Agile/Scrum",
+      "Roadmap planning",
+      "Resource allocation",
+      "Stakeholder management"
+    ],
+    "technical": [
+      "HTML/CSS",
+      "JavaScript basics",
+      "API integration concepts",
+      "Data analysis"
+    ],
+    "ai_ml": [
+      "AI prompt engineering",
+      "LLM integration",
+      "Knowledge management systems",
+      "Conversational AI design"
+    ]
+  },
+  "soft_skills": {
+    "leadership": [
+      "Team building and mentorship",
+      "Cross-functional collaboration",
+      "Strategic thinking",
+      "Change management"
+    ],
+    "communication": [
+      "Stakeholder presentations",
+      "Design critique facilitation",
+      "Technical documentation",
+      "Client relationship management"
+    ],
+    "problem_solving": [
+      "Systems thinking",
+      "Root cause analysis",
+      "Innovation frameworks",
+      "Design thinking"
+    ],
+    "strategic": [
+      "Competitive analysis",
+      "Market positioning",
+      "Go-to-market strategy",
+      "Business model innovation"
+    ]
+  },
+  "achievements_and_proof_points": {
+    "product_launches": [
+      "Multiple seasonal eyewear collections (Costa, Dragon, Native)",
+      "Shinola collaboration collection",
+      "Restaurant tech integration solutions"
+    ],
+    "process_improvements": [
+      "Developed zero-configuration portfolio generation system (<30 sec)",
+      "Created three-profile hiring blueprint methodology",
+      "Designed LLM-agnostic knowledge management system"
+    ],
+    "innovation": [
+      "Pioneered team-chemistry-aware hiring tool concept",
+      "Created proof-based professional profile system (Joju)",
+      "Developed portable AI context management (8825 PCMS)"
+    ],
+    "leadership": [
+      "Led design strategy for major eyewear brands",
+      "Managed cross-functional product development teams",
+      "Mentored junior designers and product managers"
+    ]
+  },
+  "education_and_certifications": {
+    "note": "To be extracted from resume documents"
+  },
+  "work_samples_by_category": {
+    "presentations": [
+      "Crunchtime_Toast_Get Ready Plan.pptx",
+      "productBreakout_102116.pptx",
+      "18-0110_onBoarding.pptx",
+      "KP marketing team update 062717.pptx",
+      "NSC Presentation.pptx",
+      "S S19CD.pptx"
+    ],
+    "pdfs_portfolios": [
+      "JHarmon_samples.pdf",
+      "JHarmon_marchon-samples.pdf",
+      "JHarmon_fossil-samples.pdf",
+      "C3.pdf"
+    ],
+    "design_strategy": [
+      "LSD_Costa - Competitive Audit 2016.pdf",
+      "LSD_Costa - Design Strategy 2016.pdf",
+      "LSD_Native - Competitive Audit_Strategy 2016.pdf"
+    ],
+    "product_catalogs": [
+      "2017_costa-Catalogue.pdf",
+      "CDM-16081-Costa-Ophthalmic-FULL-Catalog-LowRes-for-reference-only.pdf"
+    ],
+    "technical_drawings": [
+      "2011_optical-dd.pdf",
+      "2013_NKvsn-DD.pdf",
+      "costa_ophs_sp17_PB-RX-4A_cad_111116_TOOLING.pdf"
+    ],
+    "creative_concepts": [
+      "dragon_prelim-moodboards_092118_outline.pdf",
+      "Branded_Textures.pdf",
+      "Sculptural_Folds.pdf",
+      "Cool_Camping.pdf"
+    ],
+    "video_content": [
+      "COSTA Fall 2018 Rough 03.mp4",
+      "COSTA Spring 2018 HD.mp4",
+      "Costa_Production_Mp4_101416.mp4"
+    ]
+  },
+  "resume_variants": {
+    "ux_designer": {
+      "file": "UX/JHarmon_resume-1_2025-0121.pdf",
+      "bullets": "UX/resume-1_bullets.docx",
+      "cover_letters": "UX/cover letters/",
+      "target_roles": [
+        "UX Designer",
+        "Product Designer",
+        "UI Designer"
+      ]
+    },
+    "ux_manager": {
+      "file": "UX Manager/JHarmon_resume-2_2025-0121.pdf",
+      "bullets": "UX Manager/resume-2_bullets.docx",
+      "cover_letters": "UX Manager/cover letters/",
+      "target_roles": [
+        "UX Manager",
+        "Design Manager",
+        "Head of Design"
+      ]
+    },
+    "product_manager": {
+      "file": "Product Manager/JHarmon_resume-3_2025-0121.pdf",
+      "bullets": "Product Manager/resume-3_bullets.docx",
+      "cover_letters": "Product Manager/cover letters/",
+      "target_roles": [
+        "Product Manager",
+        "Senior Product Manager",
+        "Product Lead"
+      ]
+    },
+    "project_manager": {
+      "file": "Project Manager/JHarmon_2025-0512.pdf",
+      "bullets": "Project Manager/resume-4_bullets.docx",
+      "target_roles": [
+        "Project Manager",
+        "Program Manager",
+        "Delivery Manager"
+      ]
+    },
+    "id_tech": {
+      "file": "ID-tech/JHarmon_resume-4_2025-0725.docx",
+      "bullets": "ID-tech/resume-4_bullets.docx",
+      "cover_letters": "ID-tech/cover letters/",
+      "target_roles": [
+        "Industrial Designer",
+        "Product Developer",
+        "Technical Designer"
+      ]
+    }
+  },
+  "application_history": {
+    "companies_applied": [
+      "2barrels",
+      "Aravo Solutions",
+      "BAMM",
+      "BizzyCar",
+      "Differential",
+      "Flipped.ai",
+      "Google Fiber (GFiber)",
+      "HCP (Healthcare)",
+      "Hudl",
+      "ID.tech",
+      "Mastercard (MC)"
+    ],
+    "cover_letters_folder": "-- cover letters --/"
+  },
+  "mls_app_project": {
+    "description": "MLS (Multiple Listing Service) application project",
+    "template": "__MLS_Input_template.docx",
+    "folder": "MLS app/"
+  },
+  "trustybits_project": {
+    "name": "Trustybits - Hiring Manager Intelligence Tool",
+    "tagline": "Team-chemistry-aware hiring guidance that works with existing HR processes",
+    "project_type": "AI-Powered SaaS Product Concept",
+    "status": "Ideation & Design Sprint Ready",
+    "date": "2025-08-29",
+    "folder": "Trustybits/",
+    
+    "core_concept": "Empower hiring managers to translate team dynamics into actionable search criteria for HR, resulting in better candidate matches on the first attempt",
+    
+    "problem_statement": "Hiring managers consistently get poor candidate matches from HR because they lack the tools and framework to communicate what they actually need for team success. They think in team dynamics but communicate in job description language, while HR thinks in qualifications but lacks team context.",
+    
+    "solution_framework": {
+      "approach": "Team building advisory tool that analyzes current team composition and generates three-profile hiring blueprints",
+      "three_profile_system": {
+        "profile_a_conventional": "Traditional path candidates with standard qualifications (ATS-friendly)",
+        "profile_b_transferable": "Different industry candidates with transferable skills and proven adaptability",
+        "profile_c_wildcard": "Unconventional backgrounds with key complementary traits and high potential"
+      },
+      "output": "Instead of vague requests, hiring managers give HR specific candidate profiles with exact traits, backgrounds, and keywords"
+    },
+    
+    "scientific_foundation": [
+      "Group Dynamics (Kurt Lewin) - teams function differently than individuals",
+      "Belbin's Team Roles - balance of Coordinator, Implementer, Innovator roles",
+      "Tuckman's Stages - Forming, Storming, Norming, Performing, Adjourning",
+      "Psychological Safety (Amy Edmondson) - high-performing teams feel safe to speak up",
+      "Big Five (OCEAN) personality framework - evidence-based collaboration prediction",
+      "Diversity & Cognitive Complementarity - diverse skills strengthen teams"
+    ],
+    
+    "key_innovations": {
+      "team_chemistry_modeling": "Predictive compatibility engine showing how personality combinations perform together",
+      "three_profile_blueprint": "Structured spectrum approach promoting diversity while working with existing ATS systems",
+      "hr_translation_engine": "Auto-generate boolean search strings, red flag profiles, and interview question banks",
+      "situation_intelligence": "Context-aware recommendations based on company phase, project type, industry",
+      "risk_mitigation": "Proactive identification of team composition risks and succession planning gaps",
+      "continuous_learning": "Post-hire tracking and optimization based on success/failure patterns"
+    },
+    
+    "competitive_advantages": [
+      "Works with existing ATS systems - no organizational change required",
+      "Promotes diversity through structured spectrum approach",
+      "Focuses on team gaps rather than just individual qualifications",
+      "Provides explainable AI recommendations for HR confidence",
+      "Shifts power dynamics constructively - hiring managers become strategic architects",
+      "Creates win-win-win: better strategy, clearer HR direction, improved diversity"
+    ],
+    
+    "market_validation": {
+      "competitive_landscape": "No existing tools target hiring managers specifically for team composition analysis",
+      "blue_ocean_opportunity": "New category: 'Hiring Manager Intelligence Tools' - democratizing strategic consulting",
+      "market_gap": "Existing solutions are either HR-centric or post-hire focused, nothing bridges team building with pre-hire planning"
+    },
+    
+    "adoption_strategy": {
+      "entry_points": [
+        "One-Click Team Snapshot - upload LinkedIn profiles, get instant analysis in 30 seconds",
+        "Fix My Last Bad Hire - start with analyzing what went wrong",
+        "Viral Internal Demo - start with one progressive manager, let results speak",
+        "Results in Your Next Hire Promise - focus on immediate improvement"
+      ],
+      "design_principles": [
+        "Google-like simplicity - no training required",
+        "Zero behavior change - results look like what managers already give HR",
+        "Immediate utility focus - start with 'HR Request Generator'",
+        "Beta tester positioning - frame early users as industry pioneers"
+      ]
+    },
+    
+    "value_proposition_enhancements": {
+      "team_simulation_mode": "Test drive how different candidate profiles would change team dynamics before hiring",
+      "predictive_compatibility": "Shows specific outcomes like 'Adding Profile A reduces creativity by 15% but increases execution by 30%'",
+      "context_awareness": "Adapts recommendations based on company phase, project phase, industry culture",
+      "reverse_engineering": "Competitive intelligence analyzing successful team compositions in similar companies"
+    },
+    
+    "impact_metrics": {
+      "financial": "Bad hires cost 2.5x annual salary in turnover/productivity loss",
+      "operational": "Reduced time-to-fill while good candidates get hired elsewhere",
+      "team": "Prevents team dysfunction when new hires don't mesh",
+      "success_indicators": [
+        "Reduced candidate-to-interview ratio",
+        "Increased hiring manager satisfaction with initial candidate slate",
+        "Decreased time-to-hire for positions using the tool",
+        "Improved 90-day new hire retention/performance ratings"
+      ]
+    },
+    
+    "design_sprint_brief": {
+      "challenge_question": "How might we enable hiring managers to translate team dynamics into actionable search criteria that HR can execute?",
+      "target_user": "Mid-to-senior level hiring managers who experience frustration with HR-sourced candidates",
+      "scope_in": ["Team analysis input methods", "Search criteria output generation", "HR handoff process/format"],
+      "scope_out": ["ATS integrations", "Candidate assessment tools", "HR workflow modifications"],
+      "key_constraint": "Must work within existing HR processes - no system changes required",
+      "test_scenario": "Test with real hiring managers using actual open positions to measure quality of candidate matches"
+    },
+    
+    "exploration_journey": {
+      "phase_1": "Initial curiosity about team building science and AI personality analysis",
+      "phase_2": "Framework development mapping personality traits to functional team roles",
+      "phase_3": "Technical exploration of LinkedIn API (found highly restricted)",
+      "phase_4": "Critical examination of diversity problems in modern ATS filtering",
+      "phase_5": "Solution architecture - three-profile blueprint innovation",
+      "phase_6": "Practical mockup with UX Designer hiring example",
+      "phase_7": "Market reality check - competitive landscape analysis",
+      "phase_8": "Go-to-market insight - experience-first strategy"
+    },
+    
+    "open_questions": [
+      "How to demonstrate value before users commit to trying the platform?",
+      "What's the optimal balance between AI automation and human insight?",
+      "How to measure and prove improved hiring outcomes?",
+      "What partnerships with existing HR tech could accelerate adoption?",
+      "How to scale from individual hiring decisions to organizational culture transformation?"
+    ],
+    
+    "next_steps": [
+      "Pilot test three-profile system with willing hiring managers",
+      "Develop quantitative validation framework",
+      "Create bias mitigation protocols",
+      "Research legal compliance requirements for recruitment AI",
+      "Industry benchmarking for team composition success patterns",
+      "User journey mapping for hiring manager frustration points",
+      "Prototype 'HR Request Generator' functionality"
+    ],
+    
+    "strategic_positioning": "Tool represents evolution from tactical CV tools to strategic hiring manager empowerment platform. Works within existing systems rather than replacing them, maintaining HR workflows while dramatically improving input quality.",
+    
+    "justin_role": "Product Strategist, UX Designer, Market Researcher - Led ideation, competitive analysis, framework development, and design sprint planning"
+  },
+  "property_projects": {
+    "properties": [
+      "109 ok st/",
+      "4508 Thunder Rd.MOV",
+      "Harvest Hill.MOV",
+      "Heathermore.MOV"
+    ]
+  },
+  "archive_metadata": {
+    "total_files_scanned": "100+",
+    "file_types": [
+      "PDF documents",
+      "DOCX resumes and cover letters",
+      "JSON project summaries",
+      "PowerPoint presentations",
+      "Adobe Illustrator files",
+      "Video files (MP4, MOV)",
+      "CAD files (IGS)",
+      "Archive files (ZIP, RAR)",
+      "Excel spreadsheets"
+    ],
+    "date_range": "2011-2025",
+    "primary_focus_areas": [
+      "Eyewear design and development",
+      "Product management",
+      "UX/UI design",
+      "AI-powered tools",
+      "Team building solutions"
+    ]
+  },
+  "extraction_notes": {
+    "compiled_from": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/- ARCHV -/",
+    "methodology": "Automated file discovery and JSON extraction from available summaries",
+    "completeness": "High-level overview complete. Detailed resume content requires manual extraction from DOCX/PDF files.",
+    "next_steps": [
+      "Extract specific achievements from resume bullets files",
+      "Parse detailed work history from PDF resumes",
+      "Add education and certifications",
+      "Include specific metrics and outcomes",
+      "Add testimonials if available"
+    ]
+  },
+  "usage_instructions": {
+    "for_job_applications": "Reference appropriate resume variant and pull relevant achievements from this library",
+    "for_portfolio": "Use work_samples_by_category to locate relevant project files",
+    "for_interviews": "Review achievements_and_proof_points and innovation_projects for talking points",
+    "for_networking": "Use professional_experience and innovation_projects to articulate value proposition"
+  },
+  "detailed_resume_content": {
+    "product_manager": {
+      "raw_text": "Justin  Harmon    [RESUME]  \n 7247 Whispering Pines Dr ., Dallas, Texas 75248  \n justin@prtclinc.com • 718.753.7330  \nPROFESSIONAL SUMMARY  \nProduct Manager with a strong foundation in user -centered design, market research, and cross -functional collaboration, supported by a \nUX management certification.  Skilled at leveraging user insights and market trends to develop and execute product strategies that align with business \ngoals and drive measurable outcomes. Proven experience leading teams t...",
+      "sections": {
+        "summary": "Product Manager with a strong foundation in user -centered design, market research, and cross -functional collaboration, supported by a UX management certification.  Skilled at leveraging user insights and market trends to develop and execute product strategies that align with business products that meet user and mar ket needs. EMPLOYMENT HISTORY Product Manager  2015 - Present Hammer Consulting & Support Services  Dallas, TX • Drove operational efficiency and cost savings  by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%. • Aligned user needs with business goals  by leading cross -functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance . • Resolved critical user pain points  through in -depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction . • Enhanced stakeholder engagement  by creating and presenting intuitive UI prototypes using Figma and Adobe XD, effectively communicating innovative product features that drove client buy -in. • Spearheaded the delivery of new features  for online statement processing tools, increasing usability, accessibility , and operational efficiency for end-users . • Led a comprehensive website redesign initiative  for a non -profit division, conducting user research and overseeing wireframing and prototyping to deliver scalable, user -driven solutions aligned with organizational goals . Managing Partner & Design Lead          2018 - 2024 prtcl inc  Dallas, TX  & Brooklyn, NY • Drove sales growth by 10 –26% across multiple brands  by leveraging market research and user insights to craft innovative, user -centered product strategies that directly impacted revenue . • Unified cross -functional teams and stakeholders  to deliver seamless product solutions, aligning design efforts with user needs and business • Uncovered and resolved critical user pain points  by conducting detailed research and analysis, developing actionable proposals that improved user satisfaction and product adoption . • Led cross -functional teams to execute high -impact product launches,  balancing competing priorities to deliver innovative solutions aligned with business goals . • Boosted revenue growth and sustained market leadership  by strategically analyzing trends and user behaviors, positioning products for long - term success in competitive markets . • Transformed user feedback and market insights into actionable product enhancements,  driving improvements that exceeded customer expectations and strengthened brand loyalty . Eyewear Design Director  2015 - 2018 Costa Del Mar  Dallas, TX & Daytona Beach, FL • Resolved product defects and reduced customer complaints  by leading cross -functional collaboration with engineering, QA, and stakeholders, • Delivered $10 million in revenue growth  by leading the launch of a new Nike Vision product line targeting younger consumers, leveraging research insights to secure stakeholder buy -in and drive 10% of the company’s annual growth in its first year . ",
+        "experience": [
+          "• Played essential role in increase in website conversion rates  and reduced product returns by implementing user fit profiles, optimizing clarity",
+          "and usability across the online customer journey .",
+          "• Established and enforced new design standards  by translating user research insights into prioritized requirements, driving consistency and",
+          "measurable gains in user satisfaction.",
+          "• Delivered strategic project outcomes  by managing design agency deliverables, aligning outputs with user needs and business goals, and",
+          "exceeding expectations with on -time, high -quality results.",
+          "• Elevated team performance and innovation  by mentoring team members on vendor collaboration and iterative design practices, achieving",
+          "stronger project execution and improved deliverable quality.",
+          "• Boosted user engagement and retention  by spearheading the development of new features informed by target community feedback, exceeding",
+          "user expectations and increasing adoption rates.  Senior Watch Designer  2012 - 2015",
+          "Fossil Group  Dallas, TX",
+          "• Spearheaded innovation and boosted team performance  by mentoring designers in vendor collaboration and iterative design practices,",
+          "streamlining processes and driving enhanced project execution.",
+          "• Accelerated project timelines and optimized workflows  by leading stakeholder collaboration and aligning development goals with business",
+          "priorities, ensuring on -time delivery of high -impact product designs.",
+          "• Drove measurable product improvements  by leading cross -functional efforts to prioritize user needs and address critical feedback, shaping a",
+          "product roadmap that elevated user satisfaction and engagement.",
+          "• Strengthened and project outcomes  by training junior designers in advanced workflows, fostering skill development that consistently delivered",
+          "superior results.",
+          "• Delivered a 23.7% sales increase  by directing strategic design contributions for the Skechers watch line launch, aligning features with market",
+          "demand to maximize business impact.",
+          "• Unified brand identity and enhanced user engagement  by aligning design strategies and timelines across product categories, creating a",
+          "seamless and cohesive customer journey between watches and handbags.",
+          "Senior Eyewear Designer  2004 - 2012",
+          "Marchon  NYC",
+          "• Elevated product -market fit and user satisfaction  by analyzing feedback, identifying critical gaps, and delivering strategic product",
+          "recommendations that aligned with business priorities and drove tangible results.",
+          "• Orchestrated cross -functional collaboration  with designers and engineers to develop user -centered designs for Nike Vision's eyewear line,",
+          "ensuring seamless alignment with business goals and user expectations.",
+          "• Accelerated team productivity and enhanced project outcomes  by mentoring and onboarding team members, fostering collaboration and",
+          "strengthening capabilities to consistently deliver superior results.",
+          "• Transformed prototyping efficiency and accelerated product iterations  by founding the 3D design department (later branded as the VSP",
+          "Innovation Lab), cutting timelines and improving outcomes through rapid iteration.",
+          "• Spearheaded the adoption of user -centered design practices  by championing design thinking in strategic discussions, ensuring alignment with"
+        ],
+        "education": [
+          "BFA Industrial Design  2003",
+          "California College of the Arts",
+          "CERTIFICATIONS",
+          "UX Certification  w/ specialty in UX Management  2024",
+          "Neilson Norman Group"
+        ],
+        "skills": [
+          "effectively communicate and advocate for UX solutions with stakeholders to successfully align user needs with business goals.",
+          "Wireframing and Prototyping, Visual Design, Interaction Design, Visual Design, User Interface (UI) Design, Information Archit ecture (IA),",
+          "User Research, Design Tools [Figma, Adobe XD, Sketch, Framer, Photoshop & Illustrator], Analytics and Metrics, Agile and Scrum",
+          "Methodologies, UX Strategy, Persona Development, Motion Design, Service Design.",
+          "Project Management, Strategic Thinking, Stakeholder Management, Conflict Resolution, Decision -Making, Cross -Functional Collaboration,",
+          "Research Oversight, Process Improvement, Facilitation, Cultural Sensitivity, Mentorship and Coaching, Resource Allocation,  Budget",
+          "Management.",
+          "Communication, Time Management, Problem -Solving, Critical Thinking, Adaptability, Collaboration, Storytelling, Resilience, Attention to",
+          "Detail."
+        ],
+        "achievements": []
+      }
+    }
+  },
+  "extraction_status": {
+    "extracted_at": "2025-11-05",
+    "variants_processed": [
+      "product_manager"
+    ],
+    "status": "complete"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "name": "8825_mining_protocol",
+    "version": "1.0.0",
+    "created": "2025-11-05",
+    "description": "Knowledge extraction from conversations, documents, and external sources",
+    "core_workflow": "REF → Extract → ARCHV"
+  },
+  
+  "core_principle": "Capture structural knowledge (patterns, lexicon, workflows) not raw text",
+  
+  "two_stage_architecture": {
+    "stage_1_generation": {
+      "who": "External LLMs (ChatGPT, Claude, etc.) without file access",
+      "what": "Create mining report as downloadable artifact",
+      "where": "User saves to - REF - folder",
+      "format": "Structured markdown with JSON-extractable sections",
+      "critical": "NO inline text dumps - provide download link/artifact"
+    },
+    "stage_2_extraction": {
+      "who": "Windsurf agent with file write access",
+      "what": "Extract to project files, update patterns/lexicon",
+      "where": "projects/*.json files",
+      "format": "Direct JSON updates to existing files",
+      "critical": "NO mining reports generated - direct file updates only"
+    }
+  },
+  
+  "when_to_mine": {
+    "triggers": [
+      "User says 'mine this chat'",
+      "User says 'create mining report'",
+      "User says 'extract knowledge'",
+      "User says 'scrape/transport/capture'",
+      "End of significant conversation",
+      "Discovery of new patterns/concepts"
+    ],
+    "dont_mine_when": [
+      "In Windsurf with file access (update directly instead)",
+      "Trivial conversation with no new knowledge",
+      "User explicitly says 'don't save this'"
+    ]
+  },
+  
+  "mining_report_structure": {
+    "metadata_header": {
+      "required_fields": {
+        "source": "Conversation/document source",
+        "origin_platform": "ChatGPT/Claude/Gemini/etc",
+        "model": "GPT-4/Claude-3.5/etc",
+        "chat_id": "Unique identifier if available",
+        "artifact_url": "Download link for report",
+        "generated_at": "ISO 8601 timestamp",
+        "user_id": "Who requested the mining",
+        "project_context": "Which project(s) this relates to"
+      },
+      "format": "JSON block at top of report"
+    },
+    
+    "section_1_executive_summary": {
+      "purpose": "High-level overview for quick scanning",
+      "content": [
+        "Main topic/theme",
+        "Key decisions made",
+        "Projects referenced",
+        "Critical insights"
+      ],
+      "length": "3-5 sentences max"
+    },
+    
+    "section_2_patterns": {
+      "purpose": "Extract do/dont/framing patterns",
+      "format": {
+        "do": [
+          "Imperative statements of what works",
+          "Action-oriented, specific",
+          "Based on validated outcomes"
+        ],
+        "dont": [
+          "Imperative statements of what to avoid",
+          "Based on corrections or failures",
+          "Specific anti-patterns"
+        ],
+        "framing": [
+          "Mental models and analogies",
+          "How to conceptualize problems",
+          "Positioning strategies"
+        ],
+        "qa_loops": [
+          "Critical questions to always ask",
+          "Validation checkpoints",
+          "Decision gates"
+        ]
+      },
+      "extraction_rules": [
+        "Extract from user corrections",
+        "Note repeated decision criteria",
+        "Identify successful approaches",
+        "Flag anti-patterns from failures"
+      ]
+    },
+    
+    "section_3_lexicon": {
+      "purpose": "Define project-specific terminology",
+      "format": {
+        "term": "The word or phrase",
+        "definition": "Clear, concise explanation",
+        "context": "When and how to use it",
+        "examples": "Real usage examples"
+      },
+      "extraction_rules": [
+        "Identify domain-specific terms",
+        "Capture acronyms and jargon",
+        "Note terms user corrects or emphasizes",
+        "Extract definitions from explanations"
+      ]
+    },
+    
+    "section_4_workflows": {
+      "purpose": "Document repeatable processes",
+      "format": {
+        "name": "Workflow name",
+        "steps": ["Step 1", "Step 2", "..."],
+        "goal": "What this accomplishes",
+        "success_metric": "How to know it worked"
+      },
+      "extraction_rules": [
+        "Identify step-by-step processes",
+        "Note sequence dependencies",
+        "Capture success criteria",
+        "Document decision points"
+      ]
+    },
+    
+    "section_5_agent_recipes": {
+      "purpose": "Capture reusable agent capabilities (WCB format)",
+      "format": {
+        "system_role": "What the agent is",
+        "inputs_required": "What it needs to function",
+        "outputs": "What it produces",
+        "workflow": "How it operates",
+        "constraints": "Limitations and rules",
+        "provenance": "Source and version info"
+      },
+      "extraction_rules": [
+        "Identify assistant behaviors that worked well",
+        "Extract prompt patterns",
+        "Note successful agent configurations",
+        "Capture custom instructions"
+      ]
+    },
+    
+    "section_6_open_loops": {
+      "purpose": "Track unresolved questions and future work",
+      "format": [
+        "Questions that need answering",
+        "Decisions deferred",
+        "Areas needing exploration",
+        "Follow-up tasks"
+      ]
+    },
+    
+    "section_7_recommendations": {
+      "purpose": "Actionable next steps",
+      "format": [
+        "Immediate actions (this week)",
+        "Short-term actions (this month)",
+        "Long-term considerations",
+        "Areas needing validation"
+      ]
+    }
+  },
+  
+  "extraction_approach": {
+    "critical_principle": "Extract structure, not text",
+    "good_extraction": {
+      "example": "Pattern: Frame as enhancement before replacement",
+      "why": "Compressed, actionable, reusable"
+    },
+    "bad_extraction": {
+      "example": "User said: 'I think we should probably try to make it seem like it's not replacing LinkedIn but more like making it better first...'",
+      "why": "Verbose, not actionable, hard to reuse"
+    },
+    "rules": [
+      "Compress to essential meaning",
+      "Use imperative form (do X, not 'maybe do X')",
+      "Remove hedging language",
+      "Extract pattern, not conversation",
+      "Make it searchable and matchable"
+    ]
+  },
+  
+  "lifecycle_management": {
+    "stage_active": {
+      "location": "- REF - folder",
+      "status": "Pending extraction",
+      "actions": [
+        "Review report for quality",
+        "Identify target project files",
+        "Extract to appropriate locations",
+        "Deduplicate against existing content"
+      ]
+    },
+    
+    "stage_extracted": {
+      "action": "Move to - ARCHV -/Archive/",
+      "reason": "Preserve source, prevent re-extraction",
+      "naming": "YYYYMMDD_project_topic.md"
+    },
+    
+    "auto_extract": {
+      "enabled": false,
+      "reason": "User review ensures quality and placement",
+      "future": "Could enable for trusted sources"
+    }
+  },
+  
+  "deduplication_rules": {
+    "before_adding": [
+      "Search existing patterns for duplicates",
+      "Check if lexicon term already exists",
+      "Verify workflow not already documented",
+      "Confirm agent recipe is novel"
+    ],
+    
+    "when_duplicate_found": {
+      "exact_match": "Skip, already captured",
+      "similar_but_better": "Replace old with new",
+      "complementary": "Merge or keep both with context",
+      "contradicts": "Flag for user review"
+    }
+  },
+  
+  "routing_rules": {
+    "by_project_mention": {
+      "joju": "projects/8825_76-joju.json",
+      "forge": "projects/8825_76-forge.json",
+      "pmce": "projects/8825_00-pmce.json",
+      "8825": "projects/8825_00-pmce.json",
+      "general": "projects/8825_00-general.json"
+    },
+    
+    "by_content_type": {
+      "agent_capabilities": "projects/8825_00-agents.json (always)",
+      "mining_workflow": "projects/8825_00-library_miner.json",
+      "data_sources": "projects/8825_00-data_sources.json",
+      "cross_project": "projects/8825_00-general.json"
+    },
+    
+    "ambiguous_routing": {
+      "action": "Ask user which project file to update",
+      "default": "8825_00-general.json if truly cross-cutting"
+    }
+  },
+  
+  "quality_standards": {
+    "patterns": {
+      "good": "Specific, actionable, based on evidence",
+      "bad": "Vague, theoretical, unvalidated"
+    },
+    
+    "lexicon": {
+      "good": "Clear definition, usage context, examples",
+      "bad": "Circular definition, no context"
+    },
+    
+    "workflows": {
+      "good": "Step-by-step, repeatable, success criteria",
+      "bad": "High-level only, missing steps, unclear outcome"
+    },
+    
+    "reject_if": [
+      "Purely conversational (no knowledge)",
+      "Already fully documented",
+      "Contradicts established patterns without justification",
+      "Low quality or unclear"
+    ]
+  },
+  
+  "external_llm_instructions": {
+    "when_user_says_mine": [
+      "Generate comprehensive mining report immediately",
+      "Use report structure defined above",
+      "Provide as downloadable artifact (NOT inline text)",
+      "Include metadata header with all required fields",
+      "Focus on structural extraction (patterns, not quotes)",
+      "Format for easy JSON parsing"
+    ],
+    
+    "what_not_to_do": [
+      "Don't ask if user wants report - just generate it",
+      "Don't provide inline text - give download link",
+      "Don't dump conversation - extract structure",
+      "Don't over-explain - user knows the workflow",
+      "Don't ask which project - extract everything, routing happens in Windsurf"
+    ]
+  },
+  
+  "windsurf_agent_instructions": {
+    "when_user_says_check_report": [
+      "Read report from - REF - folder",
+      "Identify target project files",
+      "Extract patterns/lexicon/workflows",
+      "Update relevant project files directly",
+      "Deduplicate against existing content",
+      "Move report to - ARCHV - when done"
+    ],
+    
+    "what_not_to_do": [
+      "Don't create mining reports (you have write access)",
+      "Don't ask if user wants extraction - do it",
+      "Don't copy full text - extract structure only",
+      "Don't leave reports in REF after extraction"
+    ]
+  },
+  
+  "performance_targets": {
+    "external_llm_generation": "<2 minutes for full report",
+    "windsurf_extraction": "<1 minute per report",
+    "user_review_time": "<5 minutes to verify quality"
+  },
+  
+  "usage": {
+    "for_external_llm": [
+      "User says 'mine this'",
+      "Generate report with all 7 sections",
+      "Provide downloadable artifact",
+      "User saves to - REF - folder"
+    ],
+    
+    "for_windsurf": [
+      "User says 'check mining report'",
+      "Read from - REF - folder",
+      "Extract to project files",
+      "Move to - ARCHV - folder"
+    ],
+    
+    "for_user": [
+      "Say 'mine this' in external LLM",
+      "Download report to - REF -",
+      "Open Windsurf, say 'check mining report'",
+      "Review extractions, approve changes"
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "ticket_id": "T-8825-20251108-162130",
+  "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/20251108_080235_feature_team76.json",
+  "proposed_change": {
+    "summary": "Project 8825 TV Memory Layer",
+    "original_context": "TV Memory Layer thought experiment (bookmark model + Siri-first)",
+    "scope": "system-wide",
+    "estimated_effort": "Unknown"
+  },
+  "ai_sweep_result": {
+    "touchpoints": [
+      {
+        "file_path": "8825_core/protocols/8825_promptGen 01",
+        "type": "protocol",
+        "relevance": 0.7,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/workflows/ingestion/scripts/processors/content_processor.py",
+        "type": "workflow",
+        "relevance": 0.7,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/raw-body/index.js",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/v4/locales/he.cjs",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/src/v3/types.ts",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/src/v3/tests/date.test.ts",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/v4/locales/fr-CA.js",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/v4/mini/parse.js",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/src/v3/tests/parseUtil.test.ts",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/node_modules/zod/src/v4/core/standard-schema.ts",
+        "type": "other",
+        "relevance": 0.5,
+        "description": "Contains keywords: pattern, feature, sync"
+      },
+      {
+        "file_path": "joju_sandbox/patterns/achievement_detection.json",
+        "type": "protocol",
+        "relevance": 1.0,
+        "description": "CRITICAL: Core Joju functionality for mining achievements"
+      }
+    ],
+    "related_patterns": [],
+    "conflicts": [
+      {
+        "type": "override",
+        "severity": "high",
+        "description": "Would affect 1 critical protected patterns",
+        "affected_files": [
+          "joju_sandbox/patterns/achievement_detection.json"
+        ]
+      },
+      {
+        "type": "incompatible",
+        "severity": "low",
+        "description": "System-wide scope but focus-specific target",
+        "affected_files": []
+      }
+    ],
+    "blast_radius": "system-wide",
+    "recommendation": "\u26a0\ufe0f CAUTION: 1 high-severity conflicts. Recommend refactoring existing patterns instead of adding new one.",
+    "confidence": 0.6000000000000001
+  },
+  "questions": [
+    "Should this be system-wide or focus-specific?",
+    "Should we refactor existing patterns instead of adding new one?",
+    "Is the wide impact intentional or should we narrow the scope?"
+  ],
+  "required_mode": "teaching_mode",
+  "export_target": "windsurf",
+  "status": "pending",
+  "created_at": "2025-11-08T16:21:30.253809"
+}

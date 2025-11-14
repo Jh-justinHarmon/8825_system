@@ -1,0 +1,10 @@
+{
+  "lane": "B",
+  "priority": 1.0,
+  "scope": "system-wide",
+  "change_pressure": "high",
+  "target_focus": "hcss",
+  "source": "chatgpt",
+  "freshness": 1.0,
+  "processed_at": "2025-11-08T15:55:45.682490"
+}

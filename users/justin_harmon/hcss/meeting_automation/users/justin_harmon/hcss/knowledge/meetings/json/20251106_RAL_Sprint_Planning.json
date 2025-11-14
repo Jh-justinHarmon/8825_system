@@ -1,0 +1,16 @@
+{
+  "title": "RAL Sprint Planning",
+  "date": "2025-11-06",
+  "source": "sample_data",
+  "transcript": "Sample transcript for RAL Sprint Planning",
+  "summary": "# RAL Sprint Planning\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "1 hour",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "RAL"
+  },
+  "processed_at": "2025-11-11T12:28:43.905850"
+}

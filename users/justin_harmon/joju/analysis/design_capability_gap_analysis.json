@@ -1,0 +1,368 @@
+{
+  "analysis_session": {
+    "timestamp": "2025-11-05T21:57:00-06:00",
+    "purpose": "Identify design capabilities underrepresented in current Joju profile",
+    "current_profile": "justin_harmon_joju_input_06-portfolio-website.json",
+    "total_work_experiences": 7,
+    "user_concern": "Joju not showing off all design capability"
+  },
+  
+  "current_design_representation": {
+    "profession_stated": "Product Developer / UX Leader / Entrepreneur",
+    "about_section_emphasis": [
+      "Multi-disciplinary product developer",
+      "Industrial design",
+      "UX strategy",
+      "Product management",
+      "User insights → commercial products",
+      "VSP Innovation Lab founder",
+      "$10M+ revenue growth"
+    ],
+    "design_capabilities_shown": {
+      "ux_design": {
+        "presence": "HIGH",
+        "examples": [
+          "Hammer Consulting: SaaS portal UX, report redesign, drag-and-drop features",
+          "Nike: Industrial design with user testing",
+          "8825: UX strategy for PCMS and Trustybits"
+        ]
+      },
+      "industrial_design": {
+        "presence": "MEDIUM",
+        "examples": [
+          "Nike: Amare Stoudemire custom goggles (2011)",
+          "Mentioned in about section"
+        ],
+        "note": "Only 1 project showcased despite 20+ years in eyewear/product design"
+      },
+      "product_design": {
+        "presence": "HIGH",
+        "examples": [
+          "PRTCL: Eyewear, apparel, sports, timepieces across multiple markets",
+          "Shinola: Watch and bicycle collections",
+          "Multiple brands with 10-26% sales growth"
+        ]
+      },
+      "automation_ux": {
+        "presence": "HIGH",
+        "examples": [
+          "Hammer: 35% task reduction, 55% auto-collection, 68% auto-filing",
+          "Web crawlers, Secret Vault, learning mapper"
+        ]
+      },
+      "branding": {
+        "presence": "LOW",
+        "examples": [
+          "Shot Tracker mentioned in portfolio (not in Joju)",
+          "PRTCL work implies branding but not explicit"
+        ],
+        "note": "Branding capability not prominently featured"
+      },
+      "prototyping": {
+        "presence": "MEDIUM",
+        "examples": [
+          "Nike: 2 prototype solutions",
+          "Hammer: Figma and Adobe XD prototypes",
+          "Mentioned but not emphasized"
+        ]
+      },
+      "user_research": {
+        "presence": "HIGH",
+        "examples": [
+          "Nike: Direct athlete interviews",
+          "Hammer: User interviews with quotes",
+          "Trustybits: 8-phase discovery journey",
+          "Multiple mentions across roles"
+        ]
+      }
+    }
+  },
+  
+  "design_capabilities_in_library_but_missing": {
+    "eyewear_design_depth": {
+      "status": "SEVERELY UNDERREPRESENTED",
+      "in_library": [
+        "Marchon: 8 years (2004-2012) - Senior Eyewear Designer",
+        "COSTA: 2 years (2016-2018) - Design Lead",
+        "PRTCL: 6 years (2018-2024) - Managing Partner & Design Lead"
+      ],
+      "currently_shown": "PRTCL mentioned with Shinola, but 16 years of eyewear design compressed into generic bullets",
+      "missing_specifics": [
+        "Nike Vision product line ($10M revenue) - mentioned in Marchon but not detailed",
+        "VSP Innovation Lab founding - mentioned in about but not in work experience",
+        "3D design department pioneering",
+        "Specific eyewear collections and brands",
+        "Material expertise and manufacturing knowledge",
+        "Lens technology and optical considerations"
+      ],
+      "impact": "Your PRIMARY design discipline (eyewear) is barely visible despite 16+ years"
+    },
+    
+    "watch_design": {
+      "status": "UNDERREPRESENTED",
+      "in_library": [
+        "Fossil: 3 years (2012-2015) - Senior Watch Designer",
+        "Shinola: Watch Monster, Runwell collections (2021)",
+        "PRTCL: Timepieces mentioned"
+      ],
+      "currently_shown": "Fossil has generic bullets, Shinola watches mentioned but not detailed",
+      "missing_specifics": [
+        "Skechers watch line launch (23.7% sales increase) - mentioned but not prominent",
+        "Specific watch design expertise",
+        "Movement and mechanism knowledge",
+        "Watch-specific materials and construction"
+      ],
+      "impact": "7+ years of watch design experience minimized"
+    },
+    
+    "sports_product_design": {
+      "status": "UNDERREPRESENTED",
+      "in_library": [
+        "Nike: Amare Stoudemire goggles (2011)",
+        "Shinola: Bicycle Arrow collection",
+        "Nike Vision: Eyewear line",
+        "Shot Tracker: Sports app"
+      ],
+      "currently_shown": "Nike goggles featured, Shinola bicycle mentioned, but sports design expertise not emphasized",
+      "missing_specifics": [
+        "Athletic performance considerations",
+        "Sports-specific ergonomics",
+        "Durability and impact resistance",
+        "Athlete collaboration methodology"
+      ],
+      "impact": "Sports design niche not clearly established"
+    },
+    
+    "3d_design_cad": {
+      "status": "MISSING",
+      "in_library": [
+        "Marchon: Founded 3D design department (VSP Innovation Lab)",
+        "Mentioned as 'revolutionized design efficiency'",
+        "Reduced prototyping timelines"
+      ],
+      "currently_shown": "Mentioned in Marchon bullet but not emphasized as capability",
+      "missing_specifics": [
+        "CAD software expertise",
+        "3D modeling and rendering",
+        "Digital prototyping",
+        "3D printing and rapid prototyping",
+        "Department founding and leadership"
+      ],
+      "impact": "Technical design capability invisible"
+    },
+    
+    "material_expertise": {
+      "status": "BARELY MENTIONED",
+      "in_library": [
+        "PRTCL: 'plethora of materials', 'enduring and beautiful materials'",
+        "Nike: Neoprene, silicone, specialized fabrication",
+        "Eyewear: Acetate, metal, titanium (implied)",
+        "Watches: Various materials (implied)"
+      ],
+      "currently_shown": "Generic mentions, no specific material expertise showcased",
+      "missing_specifics": [
+        "Material selection methodology",
+        "Manufacturing process knowledge",
+        "Material properties and applications",
+        "Sustainable materials",
+        "Luxury vs technical materials"
+      ],
+      "impact": "Deep material knowledge not evident"
+    },
+    
+    "manufacturing_production": {
+      "status": "MISSING",
+      "in_library": [
+        "Nike: 'specialized NYC fabrication'",
+        "PRTCL: 'production-ready specifications'",
+        "Shinola: 'concept through production'",
+        "Marchon: 8 years production experience (implied)"
+      ],
+      "currently_shown": "Brief mentions, no emphasis on production expertise",
+      "missing_specifics": [
+        "Production process knowledge",
+        "Factory collaboration",
+        "Quality control",
+        "Cost optimization",
+        "Tooling and manufacturing constraints"
+      ],
+      "impact": "Production design expertise hidden"
+    },
+    
+    "visual_design_aesthetics": {
+      "status": "UNDERREPRESENTED",
+      "in_library": [
+        "Portfolio website shows visual work",
+        "PRTCL: 'aesthetic excellence'",
+        "Multiple design awards (implied)",
+        "20+ years of product aesthetics"
+      ],
+      "currently_shown": "Mentioned but not showcased with specific examples",
+      "missing_specifics": [
+        "Design language development",
+        "Trend analysis and forecasting",
+        "Color, material, finish (CMF)",
+        "Brand aesthetic alignment",
+        "Award-winning designs"
+      ],
+      "impact": "Visual design skill not prominent"
+    },
+    
+    "cross_industry_versatility": {
+      "status": "MENTIONED BUT NOT EMPHASIZED",
+      "in_library": [
+        "Eyewear (16 years)",
+        "Watches (7 years)",
+        "Bicycles (Shinola)",
+        "Sports equipment (Nike)",
+        "SaaS/Digital (Hammer)",
+        "AI/Tech (8825, Trustybits)"
+      ],
+      "currently_shown": "Roles listed but versatility not highlighted as strength",
+      "missing_specifics": [
+        "Transferable design thinking across industries",
+        "Rapid industry learning ability",
+        "Cross-pollination of ideas",
+        "Diverse market understanding"
+      ],
+      "impact": "Unique versatility undersold"
+    }
+  },
+  
+  "current_prioritization_logic": {
+    "what_gets_emphasized": [
+      "Quantified business outcomes (revenue, efficiency, metrics)",
+      "Recent work (2015-2025)",
+      "Strategic/leadership achievements",
+      "Automation and technical solutions",
+      "User research and problem-solving"
+    ],
+    "what_gets_minimized": [
+      "Specific design artifacts and collections",
+      "Technical design skills (CAD, 3D, rendering)",
+      "Material and manufacturing expertise",
+      "Visual/aesthetic design capability",
+      "Industry-specific design knowledge",
+      "Design process and craft details"
+    ],
+    "bias_identified": "Current profile emphasizes BUSINESS OUTCOMES over DESIGN CRAFT",
+    "result": "Reads more like Product Manager/Strategist than Designer/Design Leader"
+  },
+  
+  "recommendations": {
+    "immediate_fixes": [
+      {
+        "action": "Add 'Design' to profession",
+        "current": "Product Developer / UX Leader / Entrepreneur",
+        "suggested": "Product Designer / UX Leader / Industrial Designer",
+        "impact": "Immediately signals design focus"
+      },
+      {
+        "action": "Enhance Marchon entry with VSP Innovation Lab details",
+        "add": "Founded VSP Innovation Lab (3D design department), pioneering digital prototyping in eyewear industry, reducing prototyping timelines and enhancing iteration speed through CAD/3D modeling",
+        "impact": "Shows technical design leadership and innovation"
+      },
+      {
+        "action": "Add specific eyewear collections to PRTCL",
+        "add": "Designed [X] eyewear collections for [brands], working across runway, sport, lifestyle, and luxury markets with expertise in acetate, metal, and titanium materials",
+        "impact": "Makes eyewear design concrete and specific"
+      },
+      {
+        "action": "Enhance Fossil entry with watch design specifics",
+        "add": "Designed [X] watch collections, leading Skechers watch line launch achieving 23.7% sales increase, with expertise in movement integration, case design, and watch-specific materials",
+        "impact": "Establishes watch design credibility"
+      },
+      {
+        "action": "Add COSTA eyewear specifics",
+        "current": "Generic design lead bullets",
+        "add": "Designed [X] sunglass collections for fishing/water sports market, implementing user fit profiles that reduced product returns, with expertise in polarized lens technology and sport-specific ergonomics",
+        "impact": "Shows sports eyewear specialization"
+      }
+    ],
+    
+    "structural_changes": [
+      {
+        "change": "Rebalance achievement types",
+        "current_mix": "80% business outcomes, 20% design craft",
+        "suggested_mix": "60% business outcomes, 40% design craft",
+        "rationale": "Maintain business credibility while showcasing design expertise"
+      },
+      {
+        "change": "Add 'Design Expertise' or 'Core Competencies' section",
+        "content": [
+          "Industrial Design: Eyewear, watches, sports equipment, accessories",
+          "3D Design & CAD: Rhino, SolidWorks, digital prototyping, 3D printing",
+          "Materials: Acetate, metal, titanium, silicone, neoprene, leather",
+          "Manufacturing: Production-ready specs, factory collaboration, quality control",
+          "Visual Design: CMF, trend forecasting, brand aesthetic development",
+          "UX Design: User research, prototyping, usability testing, Figma, Adobe XD"
+        ],
+        "impact": "Explicit design skill inventory"
+      },
+      {
+        "change": "Add 'Selected Design Work' or 'Portfolio Highlights' section",
+        "content": [
+          "Nike Vision Product Line ($10M revenue)",
+          "Amare Stoudemire Custom Goggles (career-long use)",
+          "Shinola Watch Collections (Monster, Runwell)",
+          "Shinola Bicycle Arrow",
+          "Skechers Watch Line (23.7% sales increase)",
+          "[Other specific collections]"
+        ],
+        "impact": "Concrete design portfolio visible"
+      }
+    ],
+    
+    "content_additions": [
+      {
+        "add": "Design awards and recognition",
+        "examples": "If you have any design awards, patents, or industry recognition",
+        "impact": "External validation of design excellence"
+      },
+      {
+        "add": "Design process methodology",
+        "examples": "Your specific design approach, frameworks, or methodologies",
+        "impact": "Shows design thinking depth"
+      },
+      {
+        "add": "Technical skills section",
+        "tools": "Rhino, SolidWorks, Figma, Adobe Creative Suite, KeyShot, etc.",
+        "impact": "Demonstrates technical design capability"
+      }
+    ]
+  },
+  
+  "prioritization_framework_needed": {
+    "current_state": "Ad-hoc selection based on what was mined",
+    "problem": "No systematic way to ensure design capabilities are represented",
+    "solution": "Design Capability Coverage Matrix",
+    "matrix_dimensions": [
+      "Design Disciplines (Industrial, UX, Visual, Product)",
+      "Technical Skills (CAD, Prototyping, Manufacturing)",
+      "Industry Expertise (Eyewear, Watches, Sports, Tech)",
+      "Design Process (Research, Ideation, Prototyping, Production)",
+      "Business Impact (Revenue, Efficiency, Innovation)"
+    ],
+    "goal": "Ensure each dimension has at least 2-3 examples in profile",
+    "implementation": "Use Joju Curation Agent with 'design_showcase' target type"
+  },
+  
+  "gap_summary": {
+    "critical_gaps": [
+      "Eyewear design depth (16 years compressed to generic bullets)",
+      "3D/CAD technical skills (VSP Innovation Lab not prominent)",
+      "Material and manufacturing expertise (barely visible)",
+      "Specific design collections and artifacts (missing)",
+      "Visual/aesthetic design capability (underrepresented)"
+    ],
+    "perception_risk": "Profile reads as Product Manager/Strategist, not Designer",
+    "recommended_action": "Rebalance to 60/40 business outcomes vs design craft",
+    "quick_wins": [
+      "Change profession to include 'Designer'",
+      "Add VSP Innovation Lab details to Marchon",
+      "Add specific collections to PRTCL, Fossil, COSTA",
+      "Create 'Design Expertise' section",
+      "Add 'Portfolio Highlights' section"
+    ]
+  }
+}

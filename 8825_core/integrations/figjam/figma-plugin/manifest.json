@@ -1,0 +1,8 @@
+{
+  "name": "8825 Sticky Importer",
+  "id": "8825-sticky-importer",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figjam"]
+}

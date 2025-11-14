@@ -1,0 +1,45 @@
+{
+  "version": "3.0.0",
+  "codename": "Unified Core",
+  "release_date": "2025-11-07",
+  "status": "development",
+  
+  "architecture": {
+    "type": "three_layer",
+    "layers": {
+      "core": "Shareable system (no user data)",
+      "user": "Private user data and credentials",
+      "index": "Fast discovery and search"
+    }
+  },
+  
+  "migration_source": {
+    "v1.0": "Complete knowledge base and governance",
+    "v2.0": "Unified base with all migrations",
+    "v2.1": "Advanced features (profile builder, protocols)"
+  },
+  
+  "key_features": {
+    "user_separation": "100% - No user data in core",
+    "code_duplication": "Eliminated - Single implementations",
+    "discovery": "Index-based - <1 second search",
+    "portability": "100% - Environment variable based",
+    "agents": "18 registered agents",
+    "protocols": "13 protocols",
+    "workflows": "6 major flows"
+  },
+  
+  "compatibility": {
+    "v2.0": "Read-only - Source for migration",
+    "v2.1": "Read-only - Source for migration",
+    "external_users": "Supported - Shareable core"
+  },
+  
+  "validation_metrics": {
+    "discovery_speed": "<1 second",
+    "share_success": "100%",
+    "code_duplication": "0",
+    "migration_friction": "<1 hour per focus",
+    "learning_retention": "95%"
+  }
+}

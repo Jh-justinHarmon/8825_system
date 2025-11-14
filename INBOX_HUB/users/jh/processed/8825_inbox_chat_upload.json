@@ -1,0 +1,158 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "metadata": {
+    "source": "chatgpt",
+    "timestamp": "2025-11-08T14:35:08.610142",
+    "note": "Conversation about using Windsurf as dry-run for 8825 task specs, then handing to Goose as execution layer; includes scanned-letter\u2192OCR\u21928825\u2192deadline\u2192calendar use case."
+  },
+  "content": {
+    "summary": "User and assistant aligned on a two-layer automation pattern: 8825 produces explicit, execution-ready task specs (in Windsurf) and Goose acts on them locally via MCP. This preserves 8825 as the brain/context layer and uses Goose as the arms/legs layer. We also validated a concrete business-style use case: scanned letter is OCR'd, run through 2 LLM passes (context/routing via 8825, then deadline extraction), and then an agent creates calendar events for the target recipient.",
+    "highlights": [
+      "Windsurf is a viable 'dry lab' for testing and refining 8825 workflows before execution.",
+      "Goose should receive explicit JSON task specs: meta \u2192 task \u2192 io \u2192 steps \u2192 payload.",
+      "8825 remains the source of truth for structure; Goose should not infer schema.",
+      "Scanned-letter flow: scan \u2192 OCR \u2192 8825 context pass \u2192 narrow deadline pass \u2192 calendar write.",
+      "User intent: make 8825 the brain they already designed and let Goose give LLMs 'arms and legs'."
+    ],
+    "artifacts": [
+      {
+        "name": "8825_to_goose_task_spec_base",
+        "type": "spec",
+        "description": "Base shape for 8825\u2192Goose handoff defined in convo.",
+        "json": {
+          "meta": {
+            "source": "windsurf-8825",
+            "project": "8825",
+            "intent": "update_local_asset"
+          },
+          "task": {
+            "name": "update_joju_library",
+            "description": "Append new achievement objects mined from chat to the joju library on disk."
+          },
+          "io": {
+            "workspace_root": "/Users/justinharmon/8825/projects",
+            "target_file": "/Users/justinharmon/8825/projects/8825_76-joju.json",
+            "backup": true
+          },
+          "steps": [
+            {
+              "id": "read-file",
+              "action": "fs.read",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json"
+            },
+            {
+              "id": "merge-data",
+              "action": "transform.merge",
+              "strategy": "append_if_new",
+              "source_field": "new_achievements",
+              "target_field": "achievements"
+            },
+            {
+              "id": "write-file",
+              "action": "fs.write",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json",
+              "from_step": "merge-data"
+            }
+          ],
+          "payload": {
+            "new_achievements": [
+              {
+                "id": "joju-2025-11-07-001",
+                "statement": "Documented 8825\u2192Goose integration flow.",
+                "evidence": [
+                  "chatlog:2025-11-07"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "8825_to_goose_task_spec_create_if_missing",
+        "type": "spec",
+        "description": "Guarded version that creates target JSON if missing.",
+        "json": {
+          "meta": {
+            "source": "windsurf-8825",
+            "project": "8825",
+            "intent": "ensure_library_present_and_update"
+          },
+          "task": {
+            "name": "ensure_joju_library_and_update",
+            "description": "Check for joju library file; create with base schema if missing; then append new achievements."
+          },
+          "io": {
+            "workspace_root": "/Users/justinharmon/8825/projects",
+            "target_file": "/Users/justinharmon/8825/projects/8825_76-joju.json",
+            "backup": true
+          },
+          "steps": [
+            {
+              "id": "check-file",
+              "action": "fs.exists",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json"
+            },
+            {
+              "id": "create-if-missing",
+              "action": "fs.write",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json",
+              "when": {
+                "from_step": "check-file",
+                "equals": false
+              },
+              "content": {
+                "meta": {
+                  "schema": "joju-library-v1",
+                  "created_by": "8825",
+                  "created_at": "AUTO"
+                },
+                "achievements": []
+              }
+            },
+            {
+              "id": "read-file",
+              "action": "fs.read",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json"
+            },
+            {
+              "id": "merge-data",
+              "action": "transform.merge",
+              "strategy": "append_if_new",
+              "target_field": "achievements",
+              "source_field": "new_achievements"
+            },
+            {
+              "id": "write-file",
+              "action": "fs.write",
+              "path": "/Users/justinharmon/8825/projects/8825_76-joju.json",
+              "from_step": "merge-data"
+            }
+          ],
+          "payload": {
+            "new_achievements": [
+              {
+                "id": "joju-2025-11-07-001",
+                "statement": "Documented 8825\u2192Goose integration flow.",
+                "evidence": [
+                  "chatlog:2025-11-07"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "scan_letter_use_case": {
+      "description": "Automated processing of scanned/uploaded letters with deadlines.",
+      "steps": [
+        "Detect new file in scan/upload folder.",
+        "Run OCR and produce raw_text.",
+        "Run 8825 context pass to route to RAL/HCSS/JH based on text.",
+        "Run dedicated deadline extractor pass to produce normalized dates.",
+        "Agent (Goose) creates calendar event(s) for target recipient and moves original scan to 'processed'."
+      ],
+      "safety": "If deadline language is relative ('within 10 days'), mark as needs_human=true and create a draft event only."
+    }
+  }
+}

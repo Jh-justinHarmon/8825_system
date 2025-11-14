@@ -1,0 +1,96 @@
+{
+  "ocr_session": {
+    "timestamp": "2025-11-05T22:55:00-06:00",
+    "source_files": [
+      "JHarmon_samples.pdf",
+      "SP12_TIGER-CUT_SKETCHBOOK.pdf"
+    ],
+    "total_achievements_extracted": 8
+  },
+  
+  "nike_vision_achievements": {
+    "live_free_collection": {
+      "revenue": "$10 million in 2010",
+      "growth_contribution": "10% of Marchon's total sales growth in 2010",
+      "global_ranking": "#1 selling optical style globally in 2011, #1 in Asia",
+      "market_share": "18% market share in youth segment",
+      "award": "Nike voted best mens, teens & kids optical frame brand of 2012 by 20/20 & Vision Monday Magazine",
+      "strategy": "Used VSP sales data analytics to drive product strategy, expanded from plastic-focused to include milled metal and standard eyewire metals",
+      "special_editions": "Ignite special edition aligned with Nike WC-11 Campaign, doubling 2011 sales"
+    },
+    "market_analysis": {
+      "initial_breakdown": "67% plastic, 13% milled metal, 20% standard eyewire metals",
+      "expanded_breakdown": "20% plastic, 20% milled metal, 60% standard eyewire metals",
+      "insight": "Resonated with guys segment, expanded into unisex and youth girl segments"
+    }
+  },
+  
+  "tiger_cut_project": {
+    "collection_name": "SHOW.X2",
+    "type": "Watch design sketchbook",
+    "company": "Fossil Group",
+    "year": "Spring 2012 (SP12)",
+    "focus": "Lens cut options, frame design exploration, visual design development",
+    "deliverables": "Design sketchbook with multiple lens cut options and recommendations"
+  },
+  
+  "achievements_for_integration": [
+    {
+      "id": "nike_live_free_revenue",
+      "achievement": "Led design of Nike Vision 'Live Free' collection generating $10 million in revenue in 2010, accounting for 10% of Marchon's total sales growth, becoming #1 selling optical style globally in 2011 and #1 in Asia",
+      "metrics": {
+        "revenue": "$10M",
+        "growth_contribution": "10%",
+        "global_ranking": "#1",
+        "asia_ranking": "#1"
+      },
+      "target": "Marchon work experience - add as specific achievement"
+    },
+    {
+      "id": "nike_market_share",
+      "achievement": "Achieved 18% market share in youth segment through data-driven product strategy using VSP sales analytics, successfully expanding from plastic-focused designs to include milled metal and standard eyewire metals, resonating with guys segment and expanding into unisex and youth girl segments",
+      "metrics": {
+        "market_share": "18%",
+        "segment": "Youth"
+      },
+      "target": "Marchon work experience - add as specific achievement"
+    },
+    {
+      "id": "nike_brand_award",
+      "achievement": "Nike Vision voted best mens, teens & kids optical frame brand of 2012 by 20/20 & Vision Monday Magazine, validating design strategy and market positioning",
+      "metrics": {
+        "award": "Best brand 2012",
+        "publication": "20/20 & Vision Monday Magazine"
+      },
+      "target": "Marchon work experience or Awards section"
+    },
+    {
+      "id": "nike_ignite_campaign",
+      "achievement": "Leveraged special edition opportunity by proposing Ignite collection aligned with Nike's WC-11 Campaign, doubling 2011 sales through strategic brand alignment",
+      "metrics": {
+        "sales_increase": "2x (doubled)"
+      },
+      "target": "Marchon work experience - add as specific achievement"
+    },
+    {
+      "id": "tiger_cut_project",
+      "achievement": "Designed SHOW.X2 watch collection for Fossil Group exploring innovative lens cut options and frame design variations, delivering comprehensive design sketchbook with multiple options and recommendations for Spring 2012 collection",
+      "target": "Add as new project or enhance Fossil work experience"
+    }
+  ],
+  
+  "recommendations": {
+    "marchon_enhancements": [
+      "Add Live Free collection as specific bullet with $10M revenue and 10% growth contribution",
+      "Add 18% market share achievement with VSP analytics mention",
+      "Add Nike brand award (2012)",
+      "Add Ignite special edition doubling sales"
+    ],
+    "new_project": {
+      "name": "Tiger Cut / SHOW.X2 Watch Collection",
+      "year": "2012",
+      "company": "Fossil Group",
+      "description": "Designed SHOW.X2 watch collection exploring innovative lens cut options and frame design variations for Spring 2012 collection. Delivered comprehensive design sketchbook with multiple design options and recommendations, showcasing watch design exploration and visual design development process."
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "protocol_name": "Goose Focus",
+  "version": "1.0.0",
+  "protocol_type": "Focus Protocol",
+  "parent_system": "8825 PCMS v2.1",
+  "created": "2025-11-06",
+  "status": "Protocol Framework - TBD",
+  "purpose": "Goose project management focus (protocols and workflows to be defined)",
+  
+  "overview": {
+    "description": "Goose Focus provides a dedicated workspace for Goose-related project management",
+    "activation": "User says 'focus on goose' while in 8825 mode",
+    "exit": "User says 'exit focus' (returns to 8825 mode)",
+    "sandbox": "/goose_sandbox/",
+    "status": "Framework established, specific protocols TBD"
+  },
+  
+  "focus_activation": {
+    "entry_command": "focus on goose",
+    "activation_response": {
+      "message": "🦢 GOOSE FOCUS ACTIVATED\n\nSandbox: /goose_sandbox/\nStatus: Protocol Framework Ready\n\nProtocols are TBD - ready to define workflows, agents, and processes.\n\nSay 'exit focus' when done.",
+      "setup_actions": [
+        "Create /goose_sandbox/ directory structure",
+        "Initialize configuration files",
+        "Set focus flag to 'goose_active'",
+        "Display current status"
+      ]
+    }
+  },
+  
+  "sandbox_structure": {
+    "description": "Goose Focus workspace organization",
+    "directories": {
+      "/goose_sandbox/": "Root directory for all Goose-related work",
+      "/goose_sandbox/raw/": "Raw input files and data",
+      "/goose_sandbox/processed/": "Processed and transformed content",
+      "/goose_sandbox/output/": "Final deliverables and exports",
+      "/goose_sandbox/config/": "Configuration files and settings",
+      "/goose_sandbox/logs/": "Activity logs and tracking",
+      "/goose_sandbox/archives/": "Archived content"
+    }
+  },
+  
+  "workflows": {
+    "status": "TBD",
+    "placeholder": {
+      "title": "Workflow definitions to be added",
+      "description": "Define specific workflows based on Goose project requirements",
+      "examples": [
+        "Content ingestion workflow",
+        "Processing pipeline",
+        "Output generation",
+        "Quality assurance"
+      ]
+    }
+  },
+  
+  "agents": {
+    "status": "TBD",
+    "placeholder": {
+      "description": "Define specialized agents for Goose-specific tasks",
+      "examples": [
+        "Content processor agent",
+        "Quality checker agent",
+        "Router agent",
+        "Export agent"
+      ]
+    }
+  },
+  
+  "configuration": {
+    "status": "TBD",
+    "placeholder": {
+      "description": "Configuration files and settings to be defined",
+      "potential_configs": [
+        "Processing rules",
+        "Routing logic",
+        "Quality thresholds",
+        "Export formats"
+      ]
+    }
+  },
+  
+  "roadmap": {
+    "phase_1": {
+      "title": "Define Core Protocols",
+      "tasks": [
+        "Identify Goose project requirements",
+        "Define primary workflows",
+        "Establish agent responsibilities",
+        "Create configuration templates"
+      ],
+      "status": "pending"
+    },
+    "phase_2": {
+      "title": "Implement Core Features",
+      "tasks": [
+        "Build primary workflow scripts",
+        "Implement agents",
+        "Set up configuration system",
+        "Create logging and tracking"
+      ],
+      "status": "pending"
+    },
+    "phase_3": {
+      "title": "Automation & Integration",
+      "tasks": [
+        "Add scheduling capabilities",
+        "Integrate with external systems",
+        "Build monitoring dashboard",
+        "Implement feedback loops"
+      ],
+      "status": "pending"
+    }
+  },
+  
+  "notes": {
+    "framework_ready": true,
+    "protocols_defined": false,
+    "next_steps": [
+      "Define what Goose project entails",
+      "Identify key workflows and processes",
+      "Determine required agents and automation",
+      "Build out specific protocols based on requirements"
+    ]
+  }
+}

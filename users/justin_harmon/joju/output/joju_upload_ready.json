@@ -1,0 +1,259 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "justinharmon",
+    "displayName": "Justin Harmon",
+    "profession": "Product Developer / UX Leader / Entrepreneur",
+    "location": "Dallas, Texas",
+    "pronouns": "He/Him",
+    "byline": "Product Developer / UX Leader / Entrepreneur in Dallas, Texas, He/Him",
+    "website": "prtclinc.com",
+    "websiteURL": "https://prtclinc.com",
+    "about": "Multi-disciplinary product developer with 20+ years of experience spanning industrial design, UX strategy, and product management. Expert at translating user insights into commercially viable products that drive measurable business outcomes. Known for founding the VSP Innovation Lab (3D department at Marchon), delivering $10M+ in revenue growth, and achieving 10-26% sales increases across multiple brands. Passionate about innovation at the intersection of design, technology, and human behavior.",
+    "status": {
+      "text": "Building AI-powered solutions for team building and professional development",
+      "emoji": "🚀",
+      "timestamp": "2025-11-05"
+    },
+    "sectionOrder": [
+      "Projects",
+      "Work Experience",
+      "Education",
+      "Skills",
+      "Side Projects",
+      "Awards",
+      "Contact"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Design & UX",
+      "items": [
+        "Industrial Design",
+        "Product Design",
+        "UX Strategy",
+        "User Research",
+        "Wireframing & Prototyping",
+        "Visual Design",
+        "Interaction Design",
+        "UI Design",
+        "Information Architecture",
+        "Design Systems",
+        "CAD/3D Modeling",
+        "Materials & Manufacturing"
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "Framer",
+        "Photoshop",
+        "Illustrator",
+        "SolidWorks",
+        "Rhino",
+        "Analytics & Metrics",
+        "Agile & Scrum"
+      ]
+    },
+    {
+      "category": "Leadership & Strategy",
+      "items": [
+        "Product Strategy",
+        "Project Management",
+        "Strategic Thinking",
+        "Stakeholder Management",
+        "Cross-Functional Collaboration",
+        "Team Leadership",
+        "Mentorship & Coaching",
+        "Process Improvement",
+        "Resource Allocation"
+      ]
+    },
+    {
+      "category": "Core Competencies",
+      "items": [
+        "Problem-Solving",
+        "Critical Thinking",
+        "Communication",
+        "Adaptability",
+        "Storytelling",
+        "Attention to Detail"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "trustybits",
+      "year": "2025",
+      "heading": "Trustybits - Hiring Manager Intelligence Tool",
+      "url": null,
+      "collaborators": [],
+      "description": "AI-powered team building advisory tool that empowers hiring managers to translate team dynamics into actionable search criteria for HR. Uses Big Five and Belbin frameworks to generate three-profile candidate blueprints (Conventional, Adjacent/Transferable, High-Ceiling Wild Card). Blue ocean opportunity creating new category: 'Hiring Manager Intelligence Tools'.",
+      "attachments": [],
+      "type": "project",
+      "title": "Trustybits - Hiring Manager Intelligence Tool",
+      "company": "Innovation Project"
+    },
+    {
+      "id": "joju_platform",
+      "year": "2024",
+      "heading": "Joju - Professional OS",
+      "url": null,
+      "collaborators": [],
+      "description": "LinkedIn alternative with proof-based profiles and zero-configuration portfolio generation. PromptGen workflow generates portfolios in <30 seconds with multiple style variants (Classic, Modern, Corporate). Frame as enhancement before replacement, targeting subtle converts first.",
+      "attachments": [],
+      "type": "project",
+      "title": "Joju - Professional OS",
+      "company": "Active Development"
+    },
+    {
+      "id": "8825_pcms",
+      "year": "2025",
+      "heading": "8825 PCMS (Persistent Context Memory Sidecar)",
+      "url": null,
+      "collaborators": [],
+      "description": "LLM-agnostic portable knowledge system for maintaining consistent AI behavior across platforms. Single JSON file contains all context for any LLM (ChatGPT, Claude, Gemini, Windsurf). Features confidence-based decision making, two-stage knowledge mining, and adaptive learning.",
+      "attachments": [],
+      "type": "project",
+      "title": "8825 PCMS",
+      "company": "Production Ready v2.0.0"
+    },
+    {
+      "id": "vsp_innovation_lab",
+      "year": "2004-2012",
+      "heading": "VSP Innovation Lab (3D Design Department)",
+      "url": null,
+      "collaborators": [],
+      "description": "Founded and led the 3D design department at Marchon (later branded as VSP Innovation Lab). Revolutionized prototyping efficiency by reducing timelines and enhancing iteration speed through rapid 3D modeling and printing.",
+      "attachments": [],
+      "type": "project",
+      "title": "VSP Innovation Lab",
+      "company": "Marchon"
+    },
+    {
+      "id": "nike_vision_launch",
+      "year": "2005-2012",
+      "heading": "Nike Vision Product Line Launch",
+      "url": null,
+      "collaborators": [],
+      "description": "Led launch of new Nike Vision product line targeting younger consumers. Leveraged research insights to secure stakeholder buy-in and drive market success. Generated $10 million in revenue growth, accounting for 10% of the company's annual growth in the first year.",
+      "attachments": [],
+      "type": "project",
+      "title": "Nike Vision Product Line",
+      "company": "Marchon"
+    }
+  ],
+  "sideProjects": [],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "hammer_consulting",
+      "year": "2015 — Now",
+      "heading": "Product Manager at Hammer Consulting & Support Services",
+      "url": null,
+      "collaborators": [],
+      "description": "- Drove operational efficiency and cost savings by designing and implementing automated workflows on a B2B SaaS platform, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%.\n- Aligned user needs with business goals by leading cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance.\n- Resolved critical user pain points through in-depth research and analysis, transforming insights into actionable design strategies that improved workflows and elevated user satisfaction.\n- Enhanced stakeholder engagement by creating and presenting intuitive UI prototypes using Figma and Adobe XD, effectively communicating innovative product features that drove client buy-in.\n- Spearheaded the delivery of new features for online statement processing tools, increasing usability, accessibility, and operational efficiency for end-users.\n- Led a comprehensive website redesign initiative for a non-profit division, conducting user research and overseeing wireframing and prototyping to deliver scalable, user-driven solutions aligned with organizational goals.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Product Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "prtcl_inc",
+      "year": "2018 — 2024",
+      "heading": "Managing Partner & Design Lead at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "- Drove sales growth by 10–26% across multiple brands by leveraging market research and user insights to craft innovative, user-centered product strategies that directly impacted revenue.\n- Unified cross-functional teams and stakeholders to deliver seamless product solutions, aligning design efforts with user needs and business objectives to enhance collaboration and outcomes.\n- Uncovered and resolved critical user pain points by conducting detailed research and analysis, developing actionable proposals that improved user satisfaction and product adoption.\n- Led cross-functional teams to execute high-impact product launches, balancing competing priorities to deliver innovative solutions aligned with business goals.\n- Boosted revenue growth and sustained market leadership by strategically analyzing trends and user behaviors, positioning products for long-term success in competitive markets.\n- Transformed user feedback and market insights into actionable product enhancements, driving improvements that exceeded customer expectations and strengthened brand loyalty.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY"
+    },
+    {
+      "id": "costa",
+      "year": "2016 — 2018",
+      "heading": "Design Lead at COSTA",
+      "url": null,
+      "collaborators": [],
+      "description": "- Resolved product defects and reduced customer complaints by leading cross-functional collaboration with engineering, QA, and stakeholders, delivering measurable improvements to the user experience.\n- Played essential role in increase in website conversion rates and reduced product returns by implementing user fit profiles, optimizing clarity and usability across the online customer journey.\n- Established and enforced new design standards by translating user research insights into prioritized requirements, driving consistency and measurable gains in user satisfaction.\n- Delivered strategic project outcomes by managing design agency deliverables, aligning outputs with user needs and business goals, and exceeding expectations with on-time, high-quality results.\n- Elevated team performance and innovation by mentoring team members on vendor collaboration and iterative design practices, achieving stronger project execution and improved deliverable quality.\n- Boosted user engagement and retention by spearheading the development of new features informed by target community feedback, exceeding user expectations and increasing adoption rates.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Design Lead",
+      "company": "COSTA",
+      "location": "Remote"
+    },
+    {
+      "id": "fossil",
+      "year": "2012 — 2015",
+      "heading": "Senior Watch Designer at Fossil Group",
+      "url": null,
+      "collaborators": [],
+      "description": "- Delivered a 23.7% sales increase by directing strategic design contributions for the Skechers watch line launch, aligning features with market demand to maximize business impact.\n- Spearheaded innovation and boosted team performance by mentoring designers in vendor collaboration and iterative design practices, streamlining processes and driving enhanced project execution.\n- Accelerated project timelines and optimized workflows by leading stakeholder collaboration and aligning development goals with business priorities, ensuring on-time delivery of high-impact product designs.\n- Drove measurable product improvements by leading cross-functional efforts to prioritize user needs and address critical feedback, shaping a product roadmap that elevated user satisfaction and engagement.\n- Strengthened project outcomes by training junior designers in advanced workflows, fostering skill development that consistently delivered superior results.\n- Unified brand identity and enhanced user engagement by aligning design strategies and timelines across product categories, creating a seamless and cohesive customer journey between watches and handbags.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "marchon",
+      "year": "2004 — 2012",
+      "heading": "Senior Eyewear Designer at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "- Drove $10 million in revenue growth by launching a new Nike Vision product line for younger consumers, achieving 10% of annual company growth through research-backed insights.\n- Revolutionized design efficiency by founding the 3D design department (later branded as the VSP Innovation Lab), reducing prototyping timelines and enhancing iteration speed.\n- Championed user-centered design by advocating for design thinking in strategic discussions, aligning user needs with organizational goals.\n- Spearheaded collaboration between designers and engineers to deliver innovative, user-focused designs for Nike Vision's eyewear line, driving alignment with business goals.\n- Accelerated team performance by mentoring new members, fostering a collaborative environment that strengthened team output.\n- Boosted product-market fit and user satisfaction by analyzing feedback, identifying critical gaps, and delivering strategic product recommendations.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC"
+    }
+  ],
+  "volunteering": [],
+  "education": [
+    {
+      "id": "cca_bfa",
+      "year": "2003",
+      "heading": "BFA Industrial Design",
+      "institution": "California College of the Arts",
+      "degree": "Bachelor of Fine Arts",
+      "field": "Industrial Design",
+      "description": "Comprehensive industrial design education covering product development, materials, manufacturing processes, and design thinking."
+    }
+  ],
+  "certifications": [
+    {
+      "id": "nngroup_ux",
+      "year": "2024",
+      "heading": "UX Certification with specialty in UX Management",
+      "institution": "Nielsen Norman Group",
+      "credential": "UX Certification",
+      "specialty": "UX Management",
+      "description": "Advanced certification in user experience design with specialized focus on UX management, team leadership, and strategic design thinking."
+    }
+  ],
+  "contact": [
+    {
+      "id": "linkedin",
+      "platform": "LinkedIn",
+      "handle": "justin-harmon",
+      "url": "https://linkedin.com/in/justin-harmon"
+    },
+    {
+      "id": "website",
+      "platform": "Website",
+      "handle": "prtclinc.com",
+      "url": "https://prtclinc.com"
+    }
+  ]
+}

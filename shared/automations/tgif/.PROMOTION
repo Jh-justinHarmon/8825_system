@@ -1,0 +1,12 @@
+Promoted to: shared/automations/tgif/
+Promoted from: focuses/hcss/poc/tgif_automation
+Promotion date: 2025-11-13
+Reason: Production automation, multi-focus potential
+Status: Active in HCSS, available for other focuses
+Maintainer: HCSS focus
+
+History:
+1. Built as POC in focuses/hcss/poc/tgif_automation/
+2. Graduated to production
+3. Migrated to sandbox/graduated/ (2025-11-13)
+4. Promoted to shared/automations/ (2025-11-13)

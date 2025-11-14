@@ -1,0 +1,95 @@
+{
+  "ticket_id": "T-8825-20251109-002416",
+  "source_file": "/Users/justinharmon/Downloads/8825_inbox/pending/simple_note_3.json",
+  "proposed_change": {
+    "summary": "source: ChatGPT conversation, date: 2025-11-08, insights: 3 items",
+    "original_context": "No context provided",
+    "scope": "system-wide",
+    "estimated_effort": "Unknown"
+  },
+  "ai_sweep_result": {
+    "touchpoints": [
+      {
+        "file_path": "8825_core/protocols/8825_mining",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/protocols/8825_cascade_hybrid",
+        "type": "protocol",
+        "relevance": 0.9,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/projects/8825_00-agents.json",
+        "type": "agent",
+        "relevance": 0.7999999999999999,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/agents/agent_registry.json",
+        "type": "agent",
+        "relevance": 0.7999999999999999,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/projects/8825_76-joju.json",
+        "type": "library",
+        "relevance": 0.7999999999999999,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/projects/8825_00-library_miner.json",
+        "type": "library",
+        "relevance": 0.7,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/system/8825_core.json",
+        "type": "library",
+        "relevance": 0.7,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/projects/8825_HCSS.json",
+        "type": "library",
+        "relevance": 0.7,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/system/8825_HCSS_core.json",
+        "type": "library",
+        "relevance": 0.7,
+        "description": "Contains keywords: mining_report"
+      },
+      {
+        "file_path": "8825_core/projects/8825_00-general.json",
+        "type": "library",
+        "relevance": 0.7,
+        "description": "Contains keywords: mining_report"
+      }
+    ],
+    "related_patterns": [],
+    "conflicts": [
+      {
+        "type": "incompatible",
+        "severity": "low",
+        "description": "System-wide scope but focus-specific target",
+        "affected_files": []
+      }
+    ],
+    "blast_radius": "system-wide",
+    "recommendation": "Consider narrowing scope to specific focus before implementing.",
+    "confidence": 0.7000000000000001
+  },
+  "questions": [
+    "Should this be system-wide or focus-specific?",
+    "How should we resolve the detected conflicts?",
+    "Is the wide impact intentional or should we narrow the scope?"
+  ],
+  "required_mode": "teaching_mode",
+  "export_target": "windsurf",
+  "status": "pending",
+  "created_at": "2025-11-09T00:24:16.833669"
+}

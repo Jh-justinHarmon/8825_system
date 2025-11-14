@@ -1,0 +1,42 @@
+{
+  "_comment": "v3.1 - Uses File Router for all destinations",
+  "_file_router": "See 8825_core/config/file_router.json for destination paths",
+  "sources": {
+    "downloads": {
+      "enabled": true,
+      "path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/_intake",
+      "poll_interval": 10
+    },
+    "email": {
+      "enabled": false,
+      "gmail_api": true
+    }
+  },
+  "processing": {
+    "parallel_workers": 2,
+    "retry_attempts": 3,
+    "timeout_seconds": 60,
+    "file_case_convention": "UPPER"
+  },
+  "routing": {
+    "auto_route_threshold": 70,
+    "suggest_threshold": 50,
+    "unknown_destination": "MISC_INBOX"
+  },
+  "destinations": {
+    "_comment": "Destinations managed by File Router - 8825_core/config/file_router.json",
+    "RAL": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/RAL",
+    "HCSS": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/HCSS",
+    "76": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/76",
+    "8825": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/8825",
+    "Jh": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/Jh",
+    "Joju": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825_files/Joju"
+  },
+  "cleanup": {
+    "enabled": true,
+    "delete_simple_files": true,
+    "compress_complex_files": false,
+    "compress_threshold_mb": 10,
+    "keep_originals": ["3dm", "psd", "ai", "fig", "mp4", "mov", "pdf", "docx"]
+  }
+}

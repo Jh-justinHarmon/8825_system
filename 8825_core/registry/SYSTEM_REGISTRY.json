@@ -1,0 +1,2987 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-11T12:23:31Z",
+  "system_dependencies": {
+    "python3": {
+      "version": "3.9+",
+      "check": "python3 --version",
+      "install": "brew install python3",
+      "required_by": [
+        "downloads_sync.py",
+        "inbox_sync.py",
+        "ingestion_engine.py"
+      ]
+    },
+    "watchdog": {
+      "type": "python_package",
+      "check": "python3 -c 'import watchdog' 2>/dev/null",
+      "install": "pip3 install watchdog",
+      "required_by": [
+        "downloads_sync.py",
+        "inbox_sync.py"
+      ]
+    },
+    "jq": {
+      "type": "system",
+      "check": "which jq",
+      "install": "brew install jq",
+      "required_by": [
+        "8825_audit.sh",
+        "auto_register.sh"
+      ]
+    },
+    "rsync": {
+      "type": "system",
+      "check": "which rsync",
+      "install": "built-in (macOS)",
+      "required_by": [
+        "sync_downloads_folders.sh",
+        "simple_sync_and_process.sh"
+      ]
+    },
+    "bash": {
+      "type": "system",
+      "check": "which bash",
+      "install": "built-in (macOS)",
+      "required_by": [
+        "all shell scripts"
+      ]
+    }
+  },
+  "daemons": [
+    {
+      "name": "downloads_sync",
+      "path": "8825_core/sync/downloads_sync.py",
+      "purpose": "Bidirectional sync of Downloads folders",
+      "touches": [
+        "~/Downloads",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "excludes": [
+        "old",
+        "- old -",
+        ".DS_Store",
+        ".tmp",
+        "~$",
+        "8825_inbox",
+        "sticky_",
+        "brainstorm",
+        "client_secret",
+        "mythic",
+        "phils_book",
+        "IMG_"
+      ],
+      "started_by": "8825_core/sync/start_all_sync.sh",
+      "log_file": "8825_core/sync/logs/downloads_sync.log",
+      "dependencies": [
+        "python3",
+        "watchdog"
+      ],
+      "status": "stopped",
+      "should_be_running": false,
+      "last_modified": "2025-11-09"
+    },
+    {
+      "name": "inbox_sync",
+      "path": "8825_core/sync/inbox_sync.py",
+      "purpose": "3-way sync of 8825_inbox folder",
+      "touches": [
+        "~/Downloads/8825_inbox",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads/8825_inbox",
+        "~/Hammer Consulting Dropbox/Justin Harmon/Downloads/8825_inbox"
+      ],
+      "started_by": "8825_core/sync/start_all_sync.sh",
+      "log_file": "8825_core/sync/logs/inbox_sync.log",
+      "dependencies": [
+        "python3",
+        "watchdog"
+      ],
+      "status": "stopped",
+      "should_be_running": false,
+      "last_modified": "2025-11-09"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "sync_downloads_folders.sh",
+      "path": "INBOX_HUB/sync_downloads_folders.sh",
+      "purpose": "Manual sync with auto-cleanup",
+      "type": "sync",
+      "touches": [
+        "~/Downloads",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "excludes": [
+        "old",
+        "- old -",
+        "sticky_*",
+        "*brainstorm*",
+        "client_secret*",
+        "mythic*",
+        "phils_book*",
+        "IMG_*.HEIC",
+        "IMG_*.jpeg"
+      ],
+      "dependencies": [
+        "bash",
+        "rsync"
+      ],
+      "called_by": [
+        "sync_and_process.sh"
+      ],
+      "last_modified": "2025-11-09",
+      "safe_to_run": true
+    },
+    {
+      "name": "simple_sync_and_process.sh",
+      "path": "INBOX_HUB/simple_sync_and_process.sh",
+      "purpose": "One-way sync iCloud → Local + process inbox",
+      "type": "sync",
+      "touches": [
+        "~/Downloads",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "excludes": [
+        "8825_processed",
+        ".DS_Store",
+        "*.tmp",
+        "old",
+        "- old -",
+        "sticky_*",
+        "*brainstorm*",
+        "client_secret*",
+        "mythic*",
+        "phils_book*",
+        "IMG_*.HEIC",
+        "IMG_*.jpeg"
+      ],
+      "dependencies": [
+        "bash",
+        "rsync"
+      ],
+      "last_modified": "2025-11-09",
+      "safe_to_run": true
+    },
+    {
+      "name": "cleanup_downloads.sh",
+      "path": "INBOX_HUB/cleanup_downloads.sh",
+      "purpose": "Move 8825 files to archive",
+      "type": "cleanup",
+      "touches": [
+        "~/Downloads",
+        "~/Downloads/8825_processed"
+      ],
+      "dependencies": [
+        "bash"
+      ],
+      "last_modified": "2025-11-08",
+      "safe_to_run": true
+    },
+    {
+      "name": "sync_screenshots.sh",
+      "path": "INBOX_HUB/sync_screenshots.sh",
+      "purpose": "Sync from multiple sources to intake folders",
+      "type": "sync",
+      "touches": [
+        "~/Desktop",
+        "~/Downloads",
+        "~/Hammer Consulting Dropbox/Justin Harmon/Screenshots",
+        "INBOX_HUB/users/jh/intake/"
+      ],
+      "dependencies": [
+        "bash",
+        "rsync"
+      ],
+      "last_modified": "2025-11-08",
+      "safe_to_run": true
+    },
+    {
+      "name": "sync_brain.sh",
+      "path": "INBOX_HUB/sync_brain.sh",
+      "purpose": "Sync BRAIN_TRANSPORT to Downloads",
+      "type": "sync",
+      "touches": [
+        "~/Downloads"
+      ],
+      "dependencies": [
+        "bash"
+      ],
+      "last_modified": "2025-11-09",
+      "safe_to_run": true
+    },
+    {
+      "name": "sync_brain_to_both.sh",
+      "path": "INBOX_HUB/sync_brain_to_both.sh",
+      "purpose": "Sync BRAIN_TRANSPORT to both Downloads locations",
+      "type": "sync",
+      "touches": [
+        "~/Downloads",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "dependencies": [
+        "bash"
+      ],
+      "last_modified": "2025-11-09",
+      "safe_to_run": true
+    },
+    {
+      "name": "soccer_advisor.py",
+      "path": "users/justin_harmon/jh_assistant/poc/weekend_soccer_advisor/implementation/soccer_advisor.py",
+      "purpose": "Generate weekend soccer schedule",
+      "type": "tool",
+      "touches": [
+        "~/Downloads"
+      ],
+      "dependencies": [
+        "python3"
+      ],
+      "last_modified": "2025-11-09",
+      "safe_to_run": true
+    },
+    {
+      "name": "decision_agent.py",
+      "path": "8825_core/agents/decision_agent.py",
+      "type": "agent",
+      "purpose": "AI decision agent for routing tasks",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": false,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": true
+    },
+    {
+      "name": "brain_daemon.py",
+      "path": "8825_core/brain/brain_daemon.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "analyze_file_usage_metadata.py",
+      "path": "8825_core/explorations/features/analyze_file_usage_metadata.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "check_dropbox_shared_status.py",
+      "path": "8825_core/explorations/features/check_dropbox_shared_status.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "check_file_links.py",
+      "path": "8825_core/explorations/features/check_file_links.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "check_shared_folders.py",
+      "path": "8825_core/explorations/features/check_shared_folders.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_photos_icloud.sh",
+      "path": "8825_core/explorations/features/cleanup_photos_icloud.sh",
+      "type": "cleanup",
+      "purpose": "Cleanup script",
+      "dependencies": [
+        "bash",
+        "rsync"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_real_estate_dupes.py",
+      "path": "8825_core/explorations/features/cleanup_real_estate_dupes.py",
+      "type": "cleanup",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_real_estate_manual.sh",
+      "path": "8825_core/explorations/features/cleanup_real_estate_manual.sh",
+      "type": "cleanup",
+      "purpose": "Cleanup script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "compare_fonts_to_system.py",
+      "path": "8825_core/explorations/features/compare_fonts_to_system.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "enhanced_duplicate_check.py",
+      "path": "8825_core/explorations/features/enhanced_duplicate_check.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "bill_processor.py",
+      "path": "8825_core/explorations/features/phils_ledger_poc/bill_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "quick_duplicate_check.py",
+      "path": "8825_core/explorations/features/quick_duplicate_check.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:34Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ai_sweep.py",
+      "path": "8825_core/inbox/ai_sweep.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "classifier.py",
+      "path": "8825_core/inbox/classifier.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "deduplicator.py",
+      "path": "8825_core/inbox/deduplicator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ingestion_engine.py",
+      "path": "8825_core/inbox/ingestion_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "lane_a_processor.py",
+      "path": "8825_core/inbox/lane_a_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "lane_b_processor.py",
+      "path": "8825_core/inbox/lane_b_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "teaching_ticket_generator.py",
+      "path": "8825_core/inbox/teaching_ticket_generator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "validators.py",
+      "path": "8825_core/inbox/validators.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "weighting.py",
+      "path": "8825_core/inbox/weighting.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "dropbox_miner.py",
+      "path": "8825_core/integrations/dropbox/dropbox_miner.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:35Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "local_miner.py",
+      "path": "8825_core/integrations/dropbox/local_miner.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_access.py",
+      "path": "8825_core/integrations/dropbox/test_access.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "auto_import.sh",
+      "path": "8825_core/integrations/figjam/auto_import.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "figjam_api.py",
+      "path": "8825_core/integrations/figjam/figjam_api.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "get_latest_json.sh",
+      "path": "8825_core/integrations/figjam/get_latest_json.sh",
+      "type": "test",
+      "purpose": "Test script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "process_and_copy.sh",
+      "path": "8825_core/integrations/figjam/process_and_copy.sh",
+      "type": "processing",
+      "purpose": "Processing script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "simple_sticky_ocr.py",
+      "path": "8825_core/integrations/figjam/simple_sticky_ocr.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "sticky_processor.py",
+      "path": "8825_core/integrations/figjam/sticky_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "vision_sticky_processor.py",
+      "path": "8825_core/integrations/figjam/vision_sticky_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "goose_engine.py",
+      "path": "8825_core/integrations/goose/goose_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "server.py",
+      "path": "8825_core/integrations/mcp/mcp_template/server.py",
+      "type": "service",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_mcp.sh",
+      "path": "8825_core/integrations/mcp/mcp_template/start_mcp.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "client.py",
+      "path": "8825_core/integrations/mcp_server/client.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:36Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "dropbox_watch.py",
+      "path": "8825_core/mcp/dropbox_watch.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:37Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "inbox_server.py",
+      "path": "8825_core/mcp/inbox_server.py",
+      "type": "service",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:37Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_dropbox_watch.sh",
+      "path": "8825_core/mcp/start_dropbox_watch.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads",
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:37Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_inbox_server.sh",
+      "path": "8825_core/mcp/start_inbox_server.sh",
+      "type": "service",
+      "purpose": "Server/service script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:37Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_universal_watch.sh",
+      "path": "8825_core/mcp/start_universal_watch.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads",
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:38Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "universal_inbox_watch.py",
+      "path": "8825_core/mcp/universal_inbox_watch.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:38Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "meeting_prep_cli.py",
+      "path": "8825_core/meeting_prep/meeting_prep_cli.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:38Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "prep_generator.py",
+      "path": "8825_core/meeting_prep/prep_generator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:38Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "tracker.py",
+      "path": "sandbox/experimental/infrastructure_pocs/task_tracking/tracker.py",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:39Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "daily_email_processor.py",
+      "path": "shared/automations/tgif/daily_email_processor.py",
+      "type": "processing",
+      "purpose": "Load environment",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:39Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "weekly_rollup.py",
+      "path": "shared/automations/tgif/weekly_rollup.py",
+      "type": "unknown",
+      "purpose": "Load environment",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:39Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "8825.sh",
+      "path": "8825_core/registry/8825.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:39Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "8825_start.sh",
+      "path": "8825_core/registry/8825_start.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:39Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "audit_component.sh",
+      "path": "8825_core/registry/audit_component.sh",
+      "type": "audit",
+      "purpose": "Audit tool",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:40Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "audit_conflicts.sh",
+      "path": "8825_core/registry/audit_conflicts.sh",
+      "type": "audit",
+      "purpose": "Audit tool",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:40Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "audit_dependency.sh",
+      "path": "8825_core/registry/audit_dependency.sh",
+      "type": "audit",
+      "purpose": "Audit tool",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:40Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "audit_path.sh",
+      "path": "8825_core/registry/audit_path.sh",
+      "type": "audit",
+      "purpose": "Audit tool",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        "~/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:40Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "auto_register.sh",
+      "path": "8825_core/registry/auto_register.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash",
+        "rsync",
+        "jq"
+      ],
+      "touches": [
+        "~/Downloads",
+        "~/Desktop",
+        "~/Downloads/8825_inbox",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:41Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "check_dependencies.sh",
+      "path": "8825_core/registry/check_dependencies.sh",
+      "type": "health",
+      "purpose": "Health check script",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:41Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "check_health.sh",
+      "path": "8825_core/registry/check_health.sh",
+      "type": "health",
+      "purpose": "Health check script",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        "~/Downloads",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:41Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "registry_review.sh",
+      "path": "8825_core/registry/registry_review.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:41Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "registry_update.sh",
+      "path": "8825_core/registry/registry_update.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:42Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "validate_registry.sh",
+      "path": "8825_core/registry/validate_registry.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:42Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_all_mcps.sh",
+      "path": "8825_core/scripts/start_all_mcps.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:42Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "downloads_sync.py",
+      "path": "8825_core/sync/downloads_sync.py",
+      "type": "sync",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox",
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:42Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "inbox_sync.py",
+      "path": "8825_core/sync/inbox_sync.py",
+      "type": "sync",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:43Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_all_sync.sh",
+      "path": "8825_core/sync/start_all_sync.sh",
+      "type": "sync",
+      "purpose": "Sync script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:43Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "env_loader.py",
+      "path": "8825_core/system/env_loader.py",
+      "type": "unknown",
+      "purpose": "Example usage",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:43Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "time_calibration.py",
+      "path": "8825_core/system/time_calibration.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:43Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "build_index.py",
+      "path": "8825_core/workflows/build_index.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:44Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "brain_updater.py",
+      "path": "8825_core/workflows/ingestion/scripts/processors/brain_updater.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:44Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_manager.py",
+      "path": "8825_core/workflows/ingestion/scripts/processors/cleanup_manager.py",
+      "type": "cleanup",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:44Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "content_processor.py",
+      "path": "8825_core/workflows/ingestion/scripts/processors/content_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "metadata_processor.py",
+      "path": "8825_core/workflows/ingestion/scripts/processors/metadata_processor.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "relationship_mapper.py",
+      "path": "8825_core/workflows/ingestion/scripts/processors/relationship_mapper.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "library_merger.py",
+      "path": "8825_core/workflows/ingestion/scripts/routers/library_merger.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "project_router.py",
+      "path": "8825_core/workflows/ingestion/scripts/routers/project_router.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "when76_csv_parser.py",
+      "path": "8825_core/workflows/ingestion/scripts/source_handlers/when76_csv_parser.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:45Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "logger.py",
+      "path": "8825_core/workflows/ingestion/scripts/utils/logger.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:46Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_ingestion.py",
+      "path": "8825_core/workflows/ingestion/test_ingestion.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:46Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "md_converter.py",
+      "path": "8825_core/workflows/md_converter.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:46Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "checking_sg.sh",
+      "path": "INBOX_HUB/checking_sg.sh",
+      "type": "health",
+      "purpose": "Health check script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:47Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_8825_inbox.sh",
+      "path": "INBOX_HUB/cleanup_8825_inbox.sh",
+      "type": "cleanup",
+      "purpose": "Cleanup script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:47Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ocr_latest_screenshot.sh",
+      "path": "INBOX_HUB/ocr_latest_screenshot.sh",
+      "type": "test",
+      "purpose": "Test script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:47Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "sync_and_process.sh",
+      "path": "INBOX_HUB/sync_and_process.sh",
+      "type": "sync",
+      "purpose": "Sync script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:47Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_advisor.sh",
+      "path": "users/justin_harmon/jh_assistant/poc/weekend_soccer_advisor/implementation/test_advisor.sh",
+      "type": "test",
+      "purpose": "Test script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        "~/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:47Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "install_aliases.sh",
+      "path": "users/justin_harmon/jh_assistant/projects/competitive-analysis/install_aliases.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:48Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "add_competitor.py",
+      "path": "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/add_competitor.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:48Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "analyze_basic.py",
+      "path": "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/analyze_basic.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:48Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "list_competitors.py",
+      "path": "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/list_competitors.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:48Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "downloads_manager.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/downloads_manager.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:48Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "content_analyzer.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/content_analyzer.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "file_monitor.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/file_monitor.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "metadata_extractor.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/metadata_extractor.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "project_matcher.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/project_matcher.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "router.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/router.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_wedge.py",
+      "path": "users/justin_harmon/jh_assistant/projects/download-wedge/test_wedge.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "contact_matrix.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/core/contact_matrix.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "context_analyzer.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/core/context_analyzer.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:49Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "response_generator.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/core/response_generator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:50Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "session_manager.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/core/session_manager.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:50Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "comms.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/scripts/comms.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:50Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "rapid_response.py",
+      "path": "users/justin_harmon/jh_assistant/projects/jh-comms/scripts/rapid_response.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:50Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "shorten_url.py",
+      "path": "users/justin_harmon/jh_assistant/scripts/shorten_url.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:50Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "analogy_generator.py",
+      "path": "users/justin_harmon/joju/analogy_generator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "capture_website_images.py",
+      "path": "users/justin_harmon/joju/capture_website_images.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "extract_archive_images.py",
+      "path": "users/justin_harmon/joju/extract_archive_images.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "joju_image_capture.py",
+      "path": "users/justin_harmon/joju/joju_image_capture.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "profile_builder.py",
+      "path": "users/justin_harmon/joju/profile_builder.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "render_pdf_pages.py",
+      "path": "users/justin_harmon/joju/render_pdf_pages.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:51Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "rhino_contribution_scanner.py",
+      "path": "users/justin_harmon/joju/rhino_contribution_scanner.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:52Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "scrape_designer_profiles.py",
+      "path": "users/justin_harmon/joju/scrape_designer_profiles.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:52Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "setup_image_capture.sh",
+      "path": "users/justin_harmon/joju/setup_image_capture.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-10T06:55:52Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "auto_memory_creator.py",
+      "path": "8825_core/brain/auto_memory_creator.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "brain_api.py",
+      "path": "8825_core/brain/brain_api.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "checkpoint_reader.py",
+      "path": "8825_core/brain/checkpoint_reader.py",
+      "type": "health",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "competition_resolver.py",
+      "path": "8825_core/brain/competition_resolver.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "coordination_engine.py",
+      "path": "8825_core/brain/coordination_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "decay_engine.py",
+      "path": "8825_core/brain/decay_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "__init__.py",
+      "path": "8825_core/brain/healing_strategies/__init__.py",
+      "type": "unknown",
+      "purpose": "Healing strategies module",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "cleanup_disk.py",
+      "path": "8825_core/brain/healing_strategies/cleanup_disk.py",
+      "type": "cleanup",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "remove_orphaned_file.py",
+      "path": "8825_core/brain/healing_strategies/remove_orphaned_file.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "restart_component.py",
+      "path": "8825_core/brain/healing_strategies/restart_component.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:27Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "learning_extractor.py",
+      "path": "8825_core/brain/learning_extractor.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "prediction_engine.py",
+      "path": "8825_core/brain/prediction_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "self_healing_engine.py",
+      "path": "8825_core/brain/self_healing_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_brain.sh",
+      "path": "8825_core/brain/start_brain.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "stop_brain.sh",
+      "path": "8825_core/brain/stop_brain.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_full_system.py",
+      "path": "8825_core/brain/test_full_system.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "tool_evolution_detector.py",
+      "path": "8825_core/brain/tool_evolution_detector.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "usage_tracker.py",
+      "path": "8825_core/brain/usage_tracker.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "reverse_speed_reading.py",
+      "path": "8825_core/explorations/features/reverse_speed_reading.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "test_joju_routing.py",
+      "path": "8825_core/inbox/test_joju_routing.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "calendar_screenshot_sync.py",
+      "path": "8825_core/integrations/google/calendar_screenshot_sync.py",
+      "type": "sync",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "calendar_sync.py",
+      "path": "8825_core/integrations/google/calendar_sync.py",
+      "type": "sync",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "find_drive_folder.py",
+      "path": "8825_core/integrations/google/find_drive_folder.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:28Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "force_access_folder.py",
+      "path": "8825_core/integrations/google/force_access_folder.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "get_email_details.py",
+      "path": "8825_core/integrations/google/get_email_details.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "list_all_shared_folders.py",
+      "path": "8825_core/integrations/google/list_all_shared_folders.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "list_folder_contents.py",
+      "path": "8825_core/integrations/google/list_folder_contents.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "search_gmail.py",
+      "path": "8825_core/integrations/google/search_gmail.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "search_shared_with_me.py",
+      "path": "8825_core/integrations/google/search_shared_with_me.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "SETUP_GOOSE.sh",
+      "path": "8825_core/integrations/goose/SETUP_GOOSE.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "automation_catalog.py",
+      "path": "8825_core/protocols/partner_credit_marketplace/automation_catalog.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "governance.py",
+      "path": "8825_core/protocols/partner_credit_marketplace/governance.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ledger.py",
+      "path": "8825_core/protocols/partner_credit_marketplace/ledger.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "marketplace_cli.py",
+      "path": "8825_core/protocols/partner_credit_marketplace/marketplace_cli.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "partner_forge.py",
+      "path": "8825_core/protocols/partner_credit_marketplace/partner_forge.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "impact_analysis.sh",
+      "path": "8825_core/registry/impact_analysis.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash",
+        "rsync",
+        "jq"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:29Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "8825_unified_startup.sh",
+      "path": "8825_core/system/8825_unified_startup.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "analyze_user_testing.py",
+      "path": "8825_core/workflows/analyze_user_testing.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "export_tasks_to_word.py",
+      "path": "8825_core/workflows/export_tasks_to_word.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "extract_all_tasks.py",
+      "path": "8825_core/workflows/extract_all_tasks.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "extract_all_user_testing.py",
+      "path": "8825_core/workflows/extract_all_user_testing.py",
+      "type": "test",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "meeting_summary_pipeline.py",
+      "path": "8825_core/workflows/meeting_summary_pipeline.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "mine_kayson_session.py",
+      "path": "8825_core/workflows/mine_kayson_session.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        "~/Downloads/8825_inbox"
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "process_all_recent_meetings.py",
+      "path": "8825_core/workflows/process_all_recent_meetings.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "process_hcss_meetings.sh",
+      "path": "8825_core/workflows/process_hcss_meetings.sh",
+      "type": "processing",
+      "purpose": "Processing script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "sync_hcss_calendar.sh",
+      "path": "8825_core/workflows/sync_hcss_calendar.sh",
+      "type": "sync",
+      "purpose": "Sync script",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "auto_sync_daemon.py",
+      "path": "INBOX_HUB/auto_sync_daemon.py",
+      "type": "sync",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "enhanced_routing_rules.py",
+      "path": "INBOX_HUB/enhanced_routing_rules.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ocr_engine.py",
+      "path": "INBOX_HUB/ocr_engine.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:30Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "ocr_processor_v2.py",
+      "path": "INBOX_HUB/ocr_processor_v2.py",
+      "type": "processing",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "organize_documents.py",
+      "path": "INBOX_HUB/organize_documents.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "screengrab_swap.py",
+      "path": "INBOX_HUB/screengrab_swap.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "smart_router.py",
+      "path": "INBOX_HUB/smart_router.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "start_phase2.sh",
+      "path": "INBOX_HUB/start_phase2.sh",
+      "type": "unknown",
+      "purpose": "Auto-detected",
+      "dependencies": [
+        "bash"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    },
+    {
+      "name": "watch_screenshots.py",
+      "path": "INBOX_HUB/watch_screenshots.py",
+      "type": "unknown",
+      "purpose": "!/usr/bin/env python3",
+      "dependencies": [
+        "python3"
+      ],
+      "touches": [
+        ""
+      ],
+      "auto_registered": true,
+      "needs_review": true,
+      "last_modified": "2025-11-11T12:23:31Z",
+      "safe_to_run": false
+    }
+  ],
+  "critical_paths": {
+    "~/Downloads": {
+      "purpose": "Primary ingestion point",
+      "touched_by": [
+        "downloads_sync.py",
+        "sync_downloads_folders.sh",
+        "simple_sync_and_process.sh",
+        "cleanup_downloads.sh",
+        "sync_screenshots.sh",
+        "sync_brain.sh",
+        "sync_brain_to_both.sh",
+        "soccer_advisor.py"
+      ],
+      "expected_contents": [
+        "0-8825_BRAIN_TRANSPORT.json",
+        "8825_inbox/",
+        "8825_processed/",
+        "Private & Shared/",
+        "soccer_schedule.json"
+      ],
+      "auto_cleaned": [
+        "old/",
+        "- old -/",
+        "sticky_*",
+        "*brainstorm*",
+        "IMG_*",
+        "client_secret*",
+        "mythic*",
+        "phils_book*"
+      ],
+      "health_check": "size < 100MB"
+    },
+    "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads": {
+      "purpose": "iCloud Downloads (mobile ingestion)",
+      "touched_by": [
+        "downloads_sync.py",
+        "sync_downloads_folders.sh",
+        "simple_sync_and_process.sh",
+        "sync_brain_to_both.sh"
+      ],
+      "expected_contents": [
+        "0-8825_BRAIN_TRANSPORT.json",
+        "8825_inbox/",
+        "8825_processed/"
+      ],
+      "auto_cleaned": [
+        "old/",
+        "- old -/",
+        "sticky_*",
+        "*brainstorm*",
+        "IMG_*"
+      ],
+      "health_check": "size < 100MB"
+    },
+    "~/Downloads/8825_inbox": {
+      "purpose": "Active inbox for processing",
+      "touched_by": [
+        "inbox_sync.py",
+        "simple_sync_and_process.sh"
+      ],
+      "expected_contents": [
+        "pending/",
+        "processing/",
+        "completed/",
+        "errors/"
+      ],
+      "health_check": "pending/ not empty for > 24 hours"
+    }
+  },
+  "health_status": {
+    "last_check": "2025-11-10T06:15:00Z",
+    "overall": "unknown",
+    "downloads_size_mb": 0,
+    "icloud_downloads_size_mb": 0,
+    "conflicts_detected": 0,
+    "warnings": []
+  },
+  "change_history": [
+    {
+      "date": "2025-11-09",
+      "change": "Fixed downloads_sync daemon exclusions",
+      "reason": "Daemon was re-syncing cleaned files",
+      "components_affected": [
+        "downloads_sync.py",
+        "sync_downloads_folders.sh",
+        "simple_sync_and_process.sh"
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-11-10",
+      "change": "Created unified startup system with registry",
+      "reason": "Need governance to prevent system conflicts",
+      "components_affected": [
+        "8825_start.sh",
+        "SYSTEM_REGISTRY.json"
+      ],
+      "status": "in_progress"
+    }
+  ]
+}

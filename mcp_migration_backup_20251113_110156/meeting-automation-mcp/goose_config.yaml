@@ -1,0 +1,9 @@
+# Goose Configuration for Meeting Automation MCP
+
+mcpServers:
+  meeting-automation:
+    command: python3
+    args:
+      - /Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/integrations/mcp-servers/meeting-automation-mcp/server.py
+    env:
+      USERS_DIR: /Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/users

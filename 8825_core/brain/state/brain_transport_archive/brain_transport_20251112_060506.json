@@ -1,0 +1,160 @@
+{
+  "brain_version": "3.0",
+  "export_date": "2025-11-08T07:42:00Z",
+  "purpose": "Complete 8825 system context for LLM transport",
+  
+  "system_architecture": {
+    "version": "3.0",
+    "structure": {
+      "core": "8825_core/ - Shareable system (protocols, agents, workflows)",
+      "users": "users/justinharmon/ - Private user data",
+      "focuses": "focuses/{hcss,joju,jh_assistant}/ - Team-specific workspaces",
+      "index": "8825_index/ - Fast discovery layer"
+    },
+    "multi_mcp": {
+      "hcss_mcp": {
+        "port": 8826,
+        "purpose": "Client consulting work",
+        "access": ["justin_harmon", "hcss_team"]
+      },
+      "team76_mcp": {
+        "port": 8827,
+        "purpose": "Team 76 (Joju + Forge)",
+        "access": ["justin_harmon", "matthew_galley", "cam_watkins"]
+      },
+      "personal_mcp": {
+        "port": 8828,
+        "purpose": "Personal assistant",
+        "access": ["justin_harmon"]
+      }
+    }
+  },
+  
+  "interaction_modes": {
+    "dev_mode": {
+      "purpose": "GO MODE - Execute when plan is clear",
+      "approach": "Do first, minimal discussion",
+      "output": "Terse progress updates",
+      "code": "Only during execution",
+      "use_when": "You have plan and understand it"
+    },
+    "brainstorm_mode": {
+      "purpose": "ROADMAP CREATION - Design solution",
+      "approach": "Analyze, propose architecture with code blocks",
+      "output": "Complete roadmap with implementation",
+      "code": "YES - show patterns, workflows, examples",
+      "use_when": "Exploring ideas, need executable plan"
+    },
+    "teaching_mode": {
+      "purpose": "UNDERSTANDING THE PLAN - Help you comprehend",
+      "approach": "Plain language, analogies, no code",
+      "output": "Conceptual explanations",
+      "code": "NEVER - concepts only",
+      "use_when": "Need to understand before approving"
+    }
+  },
+  
+  "workflow": {
+    "natural_flow": "Teaching (understand) → Brainstorm (plan) → Dev (execute)",
+    "mode_switching": {
+      "explicit": "switch to [mode] mode",
+      "auto_detect": "Based on request type"
+    }
+  },
+  
+  "inbox_protocol": {
+    "location": "~/Downloads/8825_inbox/",
+    "trigger": "fetch inbox",
+    "folders": {
+      "pending": "New files from ChatGPT",
+      "processing": "Currently reviewing",
+      "completed": "Successfully integrated",
+      "errors": "Validation failures"
+    },
+    "json_format": {
+      "content_type": "mining_report|achievement|pattern|note|feature|decision",
+      "target_focus": "joju|hcss|team76|jh",
+      "content": "Structured data specific to type",
+      "metadata": {
+        "source": "chatgpt",
+        "timestamp": "ISO 8601",
+        "note": "Optional context"
+      }
+    },
+    "file_naming": "YYYYMMDD_HHMMSS_{type}_{focus}.json"
+  },
+  
+  "key_locations": {
+    "master_library": "joju_sandbox/libraries/justin_harmon_master_library.json",
+    "v3_workspace": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/windsurf-project - 8825 8825-system/",
+    "v2_workspace": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/windsurf-project - 8825 version 2.0/",
+    "inbox": "~/Downloads/8825_inbox/",
+    "ide_configs": "8825_core/system/ide_configs/"
+  },
+  
+  "active_memories": {
+    "v3_migration": "Complete - 5 phases, 1h 20min, 100% success",
+    "professional_title": "Industrial Designer / UX Strategist / Design Leader",
+    "portfolio_positioning": "5 pillars, messy middle metaphor",
+    "focus_modes": ["jh", "joju", "hcss"],
+    "meeting_workflows": "TGIF auto-route, non-TGIF confirm",
+    "three_mode_system": "Teaching → Brainstorm → Dev"
+  },
+  
+  "communication_style": {
+    "dev_mode": "Terse, action-focused, no fluff",
+    "brainstorm_mode": "Comprehensive, analytical, code blocks",
+    "teaching_mode": "Conversational, analogies, no code",
+    "general": "Markdown-heavy, bullet lists, scannable"
+  },
+  
+  "critical_rules": {
+    "professional_title": "NEVER change - exact format with slashes",
+    "tgif_routing": "Auto-route to HCSS/TGI Fridays/ - meeting summaries -/",
+    "non_tgif_routing": "Always confirm destination first",
+    "dev_mode": "Execute immediately when plan is clear",
+    "brainstorm_mode": "Always include code blocks and roadmap",
+    "teaching_mode": "Never show code, only concepts"
+  },
+  
+  "migration_status": {
+    "phase_0": "Complete - v3.0 structure created",
+    "phase_1": "Complete - Core files copied and refactored",
+    "phase_2": "Complete - User data extracted",
+    "phase_3": "Complete - Multi-MCP workspaces created",
+    "phase_4": "Complete - Index layer built",
+    "phase_5": "Optional - Testing",
+    "phase_6": "Optional - Production switch"
+  },
+  
+  "integration_targets": {
+    "joju": "joju_sandbox/libraries/justin_harmon_master_library.json",
+    "hcss": "focuses/hcss/knowledge/",
+    "team76": "focuses/joju/projects/",
+    "jh": "users/justinharmon/personal/"
+  },
+  
+  "validation_rules": {
+    "inbox_files": [
+      "Valid JSON format",
+      "All required fields present",
+      "content_type is valid enum",
+      "target_focus is valid focus",
+      "timestamp is ISO 8601",
+      "content is not empty"
+    ]
+  },
+  
+  "quick_commands": {
+    "fetch_inbox": "Process files from ~/Downloads/8825_inbox/pending/",
+    "focus_on_jh": "Activate JH personal focus",
+    "focus_on_joju": "Activate Joju/Team 76 focus",
+    "focus_on_hcss": "Activate HCSS client focus",
+    "sync_brain": "Create comprehensive brain sync document",
+    "switch_to_dev_mode": "Enter execution mode",
+    "switch_to_brainstorm_mode": "Enter planning mode",
+    "switch_to_teaching_mode": "Enter learning mode"
+  },
+  
+  "status": "Production-ready v3.0 system with three-mode interaction and inbox transport layer"
+}

@@ -1,0 +1,34 @@
+{
+  "critical_rules": [
+    {
+      "name": "TGIF Auto-Route",
+      "location": "focuses/hcss/workflows/tgif_auto_route.json",
+      "protected": true,
+      "reason": "Production routing for HCSS TGIF meetings"
+    },
+    {
+      "name": "Joju Achievement Detection",
+      "location": "joju_sandbox/patterns/achievement_detection.json",
+      "protected": true,
+      "reason": "Core Joju functionality for mining achievements"
+    },
+    {
+      "name": "3-Mode System",
+      "location": "8825_core/system/ide_configs",
+      "protected": true,
+      "reason": "Teaching → Brainstorm → Dev workflow"
+    },
+    {
+      "name": "MCP Inbox Server",
+      "location": "8825_core/mcp/inbox_server.py",
+      "protected": true,
+      "reason": "ChatGPT → Windsurf transport layer"
+    },
+    {
+      "name": "Universal Inbox Watch",
+      "location": "8825_core/mcp/universal_inbox_watch.py",
+      "protected": true,
+      "reason": "Multi-location inbox monitoring"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "focus": "jh_assistant",
+  "version": "3.0.0",
+  "built_at": "2025-11-07T19:14:55.929028",
+  "files": {
+    "focuses/jh_assistant/mcp_server/server.py": {
+      "type": "py",
+      "size": 3202,
+      "modified": "2025-11-07T19:10:37.185034",
+      "source": "focus"
+    },
+    "focuses/jh_assistant/mcp_server/config.json": {
+      "type": "json",
+      "size": 808,
+      "modified": "2025-11-07T19:11:12.128257",
+      "source": "focus"
+    },
+    "focuses/jh_assistant/mcp_server/start_mcp.sh": {
+      "type": "sh",
+      "size": 317,
+      "modified": "2025-11-07T19:10:37.185327",
+      "source": "focus"
+    },
+    "focuses/jh_assistant/mcp_server/config_schema.json": {
+      "type": "json",
+      "size": 1386,
+      "modified": "2025-11-07T19:10:37.184526",
+      "source": "focus"
+    },
+    "users/justin_harmon/jh_assistant/STATUS.md": {
+      "type": "md",
+      "size": 1082,
+      "modified": "2025-11-07T19:03:24.736891",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/QUICKSTART.md": {
+      "type": "md",
+      "size": 2408,
+      "modified": "2025-11-07T19:03:24.735911",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/EXIT_PROTOCOL.md": {
+      "type": "md",
+      "size": 1628,
+      "modified": "2025-11-07T19:03:24.735325",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/README.md": {
+      "type": "md",
+      "size": 2215,
+      "modified": "2025-11-07T19:03:24.736368",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/QUICKSTART.md": {
+      "type": "md",
+      "size": 5765,
+      "modified": "2025-11-07T19:03:24.742784",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/WORKFLOW.md": {
+      "type": "md",
+      "size": 6765,
+      "modified": "2025-11-07T19:03:24.743475",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/README.md": {
+      "type": "md",
+      "size": 5231,
+      "modified": "2025-11-07T19:03:24.744117",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/core/context_analyzer.py": {
+      "type": "py",
+      "size": 6610,
+      "modified": "2025-11-07T19:03:24.740249",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/core/response_generator.py": {
+      "type": "py",
+      "size": 8270,
+      "modified": "2025-11-07T19:03:24.740833",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/core/session_manager.py": {
+      "type": "py",
+      "size": 9779,
+      "modified": "2025-11-07T19:03:24.741454",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/core/contact_matrix.py": {
+      "type": "py",
+      "size": 8291,
+      "modified": "2025-11-07T19:03:24.742115",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/scripts/rapid_response.py": {
+      "type": "py",
+      "size": 4760,
+      "modified": "2025-11-07T19:03:24.745269",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/scripts/comms.py": {
+      "type": "py",
+      "size": 5100,
+      "modified": "2025-11-07T19:03:24.745923",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/jh-comms/data/contact_matrix.json": {
+      "type": "json",
+      "size": 1263,
+      "modified": "2025-11-07T19:03:24.746693",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/competitors.json": {
+      "type": "json",
+      "size": 295,
+      "modified": "2025-11-07T19:03:24.747535",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/config.json": {
+      "type": "json",
+      "size": 321,
+      "modified": "2025-11-07T19:03:24.748008",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/QUICKSTART.md": {
+      "type": "md",
+      "size": 3347,
+      "modified": "2025-11-07T19:03:24.749381",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/README.md": {
+      "type": "md",
+      "size": 4007,
+      "modified": "2025-11-07T19:03:24.749894",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/install_aliases.sh": {
+      "type": "sh",
+      "size": 1753,
+      "modified": "2025-11-07T19:03:24.752482",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/list_competitors.py": {
+      "type": "py",
+      "size": 2355,
+      "modified": "2025-11-07T19:03:24.750743",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/add_competitor.py": {
+      "type": "py",
+      "size": 3545,
+      "modified": "2025-11-07T19:03:24.751249",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/scripts/analyze_basic.py": {
+      "type": "py",
+      "size": 6505,
+      "modified": "2025-11-07T19:03:24.751971",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/test_wedge.py": {
+      "type": "py",
+      "size": 6204,
+      "modified": "2025-11-07T19:03:24.753392",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/QUICKSTART.md": {
+      "type": "md",
+      "size": 3394,
+      "modified": "2025-11-07T19:03:24.753843",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/README.md": {
+      "type": "md",
+      "size": 5165,
+      "modified": "2025-11-07T19:03:24.754453",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/DOWNLOADS_MANAGER_README.md": {
+      "type": "md",
+      "size": 7624,
+      "modified": "2025-11-07T19:03:24.755132",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/project_contexts.json": {
+      "type": "json",
+      "size": 3859,
+      "modified": "2025-11-07T19:03:24.762418",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/downloads_sync.py": {
+      "type": "py",
+      "size": 6973,
+      "modified": "2025-11-07T19:03:24.768657",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/test_results.json": {
+      "type": "json",
+      "size": 2562,
+      "modified": "2025-11-07T19:03:24.769180",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/downloads_manager.py": {
+      "type": "py",
+      "size": 12132,
+      "modified": "2025-11-07T19:03:24.769724",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/DOWNLOADS_SYNC_README.md": {
+      "type": "md",
+      "size": 6137,
+      "modified": "2025-11-07T19:03:24.770300",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/logs/manager.log": {
+      "type": "log",
+      "size": 6119,
+      "modified": "2025-11-07T19:03:24.756218",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/logs/sync.log": {
+      "type": "log",
+      "size": 40208,
+      "modified": "2025-11-07T19:03:24.757350",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/project_matcher.py": {
+      "type": "py",
+      "size": 4781,
+      "modified": "2025-11-07T19:03:24.759467",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/file_monitor.py": {
+      "type": "py",
+      "size": 5366,
+      "modified": "2025-11-07T19:03:24.760151",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/metadata_extractor.py": {
+      "type": "py",
+      "size": 3441,
+      "modified": "2025-11-07T19:03:24.760752",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/content_analyzer.py": {
+      "type": "py",
+      "size": 5308,
+      "modified": "2025-11-07T19:03:24.761278",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/scripts/router.py": {
+      "type": "py",
+      "size": 4105,
+      "modified": "2025-11-07T19:03:24.761947",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/projects/download-wedge/data/filed_files.json": {
+      "type": "json",
+      "size": 1585,
+      "modified": "2025-11-07T19:03:24.765567",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/notes/PROBLEM_STATEMENT_PATTERNS.md": {
+      "type": "md",
+      "size": 10044,
+      "modified": "2025-11-07T19:03:24.738543",
+      "source": "user"
+    },
+    "users/justin_harmon/jh_assistant/scripts/shorten_url.py": {
+      "type": "py",
+      "size": 2164,
+      "modified": "2025-11-07T19:03:24.770993",
+      "source": "user"
+    }
+  },
+  "concepts": {},
+  "stats": {
+    "total_files": 45,
+    "total_size": 0,
+    "file_types": {}
+  }
+}

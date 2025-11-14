@@ -1,0 +1,16 @@
+{
+  "title": "TGIF Weekly Sync",
+  "date": "2025-10-28",
+  "source": "sample_data",
+  "transcript": "Sample transcript for TGIF Weekly Sync",
+  "summary": "# TGIF Weekly Sync\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "1 hour",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "TGIF"
+  },
+  "processed_at": "2025-11-11T12:28:43.904083"
+}

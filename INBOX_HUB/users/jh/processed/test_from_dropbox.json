@@ -1,0 +1,14 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "content": {
+    "title": "Test from Dropbox",
+    "content": "This file was saved to Dropbox inbox",
+    "tags": ["test", "dropbox"]
+  },
+  "metadata": {
+    "source": "test",
+    "timestamp": "2025-11-08T08:32:00Z",
+    "note": "Testing universal inbox from Dropbox"
+  }
+}

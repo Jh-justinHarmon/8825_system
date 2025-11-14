@@ -1,0 +1,219 @@
+{
+  "mining_session": {
+    "timestamp": "2025-11-05T21:00:00-06:00",
+    "source_materials": [
+      "prtclinc.com website",
+      "Jh-ARCHV/shinola/ (5 PDF design collections)",
+      "User confirmation: Managing Partner & Design Lead at PRTCL"
+    ],
+    "focus": "Design leadership, product design, collaboration, brand strategy",
+    "total_achievements_extracted": 12,
+    "company": "PRTCL (Protocol Design Agency)"
+  },
+  
+  "company_overview": {
+    "name": "PRTCL (Protocol Design Agency)",
+    "founded": "2007",
+    "type": "Boutique design agency",
+    "specialization": "Eyewear design & conceptualization",
+    "markets": [
+      "Runway",
+      "Sport",
+      "Boutique",
+      "Lifestyle",
+      "Luxury",
+      "Street",
+      "Technical",
+      "Mainstream fashion",
+      "Avant-garde"
+    ],
+    "combined_experience": "Nearly 40 years",
+    "philosophy": "Good enough is never good enough"
+  },
+  
+  "role_details": {
+    "title": "Managing Partner & Design Lead",
+    "date_range": "2018 — 2024",
+    "location": "Dallas, TX & Brooklyn, NY",
+    "collaborator": "Mark Craig (Founder & Design Director)",
+    "industries": [
+      "Eyewear (primary)",
+      "Apparel",
+      "Sports",
+      "Timepieces"
+    ],
+    "experience_years": "20+",
+    "approach": "Well-researched lens with big picture focus, acute attention to detail, human-centric design, quality materials"
+  },
+  
+  "achievements": [
+    {
+      "id": "prtcl_001",
+      "category": "Design Leadership & Partnership",
+      "metric": "Managing Partner role",
+      "action": "Co-led boutique design agency as Managing Partner",
+      "outcome": "Delivered design solutions across runway, sport, lifestyle, luxury, and technical markets with nearly 40 years combined expertise",
+      "full_text": "Co-led boutique design agency as Managing Partner alongside founder Mark Craig, delivering world-class design solutions across diverse markets including runway, sport, lifestyle, luxury, street, technical, and avant-garde with nearly 40 years combined expertise.",
+      "skills": ["Design Leadership", "Partnership Management", "Multi-Market Strategy", "Agency Operations"]
+    },
+    {
+      "id": "prtcl_002",
+      "category": "Product Design & Innovation",
+      "metric": "20+ years experience",
+      "action": "Led design and innovation efforts across eyewear, apparel, sports, and timepieces",
+      "outcome": "Established reputation for human-centric design with acute attention to detail and technical excellence",
+      "full_text": "Led design and innovation efforts across eyewear, apparel, sports, and timepieces industries for 20+ years, establishing reputation for human-centric design approach combining well-researched insights with acute attention to detail and technical excellence.",
+      "skills": ["Product Design", "Innovation Leadership", "Human-Centric Design", "Technical Design"]
+    },
+    {
+      "id": "prtcl_003",
+      "category": "Brand Collaboration & Strategy",
+      "metric": "Multiple brand collaborations",
+      "action": "Designed products for brands across different markets, price points, and continents",
+      "outcome": "Successfully delivered design solutions spanning wide array of materials and market segments",
+      "full_text": "Designed products for wide array of brands across different markets, price points, and continents, successfully delivering design solutions in plethora of materials while maintaining quality standards and human-centric approach.",
+      "skills": ["Brand Strategy", "Cross-Market Design", "Material Innovation", "Client Management"]
+    },
+    {
+      "id": "prtcl_004",
+      "category": "Shinola Collaboration - Watch Design",
+      "metric": "4+ watch collections designed",
+      "action": "Co-designed Shinola watch collaboration collections",
+      "outcome": "Delivered Watch Monster collection, Runwell COMBO and METAL variants from concept to production-ready specifications",
+      "full_text": "Co-designed multiple Shinola watch collaboration collections with Mark Craig, delivering Watch Monster collection and Runwell watch in COMBO and METAL variants from concept through production-ready specifications (2021).",
+      "skills": ["Watch Design", "Product Collaboration", "Technical Specifications", "Production Design"]
+    },
+    {
+      "id": "prtcl_005",
+      "category": "Shinola Collaboration - Bicycle Design",
+      "metric": "Bicycle Arrow collection",
+      "action": "Co-designed Shinola bicycle collaboration",
+      "outcome": "Extended collaboration beyond timepieces to bicycle design, demonstrating versatility across product categories",
+      "full_text": "Co-designed Shinola Bicycle Arrow collaboration collection, extending partnership beyond timepieces to demonstrate design versatility across product categories while maintaining brand alignment and quality standards (2021).",
+      "skills": ["Bicycle Design", "Cross-Category Design", "Brand Alignment", "Product Development"]
+    },
+    {
+      "id": "prtcl_006",
+      "category": "Design Process & Methodology",
+      "metric": "Well-researched approach",
+      "action": "Applied research-driven design methodology",
+      "outcome": "Combined big picture thinking with acute attention to detail to deliver comprehensive design solutions",
+      "full_text": "Applied research-driven design methodology combining big picture strategic thinking with acute attention to detail, ensuring no element in design process left untouched while maintaining real-world outlook and customer problem-solving focus.",
+      "skills": ["Design Research", "Strategic Thinking", "Detail Orientation", "Problem-Solving"]
+    },
+    {
+      "id": "prtcl_007",
+      "category": "Material & Quality Excellence",
+      "metric": "Quality-first approach",
+      "action": "Prioritized quality and enduring materials in product strategies",
+      "outcome": "Established reputation for beautiful, lasting designs using premium materials",
+      "full_text": "Prioritized quality and human-centric design as paramount to product strategies, selecting enduring and beautiful materials for each individual piece to ensure lasting value and aesthetic excellence.",
+      "skills": ["Material Selection", "Quality Assurance", "Product Strategy", "Aesthetic Design"]
+    },
+    {
+      "id": "prtcl_008",
+      "category": "Creative Problem-Solving",
+      "metric": "Philosophy: 'Breaking established patterns'",
+      "action": "Applied creative problem-solving to look at challenges differently",
+      "outcome": "Delivered innovative solutions by breaking out of established patterns and conventional approaches",
+      "full_text": "Applied creative problem-solving philosophy of 'breaking out of established patterns to look at things in a different way,' delivering innovative solutions that challenged conventional approaches while maintaining client objectives and user needs.",
+      "skills": ["Creative Thinking", "Innovation", "Pattern Breaking", "Solution Design"]
+    },
+    {
+      "id": "prtcl_009",
+      "category": "Client Relations & Service",
+      "metric": "Tireless client advocacy",
+      "action": "Worked tirelessly to find good solutions to customer problems",
+      "outcome": "Built strong client relationships through dedicated problem-solving and real-world outlook",
+      "full_text": "Worked tirelessly for clients to find good solutions to their customer problems while maintaining real-world outlook, building strong relationships through dedicated service and practical design approach.",
+      "skills": ["Client Relations", "Customer Advocacy", "Problem-Solving", "Service Excellence"]
+    },
+    {
+      "id": "prtcl_010",
+      "category": "Technical Excellence",
+      "metric": "Technical background + design expertise",
+      "action": "Combined technical background with design leadership",
+      "outcome": "Ensured comprehensive design process with no element untouched",
+      "full_text": "Combined technical background with design leadership expertise to ensure comprehensive design process where no element left untouched, delivering technically sound and aesthetically excellent solutions.",
+      "skills": ["Technical Design", "Engineering Integration", "Comprehensive Design", "Quality Control"]
+    },
+    {
+      "id": "prtcl_011",
+      "category": "Multi-Industry Expertise",
+      "metric": "4 industries mastered",
+      "action": "Developed expertise across eyewear, apparel, sports, and timepieces",
+      "outcome": "Established versatile design capability spanning multiple product categories and markets",
+      "full_text": "Developed deep expertise across four distinct industries (eyewear, apparel, sports, timepieces), establishing versatile design capability that spans multiple product categories while maintaining consistent quality and human-centric approach.",
+      "skills": ["Multi-Industry Design", "Versatility", "Cross-Category Expertise", "Market Adaptation"]
+    },
+    {
+      "id": "prtcl_012",
+      "category": "Design Philosophy & Vision",
+      "metric": "'Good enough is never good enough'",
+      "action": "Upheld world-class design standards",
+      "outcome": "Maintained agency philosophy of excellence across all projects and client engagements",
+      "full_text": "Upheld world-class design standards aligned with agency philosophy that 'good enough is never good enough,' consistently striving for excellence across all projects while welcoming new challenges and opportunities.",
+      "skills": ["Design Excellence", "Standards Setting", "Vision Leadership", "Continuous Improvement"]
+    }
+  ],
+  
+  "shinola_project_details": {
+    "collections_designed": [
+      {
+        "name": "Collection 1: Watch Monster",
+        "date": "October 2021",
+        "category": "Watches",
+        "file": "shinola_collab_collection_1_watch_monster_102121.pdf"
+      },
+      {
+        "name": "Collection 2: Runwell COMBO",
+        "date": "October-November 2021",
+        "category": "Watches",
+        "files": [
+          "shinola_collab_collection_2_runwell-COMBO_102421.pdf",
+          "shinola_collab_runwell-COMBO_c1_110721.pdf"
+        ]
+      },
+      {
+        "name": "Collection 2: Runwell METAL",
+        "date": "October 2021",
+        "category": "Watches",
+        "file": "shinola_collab_collection_2_runwell-METAL_102121.pdf"
+      },
+      {
+        "name": "Collection 4: Bicycle Arrow",
+        "date": "October 2021",
+        "category": "Bicycles",
+        "file": "shinola_collab_collection_4_bicycle_arrow_102421.pdf"
+      }
+    ],
+    "collaboration_scope": "Multi-product collaboration spanning watches and bicycles",
+    "design_partners": "Justin Harmon & Mark Craig (PRTCL)",
+    "brand_partner": "Shinola"
+  },
+  
+  "summary_statistics": {
+    "total_achievements": 12,
+    "categories": [
+      "Design Leadership",
+      "Product Design",
+      "Brand Collaboration",
+      "Creative Problem-Solving",
+      "Technical Excellence",
+      "Client Relations"
+    ],
+    "industries_covered": 4,
+    "shinola_collections": 4,
+    "years_experience": "20+",
+    "company_tenure": "2018-2024"
+  },
+  
+  "recommended_work_experience_entry": {
+    "id": "prtcl_inc",
+    "year": "2018 — 2024",
+    "heading": "Managing Partner & Design Lead at prtcl inc",
+    "company": "prtcl inc",
+    "location": "Dallas, TX & Brooklyn, NY",
+    "note": "This entry already exists in justin_harmon_joju_input.json - achievements can enhance existing description"
+  }
+}

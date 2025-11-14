@@ -1,0 +1,16 @@
+{
+  "title": "HCSS Architecture Review",
+  "date": "2025-11-05",
+  "source": "sample_data",
+  "transcript": "Sample transcript for HCSS Architecture Review",
+  "summary": "# HCSS Architecture Review\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "2 hours",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "HCSS"
+  },
+  "processed_at": "2025-11-11T12:28:43.905490"
+}

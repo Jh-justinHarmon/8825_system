@@ -1,0 +1,158 @@
+{
+  "brain_version": "3.1",
+  "export_date": "2025-11-13T17:36:00Z",
+  "purpose": "Complete 8825 system context for LLM transport - v3.1 Layered Architecture",
+  
+  "system_architecture": {
+    "version": "3.1.0",
+    "codename": "Layered Architecture",
+    "promotion_flow": "sandbox → shared/focuses → core",
+    
+    "layers": {
+      "L0_sandbox": {
+        "path": "sandbox/",
+        "purpose": "Experiments and POCs",
+        "subdivisions": {
+          "experimental": "Active POCs",
+          "graduated": "Ready for promotion"
+        }
+      },
+      "L1_users": {
+        "path": "users/justin_harmon/",
+        "purpose": "User-specific data and workflows",
+        "consolidated": "All user data in one location (justinharmon → justin_harmon)"
+      },
+      "L2_focuses": {
+        "path": "focuses/",
+        "purpose": "Focus-specific production code",
+        "active_focuses": ["hcss", "joju", "jh_assistant", "team76"],
+        "structure": {
+          "knowledge": "Focus-specific documentation",
+          "projects": "Active projects",
+          "workflows": "How things work",
+          "user_data": "Symlink to users/{user}/{focus}"
+        }
+      },
+      "L3_shared": {
+        "path": "shared/",
+        "purpose": "Cross-focus production resources",
+        "subdivisions": {
+          "automations": "Cross-focus automations (e.g., TGIF)",
+          "templates": "Reusable templates",
+          "libraries": "Shared code"
+        }
+      },
+      "L4_core": {
+        "path": "core/",
+        "purpose": "Universal system essentials",
+        "subdivisions": {
+          "pipelines": "System-wide pipelines",
+          "integrations": "Universal integrations",
+          "protocols": "System protocols",
+          "utilities": "Helper tools"
+        }
+      }
+    },
+    
+    "mcp_servers": {
+      "location": "~/mcp_servers/",
+      "consolidated": "All MCP servers in single location (2025-11-13)",
+      "count": 9,
+      "servers": [
+        "8825-core",
+        "hcss-bridge",
+        "figma-make-transformer",
+        "figjam",
+        "otter-integration",
+        "fds",
+        "meeting-automation",
+        "ral-portal",
+        "customer-platform"
+      ]
+    }
+  },
+  
+  "tools_available": {
+    "poc_auditor": {
+      "command": "./8825_core/system/8825_audit_poc.sh",
+      "purpose": "Automated POC promotion readiness scoring",
+      "scoring": "100-point system based on stability, docs, production use"
+    },
+    "promotion_helper": {
+      "command": "./8825_core/system/promote_poc.sh",
+      "purpose": "Automated POC promotion workflow",
+      "creates": ".PROMOTION metadata with full history"
+    },
+    "cascade_lock": {
+      "command": "./8825_core/system/cascade_lock.sh",
+      "purpose": "Multi-Cascade conflict prevention",
+      "timeout": "15 minutes auto-unlock"
+    },
+    "deletion_logger": {
+      "command": "./8825_core/system/log_deletion.sh",
+      "purpose": "Track all deletions",
+      "log": "migrations/deleted_items_log.json"
+    }
+  },
+  
+  "refactor_changes": {
+    "date": "2025-11-13",
+    "duration": "75 minutes",
+    "phases": 4,
+    "key_changes": [
+      "Implemented layered architecture (L0-L4)",
+      "Consolidated MCP servers (11 → 9, 5 locations → 1)",
+      "Eliminated TGIF triplication (3 copies → 1 in shared/automations/)",
+      "Removed 78 version number references from paths",
+      "Created automated POC auditing and promotion",
+      "Established Cascade lock system",
+      "Zero duplicates achieved"
+    ]
+  },
+  
+  "promotion_criteria": {
+    "required": [
+      "In production (actually being used)",
+      "Stable (14+ days since last major change)",
+      "Documented (has README)",
+      "Multi-focus potential OR reusable"
+    ],
+    "nice_to_have": [
+      "Requirements file (requirements.txt or package.json)",
+      "Has maintainer",
+      "Has tests",
+      "Lessons documented"
+    ]
+  },
+  
+  "prevention_protocols": [
+    "Never version numbers in paths - use version.json",
+    "Never production code in POC folders - monthly audit required",
+    "Never duplicate across layers - one canonical location",
+    "Always use Cascade lock for system-wide changes",
+    "Always log deletions before removing"
+  ],
+  
+  "quick_commands": {
+    "launch": "launch_8825",
+    "audit_pocs": "audit-pocs",
+    "promote": "promote-poc <source> <dest>",
+    "check_lock": "check-lock",
+    "version": "8825-version"
+  },
+  
+  "metrics": {
+    "mcp_servers": "9 unique in ~/mcp_servers/",
+    "duplicates": "0 (eliminated all)",
+    "version_refs": "0 (removed 78)",
+    "time_to_find": "<30 seconds (was 5-10 minutes)",
+    "pocs_in_production_folders": "0 (was 3+)"
+  },
+  
+  "status": {
+    "production_ready": true,
+    "last_major_refactor": "2025-11-13",
+    "next_scheduled_audit": "Monthly POC audit",
+    "system_health": "Excellent"
+  }
+}

@@ -1,0 +1,3 @@
+Error: Missing required fields: content_type, content, metadata
+Original file: T-8825-20251108-163055.json
+Timestamp: 20251109_002725

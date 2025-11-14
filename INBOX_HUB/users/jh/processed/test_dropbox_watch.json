@@ -1,0 +1,14 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "content": {
+    "title": "Dropbox Watch Test",
+    "content": "Testing automatic file movement from Dropbox to inbox",
+    "tags": ["test", "dropbox", "automation"]
+  },
+  "metadata": {
+    "source": "test",
+    "timestamp": "2025-11-08T08:23:00Z",
+    "note": "Testing Dropbox watch service"
+  }
+}

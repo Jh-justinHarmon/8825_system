@@ -1,0 +1,372 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "justinharmon",
+    "displayName": "Justin Harmon",
+    "profession": "Product Developer / UX Leader / Entrepreneur",
+    "location": "Dallas, Texas",
+    "pronouns": "He/Him",
+    "byline": "Product Developer / UX Leader / Entrepreneur in Dallas, Texas, He/Him",
+    "website": "prtclinc.com",
+    "websiteURL": "https://prtclinc.com",
+    "about": "Multi-disciplinary product developer with 20+ years of experience spanning industrial design, UX strategy, and product management. Expert at translating user insights into commercially viable products that drive measurable business outcomes. Known for founding the VSP Innovation Lab (3D department at Marchon), delivering $10M+ in revenue growth, and achieving 10-26% sales increases across multiple brands. Passionate about innovation at the intersection of design, technology, and human behavior.",
+    "status": {
+      "text": "Building AI-powered solutions for team building and professional development",
+      "emoji": "🚀",
+      "timestamp": "2025-11-05"
+    },
+    "sectionOrder": [
+      "Projects",
+      "Work Experience",
+      "Achievements",
+      "Skills",
+      "Education",
+      "Contact"
+    ]
+  },
+  "projects": [
+    {
+      "id": "trustybits",
+      "year": "2025",
+      "heading": "Trustybits - Hiring Manager Intelligence Tool",
+      "url": null,
+      "collaborators": [],
+      "description": "AI-powered team building advisory tool that empowers hiring managers to translate team dynamics into actionable search criteria for HR. Uses Big Five and Belbin frameworks to generate three-profile candidate blueprints (Conventional, Adjacent/Transferable, High-Ceiling Wild Card). Blue ocean opportunity creating new category: 'Hiring Manager Intelligence Tools'.",
+      "attachments": [],
+      "type": "project",
+      "title": "Trustybits - Hiring Manager Intelligence Tool",
+      "company": "Innovation Project",
+      "metrics": [
+        "Blue ocean market opportunity validated",
+        "Three-profile system designed",
+        "Design sprint ready"
+      ]
+    },
+    {
+      "id": "joju_platform",
+      "year": "2024",
+      "heading": "Joju - Professional OS",
+      "url": null,
+      "collaborators": [],
+      "description": "LinkedIn alternative with proof-based profiles and zero-configuration portfolio generation. PromptGen workflow generates portfolios in <30 seconds with multiple style variants (Classic, Modern, Corporate). Frame as enhancement before replacement, targeting subtle converts first.",
+      "attachments": [],
+      "type": "project",
+      "title": "Joju - Professional OS",
+      "company": "Active Development"
+    },
+    {
+      "id": "8825_pcms",
+      "year": "2025",
+      "heading": "8825 PCMS (Persistent Context Memory Sidecar)",
+      "url": null,
+      "collaborators": [],
+      "description": "LLM-agnostic portable knowledge system for maintaining consistent AI behavior across platforms. Single JSON file contains all context for any LLM (ChatGPT, Claude, Gemini, Windsurf). Features confidence-based decision making, two-stage knowledge mining, and adaptive learning.",
+      "attachments": [],
+      "type": "project",
+      "title": "8825 PCMS",
+      "company": "Production Ready v2.0.0"
+    },
+    {
+      "id": "vsp_innovation_lab",
+      "year": "2004-2012",
+      "heading": "VSP Innovation Lab (3D Design Department)",
+      "url": null,
+      "collaborators": [],
+      "description": "Founded and led the 3D design department at Marchon (later branded as VSP Innovation Lab). Revolutionized prototyping efficiency by reducing timelines and enhancing iteration speed through rapid 3D modeling and printing.",
+      "attachments": [],
+      "type": "project",
+      "title": "VSP Innovation Lab",
+      "company": "Marchon",
+      "metrics": [
+        "Founded department from scratch",
+        "Reduced prototyping timelines significantly",
+        "Enhanced product iteration speed"
+      ]
+    },
+    {
+      "id": "nike_vision_launch",
+      "year": "2005-2012",
+      "heading": "Nike Vision Product Line Launch",
+      "url": null,
+      "collaborators": [],
+      "description": "Led launch of new Nike Vision product line targeting younger consumers. Leveraged research insights to secure stakeholder buy-in and drive market success.",
+      "attachments": [],
+      "type": "project",
+      "title": "Nike Vision Product Line",
+      "company": "Marchon",
+      "metrics": [
+        "$10 million revenue growth",
+        "10% of company's annual growth in first year",
+        "Successfully targeted younger demographic"
+      ]
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "hammer_consulting",
+      "company": "Hammer Consulting & Support Services",
+      "title": "Product Manager",
+      "location": "Dallas, TX",
+      "startDate": "2015",
+      "endDate": "Present",
+      "current": true,
+      "description": "Lead product strategy and development for B2B SaaS platform, driving operational efficiency and user-centered solutions.",
+      "achievements": [
+        "Drove operational efficiency by designing automated workflows, cutting manual tasks by 55% and reducing seasonal staff reliance by 65%",
+        "Led cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes",
+        "Resolved critical user pain points through research and analysis, improving workflows and user satisfaction",
+        "Enhanced stakeholder engagement with intuitive UI prototypes using Figma and Adobe XD, driving client buy-in",
+        "Spearheaded delivery of new features for online statement processing tools, increasing usability and accessibility",
+        "Led comprehensive website redesign for non-profit division, delivering scalable, user-driven solutions"
+      ]
+    },
+    {
+      "id": "prtcl_inc",
+      "company": "prtcl inc",
+      "title": "Managing Partner & Design Lead",
+      "location": "Dallas, TX & Brooklyn, NY",
+      "startDate": "2018",
+      "endDate": "2024",
+      "current": false,
+      "description": "Led design strategy and product development across multiple eyewear brands, driving sales growth through user-centered innovation.",
+      "achievements": [
+        "Drove sales growth by 10–26% across multiple brands through user-centered product strategies",
+        "Unified cross-functional teams to deliver seamless product solutions aligned with business objectives",
+        "Uncovered and resolved critical user pain points, improving satisfaction and product adoption",
+        "Led high-impact product launches, balancing competing priorities to deliver innovative solutions",
+        "Boosted revenue growth through strategic trend analysis, positioning products for long-term success",
+        "Transformed user feedback into actionable enhancements, exceeding customer expectations"
+      ]
+    },
+    {
+      "id": "costa",
+      "company": "COSTA (via prtcl inc)",
+      "title": "Design Lead",
+      "location": "Remote",
+      "startDate": "2016",
+      "endDate": "2018",
+      "current": false,
+      "description": "Led design strategy for Costa Del Mar eyewear collections, improving user experience and e-commerce performance.",
+      "achievements": [
+        "Resolved product defects and reduced customer complaints through cross-functional collaboration",
+        "Increased website conversion rates and reduced returns by implementing user fit profiles",
+        "Established new design standards from user research insights, driving consistency",
+        "Delivered strategic project outcomes managing design agency deliverables",
+        "Elevated team performance through mentorship on vendor collaboration",
+        "Boosted user engagement by developing features informed by community feedback"
+      ]
+    },
+    {
+      "id": "fossil",
+      "company": "Fossil Group",
+      "title": "Senior Watch Designer",
+      "location": "Dallas, TX",
+      "startDate": "2012",
+      "endDate": "2015",
+      "current": false,
+      "description": "Led watch design strategy and team development, delivering high-impact product launches.",
+      "achievements": [
+        "Delivered 23.7% sales increase by directing strategic design for Skechers watch line launch",
+        "Spearheaded innovation through designer mentorship in vendor collaboration",
+        "Accelerated project timelines through stakeholder collaboration and workflow optimization",
+        "Drove measurable product improvements by prioritizing user needs and addressing feedback",
+        "Trained junior designers in advanced workflows, fostering skill development",
+        "Unified brand identity across watches and handbags, creating seamless customer journey"
+      ]
+    },
+    {
+      "id": "marchon",
+      "company": "Marchon",
+      "title": "Senior Eyewear Designer",
+      "location": "NYC",
+      "startDate": "2004",
+      "endDate": "2012",
+      "current": false,
+      "description": "Led Nike Vision design team and founded VSP Innovation Lab (3D design department), driving innovation and revenue growth.",
+      "achievements": [
+        "Drove $10 million revenue growth by launching Nike Vision product line for younger consumers (10% of annual company growth)",
+        "Founded 3D design department (later branded as VSP Innovation Lab), revolutionizing prototyping efficiency",
+        "Championed user-centered design practices in strategic discussions, aligning needs with goals",
+        "Orchestrated cross-functional collaboration for Nike Vision eyewear line",
+        "Accelerated team productivity through mentorship and collaborative environment",
+        "Elevated product-market fit by analyzing feedback and delivering strategic recommendations"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "category": "Revenue Impact",
+      "items": [
+        {
+          "metric": "$10 million",
+          "description": "Revenue growth from Nike Vision product line launch",
+          "year": "2005-2012",
+          "company": "Marchon",
+          "context": "10% of company's annual growth in first year"
+        },
+        {
+          "metric": "23.7%",
+          "description": "Sales increase from Skechers watch line launch",
+          "year": "2014",
+          "company": "Fossil Group",
+          "context": "Strategic design management aligned with market demand"
+        },
+        {
+          "metric": "10-26%",
+          "description": "Sales growth across multiple brands",
+          "year": "2018-2024",
+          "company": "prtcl inc",
+          "context": "User-centered product strategies directly impacting revenue"
+        }
+      ]
+    },
+    {
+      "category": "Operational Efficiency",
+      "items": [
+        {
+          "metric": "55%",
+          "description": "Reduction in manual tasks through automation",
+          "year": "2015-Present",
+          "company": "Hammer Consulting",
+          "context": "B2B SaaS platform workflow optimization"
+        },
+        {
+          "metric": "65%",
+          "description": "Reduction in seasonal staff reliance",
+          "year": "2015-Present",
+          "company": "Hammer Consulting",
+          "context": "Automated workflows eliminating temporary support needs"
+        }
+      ]
+    },
+    {
+      "category": "User Experience",
+      "items": [
+        {
+          "metric": "Increased",
+          "description": "Website conversion rates through user fit profiles",
+          "year": "2016-2018",
+          "company": "COSTA",
+          "context": "Optimized clarity and usability across online customer journey"
+        },
+        {
+          "metric": "Reduced",
+          "description": "Product returns via improved user guidance",
+          "year": "2016-2018",
+          "company": "COSTA",
+          "context": "User fit profiles improving purchase confidence"
+        },
+        {
+          "metric": "Boosted",
+          "description": "User engagement and retention",
+          "year": "2016-2018",
+          "company": "COSTA",
+          "context": "Features informed by target community feedback"
+        }
+      ]
+    },
+    {
+      "category": "Innovation",
+      "items": [
+        {
+          "metric": "Founded",
+          "description": "VSP Innovation Lab (3D design department)",
+          "year": "2004-2012",
+          "company": "Marchon",
+          "context": "Revolutionized prototyping efficiency and iteration speed"
+        },
+        {
+          "metric": "Created",
+          "description": "Three-profile hiring blueprint system",
+          "year": "2025",
+          "company": "Trustybits",
+          "context": "Blue ocean opportunity in hiring manager intelligence tools"
+        },
+        {
+          "metric": "Developed",
+          "description": "Zero-configuration portfolio generation (8825 PCMS)",
+          "year": "2025",
+          "company": "Innovation Project",
+          "context": "LLM-agnostic portable knowledge system"
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "product_management": [
+      "Product Strategy",
+      "Roadmap Planning",
+      "Cross-functional Leadership",
+      "Market Analysis",
+      "Feature Prioritization",
+      "Stakeholder Management",
+      "Agile/Scrum"
+    ],
+    "design": [
+      "UX/UI Design",
+      "User Research",
+      "Prototyping",
+      "Design Systems",
+      "Figma",
+      "Adobe XD",
+      "Industrial Design",
+      "3D Modeling"
+    ],
+    "technical": [
+      "B2B SaaS Platforms",
+      "Workflow Automation",
+      "API Integration",
+      "Data Analysis",
+      "AI/ML Applications",
+      "Python",
+      "JSON/REST"
+    ],
+    "leadership": [
+      "Team Building",
+      "Mentorship",
+      "Strategic Planning",
+      "Change Management",
+      "Vendor Management",
+      "Design Thinking"
+    ],
+    "domain_expertise": [
+      "Eyewear Design",
+      "Consumer Products",
+      "E-commerce",
+      "HR Tech",
+      "Professional Networking Platforms"
+    ]
+  },
+  "education": {
+    "note": "To be added from resume documents"
+  },
+  "metadata": {
+    "created": "2025-11-05",
+    "version": "1.1.0",
+    "source": "JH_master_library.json v1.1.0",
+    "format": "joju_input_compatible",
+    "ready_for_upload": true,
+    "generated_by": "8825_joju_mode",
+    "joju_mode_session": "jm_001",
+    "last_updated": "2025-11-05T20:09:00-06:00",
+    "ingestion_sources": [
+      "JH_master_library.json",
+      "detailed_achievements.json",
+      "Jh-ARCHV/- RESUME - folder scan"
+    ],
+    "achievements_included": 31,
+    "quantified_metrics": 7,
+    "target_audiences": {
+      "subtle_converts": "Risk-averse professionals seeking conventional presentation",
+      "evangelists": "Design-focused early adopters seeking creative presentation",
+      "hiring_managers": "Recruiters seeking proof-based, measurable outcomes"
+    },
+    "style_variants_available": [
+      "classic",
+      "modern",
+      "corporate"
+    ],
+    "validation_status": "passed",
+    "schema_version": "1.0"
+  }
+}

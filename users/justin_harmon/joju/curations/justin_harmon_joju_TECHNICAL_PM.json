@@ -1,0 +1,305 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "justinharmon",
+    "displayName": "Justin Harmon",
+    "profession": "Product Manager / Technical Product Leader / UX Strategist",
+    "location": "Dallas, Texas",
+    "pronouns": "He/Him",
+    "byline": "Product Manager / Technical Product Leader / UX Strategist in Dallas, Texas, He/Him",
+    "website": "prtclinc.com",
+    "websiteURL": "https://prtclinc.com",
+    "about": "Technical product leader with 20+ years driving measurable outcomes through data-driven strategy and cross-functional execution. Delivered $10M+ in revenue growth with 10-26% sales increases, 35% operational efficiency gains, and 18% market share growth across B2B SaaS, AI platforms, and consumer products. Expert at architecting scalable solutions (8825 PCMS, Trustybits AI platform), implementing automated workflows (68% auto-filing rate, 2,400+ monthly transactions), and leveraging analytics for strategic product decisions (VSP sales data, user fit profiling). Known for founding the VSP Innovation Lab (revolutionizing prototyping efficiency) and leading technical product development from concept to production-ready systems.",
+    "status": {
+      "text": "Architecting scalable product solutions with measurable business impact",
+      "emoji": "🚀",
+      "timestamp": "2025-11-05"
+    },
+    "sectionOrder": [
+      "Projects",
+      "Work Experience",
+      "Education",
+      "Skills",
+      "Side Projects",
+      "Awards",
+      "Contact"
+    ]
+  },
+  "projects": [
+    {
+      "id": "trustybits",
+      "year": "2025",
+      "heading": "Trustybits - Hiring Manager Intelligence Tool",
+      "url": null,
+      "collaborators": [],
+      "description": "Architected AI-powered platform synthesizing Big Five and Belbin frameworks to generate data-driven candidate blueprints. Product strategy identified blue ocean opportunity, creating new market category: 'Hiring Manager Intelligence Tools'. Led end-to-end product development from discovery through MVP, defining product requirements, technical architecture, and go-to-market strategy. Delivered three-profile recommendation system (Conventional, Adjacent/Transferable, High-Ceiling Wild Card) enabling hiring managers to translate qualitative team dynamics into quantifiable search criteria for HR systems.",
+      "attachments": [],
+      "type": "project",
+      "title": "Trustybits - Hiring Manager Intelligence Tool",
+      "company": "Innovation Project"
+    },
+    {
+      "id": "joju_platform",
+      "year": "2024",
+      "heading": "Joju - Professional OS",
+      "url": null,
+      "collaborators": [],
+      "description": "Led product development for professional networking platform with zero-configuration architecture. Implemented PromptGen workflow achieving <30 second portfolio generation with 3 style variants (Classic, Modern, Corporate). Defined product strategy positioning as 'enhancement before replacement' to reduce adoption friction. Technical implementation features proof-based profile validation and automated content generation, targeting measurable conversion metrics for subtle adopters.",
+      "attachments": [],
+      "type": "project",
+      "title": "Joju - Professional OS",
+      "company": "Active Development"
+    },
+    {
+      "id": "8825_pcms",
+      "year": "2025",
+      "heading": "8825 PCMS (Persistent Context Memory Sidecar)",
+      "url": null,
+      "collaborators": [],
+      "description": "Architected production-ready LLM-agnostic knowledge management system (v2.0.0) with single-file architecture enabling seamless portability across ChatGPT, Claude, Gemini, and Windsurf. Technical implementation features confidence-based decision-making algorithm, two-stage knowledge mining workflow, and adaptive learning system. Delivered scalable solution for maintaining consistent AI behavior across platforms with zero-configuration deployment. Product achieves <30 second initialization target across all supported LLM platforms.",
+      "attachments": [],
+      "type": "project",
+      "title": "8825 PCMS",
+      "company": "Production Ready v2.0.0"
+    },
+    {
+      "id": "vsp_innovation_lab",
+      "year": "2004-2012",
+      "heading": "VSP Innovation Lab (3D Design Department)",
+      "url": null,
+      "collaborators": [],
+      "description": "Founded and led technical innovation department (VSP Innovation Lab) introducing CAD/3D modeling and rapid prototyping systems to eyewear industry. Drove measurable efficiency gains by reducing prototyping timelines and accelerating design iteration cycles. Implemented Rhino and SolidWorks workflows with 3D printing capabilities, establishing new technical standards for product development. Led cross-functional team managing technology adoption, training programs, and integration with existing manufacturing processes.",
+      "attachments": [],
+      "type": "project",
+      "title": "VSP Innovation Lab",
+      "company": "Marchon"
+    },
+    {
+      "id": "nike_vision_launch",
+      "year": "2005-2012",
+      "heading": "Nike Vision Product Line Launch",
+      "url": null,
+      "collaborators": [],
+      "description": "Led launch of new Nike Vision product line targeting younger consumers, with 'Live Free' collection becoming #1 selling optical style globally in 2011 and #1 in Asia. Generated $10 million in revenue in 2010, accounting for 10% of Marchon's total sales growth. Achieved 18% market share in youth segment through data-driven product strategy using VSP sales analytics. Nike Vision voted best mens, teens & kids optical frame brand of 2012 by 20/20 & Vision Monday Magazine. Successfully expanded material mix from 67% plastic to balanced portfolio including milled metal and standard eyewire metals, resonating with guys segment and expanding into unisex and youth girl segments.",
+      "attachments": [],
+      "type": "project",
+      "title": "Nike Vision Product Line",
+      "company": "Marchon"
+    },
+    {
+      "id": "tiger_cut",
+      "year": "2012",
+      "heading": "Tiger Cut / SHOW.X2 Eyewear Collection",
+      "url": null,
+      "collaborators": [],
+      "description": "Designed SHOW.X2 eyewear collection exploring innovative lens cut options and frame design variations for Spring 2012. Delivered comprehensive design sketchbook with multiple lens cut options, frame geometry explorations, and design recommendations. Showcases eyewear design exploration process, technical design development, and visual design refinement for production-ready specifications.",
+      "attachments": [],
+      "type": "project",
+      "title": "Tiger Cut / SHOW.X2 Collection",
+      "company": "Marchon"
+    },
+    {
+      "id": "amare_stoudemire_goggles",
+      "year": "2011",
+      "heading": "Amare Stoudemire Custom Protective Goggles",
+      "url": "https://www.justin-harmon.art/case-study-02",
+      "collaborators": [],
+      "description": "Designed custom protective goggles for Nike-signed NBA star Amare Stoudemire through user-centered industrial design process. Conducted direct athlete interviews to identify stability and comfort issues, prototyped 2 design solutions (temple extensions with elastic vs neoprene with silicone strap), and implemented user-tested modifications resolving bruising and irritation problems. Athlete wore goggles for remainder of career, preventing potential blindness. Showcases full integration of user research, usability testing, and iterative design into industrial design process.",
+      "attachments": [],
+      "type": "project",
+      "title": "Amare Stoudemire Custom Protective Goggles",
+      "company": "Nike"
+    },
+    {
+      "id": "shinola_collaborations",
+      "year": "2021",
+      "heading": "Shinola Collaboration Collections",
+      "url": "https://www.dropbox.com/scl/fi/ugzkf5x3696lpp7s4182y/shinola_collab_collection.pdf?rlkey=7c3g9euiwafq38y8hewym3g62&dl=0",
+      "collaborators": ["Mark Craig"],
+      "description": "Co-designed multiple Shinola collaboration collections at PRTCL including Watch Monster, Runwell (COMBO and METAL variants) featuring integrated movement design and case architecture, and Bicycle Arrow featuring custom frame geometry and component integration. Delivered luxury brand collaborations from concept through production-ready specifications with specialized manufacturing partners. Showcases expertise in watch design (movement integration, case architecture), bicycle design (frame geometry), and high-end brand collaboration across multiple product categories.",
+      "attachments": [],
+      "type": "project",
+      "title": "Shinola Collaboration Collections",
+      "company": "PRTCL"
+    },
+    {
+      "id": "costa_performance_eyewear",
+      "year": "2016-2018",
+      "heading": "COSTA Performance Eyewear Collections",
+      "url": "https://www.dropbox.com/scl/fi/syy01e3zs96t9yy4atldt/COSTA-Spring-2018-HD.mp4?rlkey=gpon414eyevk1khe83tnnv1hn&dl=0",
+      "collaborators": [],
+      "description": "Designed performance sunglass collections for fishing and water sports markets, specializing in polarized lens technology, hydrophobic coatings, and sport-specific frame geometries optimized for on-water conditions. Implemented user fit profiles based on face measurements and fit preferences, designing frame sizing system that reduced product returns and improved product-customer matching. Established new design standards for COSTA's performance eyewear line by translating user research insights from professional anglers and recreational boaters into prioritized requirements for lens clarity, frame durability, and saltwater resistance.",
+      "attachments": [
+        {
+          "type": "video",
+          "url": "https://www.dropbox.com/scl/fi/syy01e3zs96t9yy4atldt/COSTA-Spring-2018-HD.mp4?rlkey=gpon414eyevk1khe83tnnv1hn&dl=0",
+          "title": "COSTA Spring 2018 Collection"
+        },
+        {
+          "type": "video",
+          "url": "https://www.dropbox.com/scl/fi/8cdsrj74lzi59bdxeqiy5/COSTA-Fall-2018-Rough-03.mp4?rlkey=uuvyomya90afobyvwbm2p7d7h&dl=0",
+          "title": "COSTA Fall 2018 Collection"
+        },
+        {
+          "type": "video",
+          "url": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Costa_Production_Mp4_101416.mp4",
+          "title": "COSTA Optical Launch Production"
+        },
+        {
+          "type": "document",
+          "url": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/18-0110_onBoarding.pptx",
+          "title": "COSTA Onboarding Materials (2018)"
+        }
+      ],
+      "type": "project",
+      "title": "COSTA Performance Eyewear Collections",
+      "company": "COSTA"
+    }
+  ],
+  "sideProjects": [],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "8825_trustybits",
+      "year": "2025",
+      "heading": "UX Strategist / Product Designer at 8825 PCMS & Trustybits",
+      "url": null,
+      "collaborators": [],
+      "description": "- Architected production-ready LLM-agnostic knowledge management system (8825 PCMS v2.0.0) enabling seamless context portability across ChatGPT, Claude, Gemini, and Windsurf through innovative single-file architecture.\n- Designed comprehensive protocol framework consisting of 4 core systems synthesized from 4+ scientific frameworks (Kurt Lewin's Group Dynamics, Belbin's Team Roles, Tuckman's Stages, Amy Edmondson's Psychological Safety): confidence-based decision-making (mathematical formula), adaptive learning, two-stage knowledge mining, and zero-configuration content generation with <30 second target.\n- Conducted 8-phase discovery journey from initial curiosity to market-ready solution, evolving concept from abstract team building theory to concrete hiring manager empowerment tool with validated problem-solution fit and refined problem articulation addressing translation challenge between hiring managers and HR.\n- Identified and validated blue ocean market opportunity by analyzing 100+ resume building platforms in $1.5-7.5 billion market, confirming zero direct competitors and creating new 'Hiring Manager Intelligence Tools' category through systematic competitive analysis and market gap identification for Trustybits project.\n- Identified root causes of hiring dysfunction with quantified impact: hiring managers think in team dynamics but communicate in job description language while HR thinks in qualifications but lacks team context, with bad hires costing 2.5x annual salary in turnover and productivity loss.\n- Designed innovative three-profile hiring blueprint system (Conventional Fit, Adjacent/Transferable Fit, High-Ceiling Wild Card) grounded in 6 scientific frameworks requiring zero organizational change, maintaining 100% ATS compatibility, and creating win-win-win outcomes for hiring managers, HR, and candidate diversity.\n- Designed predictive compatibility engine showing specific quantified outcomes like 'Adding Profile A reduces team creativity by 15% but increases execution reliability by 30%,' providing team chemistry simulation capability previously only available through expensive consulting.\n- Developed comprehensive validation strategy using real hiring managers with actual open positions to measure quality improvements, establishing 4 success metrics: reduced candidate-to-interview ratio, increased hiring manager satisfaction, decreased time-to-hire, and improved 90-day retention/performance ratings.\n- Created comprehensive adoption strategy with 7 distinct acceleration tactics including psychological positioning (beta tester appeal), viral growth mechanics (internal social proof), and Google-like simplicity approach with zero behavior change design, addressing crowded market perception challenges in $1.5-7.5B space.\n- Designed system to actively promote diversity by identifying 4 specific ATS issues (keyword-heavy screening, years-of-experience requirements, traditional path privilege, homogeneous pools) through structured spectrum approach focusing on team gaps, with bias mitigation protocols and explainable AI recommendations.\n- Led complete system design and documentation effort, producing 19 files including master brain architecture, 4 core protocols, user profiles, and comprehensive guides achieving 94/100 documentation quality score.\n- Designed zero-configuration PromptGen workflow that generates professional portfolios in under 30 seconds with three style variants and audience-specific optimization for different user segments.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "UX Strategist / Product Designer",
+      "company": "8825 PCMS & Trustybits",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "hammer_consulting",
+      "year": "2015 — Now",
+      "heading": "Product Manager at Hammer Consulting & Support Services",
+      "url": null,
+      "collaborators": [],
+      "description": "- Drove operational efficiency and cost savings by designing and implementing automated workflows on B2B SaaS platform achieving 35% task reduction (including extra clicks and steps while filing), 55% auto-collection rate for online statements, 68% auto-filing rate for uploaded PDFs via 3 web crawlers collecting 2,400+ statements monthly, resulting in fewest seasonal temp employees in 5 years with team ahead of tax deadlines for first time.\n- Aligned user needs with business goals by leading cross-functional collaboration among development teams, clients, and stakeholders, resulting in successful project outcomes and improved product performance.\n- Resolved critical user pain points through in-depth user research and analysis, redesigning reports after interviews revealed 'super annoying to navigate' filters, transforming unused feature into valuable tool that helped team quickly identify missing statements and improving workflows that elevated user satisfaction.\n- Enhanced stakeholder engagement by creating and presenting intuitive UI prototypes using Figma and Adobe XD, effectively communicating innovative product features that drove client buy-in.\n- Spearheaded delivery of new features for online statement processing including Secret Vault credential management system (eliminating Excel-based tracking), drag-and-drop upload with 68% auto-filing via intelligent PDF parsing and learning mapper, and 3 automated web crawlers, increasing usability, accessibility, and operational efficiency for end-users.\n- Led a comprehensive website redesign initiative for a non-profit division, conducting user research and overseeing wireframing and prototyping to deliver scalable, user-driven solutions aligned with organizational goals.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Product Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "nike_amare",
+      "year": "2011",
+      "heading": "Industrial Designer (Contract) at Nike",
+      "url": null,
+      "collaborators": [],
+      "description": "- Designed custom protective goggles for Nike-signed NBA star Amare Stoudemire through user-centered industrial design process, conducting direct athlete interviews to identify stability and comfort issues (bruising around nose, temple irritation from tight elastic), prototyping 2 design solutions (temple extensions with elastic vs neoprene with overcast silicone), and implementing user-tested modifications that resolved problems enabling career-long use.\n- Implemented comprehensive usability testing methodology presenting prototype options during Nike photo shoot warm-up session, observing athlete's distinct preference for silicone strap solution, then integrating specific feedback and implementing final modifications into innovative construction requiring specialized NYC fabrication.\n- Achieved design philosophy integration and 'light bulb moment' realizing user-focused Industrial Design process and philosophy aligns with UX fundamentals, showcasing full integration of user interviews and usability testing into design process as crowning achievement demonstrating cross-discipline design thinking that informed future work.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Industrial Designer (Contract)",
+      "company": "Nike",
+      "location": "NYC"
+    },
+    {
+      "id": "prtcl_inc",
+      "year": "2018 — 2024",
+      "heading": "Managing Partner & Design Lead at prtcl inc",
+      "url": "https://www.prtclinc.com/",
+      "collaborators": [],
+      "description": "- Co-led boutique design agency as Managing Partner alongside founder Mark Craig, delivering world-class eyewear, apparel, sports equipment, and timepiece design solutions across diverse markets including runway, sport, lifestyle, luxury, street, technical, and avant-garde with nearly 40 years combined expertise.\n- Led design and innovation efforts across eyewear, apparel, sports, and timepieces industries for 20+ years, designing collections in acetate, metal, titanium, leather, and technical materials for brands across multiple continents, establishing reputation for human-centric design approach combining well-researched insights with acute attention to detail and technical excellence.\n- Co-designed multiple Shinola collaboration collections including Watch Monster, Runwell (COMBO and METAL variants) featuring integrated movement design and case architecture, and Bicycle Arrow featuring custom frame geometry and component integration, delivering from concept through production-ready specifications with specialized manufacturing partners (2021).\n- Designed eyewear collections for diverse brand portfolio working across price points from accessible to luxury, collaborating with Italian acetate suppliers and Asian metal frame manufacturers, developing frame architectures optimized for fit, optical performance, and brand aesthetic alignment.\n- Drove sales growth by 10–26% across multiple brands by leveraging market research and user insights to craft innovative, user-centered product strategies combining aesthetic excellence with functional performance that directly impacted revenue.\n- Applied research-driven design methodology combining big picture strategic thinking with acute attention to detail in material selection, surface finishing, and construction methods, ensuring no element in design process left untouched while maintaining real-world outlook on manufacturability and cost.\n- Prioritized quality and human-centric design as paramount to product strategies, selecting enduring and beautiful materials (premium acetates, titanium, sapphire crystal, Italian leather) for each individual piece to ensure lasting value and aesthetic excellence.\n- Applied creative problem-solving philosophy of 'breaking out of established patterns to look at things in a different way,' delivering innovative solutions in frame construction, hinge mechanisms, and material applications that challenged conventional approaches.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY"
+    },
+    {
+      "id": "costa",
+      "year": "2016 — 2018",
+      "heading": "Design Lead at COSTA",
+      "url": null,
+      "collaborators": [],
+      "description": "- Designed performance sunglass collections for fishing and water sports markets, specializing in polarized lens technology, hydrophobic coatings, and sport-specific frame geometries optimized for on-water conditions, resolving product defects through cross-functional collaboration with engineering, QA, and stakeholders, delivering measurable improvements to user experience.\n- Played essential role in increasing website conversion rates and reducing product returns by implementing user fit profiles based on face measurements and fit preferences, designing frame sizing system that optimized clarity and usability across online customer journey, improving product-customer matching.\n- Established and enforced new design standards for COSTA's performance eyewear line by translating user research insights from target fishing and boating communities into prioritized requirements for lens clarity, frame durability, and saltwater resistance, driving consistency and measurable gains in user satisfaction.\n- Delivered strategic project outcomes by managing design agency deliverables for seasonal collections, working with Italian and Asian factories on acetate and metal frame production, aligning outputs with user needs and business goals, exceeding expectations with on-time, high-quality results.\n- Elevated team performance and innovation by mentoring team members on vendor collaboration, material selection for marine environments, and iterative design practices, achieving stronger project execution and improved deliverable quality.\n- Boosted user engagement and retention by spearheading development of new features informed by target community feedback from professional anglers and recreational boaters, exceeding user expectations and increasing adoption rates.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Design Lead",
+      "company": "COSTA",
+      "location": "Remote"
+    },
+    {
+      "id": "fossil",
+      "year": "2012 — 2015",
+      "heading": "Senior Watch Designer at Fossil Group",
+      "url": null,
+      "collaborators": [],
+      "description": "- Delivered 23.7% sales increase by directing strategic design contributions for Skechers watch line launch, designing sport-lifestyle watch collections integrating quartz and automatic movements with case designs in stainless steel, aluminum, and composite materials, aligning features with market demand to maximize business impact.\n- Designed watch collections across multiple Fossil Group brands including Fossil, Skagen, and licensed properties, working with Swiss and Asian movement suppliers, developing case architecture, dial layouts, and strap/bracelet systems, ensuring design integrity from concept through production.\n- Spearheaded innovation in watch design by exploring new materials and finishing techniques (PVD coating, ceramic bezels, leather and silicone straps), mentoring designers in vendor collaboration and iterative design practices, streamlining processes and driving enhanced project execution.\n- Accelerated project timelines and optimized workflows by leading stakeholder collaboration with movement suppliers, case manufacturers, and assembly facilities, aligning development goals with business priorities, ensuring on-time delivery of high-impact product designs.\n- Drove measurable product improvements by leading cross-functional efforts to prioritize user needs in wearability, legibility, and durability, addressing critical feedback on case sizing and strap comfort, shaping product roadmap that elevated user satisfaction and engagement.\n- Unified brand identity across watch and accessories categories by developing cohesive design language, aligning design strategies and timelines across product categories, creating seamless and cohesive customer journey between watches and handbags.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "marchon",
+      "year": "2004 — 2012",
+      "heading": "Senior Eyewear Designer at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "- Designed Nike Vision 'Live Free' collection generating $10 million in revenue in 2010, accounting for 10% of Marchon's total sales growth, becoming #1 selling optical style globally in 2011 and #1 in Asia, with Nike Vision voted best mens, teens & kids optical frame brand of 2012 by 20/20 & Vision Monday Magazine.\n- Achieved 18% market share in youth segment through data-driven product strategy using VSP sales analytics, successfully expanding material mix from 67% plastic to balanced portfolio including milled metal and standard eyewire metals, resonating with guys segment and expanding into unisex and youth girl segments.\n- Designed Tiger Cut / SHOW.X2 eyewear collection exploring innovative lens cut options and frame design variations for Spring 2012, delivering comprehensive design sketchbook with multiple options and technical recommendations for production.\n- Revolutionized design efficiency by founding 3D design department (later branded as VSP Innovation Lab), pioneering CAD/3D modeling and rapid prototyping in eyewear industry, reducing prototyping timelines by implementing Rhino and SolidWorks workflows with 3D printing capabilities, enhancing iteration speed and enabling faster design validation.\n- Designed eyewear collections across multiple licensed brands working in acetate, metal, titanium, and TR-90 materials, collaborating with factories in Italy, China, and Japan to deliver production-ready specifications ensuring manufacturability and quality standards.\n- Championed user-centered design by advocating for design thinking in strategic discussions, conducting user research and fit testing to inform frame geometry, temple design, and nose bridge configurations, aligning user needs with organizational goals.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC"
+    }
+  ],
+  "volunteering": [],
+  "education": [],
+  "certifications": [],
+  "skills": [
+    {
+      "category": "Industrial Design",
+      "items": ["Eyewear Design (16+ years)", "Watch Design (7+ years)", "Sports Equipment Design", "Accessories Design", "Product Architecture", "Ergonomics & Fit"]
+    },
+    {
+      "category": "3D Design & CAD",
+      "items": ["Rhino 3D", "SolidWorks", "3D Modeling & Rendering", "Rapid Prototyping", "3D Printing", "Digital Mock-ups"]
+    },
+    {
+      "category": "Materials & Manufacturing",
+      "items": ["Acetate (Eyewear)", "Metal & Titanium", "Stainless Steel & Aluminum", "Silicone & Neoprene", "Leather & Textiles", "Production Specifications", "Factory Collaboration (Italy, China, Japan)", "Quality Control"]
+    },
+    {
+      "category": "Visual Design & CMF",
+      "items": ["Color, Material, Finish (CMF)", "Trend Forecasting", "Brand Aesthetic Development", "Design Language Creation", "Surface Finishing (PVD, Ceramic, Coatings)"]
+    },
+    {
+      "category": "UX Design",
+      "items": ["User Research & Interviews", "Usability Testing", "Prototyping", "Figma", "Adobe XD", "User Journey Mapping", "Fit Profiling"]
+    },
+    {
+      "category": "Technical Expertise",
+      "items": ["Optical Design (Lenses, Frames)", "Watch Movements (Quartz, Automatic)", "Polarized Lens Technology", "Impact-Resistant Materials", "Hydrophobic Coatings", "Athletic Ergonomics"]
+    },
+    {
+      "category": "Product Management",
+      "items": ["Product Strategy", "Market Research", "Stakeholder Management", "Cross-functional Leadership", "Go-to-Market Planning", "Revenue Growth"]
+    }
+  ],
+  "contact": [
+    {
+      "id": "linkedin",
+      "platform": "LinkedIn",
+      "handle": "justin-harmon",
+      "url": "https://linkedin.com/in/justin-harmon"
+    },
+    {
+      "id": "website",
+      "platform": "Website",
+      "handle": "prtclinc.com",
+      "url": "https://prtclinc.com"
+    }
+  ]
+}

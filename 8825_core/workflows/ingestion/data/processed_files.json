@@ -1,0 +1,220 @@
+{
+  "processed": [
+    {
+      "filename": "image.png.gz",
+      "processed_at": "2025-11-07T17:49:01.406974",
+      "metadata": {
+        "filename": "image.png.gz",
+        "extension": ".gz",
+        "size_bytes": 45472,
+        "size_mb": 0.04,
+        "created": "2025-11-07T17:46:56.470648",
+        "modified": "2025-11-07T17:46:54.301584",
+        "category": "archive",
+        "content_hash": "9be30d3dd91cecb6d378495575e65cc0e0a2f23a83a0a844b6bf044c124ff152"
+      },
+      "classification": {
+        "project": "RAL",
+        "subfolder": null,
+        "confidence": 0,
+        "category": "Other",
+        "tags": [],
+        "scores": {
+          "RAL": 0,
+          "HCSS": 0,
+          "TGIF": 0,
+          "76": 0,
+          "8825": 0,
+          "Jh": 0,
+          "Trustybits": 0,
+          "WHEN76": 0
+        }
+      },
+      "routing": {
+        "success": true,
+        "destinations": [],
+        "action": "manual_review",
+        "confidence": 0
+      },
+      "library": {
+        "merged": true,
+        "library": "ral",
+        "action": "created",
+        "entry_id": "a59cb4d03c17"
+      },
+      "duplicate_check": {
+        "is_duplicate": false,
+        "match_type": null,
+        "existing_file": null,
+        "action": "process",
+        "confidence": 0
+      },
+      "success": true
+    },
+    {
+      "filename": "Profile-1.pdf.gz",
+      "processed_at": "2025-11-07T17:49:01.410364",
+      "metadata": {
+        "filename": "Profile-1.pdf.gz",
+        "extension": ".gz",
+        "size_bytes": 32591,
+        "size_mb": 0.03,
+        "created": "2025-11-07T17:46:54.349396",
+        "modified": "2025-11-07T17:46:54.244992",
+        "category": "archive",
+        "content_hash": "b4bb4542d09e22b95ba58e7404296d73a85e4cac6bed39fd265e75deb68d25f6"
+      },
+      "classification": {
+        "project": "76",
+        "subfolder": null,
+        "confidence": 15,
+        "category": "Other",
+        "tags": [
+          "profile"
+        ],
+        "scores": {
+          "RAL": 0,
+          "HCSS": 0,
+          "TGIF": 0,
+          "76": 15,
+          "8825": 0,
+          "Jh": 0,
+          "Trustybits": 0,
+          "WHEN76": 0
+        }
+      },
+      "routing": {
+        "success": true,
+        "destinations": [],
+        "action": "manual_review",
+        "confidence": 15
+      },
+      "library": {
+        "merged": true,
+        "library": "joju",
+        "action": "created",
+        "entry_id": "6de2eee55aa1"
+      },
+      "duplicate_check": {
+        "is_duplicate": false,
+        "match_type": null,
+        "existing_file": null,
+        "action": "process",
+        "confidence": 0
+      },
+      "success": true
+    },
+    {
+      "filename": "justinharmon-cv.json",
+      "processed_at": "2025-11-07T17:49:01.413708",
+      "metadata": {
+        "filename": "justinharmon-cv.json",
+        "extension": ".json",
+        "size_bytes": 22926,
+        "size_mb": 0.02,
+        "created": "2025-11-07T16:55:44.389689",
+        "modified": "2025-11-07T15:55:21.301309",
+        "category": "code",
+        "content_hash": "84cac32b2fef7363c1feb48113d27fd291616a79bded6da0f70f8c14546f5ce2"
+      },
+      "classification": {
+        "project": "76",
+        "subfolder": null,
+        "confidence": 25,
+        "category": "Code/Config",
+        "tags": [
+          "8825",
+          "project",
+          "profile",
+          "design",
+          "ux"
+        ],
+        "scores": {
+          "RAL": 0,
+          "HCSS": 0,
+          "TGIF": 0,
+          "76": 25,
+          "8825": 15,
+          "Jh": 0,
+          "Trustybits": 0,
+          "WHEN76": 15
+        }
+      },
+      "routing": {
+        "success": true,
+        "destinations": [],
+        "action": "manual_review",
+        "confidence": 25
+      },
+      "library": {
+        "merged": true,
+        "library": "joju",
+        "action": "created",
+        "entry_id": "ad37edd2651d"
+      },
+      "duplicate_check": {
+        "is_duplicate": false,
+        "match_type": null,
+        "existing_file": null,
+        "action": "process",
+        "confidence": 0
+      },
+      "success": true
+    },
+    {
+      "filename": "JOJU_PROBLEM_STATEMENT_20251107_v1_v1.docx.gz",
+      "processed_at": "2025-11-07T17:49:01.417037",
+      "metadata": {
+        "filename": "JOJU_PROBLEM_STATEMENT_20251107_v1_v1.docx.gz",
+        "extension": ".gz",
+        "size_bytes": 11240,
+        "size_mb": 0.01,
+        "created": "2025-11-07T17:46:54.287257",
+        "modified": "2025-11-07T17:46:54.189600",
+        "category": "archive",
+        "content_hash": "4608188d7929793b45e3686df8dcddc8bcabf77dfbce9240ba7d9b0cec5cd282"
+      },
+      "classification": {
+        "project": "76",
+        "subfolder": null,
+        "confidence": 55,
+        "category": "Other",
+        "tags": [
+          "statement",
+          "joju",
+          "problem"
+        ],
+        "scores": {
+          "RAL": 0,
+          "HCSS": 0,
+          "TGIF": 0,
+          "76": 55,
+          "8825": 30,
+          "Jh": 0,
+          "Trustybits": 0,
+          "WHEN76": 0
+        }
+      },
+      "routing": {
+        "success": true,
+        "destinations": [],
+        "action": "manual_review",
+        "confidence": 55
+      },
+      "library": {
+        "merged": true,
+        "library": "joju",
+        "action": "created",
+        "entry_id": "3241e4d146c3"
+      },
+      "duplicate_check": {
+        "is_duplicate": false,
+        "match_type": null,
+        "existing_file": null,
+        "action": "process",
+        "confidence": 0
+      },
+      "success": true
+    }
+  ]
+}

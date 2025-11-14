@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #ffffff;
+    }
+    h2 {
+      margin: 0 0 16px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+    }
+    .instructions {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    textarea {
+      width: 100%;
+      height: 250px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Monaco', monospace;
+      font-size: 11px;
+      resize: vertical;
+      margin-bottom: 16px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .buttons .primary {
+      grid-column: 1 / -1;
+    }
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .primary {
+      background: #18A0FB;
+      color: white;
+    }
+    .primary:hover {
+      background: #1591E8;
+    }
+    .secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+    .secondary:hover {
+      background: #e0e0e0;
+    }
+    .message {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      display: none;
+    }
+    .message.success {
+      background: #E7F5EC;
+      color: #0D7D3A;
+      border: 1px solid #0D7D3A;
+    }
+    .message.error {
+      background: #FFE9E9;
+      color: #C92A2A;
+      border: 1px solid #C92A2A;
+    }
+    .message.show {
+      display: block;
+    }
+    .example {
+      font-size: 11px;
+      color: #999;
+      margin-top: 8px;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 2px 4px;
+      border-radius: 2px;
+      font-family: 'Monaco', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>📋 Import Sticky Notes</h2>
+  
+  <div class="instructions">
+    Paste the JSON from <code>sticky_notes_vision.json</code> below and click Import.
+  </div>
+  
+  <textarea id="jsonInput" placeholder='[
+  {
+    "source_image": "...",
+    "total_stickies": 3,
+    "clusters": [...]
+  }
+]'></textarea>
+  
+  <div class="buttons">
+    <button class="primary" id="importBtn">Import Stickies</button>
+    <button class="secondary" id="loadBtn">Load File</button>
+    <button class="secondary" id="cancelBtn">Cancel</button>
+  </div>
+  
+  <input type="file" id="fileInput" accept=".json" style="display: none;">
+  
+  <div id="message" class="message"></div>
+  
+  <div class="example">
+    💡 Tip: The JSON file is in your Downloads folder after running the OCR processor.
+  </div>
+
+  <script>
+    const jsonInput = document.getElementById('jsonInput');
+    const importBtn = document.getElementById('importBtn');
+    const loadBtn = document.getElementById('loadBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const fileInput = document.getElementById('fileInput');
+    const message = document.getElementById('message');
+    
+    function showMessage(text, type) {
+      message.textContent = text;
+      message.className = `message ${type} show`;
+      setTimeout(() => {
+        message.className = 'message';
+      }, 5000);
+    }
+    
+    importBtn.onclick = () => {
+      const json = jsonInput.value.trim();
+      
+      if (!json) {
+        showMessage('Please paste JSON data', 'error');
+        return;
+      }
+      
+      try {
+        JSON.parse(json); // Validate JSON
+        parent.postMessage({ 
+          pluginMessage: { 
+            type: 'import-stickies', 
+            json: json 
+          } 
+        }, '*');
+      } catch (e) {
+        showMessage('Invalid JSON format', 'error');
+      }
+    };
+    
+    loadBtn.onclick = () => {
+      fileInput.click();
+    };
+    
+    fileInput.onchange = (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          jsonInput.value = event.target.result;
+          showMessage('File loaded! Click Import to create stickies.', 'success');
+        };
+        reader.readAsText(file);
+      }
+    };
+    
+    cancelBtn.onclick = () => {
+      parent.postMessage({ 
+        pluginMessage: { type: 'cancel' } 
+      }, '*');
+    };
+    
+    // Handle messages from plugin
+    window.onmessage = (event) => {
+      const msg = event.data.pluginMessage;
+      if (msg.type === 'success') {
+        showMessage(msg.message, 'success');
+        setTimeout(() => {
+          parent.postMessage({ 
+            pluginMessage: { type: 'cancel' } 
+          }, '*');
+        }, 2000);
+      } else if (msg.type === 'error') {
+        showMessage(msg.message, 'error');
+      } else if (msg.type === 'auto-loaded') {
+        jsonInput.value = msg.data;
+        showMessage('✓ Auto-loaded latest sticky notes! Click Import when ready.', 'success');
+      }
+    };
+  </script>
+</body>
+</html>

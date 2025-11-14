@@ -1,0 +1,1132 @@
+{
+  "generated_at": "2025-11-10T15:27:46.576917",
+  "total_sessions": 5,
+  "total_quotes": 91,
+  "sessions": [
+    {
+      "participant": "Chrissy",
+      "date": "2025-08-29",
+      "quotes_count": 11,
+      "word_count": 661
+    },
+    {
+      "participant": "Chris",
+      "date": "2025-08-28",
+      "quotes_count": 20,
+      "word_count": 6987
+    },
+    {
+      "participant": "Philip",
+      "date": "2025-08-28",
+      "quotes_count": 20,
+      "word_count": 2785
+    },
+    {
+      "participant": "Monique",
+      "date": "2025-08-28",
+      "quotes_count": 20,
+      "word_count": 5648
+    },
+    {
+      "participant": "Kayson",
+      "date": "2025-08-28",
+      "quotes_count": 20,
+      "word_count": 6108
+    }
+  ],
+  "all_quotes": [
+    {
+      "text": "Invited sheehan3@gmail.com harmon.justin@gmail.com Cam Watkins",
+      "participant": "Chrissy",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon confirmed Christine Caluori's consent to record and share the screen for a prototype demonstration, clarifying the test's focus on the tool rather than the user. Christine Caluori shared their past job hunting and resume management experiences, noting the manual creation of multiple resume versions and the need for a more enhanced LinkedIn job description. During the prototype interaction, Christine Caluori preferred an intuitive design, expected direct LinkedIn integration, and provided extensive feedback, including suggestions for AI tool linking, cover letter generation, multiple resume version storage, and integration with job search sites like Indeed.",
+      "participant": "Chrissy",
+      "type": "positive"
+    },
+    {
+      "text": "Meeting Setup and Consent Justin Harmon initiated the meeting by confirming Christine Caluori's consent to record the session and share their screen for a prototype demonstration. Justin Harmon also clarified that the prototype testing aims to evaluate the tool, not the user, to ensure a comfortable testing environment.",
+      "participant": "Chrissy",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Management and Job Hunt Experience Christine Caluori shared their past experiences with job hunting, including having to create multiple resume versions for different industries and roles due to being considered overqualified for some positions. They maintained these versions manually, using simple naming conventions like \"Version one,\" and noted that they had to reapply for their current job when they moved back to the United States, updating their resume in Microsoft Word.",
+      "participant": "Chrissy",
+      "type": "positive"
+    },
+    {
+      "text": "LinkedIn Profile Maintenance Christine Caluori indicated that their LinkedIn profile is mostly up-to-date regarding their current job title as \"head of operations for Alessa,\" but not necessarily the job description. They expressed that the job description on their LinkedIn could be more enhanced and professional.",
+      "participant": "Chrissy",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Building Tools and AI Integration Christine Caluori stated that if they were to rebuild their resume today, they would use AI tools like Chat GPT to tailor it more specifically to job applications, acknowledging that current tools are more sophisticated than their past methods. They noted that their husband, who is more technically inclined, could steer them towards specific platforms.",
+      "participant": "Chrissy",
+      "type": "positive"
+    },
+    {
+      "text": "Prototype Interaction and Feedback During the prototype demonstration, Christine Caluori preferred to immediately click the \"Get Started\" button without reading instructions, indicating a preference for intuitive design. They expected the prototype to link and import their LinkedIn profile directly and encountered issues with the \"Add Content\" button, which did not function as expected. Christine Caluori also expressed a desire for a character limit indicator when adding content to help with self-editing.",
+      "participant": "Chrissy",
+      "type": "general"
+    },
+    {
+      "text": "Suggested Prototype Enhancements Christine Caluori provided extensive feedback on desired features for the prototype, including linking to various AI tools like Chat GPT or Gemini, enabling cover letter generation, and storing multiple resume versions within the platform. They also suggested integrating with job search sites like Indeed for direct application and potentially allowing recruiters to use the tool.",
+      "participant": "Chrissy",
+      "type": "positive"
+    },
+    {
+      "text": "Trust and User Experience with Platforms Christine Caluori discussed their approach to trusting new platforms, explaining that they would perform due diligence through Google searches, review ratings on sites like Trustpilot, and seek tutorials or demos. They emphasized that linking their LinkedIn profile to such a tool would not be a concern since the information is already public. Christine Caluori concluded that user-friendliness is paramount for them when evaluating tools, even over technical recommendations from others.",
+      "participant": "Chrissy",
+      "type": "positive"
+    },
+    {
+      "text": "Barriers and Willingness to Pay Christine Caluori identified current prototype limitations such as the lack of a back button and inconsistent functionality of the \"Add Content\" feature as barriers to use but believed these would be resolved in a finished product. They stated that they would be willing to pay for a tool that significantly helps with job searching, provided it offers substantial assistance and ease of use.",
+      "participant": "Chrissy",
+      "type": "general"
+    },
+    {
+      "text": "No suggested next steps were found for this meeting.",
+      "participant": "Chrissy",
+      "type": "suggestion"
+    },
+    {
+      "text": "Invited harmon.justin@gmail.com Cam Watkins Matthew Galley Denis Dukhvalov caworks@gmail.com",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon introduced a prototype tool to Chris Works, who provided feedback on its usability and design. Chris Works shared their career background, job search challenges, and concerns about AI's impact on the job market and interviews, and they also detailed their resume management process and compared the prototype to their current resume builder, EnhanceCV. The meeting concluded with Justin Harmon thanking Chris Works for their valuable input.",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Job Search Challenges and AI Impact Chris Works discussed their difficulties in finding work, despite numerous applications, and their shift to learning no-code tools like Webflow for web design and freelance opportunities. They also expressed concern that AI tools are reducing junior-level positions, making it harder for new college graduates to find jobs (00:02:10).",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Resume Management and ATS Chris Works explained their resume management process, noting that they initially designed their own resume but switched to an online service that creates ATS-friendly resumes due to applicant tracking systems. They described how the service helps tailor their resume to job descriptions, though it has not significantly improved their job search results (00:04:21).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Customization and Application Process Chris Works detailed their method for customizing resumes, which involves duplicating existing resumes in the online service and adjusting skills and tools to match job descriptions. They also mentioned their preference for applying directly through company websites rather than LinkedIn, despite the inconvenience of re-entering information (00:07:33) (00:09:46).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Challenges with Job Application Strategies Chris Works expressed frustration with conflicting advice on job application strategies, such as \"spray and pray\" versus targeted applications. They highlighted the time-consuming nature of tailoring applications and cover letters, especially for jobs with long questionnaires, often without receiving feedback (00:10:33).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Concerns about AI in Interviews Chris Works raised concerns about the increasing use of AI in initial job interviews, questioning whether it detracts from human dignity in the hiring process. They recounted an anecdote about an AI-driven car getting stuck in a loop, illustrating potential pitfalls of over-reliance on AI (00:11:26).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Prototype Introduction and User Experience Setup Justin Harmon introduced a prototype tool, emphasizing that the testing was for the tool itself, not the user's abilities (00:13:37). After addressing technical issues with screen sharing, Justin Harmon set up a role-playing scenario where Chris Works would act as \"Jeo,\" a first-time user exploring the website based on a friend's recommendation for resume building (00:14:36).",
+      "participant": "Chris",
+      "type": "suggestion"
+    },
+    {
+      "text": "Initial Impressions of the Prototype Chris Works shared their initial thoughts on the prototype's landing page, identifying \"Joju\" as the likely service name and interpreting the tagline \"Collect things, organize everything, and share anything\" as suggestive of a bookmarking or file storage service. They noted some confusion regarding the timeline layout and the placement of the \"Get Started\" button (00:17:44) (00:21:44).",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Prototype Usability Feedback Chris Works provided feedback on the prototype's usability, highlighting their confusion about the timeline format and suggesting a card-based layout for major services. They also pointed out that the \"anywhere\" text was unclear and raised questions about the lack of a save confirmation after editing fields, expressing concern about data persistence when navigating away from the page (00:21:44) (00:26:42).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Upload and Editing Flow Chris Works demonstrated the process of uploading a resume, expecting a prompt for account creation and a confirmation of scanned content. They praised the live editable fields and the option to add new sections or content, but noted the absence of a clear \"continue\" or \"save\" button (00:23:12).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Dark Theme Preference and Feature Requests Chris Works mentioned their personal preference for a light theme over the dark theme, suggesting a toggle feature for better usability due to eye strain. They also noted that cost would be a barrier to becoming a full-fledged user (00:27:57).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Comparison to Existing Resume Builder Chris Works shared the name of their current resume builder, EnhanceCV, and demonstrated its dashboard and features, including various themes and an ATS checker. They noted that the ATS checker and AI help, while a draw, did not significantly improve their interview rate (00:30:23).",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Overall Meeting Conclusion Justin Harmon thanked Chris Works for their time and valuable input, acknowledging the helpfulness of their feedback. Chris Works reciprocated, expressing appreciation for being part of the project and referencing a similar past service called Gravatar for profile management (00:33:59).",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "No suggested next steps were found for this meeting.",
+      "participant": "Chris",
+      "type": "suggestion"
+    },
+    {
+      "text": "Justin Harmon: So, uh, my name is Justin. Um, appreciate you spending the time to talk to us today. Um I'm not sure how much um Dennis told you about what we're doing here, but um we have this prototype that um we're getting some feedback on running through some initial user test. Um so again, thanks for taking the time.",
+      "participant": "Chris",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Chris Works: Um, let's see. I'm I'm kind of off and on in the job hunt right now, but um I I have a career in in in design, graphic design. Um and then uh I've primarily worked in the printing industry for most of my career for basically the past, you know, 20 years. I've been some somehow related work. My jobs have all been within the printing industry. Um, and then a bit of freelance design too. Um, and then a few years ago, about three years ago probably, I decided to go to like a boot camp for UX design. I went through the um, design lab boot camp for that. But it was like it was like at the end of COVID, after the end of COVID really, when I decided to do it.",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Chris Works: By the time that I gotten out of the boot camp, uh I think the market was just it just got really saturated. Um and so yeah, I wasn't able to find any work after probably like at least 200 applications. I probably had one per one person actually reach out and actually got like an initial interview with that and that and that was exciting. But yeah, it's I kind of gave up and uh shifted focused to um learning like no code tools, web flow, um things of that nature. Um and so I kind of right now at this point kind of given up that and I'm just kind of working on web design um and kind of getting those skills, thinking maybe I could do freelance or solo agency type stuff. But I'm always on the lookout for another job. So primar primarily I look at uh LinkedIn, you know, um I I use flex jobs a little bit. Um and you know, I've tried to network a little bit locally. Um nothing has really turned out anything.",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Chris Works: And now with it with all the advent of the AI tools coming out, it's it seems like junior positions are almost going away in a lot of in a lot of scenarios.",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Chris Works: So it's like, yeah.",
+      "participant": "Chris",
+      "type": "positive"
+    },
+    {
+      "text": "Invited philipchao22@gmail.com harmon.justin@gmail.com Cam Watkins",
+      "participant": "Philip",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon welcomed Philip Chao to a user testing session for a prototype tool, Joju, designed to assist with the job application process. Philip Chao, a product designer, shared their experiences with challenging job searches and methods for customizing resumes. Philip Chao found the prototype easy to navigate but suggested that more information about the tool's features and benefits should be on the homepage to build trust and encourage users to share information, highlighting the AI conversation feature as unique.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao's Career Journey and Job Search Philip Chao described their career as a product designer, having completed a UXUI certification and subsequently working freelance for a robotics company and with a startup on MVP features (00:06:40). Philip Chao shared that they found the job search challenging due to the high volume of applications for posted jobs, and that they sought creative ways to stand out, such as connecting with job posters on Slack channels and applying to jobs posted within 24 hours on Google Drive and LinkedIn (00:08:58). They also explained their process for customizing their resume using Jobbrite, editing it for results orientation, and using Google Gemini for keyword integration from job descriptions (00:10:11).",
+      "participant": "Philip",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Feedback on the Prototype Tool Justin Harmon introduced a prototype tool designed to assist with the job application process, emphasizing that the test was for the prototype, not the user, and encouraged Philip Chao to verbalize their thoughts and experiences (00:10:11). Philip Chao's initial impression of the site, named Joju, was that it appeared technologically advanced and aimed to consolidate job searching sites, similar to Jobbrite (00:12:52). They expressed curiosity about how the tool differed from existing ones and how it would specifically aid in job searching beyond just collecting information (00:14:01). Philip Chao found the user flow easy and the site simple but noted a lack of information about the tool's features and benefits on the homepage, which would hinder their trust and willingness to share information (00:17:54). Philip Chao highlighted the AI conversation feature as unique and well-placed within the user flow for immediate questions (00:21:02).",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "No suggested next steps were found for this meeting.",
+      "participant": "Philip",
+      "type": "suggestion"
+    },
+    {
+      "text": "Justin Harmon: Thanks for hopping on today. So, uh I'm Justin. Um, first of all, I was curious, have you uh ever conducted any um user tests like this before or is this first time?",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: Okay, that's perfect. I'm just curious if you kind of know what you're in store for a little bit, but yeah, we're just trying to conduct a little bit of research. Um it's really helpful. So I thank you in advance for your time. Um just a couple quick things to start out. Um want to make sure you're comfortable that we're recording this session. Is that cool? All right.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: Do you want me to do that now? Are deferred being um not something that we're immediately going to start categorizing it as something that might get under DevOps like bucket.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: Um so I'm a product designer. I finished my UXUI certification last year in October and um immediately afterwards I found a freelance opportunity where I made a pop-up ad. It's more like a graphic design kind of stuff for a robotics company based in Florida.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: Um, after that I worked with a startup and they just needed help creating MVP features and they did more like AI generated kind of stuff. Um, I work with an engineer a little bit. It was a project based. Um, so once we were done with a couple projects, um, we weren't going to continue. Plus, it wasn't the best experience for me. I think startup bosses, um, how would I say this? They're very focused on their own personal goals and they weren't trained on how to properly interact with other people. So, yeah.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: So, uh, in between those jobs or, um, like have you had a lot of time where you've had to be on the job hunt kind of in between those transitions or has it where you've actively been sending out resumes, applications? How's that worked?",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: I think the search isn't difficult. Well, I'm thinking about how I can send out because any jobs that pop up immediately there's a lot of applications. So, I'm trying to find creative ways to um stand out. So I think how I do that is on Slack channels when someone posts a job opportunity that's a way for me to connect with the person person that posted and kind of get a closer connection or I'll go on like Google Drive, LinkedIn and I only apply to jobs that were posted within 24 hours. Um but it's not that frequent these jobs come up. Like I feel like there's not a lot of UIX center jobs that are for juniors um that is that frequent.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: And what about like your CV or resume? Like what uh where do you keep that right now? Where's the most up-to-date version? What tools do you use? Kind of questions along those lines.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: Yeah, I store everything in Google Drive. I create like basically a base template of resume.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: Gotcha. That totally makes sense. So, the tool um the prototype we're working on is uh meant to kind of help with that process. So, I'm going to share a link with you in the chat uh here in a sec. Um, but I just want to kind of be upfront about the fact that um, I'm going to ask you for some feedback on it. I'm going to ask you to walk through some tasks. Um, but really what we're testing here is the prototype, not you. So like I also uh it would be really helpful if like everything you're thinking, everything you're experiencing uh as vocally you can be about what you're perceiving, the steps you're taking, your thoughts, um all of that is super helpful for us.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: any Sorry, I threw you off camera before I seems like",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: So, I'm going to put you in like a little bit of a um a scenario. We're going to do a little bit of role play. Um, we're going to put pretend your name is uh Jindo or uh like a little French twist to it of Jean of John Doe. But I'm going to assume that you've kind of you heard about this maybe through a Slack channel or through some chatter and you've gotten to this website and I just want you to kind of tell me first impressions",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: So, um, just to kind of give you a little context here, I'm not guiding you through anything at this point. I want you to like pretend you're seeing it for the first time. Like it, uh, so like you said, you are a job seeker. Um, you know, you've heard about this new resume tool. You're just like, pretend this is the discovery phase. It's like if if click started is the first thing you go to and you immediately go in, that's great. But if you were to read more or look around, whatever your instincts are, I want you to tell me about that.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Philip Chao: Gotcha. This is the same. Okay, fair enough. Let's see. Joju seems very um tech technological advanced looking site with the colors purple and black in the background. Um what does it do? Bring everything to this site and never have to fill out your profile or info again. Okay. Seems like it's utilizing AI.",
+      "participant": "Philip",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: So for a second, pause for me and after you've looked through I said pause for a second for me and after you've looked uh through this kind of just tell me before you take your next action what what's",
+      "participant": "Philip",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Invited harmon.justin@gmail.com Cam Watkins moniquevanhummel@daveperrymiller.com",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon began the meeting by obtaining consent from Monique Van Hummel to record the session and outlined the objectives of the design sprint. Monique Van Hummel shared their career trajectory, including experiences with job hunts, transitions to self-employment, and insights into resume management, emphasizing the role of AI and the importance of visual content. Following a prototype demonstration, Monique Van Hummel provided feedback on the user interface, expressing concerns about trust and data privacy, and discussed their expectations for the tool, particularly regarding its ability to create effective, attention-grabbing resumes.",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Design Sprint Overview Justin Harmon explained that the meeting was part of a design sprint, a week-long process involving exercises to test ideas, rapid prototyping, and feedback collection (00:00:00). They clarified that the product, Jojo, being worked on is related to LinkedIn, as previously indicated by Laura (00:00:43).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Career Journey and Job Hunt Experience Justin Harmon asked Monique Van Hummel to discuss their career journey, specifically their last job hunt before Dave Perry Miller. Monique Van Hummel shared that they were laid off from Fossil and spent a year networking, referencing the book \"The Power of Who\" (00:02:37). They secured a job through a friend's referral at Nike, which lasted three and a half years (00:03:20).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Transition to Self-Employment Monique Van Hummel explained their decision to pursue self-employment after leaving Nike, stating they no longer wanted a company to control their destiny and wished to avoid the challenging interviewing process (00:04:30).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Management and AI Impact Justin Harmon inquired about Monique Van Hummel's resume updating process, including programs used. Monique Van Hummel mentioned that Right Management taught them how to write resumes to bypass AI systems, expressing doubts about the current effectiveness of resumes given how AI filters candidates (00:04:30). They cited a friend's prolonged job search as an example of the broken system (00:05:33).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Digital Resume and Visual Presentation Monique Van Hummel shared that they used Word or Google Docs for their resume and created a digital resume on Wix while at Fossil, preferring to present work visually rather than through text (00:06:45). They suggested that current tools like Canva and flip books offer a better approach for visual resumes than Wix (00:24:49).",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Prototype Introduction and User Interface Feedback Justin Harmon shared a link to the prototype and asked Monique Van Hummel to share their screen for a role-play exercise (00:07:47). Monique Van Hummel, pretending to be \"Ganondo,\" expressed confusion about the website's purpose, noting the lack of an \"About Us\" or navigation bar, and feeling it resembled a form rather than a website (00:12:29). They also found the black color scheme harsh and suggested an all-white background with more context (00:13:35).",
+      "participant": "Monique",
+      "type": "suggestion"
+    },
+    {
+      "text": "Trust and Data Privacy Concerns When prompted to interact with the prototype, Monique Van Hummel expressed hesitation about linking personal information due to past negative experiences with job boards like Indeed and Monsterboard, citing concerns about data privacy and the \"dark web\" (00:15:08). Justin Harmon acknowledged trust as a significant factor and inquired if knowing the service was local and not cloud-based would alleviate their concerns (00:16:51).",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Prototype Expectations and AI Interaction After overcoming the trust barrier for the prototype, Monique Van Hummel's primary expectation for the tool was for it to help them find a job (00:19:27). They questioned how the tool would handle complex LinkedIn profiles with multiple roles at one company and assumed the tool would use AI to consolidate information (00:22:20).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Right Management Advice and Resume Customization Justin Harmon sought more detail on the resume advice Monique Van Hummel received from Right Management, a company hired by Fossil to assist laid-off employees (00:22:20). Monique Van Hummel recalled advice on avoiding weird characters, including a summary and key strengths, and mentioned that AI systems often filter out talented candidates based on specific keywords (00:23:19). They indicated they did not significantly tailor their resume within the marketing field, only if changing industries entirely (00:30:09).",
+      "participant": "Monique",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Visual Content and Standing Out Monique Van Hummel emphasized the importance of visual content in marketing resumes, believing pictures convey more than words. They suggested that the tool should clearly indicate the ability to add visuals, as they initially assumed \"add content\" meant only text (00:27:40). They shared a personal anecdote about using red, white, and blue paper for a resume to stand out, highlighting the value of differentiation in job applications (00:28:57).",
+      "participant": "Monique",
+      "type": "suggestion"
+    },
+    {
+      "text": "Tool Appeal and Desired Outcomes Justin Harmon asked what features would make the tool more appealing to Monique Van Hummel. Monique Van Hummel stated their expectation that the tool would create an \"amazing resume\" that would be accepted by systems and capture the attention of hiring managers or HR personnel (00:31:27).",
+      "participant": "Monique",
+      "type": "general"
+    },
+    {
+      "text": "No suggested next steps were found for this meeting.",
+      "participant": "Monique",
+      "type": "suggestion"
+    },
+    {
+      "text": "Monique Van Hummel: I asked her, \"Is it like LinkedIn?\" She's like, \"Yeah.\" I'm like, \"Okay, whatever. Sure,",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: Sounds good. I'm in. So, uh, over the last week, I've been working with the team on, uh, this process called a design sprint where we go from through a series of exercises, um, to kind of like test a bunch of",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: ideas to land on like what we want to do uh, we prototype it really quickly and then now we're at the end of this exhausting week where we actually um, put it in front of people and kind of get feedback.",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: Um I can talk you through it when we get there. Um, but for starters, um, I just want to talk to you a little bit about, um, like a little bit about your career journey, but more, um, within the context of like, uh, kind of before Dave Perry Miller, like what your last job hunt looked like.",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Monique Van Hummel: Okay. Um, before Dave prayer Miller, I was like Laura, we got let go from Fossil, the wonderful place we like to call Fossil.",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Monique Van Hummel: Um, so I spent a year doing things like networking, meeting people, calling people that I knew. I read a book called The Power of Who, um, which is very interesting. I talked to the author even about it. Um, and it's really just using your network to find other people, um, to help find your job. Um, so I kind of took that for a grain of salt, but then I got called from an agency about a year after. Um, I got let go and um, they were looking for an 8week stint at Nike. And so I called a friend who obviously that was kind of how to do the power of who and um she had said, \"Oh, well we have a six-month gig going on.\" And so I was like, \"Oh, that sounds even better.\" And it ended up being in one of my old colleagues team. And so I ended up getting a job through that.",
+      "participant": "Monique",
+      "type": "positive"
+    },
+    {
+      "text": "Invited Cam Watkins kaysonlconlin@gmail.com harmon.justin@gmail.com",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon interviewed Kayson L Conlin to gather information for their research, focusing on Kayson L Conlin's career journey, job hunt experiences, and tools used for resume management. Kayson L Conlin shared their positive experiences with Teal, an AI-powered service that tailors resumes to job requirements and helps with cover letters, highlighting its effectiveness in boosting confidence and generating more attention from employers. Kayson L Conlin praised Teal's ease of use and ability to parse existing resumes but suggested that a missing feature is the ability to pull information from a wider range of websites for job applications.",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Introduction and Career Journey Justin Harmon began the meeting by introducing themself to Kayson L Conlin and stating the purpose of the recorded research interview, which was to gather information for their research (00:00:00). Kayson L Conlin shared their career journey, detailing their five years of on-and-off product and UX design experience, their background in visual design and marketing, and their recent role as a creative director where they were tasked with website redesign before being laid off (00:07:50). They also mentioned their current position on the Tesla autopilot team, training AI for the Optimus humanoid robot, and clarified that their team is based in Draper, Utah, not Austin (00:09:46).",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Job Hunt Pain Points and Resume Tools Justin Harmon inquired about Kayson L Conlin's job hunt experiences, specifically focusing on resume-related pain points and the tools they used. Kayson L Conlin initially used a single resume that they would tweak, but they discovered that their resume wasn't well-written for initial company representation (00:09:46). They then found a service called Teal, which uses AI to tailor resumes to job requirements by selecting and customizing bullet points and helping write cover letters (00:11:17).",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Teal Features and Effectiveness Kayson L Conlin described Teal as a web app with a desktop app and Chrome extension that reads job postings, saves information to a job database, and assesses resume fit (00:12:59). They explained that Teal aims for a 65-75% correlation between the job requirements and the resume to appear authentic yet optimized (00:14:08). Kayson L Conlin noted that Teal helped boost their confidence and garnered more attention and follow-ups during their job search (00:11:17).",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Resume Management in Teal Kayson L Conlin elaborated on how Teal manages resumes, explaining that users create a master copy with numerous bullet points for each job, and Teal then suggests which bullet points to include based on a job description to avoid overly long resumes. They also mentioned that Teal uses AI to generate bullet points and cover letters, which is more accurate than general chatbots like Claude or ChatGPT because it's based on the user's specific resume information (00:15:17). Kayson L Conlin compared general AI to an \"eager intern\" that prioritizes impressing over accuracy (00:16:33).",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Teal's Best and Missing Features Justin Harmon asked Kayson L Conlin to identify the best and most desired missing features of Teal. Kayson L Conlin praised Teal's ease of use, particularly its ability to parse and divide an existing design-focused resume into bullet points, despite previous challenges with visual resumes (00:17:34). They also appreciated the minimal design options but wished for more personalization in templates (00:18:44). Kayson L Conlin noted that a missing feature is the ability to pull information from a wider range of websites, as it seems geared more towards main job sites, leading to manual input for some applications (00:21:07).",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Content and Role Management in Prototype Kayson L Conlin provided feedback on a prototype, noting that their expectation for an \"add content\" feature would be to include multimedia like portfolios or presentations, rather than just text editing (00:30:12). They also highlighted the importance of being able to add and differentiate multiple positions or roles within a single company, which is common for long-term employment (00:31:33). Kayson L Conlin then explained that Teal addresses this by allowing individual manipulation of company and position details through a parent-child relationship, enabling the addition of separate fields for multiple positions under a single company (00:33:04).",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Resume Versioning and Success Tracking in Teal Kayson L Conlin explained that Teal saves every version of a created resume and allows users to build off existing versions or create new ones from a base resume. When a new version is created, it can retroactively add content to previous resumes, and Teal automatically titles new resumes based on the company and position title from job postings (00:36:04). Kayson L Conlin further noted that Teal offers the option to populate new resumes based on previous ones or tailor them to a job description, helping users identify which bullet points are most effective by tracking interview processes and job offers (00:38:39).",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Teal vs. Prototype Functionality and Future Desires Justin Harmon asked Kayson L Conlin to compare the prototype's potential to Teal, considering one top feature from Teal. Kayson L Conlin observed that the prototype focuses on centralizing information into one place, whereas Teal excels at disseminating that information based on specific job requirements. They suggested that if the prototype could expand its current feature of pulling information from the internet to also auto-populate job applications, similar to Teal's functionality, it would be highly useful (00:40:10). Kayson L Conlin emphasized the value of accurate field alignment for correct prepopulation, as they often use Teal to generate PDFs that auto-populate job applications (00:41:38).",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "No suggested next steps were found for this meeting.",
+      "participant": "Kayson",
+      "type": "suggestion"
+    },
+    {
+      "text": "Justin Harmon: Okay. Uh, I'm going to send you a link a little later in the video. Um, not essential to share it now. Um, unless you want to get it out of the way, but um, once I share the link and we start going through things, that's when, um, it'd be super helpful.",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Kayson L Conlin: Uh yeah. Um so I have been doing product uh product and UX design um sort of on and off for the past five years. never in quite a full-time capacity, but um more just as part of jobs. I've got my background is in visual design and I've done a lot of design and marketing sort of jobs over the years and a lot of those have involved uh web design and user centered design and um and let's see about a year ago I got laid off from my last job, which was uh basically a creative director uh for a small uh steel and steel company that or I guess it was a company that had a bunch of uh it was a parent company to a bunch of companies in the industrial sector and I was creative director and uh put over uh one of my largest tasks was redesigning and recreating a website basically and um I got laid off from that job before the project was complete and after a nine-month job search I",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Kayson L Conlin: was reached out to by a recruiter over here at Tesla and now I am over on their autopilot team um helping to train AI for the Optimus humanoid robot.",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Justin Harmon: Um, but I wanted to talk to you a little bit about like your job hunt during that time period. um specifically around kind of um some of your pain points around um your resume um your CV kind of and just tell me a little bit about how you uh maintain what tools you're using stuff like that.",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Kayson L Conlin: Yeah. Uh so basically the sort of tools that I was using at first was I I I just had one resume that I would tweak for a while and um you know I was mainly focused on trying to get my portfolio in shape and whatnot.",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Kayson L Conlin: But uh as time went on, what I realized was um I would get some initial interest, but uh probably what I noticed was on my uh on my resume on the initial, you know, representation of myself to these companies, I probably wasn't showing up as well because um it just wasn't really well written. I discovered a service called Teal that utilizes AI to uh parse through job requirements and uh that sort of thing and then basically helps you tailor a resume to that via you create a bunch of bullet points for each position that you've worked at. And then what it does is it selects and tailors those bullet points um to you know whatever job you're applying for and helps you write cover letters and whatnot.",
+      "participant": "Kayson",
+      "type": "ai_feature"
+    },
+    {
+      "text": "Kayson L Conlin: Um, I wouldn't say that's necessarily what got me where I'm at, but I definitely would say it helped to um it it it definitely helped boost my confidence and probably helped get me a little bit more attention and more um, you know, beyond just the initial interviews and a lot more follow-ups and stuff like that.",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Justin Harmon: Um, I'm actually unfamiliar with that one uh particular program. Can you tell me a little more about it? Is it like a web app or Oh, they have a desktop thing, too.",
+      "participant": "Kayson",
+      "type": "positive"
+    },
+    {
+      "text": "Kayson L Conlin: app and they have a Chrome extension that will basically um read through and grab any job postings from a site. If if you're on a job site and it finds enough information that it says, \"Oh, this must be a job posting.\" It will say, \"Would you like me to, you know, would you like me to uh save this information to your job database?\" And what it can do is it can go through, you know, you can go through several of these jobs and it'll tell you how good of a fit you are based on your resume and then it'll help you tailor your resume so that you can be an even better fit. But what it does is it uh it tries to get a a solid match.",
+      "participant": "Kayson",
+      "type": "positive"
+    }
+  ],
+  "grouped_insights": [
+    {
+      "theme": "Other",
+      "quotes": [
+        {
+          "text": "Invited sheehan3@gmail.com harmon.justin@gmail.com Cam Watkins",
+          "participant": "Chrissy",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Meeting Setup and Consent Justin Harmon initiated the meeting by confirming Christine Caluori's consent to record the session and share their screen for a prototype demonstration. Justin Harmon also clarified that the prototype testing aims to evaluate the tool, not the user, to ensure a comfortable testing environment.",
+          "participant": "Chrissy",
+          "type": "ai_feature"
+        },
+        {
+          "text": "LinkedIn Profile Maintenance Christine Caluori indicated that their LinkedIn profile is mostly up-to-date regarding their current job title as \"head of operations for Alessa,\" but not necessarily the job description. They expressed that the job description on their LinkedIn could be more enhanced and professional.",
+          "participant": "Chrissy",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Suggested Prototype Enhancements Christine Caluori provided extensive feedback on desired features for the prototype, including linking to various AI tools like Chat GPT or Gemini, enabling cover letter generation, and storing multiple resume versions within the platform. They also suggested integrating with job search sites like Indeed for direct application and potentially allowing recruiters to use the tool.",
+          "participant": "Chrissy",
+          "type": "positive"
+        },
+        {
+          "text": "Trust and User Experience with Platforms Christine Caluori discussed their approach to trusting new platforms, explaining that they would perform due diligence through Google searches, review ratings on sites like Trustpilot, and seek tutorials or demos. They emphasized that linking their LinkedIn profile to such a tool would not be a concern since the information is already public. Christine Caluori concluded that user-friendliness is paramount for them when evaluating tools, even over technical recommendations from others.",
+          "participant": "Chrissy",
+          "type": "positive"
+        },
+        {
+          "text": "Barriers and Willingness to Pay Christine Caluori identified current prototype limitations such as the lack of a back button and inconsistent functionality of the \"Add Content\" feature as barriers to use but believed these would be resolved in a finished product. They stated that they would be willing to pay for a tool that significantly helps with job searching, provided it offers substantial assistance and ease of use.",
+          "participant": "Chrissy",
+          "type": "general"
+        },
+        {
+          "text": "Invited harmon.justin@gmail.com Cam Watkins Matthew Galley Denis Dukhvalov caworks@gmail.com",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Job Search Challenges and AI Impact Chris Works discussed their difficulties in finding work, despite numerous applications, and their shift to learning no-code tools like Webflow for web design and freelance opportunities. They also expressed concern that AI tools are reducing junior-level positions, making it harder for new college graduates to find jobs (00:02:10).",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Prototype Introduction and User Experience Setup Justin Harmon introduced a prototype tool, emphasizing that the testing was for the tool itself, not the user's abilities (00:13:37). After addressing technical issues with screen sharing, Justin Harmon set up a role-playing scenario where Chris Works would act as \"Jeo,\" a first-time user exploring the website based on a friend's recommendation for resume building (00:14:36).",
+          "participant": "Chris",
+          "type": "suggestion"
+        },
+        {
+          "text": "Initial Impressions of the Prototype Chris Works shared their initial thoughts on the prototype's landing page, identifying \"Joju\" as the likely service name and interpreting the tagline \"Collect things, organize everything, and share anything\" as suggestive of a bookmarking or file storage service. They noted some confusion regarding the timeline layout and the placement of the \"Get Started\" button (00:17:44) (00:21:44).",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Prototype Usability Feedback Chris Works provided feedback on the prototype's usability, highlighting their confusion about the timeline format and suggesting a card-based layout for major services. They also pointed out that the \"anywhere\" text was unclear and raised questions about the lack of a save confirmation after editing fields, expressing concern about data persistence when navigating away from the page (00:21:44) (00:26:42).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Dark Theme Preference and Feature Requests Chris Works mentioned their personal preference for a light theme over the dark theme, suggesting a toggle feature for better usability due to eye strain. They also noted that cost would be a barrier to becoming a full-fledged user (00:27:57).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Comparison to Existing Resume Builder Chris Works shared the name of their current resume builder, EnhanceCV, and demonstrated its dashboard and features, including various themes and an ATS checker. They noted that the ATS checker and AI help, while a draw, did not significantly improve their interview rate (00:30:23).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Overall Meeting Conclusion Justin Harmon thanked Chris Works for their time and valuable input, acknowledging the helpfulness of their feedback. Chris Works reciprocated, expressing appreciation for being part of the project and referencing a similar past service called Gravatar for profile management (00:33:59).",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: So, uh, my name is Justin. Um, appreciate you spending the time to talk to us today. Um I'm not sure how much um Dennis told you about what we're doing here, but um we have this prototype that um we're getting some feedback on running through some initial user test. Um so again, thanks for taking the time.",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Chris Works: Um, let's see. I'm I'm kind of off and on in the job hunt right now, but um I I have a career in in in design, graphic design. Um and then uh I've primarily worked in the printing industry for most of my career for basically the past, you know, 20 years. I've been some somehow related work. My jobs have all been within the printing industry. Um, and then a bit of freelance design too. Um, and then a few years ago, about three years ago probably, I decided to go to like a boot camp for UX design. I went through the um, design lab boot camp for that. But it was like it was like at the end of COVID, after the end of COVID really, when I decided to do it.",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Chris Works: By the time that I gotten out of the boot camp, uh I think the market was just it just got really saturated. Um and so yeah, I wasn't able to find any work after probably like at least 200 applications. I probably had one per one person actually reach out and actually got like an initial interview with that and that and that was exciting. But yeah, it's I kind of gave up and uh shifted focused to um learning like no code tools, web flow, um things of that nature. Um and so I kind of right now at this point kind of given up that and I'm just kind of working on web design um and kind of getting those skills, thinking maybe I could do freelance or solo agency type stuff. But I'm always on the lookout for another job. So primar primarily I look at uh LinkedIn, you know, um I I use flex jobs a little bit. Um and you know, I've tried to network a little bit locally. Um nothing has really turned out anything.",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Chris Works: And now with it with all the advent of the AI tools coming out, it's it seems like junior positions are almost going away in a lot of in a lot of scenarios.",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Chris Works: So it's like, yeah.",
+          "participant": "Chris",
+          "type": "positive"
+        },
+        {
+          "text": "Invited philipchao22@gmail.com harmon.justin@gmail.com Cam Watkins",
+          "participant": "Philip",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Justin Harmon: Thanks for hopping on today. So, uh I'm Justin. Um, first of all, I was curious, have you uh ever conducted any um user tests like this before or is this first time?",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: Okay, that's perfect. I'm just curious if you kind of know what you're in store for a little bit, but yeah, we're just trying to conduct a little bit of research. Um it's really helpful. So I thank you in advance for your time. Um just a couple quick things to start out. Um want to make sure you're comfortable that we're recording this session. Is that cool? All right.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: Do you want me to do that now? Are deferred being um not something that we're immediately going to start categorizing it as something that might get under DevOps like bucket.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: Um so I'm a product designer. I finished my UXUI certification last year in October and um immediately afterwards I found a freelance opportunity where I made a pop-up ad. It's more like a graphic design kind of stuff for a robotics company based in Florida.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: Um, after that I worked with a startup and they just needed help creating MVP features and they did more like AI generated kind of stuff. Um, I work with an engineer a little bit. It was a project based. Um, so once we were done with a couple projects, um, we weren't going to continue. Plus, it wasn't the best experience for me. I think startup bosses, um, how would I say this? They're very focused on their own personal goals and they weren't trained on how to properly interact with other people. So, yeah.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: So, uh, in between those jobs or, um, like have you had a lot of time where you've had to be on the job hunt kind of in between those transitions or has it where you've actively been sending out resumes, applications? How's that worked?",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: I think the search isn't difficult. Well, I'm thinking about how I can send out because any jobs that pop up immediately there's a lot of applications. So, I'm trying to find creative ways to um stand out. So I think how I do that is on Slack channels when someone posts a job opportunity that's a way for me to connect with the person person that posted and kind of get a closer connection or I'll go on like Google Drive, LinkedIn and I only apply to jobs that were posted within 24 hours. Um but it's not that frequent these jobs come up. Like I feel like there's not a lot of UIX center jobs that are for juniors um that is that frequent.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: And what about like your CV or resume? Like what uh where do you keep that right now? Where's the most up-to-date version? What tools do you use? Kind of questions along those lines.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: Yeah, I store everything in Google Drive. I create like basically a base template of resume.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: any Sorry, I threw you off camera before I seems like",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: So, I'm going to put you in like a little bit of a um a scenario. We're going to do a little bit of role play. Um, we're going to put pretend your name is uh Jindo or uh like a little French twist to it of Jean of John Doe. But I'm going to assume that you've kind of you heard about this maybe through a Slack channel or through some chatter and you've gotten to this website and I just want you to kind of tell me first impressions",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Philip Chao: Gotcha. This is the same. Okay, fair enough. Let's see. Joju seems very um tech technological advanced looking site with the colors purple and black in the background. Um what does it do? Bring everything to this site and never have to fill out your profile or info again. Okay. Seems like it's utilizing AI.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: So for a second, pause for me and after you've looked through I said pause for a second for me and after you've looked uh through this kind of just tell me before you take your next action what what's",
+          "participant": "Philip",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Invited harmon.justin@gmail.com Cam Watkins moniquevanhummel@daveperrymiller.com",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Justin Harmon began the meeting by obtaining consent from Monique Van Hummel to record the session and outlined the objectives of the design sprint. Monique Van Hummel shared their career trajectory, including experiences with job hunts, transitions to self-employment, and insights into resume management, emphasizing the role of AI and the importance of visual content. Following a prototype demonstration, Monique Van Hummel provided feedback on the user interface, expressing concerns about trust and data privacy, and discussed their expectations for the tool, particularly regarding its ability to create effective, attention-grabbing resumes.",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Digital Resume and Visual Presentation Monique Van Hummel shared that they used Word or Google Docs for their resume and created a digital resume on Wix while at Fossil, preferring to present work visually rather than through text (00:06:45). They suggested that current tools like Canva and flip books offer a better approach for visual resumes than Wix (00:24:49).",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Trust and Data Privacy Concerns When prompted to interact with the prototype, Monique Van Hummel expressed hesitation about linking personal information due to past negative experiences with job boards like Indeed and Monsterboard, citing concerns about data privacy and the \"dark web\" (00:15:08). Justin Harmon acknowledged trust as a significant factor and inquired if knowing the service was local and not cloud-based would alleviate their concerns (00:16:51).",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Prototype Expectations and AI Interaction After overcoming the trust barrier for the prototype, Monique Van Hummel's primary expectation for the tool was for it to help them find a job (00:19:27). They questioned how the tool would handle complex LinkedIn profiles with multiple roles at one company and assumed the tool would use AI to consolidate information (00:22:20).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Visual Content and Standing Out Monique Van Hummel emphasized the importance of visual content in marketing resumes, believing pictures convey more than words. They suggested that the tool should clearly indicate the ability to add visuals, as they initially assumed \"add content\" meant only text (00:27:40). They shared a personal anecdote about using red, white, and blue paper for a resume to stand out, highlighting the value of differentiation in job applications (00:28:57).",
+          "participant": "Monique",
+          "type": "suggestion"
+        },
+        {
+          "text": "Tool Appeal and Desired Outcomes Justin Harmon asked what features would make the tool more appealing to Monique Van Hummel. Monique Van Hummel stated their expectation that the tool would create an \"amazing resume\" that would be accepted by systems and capture the attention of hiring managers or HR personnel (00:31:27).",
+          "participant": "Monique",
+          "type": "general"
+        },
+        {
+          "text": "Monique Van Hummel: I asked her, \"Is it like LinkedIn?\" She's like, \"Yeah.\" I'm like, \"Okay, whatever. Sure,",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: ideas to land on like what we want to do uh, we prototype it really quickly and then now we're at the end of this exhausting week where we actually um, put it in front of people and kind of get feedback.",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Monique Van Hummel: Okay. Um, before Dave prayer Miller, I was like Laura, we got let go from Fossil, the wonderful place we like to call Fossil.",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Monique Van Hummel: Um, so I spent a year doing things like networking, meeting people, calling people that I knew. I read a book called The Power of Who, um, which is very interesting. I talked to the author even about it. Um, and it's really just using your network to find other people, um, to help find your job. Um, so I kind of took that for a grain of salt, but then I got called from an agency about a year after. Um, I got let go and um, they were looking for an 8week stint at Nike. And so I called a friend who obviously that was kind of how to do the power of who and um she had said, \"Oh, well we have a six-month gig going on.\" And so I was like, \"Oh, that sounds even better.\" And it ended up being in one of my old colleagues team. And so I ended up getting a job through that.",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Invited Cam Watkins kaysonlconlin@gmail.com harmon.justin@gmail.com",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Teal Features and Effectiveness Kayson L Conlin described Teal as a web app with a desktop app and Chrome extension that reads job postings, saves information to a job database, and assesses resume fit (00:12:59). They explained that Teal aims for a 65-75% correlation between the job requirements and the resume to appear authentic yet optimized (00:14:08). Kayson L Conlin noted that Teal helped boost their confidence and garnered more attention and follow-ups during their job search (00:11:17).",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Teal's Best and Missing Features Justin Harmon asked Kayson L Conlin to identify the best and most desired missing features of Teal. Kayson L Conlin praised Teal's ease of use, particularly its ability to parse and divide an existing design-focused resume into bullet points, despite previous challenges with visual resumes (00:17:34). They also appreciated the minimal design options but wished for more personalization in templates (00:18:44). Kayson L Conlin noted that a missing feature is the ability to pull information from a wider range of websites, as it seems geared more towards main job sites, leading to manual input for some applications (00:21:07).",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Content and Role Management in Prototype Kayson L Conlin provided feedback on a prototype, noting that their expectation for an \"add content\" feature would be to include multimedia like portfolios or presentations, rather than just text editing (00:30:12). They also highlighted the importance of being able to add and differentiate multiple positions or roles within a single company, which is common for long-term employment (00:31:33). Kayson L Conlin then explained that Teal addresses this by allowing individual manipulation of company and position details through a parent-child relationship, enabling the addition of separate fields for multiple positions under a single company (00:33:04).",
+          "participant": "Kayson",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: Okay. Uh, I'm going to send you a link a little later in the video. Um, not essential to share it now. Um, unless you want to get it out of the way, but um, once I share the link and we start going through things, that's when, um, it'd be super helpful.",
+          "participant": "Kayson",
+          "type": "positive"
+        },
+        {
+          "text": "Kayson L Conlin: Uh yeah. Um so I have been doing product uh product and UX design um sort of on and off for the past five years. never in quite a full-time capacity, but um more just as part of jobs. I've got my background is in visual design and I've done a lot of design and marketing sort of jobs over the years and a lot of those have involved uh web design and user centered design and um and let's see about a year ago I got laid off from my last job, which was uh basically a creative director uh for a small uh steel and steel company that or I guess it was a company that had a bunch of uh it was a parent company to a bunch of companies in the industrial sector and I was creative director and uh put over uh one of my largest tasks was redesigning and recreating a website basically and um I got laid off from that job before the project was complete and after a nine-month job search I",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Kayson L Conlin: was reached out to by a recruiter over here at Tesla and now I am over on their autopilot team um helping to train AI for the Optimus humanoid robot.",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Justin Harmon: Um, but I wanted to talk to you a little bit about like your job hunt during that time period. um specifically around kind of um some of your pain points around um your resume um your CV kind of and just tell me a little bit about how you uh maintain what tools you're using stuff like that.",
+          "participant": "Kayson",
+          "type": "positive"
+        },
+        {
+          "text": "Kayson L Conlin: Yeah. Uh so basically the sort of tools that I was using at first was I I I just had one resume that I would tweak for a while and um you know I was mainly focused on trying to get my portfolio in shape and whatnot.",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Kayson L Conlin: Um, I wouldn't say that's necessarily what got me where I'm at, but I definitely would say it helped to um it it it definitely helped boost my confidence and probably helped get me a little bit more attention and more um, you know, beyond just the initial interviews and a lot more follow-ups and stuff like that.",
+          "participant": "Kayson",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon: Um, I'm actually unfamiliar with that one uh particular program. Can you tell me a little more about it? Is it like a web app or Oh, they have a desktop thing, too.",
+          "participant": "Kayson",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 55,
+      "users": [
+        "Chrissy",
+        "Monique",
+        "Philip",
+        "Kayson",
+        "Chris"
+      ],
+      "types": [
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "positive",
+        "positive",
+        "general",
+        "ai_feature",
+        "positive",
+        "suggestion",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "positive",
+        "ai_feature",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "ai_feature",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "positive",
+        "positive",
+        "ai_feature",
+        "suggestion",
+        "general",
+        "positive",
+        "positive",
+        "positive",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "positive",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "positive",
+        "ai_feature",
+        "positive",
+        "positive"
+      ]
+    },
+    {
+      "theme": "Workflow",
+      "quotes": [
+        {
+          "text": "No suggested next steps were found for this meeting.",
+          "participant": "Chrissy",
+          "type": "suggestion"
+        },
+        {
+          "text": "Justin Harmon introduced a prototype tool to Chris Works, who provided feedback on its usability and design. Chris Works shared their career background, job search challenges, and concerns about AI's impact on the job market and interviews, and they also detailed their resume management process and compared the prototype to their current resume builder, EnhanceCV. The meeting concluded with Justin Harmon thanking Chris Works for their valuable input.",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Resume Management and ATS Chris Works explained their resume management process, noting that they initially designed their own resume but switched to an online service that creates ATS-friendly resumes due to applicant tracking systems. They described how the service helps tailor their resume to job descriptions, though it has not significantly improved their job search results (00:04:21).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Resume Customization and Application Process Chris Works detailed their method for customizing resumes, which involves duplicating existing resumes in the online service and adjusting skills and tools to match job descriptions. They also mentioned their preference for applying directly through company websites rather than LinkedIn, despite the inconvenience of re-entering information (00:07:33) (00:09:46).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Concerns about AI in Interviews Chris Works raised concerns about the increasing use of AI in initial job interviews, questioning whether it detracts from human dignity in the hiring process. They recounted an anecdote about an AI-driven car getting stuck in a loop, illustrating potential pitfalls of over-reliance on AI (00:11:26).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Resume Upload and Editing Flow Chris Works demonstrated the process of uploading a resume, expecting a prompt for account creation and a confirmation of scanned content. They praised the live editable fields and the option to add new sections or content, but noted the absence of a clear \"continue\" or \"save\" button (00:23:12).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "No suggested next steps were found for this meeting.",
+          "participant": "Chris",
+          "type": "suggestion"
+        },
+        {
+          "text": "Philip Chao's Career Journey and Job Search Philip Chao described their career as a product designer, having completed a UXUI certification and subsequently working freelance for a robotics company and with a startup on MVP features (00:06:40). Philip Chao shared that they found the job search challenging due to the high volume of applications for posted jobs, and that they sought creative ways to stand out, such as connecting with job posters on Slack channels and applying to jobs posted within 24 hours on Google Drive and LinkedIn (00:08:58). They also explained their process for customizing their resume using Jobbrite, editing it for results orientation, and using Google Gemini for keyword integration from job descriptions (00:10:11).",
+          "participant": "Philip",
+          "type": "ai_feature"
+        },
+        {
+          "text": "No suggested next steps were found for this meeting.",
+          "participant": "Philip",
+          "type": "suggestion"
+        },
+        {
+          "text": "Justin Harmon: Gotcha. That totally makes sense. So, the tool um the prototype we're working on is uh meant to kind of help with that process. So, I'm going to share a link with you in the chat uh here in a sec. Um, but I just want to kind of be upfront about the fact that um, I'm going to ask you for some feedback on it. I'm going to ask you to walk through some tasks. Um, but really what we're testing here is the prototype, not you. So like I also uh it would be really helpful if like everything you're thinking, everything you're experiencing uh as vocally you can be about what you're perceiving, the steps you're taking, your thoughts, um all of that is super helpful for us.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Design Sprint Overview Justin Harmon explained that the meeting was part of a design sprint, a week-long process involving exercises to test ideas, rapid prototyping, and feedback collection (00:00:00). They clarified that the product, Jojo, being worked on is related to LinkedIn, as previously indicated by Laura (00:00:43).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Career Journey and Job Hunt Experience Justin Harmon asked Monique Van Hummel to discuss their career journey, specifically their last job hunt before Dave Perry Miller. Monique Van Hummel shared that they were laid off from Fossil and spent a year networking, referencing the book \"The Power of Who\" (00:02:37). They secured a job through a friend's referral at Nike, which lasted three and a half years (00:03:20).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Transition to Self-Employment Monique Van Hummel explained their decision to pursue self-employment after leaving Nike, stating they no longer wanted a company to control their destiny and wished to avoid the challenging interviewing process (00:04:30).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Resume Management and AI Impact Justin Harmon inquired about Monique Van Hummel's resume updating process, including programs used. Monique Van Hummel mentioned that Right Management taught them how to write resumes to bypass AI systems, expressing doubts about the current effectiveness of resumes given how AI filters candidates (00:04:30). They cited a friend's prolonged job search as an example of the broken system (00:05:33).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "No suggested next steps were found for this meeting.",
+          "participant": "Monique",
+          "type": "suggestion"
+        },
+        {
+          "text": "Justin Harmon: Sounds good. I'm in. So, uh, over the last week, I've been working with the team on, uh, this process called a design sprint where we go from through a series of exercises, um, to kind of like test a bunch of",
+          "participant": "Monique",
+          "type": "positive"
+        },
+        {
+          "text": "Justin Harmon interviewed Kayson L Conlin to gather information for their research, focusing on Kayson L Conlin's career journey, job hunt experiences, and tools used for resume management. Kayson L Conlin shared their positive experiences with Teal, an AI-powered service that tailors resumes to job requirements and helps with cover letters, highlighting its effectiveness in boosting confidence and generating more attention from employers. Kayson L Conlin praised Teal's ease of use and ability to parse existing resumes but suggested that a missing feature is the ability to pull information from a wider range of websites for job applications.",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Introduction and Career Journey Justin Harmon began the meeting by introducing themself to Kayson L Conlin and stating the purpose of the recorded research interview, which was to gather information for their research (00:00:00). Kayson L Conlin shared their career journey, detailing their five years of on-and-off product and UX design experience, their background in visual design and marketing, and their recent role as a creative director where they were tasked with website redesign before being laid off (00:07:50). They also mentioned their current position on the Tesla autopilot team, training AI for the Optimus humanoid robot, and clarified that their team is based in Draper, Utah, not Austin (00:09:46).",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "No suggested next steps were found for this meeting.",
+          "participant": "Kayson",
+          "type": "suggestion"
+        }
+      ],
+      "mention_count": 19,
+      "users": [
+        "Chrissy",
+        "Monique",
+        "Philip",
+        "Kayson",
+        "Chris"
+      ],
+      "types": [
+        "suggestion",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "suggestion",
+        "ai_feature",
+        "suggestion",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "suggestion",
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "suggestion"
+      ]
+    },
+    {
+      "theme": "Customization",
+      "quotes": [
+        {
+          "text": "Resume Building Tools and AI Integration Christine Caluori stated that if they were to rebuild their resume today, they would use AI tools like Chat GPT to tailor it more specifically to job applications, acknowledging that current tools are more sophisticated than their past methods. They noted that their husband, who is more technically inclined, could steer them towards specific platforms.",
+          "participant": "Chrissy",
+          "type": "positive"
+        },
+        {
+          "text": "Challenges with Job Application Strategies Chris Works expressed frustration with conflicting advice on job application strategies, such as \"spray and pray\" versus targeted applications. They highlighted the time-consuming nature of tailoring applications and cover letters, especially for jobs with long questionnaires, often without receiving feedback (00:10:33).",
+          "participant": "Chris",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Right Management Advice and Resume Customization Justin Harmon sought more detail on the resume advice Monique Van Hummel received from Right Management, a company hired by Fossil to assist laid-off employees (00:22:20). Monique Van Hummel recalled advice on avoiding weird characters, including a summary and key strengths, and mentioned that AI systems often filter out talented candidates based on specific keywords (00:23:19). They indicated they did not significantly tailor their resume within the marketing field, only if changing industries entirely (00:30:09).",
+          "participant": "Monique",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Job Hunt Pain Points and Resume Tools Justin Harmon inquired about Kayson L Conlin's job hunt experiences, specifically focusing on resume-related pain points and the tools they used. Kayson L Conlin initially used a single resume that they would tweak, but they discovered that their resume wasn't well-written for initial company representation (00:09:46). They then found a service called Teal, which uses AI to tailor resumes to job requirements by selecting and customizing bullet points and helping write cover letters (00:11:17).",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Kayson L Conlin: But uh as time went on, what I realized was um I would get some initial interest, but uh probably what I noticed was on my uh on my resume on the initial, you know, representation of myself to these companies, I probably wasn't showing up as well because um it just wasn't really well written. I discovered a service called Teal that utilizes AI to uh parse through job requirements and uh that sort of thing and then basically helps you tailor a resume to that via you create a bunch of bullet points for each position that you've worked at. And then what it does is it selects and tailors those bullet points um to you know whatever job you're applying for and helps you write cover letters and whatnot.",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Kayson L Conlin: app and they have a Chrome extension that will basically um read through and grab any job postings from a site. If if you're on a job site and it finds enough information that it says, \"Oh, this must be a job posting.\" It will say, \"Would you like me to, you know, would you like me to uh save this information to your job database?\" And what it can do is it can go through, you know, you can go through several of these jobs and it'll tell you how good of a fit you are based on your resume and then it'll help you tailor your resume so that you can be an even better fit. But what it does is it uh it tries to get a a solid match.",
+          "participant": "Kayson",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 6,
+      "users": [
+        "Kayson",
+        "Chris",
+        "Chrissy",
+        "Monique"
+      ],
+      "types": [
+        "positive",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "ai_feature",
+        "positive"
+      ]
+    },
+    {
+      "theme": "Ease Of Use",
+      "quotes": [
+        {
+          "text": "Justin Harmon confirmed Christine Caluori's consent to record and share the screen for a prototype demonstration, clarifying the test's focus on the tool rather than the user. Christine Caluori shared their past job hunting and resume management experiences, noting the manual creation of multiple resume versions and the need for a more enhanced LinkedIn job description. During the prototype interaction, Christine Caluori preferred an intuitive design, expected direct LinkedIn integration, and provided extensive feedback, including suggestions for AI tool linking, cover letter generation, multiple resume version storage, and integration with job search sites like Indeed.",
+          "participant": "Chrissy",
+          "type": "positive"
+        },
+        {
+          "text": "Resume Management and Job Hunt Experience Christine Caluori shared their past experiences with job hunting, including having to create multiple resume versions for different industries and roles due to being considered overqualified for some positions. They maintained these versions manually, using simple naming conventions like \"Version one,\" and noted that they had to reapply for their current job when they moved back to the United States, updating their resume in Microsoft Word.",
+          "participant": "Chrissy",
+          "type": "positive"
+        },
+        {
+          "text": "Prototype Interaction and Feedback During the prototype demonstration, Christine Caluori preferred to immediately click the \"Get Started\" button without reading instructions, indicating a preference for intuitive design. They expected the prototype to link and import their LinkedIn profile directly and encountered issues with the \"Add Content\" button, which did not function as expected. Christine Caluori also expressed a desire for a character limit indicator when adding content to help with self-editing.",
+          "participant": "Chrissy",
+          "type": "general"
+        },
+        {
+          "text": "Justin Harmon welcomed Philip Chao to a user testing session for a prototype tool, Joju, designed to assist with the job application process. Philip Chao, a product designer, shared their experiences with challenging job searches and methods for customizing resumes. Philip Chao found the prototype easy to navigate but suggested that more information about the tool's features and benefits should be on the homepage to build trust and encourage users to share information, highlighting the AI conversation feature as unique.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Feedback on the Prototype Tool Justin Harmon introduced a prototype tool designed to assist with the job application process, emphasizing that the test was for the prototype, not the user, and encouraged Philip Chao to verbalize their thoughts and experiences (00:10:11). Philip Chao's initial impression of the site, named Joju, was that it appeared technologically advanced and aimed to consolidate job searching sites, similar to Jobbrite (00:12:52). They expressed curiosity about how the tool differed from existing ones and how it would specifically aid in job searching beyond just collecting information (00:14:01). Philip Chao found the user flow easy and the site simple but noted a lack of information about the tool's features and benefits on the homepage, which would hinder their trust and willingness to share information (00:17:54). Philip Chao highlighted the AI conversation feature as unique and well-placed within the user flow for immediate questions (00:21:02).",
+          "participant": "Philip",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 5,
+      "users": [
+        "Chrissy",
+        "Philip"
+      ],
+      "types": [
+        "positive",
+        "positive",
+        "general",
+        "positive",
+        "positive"
+      ]
+    },
+    {
+      "theme": "Context Aware Ai",
+      "quotes": [
+        {
+          "text": "Justin Harmon: So, um, just to kind of give you a little context here, I'm not guiding you through anything at this point. I want you to like pretend you're seeing it for the first time. Like it, uh, so like you said, you are a job seeker. Um, you know, you've heard about this new resume tool. You're just like, pretend this is the discovery phase. It's like if if click started is the first thing you go to and you immediately go in, that's great. But if you were to read more or look around, whatever your instincts are, I want you to tell me about that.",
+          "participant": "Philip",
+          "type": "positive"
+        },
+        {
+          "text": "Prototype Introduction and User Interface Feedback Justin Harmon shared a link to the prototype and asked Monique Van Hummel to share their screen for a role-play exercise (00:07:47). Monique Van Hummel, pretending to be \"Ganondo,\" expressed confusion about the website's purpose, noting the lack of an \"About Us\" or navigation bar, and feeling it resembled a form rather than a website (00:12:29). They also found the black color scheme harsh and suggested an all-white background with more context (00:13:35).",
+          "participant": "Monique",
+          "type": "suggestion"
+        },
+        {
+          "text": "Justin Harmon: Um I can talk you through it when we get there. Um, but for starters, um, I just want to talk to you a little bit about, um, like a little bit about your career journey, but more, um, within the context of like, uh, kind of before Dave Perry Miller, like what your last job hunt looked like.",
+          "participant": "Monique",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 3,
+      "users": [
+        "Monique",
+        "Philip"
+      ],
+      "types": [
+        "positive",
+        "suggestion",
+        "positive"
+      ]
+    },
+    {
+      "theme": "Automation",
+      "quotes": [
+        {
+          "text": "Resume Versioning and Success Tracking in Teal Kayson L Conlin explained that Teal saves every version of a created resume and allows users to build off existing versions or create new ones from a base resume. When a new version is created, it can retroactively add content to previous resumes, and Teal automatically titles new resumes based on the company and position title from job postings (00:36:04). Kayson L Conlin further noted that Teal offers the option to populate new resumes based on previous ones or tailor them to a job description, helping users identify which bullet points are most effective by tracking interview processes and job offers (00:38:39).",
+          "participant": "Kayson",
+          "type": "ai_feature"
+        },
+        {
+          "text": "Teal vs. Prototype Functionality and Future Desires Justin Harmon asked Kayson L Conlin to compare the prototype's potential to Teal, considering one top feature from Teal. Kayson L Conlin observed that the prototype focuses on centralizing information into one place, whereas Teal excels at disseminating that information based on specific job requirements. They suggested that if the prototype could expand its current feature of pulling information from the internet to also auto-populate job applications, similar to Teal's functionality, it would be highly useful (00:40:10). Kayson L Conlin emphasized the value of accurate field alignment for correct prepopulation, as they often use Teal to generate PDFs that auto-populate job applications (00:41:38).",
+          "participant": "Kayson",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 2,
+      "users": [
+        "Kayson"
+      ],
+      "types": [
+        "ai_feature",
+        "positive"
+      ]
+    },
+    {
+      "theme": "Ai Accuracy",
+      "quotes": [
+        {
+          "text": "Resume Management in Teal Kayson L Conlin elaborated on how Teal manages resumes, explaining that users create a master copy with numerous bullet points for each job, and Teal then suggests which bullet points to include based on a job description to avoid overly long resumes. They also mentioned that Teal uses AI to generate bullet points and cover letters, which is more accurate than general chatbots like Claude or ChatGPT because it's based on the user's specific resume information (00:15:17). Kayson L Conlin compared general AI to an \"eager intern\" that prioritizes impressing over accuracy (00:16:33).",
+          "participant": "Kayson",
+          "type": "positive"
+        }
+      ],
+      "mention_count": 1,
+      "users": [
+        "Kayson"
+      ],
+      "types": [
+        "positive"
+      ]
+    }
+  ]
+}

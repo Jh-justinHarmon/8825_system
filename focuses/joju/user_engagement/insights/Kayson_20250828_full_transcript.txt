@@ -1,0 +1,264 @@
+📝 Notes
+Aug 28, 2025
+Kayson User Test
+Invited Cam Watkins kaysonlconlin@gmail.com harmon.justin@gmail.com
+Attachments Kayson User Test 
+Meeting records Transcript Recording 
+Summary
+Justin Harmon interviewed Kayson L Conlin to gather information for their research, focusing on Kayson L Conlin's career journey, job hunt experiences, and tools used for resume management. Kayson L Conlin shared their positive experiences with Teal, an AI-powered service that tailors resumes to job requirements and helps with cover letters, highlighting its effectiveness in boosting confidence and generating more attention from employers. Kayson L Conlin praised Teal's ease of use and ability to parse existing resumes but suggested that a missing feature is the ability to pull information from a wider range of websites for job applications.
+Details
+Introduction and Career Journey Justin Harmon began the meeting by introducing themself to Kayson L Conlin and stating the purpose of the recorded research interview, which was to gather information for their research (00:00:00). Kayson L Conlin shared their career journey, detailing their five years of on-and-off product and UX design experience, their background in visual design and marketing, and their recent role as a creative director where they were tasked with website redesign before being laid off (00:07:50). They also mentioned their current position on the Tesla autopilot team, training AI for the Optimus humanoid robot, and clarified that their team is based in Draper, Utah, not Austin (00:09:46).
+Job Hunt Pain Points and Resume Tools Justin Harmon inquired about Kayson L Conlin's job hunt experiences, specifically focusing on resume-related pain points and the tools they used. Kayson L Conlin initially used a single resume that they would tweak, but they discovered that their resume wasn't well-written for initial company representation (00:09:46). They then found a service called Teal, which uses AI to tailor resumes to job requirements by selecting and customizing bullet points and helping write cover letters (00:11:17).
+Teal Features and Effectiveness Kayson L Conlin described Teal as a web app with a desktop app and Chrome extension that reads job postings, saves information to a job database, and assesses resume fit (00:12:59). They explained that Teal aims for a 65-75% correlation between the job requirements and the resume to appear authentic yet optimized (00:14:08). Kayson L Conlin noted that Teal helped boost their confidence and garnered more attention and follow-ups during their job search (00:11:17).
+Resume Management in Teal Kayson L Conlin elaborated on how Teal manages resumes, explaining that users create a master copy with numerous bullet points for each job, and Teal then suggests which bullet points to include based on a job description to avoid overly long resumes. They also mentioned that Teal uses AI to generate bullet points and cover letters, which is more accurate than general chatbots like Claude or ChatGPT because it's based on the user's specific resume information (00:15:17). Kayson L Conlin compared general AI to an "eager intern" that prioritizes impressing over accuracy (00:16:33).
+Teal's Best and Missing Features Justin Harmon asked Kayson L Conlin to identify the best and most desired missing features of Teal. Kayson L Conlin praised Teal's ease of use, particularly its ability to parse and divide an existing design-focused resume into bullet points, despite previous challenges with visual resumes (00:17:34). They also appreciated the minimal design options but wished for more personalization in templates (00:18:44). Kayson L Conlin noted that a missing feature is the ability to pull information from a wider range of websites, as it seems geared more towards main job sites, leading to manual input for some applications (00:21:07).
+Content and Role Management in Prototype Kayson L Conlin provided feedback on a prototype, noting that their expectation for an "add content" feature would be to include multimedia like portfolios or presentations, rather than just text editing (00:30:12). They also highlighted the importance of being able to add and differentiate multiple positions or roles within a single company, which is common for long-term employment (00:31:33). Kayson L Conlin then explained that Teal addresses this by allowing individual manipulation of company and position details through a parent-child relationship, enabling the addition of separate fields for multiple positions under a single company (00:33:04).
+Resume Versioning and Success Tracking in Teal Kayson L Conlin explained that Teal saves every version of a created resume and allows users to build off existing versions or create new ones from a base resume. When a new version is created, it can retroactively add content to previous resumes, and Teal automatically titles new resumes based on the company and position title from job postings (00:36:04). Kayson L Conlin further noted that Teal offers the option to populate new resumes based on previous ones or tailor them to a job description, helping users identify which bullet points are most effective by tracking interview processes and job offers (00:38:39).
+Teal vs. Prototype Functionality and Future Desires Justin Harmon asked Kayson L Conlin to compare the prototype's potential to Teal, considering one top feature from Teal. Kayson L Conlin observed that the prototype focuses on centralizing information into one place, whereas Teal excels at disseminating that information based on specific job requirements. They suggested that if the prototype could expand its current feature of pulling information from the internet to also auto-populate job applications, similar to Teal's functionality, it would be highly useful (00:40:10). Kayson L Conlin emphasized the value of accurate field alignment for correct prepopulation, as they often use Teal to generate PDFs that auto-populate job applications (00:41:38).
+Suggested next steps
+No suggested next steps were found for this meeting.
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+Please provide feedback about using Gemini to take notes in a short survey.
+📖 Transcript
+Aug 28, 2025
+Kayson User Test - Transcript
+00:00:00
+ 
+Justin Harmon: Hi, Jason.
+Kayson L Conlin: Hello.
+Justin Harmon: I'm Justin. Nice to meet you.
+Kayson L Conlin: Nice to meet you.
+Justin Harmon: Appreciate you hopping on with me today. Um, not sure uh how much Cam prepped you. Um but we're doing a little uh research interview and so I appreciate your time and appreciate you going through this with us. Uh for starters, uh plan to record this if you're okay with it.
+Kayson L Conlin: Right. Yeah. Yeah. Perfectly fine with that.
+Justin Harmon: All right. Thank you. Um just some other kind of housekeeping stuff. Um, are you able to share your share your screen?
+Kayson L Conlin: Um, yeah, I should be able to. Yeah.
+Justin Harmon: Okay. Uh, I'm going to send you a link a little later in the video. Um, not essential to share it now. Um, unless you want to get it out of the way, but um, once I share the link and we start going through things, that's when, um, it'd be super helpful.
+ 
+ 
+00:07:50
+ 
+Kayson L Conlin: Mhm.
+Justin Harmon: Um, so to start, um, I just wanted to get to we want to get to know a little bit about you.
+Kayson L Conlin: Okay.
+Justin Harmon: Um, so could you tell me a little bit about your career journey in general?
+Kayson L Conlin: Uh yeah. Um so I have been doing product uh product and UX design um sort of on and off for the past five years. never in quite a full-time capacity, but um more just as part of jobs. I've got my background is in visual design and I've done a lot of design and marketing sort of jobs over the years and a lot of those have involved uh web design and user centered design and um and let's see about a year ago I got laid off from my last job, which was uh basically a creative director uh for a small uh steel and steel company that or I guess it was a company that had a bunch of uh it was a parent company to a bunch of companies in the industrial sector and I was creative director and uh put over uh one of my largest tasks was redesigning and recreating a website basically and um I got laid off from that job before the project was complete and after a nine-month job search I
+ 
+ 
+00:09:46
+ 
+Justin Harmon: Very cool.
+Kayson L Conlin: was reached out to by a recruiter over here at Tesla and now I am over on their autopilot team um helping to train AI for the Optimus humanoid robot.
+Justin Harmon: Are you uh down in Austin?
+Kayson L Conlin: No, no, I'm we're based in Draper, Utah.
+Justin Harmon: Okay. Oh, okay. Cool. Cool. Cool. Well, um, thank you for that.
+Kayson L Conlin: Mhm.
+Justin Harmon: Um, sorry to hear about the layoff. I've gone through that. That really sucks.
+Kayson L Conlin: Sure.
+Justin Harmon: Um, but I wanted to talk to you a little bit about like your job hunt during that time period. um specifically around kind of um some of your pain points around um your resume um your CV kind of and just tell me a little bit about how you uh maintain what tools you're using stuff like that.
+Kayson L Conlin: Yeah. Uh so basically the sort of tools that I was using at first was I I I just had one resume that I would tweak for a while and um you know I was mainly focused on trying to get my portfolio in shape and whatnot.
+ 
+ 
+00:11:17
+ 
+Kayson L Conlin: But uh as time went on, what I realized was um I would get some initial interest, but uh probably what I noticed was on my uh on my resume on the initial, you know, representation of myself to these companies, I probably wasn't showing up as well because um it just wasn't really well written. I discovered a service called Teal that utilizes AI to uh parse through job requirements and uh that sort of thing and then basically helps you tailor a resume to that via you create a bunch of bullet points for each position that you've worked at. And then what it does is it selects and tailors those bullet points um to you know whatever job you're applying for and helps you write cover letters and whatnot.
+Justin Harmon: Nice.
+Kayson L Conlin: Um, I wouldn't say that's necessarily what got me where I'm at, but I definitely would say it helped to um it it it definitely helped boost my confidence and probably helped get me a little bit more attention and more um, you know, beyond just the initial interviews and a lot more follow-ups and stuff like that.
+ 
+ 
+00:12:59
+ 
+Kayson L Conlin: Um, it's a web app that h they they do have uh an iOS uh they have a desktop uh
+Justin Harmon: Um, I'm actually unfamiliar with that one uh particular program. Can you tell me a little more about it? Is it like a web app or Oh, they have a desktop thing, too.
+Kayson L Conlin: app and they have a Chrome extension that will basically um read through and grab any job postings from a site. If if you're on a job site and it finds enough information that it says, "Oh, this must be a job posting." It will say, "Would you like me to, you know, would you like me to uh save this information to your job database?" And what it can do is it can go through, you know, you can go through several of these jobs and it'll tell you how good of a fit you are based on your resume and then it'll help you tailor your resume so that you can be an even better fit. But what it does is it uh it tries to get a a solid match.
+ 
+ 
+00:14:08
+ 
+Kayson L Conlin: So we're looking at correlation between uh what the job is looking for and what your resume says. and you're looking for a correlation on those key points, but they're looking for not just like a 100% correlation because that looks a little bit too artificial. They're looking for between 65 and I think 75% correlation. So, you know, enough that it will stick out and people will say, "Hey, you can do these things, but not so much."
+Justin Harmon: Yeah, that sounds like a powerful one. I'm going have to look that up myself.
+Kayson L Conlin: Yeah, it's it's pretty powerful. It was suggested to me by uh Mitch Clemens, if you know who that is at all. Um he's a he's I guess in Utah. He's uh well actually he's got a pretty good LinkedIn presence for uh UX design. He's kind of a design leader and sort of in the influencer space, but um yeah.
+Justin Harmon: I gota now does your resume like live in
+Kayson L Conlin: Yeah.
+ 
+ 
+00:15:17
+ 
+Kayson L Conlin: So what you do is you create uh you create sort of a master copy of that resume that has you know 10 bullet points for every single job. But then what you do is it selects which bullet points and you can do this manually as well, but it it will go through and it will suggest which bullet points to put based on a job description so that you're not sending like a four or fivepage resume.
+Justin Harmon: Yeah.
+Kayson L Conlin: And it will do the same thing, you know, for uh skills and uh education background, basically all the different points of the resume. Um it will suggest it will if you pay for their program it will help AI generate uh you know your bullet points and it will uh use AI to generate uh cover letters and because it's based on your
+Justin Harmon: Heat.
+Kayson L Conlin: resume and the information that you're putting in it's much less likely than say if I was to go to uh Claude or Chad GPT or you know one of these uh chat bots.
+ 
+ 
+00:16:33
+ 
+Kayson L Conlin: If I was to say, "Tailor me a resume to this job based on this information." The the amount of speculation Oh, yeah.
+Justin Harmon: Oh yeah, it just makes s*** up.
+Kayson L Conlin: It it totally does. It It totally will. And because I'm like that I'm like that would sound really good if it was true.
+Justin Harmon: I'm like I I've done that and I've read it. I've been like that that's like miles beyond what I put in. You just completely made up a new accomplishment. Yeah, probably.
+Kayson L Conlin: Like you you're AI has been described to me as the eager intern. Okay. It's it's, you know, it's not as it's concerned with impressing, not so concerned with accuracy.
+Justin Harmon: Yeah.
+Kayson L Conlin: We're trying to we're trying to get the accuracy better, but that's going to take it's going to take a lot of time and tweaking, but um yeah, I I've gotten some decent interest with that.
+Justin Harmon: So, really quickly, sorry.
+Kayson L Conlin: Oh, go ahead.
+ 
+ 
+00:17:34
+ 
+Justin Harmon: Uh, I was just curious like if you could do like a uh best part and like one thing that you wished it could have done that it didn't do. Could you kind of like do the highs and lows for me of like what your best part of teal was and like one missing feature that you know would have just put it through the roof for you even though it sounds like it did a pretty awesome job.
+Kayson L Conlin: you know, um, as far as as far as the best parts, um, the ease of use of I was able to upload an existing resume. It was able to parse through that, divide it into bullet points. It did a pretty good job of because uh coming from a design background, my resumes have always been in uh like design software in the past because I've been trying to I've been more focused on making an impression, a visual impression rather than uh having something that is maybe a little bit more substantial but also doesn't stand out from the crowd.
+ 
+ 
+00:18:44
+ 
+Kayson L Conlin: Um, but it was able to parse through all of that. Um, which was impressive to me. Um, it will allow you to design it in a minimal fashion as far as like fonts and as far as some, you know, very basic uh, templates and whatnot. I do wish that there was a little bit more of that sort of personalization to it. But that being said, uh when you're generating things, everything has to fill a specific space. And well, when you're especially when you're talking text generation, it's just like web, you know, uh there's there's just this a specific aotment of horizontal space and then the vertical space can stretch, but then that does things to
+Justin Harmon: Yeah, eventually it starts growing. You're like, I don't need a fivepage resume.
+Kayson L Conlin: Yeah.
+Justin Harmon: Thank you.
+Kayson L Conlin: Yeah. No, it exactly. Well, I I I think it is easier to be completely fair. I think it it I think the onepage resume from most of the people that I've ever talked to, most people are like, "Okay, well, the onepage resume was mainly because of printing and mainly because like, you know, it
+ 
+ 
+00:20:02
+ 
+Justin Harmon: Yeah. Yeah. There's somewhere healthy in the middle nowadays that's realistic, you know.
+Kayson L Conlin: Well, yeah, exactly. Especially because like with a two-page resume, you might be able to use a little bit of an easier to see easier to see text and you you're not just cramming so much stuff in because like I I I feel like um I feel like people were cramming five pages of stuff into one page rather than actually, you know, trying to shorten it down.
+Justin Harmon: Yeah. Or just editing so much out that it just is unreadable.
+Kayson L Conlin: Yeah.
+Justin Harmon: Yeah.
+Kayson L Conlin: Exactly.
+Justin Harmon: Um
+Kayson L Conlin: Exactly. What What did you do at your job? Well, I I did the tasks that I was assigned. It's like if especially if you've been in the job market for uh for a while or if if you've been in the field for a while, you know, it builds up.
+Justin Harmon: yeah, totally agree.
+Kayson L Conlin: But uh as as far as uh good features, uh ease of use was really good.
+ 
+ 
+00:21:07
+ 
+Kayson L Conlin: But um customizability I think is a big one. Also, I've noticed that uh with the parsing through things, it could use a little work as far as just um being something that can pull from just about any website. Um, I feel like it's geared more for the main job sites, but there will be a number of sites that will post on LinkedIn or Indeed that will take you to their site. And because of the way that they've formatted the job application, it doesn't fall into this particular format. And so, you have to manually input things.
+Justin Harmon: I know that one too. Yeah.
+Kayson L Conlin: Also, a lot of companies, they won't ask for cover letters. They'll just have you do a bunch of short answer type things, and it will fill that sort of information in as well with the Chrome add-on, but it isn't always it's harder to customize those sort of answers. And I get that like with AI, it's it's meant to be more of a starting point, especially right now.
+ 
+ 
+00:22:29
+ 
+Kayson L Conlin: It's getting to a point where you can it it can craft content that is almost indistinguishable from that of a human. But, you know, it's it's got its tails.
+Justin Harmon: It has its tails, you know.
+Kayson L Conlin: And the last thing I want is I'm in this sort of semi-creative field of UX design. I don't want to come off looking like all I ever use is AI. But at the same time, I'm also in the tech field where it's like if you're not using AI, you are behind the times. And so I'm trying to find a decent balance there.
+Justin Harmon: Yeah. I gotcha. So, uh, all that has been super helpful. Um, I do, if you, um, are willing to share your screen now, I want to share with you a prototype we've been working on after a quick sprint.
+Kayson L Conlin: Yeah. Mhm.
+Justin Harmon: Um, I I don't know if you've gone through this level of test before. My gut says you probably have, but, you know, we're clearly judging the protot, not you.
+ 
+ 
+00:23:35
+ 
+Justin Harmon: Uh so um I went ahead and I sent it in the chat.
+Kayson L Conlin: Mhm.
+Justin Harmon: So um you can open it. Um please share your screen and um for starters I just want you to kind of at every stage just talk through what you're thinking, what you're feeling, um first impressions. Um and then we might go through, you know, some tasks. Um, but I want to just hear every every thought that pops in your head as you go through it.
+Kayson L Conlin: Okay, let's share that.
+Justin Harmon: Thank you.
+Kayson L Conlin: Okay, you can see my screen.
+Justin Harmon: Yep. So, uh, just to kind of frame this a little bit. So, um I'm going to have you play a little, uh role playing, and we're going to pretend for today that you're a Jeo, a little French twist on it. Um but you've heard about this website from a buddy or a recommendation um as you're looking to build your uh resume and you got sent this link. You're opening it for the first time.
+ 
+ 
+00:24:45
+ 
+Kayson L Conlin: Okay. bring everything to Joshua and then we're pro fill out profile. Okay. So connected profile um is this select all that apply? Okay. Um probably probably those three I would say LinkedIn also Indeed. Okay. Drag and drop files makes sense. browser extension and mobile apps. Sweet. Okay. So it's now is this is the idea of this to be uh essentially like parsed together from uh from my LinkedIn combined with my resume and all of that sort of stuff. Is it looking for congruencies and inconsistencies and accounting for that sort of thing? Or is it pulling specifically from like is it geared toward pulling from one? Is it geared toward like pulling from my LinkedIn?
+Justin Harmon: So, uh it isn't there yet, but our we have been discussing that if you know you're bringing in multiple phases that there would be a uh a flow of you know looking for congruencies or whether you want uh AI to kind of create a summary if you just selected one the assumption is that it brought in just that one.
+ 
+ 
+00:27:02
+ 
+Justin Harmon: Um but yeah that's the the thought process.
+Kayson L Conlin: Okay. Uh, feedback extraordinaire. I'm allowed to edit that. I'm allowed to edit that. Would I theoretically be allowed to edit the years or would that be in a different a different function?
+Justin Harmon: uh I don't know how much I'm you know supposed to guide but yeah theoretically they're all open fields but yeah so first impressions overall now that you've walked through kind of a basic flow Oh,
+Kayson L Conlin: Okay. Okay. Um, first impressions are are very good. Um, upload a file that just takes me to the same thing. Um, grab from the web. So the idea is that essentially it can pull anything about you. So is this building essentially a profile website that you can pull from essentially? Is is that what it's essentially doing?
+Justin Harmon: So what we're very focused on right now is the intake, but there's been, you know, we're doing a lot of discussion and exploration on the outtake.
+ 
+ 
+00:28:39
+ 
+Justin Harmon: Now, um this is intended to be kind of a living CV that you can uh always download um share. Um there's a lot of other conversations about how to link it on the back end and how to utilize it, but right now it's um kind of trying to create that one bucket of truth where you can stop pulling your stuff from every all these different places and have one spot where you kind of funnel all of that effort.
+Kayson L Conlin: Huh. So, um, something that you might look into is what I've what I've noticed is when it pulls from a resume, a lot of times it's looking for this very specific format. And if it if things don't follow that format, for example, with my designed resumes, um things didn't necessarily the text boxes didn't necessarily uh they weren't in a specific order. And and so when it it said, okay, there was this place of work, but then it would jump down a few lines where a few different layers to uh a different text box and say that this is the this is the place that you worked.
+ 
+ 
+00:30:12
+ 
+Kayson L Conlin: and it would actually be like the description or something because of just how it was pulling the information. Um, making sure that all of that is uh that it's pulling data from the right places I think is very important. Um, but yeah, I I think uh I I I think the overall idea is is fairly good. So the the idea here then is that if I say add content, I can come through and Oh, I don't know what happened there. I can I can go through and I can It's okay.
+Justin Harmon: you're broken. I'm just uh so well let me
+Kayson L Conlin: It's okay. So, I can I can go through and I can I can uh basically add like uh PDFs or websites or that sort of thing to a job or to a what would it be to a description of on on my resume or my CV.
+Justin Harmon: uh is that what based on what you're Is that what your expectation would be?
+Kayson L Conlin: That's what my expectation would be.
+ 
+ 
+00:31:33
+ 
+Kayson L Conlin: Uh when it says add content um because if I click on the text box it, you know, it's obvious that I can edit the text.
+Justin Harmon: Yep. Okay.
+Kayson L Conlin: But adding content, my my when I think of content, I would think of some sort of multimedia or some sort of uh something in addition to that, be it uh be it, you know, uh portfolio or uh a PowerPoint, a presentation, um that sort of thing. Um, the only thing that I can really think of that might also be really useful there is that a lot of places you'll have like multiple positions and stuff like that. Uh, figuring out how to add secondary positions or secondary roles and that sort of thing. I don't think that's going to be so much of an edge case as much as like if you're at a place for five ten years, you're going to have multiple roles and you're going to want different descriptions for those roles and um yeah, how you display that information I think is going to be is going to be interesting.
+ 
+ 
+00:33:04
+ 
+Justin Harmon: That's a really good point.
+Kayson L Conlin: Um yeah, teal like the color.
+Justin Harmon: Now, how uh on something like uh TL the I think that did I have that name right? Um how um were situations like that handled on there? out of curiosity like where you have one job with multiple titles.
+Kayson L Conlin: How are situations handled there?
+Justin Harmon: Was that as far as like structuring the data was there?
+Kayson L Conlin: So, as far as like structuring the data, um, so basically what it allows me to do is, uh, there's a tool tip that pops up when I scroll over um all of the different uh points. So I've got like a a selection for the company and then if I go down it's a parent child relationship. The child of that is the position and with the position is the dates of uh that position and then under that is the description which is those bullet points. Each of these pieces is uh on a parent child relationship. They are able to be manipulated um individually.
+ 
+ 
+00:34:45
+ 
+Kayson L Conlin: So this tool tip hovers over anything that I am selecting. And basically with this tool tip what I'm allow able to do is I'm able to say okay uh edit if I go to company I say I can say edit the company and I can add uh information about the location or any of that sort of thing. And then I can say add position and it will create a separate it will create a separate field for position. And then um it allows me to add a general description that um is more of just like a brief summary of all of the bullet points and um the dates and all of that is then I'm I'm able
+Justin Harmon: Okay.
+Kayson L Conlin: to go in and you know add the bullet points but it it basically just creates another instance that is uh under the parent of the company.
+Justin Harmon: So out of curiosity when in your experience with teal um because you said you utilized it and you liked it because of how it was able to customize your information to a specific job.
+ 
+ 
+00:36:04
+ 
+Kayson L Conlin: Mhm.
+Justin Harmon: But was there any form of versioning or branching where you could kind of or was like every time the last version lost to history or did you have kind of a track record of the different versions of your resume that were out there?
+Kayson L Conlin: I've got every single version that has been created. And what it does is, uh, it allows you to either build off an existing version or create. So, basically, I have a base resume that doesn't change. It just gets added on to. And when I add something to a new version of that resumeé, I have the option to add it to the to all uh all previous resumes uh retroactively. And but what that basically does is um when I am applying for a new position, what I do is uh when I upload the or when when it finds the the information on the job posting, what it does is it pulls the when it pulls the company name and the position title, it will title the resume based on that information.
+ 
+ 
+00:37:25
+ 
+Kayson L Conlin: So, it will title a resume uh position title at X company. And uh you can obviously go back in and edit that if you want to, but each one will save as a separate instance. and they are all under a sort of parent resume that has all of the all the bullet points and Yeah.
+Justin Harmon: So, you may not know, well, you based on how in-depth you are, you might you there's a good chance you do, but I'm curious like so, um, you add something new to the master resume, right?
+Kayson L Conlin: Yeah.
+Justin Harmon: Uh and then let's say let's pretend you have a Google version where you want to publish your new information across all résumés and you have your Tesla version and your Google version.
+Kayson L Conlin: Mhm.
+Justin Harmon: Will it automatically interpret like retain the translations or the priorities it had for Google and Tesla and take that new job description and add bullets that are revalent to those specifically? or does it just add it kind of in bulk the same across the board? Does it run it through that pre filter that it created?
+ 
+ 
+00:38:39
+ 
+Kayson L Conlin: So what it So what it does is it gives you the option to to uh populate the new resume based on the previous resume or based on um you can just have it tailor it to the job description, but that's as an option. Um, it's it it's useful, but um there's a number of jobs that I've applied to that I haven't really made too many changes to the resume because what you start to notice after a while is a pattern of
+Justin Harmon: Okay, that's interesting.
+Kayson L Conlin: which bullet points work better than others and what actually gets more attention. And it also allows you to keep track of like what the what the resume actually um if if it it allows you to keep track of the interview process as well. Um, and so basically it allows you to it it will do interview practice.
+Justin Harmon: Oh,
+Kayson L Conlin: Um, and it will help you based on like what follow-up interviews you get and what job offers you get and stuff like that, help you figure out like which resumeumés were most successful and therefore, you know, which bullet points were the most successful so that you can build something that is hopefully a little bit more successful.
+ 
+ 
+00:40:10
+ 
+Kayson L Conlin: not just based on percent match but based on uh you know the actual description.
+Justin Harmon: results.
+Kayson L Conlin: Yeah.
+Justin Harmon: Yeah. Okay. Well, I don't want to take up too much of your lunch um because uh Cam did mention you're on your lunch break, but I I'm curious if if you could take like one of your top features from Teal
+Kayson L Conlin: Yeah.
+Justin Harmon: and say based on what you're seeing here, if we were to add X, you think it would be, you know, something you might consider as a replacement to teal?
+Kayson L Conlin: Um, well, I would probably say so it it looks like what you're doing is a little bit different where you're trying to make one one place for information whereas teal is a little bit more about uh the dissemination of that information based on different necessities and based on different uh requirements. So, if I was to take one feature though, uh I would say the being able to pull you you've got a feature where you're pulling information from other parts of the internet to this profile.
+ 
+ 
+00:41:38
+ 
+Kayson L Conlin: Um, it shouldn't it wouldn't be I don't think too much of a stretch from that to say, okay, let's pull things from this profile and put it in other places and have it autopop populate job applications and stuff like that. Um, and uh just making sure that it that the field alignment is accurate. so that it's it's prepopulating correctly. But um yeah, just making making something that can prepopulate I think is really useful because a lot of times I don't actually even use like the PDF resume. I will just have it autopop populate. And a lot of sites will already do that based on a based on a PDF in which case I will usually just pull from teal at that point. But um but yeah, well I'll I'll either copy and paste it in or I will create a teal PDF resume.
+Justin Harmon: I copy and paste it in to their fields or Oh.
+Kayson L Conlin: I'll just have it at generate a PDF and then have that I'll upload that to whatever site I'm applying to and then have that autopop populate from there and that generally works fairly well.
+Justin Harmon: All right. Well, I think covered everything. Um, I'm This has been really enjoyable. I just like I said, I know you only uh I don't want to take up your entire lunch hour, so and we've already gone over a decent amount, but uh sincerely, thank you for your time. Uh it's been super super insightful.
+ 
+ 
+Transcription ended after 00:43:52
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.

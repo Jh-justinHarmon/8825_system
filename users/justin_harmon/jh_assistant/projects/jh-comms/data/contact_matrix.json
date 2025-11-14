@@ -1,0 +1,40 @@
+{
+  "contacts": [
+    {
+      "contact_id": "contact_76_example",
+      "name": "76 Project Contact",
+      "email": "contact@76project.com",
+      "phone": "",
+      "relationship": {
+        "type": "professional",
+        "closeness": 7,
+        "formality": "professional",
+        "communication_style": "direct"
+      },
+      "context": {
+        "current_projects": ["Joju", "Forge", "TrustyBit"],
+        "shared_history": ["Product discussions", "Design reviews"],
+        "communication_patterns": {
+          "preferred_time": "business_hours",
+          "response_speed": "same_day"
+        },
+        "preferences": {
+          "detail_level": "high",
+          "tone": "collaborative"
+        }
+      },
+      "interaction_history": {
+        "last_contact": "2025-11-07",
+        "frequency": "weekly",
+        "typical_topics": ["Product strategy", "Design feedback", "Technical discussions"],
+        "response_patterns": {
+          "avg_response_time": "2_hours",
+          "preferred_format": "detailed"
+        }
+      },
+      "notes": "Collaborative partner on 76 projects. Values detailed responses and thoughtful feedback.",
+      "tags": ["76", "product", "design", "collaboration"]
+    }
+  ],
+  "last_updated": "2025-11-07T06:00:00"
+}

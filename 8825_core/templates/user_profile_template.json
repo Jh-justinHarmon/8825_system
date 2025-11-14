@@ -1,0 +1,80 @@
+{
+  "_comment": "Default learning profile template for new users",
+  "_usage": "This template is used when creating new user profiles",
+  
+  "user_id": "USERNAME_PLACEHOLDER",
+  "display_name": "DISPLAY_NAME_PLACEHOLDER",
+  "created_at": "TIMESTAMP_PLACEHOLDER",
+  "last_updated": "TIMESTAMP_PLACEHOLDER",
+  "version": "1.0.0",
+  
+  "learning_preferences": {
+    "information_density": {
+      "preference": "moderate",
+      "confidence": 0.5,
+      "last_updated": "TIMESTAMP_PLACEHOLDER",
+      "notes": "Default: Concepts + examples. Will adapt based on user interactions."
+    },
+    "example_preference": {
+      "preference": "concrete",
+      "confidence": 0.5,
+      "last_updated": "TIMESTAMP_PLACEHOLDER",
+      "notes": "Default: Real examples from work. Most users prefer concrete over abstract."
+    },
+    "depth_approach": {
+      "preference": "top_down",
+      "confidence": 0.5,
+      "last_updated": "TIMESTAMP_PLACEHOLDER",
+      "notes": "Default: Big picture first. Common preference for most learners."
+    },
+    "interaction_style": {
+      "preference": "show_and_explain",
+      "confidence": 0.5,
+      "last_updated": "TIMESTAMP_PLACEHOLDER",
+      "notes": "Default: Demonstrate then explain. Balanced approach for new users."
+    },
+    "error_tolerance": {
+      "preference": "medium",
+      "confidence": 0.5,
+      "last_updated": "TIMESTAMP_PLACEHOLDER",
+      "notes": "Default: Guided experimentation. Will adjust based on user comfort level."
+    }
+  },
+  
+  "observed_patterns": {
+    "what_works": [],
+    "what_fails": []
+  },
+  
+  "teaching_moments": {
+    "successful": [],
+    "unsuccessful": []
+  },
+  
+  "adaptations": {
+    "recent_changes": []
+  },
+  
+  "meta": {
+    "total_teaching_moments": 0,
+    "successful_moments": 0,
+    "unsuccessful_moments": 0,
+    "success_rate": 0.0,
+    "average_rating": 0.0,
+    "confidence_trend": "stable",
+    "last_interaction": "TIMESTAMP_PLACEHOLDER",
+    "interactions_count": 0,
+    "profile_maturity": "new"
+  },
+  
+  "key_insights": [],
+  
+  "_defaults_rationale": {
+    "information_density": "moderate - Most users prefer balance between detail and brevity",
+    "example_preference": "concrete - Real-world examples are universally more effective",
+    "depth_approach": "top_down - Understanding context before details is common",
+    "interaction_style": "show_and_explain - Balanced approach works for most",
+    "error_tolerance": "medium - Start cautious, increase as user shows comfort",
+    "confidence": "0.5 - Low confidence means system will adapt quickly to user's actual style"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "log_version": "1.0",
+  "scope": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825",
+  "purpose": "Track deleted items for reference without searching git history",
+  "deletion_policy": "High confidence only, aggressive cleanup",
+  "created": "2025-11-13",
+  "entries": [
+    {
+      "deleted_at": "2025-11-13T17:02:17.432561Z",
+      "path": "8825_core/integrations/figjam/mcp-server/",
+      "type": "directory",
+      "reason": "Duplicate of ~/mcp_servers/figjam/",
+      "confidence": "high",
+      "recoverable": "yes (in backup: mcp_migration_backup_20251113_110156)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:02:17.432754Z",
+      "path": "8825_core/integrations/goose/mcp-servers/hcss-bridge/",
+      "type": "directory",
+      "reason": "Duplicate of ~/mcp_servers/hcss-bridge/",
+      "confidence": "high",
+      "recoverable": "yes (in backup: mcp_migration_backup_20251113_110156)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:02:17.432755Z",
+      "path": "focuses/hcss/automation/otter_mcp/",
+      "type": "directory",
+      "reason": "Duplicate 1 of 3 Otter MCP servers, consolidated to ~/mcp_servers/otter-integration/",
+      "confidence": "high",
+      "recoverable": "yes (in backup: mcp_migration_backup_20251113_110156)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:02:17.432756Z",
+      "path": "focuses/hcss/poc/tgif_automation/otter_mcp/",
+      "type": "directory",
+      "reason": "Duplicate 2 of 3 Otter MCP servers, consolidated to ~/mcp_servers/otter-integration/",
+      "confidence": "high",
+      "recoverable": "yes (in backup: mcp_migration_backup_20251113_110156)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:02:17.432757Z",
+      "path": "8825-system/mcp_servers/",
+      "type": "directory",
+      "reason": "Empty directory, wrong location for MCP servers",
+      "confidence": "high",
+      "recoverable": "yes (was empty)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.089471Z",
+      "path": "./8825_core/ARCHIVED_OLD_INGESTION_ENGINE_20251111/COMPLETE.md",
+      "type": "file",
+      "size": "10026 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.090616Z",
+      "path": "./8825_core/ARCHIVED_inbox_system_20251111/COMPLETE.md",
+      "type": "file",
+      "size": "10026 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.091101Z",
+      "path": "./INBOX_HUB/EXPERIMENTAL_UNUSED_20251111/file_dispatch_system/COMPLETE.md",
+      "type": "file",
+      "size": "4607 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.091463Z",
+      "path": "./INBOX_HUB/EXPERIMENTAL_UNUSED_20251111/file_dispatch_system/PHASE_1_COMPLETE.md",
+      "type": "file",
+      "size": "6764 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.091531Z",
+      "path": "./8825_core/registry/PHASE_2_COMPLETE.md",
+      "type": "file",
+      "size": "9247 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.091857Z",
+      "path": "./8825_core/registry/PHASE_2_SESSION_1_COMPLETE.md",
+      "type": "file",
+      "size": "5805 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.092107Z",
+      "path": "./8825_core/registry/PHASE_2_SESSION_2_COMPLETE.md",
+      "type": "file",
+      "size": "7329 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.092199Z",
+      "path": "./8825_core/workflows/ingestion/PHASE_2_3_COMPLETE.md",
+      "type": "file",
+      "size": "8371 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.092390Z",
+      "path": "./8825_core/integrations/figjam/COMPLETE_WORKFLOW.md",
+      "type": "file",
+      "size": "2895 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.092617Z",
+      "path": "./8825_core/poc/RESTRUCTURE_COMPLETE.md",
+      "type": "file",
+      "size": "4751 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.092984Z",
+      "path": "./8825_core/workflows/ingestion/FIRST_RUN_COMPLETE.md",
+      "type": "file",
+      "size": "4863 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.093188Z",
+      "path": "./8825_core/workflows/ingestion/ENGINE_COMPLETE.md",
+      "type": "file",
+      "size": "5017 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.093474Z",
+      "path": "./8825_core/workflows/ingestion/DEDUP_AND_LIBRARY_COMPLETE.md",
+      "type": "file",
+      "size": "5832 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:09:13.093543Z",
+      "path": "./8825_core/workflows/ingestion/WHEN76_AND_CLEANUP_COMPLETE.md",
+      "type": "file",
+      "size": "7590 bytes",
+      "reason": "Completion marker - redundant or minimal info",
+      "confidence": "high",
+      "recoverable": "yes (git history)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:17:08.747985Z",
+      "path": "8825_core/poc/projects",
+      "type": "directory",
+      "reason": "Empty POC directory after migration to sandbox",
+      "confidence": "high",
+      "recoverable": "yes (contents migrated to sandbox)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:17:08.748485Z",
+      "path": "8825_core/poc",
+      "type": "directory",
+      "reason": "Empty POC directory after migration to sandbox",
+      "confidence": "high",
+      "recoverable": "yes (contents migrated to sandbox)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:17:08.749133Z",
+      "path": "focuses/hcss/poc",
+      "type": "directory",
+      "reason": "Empty POC directory after migration to sandbox",
+      "confidence": "high",
+      "recoverable": "yes (contents migrated to sandbox)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:17:08.749680Z",
+      "path": "users/justin_harmon/jh_assistant/poc",
+      "type": "directory",
+      "reason": "Empty POC directory after migration to sandbox",
+      "confidence": "high",
+      "recoverable": "yes (contents migrated to sandbox)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:19:43.019476Z",
+      "path": "sandbox/experimental/tgif_automation_core_copy",
+      "type": "directory",
+      "size": "57922 bytes",
+      "reason": "Duplicate of TGIF automation (main copy promoted to shared/automations/tgif/)",
+      "confidence": "high",
+      "recoverable": "yes (git history, and main copy in shared/)"
+    },
+    {
+      "deleted_at": "2025-11-13T17:22:29.792929Z",
+      "path": "focuses/hcss/automation",
+      "type": "directory",
+      "size": "61469 bytes",
+      "reason": "Third duplicate of TGIF automation (canonical version now in shared/automations/tgif/)",
+      "confidence": "high",
+      "recoverable": "yes (git history, canonical in shared/)"
+    }
+  ]
+}

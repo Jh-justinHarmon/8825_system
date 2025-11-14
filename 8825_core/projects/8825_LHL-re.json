@@ -1,0 +1,383 @@
+{
+  "project": "lhl_re",
+  "version": "1.1.0",
+  "last_updated": "2025-11-02",
+  "description": "Real estate listing automation & creative pipeline - MLS content generation with LSH voice standards + Rapid Response Agent (RRA) incubator",
+  
+  "patterns": {
+    "do": [
+      "Use emotion-first phrasing (how it feels) + one grounded spatial cue for captions",
+      "Emphasize natural light, sightlines, and indoor-outdoor flow in descriptions",
+      "Vary sentence openers across all captions in a batch - no duplicates",
+      "Ground every caption in at least one visible element (light, view, adjacency)",
+      "Keep captions MLS-safe with warm, elegant, sensory language",
+      "Fill unconfirmed fields with 'N/A' (YN fields) or '[None confirmed]' (other fields)",
+      "Auto-fill Laura/Jamie contact details from preset values",
+      "Sort photo filenames by numeric prefix (float-safe) then alphabetically",
+      "Export both UTF-8 CSV and cleaned ASCII-safe XLSX for MLS compatibility",
+      "Use Realist property PDF as single source of truth for MLS input",
+      "Structure property summaries: opening mood → living/flow → primary suite → outdoor → closing sentiment",
+      "Keep property summaries between 110-175 words",
+      "Keep photo captions between 8-22 words (single sentence)",
+      "Use em dashes for punctuation; avoid ellipses",
+      "Prefer calm, graceful verbs over stacked superlatives",
+      "Reference materials/textures only when visible and confirmed"
+    ],
+    "dont": [
+      "Make hard claims about brands or materials unless confirmed in source docs",
+      "Use stacked superlatives or realtor clichés",
+      "Repeat the same sentence opener across photos in a batch",
+      "Create text-identical captions within the same batch",
+      "Use purple prose - keep romantic but grounded",
+      "Speculate on material quality without visual confirmation"
+    ],
+    "framing": [
+      "Position as end-to-end listing workflow replication tool",
+      "Frame voice consistency as LSH romantic style: warm, elegant, sensory, MLS-appropriate",
+      "Present automation as three-step workflow: MLS input → photo captions → property summary"
+    ]
+  },
+  
+  "lexicon": [
+    {
+      "term": "LSH voice",
+      "definition": "Laura's romantic MLS caption and summary style - warm, elegant, sensory writing that emphasizes light, flow, calm, and lived-in ease while remaining MLS-appropriate and avoiding clichés",
+      "examples": [
+        "Sunlight pours in through wide windows, warming the open living space",
+        "Anchored by a brick fireplace, the living room glows with quiet warmth",
+        "Morning light spills across the breakfast nook—easy, unhurried, and bright",
+        "From patio to kitchen, the connection feels effortless and inviting"
+      ]
+    },
+    {
+      "term": "MLS Input Summary",
+      "definition": "Structured form capturing all property details from Realist PDF using fill rules: 'N/A' for unconfirmed YN fields, '[None confirmed]' for other missing data; includes auto-filled agent contact details",
+      "examples": [
+        "Source: Realist property PDF only",
+        "Auto-fill: Dave Perry Miller Real Estate contact details for Laura Harmon",
+        "Rule: If not confirmed in PDF, use prescribed placeholder values"
+      ]
+    },
+    {
+      "term": "Batch Caption Builder",
+      "definition": "Automated workflow that extracts photos from ZIP, sorts by numeric prefix then alphabetically, generates unique LSH-voice captions for each image, and exports to CSV + cleaned XLSX",
+      "examples": [
+        "Input: ZIP of numbered photos + voice mode selection",
+        "Output: captions.csv and captions_clean.xlsx with File Name + MLS Description columns",
+        "Process: Extract → sort → caption with uniqueness enforcement → export with encoding options"
+      ]
+    },
+    {
+      "term": "Encoding Cleaner",
+      "definition": "Post-processing tool that strips smart quotes and UTF-8 artifacts to create ASCII-safe exports for MLS tools that misinterpret encoding; uses regex to replace non-ASCII with spaces",
+      "examples": [
+        "Regex pattern: [^\\x00-\\x7F]+ → ' '",
+        "Post-process: collapse multiple spaces, trim, re-export as .xlsx",
+        "Use case: MLS upload tools showing garbled characters"
+      ]
+    },
+    {
+      "term": "Property Summary Structure",
+      "definition": "Five-part narrative flow for MLS property descriptions: (1) opening mood + neighborhood, (2) living/flow spaces, (3) primary suite focus, (4) outdoor element, (5) one-line closing sentiment; 110-175 words total",
+      "examples": [
+        "Opening: Set emotional tone and location context",
+        "Middle: Flow through living spaces and primary suite",
+        "Closing: 'Not just well-located—well-loved.'"
+      ]
+    }
+  ],
+  
+  "agent_recipes": [
+    {
+      "name": "Batch Caption Builder",
+      "purpose": "Generate unique LSH-voice captions for all photos in a property listing",
+      "inputs": [
+        "ZIP file path with numbered photos",
+        "LSH voice mode (classic|romantic)",
+        "Address/context (optional)"
+      ],
+      "process": [
+        "Extract all image files from ZIP",
+        "Enumerate and sort files (numeric prefix float-safe, then alphabetic)",
+        "Generate unique caption per file using LSH voice rules",
+        "Enforce no duplicate openers or identical text within batch",
+        "Export as CSV with columns: File Name, MLS Description",
+        "Generate cleaned XLSX variant with ASCII-only encoding",
+        "Return download links for both files"
+      ],
+      "outputs": [
+        "captions_batch_[n].csv (UTF-8)",
+        "captions_batch_[n]_CLEANED.xlsx (ASCII-safe)"
+      ],
+      "guardrails": [
+        "Every caption must be unique within batch",
+        "Ground each caption in at least one visible element",
+        "Keep within 8-22 word range",
+        "Maintain LSH romantic tone throughout"
+      ]
+    },
+    {
+      "name": "MLS Template Filler",
+      "purpose": "Auto-populate MLS input template from Realist PDF with strict confirmation rules",
+      "inputs": [
+        "Realist property PDF",
+        "MLS Input Template (with full instructions)"
+      ],
+      "process": [
+        "Parse Realist PDF for confirmed property details",
+        "Auto-fill Laura Harmon / Jamie Adler contact details from preset",
+        "Apply fill rules: 'N/A' for YN fields, '[None confirmed]' for others",
+        "Generate completed MLS Input Summary document"
+      ],
+      "outputs": [
+        "MLS_Input_Summary_[address].docx"
+      ],
+      "guardrails": [
+        "Only use Realist-confirmed values",
+        "Never speculate on missing data",
+        "Preserve standard agent contact details"
+      ],
+      "preset_values": {
+        "List Office": "Dave Perry Miller Real Estate (DPMA01) 214-369-6000",
+        "Listing Agent": "Laura Harmon (0778375) 917-863-6474",
+        "LA Email": "lauraharmon@daveperrymiller.com",
+        "Office Fax": "214-265-8581",
+        "Broker License": "0257740",
+        "LO Supervisor": "Jamie Adler (0696404) 214-369-6000"
+      }
+    },
+    {
+      "name": "Property Summary Generator",
+      "purpose": "Create LSH-voice property summary following five-part structure",
+      "inputs": [
+        "MLS Input Summary",
+        "Caption set (for nuance and flow cues)",
+        "LSH Property Summary Voice Guide"
+      ],
+      "process": [
+        "Extract key details from MLS Input Summary",
+        "Review caption set for established tone and focal points",
+        "Compose 110-175 word summary using five-part structure",
+        "Part 1: Opening mood + neighborhood/setting",
+        "Part 2: Living/flow spaces",
+        "Part 3: Primary suite focus",
+        "Part 4: Outdoor note",
+        "Part 5: Closing sentiment (one line)",
+        "Export as formatted document"
+      ],
+      "outputs": [
+        "property_summary_[address].docx"
+      ],
+      "guardrails": [
+        "Maintain LSH romantic voice throughout",
+        "Stay within 110-175 word count",
+        "Follow five-part structure exactly",
+        "Echo tone from caption set for consistency"
+      ]
+    }
+  ],
+  
+  "checklists": [
+    {
+      "name": "Pre-Session Setup",
+      "items": [
+        "Confirm property address",
+        "Obtain Realist property PDF",
+        "Receive ZIP of numbered photos",
+        "Verify LSH Voice Guides are accessible",
+        "Clarify which outputs needed (MLS Input, Captions, Summary, or all three)"
+      ]
+    },
+    {
+      "name": "Caption Quality Check",
+      "items": [
+        "Every caption is 8-22 words (single sentence)",
+        "No duplicate openers across batch",
+        "No text-identical captions",
+        "Each caption grounds in at least one visible element",
+        "LSH romantic tone maintained throughout",
+        "Em dashes used correctly; no ellipses",
+        "No realtor clichés or stacked superlatives",
+        "Material references only when visible/confirmed"
+      ]
+    },
+    {
+      "name": "Export & Encoding",
+      "items": [
+        "CSV exported with UTF-8 encoding",
+        "Cleaned XLSX created with ASCII-safe encoding",
+        "Column headers: File Name, MLS Description",
+        "File naming follows convention: captions_batch_[n].csv / _CLEANED.xlsx",
+        "Download links provided for both files",
+        "Test cleaned version displays correctly in MLS upload tool"
+      ]
+    }
+  ],
+  
+  "open_loops": [
+    {
+      "id": "LHL-001",
+      "date": "2025-10-31",
+      "topic": "Near-duplicate photo detection",
+      "question": "How to auto-detect nearly identical photos (same room, slight angle difference) and nudge for varied caption approaches?",
+      "status": "exploration"
+    },
+    {
+      "id": "LHL-002",
+      "date": "2025-10-31",
+      "topic": "Style-lint for caption batches",
+      "question": "Should we implement optional style-lint to flag repeated sentence starters or overused phrases within a batch before export?",
+      "status": "enhancement"
+    },
+    {
+      "id": "LHL-003",
+      "date": "2025-10-31",
+      "topic": "Direct Realist PDF import",
+      "question": "Can we parse Realist PDFs directly to pre-seed confirmed materials and property details (read-only extraction) to eliminate manual template filling?",
+      "status": "enhancement"
+    }
+  ],
+  
+  "incubator_rapid_response_agent": {
+    "status": "active-incubator",
+    "version": "v0.3-prototype",
+    "purpose": "Context-aware rapid reply system reducing cognitive and emotional load in text communication",
+    "field_tester": "Laura Harmon (LHL RE)",
+    "strategic_intent": "First micro-application proving real-world 8825 value; treat as incubator for future products",
+    "outcome_goal": "Demonstrate time reduction in messaging without tone degradation; validate memory and logging structure",
+    
+    "architecture": {
+      "core_flow": [
+        "Screenshot → Share → Shortcut or App",
+        "Read 8825_memory.json",
+        "Compose context + message + prompt",
+        "Send to GPT-5",
+        "Display 3–5 reply chips",
+        "Tap → Copy → Paste",
+        "Log to 8825_log.jsonl"
+      ],
+      "storage": {
+        "memory_file": "8825_memory.json",
+        "event_log": "8825_log.jsonl",
+        "location": "iCloud Drive / Shortcuts /",
+        "logging_format": "JSON Lines",
+        "privacy_model": "behavioral metadata only (no message text or screenshots)"
+      },
+      "ai_model": {
+        "current": "GPT-5",
+        "role": "classification + tone-matched generation",
+        "future_split": {
+          "local_classifier": "basic message-type detection",
+          "gpt5": "expanded mode and nuanced replies"
+        }
+      }
+    },
+    
+    "proto_versions": {
+      "v0.3": "Shortcut-only flow (no backend) - CURRENT",
+      "v0.4": "SwiftUI local app with memory load",
+      "v0.5": "Share Extension with OCR",
+      "v1.0": "Cross-persona product candidate"
+    },
+    
+    "repository_structure": {
+      "root": "/8825/incubators/rapid_response_agent/",
+      "contents": [
+        "docs/README.md",
+        "ios_shortcut/",
+        "prototype_swiftui/",
+        "memory/ (8825_memory.json + 8825_log.jsonl)",
+        "prompts/rra_prompt_template.txt",
+        "versions/v0.3_proto_plan.json",
+        "versions/mined_report_2025-11-02.json"
+      ]
+    },
+    
+    "teaching_framework": {
+      "method": "8825 learning structure using PromptGen 1.0 (Deconstruct → Diagnose → Develop → Deliver → Refine)",
+      "learner_profile": {
+        "experience": "1A (no iOS background)",
+        "learning_style": "2C (analogy + step-by-step)",
+        "goal": "3A (get prototype working fast)",
+        "overwhelm_level": 2
+      },
+      "applied_methodology": [
+        "Introduced SwiftUI concepts through analogies (LEGO + stacking mental model)",
+        "Built minimal working prototype (TextField + Button + Chips)",
+        "Then layered AI call via backend → later pivoted to no-server Shortcut plan"
+      ]
+    },
+    
+    "future_actions": [
+      "Generate importable Shortcut (.shortcut) with OpenAI call",
+      "Create rra_prompt_template.txt (prompt instructions for GPT-5)",
+      "Add incubator to /roadmap/incubator_index.json",
+      "Deploy field pilot with Laura (2-week efficiency test)",
+      "Run weekly mined report → /library/",
+      "Establish metrics parser for JSONL logs"
+    ],
+    
+    "governance": {
+      "team": {
+        "lead_designer": "Justin Harmon (JH)",
+        "process_advisor": "Becky Hammer (BH)",
+        "ai_architect": "GPT-5",
+        "field_tester": "Laura Harmon (LHL RE)"
+      },
+      "ethics_safeguards": [
+        "No personal data retention",
+        "Behavioral logging only",
+        "Transparency in AI-generated text",
+        "Opt-in contextual memory"
+      ]
+    }
+  },
+  
+  "dev_backlog": {
+    "enhancements": [
+      {
+        "id": "LHL-ENH-001",
+        "date": "2025-10-31",
+        "summary": "Keep master LSH Voice Guide (captions + summaries) in -REF- folder and attach per session for consistency",
+        "priority": "high",
+        "status": "recommended"
+      },
+      {
+        "id": "LHL-ENH-002",
+        "date": "2025-10-31",
+        "summary": "Default to CSV + Cleaned XLSX outputs for maximum MLS compatibility across different upload tools",
+        "priority": "high",
+        "status": "implemented"
+      },
+      {
+        "id": "LHL-ENH-003",
+        "date": "2025-10-31",
+        "summary": "When session resets, ask user for address + batch count; restate sorting rule; proceed without MLS Input Summary unless specifically requested",
+        "priority": "medium",
+        "status": "recommended"
+      }
+    ],
+    "bugs": []
+  },
+  
+  "session_references": [
+    "7716 Roundrock – MLS Input Summary + full photo caption workflow",
+    "15616 Terrace Lawn – property summary drafting",
+    "4508 Thunder – batch captioning & correction loop",
+    "3501 Nova Trail – romanticized LSH captions, batches 1–3",
+    "7604 Carta Valley – batches 1–5 with cleaning to Excel and CSV, encoding fixes"
+  ],
+  
+  "key_assets": [
+    "Guide to replicating LSH voice for captions.docx",
+    "Guide to replicating LSH voice for property summaries.docx",
+    "MLS_Input_Template_WithFullInstructionsAndSubsections.docx",
+    "MLS_Input_Template_CLEANED.docx"
+  ],
+  
+  "source_reports": [
+    "mined_report_2025-11-02.json"
+  ],
+  
+  "last_mined_at": "2025-11-02T22:58:00Z"
+}

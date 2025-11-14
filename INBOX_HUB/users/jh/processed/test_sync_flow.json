@@ -1,0 +1,13 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "content": {
+    "title": "Sync Infrastructure Test",
+    "body": "Testing the new sync infrastructure with clean separation between sync layer and MCP production services."
+  },
+  "metadata": {
+    "source": "test",
+    "timestamp": "2025-11-08T09:28:00Z",
+    "note": "End-to-end sync test"
+  }
+}

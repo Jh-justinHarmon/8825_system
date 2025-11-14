@@ -1,0 +1,390 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "justinharmon",
+    "displayName": "Justin Harmon",
+    "profession": "Product Developer / UX Leader / Entrepreneur",
+    "location": "Dallas, Texas",
+    "pronouns": "He/Him",
+    "byline": "Product Developer / UX Leader / Entrepreneur in Dallas, Texas, He/Him",
+    "website": "prtclinc.com",
+    "websiteURL": "https://prtclinc.com",
+    "about": "Multi-disciplinary product developer with 20+ years of experience spanning industrial design, UX strategy, and product management. Expert at translating user insights into commercially viable products that drive measurable business outcomes. Known for founding the VSP Innovation Lab (3D department at Marchon), creating AI-powered hiring solutions, and delivering 10-26% sales growth across multiple brands. Passionate about innovation at the intersection of design, technology, and human behavior.",
+    "status": {
+      "text": "Building AI-powered solutions for team building and professional development",
+      "emoji": "🚀",
+      "timestamp": "2025-11-05"
+    },
+    "sectionOrder": [
+      "Projects",
+      "Side Projects",
+      "Work Experience",
+      "Education",
+      "Certifications",
+      "Awards",
+      "Contact"
+    ]
+  },
+  "projects": [
+    {
+      "id": "hiring_intelligence_tool",
+      "year": "2024",
+      "heading": "Hiring Manager Intelligence Tool",
+      "url": null,
+      "collaborators": [],
+      "description": "AI-powered team building advisory tool that empowers hiring managers to translate team dynamics into actionable search criteria for HR. Uses Big Five and Belbin frameworks to generate three-profile candidate blueprints (Conventional, Adjacent/Transferable, High-Ceiling Wild Card). Blue ocean opportunity in $1.5-7.5B recruitment tech market.",
+      "attachments": [],
+      "type": "project",
+      "title": "Hiring Manager Intelligence Tool",
+      "company": "Innovation Project"
+    },
+    {
+      "id": "joju_platform",
+      "year": "2024",
+      "heading": "Joju - Professional OS",
+      "url": null,
+      "collaborators": [],
+      "description": "LinkedIn alternative with proof-based profiles and zero-configuration portfolio generation. PromptGen workflow generates portfolios in <30 seconds with multiple style variants (Classic, Modern, Corporate). Frame as enhancement before replacement, targeting subtle converts first.",
+      "attachments": [],
+      "type": "project",
+      "title": "Joju - Professional OS",
+      "company": "Active Development"
+    },
+    {
+      "id": "8825_pcms",
+      "year": "2025",
+      "heading": "8825 PCMS (Persistent Context Memory Sidecar)",
+      "url": null,
+      "collaborators": [],
+      "description": "LLM-agnostic portable knowledge system for maintaining consistent AI behavior across platforms. Single JSON file contains all context for any LLM (ChatGPT, Claude, Gemini, Windsurf). Features confidence-based decision making, two-stage knowledge mining, and adaptive learning.",
+      "attachments": [],
+      "type": "project",
+      "title": "8825 PCMS",
+      "company": "Production Ready v2.0.0"
+    },
+    {
+      "id": "costa_collections",
+      "year": "2016-2018",
+      "heading": "Costa Del Mar Eyewear Collections",
+      "url": null,
+      "collaborators": [],
+      "description": "Led design strategy and execution for seasonal Sun & Optical collections. Developed competitive audits, design strategies, and Ocearch collaboration collection. Proposed new materials and paint finishes enhancing market competitiveness.",
+      "attachments": [],
+      "type": "project",
+      "title": "Costa Del Mar Collections",
+      "company": "Costa Del Mar"
+    },
+    {
+      "id": "shinola_collab",
+      "year": "2021",
+      "heading": "Shinola Collaboration Collection",
+      "url": null,
+      "collaborators": [],
+      "description": "Designed collaboration collection including watch designs (Monster, Runwell), bicycle designs (Arrow), and Instagram content strategy. Integrated brand identity into thematic details across all styles.",
+      "attachments": [],
+      "type": "project",
+      "title": "Shinola Collaboration",
+      "company": "prtcl inc"
+    },
+    {
+      "id": "nike_vision",
+      "year": "2005-2012",
+      "heading": "Nike Vision Eyewear",
+      "url": null,
+      "collaborators": [],
+      "description": "Led Marchon's Nike Vision design team, collaborating with Nike's Creative Director to design commercially viable performance eyewear. Created custom eye shapes for Tiger Woods and protective goggles for Amare Stoudemire.",
+      "attachments": [],
+      "type": "project",
+      "title": "Nike Vision Eyewear",
+      "company": "Marchon"
+    },
+    {
+      "id": "vsp_innovation_lab",
+      "year": "2008",
+      "heading": "VSP Innovation Lab (3D Department)",
+      "url": null,
+      "collaborators": [],
+      "description": "Founded Marchon's 3D design department, later branded as the VSP Innovation Lab. Transformed prototyping efficiency and accelerated product iterations by cutting timelines through rapid iteration.",
+      "attachments": [],
+      "type": "project",
+      "title": "VSP Innovation Lab",
+      "company": "Marchon"
+    }
+  ],
+  "sideProjects": [
+    {
+      "id": "three_profile_blueprint",
+      "year": "2024",
+      "heading": "Three-Profile Hiring Blueprint Methodology",
+      "url": null,
+      "collaborators": [],
+      "description": "Innovative hiring framework that provides HR with three distinct candidate profiles: Conventional Fit (traditional qualifications), Adjacent/Transferable Fit (related industries with transferable skills), and High-Ceiling Wild Card (unconventional backgrounds with complementary traits). Works within existing HR workflows to promote diversity.",
+      "attachments": [],
+      "type": "sideProject",
+      "title": "Three-Profile Blueprint",
+      "company": ""
+    },
+    {
+      "id": "promptgen_system",
+      "year": "2024",
+      "heading": "PromptGen Zero-Configuration System",
+      "url": null,
+      "collaborators": [],
+      "description": "Content generation workflow (Parse → Select → Render → Validate → Export) that produces portfolios in <30 seconds. Zero-configuration, data-driven, proof-focused approach with multiple style variants.",
+      "attachments": [],
+      "type": "sideProject",
+      "title": "PromptGen System",
+      "company": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "hammer_consulting",
+      "year": "2015 — Present",
+      "heading": "Product Manager at Hammer Consulting & Support Services",
+      "url": null,
+      "collaborators": [],
+      "description": "• Drove 55% reduction in manual tasks by designing automated workflows on B2B SaaS platform\n• Achieved 65% reduction in seasonal staff reliance through operational efficiency improvements\n• Led cross-functional collaboration among development teams, clients, and stakeholders\n• Resolved critical user pain points through in-depth research and analysis\n• Spearheaded delivery of new features for online statement processing tools\n• Led comprehensive website redesign for non-profit division",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Product Manager",
+      "company": "Hammer Consulting & Support Services",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "prtcl_inc",
+      "year": "2018 — 2024",
+      "heading": "Managing Partner & Design Lead at prtcl inc",
+      "url": null,
+      "collaborators": [],
+      "description": "• Drove 10-26% sales growth across multiple brands through innovative product strategies\n• Increased website conversion rates and reduced product returns via user fit profiles\n• Consulted for fashion, lifestyle, and sport eyewear brands (Mini Cooper, Shinola, Dragon, Under Armour)\n• Collaborated with Engineering & Manufacturing teams on innovative performance products\n• Established new design standards driving measurable gains in user satisfaction\n• Managed 2D & 3D design process internally and through subcontractors",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Managing Partner & Design Lead",
+      "company": "prtcl inc",
+      "location": "Dallas, TX & Brooklyn, NY"
+    },
+    {
+      "id": "costa_del_mar",
+      "year": "2015 — 2018",
+      "heading": "Design Director at Costa Del Mar",
+      "url": null,
+      "collaborators": [],
+      "description": "• Led design process for Sun & Optical Lifestyle & Performance eyewear collections\n• Proposed and developed new materials and paint finishes, enhancing market competitiveness\n• Cultivated relationships with Sales, Marketing, & E-commerce teams\n• Partnered with Engineering, QA, & Manufacturing teams to enhance product quality\n• Key liaison with fishing community leaders to identify and deliver on performance needs\n• Managed internal and external design resources for timely delivery",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Design Director",
+      "company": "Costa Del Mar",
+      "location": "Dallas/Daytona Beach"
+    },
+    {
+      "id": "fossil_group",
+      "year": "2012 — 2015",
+      "heading": "Senior Watch Designer at Fossil Group",
+      "url": null,
+      "collaborators": [],
+      "description": "• Delivered 23.7% sales increase by directing strategic design for Skechers watch line launch\n• Unified brand identity across product categories (watches and handbags)\n• Accelerated project timelines through stakeholder collaboration\n• Conducted team design critiques for commercial viability\n• Mentored junior designers in advanced workflows\n• Balanced aesthetic and cost requirements without sacrificing quality",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Watch Designer",
+      "company": "Fossil Group",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": "marchon",
+      "year": "2004 — 2012",
+      "heading": "Senior Eyewear Designer at Marchon",
+      "url": null,
+      "collaborators": [],
+      "description": "• Led Marchon's Nike Vision design team, collaborating with Nike's Creative Director\n• Founded 3D design department (later branded as VSP Innovation Lab)\n• Transformed prototyping efficiency, cutting timelines through rapid iteration\n• Designed custom eye shapes for Tiger Woods and protective goggles for Amare Stoudemire\n• Orchestrated cross-functional collaboration for user-centered designs\n• Collaborated with Global Sales Leaders on culturally bespoke designs for global markets\n• Mentored and onboarded team members, fostering collaboration",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Senior Eyewear Designer",
+      "company": "Marchon",
+      "location": "NYC"
+    }
+  ],
+  "education": [
+    {
+      "id": "cca_bfa",
+      "year": "1999 — 2003",
+      "heading": "BFA Industrial Design at California College of the Arts",
+      "url": null,
+      "collaborators": [],
+      "description": "Bachelor of Fine Arts in Industrial Design. Focus on product development, 3D modeling, manufacturing processes, and user-centered design principles.",
+      "attachments": [],
+      "type": "education",
+      "degree": "BFA Industrial Design",
+      "school": "California College of the Arts",
+      "location": "San Francisco, CA"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "ux_certification",
+      "year": "2024",
+      "heading": "UX Certification with specialty in UX Management from Nielsen Norman Group",
+      "url": null,
+      "collaborators": [],
+      "description": "Comprehensive UX certification with specialized focus on UX management, team leadership, and strategic design thinking.",
+      "attachments": [],
+      "type": "certification",
+      "name": "UX Certification with specialty in UX Management",
+      "organization": "Nielsen Norman Group"
+    }
+  ],
+  "awards": [
+    {
+      "id": "sales_growth",
+      "year": "2015",
+      "heading": "23.7% Sales Increase - Skechers Watch Line",
+      "url": null,
+      "collaborators": [],
+      "description": "Directed strategic design contributions for Skechers watch line launch, resulting in 23.7% sales increase.",
+      "attachments": [],
+      "type": "award",
+      "title": "23.7% Sales Increase",
+      "presenter": "Fossil Group"
+    },
+    {
+      "id": "innovation_lab",
+      "year": "2008",
+      "heading": "Founded VSP Innovation Lab",
+      "url": null,
+      "collaborators": [],
+      "description": "Pioneered creation of Marchon's 3D design department, later branded as the VSP Innovation Lab, transforming prototyping efficiency across the organization.",
+      "attachments": [],
+      "type": "award",
+      "title": "Founded VSP Innovation Lab",
+      "presenter": "Marchon"
+    }
+  ],
+  "contact": [
+    {
+      "id": "email",
+      "platform": "Email",
+      "handle": "justin@prtclinc.com",
+      "url": "mailto:justin@prtclinc.com"
+    },
+    {
+      "id": "phone",
+      "platform": "Phone",
+      "handle": "718.753.7330",
+      "url": "tel:+17187537330"
+    },
+    {
+      "id": "website",
+      "platform": "Website",
+      "handle": "prtclinc.com",
+      "url": "https://prtclinc.com"
+    }
+  ],
+  "skills": {
+    "design_tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Adobe XD",
+      "Figma",
+      "Sketch",
+      "Framer",
+      "InVision"
+    ],
+    "3d_cad": [
+      "CAD modeling",
+      "3D rendering",
+      "Technical drawings",
+      "Tooling specifications",
+      "PLM software"
+    ],
+    "ux_ui": [
+      "Wireframing",
+      "Prototyping",
+      "Visual Design",
+      "Interaction Design",
+      "User Research",
+      "Usability Testing",
+      "Information Architecture",
+      "Design Systems"
+    ],
+    "project_management": [
+      "Agile/Scrum",
+      "Roadmap Planning",
+      "Resource Allocation",
+      "Stakeholder Management",
+      "Cross-functional Leadership"
+    ],
+    "technical": [
+      "HTML/CSS",
+      "JavaScript basics",
+      "API integration",
+      "Data analysis",
+      "Analytics and Metrics"
+    ],
+    "ai_ml": [
+      "AI prompt engineering",
+      "LLM integration",
+      "Knowledge management systems",
+      "Conversational AI design"
+    ],
+    "soft_skills": [
+      "Team Leadership",
+      "Strategic Thinking",
+      "Communication",
+      "Problem-Solving",
+      "Adaptability",
+      "Mentorship",
+      "Collaboration"
+    ]
+  },
+  "achievements": [
+    {
+      "metric": "23.7%",
+      "description": "Sales increase from Skechers watch line launch",
+      "year": "2015",
+      "company": "Fossil Group"
+    },
+    {
+      "metric": "10-26%",
+      "description": "Sales growth across multiple brands",
+      "year": "2018-2024",
+      "company": "prtcl inc"
+    },
+    {
+      "metric": "55%",
+      "description": "Reduction in manual tasks through automation",
+      "year": "2015-Present",
+      "company": "Hammer Consulting"
+    },
+    {
+      "metric": "65%",
+      "description": "Reduction in seasonal staff reliance",
+      "year": "2015-Present",
+      "company": "Hammer Consulting"
+    }
+  ],
+  "metadata": {
+    "created": "2025-11-05",
+    "version": "1.0.0",
+    "source": "JH_master_library.json",
+    "format": "joju_input_compatible",
+    "ready_for_promptgen": true,
+    "generated_by": "8825_joju_mode",
+    "joju_mode_protocol": "protocols/8825_joju_mode",
+    "last_joju_mode_session": null,
+    "ingestion_sources": [
+      "JH_master_library.json",
+      "Jh-ARCHV folder scan",
+      "Manual curation"
+    ],
+    "target_audiences": {
+      "subtle_converts": "Risk-averse professionals seeking conventional presentation",
+      "evangelists": "Design-focused early adopters seeking creative presentation",
+      "hiring_managers": "Recruiters seeking proof-based, measurable outcomes"
+    },
+    "style_variants_available": [
+      "classic",
+      "modern",
+      "corporate"
+    ]
+  }
+}

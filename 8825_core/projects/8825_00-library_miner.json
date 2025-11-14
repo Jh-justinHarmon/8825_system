@@ -1,0 +1,265 @@
+{
+  "project": "library_miner",
+  "version": "1.1.0",
+  "last_mined_at": "2025-11-03T05:45:07Z",
+  "description": "This library system - mining workflows and prompt engineering",
+  
+  "patterns": {
+    "do": [
+      "Return patch + merged artifacts every mining run",
+      "Deduplicate semantically, keep best phrasing",
+      "Use guardrails and schemas explicitly",
+      "Correct misunderstandings proactively when user clarifies intent",
+      "Integrate with existing cloud storage for zero-infrastructure deployment",
+      "Always package mining reports as single downloadable JSON with straight quotes",
+      "Name files with date stamp and scope in snake case",
+      "Added full-fidelity archive option with expanded summary_log + merged_update_package (no conversation_log) as a lighter archival profile",
+      "Integration-first orchestration across creative and operational workflows",
+      "Human-centered guardrails to keep context accurate and current",
+      "Pre-analyze mining reports for AI tier routing before expensive processing",
+      "Use lightweight model for complexity classification and tier recommendation",
+      "Route Tier 1 (simple extraction) to GPT-4o-mini, Tier 2 (complex synthesis) to GPT-4/Claude",
+      "Default to higher tier when classification confidence is low",
+      "Require metadata header with source/model/origin for observability",
+      "Log processing with ops/duration/status/source to interaction_log.txt",
+      "Use straight quotes only in all mining outputs",
+      "Detect subject changes and create one segment per subject",
+      "Assign confidence scores based on keyword counts and clarity",
+      "Provide a download link and code block fallback",
+      "Route to the correct 8825_[slug].json using the provided keyword map"
+    ],
+    "dont": [
+      "Over-narrate process when prompt or JSON was requested",
+      "Introduce speculative facts without tagging as open_loops",
+      "Do not include curly quotes",
+      "Do not merge unrelated subjects into a single segment"
+    ],
+    "qa_loops": [
+      "Validate schema conformance before emit",
+      "Flag missing inputs in open_loops"
+    ],
+    "framing": [
+      "Lead with goal, then IO, then schema",
+      "Standardize mining across chats to a single JSON schema",
+      "Confidence bands: 0.9+, 0.7-0.89, 0.5-0.69, <0.5"
+    ],
+    "when": "2025-10-31",
+    "topic": "AI tier routing and mining complexity analysis",
+    "notes": "Designed pre-processing router to classify mining reports for appropriate AI model selection. Tier 1 (simple extraction) routes to DeepSeek/GPT-5 low for cost savings. Tier 2 (complex synthesis) routes to premium models. Router analyzes structure clarity, cross-project scope, and pattern novelty before expensive processing."
+  },
+  "lexicon": [
+    {
+      "term": "WCB",
+      "definition": "Workshop-ready Full Single Copyable Code Block",
+      "examples": ["A whole prompt in one code fence"]
+    },
+    {
+      "term": "open_loops",
+      "definition": "Known unknowns or pending decisions",
+      "examples": ["Missing vendor mapping file path"]
+    },
+    {
+      "term": "two-stage mining",
+      "definition": "External LLMs create reports, Windsurf agent extracts to project files",
+      "examples": [
+        "Stage 1: ChatGPT/Claude generates downloadable mining report",
+        "Stage 2: Windsurf agent reads report and updates library files",
+        "Clear separation prevents external LLMs from direct file modification"
+      ]
+    },
+    {
+      "term": "EchoVault",
+      "definition": "Alternative naming for portable JSON-based living memory system (aka Chronicle Cache, Data Estate)",
+      "examples": [
+        "Portable JSON-based living memory for LLM context transfer",
+        "Chronicle Cache: emphasizes historical record keeping",
+        "Data Estate: emphasizes ownership and legacy value"
+      ]
+    },
+    {
+      "term": "TrustyBits positioning",
+      "definition": "Trusted layer between users and many AIs, emphasizing integration-first orchestration",
+      "examples": [
+        "Purpose-driven, builder-friendly, integration-first approach",
+        "Bridge between creative and operational work",
+        "Unified system for prompts, summaries, and live context"
+      ]
+    },
+    {
+      "term": "human-centered guardrails",
+      "definition": "User-controlled validation and accuracy mechanisms for AI-generated content",
+      "examples": [
+        "Keep context accurate and current through user validation",
+        "User ownership and control over memory persistence",
+        "Clarity and portability over automated novelty features"
+      ]
+    },
+    {
+      "term": "full-fidelity archive (lite)",
+      "definition": "Expanded summary + merged update package, excluding full conversation log",
+      "examples": [
+        "Contains summary_log with decisions and context themes",
+        "Includes merged_update_package with project-specific updates",
+        "Excludes verbose conversation_log for lighter archival profile"
+      ]
+    },
+    {
+      "term": "mining complexity router",
+      "definition": "Pre-processing analysis tool that classifies mining reports for appropriate AI tier routing",
+      "examples": [
+        "Tier 1: Clear routing, structured content, single project focus → GPT-4o-mini",
+        "Tier 2: Multi-project synthesis, new concepts, ambiguous routing → GPT-4/Claude",
+        "Classification includes confidence score and reasoning for routing decision"
+      ]
+    },
+    {
+      "term": "AI tier routing",
+      "definition": "Workflow that matches mining task complexity to appropriate model cost/capability",
+      "examples": [
+        "Simple extraction tasks routed to low-cost models (60-80% cost savings)",
+        "Complex synthesis tasks routed to premium models for quality",
+        "Fallback to higher tier when classification confidence is low"
+      ]
+    },
+    {
+      "term": "routing_confidence",
+      "definition": "Score reflecting how sure the system is about the target project mapping",
+      "examples": ["0.95 for explicit keyword matches", "0.7 for moderate context clues"]
+    },
+    {
+      "term": "segments",
+      "definition": "Individually scoped subject groupings with decisions and vocabulary",
+      "examples": ["One segment per distinct topic in multi-subject chats"]
+    },
+    {
+      "term": "primary_project",
+      "definition": "Most applicable JSON library file for the mined output",
+      "examples": ["8825_HCSS.json for HCSS-related content"]
+    }
+  ],
+  
+  "source_reports": [
+    "library_miner_ecosystem_positioning.md",
+    "trustybits_integration_patterns.json",
+    "8825_Full_Fidelity_Archive_2025-10-31.json",
+    "8825_value_mission_and_mining_standard_20251103T054507.json"
+  ],
+  
+  "decisions": [
+    {
+      "what": "Adopt standardized mining prompt as default 8825 extraction schema",
+      "why": "Ensures consistency and portability across LLM sessions and tools",
+      "when": "2025-11-03",
+      "status": "approved"
+    },
+    {
+      "what": "Default primary routing to 8825_00-library_miner.json when chat is about mining standards",
+      "why": "Aligns with keyword frequency and explicit user intent",
+      "when": "2025-11-03",
+      "status": "approved"
+    }
+  ],
+  
+  "agent_references": {
+    "note": "Agent capabilities moved to projects/agent_registry.json to prevent duplication",
+    "agents_from_this_project": [
+      "AGENT-LIBRARY-CHAT-MINING-0001",
+      "AGENT-LIBRARY-MINING-COMPLEXITY-ROUTER-0001"
+    ],
+    "reconstruction": "Use 'recreate WCB for <agent_id>' to regenerate from registry"
+  },
+  
+  "legacy_agent_implementation_details": {
+    "note": "Preserved for reference - full implementation details for Mining Complexity Router",
+    "mining_complexity_router_config": {
+      "classification_prompt": "Analyze this mining report for processing complexity: {report}. Classify as TIER 1 (clear routing, structured content, single project) or TIER 2 (multi-project synthesis, new concepts, ambiguous routing). Return JSON: {\"tier\": 1|2, \"confidence\": 0.0-1.0, \"reasoning\": \"explanation\", \"indicators\": [\"signals\"]}",
+      "user_recommendation_format": "This report requires [TIER X] processing. Recommended model: [MODEL]. Would you like to switch?",
+      "simple_output": "Provide clear recommendation with easy user choice",
+      "tier_1_indicators": ["Explicit target_projects array", "Well-formed JSON sections", "Basic extraction tasks", "Single project focus"],
+      "tier_2_indicators": ["Cross-project synthesis needed", "New concept discovery", "Ambiguous routing", "Pattern abstraction required"],
+      "confidence_thresholds": {"high": 0.8, "medium": 0.6, "low": 0.4},
+      "routing_logic": "Confidence >= 0.6: use recommended tier. Confidence < 0.6: default to Tier 2",
+      "model_recommendations": {
+        "tier_1": ["GPT-4o-mini ($0.15/1M)", "Claude 3 Haiku ($0.25/1M)", "Gemini Flash ($0.075/1M)"],
+        "tier_2": ["GPT-4 ($30/1M)", "Claude 3.5 Sonnet ($3/1M)", "GPT-4 Turbo ($10/1M)"]
+      },
+      "expected_savings": "60-70% cost reduction vs GPT-4 only, 70-80% reports route to Tier 1"
+    },
+    "promptgen_optimizer_config": {
+      "name": "PromptGen 1.0 Optimizer",
+      "role": "Transform rough ask → high-performance WCB",
+      "io_contract": "Input: rough task. Output: single WCB with clear roles, IO, schemas.",
+      "schema": "wcb_single_block string"
+    }
+  },
+  
+  "mining_workflow": {
+    "stage_1": {
+      "name": "Generate Mining Report",
+      "process": "Analyze conversation history → Create comprehensive report → Save to - REF - folder",
+      "output": "JSON or Markdown with leading metadata header JSON block + required sections"
+    },
+    "stage_2": {
+      "name": "Update Library from Report",
+      "process": "Read report → Extract key elements → Update relevant project file",
+      "speed": "<20 seconds"
+    },
+    "report_template": {
+      "filename_format": "[project_name]_mining_report_[date].md",
+      "metadata_header_schema": {
+        "description": "Place a single JSON object at top of file before sections",
+        "fields": {
+          "source": "chat|external_llm|manual|system",
+          "origin_platform": "e.g., ChatGPT, Claude, Gemini, Email",
+          "model": "model identifier, if applicable",
+          "chat_id": "conversation/session identifier, optional",
+          "artifact_url": "download link if hosted externally",
+          "generated_at": "ISO timestamp"
+        },
+        "example": {
+          "source": "external_llm",
+          "origin_platform": "ChatGPT",
+          "model": "gpt-4o",
+          "chat_id": "chatcmpl-abc123",
+          "artifact_url": "https://example.com/report.json",
+          "generated_at": "2025-11-01T21:55:00Z"
+        }
+      },
+      "required_sections": [
+        "# Executive Summary: 3-5 key achievements, date range",
+        "## Project Evolution Timeline: Phases with key decisions",
+        "## Technical Architecture Summary: Components, tech stack",
+        "## Strategic Insights: Positioning, strategy, business model",
+        "## Key Patterns Discovered: Design philosophy, communication style",
+        "## Lexicon Terms: Terminology with definitions (JSON-ready format)",
+        "## Agent Recipes: Reusable workflows (JSON-ready format)",
+        "## Open Questions: Future exploration areas",
+        "## Notable Innovations: Breakthrough concepts",
+        "## Recommendations: Immediate/Near-term/Long-term"
+      ],
+      "extraction_guidelines": {
+        "metadata": "Capture metadata.source/origin_platform/model/chat_id/artifact_url/generated_at and include in interaction_log entry as source + model + from_file",
+        "lexicon": "Extract domain-specific terminology. Format: {term, definition, examples[]}",
+        "patterns": "Identify recurring do's, don'ts, frameworks. Format: do[], dont[], qa_loops[], framing[]",
+        "agent_recipes": "Reusable workflows. Format: {name, role, io_contract, schema, guardrails}",
+        "timeline": "Group into phases showing evolution",
+        "innovations": "Novel approaches with WHY they matter"
+      }
+    }
+  },
+  
+  "checklists": [
+    {
+      "name": "Mining Run Emit",
+      "items": [
+        "Create comprehensive mining reports with executive summaries and technical insights",
+        "Position as trusted layer between users and many AIs",
+        "Use integration-first orchestration across creative and operational workflows",
+        "Implement human-centered guardrails to keep context accurate and current",
+        "Emphasize clarity, portability, and persistent context over novelty demos",
+        "JSON valid, no smart quotes",
+        "Patch only adds; no destructive deletes unless explicit"
+      ]
+    }
+  ]
+}

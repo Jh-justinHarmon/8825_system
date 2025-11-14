@@ -1,0 +1,409 @@
+{
+  "project": "8825_76",
+  "version": "0.2.0",
+  "last_updated": "2025-11-03",
+  "last_mined_at": "2025-11-03T05:45:07Z",
+  "description": "TrustyBits Inc. parent organization - team collaboration, enterprise workflows, integration registry, and AI orchestration framework",
+  
+  "patterns": {
+    "do": [
+      "Create sandbox projects for exploration before implementation",
+      "Follow proper 8825 mining workflow (Stage 1: Report, Stage 2: Extract)",
+      "Test fundamental assumptions before designing solutions",
+      "Document workspace isolation constraints explicitly",
+      "Route team collaboration insights to 8825_pmce.json",
+      "Use breadth-first validation for team capabilities",
+      "Leverage existing cloud provider sync mechanisms",
+      "Conduct comprehensive 4-week discovery process before onboarding recommendations",
+      "Gather strategic context, usage patterns, workflow integration, and technical infrastructure data",
+      "Create scenario-based implementation paths (A/B/C/D) based on team profile",
+      "Build starter kits with setup wizards for streamlined new user onboarding",
+      "Develop platform-specific extraction tools (ChatGPT, Claude, Windsurf)",
+      "Use phased rollout approach matching organizational readiness levels",
+      "Establish clear success metrics and evaluation frameworks before implementation",
+      "Position 8825 as memory/agent orchestration engine",
+      "Position Joju as proof-of-work identity/reputation layer",
+      "Position Forge/Dojo as education-to-execution loop",
+      "Quantify value across conservative/realistic/optimistic cases (to be developed)"
+    ],
+    "dont": [
+      "Jump to implementation without understanding current capabilities",
+      "Design complex multi-workspace solutions before validation",
+      "Skip the mining report generation process",
+      "Over-engineer team workflows before proving core value",
+      "Make assumptions about team LLM usage patterns without data collection",
+      "Create one-size-fits-all onboarding without assessing team technical comfort",
+      "Ignore organizational change management considerations",
+      "Build tools before understanding actual workflow integration points",
+      "Do not overstate valuations without milestones",
+      "Do not separate value thesis from mission ethics"
+    ],
+    "framing": [
+      "Team workflows as extension of PMCE infrastructure",
+      "Workspace isolation as constraint to work within, not around",
+      "Enterprise features come after core value validation with 10-20 users",
+      "Onboarding success depends on thorough discovery and customized implementation paths",
+      "Team adoption requires matching technical solutions to actual usage patterns and comfort levels",
+      "Discovery investment pays dividends in adoption success and long-term value creation",
+      "Unified operating system for human + AI collaboration",
+      "Anti-algorithm stance: user consent and control",
+      "Brand as moral anchor (TrustyBits)"
+    ]
+  },
+  
+  "lexicon": [
+    {
+      "term": "workspace isolation",
+      "definition": "Each Windsurf workspace operates independently with its own Cascade chat history and file context",
+      "examples": [
+        "/8825 workspace for knowledge management",
+        "/joju workspace for product development",
+        "Question: Can Cascade access files across workspaces?"
+      ]
+    },
+    {
+      "term": "two-workspace architecture",
+      "definition": "Separation between meta-system (8825 knowledge management) and product development (Joju codebase)",
+      "examples": [
+        "Workspace 1: 8825 library with projects/*.json",
+        "Workspace 2: Joju development with src/components",
+        "Challenge: How to bridge Cascade conversations between them"
+      ]
+    },
+    {
+      "term": "Cascade self-mining",
+      "definition": "Potential capability for Cascade to analyze its own conversation history and generate mining reports",
+      "examples": [
+        "Developer asks: 'Generate mining report from today's conversation'",
+        "Cascade outputs markdown following mining report template",
+        "Status: Unknown if Cascade can access its own history"
+      ]
+    },
+    {
+      "term": "Shared Dropbox Bridge",
+      "definition": "Manual workflow where team generates mining reports and saves to shared location for extraction",
+      "examples": [
+        "Developer in /joju workspace → Cascade conversation → Manual mining report → Save to shared/- REF -/",
+        "8825 system extracts from shared location → Updates projects/*.json",
+        "Pros: Works with workspace isolation, Cons: Manual trigger required"
+      ]
+    },
+    {
+      "term": "capability testing framework",
+      "definition": "Systematic approach to validate Windsurf/Cascade capabilities before architecture design",
+      "examples": [
+        "Test 1: Can Cascade access own conversation history?",
+        "Test 2: Can Cascade read files across workspaces?",
+        "Test 3: Where are Cascade chats stored in file system?",
+        "Test 4: Can Cascade generate mining reports from sessions?"
+      ]
+    },
+    {
+      "term": "federated knowledge architecture",
+      "definition": "Multi-layer system where individual knowledge bases (private) coexist with shared team knowledge (collaborative) through selective sync patterns",
+      "examples": [
+        "Individual: Personal projects, private insights, draft patterns in ~/8825_personal/",
+        "Team: Shared patterns, validated insights, collaborative projects in /team_8825/",
+        "Sync: Individual chooses what to promote to team knowledge base",
+        "Privacy: Team cannot access individual knowledge without explicit sharing"
+      ]
+    },
+    {
+      "term": "knowledge promotion workflow",
+      "definition": "Process for moving insights from individual private knowledge to shared team knowledge base",
+      "examples": [
+        "Individual validates pattern in personal workspace",
+        "Marks pattern for team sharing with confidence level",
+        "Team review process before integration into shared knowledge",
+        "Bidirectional: Team patterns can be forked to individual workspace"
+      ]
+    },
+    {
+      "term": "privacy boundary management",
+      "definition": "Clear separation between individual private knowledge and team collaborative knowledge with explicit controls",
+      "examples": [
+        "Individual workspace: Full privacy, no team access",
+        "Shared workspace: Team read/write with proper attribution",
+        "Promotion queue: Individual controls what moves from private to shared",
+        "Audit trail: Track knowledge flow between individual and team layers"
+      ]
+    },
+    {
+      "term": "TrustyBits Inc.",
+      "definition": "C-corp incorporated July 8, 2025, parent organization for Joju.app and 76Forge platforms",
+      "examples": [
+        "President: Matthew Galley, Secretary/Treasurer: Cameron Watkins",
+        "Mission: Improve peoples capacity and knowledge allowing them qualify for a better quality of life",
+        "Vision: Provide alternative to traditional education with measurable trust-building methods",
+        "Registered address: 1366 S 1150 W Orem, UT 84058",
+        "Pre-revenue bootstrapped C-corp with future funding consideration"
+      ]
+    },
+    {
+      "term": "TrustyBits business model",
+      "definition": "Help tech professionals level up through real-world experience, shared knowledge, and supportive community",
+      "examples": [
+        "Core products: Joju.app (AI-enabled SaaS achievement platform), 76Forge (project platform for skill-building)",
+        "Supplementary services: Training, coaching, mentoring, consulting",
+        "Revenue streams: SaaS subscriptions, consulting, partnerships & programs",
+        "Target customers: Designers, developers, product managers, high school students"
+      ]
+    },
+    {
+      "term": "AI compliance framework",
+      "definition": "TrustyBits regulatory compliance approach for AI-enabled features across platforms",
+      "examples": [
+        "Regulations: GDPR, CCPA, COPPA, ADA, FERPA, SOX, PCI compliance",
+        "Data practices: User-controlled visibility, detailed privacy policy, strong encryption",
+        "AI usage: OpenAI API for resume parsing, in-house system prompts, user opt-in training data",
+        "Security: OWASP audits, pen testing bounties, sandbox environment for input review"
+      ]
+    },
+    {
+      "term": "8825 Integration Registry",
+      "definition": "Catalog of integration capabilities, status, and upkeep rules for 8825 ecosystem with readiness scoring and risk assessment",
+      "examples": [
+        "Readiness levels: 0=Exploratory, 1=Pilot, 2=Operational, 3=Hardened",
+        "Risk levels: L=Low, M=Medium, H=High",
+        "Weekly check cadence with automated monitoring",
+        "Tracks auth status, webhook events, SDK versions, playbooks"
+      ]
+    },
+    {
+      "term": "Model Role-Mapping Layer",
+      "definition": "AI orchestration framework defining core archetypes for model role assignment in 8825 ecosystem",
+      "examples": [
+        "Instructor (ChatGPT): Synthesizer for process design, frameworks, storytelling",
+        "Analyst (Perplexity): Researcher for market analysis, data validation",
+        "Provocateur (Grok): Commentator for tone testing, creative critique, viral phrasing",
+        "Planner (Gemini): System integrator for timeline planning, file structuring",
+        "Dynamic routing: intent='analyze' → Analyst; intent='explain' → Instructor"
+      ]
+    },
+    {
+      "term": "8825 Structural Partition Plan",
+      "definition": "Modular library architecture for 8825 balancing context, scalability, and standalone deployment capabilities",
+      "examples": [
+        "Registry: Central index listing all libraries, dependencies, versions",
+        "8825_core: Canonical frameworks, schemas, shared logic (PromptGen 1.0)",
+        "Modular structure for context balance and scalability",
+        "Standalone deployment capabilities per library"
+      ]
+    },
+    {
+      "term": "Integration Registry Automation",
+      "definition": "Automated flow for continuously tracking integration capabilities, auth states, and readiness with weekly digests and incident alerts",
+      "examples": [
+        "System roles: Researcher, Validator, Updater, Notifier",
+        "Cadence: Weekly research (Mon 9:00 CT), nightly checks (02:00 CT), instant alerts",
+        "Outputs: Updated registry, weekly digest, incident alerts, backups",
+        "Governance: Single source of truth with versioned archives"
+      ]
+    }
+  ],
+  
+  "summary_log": [
+    {
+      "when": "2025-10-31",
+      "topic": "Initial exploration: Team workflow for Joju development with PMCE integration",
+      "notes": "User has 8825 workspace set up for knowledge management. Joju development team would work in separate workspace. Key question: How do Cascade conversations in Joju workspace get mined into 8825 knowledge base? Discovered workspace isolation as potential constraint. Need to test: (1) Can Cascade access own history? (2) Can Cascade in one workspace read files from another? (3) What's the bridge mechanism between workspaces?"
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Agent capabilities extraction from compressed WCB mining report",
+      "notes": "Successfully tested new compressed mining report format from ChatGPT. Extracted 5 agent capabilities using 6-element WCB compression schema: system_role, inputs_required, outputs, workflow, constraints, routing. Agents cover Joju problem definition, Windsurf-Notion integration, workshop roadmaps, and Reddit beta testing workflows. Validates that external LLMs can generate lightweight, structured reports without verbose text blocks while maintaining full reconstruction capability."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "Agent capabilities migrated to universal registry",
+      "notes": "Moved 5 agent capabilities to projects/agent_registry.json to eliminate redundancy. Enterprise project now maintains references only. Registry serves as single source of truth for all WCB reconstruction. Establishes pattern for future mining reports: content routes to named projects, agents route to registry."
+    },
+    {
+      "when": "2025-11-01",
+      "topic": "TrustyBits Inc. corporate structure and business model documentation",
+      "notes": "Documented TrustyBits Inc. as parent organization (8825_enterprise_76): C-corp incorporated July 8, 2025, with Matthew Galley (President) and Cameron Watkins (Secretary/Treasurer). Core business model: help tech professionals level up through real-world experience, shared knowledge, and supportive community. Product ecosystem includes Joju.app (AI-enabled SaaS achievement platform) and 76Forge (project platform for skill-building). Revenue streams: SaaS subscriptions, consulting, partnerships. Pre-revenue bootstrapped status with future funding consideration. AI compliance framework includes GDPR, CCPA, COPPA, ADA, FERPA compliance with user-controlled data visibility and strong security standards."
+    }
+  ],
+  
+  "open_loops": {
+    "cascade_capabilities": {
+      "status": "Investigation needed",
+      "priority": "Critical",
+      "questions": [
+        "Can Cascade access its own conversation history within a workspace?",
+        "Can Cascade generate mining reports from past conversations?",
+        "Can Cascade in workspace A read files from workspace B?",
+        "Are Cascade conversations workspace-specific or global?",
+        "Where does Windsurf store Cascade chat history? (~/.windsurf/? workspace/.windsurf/?)"
+      ]
+    },
+    "joju_workspace_structure": {
+      "status": "Discovery phase",
+      "priority": "High",
+      "questions": [
+        "Does Joju team have existing Windsurf workspace?",
+        "Where is Joju codebase located?",
+        "Is it in Dropbox or separate location?",
+        "What's the typical developer workflow?"
+      ]
+    },
+    "team_mining_workflow": {
+      "status": "Design pending discovery",
+      "priority": "High",
+      "options": [
+        "Option A: Cascade self-mining (if capability exists)",
+        "Option B: Manual report generation by developers",
+        "Option C: Automated export from Cascade history",
+        "Option D: Cross-workspace file access"
+      ]
+    },
+    "multi_workspace_testing": {
+      "status": "Experiment needed",
+      "priority": "Immediate",
+      "tests": [
+        "Open two Windsurf windows (/8825 and /joju)",
+        "Test if Cascade in one can access files from the other",
+        "Ask Cascade about conversation history storage",
+        "Check file system for Cascade chat storage locations"
+      ]
+    }
+  },
+  
+  "potential_architectures": [
+    {
+      "name": "Shared Dropbox Bridge",
+      "description": "Both workspaces point to shared Dropbox folder for knowledge exchange",
+      "workflow": [
+        "Joju workspace: Developer works, chats with Cascade",
+        "Developer manually triggers: 'Generate mining report'",
+        "Save report to shared Dropbox/8825/- REF -/",
+        "8825 workspace: Cascade extracts to projects/joju.json",
+        "Updated knowledge syncs back to team"
+      ],
+      "pros": ["Works with workspace isolation", "Explicit knowledge capture"],
+      "cons": ["Manual trigger required", "Developer overhead"]
+    },
+    {
+      "name": "Single Unified Workspace",
+      "description": "Combine 8825 knowledge system and Joju code in one workspace",
+      "structure": [
+        "/joju_with_pmce/",
+        "├── src/  (Joju code)",
+        "├── projects/  (8825 knowledge)",
+        "└── 8825_library_miner.py"
+      ],
+      "pros": ["No workspace isolation issues", "Cascade sees everything"],
+      "cons": ["Mixes concerns", "May not match user's mental model"]
+    },
+    {
+      "name": "Cascade History Export",
+      "description": "Automated script reads Cascade chat files and processes them",
+      "workflow": [
+        "Cascade stores chats in accessible location",
+        "Python script monitors Joju workspace chat history",
+        "Auto-generates mining reports",
+        "Updates 8825 knowledge base"
+      ],
+      "pros": ["Fully automated", "Zero developer overhead"],
+      "cons": ["Requires Cascade file access", "Unknown if possible"]
+    },
+    {
+      "name": "Notion Integration Hub",
+      "description": "Lens model sync from 8825 JSON to Notion for team visibility and light curation",
+      "workflow": [
+        "8825 workspace: Projects stored in JSON (source of truth)",
+        "Python sync job: Read projects/*.json → upsert to Notion DBs",
+        "Notion: Projects + Open Loops DBs with saved views by client/priority",
+        "Team: Browse, comment, light status updates in Notion",
+        "Optional: Limited write-back (status/owner/priority) to JSON"
+      ],
+      "schema": {
+        "projects_db": ["Name", "Version", "Description", "Last Updated", "Stats (rollup)", "External ID"],
+        "open_loops_db": ["Area", "Status", "Priority", "Questions", "Related Project (relation)"]
+      },
+      "sync_pattern": "Extend existing 8825_library_miner_dropbox.py pattern",
+      "pros": ["Leverages existing JSON structure", "Team visibility without file access", "Light curation layer", "Preserves 8825 governance"],
+      "cons": ["Requires Notion setup", "Additional sync job maintenance", "Potential schema drift"]
+    }
+  ],
+  
+  "discovery_checklist": [
+    {
+      "phase": "Understand Current Reality",
+      "items": [
+        "[ ] Locate Joju workspace (does it exist?)",
+        "[ ] Identify where team does Cascade chats currently",
+        "[ ] Map current developer workflow",
+        "[ ] Test multi-workspace file access"
+      ]
+    },
+    {
+      "phase": "Test Cascade Capabilities",
+      "items": [
+        "[ ] Ask Cascade about conversation history access",
+        "[ ] Test mining report generation from current session",
+        "[ ] Check filesystem for Cascade chat storage",
+        "[ ] Test cross-workspace file reading"
+      ]
+    },
+    {
+      "phase": "Design Team Workflow",
+      "items": [
+        "[ ] Choose architecture based on constraints",
+        "[ ] Create team setup documentation",
+        "[ ] Build starter kit if needed",
+        "[ ] Test with one developer first"
+      ]
+    }
+  ],
+  
+  "agent_references": {
+    "note": "Agent capabilities moved to projects/agent_registry.json to prevent duplication",
+    "agents_from_this_project": [
+      "AGENT-JOJU-PROBLEM-DEFINITION-0001",
+      "AGENT-WS-NOTION-0001", 
+      "AGENT-WORKSHOP-ROADMAP-0001",
+      "AGENT-REDDIT-BETA-0001",
+      "AGENT-REDDIT-PREQUAL-0001"
+    ],
+    "reconstruction": "Use 'recreate WCB for <agent_id>' to regenerate from registry"
+  },
+  
+  "ecosystem_lexicon": [
+    {
+      "term": "memory layer",
+      "definition": "Persistent cross-tool context and voice control for agents/LLMs",
+      "component": "8825"
+    },
+    {
+      "term": "proof-of-work identity",
+      "definition": "Verified contribution history mapped to rewards and reputation",
+      "component": "Joju"
+    },
+    {
+      "term": "orchestration",
+      "definition": "Coordinated agents, prompts, and data flows across tools",
+      "component": "8825"
+    }
+  ],
+  
+  "decisions": [
+    {
+      "what": "Develop a valuation-range table keyed to traction milestones",
+      "why": "Provides clarity for planning and investor conversations",
+      "when": "2025-11-03",
+      "status": "pending"
+    },
+    {
+      "what": "Keep Joju open and cooperative while 8825 funds growth",
+      "why": "Bootstraps the movement without compromising ownership principles",
+      "when": "2025-11-03",
+      "status": "approved"
+    }
+  ],
+
+  "source_reports": [
+    "8825_76_mining_report.json",
+    "8825_value_mission_and_mining_standard_20251103T054507.json"
+  ]
+}

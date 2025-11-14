@@ -1,0 +1,893 @@
+{
+  "content_type": "mining_report",
+  "target_focus": "joju",
+  "metadata": {
+    "source": "local_filesystem_miner",
+    "version": "0.1.0-mvp",
+    "timestamp": "2025-11-09T19:08:13.242006",
+    "folder_root": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples",
+    "scan_type": "local_filesystem",
+    "dropbox_root": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon",
+    "limitations": [
+      "Creator attribution requires XMP parsing",
+      "Editor attribution simplified (filesystem modified date)",
+      "No Dropbox revision history",
+      "No cloud-only files (only locally synced)"
+    ]
+  },
+  "files": [
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_2_runwell_062721.ai",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_2_runwell_062721.ai",
+      "name": "shinola_collab_collection_2_runwell_062721.ai",
+      "ext": ".ai",
+      "size_bytes": 125101608,
+      "content_hash": "f855969338ef563c73a2d714df50c987",
+      "created": "2021-06-28T11:40:41",
+      "modified": "2021-06-28T11:40:41",
+      "accessed": "2025-11-07T13:41:15.570317",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 11:40:33-05:00",
+        "modify_date": "2021:06:28 11:40:41-05:00",
+        "metadata_date": "2021:06:28 11:40:41-05:00",
+        "title": "shinola_collab_collection_2_runwell_062721",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 11:40:30-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T11:40:41",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 11:40:33-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2021-06-28T11:40:41",
+        "xmp_modify_date": "2021:06:28 11:40:41-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 11:40:30-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_1_watch_monster_062721.ai",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_1_watch_monster_062721.ai",
+      "name": "shinola_collab_collection_1_watch_monster_062721.ai",
+      "ext": ".ai",
+      "size_bytes": 147493661,
+      "content_hash": "8cdff0315b9b115292b11f466da9e42e",
+      "created": "2021-06-28T11:43:46",
+      "modified": "2021-06-28T11:43:46",
+      "accessed": "2025-11-07T13:41:15.107751",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 11:43:38-05:00",
+        "modify_date": "2021:06:28 11:43:46-05:00",
+        "metadata_date": "2021:06:28 11:43:46-05:00",
+        "title": "shinola_collab_collection_1_watch_monster_062721",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 11:28:24-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T11:43:46",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 11:43:38-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2021-06-28T11:43:46",
+        "xmp_modify_date": "2021:06:28 11:43:46-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 11:28:24-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_4_bicycle_arrow_062721.ai",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_4_bicycle_arrow_062721.ai",
+      "name": "shinola_collab_collection_4_bicycle_arrow_062721.ai",
+      "ext": ".ai",
+      "size_bytes": 107515648,
+      "content_hash": "e432ddc17827c992e730965a1816ef21",
+      "created": "2021-06-28T11:47:38",
+      "modified": "2021-06-28T11:47:38",
+      "accessed": "2025-11-07T13:41:14.664273",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 11:47:27-05:00",
+        "modify_date": "2021:06:28 11:47:37-05:00",
+        "metadata_date": "2021:06:28 11:47:37-05:00",
+        "title": "shinola_collab_collection_4_bicycle_arrow_062721",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 11:47:24-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T11:47:38",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 11:47:27-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2021-06-28T11:47:38",
+        "xmp_modify_date": "2021:06:28 11:47:37-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 11:47:24-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/2013_NKvsn-DD.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/2013_NKvsn-DD.pdf",
+      "name": "2013_NKvsn-DD.pdf",
+      "ext": ".pdf",
+      "size_bytes": 1643393,
+      "content_hash": "413554b231af90f78752ef4b26baea81",
+      "created": "2024-06-20T16:55:49",
+      "modified": "2024-06-20T16:55:49",
+      "accessed": "2025-11-07T13:41:09.229712",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T16:55:49",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-20T16:55:49"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/JHarmon_051519.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/JHarmon_051519.pdf",
+      "name": "JHarmon_051519.pdf",
+      "ext": ".pdf",
+      "size_bytes": 992328,
+      "content_hash": "01a4e86123ffede6f796750701146a49",
+      "created": "2019-05-15T22:33:06",
+      "modified": "2019-05-15T22:33:06",
+      "accessed": "2025-11-07T13:43:50.456947",
+      "xmp": {
+        "creator_tool": "Adobe Acrobat 10.1.3",
+        "create_date": "2013:02:18 01:29:02-06:00",
+        "modify_date": "2013:02:18 10:24:57-06:00",
+        "metadata_date": "2013:02:18 10:24:57-06:00",
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2019-05-15T22:33:06",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2013:02:18 01:29:02-06:00",
+        "tool": "Adobe Acrobat 10.1.3"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2019-05-15T22:33:06",
+        "xmp_modify_date": "2013:02:18 10:24:57-06:00"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/dragon_prelim-moodboards_092118_outline.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/dragon_prelim-moodboards_092118_outline.pdf",
+      "name": "dragon_prelim-moodboards_092118_outline.pdf",
+      "ext": ".pdf",
+      "size_bytes": 80594941,
+      "content_hash": "883d2e24dc5793150a8abd5c3c6dd340",
+      "created": "2024-06-20T15:36:37",
+      "modified": "2024-06-20T15:36:37",
+      "accessed": "2025-11-07T13:41:10.802381",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator CC 22.1 (Macintosh)",
+        "create_date": "2018:09:21 12:05:13-05:00",
+        "modify_date": "2024:06:20 15:36:32-05:00",
+        "metadata_date": "2024:06:20 15:36:32-05:00",
+        "title": "dragon_prelim-moodboards_092118",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2018:09:20 14:13:17-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2018:09:21 12:04:47-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T15:36:37",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2018:09:21 12:05:13-05:00",
+        "tool": "Adobe Illustrator CC 22.1 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2024-06-20T15:36:37",
+        "xmp_modify_date": "2024:06:20 15:36:32-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2018:09:21 12:04:47-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/dragon_ophs_sp21_moodboards_120519_mtg_notes.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/dragon_ophs_sp21_moodboards_120519_mtg_notes.pdf",
+      "name": "dragon_ophs_sp21_moodboards_120519_mtg_notes.pdf",
+      "ext": ".pdf",
+      "size_bytes": 3853843,
+      "content_hash": "9e35d7019849e40ecfdc3a726a868eb0",
+      "created": "2019-12-11T10:26:49",
+      "modified": "2019-12-11T10:26:49",
+      "accessed": "2025-11-07T13:43:49.764963",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator CC 23.1 (Macintosh)",
+        "create_date": "2019:12:11 10:26:49-06:00",
+        "modify_date": "2019:12:11 10:26:49-06:00",
+        "metadata_date": "2019:12:11 10:26:49-06:00",
+        "title": "dragon_ophs_sp21_moodboards_120519_mtg_notes",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2018:09:25 10:17:44-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2019:12:11 10:26:38-06:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2019-12-11T10:26:49",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2019:12:11 10:26:49-06:00",
+        "tool": "Adobe Illustrator CC 23.1 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2019-12-11T10:26:49",
+        "xmp_modify_date": "2019:12:11 10:26:49-06:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2019:12:11 10:26:38-06:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/MRA_200_extA-COLOR_100617_low.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/MRA_200_extA-COLOR_100617_low.pdf",
+      "name": "MRA_200_extA-COLOR_100617_low.pdf",
+      "ext": ".pdf",
+      "size_bytes": 264289,
+      "content_hash": "44fe8f57e6941a976a7019855b4db5bf",
+      "created": "2017-10-07T00:30:25",
+      "modified": "2017-10-07T00:30:25",
+      "accessed": "2025-11-05T22:38:12.089526",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator CC 2017 (Macintosh)",
+        "create_date": "2017:10:07 01:30:25-04:00",
+        "modify_date": "2017:10:07 01:30:25-04:00",
+        "metadata_date": "2017:10:07 01:30:25-04:00",
+        "title": "MRA_200_extA-COLOR_100617_low",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2016:08:02 23:38:30-04:00",
+            "action": "saved"
+          },
+          {
+            "when": "2017:10:07 01:30:21-04:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2017-10-07T00:30:25",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2017:10:07 01:30:25-04:00",
+        "tool": "Adobe Illustrator CC 2017 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2017-10-07T00:30:25",
+        "xmp_modify_date": "2017:10:07 01:30:25-04:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2017:10:07 01:30:21-04:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/High End 1 Sun - 3D - live model.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/High End 1 Sun - 3D - live model.pdf",
+      "name": "High End 1 Sun - 3D - live model.pdf",
+      "ext": ".pdf",
+      "size_bytes": 6474032,
+      "content_hash": "ac3f4028d3b7e7206e238b97c9b2664d",
+      "created": "2018-07-17T19:30:44",
+      "modified": "2018-07-17T19:30:44",
+      "accessed": "2025-11-06T06:43:57.492022",
+      "xmp": {
+        "creator_tool": "SimLab Software - http://SimLab-Soft.com",
+        "create_date": "2018:07:17 14:19:53-08:00",
+        "modify_date": "2018:07:17 20:30:44-04:00",
+        "metadata_date": "2018:07:17 20:30:44-04:00",
+        "title": "SimLab Generated PDF",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2018-07-17T19:30:44",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2018:07:17 14:19:53-08:00",
+        "tool": "SimLab Software - http://SimLab-Soft.com"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2018-07-17T19:30:44",
+        "xmp_modify_date": "2018:07:17 20:30:44-04:00"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/dragon_sketchbook_review_102318_marchonFEEDBACK.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/dragon_sketchbook_review_102318_marchonFEEDBACK.pdf",
+      "name": "dragon_sketchbook_review_102318_marchonFEEDBACK.pdf",
+      "ext": ".pdf",
+      "size_bytes": 18895068,
+      "content_hash": "94d862e235f337504a6111010e846b6b",
+      "created": "2018-10-24T17:21:18",
+      "modified": "2018-10-24T17:21:18",
+      "accessed": "2025-11-06T10:52:49.777482",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator CC 22.1 (Macintosh)",
+        "create_date": "2018:10:24 18:21:16-04:00",
+        "modify_date": "2018:10:24 18:21:17-04:00",
+        "metadata_date": "2018:10:24 18:21:17-04:00",
+        "title": "dragon_sketchbook_review_102318_marchonFEEDBACK",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2018:09:25 10:17:44-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2018:10:24 18:20:27-04:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2018-10-24T17:21:18",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2018:10:24 18:21:16-04:00",
+        "tool": "Adobe Illustrator CC 22.1 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2018-10-24T17:21:18",
+        "xmp_modify_date": "2018:10:24 18:21:17-04:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2018:10:24 18:20:27-04:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_0_DECK_062821_rev02.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_0_DECK_062821_rev02.pdf",
+      "name": "shinola_collab_collection_0_DECK_062821_rev02.pdf",
+      "ext": ".pdf",
+      "size_bytes": 40160936,
+      "content_hash": "575a789a2426d30fd1f6e6cce70eb1c9",
+      "created": "2021-06-28T09:41:54",
+      "modified": "2021-06-28T09:41:54",
+      "accessed": "2025-11-07T13:41:16.120624",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 09:41:53-05:00",
+        "modify_date": "2021:06:28 09:41:53-05:00",
+        "metadata_date": "2021:06:28 09:41:53-05:00",
+        "title": "shinola_collab_collection_0_DECK_062821_rev02",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 09:41:44-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T09:41:54",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 09:41:53-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2021-06-28T09:41:54",
+        "xmp_modify_date": "2021:06:28 09:41:53-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 09:41:44-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/00-dragon_prelim-moodboards_092118_outline.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/00-dragon_prelim-moodboards_092118_outline.pdf",
+      "name": "00-dragon_prelim-moodboards_092118_outline.pdf",
+      "ext": ".pdf",
+      "size_bytes": 83129083,
+      "content_hash": "a6aa7ee413537840df5b0cc1fb943f5b",
+      "created": "2018-09-21T12:05:19",
+      "modified": "2018-09-21T12:05:19",
+      "accessed": "2025-11-07T13:43:47.216330",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator CC 22.1 (Macintosh)",
+        "create_date": "2018:09:21 12:05:13-05:00",
+        "modify_date": "2018:09:21 12:05:13-05:00",
+        "metadata_date": "2018:09:21 12:05:13-05:00",
+        "title": "dragon_prelim-moodboards_092118",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2018:09:20 14:13:17-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2018:09:21 12:04:47-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2018-09-21T12:05:19",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2018:09:21 12:05:13-05:00",
+        "tool": "Adobe Illustrator CC 22.1 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2018-09-21T12:05:19",
+        "xmp_modify_date": "2018:09:21 12:05:13-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2018:09:21 12:04:47-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/triple8.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/triple8.pdf",
+      "name": "triple8.pdf",
+      "ext": ".pdf",
+      "size_bytes": 2452132,
+      "content_hash": "e8bdec9a1d3c5859a5f697c288b2a141",
+      "created": "2024-06-20T16:59:08",
+      "modified": "2024-06-20T16:59:08",
+      "accessed": "2025-11-07T13:41:08.677431",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T16:59:08",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-20T16:59:08"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_2_runwell_062821.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_2_runwell_062821.pdf",
+      "name": "shinola_collab_collection_2_runwell_062821.pdf",
+      "ext": ".pdf",
+      "size_bytes": 107831254,
+      "content_hash": "f3f90c1353ffec453a7abf1d9862cf4a",
+      "created": "2021-06-28T17:09:33",
+      "modified": "2021-06-28T17:09:33",
+      "accessed": "2025-11-07T13:41:14.058572",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 17:09:24-05:00",
+        "modify_date": "2021:06:28 17:09:25-05:00",
+        "metadata_date": "2021:06:28 17:09:25-05:00",
+        "title": "shinola_collab_collection_2_runwell_062821",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 17:09:12-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T17:09:33",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 17:09:24-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2021-06-28T17:09:33",
+        "xmp_modify_date": "2021:06:28 17:09:25-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 17:09:12-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_0_DECK_101121.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection_0_DECK_101121.pdf",
+      "name": "shinola_collab_collection_0_DECK_101121.pdf",
+      "ext": ".pdf",
+      "size_bytes": 28950028,
+      "content_hash": "ad1c58f7ee3a8a7fb6553161d1c4e393",
+      "created": "2024-06-20T16:41:19",
+      "modified": "2024-06-20T16:41:19",
+      "accessed": "2025-11-07T13:41:10.578578",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T16:41:19",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-20T16:41:19"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/High End 1 Sun - 3D - screengrabs.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/High End 1 Sun - 3D - screengrabs.pdf",
+      "name": "High End 1 Sun - 3D - screengrabs.pdf",
+      "ext": ".pdf",
+      "size_bytes": 210784,
+      "content_hash": "6a924960d33ca8e5003619ac9c2e8446",
+      "created": "2018-07-17T16:19:37",
+      "modified": "2018-07-17T16:19:37",
+      "accessed": "2025-11-06T06:44:01.540081",
+      "xmp": {
+        "creator_tool": "Adobe Acrobat 18.11",
+        "create_date": "2018:07:17 14:13:48-07:00",
+        "modify_date": "2018:07:17 14:13:48-07:00",
+        "metadata_date": "2018:07:17 14:13:48-07:00",
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2018-07-17T16:19:37",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2018:07:17 14:13:48-07:00",
+        "tool": "Adobe Acrobat 18.11"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2018-07-17T16:19:37",
+        "xmp_modify_date": "2018:07:17 14:13:48-07:00"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/SP12_TIGER-CUT_SKETCHBOOK.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/SP12_TIGER-CUT_SKETCHBOOK.pdf",
+      "name": "SP12_TIGER-CUT_SKETCHBOOK.pdf",
+      "ext": ".pdf",
+      "size_bytes": 1458021,
+      "content_hash": "5cc19d11f598d1f513495dedc999d534",
+      "created": "2024-06-20T16:52:27",
+      "modified": "2024-06-20T16:52:27",
+      "accessed": "2025-11-07T13:41:09.720234",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T16:52:27",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-20T16:52:27"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/Amare_presentation.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/Amare_presentation.pdf",
+      "name": "Amare_presentation.pdf",
+      "ext": ".pdf",
+      "size_bytes": 1955372,
+      "content_hash": "338ecbd626044d66f257f84b972f698c",
+      "created": "2024-06-20T16:44:19",
+      "modified": "2024-06-20T16:44:19",
+      "accessed": "2025-11-07T13:41:10.162914",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-20T16:44:19",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-20T16:44:19"
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/shinola_collab_collection.pdf",
+      "name": "shinola_collab_collection.pdf",
+      "ext": ".pdf",
+      "size_bytes": 47493306,
+      "content_hash": "5642075aa5a65387ccbf46d713b84d8f",
+      "created": "2021-06-28T09:41:54",
+      "modified": "2025-11-05T22:42:28.605750",
+      "accessed": "2025-11-07T13:41:07.742830",
+      "xmp": {
+        "creator_tool": "Adobe Illustrator 25.2 (Macintosh)",
+        "create_date": "2021:06:28 09:41:53-05:00",
+        "modify_date": "2021:06:28 09:41:53-05:00",
+        "metadata_date": "2021:06:28 09:41:53-05:00",
+        "title": "shinola_collab_collection_0_DECK_062821_rev02",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "history": [
+          {
+            "when": "2021:06:15 11:54:21-05:00",
+            "action": "saved"
+          },
+          {
+            "when": "2021:06:28 09:41:44-05:00",
+            "action": "saved"
+          }
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2021-06-28T09:41:54",
+        "inferred_users": [
+          "justinharmon"
+        ],
+        "xmp_create_date": "2021:06:28 09:41:53-05:00",
+        "tool": "Adobe Illustrator 25.2 (Macintosh)"
+      },
+      "last_editor": {
+        "source": "xmp",
+        "timestamp": "2025-11-05T22:42:28.605750",
+        "xmp_modify_date": "2021:06:28 09:41:53-05:00",
+        "edit_count": 2,
+        "last_action": {
+          "when": "2021:06:28 09:41:44-05:00",
+          "action": "saved"
+        }
+      }
+    },
+    {
+      "path": "Public/Jh-ARCHV/Jh-workSamples/JHarmon_samples.pdf",
+      "absolute_path": "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/Jh-ARCHV/Jh-workSamples/JHarmon_samples.pdf",
+      "name": "JHarmon_samples.pdf",
+      "ext": ".pdf",
+      "size_bytes": 2289262,
+      "content_hash": "75d37ccf094ba7b5c75032d86fa84aef",
+      "created": "2024-06-14T16:18:38",
+      "modified": "2024-06-14T16:18:38",
+      "accessed": "2025-11-07T13:43:52.632059",
+      "xmp": {
+        "creator_tool": null,
+        "create_date": null,
+        "modify_date": null,
+        "metadata_date": null,
+        "title": null,
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "creator": {
+        "source": "xmp_file_paths",
+        "timestamp": "2024-06-14T16:18:38",
+        "inferred_users": [
+          "justinharmon"
+        ]
+      },
+      "last_editor": {
+        "source": "filesystem",
+        "timestamp": "2024-06-14T16:18:38"
+      }
+    }
+  ],
+  "statistics": {
+    "total_files": 20,
+    "by_extension": {
+      ".ai": 3,
+      ".pdf": 17
+    },
+    "by_folder": {
+      "Public/Jh-ARCHV/Jh-workSamples": 20
+    },
+    "total_size_mb": 771.29,
+    "date_range": {
+      "earliest": "2017-10-07T00:30:25",
+      "latest": "2025-11-05T22:42:28.605750"
+    }
+  },
+  "contributors": [
+    {
+      "note": "MVP: Contributor attribution not implemented yet",
+      "next_steps": [
+        "Add XMP parsing for .ai/.psd files",
+        "Add Git history analysis if available",
+        "Implement deduplication logic",
+        "Add Dropbox API for cloud metadata"
+      ]
+    }
+  ]
+}

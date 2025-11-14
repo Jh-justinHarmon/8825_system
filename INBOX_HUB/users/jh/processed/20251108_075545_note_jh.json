@@ -1,0 +1,13 @@
+{
+  "content_type": "note",
+  "target_focus": "jh",
+  "content": {
+    "title": "Test from Windsurf",
+    "content": "MCP server is working!"
+  },
+  "metadata": {
+    "source": "windsurf_test",
+    "timestamp": "2025-11-08T07:55:00Z",
+    "note": "Testing MCP inbox server"
+  }
+}

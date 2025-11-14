@@ -1,0 +1,476 @@
+{
+  "project": "8825_onboarding",
+  "version": "1.0.0",
+  "description": "Central warehouse for all 8825 client onboarding processes, demo creation protocols, setup automation, and onboarding levels from demos to full mining and MVP implementation",
+  
+  "stats": {
+    "onboarding_levels": 4,
+    "automation_agents": 1,
+    "protocols": 3,
+    "templates": 2,
+    "checklists": 4
+  },
+
+  "onboarding_levels": {
+    "level_1_demo": {
+      "name": "Demo Package",
+      "description": "Lightweight demo for prospects - JSON file + intro doc",
+      "deliverables": [
+        "Personalized 8825 JSON file",
+        "2-page introduction document",
+        "ChatGPT Projects setup instructions"
+      ],
+      "time_to_setup": "30 minutes",
+      "user_capabilities": [
+        "PromptGen teaching",
+        "Decision frameworks",
+        "Structured thinking",
+        "Pattern recognition",
+        "Teaching moments"
+      ],
+      "limitations": [
+        "No persistent memory across tools",
+        "No automated mining",
+        "No file updates",
+        "No team collaboration"
+      ],
+      "ideal_for": "Executives, prospects, quick wins, proof of concept"
+    },
+    
+    "level_2_basic_mining": {
+      "name": "Basic Mining Setup",
+      "description": "Manual mining workflow with ChatGPT external",
+      "deliverables": [
+        "Full 8825 core file",
+        "Mining prompt template",
+        "REF/ARCHV folder structure",
+        "Manual workflow documentation"
+      ],
+      "time_to_setup": "2-3 hours",
+      "user_capabilities": [
+        "Everything from Level 1",
+        "Manual chat mining to JSON",
+        "Pattern extraction",
+        "Project file updates",
+        "Archive management"
+      ],
+      "limitations": [
+        "Manual mining process",
+        "No automation",
+        "No Gmail integration",
+        "Single user only"
+      ],
+      "ideal_for": "Individual consultants, small projects, learning the system"
+    },
+    
+    "level_3_automated_mining": {
+      "name": "Automated Mining & Integration",
+      "description": "Full automation with Gmail extraction and Windsurf integration",
+      "deliverables": [
+        "Gmail extractor setup",
+        "Archive automation",
+        "Windsurf workspace configuration",
+        "Automated mining scripts",
+        "Duplicate prevention",
+        "Email routing logic"
+      ],
+      "time_to_setup": "1 day",
+      "user_capabilities": [
+        "Everything from Level 2",
+        "Automated email extraction",
+        "Auto-routing to projects",
+        "Duplicate prevention",
+        "Automated archiving",
+        "Windsurf direct file updates"
+      ],
+      "limitations": [
+        "Single user workspace",
+        "No team collaboration",
+        "No custom integrations"
+      ],
+      "ideal_for": "Power users, consultants with multiple projects, high email volume"
+    },
+    
+    "level_4_enterprise_mvp": {
+      "name": "Enterprise MVP",
+      "description": "Full team collaboration with custom workflows",
+      "deliverables": [
+        "Everything from Level 3",
+        "Team workspace setup",
+        "Custom integration development",
+        "Multi-user mining",
+        "Shared project files",
+        "Custom automation workflows",
+        "Training and support"
+      ],
+      "time_to_setup": "1-2 weeks",
+      "user_capabilities": [
+        "Everything from Level 3",
+        "Team collaboration",
+        "Custom integrations",
+        "Advanced automation",
+        "Multi-workspace sync",
+        "Enterprise features"
+      ],
+      "limitations": "Custom per engagement",
+      "ideal_for": "Teams, enterprises, complex workflows, custom requirements"
+    }
+  },
+
+  "automation_agents": {
+    "demo_creation_agent": {
+      "name": "Demo Package Creation Agent",
+      "version": "2.0.0",
+      "description": "Fully automated demo package creation from single command",
+      "activation_triggers": [
+        "Create demo for [Name], [Company]",
+        "Make demo package for [Name]",
+        "Generate 8825 demo for [Name] at [Company]",
+        "New demo: [Name], [Company]"
+      ],
+      "workflow": {
+        "step_1": {
+          "action": "Gather information in one message",
+          "questions": [
+            "Industry/focus?",
+            "Target audience?",
+            "Key topic for examples?",
+            "Presentation level?",
+            "Known pain point? (optional)"
+          ]
+        },
+        "step_2": {
+          "action": "Confirm details and execute",
+          "show": "Brief confirmation summary"
+        },
+        "step_3": {
+          "action": "Auto-create JSON file",
+          "file": "8825_[FirstName]_[Company].json",
+          "template": "8825_04-test_MES.json",
+          "personalizations": [
+            "meta.name",
+            "meta.owner",
+            "meta.description (industry context)",
+            "created_for",
+            "dates"
+          ]
+        },
+        "step_4": {
+          "action": "Auto-create introduction doc",
+          "file": "8825_[FirstName]_[Company]_Introduction.md",
+          "template": "8825_Demo_Introduction_TEMPLATE.md",
+          "replacements": {
+            "[NAME]": "First name",
+            "[COMPANY/ROLE]": "Company",
+            "[COMPANY]": "Company in examples",
+            "[AUDIENCE]": "Their audience",
+            "[TOPIC]": "Their topic",
+            "[EXECUTIVE LEVEL]": "Their level"
+          }
+        },
+        "step_5": {
+          "action": "Show completion summary",
+          "include": [
+            "Files created",
+            "Personalization details",
+            "Next steps"
+          ]
+        }
+      },
+      "execution_rules": [
+        "Ask questions in ONE message",
+        "Create files immediately after answers",
+        "Use propose_code tool for both files",
+        "Show what you did",
+        "Provide completion summary",
+        "Fully automated - no manual steps"
+      ],
+      "required_templates": [
+        "8825_04-test_MES.json",
+        "8825_Demo_Introduction_TEMPLATE.md"
+      ],
+      "quality_checklist": [
+        "Name spelled correctly",
+        "Company/role accurate",
+        "Examples relevant to industry",
+        "Audience matches context",
+        "Topic meaningful",
+        "Executive level appropriate",
+        "Pain point addressed if provided",
+        "File names consistent",
+        "Dates current"
+      ]
+    }
+  },
+
+  "protocols": {
+    "demo_handoff": {
+      "name": "Demo Package Handoff Protocol",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create demo package using agent",
+          "command": "Create demo for [Name], [Company]"
+        },
+        {
+          "step": 2,
+          "action": "Review generated files",
+          "verify": ["Personalization accuracy", "Examples relevance", "No errors"]
+        },
+        {
+          "step": 3,
+          "action": "Export intro doc to PDF/Word",
+          "tool": "Manual export from markdown"
+        },
+        {
+          "step": 4,
+          "action": "Send package",
+          "include": ["JSON file", "PDF/Word intro", "Optional: setup video"]
+        },
+        {
+          "step": 5,
+          "action": "Follow up",
+          "timing": "3-5 days",
+          "offer": "15-min setup call if needed"
+        }
+      ]
+    },
+    
+    "basic_mining_setup": {
+      "name": "Basic Mining Setup Protocol",
+      "prerequisites": ["Demo package delivered", "User interested in mining"],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Deliver full 8825 core file",
+          "file": "8825_01-core.json or 8825_02-consultant_HCSS.json"
+        },
+        {
+          "step": 2,
+          "action": "Set up folder structure",
+          "folders": ["- REF -", "- ARCHV -", "projects/"]
+        },
+        {
+          "step": 3,
+          "action": "Provide mining prompt",
+          "file": "8825_chatgpt_mining_prompt.md"
+        },
+        {
+          "step": 4,
+          "action": "Train on workflow",
+          "topics": ["Mining conversations", "Saving to REF", "Extracting to projects", "Archiving"]
+        },
+        {
+          "step": 5,
+          "action": "First mining session",
+          "guidance": "Walk through one complete cycle"
+        }
+      ],
+      "time_estimate": "2-3 hours",
+      "deliverables": ["Core file", "Folder structure", "Mining prompt", "Workflow doc", "Training session"]
+    },
+    
+    "automated_setup": {
+      "name": "Automated Mining Setup Protocol",
+      "prerequisites": ["Basic mining working", "User ready for automation"],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Set up Gmail extractor",
+          "files": ["8825_gmail_extractor.py", "run_gmail_extractor.command"],
+          "config": ["Gmail credentials", "Routing rules", "Duplicate prevention"]
+        },
+        {
+          "step": 2,
+          "action": "Set up archive automation",
+          "files": ["8825_archive_ref.py", "run_archive_ref.command"]
+        },
+        {
+          "step": 3,
+          "action": "Configure Windsurf workspace",
+          "setup": ["Core file in workspace", "Project files structure", "Interaction logging"]
+        },
+        {
+          "step": 4,
+          "action": "Test automation",
+          "verify": ["Email extraction", "Routing accuracy", "Archiving", "File updates"]
+        },
+        {
+          "step": 5,
+          "action": "Train on automated workflow",
+          "topics": ["Running extractors", "Reviewing REF", "Extracting with Windsurf", "Archiving"]
+        }
+      ],
+      "time_estimate": "1 day",
+      "deliverables": ["All scripts", "Configured workspace", "Tested automation", "Training"]
+    }
+  },
+
+  "templates": {
+    "demo_json": {
+      "file": "8825_04-test_MES.json",
+      "description": "Base template for demo packages",
+      "size": "402 lines",
+      "includes": [
+        "PromptGen framework",
+        "Decision framework",
+        "Teaching capabilities",
+        "Example interactions",
+        "Power features",
+        "Getting started guide"
+      ]
+    },
+    "demo_intro": {
+      "file": "8825_Demo_Introduction_TEMPLATE.md",
+      "description": "2-page introduction template",
+      "placeholders": [
+        "[NAME]",
+        "[COMPANY/ROLE]",
+        "[COMPANY]",
+        "[AUDIENCE]",
+        "[TOPIC]",
+        "[EXECUTIVE LEVEL]"
+      ]
+    }
+  },
+
+  "checklists": {
+    "demo_quality": {
+      "name": "Demo Package Quality Checklist",
+      "items": [
+        "Name spelled correctly in all files",
+        "Company/role accurate",
+        "Examples relevant to their industry",
+        "Audience matches their context",
+        "Topic is meaningful to them",
+        "Executive level appropriate",
+        "Pain point addressed (if provided)",
+        "File names consistent",
+        "Dates current",
+        "No placeholder text remaining"
+      ]
+    },
+    "basic_mining_readiness": {
+      "name": "Basic Mining Setup Readiness",
+      "items": [
+        "User has completed demo phase",
+        "User understands 8825 concepts",
+        "Folder structure created",
+        "Core file delivered",
+        "Mining prompt provided",
+        "Workflow documented",
+        "First mining session scheduled"
+      ]
+    },
+    "automation_readiness": {
+      "name": "Automation Setup Readiness",
+      "items": [
+        "Basic mining working smoothly",
+        "User comfortable with workflow",
+        "Gmail credentials available",
+        "Windsurf installed",
+        "Python environment ready",
+        "Routing rules defined",
+        "Test emails available"
+      ]
+    },
+    "enterprise_readiness": {
+      "name": "Enterprise MVP Readiness",
+      "items": [
+        "Automation working for single user",
+        "Team size and structure defined",
+        "Custom requirements documented",
+        "Integration needs identified",
+        "Budget and timeline approved",
+        "Technical resources available",
+        "Training plan created"
+      ]
+    }
+  },
+
+  "patterns": {
+    "do": [
+      "Always personalize demos - never use generic placeholders",
+      "Ask all questions in one message for efficiency",
+      "Create files immediately after getting answers",
+      "Show what you're doing - be transparent",
+      "Provide clear next steps after every action",
+      "Match onboarding level to user needs and readiness",
+      "Start with demo, graduate to higher levels as needed",
+      "Automate everything that can be automated",
+      "Document all protocols and workflows",
+      "Test automation before delivering to client"
+    ],
+    "dont": [
+      "Don't over-engineer demos - keep them simple",
+      "Don't skip personalization - it's the value",
+      "Don't assume readiness - verify prerequisites",
+      "Don't deliver automation without testing",
+      "Don't forget follow-up - demos need nurturing"
+    ],
+    "framing": [
+      "Onboarding is a journey from demo to full automation",
+      "Each level builds on the previous",
+      "Match the solution to the user's sophistication",
+      "Automation should feel inevitable, not complex"
+    ]
+  },
+
+  "lexicon": [
+    {
+      "term": "Demo Package",
+      "definition": "Level 1 onboarding - personalized JSON + intro doc for ChatGPT Projects",
+      "use_case": "Prospects, executives, quick wins, proof of concept"
+    },
+    {
+      "term": "Basic Mining",
+      "definition": "Level 2 onboarding - manual mining workflow with full 8825 core",
+      "use_case": "Individual consultants learning the system"
+    },
+    {
+      "term": "Automated Mining",
+      "definition": "Level 3 onboarding - full automation with Gmail extraction and Windsurf",
+      "use_case": "Power users with high email volume"
+    },
+    {
+      "term": "Enterprise MVP",
+      "definition": "Level 4 onboarding - team collaboration with custom workflows",
+      "use_case": "Teams and enterprises with complex needs"
+    },
+    {
+      "term": "Demo Creation Agent",
+      "definition": "Automated agent that creates personalized demo packages from single command",
+      "activation": "Create demo for [Name], [Company]"
+    }
+  ],
+
+  "open_loops": [
+    {
+      "area": "automation_expansion",
+      "items": [
+        "Create agents for Level 2 and Level 3 setup",
+        "Automate folder structure creation",
+        "Build setup verification scripts",
+        "Create training video library"
+      ]
+    },
+    {
+      "area": "template_evolution",
+      "items": [
+        "Industry-specific demo templates",
+        "Role-specific customizations",
+        "Multi-language support"
+      ]
+    }
+  ],
+
+  "summary_log": [
+    {
+      "when": "2025-11-03",
+      "topic": "Onboarding warehouse creation",
+      "notes": "Created central repository for all 8825 onboarding processes. Defined 4 onboarding levels (Demo, Basic Mining, Automated Mining, Enterprise MVP). Built Demo Creation Agent for fully automated demo package generation. Established protocols for handoff, setup, and automation. Created quality checklists for each level. Ready to scale client onboarding systematically."
+    }
+  ],
+
+  "last_updated": "2025-11-03T08:40:00Z"
+}

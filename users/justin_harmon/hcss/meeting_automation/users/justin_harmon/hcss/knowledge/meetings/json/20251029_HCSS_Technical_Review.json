@@ -1,0 +1,16 @@
+{
+  "title": "HCSS Technical Review",
+  "date": "2025-10-29",
+  "source": "sample_data",
+  "transcript": "Sample transcript for HCSS Technical Review",
+  "summary": "# HCSS Technical Review\n\nSample meeting summary.",
+  "metadata": {
+    "duration": "45 min",
+    "participants": [
+      "Justin Harmon",
+      "Team"
+    ],
+    "client": "HCSS"
+  },
+  "processed_at": "2025-11-11T12:28:43.904497"
+}

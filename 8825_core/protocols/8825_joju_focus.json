@@ -1,0 +1,153 @@
+{
+  "protocol_name": "Joju Focus",
+  "version": "2.1.0",
+  "protocol_type": "Focus Protocol",
+  "parent_system": "8825 PCMS v2.1",
+  "created": "2025-11-06",
+  "migrated_from": "8825_joju_mode v2.0.0",
+  "purpose": "Professional library management and profile curation within 8825 app framework",
+  
+  "overview": {
+    "description": "Joju Focus is the v2.1 evolution of Joju Mode - a focused workflow for ingesting professional content, mining achievements, deduplicating information, and publishing to Joju-ready JSON format",
+    "activation": "User says 'focus on joju' while in 8825 mode",
+    "exit": "User says 'exit focus' (returns to 8825 mode)",
+    "sandbox_location": "/joju_sandbox/",
+    "master_library": "JH_master_library.json",
+    "current_revision": "12-all-six-variations",
+    "total_achievements": 79,
+    "variations": 6
+  },
+  
+  "v2_1_changes": {
+    "activation": {
+      "old": "enter joju mode (direct activation)",
+      "new": "focus on joju (requires 8825 mode first)",
+      "prerequisite": "Must be in 8825 mode"
+    },
+    "exit": {
+      "old": "Returns to normal Cascade operation",
+      "new": "Returns to 8825 mode (stays in app)"
+    },
+    "structure": "Same sandbox and workflows as v2.0",
+    "protocols": "All v2.0 protocols remain active"
+  },
+  
+  "protocol_reference": {
+    "full_protocol": "../8825-system (v2.0 deleted)/protocols/8825_joju_mode",
+    "description": "Complete workflow documentation in v2.0 protocol",
+    "includes": [
+      "Library-first workflow (5 steps)",
+      "Ingestion phase (files, web, folders, paste, API)",
+      "Mining phase (8825_mining protocol)",
+      "Deduplication phase (semantic matching, >80% threshold)",
+      "Publishing phase (variations generation)",
+      "Exit protocol (6-step checklist)",
+      "Sandbox structure (12 directories)",
+      "Auto-approve mode",
+      "Quality assurance"
+    ]
+  },
+  
+  "focus_activation": {
+    "entry_command": "focus on joju",
+    "activation_response": {
+      "message": "🎯 JOJU FOCUS ACTIVATED\n\nSandbox: /joju_sandbox/\nMaster Library: JH_master_library.json (79 achievements, Rev 12)\nCurrent Variations: 6 (BASE + 5 specialized)\n\nLibrary-First Workflow Active:\nMine → Merge to Library → Present Changes → Update Variations → Version\n\nYou can now:\n- Upload files for ingestion\n- Point me to websites/APIs\n- Paste content directly\n- Scan folders for content\n- Create new profile variations\n\nSay 'exit focus' when ready to leave Joju.",
+      "setup_actions": [
+        "Load JH_master_library.json (Rev 12, 79 achievements)",
+        "Initialize /joju_sandbox/ structure",
+        "Load 6 existing variations",
+        "Set focus flag to 'joju_active'",
+        "Apply library-first workflow"
+      ]
+    }
+  },
+  
+  "current_state": {
+    "master_library": {
+      "file": "JH_master_library.json",
+      "version": "2.0.0",
+      "revision": "12-all-six-variations",
+      "achievements": 79,
+      "sessions": 10
+    },
+    "variations": {
+      "BASE": "justin_harmon_joju_input.json",
+      "CREATIVITY": "joju_sandbox/curations/justin_harmon_joju_CREATIVITY.json",
+      "TECHNICAL_PM": "joju_sandbox/curations/justin_harmon_joju_TECHNICAL_PM.json",
+      "DESIGN_LEADERSHIP": "joju_sandbox/curations/justin_harmon_joju_DESIGN_LEADERSHIP.json",
+      "ENTREPRENEURSHIP": "joju_sandbox/curations/justin_harmon_joju_ENTREPRENEURSHIP.json",
+      "UX_FOCUSED": "joju_sandbox/curations/justin_harmon_joju_UX_FOCUSED.json"
+    },
+    "published_location": "8825X76 sandbox/"
+  },
+  
+  "key_workflows": {
+    "library_first": {
+      "reference": "v2.0 protocol, step_2_merge_to_library",
+      "summary": "Extract → Merge to Library (auto-dedup) → Present → Update Variations → Version"
+    },
+    "ingestion": {
+      "reference": "v2.0 protocol, ingestion_phase",
+      "supported": ["PDF", "DOCX", "JSON", "websites", "folders", "paste", "API"]
+    },
+    "deduplication": {
+      "reference": "v2.0 protocol, deduplication_phase",
+      "threshold": ">80% similarity = duplicate",
+      "strategy": "Semantic matching with keyword overlap"
+    },
+    "variations": {
+      "reference": "v2.0 protocol, step_4_update_joju_input",
+      "process": "Pull from library → Apply framing → Generate curated exports"
+    }
+  },
+  
+  "focus_exit": {
+    "exit_command": "exit focus",
+    "exit_protocol": {
+      "reference": "v2.0 protocol, exit_protocol (6 steps)",
+      "steps": [
+        "1. Verify library updated",
+        "2. Verify variations synced",
+        "3. Verify versioning complete",
+        "4. Verify session log updated",
+        "5. Verify files saved",
+        "6. Validate JSON",
+        "7. Sync brain to Downloads (8825_brain_sync_protocol)"
+      ]
+    },
+    "exit_response": {
+      "message": "✅ JOJU FOCUS COMPLETE\n\nLibrary: Updated to Rev {rev#}\nVariations: {count} updated\nVersioned Copies: Created in 8825X76 sandbox/\n\nAll files saved and validated.\n\nReturning to 8825 mode."
+    },
+    "returns_to": "8825 mode (not normal operation)"
+  },
+  
+  "integration_with_8825": {
+    "inherits_protocols": [
+      "8825_decision-making",
+      "8825_learning_protocol",
+      "8825_mining",
+      "8825_promptGen 01"
+    ],
+    "uses_agents": [
+      "mining_agent",
+      "dedup_agent",
+      "decision_agent",
+      "promptgen_agent"
+    ],
+    "follows_patterns": [
+      "Library-first workflow",
+      "Confidence-based decisions",
+      "User preference adaptation"
+    ]
+  },
+  
+  "migration_notes": {
+    "from_v2_0": "Joju Mode becomes Joju Focus in v2.1",
+    "breaking_changes": "None - all workflows and data compatible",
+    "new_behavior": [
+      "Requires 8825 mode activation first",
+      "Exit returns to 8825 mode instead of normal operation"
+    ],
+    "data_compatibility": "100% - v2.0 files work in v2.1"
+  }
+}
