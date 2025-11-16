@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API Integration Setup - 8825</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 650px;
+            width: 100%;
+            padding: 24px;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #1a202c;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            color: #718096;
+            font-size: 13px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .info-box {
+            background: #f7fafc;
+            border-left: 3px solid #4299e1;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            color: #2d3748;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .info-box ol, .info-box ul {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #4299e1;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin-top: 12px;
+        }
+
+        .link-button:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+        }
+
+        .link-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            transition: all 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-field::placeholder {
+            color: #a0aec0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-secondary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .status-message {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .status-message.success {
+            background: #c6f6d5;
+            color: #22543d;
+            border-left: 4px solid #48bb78;
+        }
+
+        .status-message.error {
+            background: #fed7d7;
+            color: #742a2a;
+            border-left: 4px solid #f56565;
+        }
+
+        .status-message.loading {
+            background: #bee3f8;
+            color: #2c5282;
+            border-left: 4px solid #4299e1;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .progress-bar.active {
+            display: block;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 30px 0;
+        }
+
+        .key-preview {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+            color: #4a5568;
+            background: #f7fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            word-break: break-all;
+        }
+
+        .helper-text {
+            font-size: 12px;
+            color: #718096;
+            margin-top: 6px;
+        }
+
+        .requirements {
+            background: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .requirements-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7c2d12;
+            margin-bottom: 8px;
+        }
+
+        .requirements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .requirements li {
+            font-size: 13px;
+            color: #7c2d12;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .requirements li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔑 Gemini API Integration</h1>
+            <p>Set up Google Gemini API for 8825 Meeting Automation</p>
+        </div>
+
+        <!-- Step 1: Get API Key -->
+        <div class="section">
+            <div class="section-title">
+                <span class="step-number">1</span>
+                Get Your API Key
+            </div>
+            <div class="info-box">
+                <p><strong>Instructions:</strong></p>
+                <ol style="margin-top: 12px; padding-left: 20px; line-height: 1.8;">
+                    <li>Click "Open Google AI Studio" below</li>
+                    <li>Click "Create API Key" button</li>
+                    <li>In the dialog, you'll see:
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li><strong>Name your key:</strong> Enter "8825" (or any name)</li>
+                            <li><strong>Choose an imported project:</strong> Select <strong>"Default Gemini Project"</strong></li>
+                        </ul>
+                    </li>
+                    <li>Click "Create API key in new project"</li>
+                    <li>Copy the generated key (starts with "AIzaSy...")</li>
+                </ol>
+            </div>
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" class="link-button">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+                Open Google AI Studio
+            </a>
+            
+            <div class="info-box" style="margin-top: 20px; background: #f0fff4; border-left-color: #48bb78;">
+                <p style="font-size: 13px;"><strong>💡 Tip:</strong> If you don't see "Default Gemini Project", you can select "Create project" to make a new one. The free tier includes 15 requests per minute.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Step 2: Enter API Key -->
+        <div class="section">
+            <div class="section-title">
+                <span class="step-number">2</span>
+                Enter Your API Key
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label" for="apiKey">Paste API Key</label>
+                <input 
+                    type="text" 
+                    id="apiKey" 
+                    class="input-field" 
+                    placeholder="AIzaSy..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <p class="helper-text">Your API key will be stored locally and never shared</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Step 3: Test & Save -->
+        <div class="section">
+            <div class="section-title">
+                <span class="step-number">3</span>
+                Test & Save
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" id="saveBtn" disabled>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Save & Activate
+                </button>
+                <button class="btn btn-secondary" id="testBtn" disabled>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Test Connection
+                </button>
+            </div>
+
+            <div class="status-message" id="statusMessage"></div>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Requirements -->
+        <div class="requirements">
+            <div class="requirements-title">⚠️ Requirements</div>
+            <ul>
+                <li>Google AI Studio account (free tier available)</li>
+                <li>API key must start with "AIzaSy"</li>
+                <li>Key will be saved to: <code>8825_core/.env</code></li>
+                <li>Backend will automatically configure and activate</li>
+                <li>No restart required - works immediately</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const apiKeyInput = document.getElementById('apiKey');
+        const testBtn = document.getElementById('testBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const statusMessage = document.getElementById('statusMessage');
+        const progressBar = document.getElementById('progressBar');
+        const progressFill = document.getElementById('progressFill');
+
+        let currentApiKey = '';
+
+        function updateProgress(percent) {
+            progressBar.classList.add('active');
+            progressFill.style.width = `${percent}%`;
+        }
+
+        function hideProgress() {
+            setTimeout(() => {
+                progressBar.classList.remove('active');
+                progressFill.style.width = '0%';
+            }, 1000);
+        }
+
+        // Enable buttons when API key is entered
+        apiKeyInput.addEventListener('input', (e) => {
+            currentApiKey = e.target.value.trim();
+            updateButtons();
+        });
+
+        function updateButtons() {
+            const hasKey = currentApiKey.length > 0;
+            testBtn.disabled = !hasKey;
+            saveBtn.disabled = !hasKey;
+        }
+
+        // Test connection
+        testBtn.addEventListener('click', async () => {
+            if (!validateApiKey()) return;
+
+            showStatus('loading', '🔄 Testing connection to Google Gemini...');
+            testBtn.disabled = true;
+
+            try {
+                // First, list available models
+                showStatus('loading', '🔍 Finding available Gemini models...');
+                
+                const listResponse = await fetch(
+                    `https://generativelanguage.googleapis.com/v1/models?key=${currentApiKey}`
+                );
+                
+                let models = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro'];
+                
+                if (listResponse.ok) {
+                    const modelList = await listResponse.json();
+                    console.log('Full model list:', modelList);
+                    
+                    const availableModels = modelList.models
+                        ?.filter(m => m.supportedGenerationMethods?.includes('generateContent'))
+                        .map(m => m.name.replace('models/', ''));
+                    
+                    if (availableModels && availableModels.length > 0) {
+                        models = availableModels;
+                        showStatus('loading', `✅ Found ${models.length} models. Testing...`);
+                    } else {
+                        showStatus('error', `⚠️ No models found. Check browser console for details.`);
+                    }
+                } else {
+                    const listError = await listResponse.text();
+                    console.error('Failed to list models:', listError);
+                    showStatus('error', `❌ Cannot list models: ${listResponse.status}. Using defaults.`);
+                }
+                
+                showStatus('loading', `🔄 Testing connection (trying ${models.length} models)...`);
+                
+                let lastError = null;
+                let success = false;
+                
+                for (const model of models) {
+                    try {
+                        const response = await fetch(
+                            `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${currentApiKey}`,
+                            {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    contents: [{
+                                        parts: [{ text: 'Respond with just "OK"' }]
+                                    }]
+                                })
+                            }
+                        );
+
+                        if (response.ok) {
+                            const data = await response.json();
+                            console.log(`✅ ${model} works!`, data);
+                            showStatus('success', `✅ Connection successful! Using ${model}.`);
+                            success = true;
+                            break;
+                        } else {
+                            const errorText = await response.text();
+                            console.error(`❌ ${model} failed:`, errorText);
+                            lastError = errorText;
+                        }
+                    } catch (e) {
+                        console.error(`❌ ${model} error:`, e);
+                        lastError = e.message;
+                    }
+                }
+                
+                if (!success) {
+                    console.error('All models failed. Tried:', models);
+                    showStatus('error', `❌ All ${models.length} models failed. Check console for details. Last error: ${lastError?.substring(0, 100)}...`);
+                }
+            } catch (error) {
+                showStatus('error', `❌ Connection error: ${error.message}`);
+            } finally {
+                testBtn.disabled = false;
+            }
+        });
+
+        // Save API key
+        saveBtn.addEventListener('click', async () => {
+            if (!validateApiKey()) return;
+
+            // Disable both buttons during save
+            saveBtn.disabled = true;
+            testBtn.disabled = true;
+            
+            // Step 1: Saving
+            updateProgress(0);
+            showStatus('loading', '💾 Step 1/3: Saving API key...');
+            
+            try {
+                // Create .env content
+                const envContent = `# Google Gemini API Configuration
+# Generated: ${new Date().toISOString()}
+# Auto-configured for 8825 Meeting Automation
+GOOGLE_GEMINI_API_KEY=${currentApiKey}
+`;
+
+                // Simulate save delay
+                await new Promise(resolve => setTimeout(resolve, 800));
+                updateProgress(33);
+
+                // Step 2: Call backend to save
+                showStatus('loading', '⚙️ Step 2/3: Saving to 8825_core/.env...');
+                updateProgress(33);
+
+                // Call Flask backend
+                const backendResponse = await fetch('http://localhost:5001/api/configure-gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ apiKey: currentApiKey })
+                });
+
+                if (!backendResponse.ok) {
+                    const error = await backendResponse.json();
+                    throw new Error(error.error || 'Backend save failed');
+                }
+
+                const result = await backendResponse.json();
+                console.log('Backend response:', result);
+
+                await new Promise(resolve => setTimeout(resolve, 800));
+                updateProgress(66);
+
+                // Step 3: Activating
+                showStatus('loading', '✨ Step 3/3: Activating integration...');
+                await new Promise(resolve => setTimeout(resolve, 600));
+                updateProgress(100);
+
+                // Success - ready to test
+                const keyPreview = result.details?.key_preview || `${currentApiKey.substring(0, 10)}...${currentApiKey.slice(-4)}`;
+                showStatus('success', `✅ API key saved! ${result.message}\n\n📁 ${result.details?.env_file}\n🔑 ${keyPreview}\n\nClick "Test Connection" to verify.`);
+                testBtn.disabled = false;
+                hideProgress();
+                
+                // Change save button to indicate completion
+                saveBtn.innerHTML = `
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Saved ✓
+                `;
+                saveBtn.style.opacity = '0.7';
+                
+            } catch (error) {
+                showStatus('error', `❌ Save failed: ${error.message}`);
+                saveBtn.disabled = false;
+                testBtn.disabled = true;
+                hideProgress();
+            }
+        });
+
+        function validateApiKey() {
+            if (!currentApiKey) {
+                showStatus('error', '❌ Please enter an API key');
+                return false;
+            }
+            if (!currentApiKey.startsWith('AIzaSy')) {
+                showStatus('error', '❌ Invalid API key format. Should start with "AIzaSy"');
+                return false;
+            }
+            return true;
+        }
+
+        function showStatus(type, message) {
+            statusMessage.className = `status-message ${type}`;
+            statusMessage.textContent = message;
+            statusMessage.style.display = 'block';
+
+            if (type === 'loading') {
+                statusMessage.innerHTML = `<span class="spinner"></span> ${message}`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "audit_metadata": {
+    "workflow_type": "unknown",
+    "workflow_id": "unknown",
+    "audit_date": "2025-11-14T16:11:52.431571",
+    "sources_checked": 5,
+    "sources_available": 2,
+    "total_sources": 5,
+    "duration_seconds": 0.0,
+    "auditor_version": "1.0.0"
+  },
+  "overall_assessment": {
+    "verdict": "REVIEW",
+    "accuracy_score": 0.0,
+    "completeness_score": 1.0,
+    "confidence": 0.0,
+    "total_items_checked": 0,
+    "gaps_found": 0,
+    "recommendations_count": 0
+  },
+  "findings": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": []
+  },
+  "gaps": [],
+  "recommendations": [],
+  "context_analysis": {
+    "sources_used": [
+      "gmail_otter_emails",
+      "brain_transport",
+      "tgif_knowledge_base",
+      "calendar_events",
+      "meeting_transcript"
+    ],
+    "sources_available": 2,
+    "sources_unavailable": [
+      "gmail_otter_emails",
+      "tgif_knowledge_base",
+      "calendar_events"
+    ],
+    "triangulation_coverage": "0%"
+  }
+}

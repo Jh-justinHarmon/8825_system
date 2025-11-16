@@ -103,13 +103,20 @@ if [ ${#FOCUSES[@]} -eq 0 ]; then
 fi
 echo ""
 
-# 5. Brain Daemon Status
+# 5. Brain Daemon - Auto-start if not running
 echo -e "${BLUE}[5/7] Brain Daemon${NC}"
-if [ -f "$V3_ROOT/8825_core/brain/brain_daemon.py" ]; then
-    if pgrep -f "brain_daemon.py" > /dev/null; then
-        echo -e "  ${GREEN}✅${NC} Brain daemon running"
+if [ -f "$V3_ROOT/8825_core/brain/brain_sync_daemon.py" ]; then
+    if pgrep -f "brain_sync_daemon.py" > /dev/null; then
+        echo -e "  ${GREEN}✅${NC} Brain daemon already running"
     else
-        echo -e "  ${YELLOW}⚠️${NC} Brain daemon stopped"
+        echo -e "  ${YELLOW}⚡${NC} Starting brain daemon..."
+        nohup python3 "$V3_ROOT/8825_core/brain/brain_sync_daemon.py" --daemon > /tmp/brain_daemon.log 2>&1 &
+        sleep 2
+        if pgrep -f "brain_sync_daemon.py" > /dev/null; then
+            echo -e "  ${GREEN}✅${NC} Brain daemon started"
+        else
+            echo -e "  ${YELLOW}✗${NC} Failed to start brain daemon (check /tmp/brain_daemon.log)"
+        fi
     fi
 else
     echo -e "  ${YELLOW}⚠️  Brain daemon not found${NC}"

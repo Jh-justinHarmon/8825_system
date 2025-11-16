@@ -1,0 +1,16 @@
+{
+  "workflow_type": "meeting_automation",
+  "baseline_date": "2025-11-14T16:12:46",
+  "baseline_metrics": {
+    "accuracy": 0.0,
+    "confidence": 0.0,
+    "completeness": 1.0,
+    "sources_available": 2,
+    "sources_total": 5,
+    "high_confidence_items": 0,
+    "medium_confidence_items": 0,
+    "low_confidence_items": 12,
+    "total_items": 12
+  },
+  "baseline_audit_file": "audit_meeting_automation_20251114_161246.json"
+}

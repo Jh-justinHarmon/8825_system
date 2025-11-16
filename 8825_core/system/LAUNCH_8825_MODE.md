@@ -50,12 +50,17 @@ source ~/.8825_launch
 
 ## From Cascade
 
-Just say:
+### Option 1: Workflow (Recommended)
+```
+/launch-8825
+```
+
+### Option 2: Natural Language
 ```
 launch 8825 mode
 ```
 
-Cascade will auto-run the startup script.
+Cascade will execute the unified startup script via the `/launch-8825` workflow or by running the `8825-launch` command.
 
 ## Status Check
 

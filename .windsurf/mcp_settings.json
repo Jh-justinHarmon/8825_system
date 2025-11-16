@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ai-manifest": {
+      "command": "python3",
+      "args": [
+        "/Users/justinharmon/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/mcp_servers/ai_manifest_server/server.py"
+      ]
+    }
+  }
+}

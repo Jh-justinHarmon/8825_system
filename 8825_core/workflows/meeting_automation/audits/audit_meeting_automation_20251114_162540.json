@@ -1,0 +1,316 @@
+{
+  "audit_metadata": {
+    "workflow_type": "unknown",
+    "workflow_id": "unknown",
+    "audit_date": "2025-11-14T16:25:40.347931",
+    "sources_checked": 4,
+    "sources_available": 2,
+    "total_sources": 5,
+    "duration_seconds": 0.0,
+    "auditor_version": "1.0.0"
+  },
+  "overall_assessment": {
+    "verdict": "REVIEW",
+    "accuracy_score": 0.0,
+    "completeness_score": 1.0,
+    "confidence": 0.0,
+    "total_items_checked": 12,
+    "gaps_found": 1,
+    "recommendations_count": 1
+  },
+  "findings": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": [
+      {
+        "item": {
+          "text": "To correct the Edward Don vendor setup for California location.",
+          "category": "technical",
+          "impact": "high",
+          "confidence": "high",
+          "context": "Ensuring all locations have correct vendor lists is critical for operations."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Add Edward Don to the vendor list for the California location.",
+          "who": "Josh Matulsky",
+          "due": "TBD",
+          "priority": "critical",
+          "context": "Missing vendor could lead to inventory and ordering issues.",
+          "confidence": "high"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Copy location settings from 4169 to other new locations.",
+          "who": "Tricia McHargue",
+          "due": "TBD",
+          "priority": "high",
+          "context": "To ensure consistency across new store setups.",
+          "confidence": "high"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Validate inventory and labor postings for new locations.",
+          "who": "Josh Matulsky",
+          "due": "TBD",
+          "priority": "high",
+          "context": "Critical for operational readiness and financial tracking.",
+          "confidence": "high"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "text": "Potential delay in store openings due to vendor setup issues.",
+          "severity": "medium",
+          "mitigation": "Prioritize vendor setup and confirm inventory lists.",
+          "owner": "Josh Matulsky",
+          "confidence": "medium"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          },
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "topic": "Edward Don vendor setup incomplete for California location.",
+          "status": "in_progress",
+          "owner": "Josh Matulsky",
+          "notes": "Need to add vendor products and confirm with the team."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "topic": "Copying location settings from 4169 to new locations.",
+          "status": "in_progress",
+          "owner": "Tricia McHargue",
+          "notes": "Action required to ensure operational consistency."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Edward dawn",
+          "corrected": "Edward Don",
+          "confidence": "high",
+          "reason": "Based on the project context, 'Edward Don' is a known vendor, and 'dawn' is a common transcription error for 'Don'."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Josh Matulsky",
+          "corrected": "Josh Matulsky",
+          "confidence": "high",
+          "reason": "Correcting the name to maintain consistency and correct identification throughout the transcript."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Owning a friend",
+          "corrected": "On a different note",
+          "confidence": "low",
+          "reason": "The original phrase does not make sense in context. The correction is an educated guess based on conversational transitions."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "1548 i",
+          "corrected": "1548",
+          "confidence": "high",
+          "reason": "The 'i' appears to be a transcription error, not relevant to the store number or context."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Lizzy",
+          "corrected": "Lizzy",
+          "confidence": "low",
+          "reason": "Assuming 'Lizzy' is a participant, but without explicit mention in the provided contexts, this remains an educated guess."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "item": {
+        "section": "blockers"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'blockers' is empty",
+      "confidence": 0.5
+    }
+  ],
+  "recommendations": [
+    {
+      "issue_found": "Found 12 items with low confidence",
+      "auditor_approach": "Checked multiple context sources, found insufficient confirmation",
+      "automation_options": [
+        {
+          "approach": "Add confidence threshold to workflow",
+          "impact": "Flag low-confidence extractions for manual review",
+          "cost": "Minimal (add confidence scoring)",
+          "trade_off": "Requires manual review of flagged items"
+        },
+        {
+          "approach": "Enhance context in workflow",
+          "impact": "Provide more context to extraction model",
+          "cost": "Medium (more tokens per run)",
+          "trade_off": "Slower, more expensive, but more accurate"
+        }
+      ],
+      "priority": "high"
+    }
+  ],
+  "context_analysis": {
+    "sources_used": [
+      "meeting_transcript",
+      "gmail_otter_emails",
+      "brain_transport",
+      "tgif_knowledge_base",
+      "calendar_events"
+    ],
+    "sources_available": 2,
+    "sources_unavailable": [
+      "gmail_otter_emails",
+      "tgif_knowledge_base",
+      "calendar_events"
+    ],
+    "triangulation_coverage": "0%"
+  }
+}

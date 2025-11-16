@@ -1,0 +1,251 @@
+{
+  "audit_metadata": {
+    "workflow_type": "unknown",
+    "workflow_id": "unknown",
+    "audit_date": "2025-11-14T16:12:46.652336",
+    "sources_checked": 5,
+    "sources_available": 2,
+    "total_sources": 5,
+    "duration_seconds": 0.0,
+    "auditor_version": "1.0.0"
+  },
+  "overall_assessment": {
+    "verdict": "REVIEW",
+    "accuracy_score": 0.0,
+    "completeness_score": 1.0,
+    "confidence": 0.0,
+    "total_items_checked": 7,
+    "gaps_found": 4,
+    "recommendations_count": 1
+  },
+  "findings": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": [
+      {
+        "item": {
+          "what": "Investigate the new cash drawer experience and determine which version the stores are currently using.",
+          "who": "Justin Harmon",
+          "due": "TBD",
+          "priority": "high",
+          "context": "To ensure the stores are using the most efficient and updated cash handling system.",
+          "confidence": "high"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Reach out to Jimmy Kabanda to get the American Express direct merchandise information for the Midlothian, Virginia store.",
+          "who": "Unknown",
+          "due": "TBD",
+          "priority": "medium",
+          "context": "To secure necessary financial and merchandise processing tools for the store.",
+          "confidence": "medium"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Follow up with Davis on the ability to enter alphanumeric codes for the loyalty system and the integration with the Punchh system.",
+          "who": "Unknown",
+          "due": "TBD",
+          "priority": "high",
+          "context": "To ensure the loyalty system is fully functional and integrated with existing systems for customer engagement.",
+          "confidence": "medium"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "JustinBecky",
+          "corrected": "Justin Harmon and Becky",
+          "confidence": "high",
+          "reason": "Based on the context and project details, 'JustinBecky' seems to be a transcription error combining two names. Justin Harmon is a known participant, and 'Becky' is likely another attendee."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Jimmy Kabandan",
+          "corrected": "Jimmy Kabanda",
+          "confidence": "medium",
+          "reason": "The name 'Jimmy Kabandan' could not be directly verified against the provided context, suggesting a possible transcription error. Adjusted to 'Kabanda' for consistency with common naming, but confidence is medium due to lack of direct reference."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "middle of the in Virginia store",
+          "corrected": "Midlothian, Virginia store",
+          "confidence": "low",
+          "reason": "Interpreted 'middle of the in Virginia store' as a possible mishearing or misinterpretation of a specific location, corrected to 'Midlothian, Virginia store' based on common misinterpretation patterns. Confidence is low due to speculative nature of the correction."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "Punch system",
+          "corrected": "Punchh system",
+          "confidence": "medium",
+          "reason": "Assuming 'Punch system' refers to a loyalty program platform, corrected to 'Punchh system,' a known loyalty platform. Confidence is medium due to the correction being based on industry knowledge rather than explicit context."
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "item": {
+        "section": "decisions"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'decisions' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "risks"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'risks' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "blockers"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'blockers' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "issues_discussed"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'issues_discussed' is empty",
+      "confidence": 0.5
+    }
+  ],
+  "recommendations": [
+    {
+      "issue_found": "Found 7 items with low confidence",
+      "auditor_approach": "Checked multiple context sources, found insufficient confirmation",
+      "automation_options": [
+        {
+          "approach": "Add confidence threshold to workflow",
+          "impact": "Flag low-confidence extractions for manual review",
+          "cost": "Minimal (add confidence scoring)",
+          "trade_off": "Requires manual review of flagged items"
+        },
+        {
+          "approach": "Enhance context in workflow",
+          "impact": "Provide more context to extraction model",
+          "cost": "Medium (more tokens per run)",
+          "trade_off": "Slower, more expensive, but more accurate"
+        }
+      ],
+      "priority": "high"
+    }
+  ],
+  "context_analysis": {
+    "sources_used": [
+      "gmail_otter_emails",
+      "brain_transport",
+      "tgif_knowledge_base",
+      "calendar_events",
+      "meeting_transcript"
+    ],
+    "sources_available": 2,
+    "sources_unavailable": [
+      "gmail_otter_emails",
+      "tgif_knowledge_base",
+      "calendar_events"
+    ],
+    "triangulation_coverage": "0%"
+  }
+}

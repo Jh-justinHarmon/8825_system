@@ -1,0 +1,373 @@
+{
+  "audit_metadata": {
+    "workflow_type": "unknown",
+    "workflow_id": "unknown",
+    "audit_date": "2025-11-14T17:06:02.396664",
+    "sources_checked": 5,
+    "sources_available": 4,
+    "total_sources": 5,
+    "duration_seconds": 2.83,
+    "auditor_version": "1.0.0"
+  },
+  "overall_assessment": {
+    "verdict": "REVIEW",
+    "accuracy_score": 0.32,
+    "completeness_score": 1.0,
+    "confidence": 0.32,
+    "total_items_checked": 7,
+    "gaps_found": 4,
+    "recommendations_count": 1
+  },
+  "findings": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": [
+      {
+        "item": {
+          "what": "Investigate the new cash drawer experience and determine which version the stores are currently using.",
+          "who": "Justin Harmon",
+          "due": "TBD",
+          "priority": "high",
+          "context": "To ensure the stores are using the most efficient and updated cash handling system.",
+          "confidence": "high"
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.7,
+            "excerpt": "...almnnRAiL0CJ3Hvzw2-2BBRBhpCKVElCf8LX9ypsCTwoxKGFAfwng-2BvIJGVZJbXVVUiLoyPI )  Justin Harmon \\u2013  Investigate the new cash drawer experience and determine which version the stores are currently using. ( https://em...",
+            "matches": {
+              "phrases": "39/39",
+              "nouns": "0/1",
+              "keywords": "10/10"
+            }
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "No matching content found"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.15,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Reach out to Jimmy Kabanda to get the American Express direct merchandise information for the Midlothian, Virginia store.",
+          "who": "Unknown",
+          "due": "TBD",
+          "priority": "medium",
+          "context": "To secure necessary financial and merchandise processing tools for the store.",
+          "confidence": "medium"
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.7,
+            "note": "Found corrected term in source - was already correct",
+            "excerpt": "...PlO35KaDlB-2BSG7mKIYDPi5XnXmuPsSfFo2sz3s5VEV2O6qhiBZyQ8-2FJw9-2BXMp-2BU-2BVsSqBYTlc )  Reach out to Jimmy Kabandan to get the American Express direct merchandise information for the middle of the in Virginia store..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.15,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Follow up with Davis on the ability to enter alphanumeric codes for the loyalty system and the integration with the Punchh system.",
+          "who": "Unknown",
+          "due": "TBD",
+          "priority": "high",
+          "context": "To ensure the loyalty system is fully functional and integrated with existing systems for customer engagement.",
+          "confidence": "medium"
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.9,
+            "correction_validated": true,
+            "note": "Found original term (before correction) in source - validates automation fix",
+            "excerpt": "...avis on the ability to enter alphanumeric codes for the loyalty system and the integration with the Punch system. ( https://email.otter.ai/ls/click?upn=u001.RMbZPcqt5dVyBkZNsbL-2FJ8qhuvdJtJ-2Fr4UNA4yOVUvGs77bqiaT..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.44999999999999996,
+        "verdict": "medium_confidence"
+      },
+      {
+        "item": {
+          "original": "JustinBecky",
+          "corrected": "Justin Harmon and Becky",
+          "confidence": "high",
+          "reason": "Based on the context and project details, 'JustinBecky' seems to be a transcription error combining two names. Justin Harmon is a known participant, and 'Becky' is likely another attendee."
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.9,
+            "correction_validated": true,
+            "note": "Found original term (before correction) in source - validates automation fix",
+            "excerpt": "...{\"title\": \"HCSS Meeting - JustinBecky Check-in Microsoft Teams Meeting\", \"date\": null, \"email_date\": \"Mon, 10 Nov 2025 20:20:04 +0000 (UT..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.44999999999999996,
+        "verdict": "medium_confidence"
+      },
+      {
+        "item": {
+          "original": "Jimmy Kabandan",
+          "corrected": "Jimmy Kabanda",
+          "confidence": "medium",
+          "reason": "The name 'Jimmy Kabandan' could not be directly verified against the provided context, suggesting a possible transcription error. Adjusted to 'Kabanda' for consistency with common naming, but confidence is medium due to lack of direct reference."
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.7,
+            "note": "Found corrected term in source - was already correct",
+            "excerpt": "...PlO35KaDlB-2BSG7mKIYDPi5XnXmuPsSfFo2sz3s5VEV2O6qhiBZyQ8-2FJw9-2BXMp-2BU-2BVsSqBYTlc )  Reach out to Jimmy Kabandan to get the American Express direct merchandise information for the middle of the in Virginia store..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.15,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "middle of the in Virginia store",
+          "corrected": "Midlothian, Virginia store",
+          "confidence": "low",
+          "reason": "Interpreted 'middle of the in Virginia store' as a possible mishearing or misinterpretation of a specific location, corrected to 'Midlothian, Virginia store' based on common misinterpretation patterns. Confidence is low due to speculative nature of the correction."
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.9,
+            "correction_validated": true,
+            "note": "Found original term (before correction) in source - validates automation fix",
+            "excerpt": "...c )  Reach out to Jimmy Kabandan to get the American Express direct merchandise information for the middle of the in Virginia store. ( https://email.otter.ai/ls/click?upn=u001.RMbZPcqt5dVyBkZNsbL-2FJ8qhuvdJtJ-2Fr4UNA4yOVUvGs77bqiaT..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.44999999999999996,
+        "verdict": "medium_confidence"
+      },
+      {
+        "item": {
+          "original": "Punch system",
+          "corrected": "Punchh system",
+          "confidence": "medium",
+          "reason": "Assuming 'Punch system' refers to a loyalty program platform, corrected to 'Punchh system,' a known loyalty platform. Confidence is medium due to the correction being based on industry knowledge rather than explicit context."
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "gmail_otter_emails",
+            "match_strength": 0.9,
+            "correction_validated": true,
+            "note": "Found original term (before correction) in source - validates automation fix",
+            "excerpt": "...avis on the ability to enter alphanumeric codes for the loyalty system and the integration with the Punch system. ( https://email.otter.ai/ls/click?upn=u001.RMbZPcqt5dVyBkZNsbL-2FJ8qhuvdJtJ-2Fr4UNA4yOVUvGs77bqiaT..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "tgif_knowledge_base",
+            "note": "Neither original nor corrected term found - needs review"
+          },
+          {
+            "type": "absence",
+            "source": "meeting_transcript",
+            "note": "Neither original nor corrected term found - needs review"
+          }
+        ],
+        "confidence": 0.44999999999999996,
+        "verdict": "medium_confidence"
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "item": {
+        "section": "decisions"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'decisions' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "risks"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'risks' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "blockers"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'blockers' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "issues_discussed"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'issues_discussed' is empty",
+      "confidence": 0.5
+    }
+  ],
+  "recommendations": [
+    {
+      "issue_found": "Found 7 items with low confidence",
+      "auditor_approach": "Checked multiple context sources, found insufficient confirmation",
+      "automation_options": [
+        {
+          "approach": "Add confidence threshold to workflow",
+          "impact": "Flag low-confidence extractions for manual review",
+          "cost": "Minimal (add confidence scoring)",
+          "trade_off": "Requires manual review of flagged items"
+        },
+        {
+          "approach": "Enhance context in workflow",
+          "impact": "Provide more context to extraction model",
+          "cost": "Medium (more tokens per run)",
+          "trade_off": "Slower, more expensive, but more accurate"
+        }
+      ],
+      "priority": "high"
+    }
+  ],
+  "context_analysis": {
+    "sources_used": [
+      "gmail_otter_emails",
+      "brain_transport",
+      "tgif_knowledge_base",
+      "calendar_events",
+      "meeting_transcript"
+    ],
+    "sources_available": 4,
+    "sources_unavailable": [
+      "calendar_events"
+    ],
+    "triangulation_coverage": "0%"
+  }
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+# 8825 Unified Startup Wrapper
+# Simple command for LLMs to discover and execute
+# Location: 8825_core/bin/8825-launch (in PATH)
+
+bash "$HOME/Hammer Consulting Dropbox/Justin Harmon/Public/8825/8825-system/8825_core/system/8825_unified_startup.sh"

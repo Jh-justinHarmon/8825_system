@@ -1,0 +1,16 @@
+Screenshot Reference: Google AI Studio - Create API Key Dialog
+
+User provided screenshot showing the "Create a new key" dialog with:
+- Name your key: "8825"
+- Choose an imported project dropdown showing:
+  - Import project
+  - Create project  
+  - Default Gemini Project (recommended selection)
+
+This screenshot should be saved as: google_ai_studio_project_selection.png
+
+The screenshot shows the exact dialog users will see when creating their Gemini API key,
+helping them understand which option to select ("Default Gemini Project").
+
+Date: 2025-11-14
+Context: Gemini API integration setup for 8825 meeting automation

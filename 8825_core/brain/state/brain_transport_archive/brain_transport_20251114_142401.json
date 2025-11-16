@@ -1,6 +1,6 @@
 {
   "brain_version": "3.0",
-  "export_date": "2025-11-15T11:18:32.692451",
+  "export_date": "2025-11-14T14:23:01.028731",
   "purpose": "Complete 8825 system context for LLM transport",
   "auto_generated": true,
   "generation_trigger": "System health monitor threshold reached",
@@ -23,6 +23,10 @@
     "com.8825.inbox-pipeline": {
       "status": "loaded",
       "pid": null
+    },
+    "com.apple.mdworker.shared.06000000-0400-0000-0000-000000000000": {
+      "status": "running",
+      "pid": "98825"
     }
   },
   "available_integrations": {
@@ -191,5 +195,5 @@
     "switch_to_brainstorm_mode": "Enter planning mode",
     "switch_to_teaching_mode": "Enter learning mode"
   },
-  "status": "Auto-generated v3.0 system snapshot - 2025-11-15 11:18"
+  "status": "Auto-generated v3.0 system snapshot - 2025-11-14 14:23"
 }
