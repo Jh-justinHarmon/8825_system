@@ -136,3 +136,4 @@ test_output/
 coverage/
 .coverage
 *.cover
+.REPO_TYPE

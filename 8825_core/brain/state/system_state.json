@@ -1,5 +1,5 @@
 {
-  "last_check": "2025-11-15T22:03:57.798705",
+  "last_check": "2025-11-15T23:39:54.094869",
   "launchagents": {
     "com.8825.inbox-pipeline": {
       "running": false,
@@ -46,5 +46,5 @@
     "8825_core/ARCHIVED_inbox_system_20251111"
   ],
   "accumulated_score": 0,
-  "last_regeneration": "2025-11-15T11:18:32.666910"
+  "last_regeneration": "2025-11-15T22:41:08.434135"
 }

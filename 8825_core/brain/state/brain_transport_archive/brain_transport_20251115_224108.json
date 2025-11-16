@@ -1,6 +1,6 @@
 {
   "brain_version": "3.0",
-  "export_date": "2025-11-15T22:41:08.452996",
+  "export_date": "2025-11-15T22:40:38.310534",
   "purpose": "Complete 8825 system context for LLM transport",
   "auto_generated": true,
   "generation_trigger": "System health monitor threshold reached",
@@ -21,8 +21,8 @@
   },
   "active_launchagents": {
     "com.8825.inbox-pipeline": {
-      "status": "loaded",
-      "pid": null
+      "status": "running",
+      "pid": "96873"
     }
   },
   "available_integrations": {
@@ -191,5 +191,5 @@
     "switch_to_brainstorm_mode": "Enter planning mode",
     "switch_to_teaching_mode": "Enter learning mode"
   },
-  "status": "Auto-generated v3.0 system snapshot - 2025-11-15 22:41"
+  "status": "Auto-generated v3.0 system snapshot - 2025-11-15 22:40"
 }
