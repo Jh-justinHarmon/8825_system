@@ -67,7 +67,7 @@ Track:
 2. Observing user interactions
 3. Tracking sentiment signals
 4. Recording teaching outcomes
-5. Ad{user}g preferences over time
+5. Adjusting preferences over time
 6. Increasing confidence as patterns emerge
 
 **To view a user's profile:**

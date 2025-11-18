@@ -481,7 +481,7 @@
 ## Tools & Resources
 
 ### Required Access
-- **Dropbox:** `8825-system/` folder (shared)
+- **Dropbox:** `8825-workspace/` folder (shared)
 - **iCloud:** Brain Transport (read-only)
 - **Capabilities Doc:** `8825_SYSTEM_CAPABILITIES.md`
 

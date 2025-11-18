@@ -1,7 +1,7 @@
 # 8825 Core Protocols
 
 **Version:** 3.2.0  
-**Last Updated:** 2025-11-13
+**Last Updated:** 2025-11-18
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### Workflow Protocols 🆕 (Nov 13, 2025)
 7. **WORKFLOW_ORCHESTRATION_PROTOCOL.md** 🎯 **START HERE** - Master protocol that orchestrates all others
-8. **SENTIMENT_AWARE_PROTOCOL.md** ⚡ **NEW** - Adapt protocol depth based on user urgency/frustration
+8. **SENTIMENT_AWARE_PROTOCOL.md** ⚡ - Adapt protocol depth based on user urgency/frustration
 9. **TASK_CLASSIFICATION_PROTOCOL.md** 📊 - Classify tasks before building (one-off vs pipeline vs agent)
 10. **TASK_TYPES_REFERENCE.md** 📖 - Quick definitions of the 6 task types
 11. **CONTEXT_FIRST_PROTOCOL.md** 🔍 - Search for existing solutions before executing
@@ -25,6 +25,16 @@
 13. **PROMPTGEN_INTEGRATION_PROTOCOL.md** 🧠 - Structured brainstorming methodology
 14. **LEARNING_FUNDAMENTALS_PROTOCOL.md** 📚 - Match teaching style to user's learning preferences
 15. **QUICK_START_GUIDE.md** 🚀 - 3-minute intro for users and AI
+
+### Intelligence Protocols 🆕 (Nov 18, 2025)
+16. **DLI_ROUTING_PROTOCOL.md** 🔍 **CRITICAL** - When to use DLI vs web/LLM (v1.0.0, 95% tested)
+   - L0/L1/L2 knowledge layer separation
+   - Authority vs Augmentor modes
+   - Internal/External/Hybrid query classification
+   - Query phrasing guidance for better results
+   - 15 concrete examples with expected behavior
+17. **ALWAYS_USE_DLI_FOR_8825_INTERNAL_QUESTIONS.md** ⚠️ SUPERSEDED - See DLI_ROUTING_PROTOCOL.md
+18. **DLI_NATURAL_LANGUAGE_ROUTING.md** ⚠️ SUPERSEDED - See DLI_ROUTING_PROTOCOL.md
 
 ### Focus Protocols
 16. **8825_create_focus.json** - Focus creation workflow
