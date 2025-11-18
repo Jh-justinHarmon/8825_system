@@ -67,7 +67,7 @@ sandbox/graduated/
 ### Root Level
 
 ```
-8825-system/
+8825-workspace/
 ├── core/               # L4: System essentials (everyone uses)
 ├── focuses/            # Focus-specific workspaces (symlinks)
 ├── users/              # User-specific data

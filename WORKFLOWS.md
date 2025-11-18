@@ -38,7 +38,7 @@ mv sandbox/experimental/my-feature sandbox/graduated/
 
 ### Check All POCs
 ```bash
-cd /path/to/8825-system
+cd /path/to/8825-workspace
 ./8825_core/system/8825_audit_poc.sh
 ```
 
@@ -150,7 +150,7 @@ EOF
 ### 2. Create User Data Symlink
 ```bash
 # From within the focus directory
-ln -s ../../users/justin_harmon/new-focus user_data
+ln -s ../../users/{user}/new-focus user_data
 ```
 
 ### 3. Update Focus README
@@ -245,7 +245,7 @@ mv focuses/hcss/projects/completed-project migrations/completed-projects/
 - POCs
 - Not yet stable
 
-**Is it user-specific?** → `users/justin_harmon/`
+**Is it user-specific?** → `users/{user}/`
 - Personal data
 - User preferences
 - User-specific workflows
@@ -365,6 +365,45 @@ launch_8825
 
 ---
 
+## 🔍 Using DLI for Context Gathering
+
+### When to Use DLI
+
+**Internal queries** (about 8825 system):
+```bash
+# Use DLI authority mode
+# Examples: Joju specs, downloads workflow, TGIF automation, BRAIN_TRANSPORT
+```
+
+**External queries** (generic tools/APIs):
+```bash
+# Skip DLI, use web/model
+# Examples: Git commands, Python basics, OpenAI API
+```
+
+**Hybrid queries** (tool + "in 8825"):
+```bash
+# Use both: web for tool + DLI for our integration
+# Examples: "Windsurf for 8825", "Notion for Joju", "Otter transcripts workflow"
+```
+
+### Query Phrasing Tips
+
+**Good queries** (specific, contextual):
+- ✅ "Joju Notion task board integration sync workflow"
+- ✅ "downloads workflow empty Otter transcripts handling"
+- ✅ "BRAIN_TRANSPORT automatic generation Documents location"
+
+**Poor queries** (too generic):
+- ❌ "file structure"
+- ❌ "how does it work"
+- ❌ "configuration"
+
+**Full protocol:** `8825_core/protocols/DLI_ROUTING_PROTOCOL.md`
+
+---
+
 **For detailed architecture, see:** `ARCHITECTURE.md`  
 **For refactor history, see:** `REFACTOR_MASTER_PLAN.md`  
-**For specific focus docs, see:** `focuses/{focus}/README.md`
+**For specific focus docs, see:** `focuses/{focus}/README.md`  
+**For DLI routing details, see:** `8825_core/protocols/DLI_ROUTING_PROTOCOL.md`

@@ -1,0 +1,27 @@
+{
+  "name": "dli-router",
+  "version": "1.0.0",
+  "description": "DLI (Dual-Layer Intelligence) routing interface",
+  "tools": [
+    {
+      "name": "dli_deep_dive",
+      "description": "Run a DLI deep dive on a topic",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "The question or topic to research"
+          },
+          "mode": {
+            "type": "string",
+            "enum": ["baseline", "pattern", "both"],
+            "default": "pattern",
+            "description": "Routing mode: baseline (no Pattern Engine), pattern (use Pattern Engine), or both (compare)"
+          }
+        },
+        "required": ["topic"]
+      }
+    }
+  ]
+}

@@ -280,7 +280,7 @@ Tell AI:
 
 ## 📖 Full Documentation
 
-All protocols in: `8825-system/8825_core/protocols/`
+All protocols in: `8825-workspace/8825_core/protocols/`
 
 - `README.md` - Protocol index
 - `WORKFLOW_ORCHESTRATION_PROTOCOL.md` - Master flow
