@@ -1,0 +1,9 @@
+# OSS directory - everything here can be public
+# But still ignore common development files
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+node_modules/
+*.log
