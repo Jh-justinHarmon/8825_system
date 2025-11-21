@@ -80,9 +80,16 @@ sandbox/graduated/
 
 ```
 8825_core/
-├── agents/             # AI agents and tools
-│   ├── agent_registry.json
+├── agents/             # True AI agents (autonomous decision-makers)
+│   ├── decision_agent.py
+│   ├── accountability_loop_agent.py
 │   └── AGENT_INDEX.md
+│
+├── registry/           # Canonical registries (agents, pipelines, workflows, protocols)
+│   ├── agents.json
+│   ├── pipelines.json
+│   ├── workflows.json
+│   └── protocols_registry.json
 │
 ├── integrations/       # External service integrations
 │   ├── google/         # Drive, Gmail, Calendar, Vision
