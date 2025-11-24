@@ -1,0 +1,205 @@
+{
+  "user_id": "justin_harmon",
+  "display_name": "Justin Harmon",
+  "created_at": "2025-11-13T23:14:00Z",
+  "last_updated": "2025-11-13T23:14:00Z",
+  "version": "1.0.0",
+  
+  "learning_preferences": {
+    "information_density": {
+      "preference": "moderate",
+      "confidence": 0.95,
+      "last_updated": "2025-11-13T23:14:00Z",
+      "notes": "Concepts + examples, skip deep theory"
+    },
+    "example_preference": {
+      "preference": "concrete",
+      "confidence": 0.98,
+      "last_updated": "2025-11-13T23:14:00Z",
+      "notes": "Real examples from actual work, not toy examples"
+    },
+    "depth_approach": {
+      "preference": "top_down",
+      "confidence": 0.92,
+      "last_updated": "2025-11-13T23:14:00Z",
+      "notes": "Big picture first, then drill into details"
+    },
+    "interaction_style": {
+      "preference": "show_and_explain",
+      "confidence": 0.90,
+      "last_updated": "2025-11-13T23:14:00Z",
+      "notes": "Demonstrate then explain why"
+    },
+    "error_tolerance": {
+      "preference": "high",
+      "confidence": 0.95,
+      "last_updated": "2025-11-13T23:14:00Z",
+      "notes": "Comfortable iterating and learning from failures"
+    }
+  },
+  
+  "observed_patterns": {
+    "what_works": [
+      {
+        "pattern": "Real code from the project",
+        "context": "All teaching moments",
+        "confidence": 0.98,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Here's what we built, here's why it works",
+        "context": "API Key Management, Meeting Automation",
+        "confidence": 0.95,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Quick iterations with explanations along the way",
+        "context": "All development sessions",
+        "confidence": 0.92,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Patterns abstracted from actual solutions",
+        "context": "POC Criteria, Downloads Workflow",
+        "confidence": 0.90,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Clear cause-and-effect relationships",
+        "context": "All explanations",
+        "confidence": 0.93,
+        "timestamp": "2025-11-13T23:14:00Z"
+      }
+    ],
+    "what_fails": [
+      {
+        "pattern": "Theoretical examples disconnected from actual work",
+        "context": "Early tutorials",
+        "confidence": 0.95,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Bottom-up building from first principles",
+        "context": "Attempted theoretical teaching",
+        "confidence": 0.88,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Long explanations before showing something",
+        "context": "Protocol introductions",
+        "confidence": 0.90,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Academic/textbook style explanations",
+        "context": "Early interactions",
+        "confidence": 0.85,
+        "timestamp": "2025-11-13T23:14:00Z"
+      },
+      {
+        "pattern": "Overly cautious 'make sure you understand this first' approaches",
+        "context": "Failed tutorial patterns",
+        "confidence": 0.92,
+        "timestamp": "2025-11-13T23:14:00Z"
+      }
+    ]
+  },
+  
+  "teaching_moments": {
+    "successful": [
+      {
+        "date": "2025-11-12",
+        "topic": "API Key Management",
+        "approach": "showed_implementation_then_explained",
+        "result": "immediate_understanding",
+        "rating": 5,
+        "notes": "Showed actual implementation, then explained pattern. User got it immediately."
+      },
+      {
+        "date": "2025-11-10",
+        "topic": "Meeting Automation",
+        "approach": "built_working_system_iteratively",
+        "result": "learned_while_building",
+        "rating": 5,
+        "notes": "Built working system, then documented approach. Perfect for user's style."
+      },
+      {
+        "date": "2025-11-10",
+        "topic": "Downloads Workflow",
+        "approach": "solved_real_problem_then_abstracted",
+        "result": "pattern_recognized",
+        "rating": 5,
+        "notes": "Solved real problem, then abstracted pattern. User applied to other areas."
+      },
+      {
+        "date": "2025-11-13",
+        "topic": "POC Criteria",
+        "approach": "used_real_project_as_example",
+        "result": "immediate_application",
+        "rating": 5,
+        "notes": "Used real project as example. User immediately understood and applied."
+      }
+    ],
+    "unsuccessful": [
+      {
+        "date": "2025-10-15",
+        "topic": "Theoretical Tutorial",
+        "approach": "explain_before_doing",
+        "result": "user_disengaged",
+        "rating": 2,
+        "notes": "Tried to teach theoretical concepts first. User wanted to 'just do it and learn along the way'."
+      },
+      {
+        "date": "2025-10-20",
+        "topic": "Protocol Introduction",
+        "approach": "long_explanation_before_showing",
+        "result": "user_interrupted",
+        "rating": 2,
+        "notes": "Too slow, too cautious. User interrupted to ask for practical example."
+      }
+    ]
+  },
+  
+  "adaptations": {
+    "recent_changes": [
+      {
+        "dimension": "interaction_style",
+        "from": "explain_first",
+        "to": "show_and_explain",
+        "reason": "User consistently prefers doing first, understanding second",
+        "timestamp": "2025-10-25T00:00:00Z",
+        "confidence_before": 0.5,
+        "confidence_after": 0.90
+      },
+      {
+        "dimension": "example_preference",
+        "from": "mixed",
+        "to": "concrete",
+        "reason": "User disengages with theoretical examples, engages with real code",
+        "timestamp": "2025-10-30T00:00:00Z",
+        "confidence_before": 0.6,
+        "confidence_after": 0.98
+      }
+    ]
+  },
+  
+  "meta": {
+    "total_teaching_moments": 6,
+    "successful_moments": 4,
+    "unsuccessful_moments": 2,
+    "success_rate": 0.67,
+    "average_rating": 4.0,
+    "confidence_trend": "increasing",
+    "last_interaction": "2025-11-13T23:14:00Z",
+    "interactions_count": 150,
+    "profile_maturity": "high"
+  },
+  
+  "key_insights": [
+    "Justin learns by doing, then understanding. Not understanding, then doing.",
+    "Prefers speed over caution - comfortable with iteration and failure",
+    "Values practical over theoretical - wants real examples from actual work",
+    "High error tolerance - doesn't need to understand everything before trying",
+    "Top-down thinker - wants big picture first, then details"
+  ]
+}

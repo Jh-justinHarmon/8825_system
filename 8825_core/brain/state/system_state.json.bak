@@ -1,0 +1,50 @@
+{
+  "last_check": "2025-11-15T23:43:55.018921",
+  "launchagents": {
+    "com.8825.inbox-pipeline": {
+      "running": false,
+      "pid": null
+    }
+  },
+  "integration_hashes": {
+    "8825_core/integrations/google/list_folder_contents.py": "62e1cfb9d4ef6f835753d5bcfcfe10da0c22205c051bf80f5ff45fcaa5d54952",
+    "8825_core/integrations/google/calendar_sync.py": "b8b3e2250be09582d8f2ffdf3c775a1aae9a9c65802274d3b24dc88a985120c1",
+    "8825_core/integrations/google/search_shared_with_me.py": "e20891ca29082358c23cb62ecc3aa5f67d83bf0fc38e9ca50975eaf37b788310",
+    "8825_core/integrations/google/bill_processor.py": "cda61414d7faf608bf74a3bdee316daf3c887db678dbd8e1261ed2de26fd8f16",
+    "8825_core/integrations/google/calendar_screenshot_sync.py": "f43b8d6f8802039785e307f337f94cde8fddead553873fba9638b03e48f63da8",
+    "8825_core/integrations/google/force_access_folder.py": "9e6741d29c024d896010c1bf06fdc7a3bfbaf8ddd07f6231858a4389710c8b2b",
+    "8825_core/integrations/google/find_drive_folder.py": "75103c0191f06a2064554f69723059a9ee006b3cab2f7284eda3f92a9263c76d",
+    "8825_core/integrations/google/search_gmail.py": "d82b69ff5efff70c66b2a132dde4c48d4d334ee19dbd70b501c54dbf02e9ef27",
+    "8825_core/integrations/google/get_email_details.py": "7fac75dc9b9b274cd12d27ceede68873db2209f17e6d13e65eed1624a14671bb",
+    "8825_core/integrations/google/list_all_shared_folders.py": "56a80641003a16574a4473652c505f4406b2ba91cd066cf19b87c8db3d09feae",
+    "8825_core/integrations/reddit/reddit_watcher.py": "bd3a222c07f021a603f1f0afbf3863ce773bb9441d515155b179475d1d23bda6",
+    "8825_core/integrations/dropbox/local_miner.py": "8fdd445697631055d38f03f905866114afa42dc106d2c830f98f832c04ac95fc",
+    "8825_core/integrations/dropbox/dropbox_miner.py": "4a4c49ae418bd72ee134f8256f8dc76e75a6d370917010f53e37ebbe754eadac",
+    "8825_core/integrations/figjam/sticky_processor.py": "b13952ceb4c94295f5a38144f06b6ef0ffc0233b49c2f589d36a45f07a119617",
+    "8825_core/integrations/figjam/vision_sticky_processor.py": "f7525d16e4c7211db57c334984aa7d71f24fd5b12f6bacd3b6591c41f1e90143",
+    "8825_core/integrations/figjam/simple_sticky_ocr.py": "16a11cbb0384f9b7d7d14a2c899ef7ce4075a59cb68c471762520839d4e9c549",
+    "8825_core/integrations/figjam/figjam_api.py": "6824db5b10bcde3b946495d69e465290f57429ff9c3ca682aec688551b8b9610",
+    "8825_core/integrations/goose/goose_engine.py": "a30a57b53d20fa1eff75a361cad5c37ba08cec01b79604bf10105a6bc9bd42fb",
+    "8825_core/integrations/goose/mcp-bridge/server.py": "8f394168ebd2469b11e12abee2f0553c0ec36f792b0262a669991357f98377aa"
+  },
+  "workflow_hashes": {
+    "8825_core/workflows/ingestion/README.md": "b0bdfeaa167abb2228d06a62bf4f233a5821ccd415088256e44faee140ab7383",
+    "8825_core/workflows/meeting_automation/README.md": "8578a12440a0678411db399715178f67df1b0f8e746f2d11d7223fd9169b257e",
+    "8825_core/workflows/ingestion/STATUS.md": "a691074a0ea92cc93f86c394889500dfe867eeabb13ee1ce39f53344a0d6d699"
+  },
+  "config_hashes": {
+    "focuses/joju/tasks/config.json": "69df1c4b586fcf3a75b484607f627657a963d13137f6c220f6b31c3305ffd592",
+    "8825_core/integrations/reddit/config.json": "3605e25d293c693a333a0ac87c522e3b851e1f70ebee0eaa22da7402304e0264",
+    "users/justin_harmon/jh_assistant/projects/competitive-analysis/config.json": "793eae02cd14729690c795fe75cbdb84d684706f352d0775c8d63d3eb89db3a8",
+    "users/justin_harmon/hcss/meeting_automation/config.json": "3d0d7f17679a00065ecaefda07cb9f65d7fbb928a18b30fa4770879429d33f39",
+    "8825_core/integrations/reddit/com.8825.reddit-watcher.plist": "1e0a7faf0aca94b42ba78b8858a609a040627b12b95b4db7b3585faab066975b",
+    "8825_core/brain/com.8825.brain_sync_daemon.plist": "bb42855501db58a248784fb0a0317c08cf41301fb0d09aaf5e3ad5e52ec1c33c"
+  },
+  "archive_dirs": [
+    "INBOX_HUB/ARCHIVED_REDUNDANT_SYSTEMS_20251111",
+    "8825_core/ARCHIVED_OLD_INGESTION_ENGINE_20251111",
+    "8825_core/ARCHIVED_inbox_system_20251111"
+  ],
+  "accumulated_score": 0,
+  "last_regeneration": "2025-11-15T22:41:08.434135"
+}

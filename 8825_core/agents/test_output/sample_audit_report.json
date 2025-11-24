@@ -1,0 +1,142 @@
+{
+  "audit_metadata": {
+    "workflow_type": "unknown",
+    "workflow_id": "test_001",
+    "audit_date": "2025-11-14T16:07:01.578329",
+    "sources_checked": 2,
+    "sources_available": 3,
+    "total_sources": 5,
+    "duration_seconds": 0.0,
+    "auditor_version": "1.0.0"
+  },
+  "overall_assessment": {
+    "verdict": "REVIEW",
+    "accuracy_score": 0.18,
+    "completeness_score": 1.0,
+    "confidence": 0.18,
+    "total_items_checked": 3,
+    "gaps_found": 2,
+    "recommendations_count": 1
+  },
+  "findings": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": [
+      {
+        "item": {
+          "text": "Move to NetSuite by December 15",
+          "category": "technical",
+          "impact": "high",
+          "confidence": "high"
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "meeting_transcript",
+            "match_strength": 0.6666666666666666,
+            "excerpt": "...{\"text\": \"We discussed moving to NetSuite by December 15. Mario will update the store mapping spreadsheet by next week.\"}..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [],
+        "confidence": 0.3,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "what": "Update store mapping spreadsheet",
+          "who": "Mario",
+          "due": "2025-11-20",
+          "priority": "high"
+        },
+        "confirmations": [
+          {
+            "type": "confirmation",
+            "source": "meeting_transcript",
+            "match_strength": 1.0,
+            "excerpt": "...{\"text\": \"We discussed moving to NetSuite by December 15. Mario will update the store mapping spreadsheet by next week.\"}..."
+          }
+        ],
+        "contradictions": [],
+        "absences": [
+          {
+            "type": "absence",
+            "source": "brain_transport",
+            "note": "No matching content found"
+          }
+        ],
+        "confidence": 0.25,
+        "verdict": "low_confidence"
+      },
+      {
+        "item": {
+          "original": "net sweet",
+          "corrected": "NetSuite",
+          "confidence": "high",
+          "reason": "Common transcription error for NetSuite ERP system"
+        },
+        "confirmations": [],
+        "contradictions": [],
+        "absences": [],
+        "confidence": 0.0,
+        "verdict": "low_confidence"
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "item": {
+        "section": "risks"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'risks' is empty",
+      "confidence": 0.5
+    },
+    {
+      "item": {
+        "section": "blockers"
+      },
+      "source": "workflow_output",
+      "severity": "medium",
+      "reason": "Section 'blockers' is empty",
+      "confidence": 0.5
+    }
+  ],
+  "recommendations": [
+    {
+      "issue_found": "Found 3 items with low confidence",
+      "auditor_approach": "Checked multiple context sources, found insufficient confirmation",
+      "automation_options": [
+        {
+          "approach": "Add confidence threshold to workflow",
+          "impact": "Flag low-confidence extractions for manual review",
+          "cost": "Minimal (add confidence scoring)",
+          "trade_off": "Requires manual review of flagged items"
+        },
+        {
+          "approach": "Enhance context in workflow",
+          "impact": "Provide more context to extraction model",
+          "cost": "Medium (more tokens per run)",
+          "trade_off": "Slower, more expensive, but more accurate"
+        }
+      ],
+      "priority": "high"
+    }
+  ],
+  "context_analysis": {
+    "sources_used": [
+      "meeting_transcript",
+      "brain_transport",
+      "tgif_knowledge_base",
+      "gmail_otter_emails",
+      "calendar_events"
+    ],
+    "sources_available": 3,
+    "sources_unavailable": [
+      "gmail_otter_emails",
+      "calendar_events"
+    ],
+    "triangulation_coverage": "0%"
+  }
+}

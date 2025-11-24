@@ -1,0 +1,67 @@
+{
+  "user_id": "justin_harmon",
+  "focus": "hcss",
+  "enabled": true,
+  
+  "strategy": {
+    "mode": "dual_source",
+    "primary": "otter_api",
+    "fallback": "gmail",
+    "cross_validate": true,
+    "prefer_primary": true
+  },
+  
+  "otter_api": {
+    "enabled": true,
+    "email": "your_email@example.com",
+    "password_keychain_key": "8825_otter_justin_harmon_hcss",
+    "poll_interval_minutes": 10,
+    "formats": ["txt"],
+    "note": "Unofficial API - faster but may break"
+  },
+  
+  "gmail": {
+    "enabled": true,
+    "credentials_path": "users/justin_harmon/hcss/meeting_automation/gmail_credentials.json",
+    "token_path": "users/justin_harmon/hcss/meeting_automation/gmail_token.json",
+    "search_query": "from:no-reply@otter.ai subject:TGIF is:unread",
+    "poll_interval_minutes": 15,
+    "note": "Official API - reliable fallback"
+  },
+  
+  "health_monitoring": {
+    "enabled": true,
+    "check_interval_minutes": 5,
+    "failure_threshold": 3,
+    "auto_failover": true,
+    "alert_on_failover": true
+  },
+  
+  "validation": {
+    "cross_check": true,
+    "prefer_source": "otter_api",
+    "mismatch_action": "log_and_use_primary",
+    "mismatch_alert": true
+  },
+  
+  "processing": {
+    "auto_process": true,
+    "mark_as_read": true,
+    "archive_transcripts": true,
+    "output_formats": ["json", "markdown"]
+  },
+  
+  "output": {
+    "knowledge_base": "users/justin_harmon/hcss/knowledge/meetings/",
+    "transcripts_dir": "transcripts/",
+    "summaries_dir": "summaries/",
+    "json_dir": "json/"
+  },
+  
+  "notifications": {
+    "email": "justin@hcss.com",
+    "slack_webhook": "",
+    "on_success": false,
+    "on_error": true
+  }
+}

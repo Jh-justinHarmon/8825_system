@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 node_modules/
 *.log
+8825_core/.env
+focuses/joju/tasks/config.json
