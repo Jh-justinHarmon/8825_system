@@ -1,0 +1,58 @@
+name: Safety Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  safety-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Check for hardcoded paths
+      run: |
+        echo "Checking for hardcoded user paths..."
+        if grep -r "/Users/" . --exclude-dir=.git --exclude-dir=.github; then
+          echo "❌ ERROR: Found hardcoded user paths"
+          exit 1
+        fi
+        echo "✅ No hardcoded user paths found"
+    
+    - name: Check for personal identifiers
+      run: |
+        echo "Checking for personal identifiers..."
+        if grep -rE "justinharmon|justin_harmon" . --exclude-dir=.git --exclude-dir=.github --exclude="*.md"; then
+          echo "❌ ERROR: Found personal identifiers"
+          exit 1
+        fi
+        echo "✅ No personal identifiers found"
+    
+    - name: Check for API keys
+      run: |
+        echo "Checking for API keys..."
+        if grep -rE "sk-[a-zA-Z0-9]{20,}|AIza[a-zA-Z0-9_-]{35}" . --exclude-dir=.git --exclude-dir=.github; then
+          echo "❌ ERROR: Found potential API keys"
+          exit 1
+        fi
+        echo "✅ No API keys found"
+    
+    - name: Check for email addresses
+      run: |
+        echo "Checking for email addresses..."
+        if grep -rE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" . --exclude-dir=.git --exclude-dir=.github --exclude="*.md" | grep -v "example@"; then
+          echo "❌ ERROR: Found email addresses"
+          exit 1
+        fi
+        echo "✅ No email addresses found"
+    
+    - name: Summary
+      if: success()
+      run: |
+        echo "=================================="
+        echo "✅ All safety checks passed!"
+        echo "=================================="

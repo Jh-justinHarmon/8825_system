@@ -1,0 +1,42 @@
+[
+  {
+    "entry_id": "K-001",
+    "entry_type": "knowledge",
+    "title": "DLI Routing Pattern",
+    "content": "Three-tier routing: Pattern matching (FREE) \u2192 Cheap model \u2192 Expensive model. Optimizes cost while maintaining quality.",
+    "metadata": null,
+    "confidence": 0.95,
+    "created_at": "2025-11-24T01:11:17.352889",
+    "updated_at": "2025-11-24T01:11:17.352898"
+  },
+  {
+    "entry_id": "K-002",
+    "entry_type": "knowledge",
+    "title": "Universal Inbox Pattern",
+    "content": "Single entry point for all file types. Watch directory \u2192 Classify \u2192 Route to appropriate handler.",
+    "metadata": null,
+    "confidence": 0.9,
+    "created_at": "2025-11-24T01:11:17.353890",
+    "updated_at": "2025-11-24T01:11:17.353894"
+  },
+  {
+    "entry_id": "K-003",
+    "entry_type": "knowledge",
+    "title": "Library System",
+    "content": "SQLite-based knowledge management. Stores knowledge, decisions, patterns, achievements, and ALS runs.",
+    "metadata": null,
+    "confidence": 1.0,
+    "created_at": "2025-11-24T01:11:17.354693",
+    "updated_at": "2025-11-24T01:11:17.354695"
+  },
+  {
+    "entry_id": "D-001",
+    "entry_type": "decision",
+    "title": "Use SQLite for Library",
+    "content": "Chose SQLite over PostgreSQL for library storage.",
+    "metadata": "{\"rationale\": \"Lightweight, no server needed, perfect for local-first architecture. Easy to backup and sync.\"}",
+    "confidence": 1.0,
+    "created_at": "2025-11-24T01:11:17.355565",
+    "updated_at": "2025-11-24T01:11:17.355567"
+  }
+]

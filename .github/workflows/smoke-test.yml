@@ -1,0 +1,81 @@
+name: Smoke Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install python-docx
+    
+    - name: Fresh Install Test
+      run: |
+        echo "Testing fresh installation workflow..."
+        
+        # Test 1: Initialize library
+        cd core/library
+        sqlite3 test_library.db < schema/init_library_db.sql
+        echo "✅ Library schema initialized"
+        
+        # Test 2: Verify schema
+        TABLES=$(sqlite3 test_library.db "SELECT name FROM sqlite_master WHERE type='table'" | wc -l)
+        if [ "$TABLES" -ge 4 ]; then
+          echo "✅ Library tables created ($TABLES tables)"
+        else
+          echo "❌ Library tables missing"
+          exit 1
+        fi
+        
+        # Test 3: Run demo
+        cd examples
+        python demo_library.py
+        echo "✅ Library demo executed"
+        
+        # Test 4: Verify output
+        if [ -f "demo_library.db" ] && [ -f "library_export.json" ]; then
+          echo "✅ Demo outputs created"
+        else
+          echo "❌ Demo outputs missing"
+          exit 1
+        fi
+    
+    - name: Documentation Check
+      run: |
+        echo "Checking documentation completeness..."
+        
+        # Check README exists
+        [ -f "README.md" ] && echo "✅ README.md exists" || exit 1
+        
+        # Check core docs
+        [ -f "core/library/README.md" ] && echo "✅ Library README exists" || exit 1
+        [ -f "core/architecture/DLI_ARCHITECTURE.md" ] && echo "✅ DLI docs exist" || exit 1
+        
+        # Check tools docs
+        [ -f "tools/template_word_generator/README.md" ] && echo "✅ Template Generator README exists" || exit 1
+        [ -f "tools/universal_inbox/README.md" ] && echo "✅ Universal Inbox README exists" || exit 1
+        
+        echo "✅ All documentation present"
+    
+    - name: Summary
+      if: success()
+      run: |
+        echo "=================================="
+        echo "✅ Smoke test passed!"
+        echo "Fresh installation works correctly"
+        echo "=================================="
